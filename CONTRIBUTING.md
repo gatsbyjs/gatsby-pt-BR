@@ -17,14 +17,14 @@ Agora que você está encarregado(a) de um arquivo, basta você dar fork no proj
 
 ### Finalizei a tradução
 
-Após terminar de traduzir o arquivo, basta abri uma Pull Request para a branch `master` do nosso repositório e esperar que algum dos nossos mantenedores revise a PR, caso tudo esteja correto, sua contribuição será aceita!
+Após terminar de traduzir o arquivo, basta abri uma Pull Request para a branch `master` do nosso repositório e esperar que algum dos nossos mantenedores revise a PR. Caso tudo esteja correto, sua contribuição será aceita!
 
 
 Caso tenha ficado alguma dúvida em como forkar um repositório ou como abrir uma PR, aconselho a leitura deste [guia](https://blog.da2k.com.br/2015/02/04/git-e-github-do-clone-ao-pull-request/).
 
 ## Glossário
 
-Tendo em vista que estamos traduzindo a documentação de um código, não será raro nos deparar-mos com nomes técnicos, para isso foi criado um [google sheets](https://docs.google.com/spreadsheets/d/1TLztI-jrPslCt0fgk4B9tGnhhS_7JQZJfMql1ePsIZo/edit?usp=sharing) a fim de centralizar as traduções de nomes mais técnicos e permitir que todos sigam um padrão, aconselhamos fortemente que você acesse esse link para auxiliar a sua tradução. Sinta-se livre para adicionar uma nova tradução ou sugerir correções caso seja necessário. 
+Tendo em vista que estamos traduzindo a documentação de um código, não será raro nos deparar-mos com nomes técnicos. Para isso foi criado um [google sheets](https://docs.google.com/spreadsheets/d/1TLztI-jrPslCt0fgk4B9tGnhhS_7JQZJfMql1ePsIZo/edit?usp=sharing) a fim de centralizar as traduções de nomes mais técnicos e permitir que todos sigam um padrão. Aconselhamos fortemente que você acesse esse link para auxiliar a sua tradução. Sinta-se livre para adicionar uma nova tradução ou sugerir correções caso seja necessário. 
 
 ## Discord
 
