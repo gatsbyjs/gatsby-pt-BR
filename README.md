@@ -1,15 +1,21 @@
 
-# Gatsby Brazilian Portuguese Translation
+# Gatsby em Português (Pt-BR) 🇧🇷
 
-This repo contains the Brazilian Portuguese translation for Gatsby.
+Este repositório contém a tradução em portuguẽs brasileiro do Gatsby. 
 
-Please refer to the [Translation Progress Issue](https://github.com/gatsbyjs/gatsby-pt-BR/issues/1) to start translating!
+### Navegação
 
-Useful Links:
+Caso você seja novo por aqui, segue uma lista de links que podem ser úteis
 
 * [Style Guide](/style-guide.md)
-* [Gatsby Translation Guide](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
-* [Gatsby Discord](https://gatsby.dev/discord)
+* [Guia de tradução](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
+* [Nosso Discord](https://gatsby.dev/discord)
 
-(Feel free to translate this document and add any content you feel would be useful to contributors).
+### Contribuição
+
+Caso você já tenha alguma experiência com tradução ou apenas tem interesse em contribuir e conhece o idioma do Tio Sam, dá uma olhada no nosso CONTRIBUTING.md que lá tem um guia do que você precisa fazer para contribuir.  
+
+
+
+
   
