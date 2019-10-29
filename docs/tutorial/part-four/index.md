@@ -1,25 +1,24 @@
 ---
-title: Data in Gatsby
+title: Dados no Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Welcome to Part Four of the tutorial! Halfway through! Hope things are starting
-to feel pretty comfortable 😀
+Seja bem-vindo(a) a quarta parte do tutorial! Já estamos no meio do caminho! Esperamos que as coisas estejam começando a ficar familiares 😀
 
-## Recap of the first half of the tutorial
+## Relembrando a primeira metade do tutorial
 
-So far, you've been learning how to use React.js—how powerful it is to be able to
-create your _own_ components to act as custom building blocks for websites.
+Até agora você aprendeu como utilizar React.js-o quão poderozo é ser capaz de 
+criar seus _próprios_ componentes para agirem como _building blocks_ customizados para websites.
 
-You’ve also explored styling components using CSS Modules.
+Você também explorou os componentes de estilo utilizando os módulos CSS.
 
-## What's in this tutorial?
+## O que tem nesse tutorial?
 
-In the next four parts of the tutorial (including this one), you'll be diving into the Gatsby data layer, which is a powerful feature of Gatsby that lets you easily build sites from Markdown, WordPress, headless CMSs, and other data sources of all flavors.
+Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulhando na camada de dados do Gatsby, uma _feature_ poderosa que permite voce criar facilmente sites a partir de Markdown, WordPress, CMSs crus, e qualquer outra fonte de dados.
 
-**NOTE:** Gatsby’s data layer is powered by GraphQL. For an in-depth tutorial on
-GraphQL, we recommend [How to GraphQL](https://www.howtographql.com/).
+**NOTA:** A camada de dados do Gatsby utiliza GraphQL. Para um tutorial aprofundado em
+Graphql, nós recomendamos [How to GraphQL](https://www.howtographql.com/).
 
 ## Data in Gatsby
 
