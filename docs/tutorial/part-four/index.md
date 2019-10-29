@@ -8,14 +8,14 @@ Seja bem-vindo(a) a quarta parte do tutorial! Já estamos no meio do caminho! Es
 
 ## Relembrando a primeira metade do tutorial
 
-Até agora você aprendeu como utilizar React.js-o quão poderozo é ser capaz de 
-criar seus _próprios_ componentes para agirem como _building blocks_ customizados para websites.
+Até agora você aprendeu como utilizar React.js-o quão poderoso é ser capaz de 
+criar seus _próprios_ componentes para agirem como componentes essenciais customizados para websites.
 
 Você também explorou os componentes de estilo utilizando os módulos CSS.
 
 ## O que tem nesse tutorial?
 
-Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulhando na camada de dados do Gatsby, uma _feature_ poderosa que permite voce criar facilmente sites a partir de Markdown, WordPress, CMSs crus, e qualquer outra fonte de dados.
+Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulhando na camada de dados do Gatsby, uma funcionalidade poderosa que permite você criar sites facilmente a partir de Markdown, WordPress, CMSs crus, e qualquer outra fonte de dados.
 
 **NOTA:** A camada de dados do Gatsby utiliza GraphQL. Para um tutorial aprofundado em
 Graphql, nós recomendamos [How to GraphQL](https://www.howtographql.com/).
