@@ -19,7 +19,7 @@ Exemplos de comportamentos que contribuem na criação de um ambiente positivo i
 Exemplos de comportamentos inaceitáveis pelos participantes incluem:
 
 - Uso de linguagem ou imagens sexualizadas e atenção ou avanço sexual indesejado
-- Comentários zombativos, insultosos/depreciativos e ataques pessoais ou políticos
+- Comentários zombativos (_trolling_), insultosos/depreciativos e ataques pessoais ou políticos
 - Assédios públicos ou privados
 - Publicação de informações privadas de outros, tais como endereços físicos ou eletrônicos sem uma permissão explícita
 - Quaisquer outras condutas que podem ser razoavelmente consideradas inapropriadas em um ambiente profissional
@@ -32,7 +32,7 @@ Os mantenedores do projeto têm o direito e a responsabilidade de remover, edita
 
 ## Escopo
 
-Este Código de Conduta se aplica tanto no contexto dos espaços de colaboração do projeto como também em espaços públicos quando um individuo está representando o projeto ou sua comunidade. Exemplos de representação do projeto ou da comunidade incluem o uso de um endereço oficial de email do projeto, publicação por meio de uma conta oficial em alguma mídia social ou a atuação como representante em um evento online ou offline. A representação de um projeto poderá ser mais detalhadamente definida e esclarecida pelos mantenedores do projeto.
+Este Código de Conduta se aplica tanto no contexto dos espaços de colaboração do projeto como também em espaços públicos quando um individuo está representando o projeto ou sua comunidade. Exemplos de representação do projeto ou da comunidade incluem o uso de um endereço oficial de email do projeto, publicação por meio de uma conta oficial em alguma mídia social ou a atuação como representante em um evento _online_ ou _offline_. A representação de um projeto poderá ser mais detalhadamente definida e esclarecida pelos mantenedores do projeto.
 
 ## Aplicação
 
