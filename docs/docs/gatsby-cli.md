@@ -1,6 +1,6 @@
 ---
 
-title: Commands (Gatsby CLI)
+title: Comandos (ILC do Gatsby)
 
 tableOfContentsDepth: 2
 
@@ -12,7 +12,7 @@ A interface de linha de comandos (ILC) do Gatsby é o primeiro passo para inicia
 
   
 
-_Documentação sobre esse tema também está disponível no [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md),  do gatsby-cliand e a [folha de consulta rápida](/docs/cheat-sheet/) contém os principais comandos da ILC em formato para impressão._
+_Documentação sobre esse tema também está disponível no [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md),  do gatsby-cli e a [folha de consulta rápida](/docs/cheat-sheet/) contém os principais comandos da ILC em formato para impressão._
 
   
 
@@ -28,27 +28,21 @@ Utilize o comando `gatsby --help` se precisar de instruções de uso.
 
   
 
-Outra opção para utilizar o `gatsby-cli` é através de _scripts_ disponívels no arquivo `package.json` que são disponibilizados na maioria dos [starters](/docs/starters/). Por exemplo: para disponibilizar o comando [`gatsby develop`](#develop) em sua aplicação, abra o arquivo `package.json` e adicione o script abaixo:
+Você também pode utilizar o `gatsby-cli`  através de _scripts_ disponíveis no arquivo `package.json` disponibilizados na maioria dos [starters](/docs/starters/). Por exemplo: para disponibilizar o comando [`gatsby develop`](#develop) em sua aplicação, abra o arquivo `package.json` e adicione o script abaixo:
 
   
 
 ```json:title=package.json
 
 {
-
-"scripts": {
-
-"develop": "gatsby develop"
-
-}
-
+  "scripts": {
+    "develop": "gatsby develop"
+  }
 }
 
 ```
 
-  
-
-## API 
+## Comandos da API 
 
   
 
@@ -72,9 +66,9 @@ gatsby new [<site-name> [<starter-url>]]
 
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 
-| site-name | O nome do seu site Gatsby, que será utilizado para nomear o diretório do projeto criado pelo _gatsby-cli_.
+| site-name | O nome do seu site Gatsby, que será utilizado para nomear o diretório do projeto.
 
-| starter-url | URL de um starter do Gatsby. URL. O valor default desse parâmetro é  [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); consulte a documentação disponível na página [Starters do Gatsby](/docs/gatsby-starters/) para mais informações. |
+| starter-url | URL de um starter do Gatsby ou o caminho de um arquivo local. O valor default desse parâmetro é  [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); consulte a documentação disponível na página [Starters do Gatsby](/docs/gatsby-starters/) para mais informações. |
 
   
 
@@ -137,7 +131,7 @@ Consulte a documentação dos [starters do Gatsby](https://www.gatsbyjs.org/docs
 
   
 
-### Comando `develop`
+### `develop`
 
   
 Após a instalação do site Gatsby, acesse o diretório raiz do seu projeto e utilize o comando abaixo para executar o servidor de desenvolvimento:
@@ -170,7 +164,7 @@ Consulte o [guia para HTTPS local](/docs/local-https/) para instruções de como
 
   
 
-#### Visualizando as alterações que você fez em outros dispositivos
+#### Visualizando suas alterações em outros dispositivos
 
   
 Utilize o argumento _host_ do comando _develop_ para acessar o seu ambiente de desenvolvimento em outros dispositivos que esteja conectados na mesma rede: 
@@ -204,10 +198,10 @@ On Your Network: http://192.168.0.212:8000/ // highlight-line
 
   
 
-### Comando `build`
+### `build`
 
   
-Executado na raiz do site, compile sua aplicação Gatsby e a prepara para distribuição.
+Executado na raiz do site, compila sua aplicação Gatsby e a prepara para distribuição.
 
   
 
@@ -303,13 +297,10 @@ Executado na raiz do site, limpa os diretórios _cache_ e _public_:
   
 Esse comando é útil como um último recurso quando seu projeto local apresenta problemas que levam a crer que o conteúdo do site não está sendo regenerado. Alguns problemas que podem ser resolvidos com essa solução:
 
-This is useful as a last resort when your local project seems to have issues or content does not seem to be refreshing. Issues this may fix commonly include:
-
-  
 
 - Conteúdo desatualizado (por exemplo, arquivos e recursos que não são exibidos ou encontrados)
 
-- Erro de GraphQL. ( por exemplo, esse recurso GraphQL deveria está disponível mas não existe)
+- Erros de GraphQL. (por exemplo, esse recurso GraphQL deveria está disponível mas não existe)
 
 - Problemas de dependência como versões inválidas, erros enigmáticos no console, etc.
 
