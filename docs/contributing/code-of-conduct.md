@@ -36,7 +36,7 @@ Este código de conduta se aplica a espaços físicos e públicos onde um indivi
 
 ## Aplicação
 
-Instâcias de abuso, assédio ou qualquer outro comportamento inaceitável podem ser reportadas contatando a equipe do projeto em [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). Todas as reclamações serão revisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada para a circunstância. A equipe é obrigada a manter sigilo afim de resguardar quem reportou o incidente. Mais detalhes sobre políticas específicas de aplicação podem ser publicadas separadamente.
+Instâncias de abuso, assédio ou qualquer outro comportamento inaceitável podem ser reportadas contatando a equipe do projeto em [conduct@gatsbyjs.com](mailto:conduct@gatsbyjs.com). Todas as reclamações serão revisadas e investigadas e resultarão em uma resposta considerada necessária e apropriada para a circunstância. A equipe é obrigada a manter sigilo afim de resguardar quem reportou o incidente. Mais detalhes sobre políticas específicas de aplicação podem ser publicadas separadamente.
 
 Mantenedores do projeto que não seguirem ou aplicarem este código de conduta de boa vontade podem enfrentar repercussões temporárias ou permanentes conforme determinado pelos outros membros da liderança do projeto.
 
