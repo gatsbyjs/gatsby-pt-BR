@@ -4,11 +4,11 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Antes de começar a construir seu primeiro site Gatsby, você precisará se familiarizar com algumas principais tecnologias web e verificar se instalou todas as ferramentas de software necessárias.
+Antes de começar a construir seu primeiro site Gatsby, você precisará se familiarizar com algumas das principais tecnologias web e verificar se instalou todas as ferramentas de software necessárias.
 
 ## Familiarize-se com a linha de comando
 
-A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. Você também costuma ver isso como terminal. Neste tutorial, usaremos os dois de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando é uma maneira poderosa e baseada em texto de interagir com o seu computador.
+A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. As vezes, você encontrará artigos a referenciando como terminal. Neste tutorial, usaremos os dois de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando é uma maneira poderosa e baseada em texto de interagir com o seu computador.
 
 Reserve um momento para localizar e abrir a interface da linha de comandos (Command Line Interface - CLI) do seu computador. Dependendo do sistema operacional que você estiver usando, consulte as [**instruções para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instruções para Windows**](ttps://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instruções para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
@@ -36,7 +36,7 @@ O Node.js é um ambiente que pode executar código JavaScript fora de um navegad
 
 _Nota: a versão mínima suportada do Node.js. do Gatsby é o Node 8, mas fique à vontade para usar uma versão mais recente._
 
-1. Abra o seu terminal.
+1. Abra seu terminal.
 1. Execute `brew update` para garantir que você tenha a versão mais recente do Homebrew.
 1. Execute este comando para instalar o Node e o npm de uma só vez: `brew install node`
 
@@ -44,9 +44,8 @@ Depois de seguir as etapas de instalação, verifique se tudo foi instalado corr
 
 ### Verifique sua instalação do Node.js
 
-1. Abra o seu terminal.
-2. Execute `node --version`. (Se você é novo na linha de comando, quando colocamos o comando, `node` (pode ser outro qualquer que você já tenha instalado), vamos executar o `node` que está instalado em seu computador.
-   E o `--version` é para ver qual versão foi instalada do comando desejado).
+1. Abra seu terminal.
+2. Execute `node --version`. (Se o terminal é algo novo para você, "Execute `node --version`" significa "escreva `node --version`" no terminal, e clique na tecla Enter. Onde `node --version` pode ser outro comando. "Executar `comando`" terá esse significado daqui em diante).
 3. Execute `npm --version`.
 
 A saída de cada um desses comandos deve ser um número de versão. Suas versões podem não ser as mesmas mostradas abaixo! Se inserir esses comandos não mostrar um número de versão, volte e verifique se instalou o Node.js.
@@ -71,19 +70,19 @@ A CLI do Gatsby está disponível via npm e deve ser instalada globalmente execu
 
 _**Nota**: ao instalar o Gatsby e executá-lo pela primeira vez, você verá uma pequena mensagem notificando sobre dados de uso anônimos que estão sendo coletados para comandos do Gatsby, você pode ler mais sobre como esses dados são extraídos e usado no [doc de telemetria](/docs/telemetry)._
 
-Para ver os comandos disponíveis, execute o `gatsby --help`.
+Para ver os comandos disponíveis, execute `gatsby --help`.
 
 ![Confira os comandos do Gatsby no terminal](05-gatsby-help.png)
 
-> 💡 Se você não conseguir executar a CLI do Gatsby com êxito devido a um problema de permissões, consulte o [documentos do npm sobre como corrigir permissões](https://docs.npmjs.com/getting-started/fixing-npm-permissions), ou [este guia](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
+> 💡 Se você não conseguir executar a CLI do Gatsby com êxito devido a problemas de permissão, consulte os [documentos do npm sobre como corrigir permissões](https://docs.npmjs.com/getting-started/fixing-npm-permissions), ou [este guia](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
 
 ## Crie um site do Gatsby
 
 Agora você está pronto para usar a ferramenta CLI do Gatsby para criar seu primeiro site do Gatsby. Usando a ferramenta, você pode fazer o download de “starters” (sites parcialmente construídos com alguma configuração padrão) para ajudá-lo a acelerar a criação de um determinado tipo de site. O starter do "Hello World" que você usará aqui é um starter com o essencial necessário para um site de Gatsby.
 
-1. Abra o seu terminal.
+1. Abra seu terminal.
 2. Execute `gatsby new hello-world https: // github.com / gatsbyjs / gatsby-starter-hello-world`. (_Nota: Dependendo da velocidade do seu download, a quantidade de tempo necessária varia. Por uma questão de brevidade, o gif abaixo foi pausado durante parte da instalação_).
-3. Execute o `cd hello-world`.
+3. Execute `cd hello-world`.
 4. Execute `gatsby develop`.
 
 <video controls="controls" autoplay="true" loop="true">
@@ -105,7 +104,7 @@ gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd hello-world
 ```
 
-- Isto diz 'Eu quero mudar os diretórios (`cd`) para a subpasta "hello-world"'. Sempre que você quiser executar algum comando para o seu site, você precisa estar no contexto desse site (ou seja, seu terminal precisa ser apontado para o diretório em que o código do site reside).
+- Isto diz "Eu quero mudar de diretório para a subpasta 'hello world'". Sempre que você quiser executar algum comando para o seu site, você precisa estar no contexto desse site (ou seja, seu terminal precisa ser apontado para o diretório em que o código do site reside).
 
 ```shell
 gatsby develop
@@ -123,19 +122,19 @@ Parabéns! Este é o começo de seu primeiro site Gatsby! 🎉
 
 Você poderá visitar o site localmente em [**_http://localhost:8000_**](http://localhost:8000/) enquanto seu servidor de desenvolvimento estiver em execução. Esse é o processo que você iniciou executando o comando `gatsby develop`. Para parar de executar esse processo (ou “parar de executar o servidor de desenvolvimento”), volte para a janela do terminal, mantenha pressionada a tecla “control” e pressione “c” (ctrl-c). Para iniciá-lo novamente, execute o `gatsby develop` novamente!
 
-**Nota:** Se você estiver usando a configuração da VM como `vagrant` e / ou gostaria de ouvir no seu endereço IP local, execute`gatsby develop - --host = 0.0.0.0`. Agora, o servidor de desenvolvimento escuta 'localhost' e seu IP local.
+**Nota:** Se você estiver usando uma configuração da VM como `vagrant` e/ou gostaria de escutar no seu endereço IP local, execute `gatsby develop - --host = 0.0.0.0`. Agora, o servidor de desenvolvimento escuta 'localhost' e seu IP local.
 
 ## Configure um editor de código
 
-Um editor de código é um programa projetado especificamente para editar o código do computador. Existem muitos ótimos por aí.
+Um editor de código é um programa desenvolvido especialmente para editar códigos de computador. Existem ótimos editores por aí.
 
 ### Baixe o VS Code
 
-A documentação do Gatsby às vezes inclui capturas de tela que foram tiradas no VS Code, portanto, se você ainda não possui um editor de código preferido, o uso do VS Code garantirá que sua tela se pareça com as capturas de tela no tutorial e nos documentos. Se você optar por usar o Código VS, visite o [site do VS Code](https://code.visualstudio.com/#alt-downloads) and download the version appropriate for your platform.
+A documentação do Gatsby às vezes inclui capturas de tela que foram tiradas no VS Code, portanto, se você ainda não possui um editor de código preferido, o uso do VS Code garantirá que sua tela se pareça com as capturas de tela no tutorial e nos documentos. Se você optar por usar o Código VS, visite o [site do VS Code](https://code.visualstudio.com/#alt-downloads) e baixe a versão apropriada para sua plataforma.
 
 ### Instale o plugin Prettier
 
-Também recomendamos o uso [Prettier](https://github.com/prettier/prettier), uma ferramenta que ajuda a formatar seu código para evitar erros.
+Também recomendamos o uso do [Prettier](https://github.com/prettier/prettier), uma ferramenta que ajuda a formatar seu código para evitar erros.
 
 Você pode usar o Prettier diretamente no seu editor usando o [plugin Prettier do VS Code](https://github.com/prettier/prettier-vscode):
 
@@ -143,7 +142,7 @@ Você pode usar o Prettier diretamente no seu editor usando o [plugin Prettier d
 2. Procure "Prettier - Code formatter".
 3. Clique em "Install". (Após a instalação, você será solicitado a reiniciar o VS Code para habilitar a extensão. As versões mais recentes do VS Code habilitarão a extensão automaticamente após o download.)
 
-> 💡 Se você não estiver usando o VS Code, consulte a documentação do Prettier para [instruções de instalação](https://prettier.io/docs/en/install.html) ou [outras integrações de editores](https://prettier.io/docs/en/editors.html).
+> 💡 Se você não estiver usando o VS Code, consulte a documentação do Prettier para [instruções de instalação](https://prettier.io/docs/en/install.html) ou [integrações para outros editores](https://prettier.io/docs/en/editors.html).
 
 ## ➡️ O que vem a seguir?
 
@@ -167,7 +166,7 @@ Não é necessário ser um especialista nisso - se não for, não se preocupe! V
 - **HTML**: Uma linguagem de marcação que todo navegador da Web é capaz de entender. Significa HyperText Markup Language. O HTML fornece ao seu conteúdo da web uma estrutura informacional universal, definindo itens como cabeçalhos, parágrafos e muito mais.
 - **CSS**: Uma linguagem de apresentação usada para estilizar a aparência do seu conteúdo da web (fontes, cores, layout etc.). Significa Folhas de Estilo em Cascata (do inglês **C**ascading **S**tyle **S**heets).
 - **JavaScript**: Uma linguagem de programação que nos ajuda a tornar a web dinâmica e interativa.
-- **React**: Uma biblioteca de códigos (criada com JavaScript) para criar interfaces de usuário. É a estrutura que o Gatsby usa para criar páginas e estruturar o conteúdo.
+- **React**: Uma biblioteca de códigos (criada com JavaScript) para criar interfaces de usuário. É o framework que o Gatsby usa para criar páginas e estruturar o conteúdo.
 - **GraphQL**: Uma linguagem de consulta que permite extrair dados para o seu site. É a interface que o Gatsby usa para gerenciar dados do site.
 
 ### O que é um site?
