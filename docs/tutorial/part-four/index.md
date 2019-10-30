@@ -20,35 +20,34 @@ Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulh
 **NOTA:** A camada de dados do Gatsby utiliza GraphQL. Para um tutorial aprofundado em
 Graphql, nós recomendamos [How to GraphQL](https://www.howtographql.com/).
 
-## Data in Gatsby
+## Dados no Gatsby
 
-A website has four parts: HTML, CSS, JS, and data. The first half of the
-tutorial focused on the first three. Now let’s learn how to use data in Gatsby
-sites.
+Um website tem quatro partes: HTML, CSS, JS e dados. A primeira metade do
+tutorial focou nos três primeiros. Agora vamos aprender como usar dados nos sites Gatsby.
 
-**What is data?**
+**O que são dados?**
 
-A very computer science-y answer would be: data is things like `"strings"`,
-integers (`42`), objects (`{ pizza: true }`), etc.
+A resposta de um cientista da computação seria: dados são coisas como `"strings"`,
+inteiros (`42`), objetos (`{ pizza: true}`), etc.
 
-For the purpose of working in Gatsby, however, a more useful answer is
-"everything that lives outside a React component".
+Entretando, quando estamos trabalhando com Gatsby, uma resposta mais prática é
+"tudo que vive fora de um componente React".
 
-So far, you've been writing text and adding images _directly_ in components.
-Which is an _excellent_ way to build many websites. But, often you want to store
-data _outside_ components and then bring the data _into_ the component as
-needed.
+Até agora, você estava escrevendo texto e adicionando imagens _diretamente_ nos componentes.
+Essa é uma forma _excelente_ de construir muitos websites. Mas, muitas vezes você quer armazenar
+dados _fora_ dos componentes e, em seguida, trazer os dados _para_ o componente quando
+necessário.
 
-If you're building a site with WordPress (so other contributors
-have a nice interface for adding & maintaining content) and Gatsby, the _data_
-for the site (pages and posts) are in WordPress and you _pull_ that data, as
-needed, into your components.
+Se você está construindo um site com WordPress (outros contribuidores
+têm uma interface legal para adicionar e manter o conteúdo) e Gatsby, os _dados_
+do site (páginas e posts) são em WordPress e você _extrai_ esses dados, quando 
+necessário, para os componentes.
 
-Data can also live in file types like Markdown, CSV, etc. as well as databases
-and APIs of all sorts.
+Dados também podem estar em arquivos tipo Markdown, CSV, etc. bem como bancos
+de dados e APIs de todos os tipos.
 
-**Gatsby's data layer lets you pull data from these (and any other source)
-directly into your components**—in the shape and form you want.
+**A camada de dados do Gatsby permite você extrair dados dessas fontes (e quaisquer outras)
+diretamente para os seus componentes**-na estrutura e forma que você quiser.
 
 ## Using Unstructured Data vs GraphQL
 
