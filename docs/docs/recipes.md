@@ -65,10 +65,9 @@ Alguns arquivos notáveis e suas definições:
 - Para comandos comuns, consulte o [Gatsby CLI docs](/docs/gatsby-cli).
 - Confira a [Gatsby Cheat Sheet](/docs/cheat-sheet/) para obter informações de download.
 
-### Creating pages automatically
+### Criando páginas automaticamente
 
-Gatsby core automatically turns React components in `src/pages` into pages with URLs.
-For example, components at `src/pages/index.js` and `src/pages/about.js` would automatically create pages from those filenames for the site's index page (`/`) and `/about`.
+O Gatsby core transforma automaticamente os componentes React dentro de `src/pages` em páginas com URLs. Por exemplo, componentes em `src/pages/index.js` e` src/pages/about.js` criam páginas automaticamente seguindo os nomes dos arquivos para a página de índice do site (`/`) e `/about`.
 
 #### Prerequisites
 
