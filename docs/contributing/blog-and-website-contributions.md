@@ -39,7 +39,7 @@ O formato a seguir pode ajudá-lo a criar seu novo conteúdo para o blog. No top
 
 ```md
 ---
-title: "Sua grande postagem ao Blog"
+title: "Sua grande postagem no blog"
 date: YYYY-MM-DD
 author: Jamie Doe
 excerpt: "Aqui é um trecho útil ou breve descrição deste post."
