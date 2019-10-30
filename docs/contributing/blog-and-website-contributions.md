@@ -48,7 +48,7 @@ tags:
   - post
 ---
 
-Seu próximo excelente post o aguarda!
+Sua próxima grande postagem o aguarda!
 
 Inclua imagens criando uma pasta para sua postagem e incluindo
 Markdown e arquivos de imagem para facilitar a vinculação.
