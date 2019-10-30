@@ -1,7 +1,7 @@
 
-# Gatsby em Português (Pt-BR) 🇧🇷
+# Gatsby em Português (PT-BR) 🇧🇷
 
-Este repositório contém a tradução em portuguẽs brasileiro do Gatsby. 
+Este repositório contém a tradução em português brasileiro do Gatsby. 
 
 ### Navegação
 
