@@ -6,7 +6,7 @@ Queremos contribuir com o Gatsby para ser divertido, agradável e educativo para
 
 ## Não sabe como começar a contribuir?
 
-Se você está preocupado ou não sabe por onde começar, consulte nossa página [onde participar](/contributing/where-to-participate/). Você pode perguntar para [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) ou [@GatsbyJS](https://twitter.com/gatsbyjs) no Twitter, e qualquer pessoa do time Gatsby no [Discord](https://gatsby.dev/discord). Você também pode [enviar uma issue](/contributing/how-to-file-an-issue/) e um mantenedor pode fornecer orientações!
+Se você está preocupado ou não sabe por onde começar, consulte nossa página [onde participar](/contributing/where-to-participate/). Você pode perguntar para [Marcy Sutton (@marcysutton)](https://twitter.com/marcysutton) ou [@GatsbyJS](https://twitter.com/gatsbyjs) no Twitter, e qualquer pessoa do time Gatsby no [Discord](https://gatsby.dev/discord). Você também pode [enviar uma issue](/contributing/how-to-file-an-issue/) e um mantenedor pode fornecer mais orientações!
 
 ## Programação em pares
 
