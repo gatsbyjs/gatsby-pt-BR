@@ -29,13 +29,13 @@ A live example may not be possible depending on the nature of the recipe, in whi
 See [docs templates](/docs/docs-templates/) in the contributing docs for more help.
 -->
 
-Craving a happy medium between [full-length tutorials](/tutorial/) and crawling the [docs](/docs/)? Here's a cookbook of guiding recipes on how to build things, Gatsby style.
+Desejando um meio termo entre [tutoriais completos](/tutorial/) e rastreando os [docs](/docs/)? Aqui está um livro de receitas orientadoras sobre como construir coisas, no estilo Gatsby.
 
-## 1. Pages and Layouts
+## 1. Páginas e Layouts
 
-### Project structure
+### Estrutura do projeto
 
-Inside a Gatsby project, you may see some or all of the following folders and files:
+Dentro de um projeto Gatsby, você pode ver algumas ou todas as seguintes pastas e arquivos:
 
 ```
 |-- /.cache
@@ -52,12 +52,12 @@ Inside a Gatsby project, you may see some or all of the following folders and fi
 |-- gatsby-browser.js
 ```
 
-Some notable files and their definitions:
+Alguns arquivos notáveis e suas definições:
 
-- `gatsby-config.js` — configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
-- `gatsby-node.js` — implement Gatsby’s Node.js APIs to customize and extend default settings affecting the build process
-- `gatsby-browser.js` — customize and extend default settings affecting the browser, using Gatsby’s browser APIs
-- `gatsby-ssr.js` — use Gatsby’s server-side rendering APIs to customize default settings affecting server-side rendering
+- `gatsby-config.js` — configurar opções para um site do Gatsby, com metadados para o título do projeto, descrição, plugins, etc.
+- `gatsby-node.js` — implementar APIs Node.js do Gatsby para personalizar e estender as configurações padrão que afetam o processo de criação.
+- `gatsby-browser.js` — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby.
+- `gatsby-ssr.js` — use as APIs de server-side rendering (SSR) do Gatsby para personalizar as configurações padrão que afetam a server-side rendering (SSR).
 
 #### Additional resources
 
