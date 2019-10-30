@@ -31,7 +31,7 @@ Você pode checar as outras postagens em `/docs/blog` como referência.
 - Cheque novamente a gramática e adicione as letras maíusculas corretamente.
 - Faça o Commit e envie para o seu fork.
 - Abra um pull request da sua branch.
-  - Nós recomentamos usaro prefixo `docs`, ex. `docs/your-change` ou `docs-your-change`. ([Exemplo de PR](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
+  - Nós recomendamos usar o prefixo `docs`, ex. `docs/your-change` ou `docs-your-change`. ([Exemplo de PR](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
 
 ### Formato de postagem do Blog
 
