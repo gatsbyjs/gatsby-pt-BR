@@ -15,7 +15,7 @@ Você também explorou os componentes de estilo utilizando os módulos CSS.
 
 ## O que tem nesse tutorial?
 
-Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulhando na camada de dados do Gatsby, uma funcionalidade poderosa que permite você criar sites facilmente a partir de Markdown, WordPress, CMSs crus, e qualquer outra fonte de dados.
+Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulhando na camada de dados do Gatsby, uma funcionalidade poderosa que permite você criar sites facilmente a partir de Markdown, WordPress, CMSs puros, e qualquer outra fonte de dados.
 
 **NOTA:** A camada de dados do Gatsby utiliza GraphQL. Para um tutorial aprofundado em
 Graphql, nós recomendamos [How to GraphQL](https://www.howtographql.com/).
@@ -49,13 +49,13 @@ de dados e APIs de todos os tipos.
 **A camada de dados do Gatsby permite você extrair dados dessas fontes (e quaisquer outras)
 diretamente para os seus componentes**-na estrutura e forma que você quiser.
 
-## Using Unstructured Data vs GraphQL
+## Usandos Dados Desestruturados vs GraphQL
 
-### Do I have to use GraphQL and source plugins to pull data into Gatsby sites?
+### Eu preciso utilizar GraphQL e plugins de extração para injetar dados nos sites Gatsby?
 
-Absolutely not! You can use the node `createPages` API to pull unstructured data into Gatsby pages directly, rather than through the GraphQL data layer. This is a great choice for small sites, while GraphQL and source plugins can help save time with more complex sites.
+Claro que não! Você pode usar a API node `createPages` para injetar diretamente dados desestruturados nas páginas Gatsby, ao invés de utilizar a camada de dados GraphQL. Essa é uma ótima escolha para pequenos sites, embora GraphQL e plugins de extração podem ajudar poupar tempo com sites mais complexos.
 
-See the [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/) guide to learn how to pull data into your Gatsby site using the node `createPages` API and to see an example site!
+Veja o guia [Usando Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/) para aprender como puxar dados para o seu site Gatsby utilizando a API node `createPages` e ver um site de exemplo!
 
 ### When do I use unstructured data vs GraphQL?
 
