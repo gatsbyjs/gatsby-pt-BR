@@ -1,71 +1,71 @@
 ---
-title: Blog & Website Contributions
+title: Contribuições ao Blog & Website
 ---
 
-We wholeheartedly welcome contributions to the Gatsby blog and website!
+Nós sinceramente agradecemos as contribuições para o blog e o site do Gatsby! 
 
-Here are some things to keep in mind when deciding where to contribute to Gatsby:
+Aqui estão algumas coisas a ter em mente ao decidir para onde contribuir com o Gatsby:
 
-- [Blog posts](#contributing-to-the-blog) work best for case studies and time-sensitive storytelling (see the [blog post format](#blog-post-format)).
-- [Docs](/contributing/docs-contributions/) are continually relevant and discoverable learning materials that go beyond any one case study or situation.
-- [Website changes](#making-changes-to-the-website) that improve either of these are always welcome!
+- [Postagens de Blog](#contribuindo-para-o-blog): funcionam melhor para estudos de caso e narrações sensíveis ao tempo (veja o [formato de postagem do blog](#formato-de-postagem-do-blog)).
+- [Docs](/contributing/docs-contributions/): são materiais de aprendizagem continuamente relevantes e notáveis, que vão além de qualquer estudo de caso ou outra situação.
+- [Modificações do Website](#fazendo-modificações-para-o-website): melhorias aqui são sempre bem-vindas!
 
-## Contributing to the blog
+## Contribuindo para o blog
+Nota: Antes de adicionar uma postagem ao blog, certifique-se de ter a aprovação de um membro do time do Gatsby. Você pode fazer isso [abrindo uma issue](https://github.com/gatsbyjs/gatsby/issues/new/choose) ou entrando em contato com [@gatsbyjs no Twitter](https://twitter.com/gatsbyjs).
 
-Note: Before adding a blog post, ensure you have approval from a member of the Gatsby team. You can do this by [opening an issue](https://github.com/gatsbyjs/gatsby/issues/new/choose) or contacting [@gatsbyjs on Twitter](https://twitter.com/gatsbyjs).
+Para adicionar uma nova postagem ao blog do gatsbyjs.org:
 
-To add a new blog post to the gatsbyjs.org blog:
+- Clone [o repositório do Gatsby](https://github.com/gatsbyjs/gatsby/) e navegue até `/www`.
+- Execute `yarn` para instalar todas as dependências do website ([Por que Yarn?](/contributing/setting-up-your-local-dev-environment#using-yarn))
+- Execute `npm run develop` para pré-visualizar o blog em `http://localhost:8000/blog`.
+- O conteúdo do blog fica na pasta `/docs/blog`. Faça modificações ou adições aqui.
+- Adicione sua imagem de avatar em `/docs/blog/avatars`.
+- Adicione seu nome no `/docs/blog/author.yaml`.
+- Adiciome uma nova pasta seguindo o padrão `/docs/blog/yyyy-mm-dd-title`. Com essa pasta recém criada adicione um arquivo `index.md`.
+- Adicione `title`, `date`, `author`, `excerpt`, e `tags` ao cabeçalho do seu `index.md`. Você pode [ver as tags existentes](/blog/tags/), ou [adicionar uma nova](https://github.com/gatsbyjs/gatsby/blob/master/www/src/data/tags-docs.js) se você acha que merece sua própria tag, no entanto recomendamos que você use as tags existentes.
+- Se você estiver postando sua postagem em outros lugares, você pode adicionar `canonicalLink` para obter benefícios no SEO. 
+Você pode checar as outras postagens em `/docs/blog` como referência.
+- Se a sua postagem contém imagens, você deve adicionar ela na pasta da sua postagem e referênciar ela no seu `index.md`.
+- Certifique-se que todos links do gatsbyjs.org sejam relativos - `/contributing/how-to-contribute/` ao invés de `https://gatsbyjs.org/contributing/how-to-contribute`.
+- Siga o [Guia de Estilo](/contributing/gatsby-style-guide/#word-choice) para ter certeza que você está usando as palavras apropriadas.
+- Cheque novamente a gramática e adicione as letras maíusculas corretamente.
+- Faça o Commit e envie para o seu fork.
+- Abra um pull request da sua branch.
+  - Nós recomentamos usaro prefixo `docs`, ex. `docs/your-change` ou `docs-your-change`. ([Exemplo de PR](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
 
-- Clone [the Gatsby repo](https://github.com/gatsbyjs/gatsby/) and navigate to `/www`.
-- Run `yarn` to install all of the website's dependencies. ([Why Yarn?](/contributing/setting-up-your-local-dev-environment#using-yarn))
-- Run `npm run develop` to preview the blog at `http://localhost:8000/blog`.
-- The content for the blog lives in the `/docs/blog` folder. Make additions or modifications here.
-- Add your avatar image to `/docs/blog/avatars`.
-- Add your name to `/docs/blog/author.yaml`.
-- Add a new folder following the pattern `/docs/blog/yyyy-mm-dd-title`. Within this newly created folder, add an `index.md` file.
-- Add `title`, `date`, `author`, `excerpt`, and `tags` to the frontmatter of your `index.md`. You can [view existing tags](/blog/tags/), or [add a new one](https://github.com/gatsbyjs/gatsby/blob/master/www/src/data/tags-docs.js) if you feel your tag merits being its own tag, though we encourage you to use existing tags.
-- If you are cross posting your post, you can add `canonicalLink` for SEO benefits. You can check the other blog posts in `/docs/blog` for examples.
-- If your blog post contains images, add them to your blog post folder and reference them in your post's `index.md`.
-- Ensure any links to gatsbyjs.org are relative links - `/contributing/how-to-contribute/` instead of `https://gatsbyjs.org/contributing/how-to-contribute`.
-- Follow the [Style Guide](/contributing/gatsby-style-guide/#word-choice) to make sure you're using the appropriate wording.
-- Double check your grammar and capitalize correctly.
-- Commit and push to your fork.
-- Create a pull request from your branch.
-  - We recommend using a prefix of `docs`, e.g. `docs/your-change` or `docs-your-change`. ([PR example](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
+### Formato de postagem do Blog
 
-### Blog post format
-
-The following format can help you in creating your new blog content. At the top is "frontmatter": a fancy name for metadata in Markdown. The frontmatter for your post should include a title, date, singular author name (for now, we would welcome issues/PRs for this), and one or more tags. Your content will follow after the second set of dashes (`---`).
+O formato a seguir pode ajudá-lo a criar seu novo conteúdo para o blog. No topo está o "frontmatter"(cabeçalho): um nome _fancy_ para Metadados no Markdown. O cabeçalho para seu post deve incluir um título, data, um único autor (por hora, nós estamos aceitando issues/PR para isso) e uma ou mais tags. Seu conteúdo deve estar depois do segundo grupo de traços (`---`).
 
 ```md
 ---
-title: "Your Great Blog Post"
+title: "Sua grande postagem ao Blog"
 date: YYYY-MM-DD
 author: Jamie Doe
-excerpt: "Here is a helpful excerpt or brief description of this blog post."
+excerpt: "Aqui é um trecho útil ou breve descrição deste post."
 tags:
   - awesome
   - post
 ---
 
-Your next great blog post awaits!
+Seu próximo excelente post o aguarda!
 
-Include images by creating a folder for your post and including
-Markdown and image files for easy linking.
+Inclua imagens criando uma pasta para sua postagem e incluindo
+Markdown e arquivos de imagem para facilitar a vinculação.
 
-![awesome example](./image.jpg)
+![exemplo fantástico](./image.jpg)
 ```
 
-## Making changes to the website
+## Fazendo modificações para o website
 
-If you want to make changes, improvements, or add new functionality to the website, you don't have to set up the full Gatsby repo to contribute. You can spin up your own instance of the Gatsby website with these steps:
+Se você deseja fazer alterações, melhorias ou adicionar novas funcionalidades ao site, não precisa configurar o repositório completo do Gatsby para contribuir. Você pode criar sua própria instância do site do Gatsby com estas etapas:
 
-- Clone [the Gatsby repo](https://github.com/gatsbyjs/gatsby/) and navigate to `/www`
-- Run `yarn` to install all of the website's dependencies.
-- Run `npm run develop` to preview the site at `http://localhost:8000/`.
+- Clonar [the Gatsby repo](https://github.com/gatsbyjs/gatsby/) e navegue até `/www`
+- Executar `yarn` para instalar todas as dependências do website.
+- Executar `npm run develop` para pré-visualizar o website em `http://localhost:8000/`.
 
-> Note: If you are experiencing issues on a Linux machine, run `sudo apt install libvips-dev`, to install a native dependency. You can also reference [Gatsby guide on Linux](/docs/gatsby-on-linux/) for other Linux-specific requirements.
+> Nota: Se você estiver tendo problemas com uma máquina Linux, execute `sudo apt install libvips-dev`, para instalar uma dependência nativa. Você também pode consultar o [Guia para Gatsby no Linux](/docs/gatsby-on-linux/) para outros requisitos específicos do Linux'.
 
-Now you can make and preview your changes before raising a pull request!
+Agora você pode fazer e visualizar suas alterações antes de abrir seu pull request!
 
-For full repo setup instructions, visit the [code contributions](/contributing/code-contributions/) page.
+Para obter instruções completas de configuração do repositório, visite a página de [contribuições de código](/contributing/code-contributions/).
