@@ -59,11 +59,11 @@ Alguns arquivos notáveis e suas definições:
 - `gatsby-browser.js` — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby.
 - `gatsby-ssr.js` — use as APIs de server-side rendering (SSR) do Gatsby para personalizar as configurações padrão que afetam a server-side rendering (SSR).
 
-#### Additional resources
+#### Recursos adicionais
 
-- For a tour of all the common folders and files, read the docs on [Gatsby's Project Structure](/docs/gatsby-project-structure/)
-- For common commands, check out the [Gatsby CLI docs](/docs/gatsby-cli)
-- Check out the [Gatsby Cheat Sheet](/docs/cheat-sheet/) for downloadable info at a glance
+- Para realizar um tour em todas as pastas e arquivos comuns, leia os documentos em [Gatsby's Project Structure](/docs/gatsby-project-structure/).
+- Para comandos comuns, consulte o [Gatsby CLI docs](/docs/gatsby-cli).
+- Confira a [Gatsby Cheat Sheet](/docs/cheat-sheet/) para obter informações de download.
 
 ### Creating pages automatically
 
