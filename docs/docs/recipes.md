@@ -69,15 +69,15 @@ Alguns arquivos notáveis e suas definições:
 
 O Gatsby core transforma automaticamente os componentes React dentro de `src/pages` em páginas com URLs. Por exemplo, componentes em `src/pages/index.js` e` src/pages/about.js` criam páginas automaticamente seguindo os nomes dos arquivos para a página de índice do site (`/`) e `/about`.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Um [site Gatsby](/docs/quick-start)
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-#### Directions
+#### Instruções
 
-1. Create a directory for `src/pages` if your site doesn't already have one.
-2. Add a component file to the pages directory:
+1. Crie um diretório para `src/pages` se o seu site ainda não tiver um.
+2. Adicione um novo componente ao diretório de páginas:
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -92,26 +92,26 @@ const AboutPage = () => (
 export default AboutPage
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. Visit your new page in the browser: `http://localhost:8000/about`
+3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+4. Visite sua nova página no navegador: `http://localhost:8000/about`
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Creating and modifying pages](/docs/creating-and-modifying-pages/)
+- [Criando e modificando páginas](/docs/creating-and-modifying-pages/)
 
-### Linking between pages
+### Vinculando páginas
 
-Routing in Gatsby relies on the `<Link />` component.
+O roteamento no Gatsby depende do componente `<Link />`.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A Gatsby site with two page components: `index.js` and `contact.js`
-- The Gatsby `<Link />` component
-- The [Gatsby CLI](/docs/gatsby-cli/) to run `gatsby develop`
+- Um site do Gatsby com dois componentes de página: `index.js` e` contact.js`
+- O componente `<Link />` do Gatsby
+- O [Gatsby CLI](/docs/gatsby-cli/) para executar o comando `gatsby develop`
 
-#### Directions
+#### Instruções
 
-1. Open the index page component (`src/pages/index.js`), import the `<Link />` component from Gatsby, add a `<Link />` component above the header, and give it a `to` property with the value of `"/contact/"` for the pathname:
+1. Abra o componente da página de índice (`src/pages/index.js`), importe o componente `<Link />` do Gatsby, adicione um componente `<Link />` e insira uma propriedade `to` com o valor de `"/contact/"` para o nome do caminho:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -125,9 +125,9 @@ export default () => (
 )
 ```
 
-2. Run `gatsby develop` and navigate to the index page. You should have a link that takes you to the contact page when clicked!
+2. Execute `gatsby develop` e navegue até a página de índice. Você deve ter um link que o leve à página de contato quando clicado!
 
-> **Note**: Gatsby's `<Link />` component is a wrapper around [`@reach/router`'s Link component](https://reach.tech/router/api/Link). For more information about Gatsby's `<Link />` component, consult the [API reference for `<Link />`](/docs/gatsby-link/).
+> **Nota**: O componente `<Link />` do Gatsby é um invólucro em torno do componente Link do [`@reach/router`](https://reach.tech/router/api/Link). Para obter mais informações sobre o componente `<Link />` de Gatsby, consulte a [Referência da API](/docs/gatsby-link/).
 
 ### Creating a layout component
 
