@@ -64,7 +64,7 @@ As etapas para baixar e instalar o Git dependem do seu sistema operacional. Siga
 
 ## Usando a CLI do Gatsby
 
-A ferramenta CLI do Gatsby permite que você execute os comandos necessários paras você desenvolver rapidamente os seus sites utilizando a tecnologia do Gatsby. Ela está disponível como um pacote publicado no _npm_.
+A ferramenta CLI do Gatsby permite que você execute os comandos necessários para desenvolver com rapidez os seus sites utilizando a tecnologia do Gatsby. Ela está disponível como um pacote publicado no _npm_.
 
 A CLI do Gatsby está disponível via npm e deve ser instalada globalmente executando `npm install -g gatsby-cli`.
 
