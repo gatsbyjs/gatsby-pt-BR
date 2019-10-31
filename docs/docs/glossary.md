@@ -34,7 +34,7 @@ Uma ferramenta que permite escrever o [JavaScript](#javascript) mais moderno e d
 
 ### Backend
 
-Os bastidores que o [público](#public) não vê. Isso geralmente se refere ao painel de controle do seu [CMS](#cms). Geralmente, eles são desenvolvidos com linguagens de programação do lado do servidor, como Node.js, PHP, Go, ASP.net, Ruby, ou Java.
+Os bastidores que o [público](#public) não vê. Isso geralmente se refere ao painel de controle do seu [CMS](#cms). Geralmente, eles são desenvolvidos com linguagens de programação _server-side_ (aquelas que rodam no servidor), como Node.js, PHP, Go, ASP.net, Ruby, ou Java.
 
 ### Build
 
