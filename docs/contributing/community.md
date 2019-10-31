@@ -42,7 +42,7 @@ Para últimas notícias sobre Gatsby,
 
 A equipe principal do Gatsby (funcionários oficiais que estão trabalhando no open-source do Gatsby) realizam uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dúvidas e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações pertinentes e planos que são aplicáveis a comunidade!
 
-Esse evento é realizado de forma recorrente, toda Quarta-Feira às 18:30 (Horário padrão do Pacífico).
+Esse evento é realizado de forma recorrente, toda Quarta-Feira às 08:30 (Horário padrão do Pacífico).
 
 [Adicione aqui o convite recorrente à agenda](https://gatsby.dev/core-maintainers)
 
