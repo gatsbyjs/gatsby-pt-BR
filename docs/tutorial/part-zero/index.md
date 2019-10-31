@@ -8,7 +8,7 @@ Antes de começar a construir seu primeiro site Gatsby, você precisará se fami
 
 ## Familiarize-se com a linha de comando
 
-A linha de comando, é uma interface baseada em texto usada para executar comandos no seu computador. Às vezes, você encontrará artigos se referindo a ela como _terminal_. Neste tutorial, usaremos os dois termos de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando permite uma interação poderosa com os recursos que o seu computador oferece.
+A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. Às vezes, você encontrará artigos se referindo a ela como _terminal_. Neste tutorial, usaremos os dois termos de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando permite uma interação poderosa com os recursos que o seu computador oferece.
 
 Reserve um momento para localizar e acessar a interface da linha de comandos (Command Line Interface - CLI) do seu computador. Dependendo do sistema operacional que você estiver usando, consulte as [**instruções para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instruções para Windows**](ttps://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instruções para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
@@ -19,7 +19,7 @@ Para instalar o Gatsby e o Node.js, é recomendável usar o [Homebrew](https://b
 Como instalar ou verificar o Homebrew no seu computador:
 
 1. Abra seu Terminal.
-1. Veja se o Homebrew está instalado executando `brew -v`. Você verá "Homebrew" e um número de versão.
+1. Veja se o Homebrew está instalado executando `brew -v`. Você deverá ver a palavra "Homebrew" e um número de versão.
 1. Caso contrário, faça o download e instale o [Homebrew com as instruções](https://docs.brew.sh/Installation) para o seu sistema operacional (Mac, Linux ou Windows).
 1. Depois de instalar o Homebrew, repita a etapa 2 para confirmar o sucesso da instalação.
 
