@@ -1,40 +1,40 @@
 ---
-title: Open Community Pair Programming Sessions
+title: Sessões de programação em pares abertas à comunidade
 ---
 
-The best part of open source is the community, and every community is stronger when it works together. To help build the strongest community possible, Gatsby is offering free [one-hour pair programming sessions][cal] to anyone and everyone in the open source community.
+A melhor parte do _open source_ é a comunidade, e cada comunidade é mais forte quando trabalha em conjunto. Para ajudar a construir a comunidade mais forte possível, o Gatsby está oferecendo [sessões de programação em pares de uma hora][cal] para qualquer pessoa e todos na comunidade de código aberto.
 
-## How community pair programming sessions work
+## Como funcionam as sessões de programação em pares da comunidade
 
-1.  Sign up for any available slot on [the open pairing calendar][cal]
-2.  You’ll be paired with one of the Gatsby Inkteam
-3.  Join the video meeting during your time slot
-4.  Build, learn, or discuss your Gatsby or other OSS project!
+1. Inscreva-se em qualquer vaga disponível no [calendário aberto][cal]
+2. Você será pareado com um dos funcionários da Gatsby Inkteam
+3. Participe da videoconferência durante seu horário
+4. Crie, aprenda ou discuta seu projeto em Gatsby ou outro projeco _open source_!
 
-### What we expect in pair programming sessions
+### O que esperamos em sessões de programação em pares
 
-These sessions are intended for people who:
+Essas sessões são destinadas as pessoas que:
 
-- would like to get started with Gatsby, or
-- would like to get started with contributing to open source software, or
-- would like to work on an issue or pull request related to Gatsby, or
-- are using Gatsby for a personal, open source, charity or education project
+- gostariam de começar com Gatsby, ou
+- gostariam de começar a contribuir com o software de código aberto (_open source_), ou
+- gostariam de trabalhar em uma _issue_ ou _pull request_ relactionado ao Gatsby, ou
+- estão usando o Gatsby para um projeto pessoal, de código aberto, de caridade ou educação
 
-If you're interested in support for a commercial Gatsby project, please [get in touch via the contact page](https://www.gatsbyjs.com/contact-us/).
+Se você estiver interessado em apoiar o projeto comercial do Gatsby, entre em contato através da página de contato (https://www.gatsbyjs.com/contact-us/).
 
-We also expect the following from pair programming participants:
+Também esperamos o seguinte dos participantes da programação em pares:
 
-- These sessions tend to work best when you have a specific goal for the session.
-- If you're new to building with Gatsby we recommend [working through the tutorial](https://www.gatsbyjs.org/tutorial/) before your session. If you get stuck part way through that's a great time to book a pairing session.
-- If you're new to contributing to open source we recommend following the ["Setting Up Your Local Dev Environment" guide](https://www.gatsbyjs.org/contributing/setting-up-your-local-dev-environment/) before your session.
-- All participants are expected to adhere to [Gatsby’s code of conduct](/contributing/code-of-conduct/)
-- We will ask if it’s okay to record our session; you are _not_ required to let us record
-- If the session is recorded, we may post the recording on [Gatsby’s YouTube channel](https://www.youtube.com/channel/UCjnp770qk7ujOq8Q9wiC82w)
+- Essas sessões tendem a funcionar melhor quando você tem uma meta específica para a sessão.
+- Se você não conhece o Gatsby, recomendamos [trabalhar com o tutorial](https://www.gatsbyjs.org/tutorial/) antes da sua sessão. Se você ficar meio preso, é um ótimo momento para reservar uma sessão de programação em par.
+- Se você é novo na contribuição para código aberto, recomendamos seguir o guia ["Setting Up Your Local Dev Environment"](https://www.gatsbyjs.org/contributing/setting-up-your-local-dev-environment/) antes da sua sessão.
+- Todos os participantes devem aceitar o [código de conduta do Gatsby](/contributing/code-of-conduct/)
+- Vamos perguntar se não há problema em gravar nossa sessão; você não é obrigado a nos deixar gravar
+- Se a sessão for gravada, podemos postar a gravação no [canal do Gatsby no YouTube](https://www.youtube.com/channel/UCjnp770qk7ujOq8Q9wiC82w)
 
-## How to sign up
+## Como se inscrever
 
-We allow booking up to 30 days in advance, and spots tend to fill up fast. If we’re all booked up today, check back tomorrow for the next batch of spots. The core team is spread across North America, India, and Europe, so most time zones will have availability during working hours.
+Permitimos a reserva com até 30 dias de antecedência, e as vagas tendem a encher rapidamente. Se todas vagas já tiverem reservada hoje, volte amanhã para o próximo lote de vagas. A equipe principal está espalhada pela América do Norte, Índia e Europa; portanto, a maioria dos fusos horários terá disponibilidade durante o horário de trabalho.
 
-[Reserve your spot today][cal] and let’s build something amazing together!
+[Reserve seu lugar hoje][cal] e vamos construir algo incrível juntos!
 
 [cal]: https://calendly.com/gatsbyjs/pair-programming
