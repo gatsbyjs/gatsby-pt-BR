@@ -12,7 +12,7 @@ Um dos valores da nossa comunidade é: ["você faz parte disso"](/blog/2018-09-0
 
 ## Código de conduta do colaborador Gatsby
 
-No interesse de promover um ambiente aberto e acolhedor, nós como colaboradores e mantenedores juramos fazer da participação no nosso projeto e na nossa comunidade uma experiência livre de assédio, independente da idade, corpo, peso, deficiência, etnia, identidade de gênero e expressão, nível de experiência, nacionalidade, aparência, raça, religião, ou identidade e orientação sexual.
+No intuito de promover um ambiente aberto e acolhedor, nós, como contribuidores e mantenedores, nos comprometemos em tornar a participação em nossos projetos e em nossa comunidade o mais livre de assédio para todos, independentemente da idade, corpo, tamanho, deficiência, etnia, identidade ou expressão de gênero, nível de experiência, nacionalidade, aparência, raça, religião ou identidade e orientação sexual..
 
 [Leia todo o código de conduta](/contributing/code-of-conduct/)
 
