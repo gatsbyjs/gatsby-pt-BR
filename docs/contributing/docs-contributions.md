@@ -1,86 +1,86 @@
 ---
-title: Docs Contributions
+title: Contribuições para as Documentações
 ---
 
-Gatsby, unsurprisingly, uses Gatsby for its documentation website. Thank you in advance and cheers for contributing to Gatsby documentation! As of February 2019, over 800 people have contributed. It's people like you that make this community great!
+Gatsby, sem surpresas, usa Gatsby para a o site de sua documentação. Agradecemos antecipadamente e muito obrigado por contribuir com a documentação do Gatsby! Em fevereiro de 2019, mais de 800 pessoas já contribuíram. São pessoas como você que tornam essa comunidade ótima!
 
-> _When deciding where to contribute to Gatsby (docs or [blog](/contributing/blog-and-website-contributions/)?), check out the [docs templates](/contributing/docs-templates/) page._
+> _Ao decidir para onde contribuir com o Gatsby (documentações ou [blog](/contributing/blog-and-website-contributions/)?), veja a página com [templates de documentações](/contributing/docs-templates/)._
 
-## Top priorities
+## Prioridades mais altas
 
-Check the GitHub repo for issues labeled with ["documentation" and "good first issue"](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22type%3A+documentation%22+label%3A%22good+first+issue%22) for your first time contributing to Gatsby, or ["documentation" and "help wanted"](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22type%3A+documentation%22+label%3A%22help+wanted%22) to see all documentation issues that are ready for community help. Once you start a Pull Request to address one of these issues, you can remove the "help wanted" label. As well, examine the list of articles that haven't been fully fleshed out at the [Stub List](/contributing/stub-list).
+Procure no repositório do GitHub pelas _issues_ marcadas com ["documentation" and "good first issue"](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22type%3A+documentation%22+label%3A%22good+first+issue%22) para sua primeira contribuição com o Gatsby, ou ["documentation" e "help wanted"](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22type%3A+documentation%22+label%3A%22help+wanted%22) para ver todas as _issues_ de documentação prontas para receber ajuda da comunidade. Depois de abrir um _pull request_ para solucionar uma das issues, você pode remover a _label_ "help wanted". Além disso, de uma conferida na lista de artigos que não foram totalmente detalhados na [lista de esboços](/contributing/stub-list).
 
-## Options for contributing to the Gatsby docs
+## Opções para contribuir com as documentações do Gatsby
 
-When working on the Gatsby.js documentation, you can choose between two major styles of working:
+Ao trabalhar na documentação do Gatsby.js, você pode esconlher entre duas, mais comuns, formas de trabalhar:
 
-- [Work directly in the GitHub UI](#modifying-markdown-files), using the "Edit this File" and commit capabilities without having to clone the repository. This is useful for quick documentation updates, typo fixes, and lightweight Markdown changes.
-- Clone the Gatsby.js repo and get the `www` site up and running locally. This is necessary for more thorough documentation content and infrastructure changes. Learn how to get set up in the [Gatsby docs setup instructions](#docs-site-setup-instructions).
+- [Trabalhar diretamente na UI do GitHub](#modificando-arquivos-em-markdown), usando o _"Edit this File"_ e a função de _commit_. Isso é útil para atualizações rápidas da documentação, correções de erros de digitação e alterações pequenas no Markdown.
+- Clone o repositório do Gatsby.js e configure para que o site dentro de `www` rode localmente. Isso é necessário para obter um conteúdo mais completo da documentação e alterações na infraestrutura. Aprenda a configurar usando as [instruções para configurar a documentação do Gatsby](#instruções-para-configurar-a-documentação-do-Gatsby).
 
-## Fixing image and link paths
+## Corrigindo o caminho de link e imagem
 
-If you find a broken image URL in the Gatsby docs, it should be fixed and kept relative to the site source rather than linked to the remote repo on GitHub. This ensures that when the site is deployed, all images are included in the build.
+Se você encontrar uma URL de uma imagem corrompida na documentação do Gatsby, ela deve ser corrigida e mantida em relação à origem do site, em vez de vinculado ao repositório remoto no GitHub. Isso garante que, quando o site for publicado, todas as imagens sejam incluídas na compilação.
 
-To address missing images, check the doc or tutorial source [in the Gatsby repo](https://github.com/gatsbyjs/gatsby/tree/master/docs) to see if it was moved in its history and if the images are still in its old location. Check to see if those images are also referenced from more than one doc. If they aren't, move them to the new directory location (and update URL references relative to the content, if necessary). If they are referenced in more than one location, use relative paths and don't duplicate images.
+Para resolver as imagens faltantes, consulte a fonte do documento ou tutorial [no repositório do Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/docs) ver no histórico se foi movida e se as imagens ainda estão no local antigo. Verifique se essas imagens também são referenciadas em mais de um documento. Se não estiverem, mova-os para o novo diretório (e atualize as referências de URL relativas ao conteúdo, se necessário). Se eles forem referenciados em mais de um local, use caminhos relativos e não duplique imagens.
 
-If you find a broken link in the Gatsby docs, feel free to fix it and submit a PR!
+Se você encontrar um link quebrado na documentação do Gatsby, fique à vontade para corrigi-lo e enviar um PR!
 
-Keep in mind that some links in here are already correct because they work on gatsbyjs.org. While it would be nice to links in documentation to work on GitHub, have them working on gatsbyjs.org is a higher priority!
+Lembre-se de que alguns links aqui já estão corretos porque funcionam no gatsbyjs.org. Embora seja bom ter links na documentação funcionando no GitHub, tê-los funcionando no gatsbyjs.org é prioritário!
 
-## Headings
+## Títulos
 
-Docs with frontmatter metadata at the top including a `title` will automatically receive an `<h1>` heading in the rendered page, and it should be the only one. Additional headings in docs content should start with `<h2>`, denoted by `##` in Markdown.
+Documentos com o _frontmatter_ no topo, com um `title` terão um título `<h1>` na página renderizada, e este deve ser único. Títulos adicionais devem começar pelo `<h2>`, marcados com `##` no Markdown.
 
-For the purposes of an accessible document outline, content headings should go in order from h2-h4 (`####`) until all levels have been established. This will ensure the Gatsby docs have a content hierarchy that works well for users of assistive technology. Read more about the importance of [headings and semantic structure in HTML](https://webaim.org/techniques/semanticstructure/).
+Para fins de um documento acessível, os títulos do conteúdo devem ir de h2-h4 (`####`) até que todos os níveis tenham sido estabelecidos. Isso garantirá que os documentos do Gatsby tenham uma hierarquia de conteúdo que funcione bem para usuários de tecnologia assistida. Leia mais sobre a importância de [títulos e estrutura semântica no HTML](https://webaim.org/techniques/semanticstructure/).
 
-## Modifying Markdown files
+## Modificando arquivos em Markdown
 
-> 💡 New to writing Markdown? Check out the Gatsby [guide on Markdown Syntax](/docs/mdx/markdown-syntax/)!
+> 💡 Primeira vez escrevendo Markdown? Veja o [guia para Markdown do Gatsby](/docs/mdx/markdown-syntax/)!
 
-1. If you want to add/modify any Gatsby documentation, go to the
-   [docs folder](https://github.com/gatsbyjs/gatsby/tree/master/docs) or [contributing folder](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) on GitHub and
-   use the file editor to edit and then preview your changes.
-2. Before committing the change and raising a PR in the UI, you need to make sure the PR meets the docs contribution criteria:
-   - Follow the standards outlined in the [Gatsby Style Guide](/contributing/gatsby-style-guide/).
-   - If your PR did not come from an issue written by the core team, please add a comment to your PR that explains why it should be included in the docs, according to the [Docs Decision Tree](/blog/2018-10-12-uptick-docs-contributions-hacktoberfest/#docs-decision-tree-and-examples).
-     > Note: If your issue and/or PR doesn't meet the above contribution criteria, it may receive a comment reminding you to do so. If, after two weeks, these updates haven't been made, your issue and/or PR may be closed, which helps us triage issues and PRs efficiently. You can request that it be reopened if and when you are ready to make the updates required.
-3. GitHub then allows you to commit the change and raise a PR right in the UI. This is the _easiest_ way you can contribute to the project!
+1. Se você deseja adicionar / modificar qualquer documentação do Gatsby, vá para a
+   [pasta _docs_](https://github.com/gatsbyjs/gatsby/tree/master/docs) ou para a [pasta _contributing_](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) no GitHub e 
+   use o editor de arquivos para editar e visualizar suas alterações.
+2. Antes de enviar suas modificações e abrir o PR na UI, você precisa ter certeza que seu PR está de acordo com os critérios de contribuição para as documentações:
+   - Seguindo os padrões descritos no [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/).
+   - Se o seu PR não tem como origem uma issue escrita pelo _core team_, por favor adicione um comentário no seu PR, explicando o porque deveria ser incluido na documentação, de acordo com os [quesitos para decisão da Documentação](/blog/2018-10-12-uptick-docs-contributions-hacktoberfest/#docs-decision-tree-and-examples).
+     > Nota: Se a sua _issue_ e/ou PR não atender aos critérios de contribuição acima, ele poderá receber um comentário para lembrá-lo. Se, após duas semanas, essas atualizações não tiverem sido feitas, sua _issue_ e/ou PR poderá ser encerrado, o que nos ajudará a triar _issues_ e PRs com eficiência. Você pode solicitar que seja reaberto se e quando estiver pronto para fazer as atualizações necessárias.
+3. O GitHub permite você modificar e abrir um PR na própria UI. Essa é a forma mais fácil de contribuir com o projeto!
 
-### Converting a document from a stub
+### Convertendo um documento a partir de um esboço
 
-If you wrote a new document that was [previously a stub](/contributing/how-to-write-a-stub/), there are two things you need to update.
+Se você escreveu um novo documento que era [anteriormente um esboço](/contributing/how-to-write-a-stub/), existe duas coisas que precisam ser atualizadas.
 
-1. Remove the frontmatter that links to the issue
+1. Remova o _frontmatter_ que tem o _link_ para a issue
 
 ```diff:title=docs/docs/example-doc.md
   ...
-    title: Example Document
+    title: Documento de exemplo
 - - issue: https://github.com/gatsbyjs/gatsby/issues/00000
 + -
   ...
 ```
 
-2. Edit `www/src/data/sidebars/doc-links.yaml` by removing the asterisk behind the document's title:
+2. Edite o `www/src/data/sidebars/doc-links.yaml` revomendo o asterisco antes do título do documento:
 
 ```diff:title=www/src/data/sidebars/doc-links.yaml
   ...
-- - title: Example Document*
-+ - title: Example Document
+- - title: Documento de exemplo*
++ - title: Documento de exemplo
     link: /docs/example-document/
   ...
 ```
 
-3. (Optional) if the name of the title seems long, consider adding a `breadcrumbTitle` to the entry in the `doc-links.yaml` file that is a shorter version of the title, and will show up in the breadcrumb on the docs page instead.
+3. (Opcional) se o nome do título parecer longo, considere adicionar um `breadcrumbTitle` no arquivo `doc-links.yaml`, isso e uma versão curta do seu título, a qual será mostrada no _breadcrumb_ na página de documentação.
 
 ```diff:title=www/src/data/sidebars/doc-links.yaml
   ...
-  - title: Really, Really Long Example Document or Guide Title
+  - title: Exemplo de título muito grande, mas muito grande mesmo, da documentação
     link: /docs/example-document/
-+   breadcrumbTitle: Shorter Title to Display
++   breadcrumbTitle: Título curto para mostrar
   ...
 ```
 
-## Docs site setup instructions
+## Instruções para configurar a documentação do Gatsby
 
 After going through the [development setup instructions](/contributing/setting-up-your-local-dev-environment/), there are a few additional things that are helpful to know when setting up the [Gatsby.js docs site](/docs/), which mostly lives in the [www](https://github.com/gatsbyjs/gatsby/tree/master/www) and [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) directories. There are also some [examples](https://github.com/gatsbyjs/gatsby/tree/master/examples) in the repo that are referenced in docs.
 
