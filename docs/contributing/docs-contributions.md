@@ -2,7 +2,7 @@
 title: Contribuições para as Documentações
 ---
 
-Gatsby, sem surpresas, usa Gatsby para a o site de sua documentação. Agradecemos antecipadamente, muito obrigado por contribuir com a documentação do Gatsby! Em fevereiro de 2019, mais de 800 pessoas já haviam contribuído. São pessoas como você que tornam essa comunidade ótima!
+Gatsby, sem surpresas, usa Gatsby para o site de sua documentação. Agradecemos antecipadamente, muito obrigado por contribuir com a documentação do Gatsby! Em fevereiro de 2019, mais de 800 pessoas já haviam contribuído. São pessoas como você que tornam essa comunidade ótima!
 
 > _Ao decidir para onde contribuir com o Gatsby (documentações ou [blog](/contributing/blog-and-website-contributions/)?), veja a página com os [templates de documentações](/contributing/docs-templates/)._
 
