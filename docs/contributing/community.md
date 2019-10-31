@@ -4,7 +4,7 @@ title: Comunidade
 
 Desde Setembro de 2019, a comunidade Gatsby é composta por mais de 2.400 colaboradores e dezenas de milhares de desenvolvedores construindo websites pessoais e comerciais usando Gatsby.
 
-Open source nem sempre tem a melhor reputação de ser amigável e acolhedor, e isso nos deixa tristes. **Todos que pertencem ao open source, e Gatsby, estão dedicados a fazer você se sentir acolhido.**
+Open source nem sempre tem a melhor reputação de ser amigável e acolhedor, e isso nos deixa tristes. **Todos que pertencem ao open source, e o Gatsby está dedicado a fazer você se sentir acolhido.**
 
 Nós nunca julgaremos ou excluíremos alguém. Ao invés disso, nós iremos além para dar suporte a comunidade, ajudando você a contribuir com o ecossistema do Gatsby, oferecendo [brindes para os colaboradores](https://gatsby.dev/swag), dando controle para a comunidade [convidar automaticamente todos os colaboradores da organização Gatsby no GitHub](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), um aberto e inclusivo [código de conduta](/contributing/code-of-conduct/), e outros meios que capacitam e abraçam a incrível comunidade que faz o Gatsby ser possível.
 
