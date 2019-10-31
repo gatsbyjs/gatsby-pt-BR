@@ -13,9 +13,9 @@ criar seus _próprios_ componentes para agirem como componentes essenciais custo
 
 Você também explorou os componentes de estilo utilizando os módulos CSS.
 
-## O que tem nesse tutorial?
+## O que teremos nesse tutorial?
 
-Nas próximas quatro partes do tutorial (incluindo essa), vocês estará mergulhando na camada de dados do Gatsby, uma funcionalidade poderosa que permite você criar sites facilmente a partir de Markdown, WordPress, CMSs puros, e qualquer outra fonte de dados.
+Nas próximas quatro partes do tutorial (incluindo esta), vocês estará mergulhando na camada de dados do Gatsby, uma funcionalidade poderosa que permite você criar sites facilmente a partir de Markdown, WordPress, CMSs puros, e qualquer outra fonte de dados.
 
 **NOTA:** A camada de dados do Gatsby utiliza GraphQL. Para um tutorial aprofundado em
 Graphql, nós recomendamos [How to GraphQL](https://www.howtographql.com/).
@@ -28,14 +28,14 @@ tutorial focou nos três primeiros. Agora vamos aprender como usar dados nos sit
 **O que são dados?**
 
 A resposta de um cientista da computação seria: dados são coisas como `"strings"`,
-inteiros (`42`), objetos (`{ pizza: true}`), etc.
+inteiros (`42`), objetos (`{ pizza: true }`), etc.
 
-Entretando, quando estamos trabalhando com Gatsby, uma resposta mais prática é
+Entretanto, quando estamos trabalhando com Gatsby, uma resposta mais prática é
 "tudo que vive fora de um componente React".
 
 Até agora, você estava escrevendo texto e adicionando imagens _diretamente_ nos componentes.
 Essa é uma forma _excelente_ de construir muitos websites. Mas, muitas vezes você quer armazenar
-dados _fora_ dos componentes e, em seguida, trazer os dados _para_ o componente quando
+dados _fora_ dos componentes e, em seguida, trazer os dados _para_ dentro do componente quando
 necessário.
 
 Se você está construindo um site com WordPress (outros contribuidores
@@ -43,7 +43,7 @@ têm uma interface legal para adicionar e manter o conteúdo) e Gatsby, os _dado
 do site (páginas e posts) são em WordPress e você _extrai_ esses dados, quando 
 necessário, para os componentes.
 
-Dados também podem estar em arquivos tipo Markdown, CSV, etc. bem como bancos
+Dados também podem estar em arquivos Markdown, CSV, etc. bem como bancos
 de dados e APIs de todos os tipos.
 
 **A camada de dados do Gatsby permite você extrair dados dessas fontes (e quaisquer outras)
@@ -53,9 +53,9 @@ diretamente para os seus componentes**-na estrutura e forma que você quiser.
 
 ### Eu preciso utilizar GraphQL e plugins de extração para injetar dados nos sites Gatsby?
 
-Claro que não! Você pode usar a API node `createPages` para injetar diretamente dados desestruturados nas páginas Gatsby, ao invés de utilizar a camada de dados GraphQL. Essa é uma ótima escolha para pequenos sites, embora GraphQL e plugins de extração podem ajudar poupar tempo com sites mais complexos.
+Claro que não! Você pode usar a API node `createPages` para injetar diretamente dados desestruturados nas páginas Gatsby, ao invés de utilizar a camada de dados GraphQL. Essa é uma ótima escolha para pequenos sites, embora GraphQL e plugins de extração podem ajudar a poupar tempo com sites mais complexos.
 
-Veja o guia [Usando Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/) para aprender como puxar dados para o seu site Gatsby utilizando a API node `createPages` e ver um site de exemplo!
+Veja o guia [Usando Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/) para aprender como injetar dados no seu site Gatsby utilizando a API node `createPages` e ver um site de exemplo!
 
 ### When do I use unstructured data vs GraphQL?
 
