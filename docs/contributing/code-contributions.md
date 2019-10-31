@@ -2,7 +2,7 @@
 title: Contribuições de Código
 ---
 
-A beleza em contribuir com o _open source_ é que você pode dar _clone_ em seu projeto favorito, rodá-lo localmente e fazer experimentos e mudanças em tempo real! Quase como um mago.
+A beleza em contribuir com o _open source_ é que você pode dar _clone_ em seu projeto favorito, rodá-lo localmente e fazer experimentos e mudanças em tempo real! A sensação é como se você fosse um mago.
 
 Esta página contém os seguintes tópicos:
 
@@ -46,7 +46,7 @@ O arquivo `.env.development` é ignorado pelo git. Seu _token_ nunca deve ser "c
 
 ## Contribuindo com sites exemplo
 
-A política do Gatsby é de que o "uso" de sites exemplo (como os presentes em [exemplos de parte de repositórios](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
+A política do Gatsby é de que o "uso" de sites exemplo (como os presentes na [pasta de exemplos do repositório](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
 
 Para contribuir com sites exemplo, é recomendado criar seu próprio repositório no Github e vinculá-lo a partir de seu _plugin_ de origem, etc.
 
