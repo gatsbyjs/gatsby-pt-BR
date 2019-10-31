@@ -30,7 +30,7 @@ A prática inclusiva de remover barreiras que impedem a interação ou acesso a 
 
 ### Babel
 
-Uma ferramenta que permite escrever o [JavaScript](#javascript) mais moderno e na [compilação](#build) é [compilado](#compiler) para código que a maioria dos navegadores da web pode entender.
+Uma ferramenta que permite escrever o [JavaScript](#javascript) mais moderno e durante a [compilação](#build) é [compilado](#compiler) para código que a maioria dos navegadores da web pode entender.
 
 ### Backend
 
