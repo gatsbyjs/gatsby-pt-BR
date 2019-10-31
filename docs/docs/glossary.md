@@ -96,13 +96,13 @@ Um banco de dados é uma coleção estruturada de dados ou conteúdo. Geralmente
 
 A dissociação descreve a separação de diferentes preocupações. Com o [Gatsby](#gatsby) , isso geralmente significa dissociar o [frontend](#frontend) do [backend](#backend), como no [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) ou [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
 
-### Deploy
+### Publicação
 
 O processo de [construção](#build) do seu site ou aplicativo e envio para um [provedor de hospedagem](#hosting).
 
-### Development Environment
+### Ambiente de Desenvolvimento
 
-The [environment](#environment) when you're developing your code. It's accessed through the [CLI](#cli) using `gatsby develop`, and provides extra error reporting and things to help you debug before building for [production](#production-environment).
+[Ambiente](#environment) que você utiliza quando está programando. Esse ambiente é disponibilizado pela [CLI](#cli) ao executar o comando `gatsby develop` e exibe relatórios de erro, entre outros recursos que ajudam na soluçõa de problemas antes de publicar o site em um [ambiente de produção](#production-environment).
 
 ### DOM
 
@@ -114,15 +114,17 @@ O Modelo de Objeto do Documento, conhecido como "o DOM", é uma API de navegador
 
 ECMAScript (geralmente chamado de ES) é uma especificação para linguagens de script. [JavaScript](#javascript) é uma implementação do ECMAScript. Frequentemente, os desenvolvedores usam o [Babel](#babel) para [compilar](#compiler) o código ECMAScript mais recente em JavaScript mais amplamente suportado.
 
-### Environment
+### Ambiente
 
-The environment that Gatsby runs in. For example, when you are writing your code you probably want as much debugging as possible, but that's undesirable on the live website or app. As such, Gatsby can change its behavior depending on the environment it's in.
+Ambiente no qual o seu projeto Gatsby está sendo executado. Por exemplo, quando você está desenvolvendo o site, você provavelmente deseja o máximo de informações de _debugging_ possível, no entanto esse recurso não é indicado para quando o site está _no ar_ ou quando o aplicativo está sendo utilizado no celular do usuário final. Através do conceito de _ambiente_, o Gatsby consegue se adaptar ao contexto no no qual ele está sendo utilizado.
 
-Gatsby supports two environments by default, the [development environment](#development-environment) and the [production environment](#production-environment).
+O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#development-environment) e [ambiente de produção](#production-environment).
 
-### Environment Variables
+### Variáveis de Ambiente
 
-[Environment Variables](/docs/environment-variables/) allow you to customize the behavior of your app depending on its [environment](#environment). For instance, you may wish to get content from a staging CMS during development and connect to your production CMS when you [build](#build) your site. With environment variables you can set a different URL for each environment.
+[Variáveis de ambiente](/docs/environment-variables/) permitem que você personalize o comportamento do seu site ou aplicativo de acordo com o [ambiente](#environment) em que ele está sendo utilizado.
+Por exemplo, você pode desejar carregar o conteúdo apartir de um CMS de validação (_staging_) durante a etapa de desenvolvimento e conectar com o CMS de produção apenas quando estiver [publicando](#build) o seu site.
+Utilizando _variáveis de ambiente_ você pode configurar um URL de conexão distinto para cada ambiente.
 
 ## F
 
@@ -230,19 +232,20 @@ Isso também se refere frequentemente aos [componentes](#component) que ficam em
 
 ### Plugin
 
-Additional code that adds functionality to Gatsby that wasn't included out-of-the-box. Common [Gatsby plugins](/plugins/) include [source](#source-plugins) and [transformer](#transformer) plugins for pulling in and manipulating data, respectively.
+Código adicional que acrescenta funcionalidades a um projeto Gatsby que não estejam incluídas por padrão.
+Alguns [plugins](/plugins/) populares incluem os plugins [source](#source-plugins) e  [transformer](#transformer) que são utilizados para carregar e manipular dados, respectivamente.
 
-### Production Environment
+### Ambiente de produção
 
-The [environment](#environment) for the [built](#build) website or app that users will experience when [deployed](#deploy). It can be accessed through the [CLI](#cli) using `gatsby build` or `gatsby serve`.
+ [Ambiente](#environment) para [compilação](#build) do site ou aplicação que será utilizada pelos usuários quando for [publicada](#deploy). It can be accessed through the [CLI](#cli) using `gatsby build` or `gatsby serve`.
 
 ### Programmatically
 
 Something that automatically happens based on your code and configuration. For example, you might [configure](#config) your project to create a [page](#page) for every blog post written, or read and display the current year as part of a copyright in your site footer.
 
-### Progressive enhancement
+### Melhoramento progressivo
 
-Progressive enhancement is a strategy for the web that emphasizes core page content is loaded from a server before anything else, without [JavaScript](#javascript) as a requirement to load. This strategy then progressively adds more complex layers of presentation and features on top of the content as the end-user's browser/network connection allow. Gatsby's default approach to [building](#build) pages ahead-of-time means content will load first and enhance as scripts download and execute.
+Melhoramento progressivo (_progressive enhancement_) é uma estratégia de desenvolvimento que prioriza o carregamento do conteúdo essencial de uma página _web_ frente a outras operações, incluíndo o carregamento do código [JavaScript](#javascript). Após essa etapa de carregamento do conteúdo inicial, mais recursos e camadas de apresentação são servidas ao úsuario de acordo com os recursos do navegador e da qualidade/velocidade de conexão do usuário. A estratégia de [construção](#build) de sites que o Gatsby utiliza por padrão prepara o conteúdo do site com antecedêcia em tempo de compilação, o que significa que o conteúdo do site é carregado primeiro e outros elementos são ativados quando os _scripts_ são carregados e executados.
 
 ### Public
 
