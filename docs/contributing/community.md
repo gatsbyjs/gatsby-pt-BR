@@ -29,7 +29,7 @@ A comunidade Gatsby está aberta a contribuições. Por favor, consulte os guias
 
 ### Newsletter
 
-Inscreva-se na newsletter do Gatsby para acompanhar as novidades da comunidade Gatsby. Ouça sobre novas funções, dicas & truques, e o que as pessoas estão construindo.
+Inscreva-se na newsletter do Gatsby para acompanhar as novidades da comunidade Gatsby. Ouça sobre novas funções, dicas e truques, e o que as pessoas estão construindo.
 
 [Inscreva-se aqui](/newsletter/)
 
