@@ -82,25 +82,25 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
 
 ## Instruções para configurar a documentação do Gatsby
 
-After going through the [development setup instructions](/contributing/setting-up-your-local-dev-environment/), there are a few additional things that are helpful to know when setting up the [Gatsby.js docs site](/docs/), which mostly lives in the [www](https://github.com/gatsbyjs/gatsby/tree/master/www) and [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) directories. There are also some [examples](https://github.com/gatsbyjs/gatsby/tree/master/examples) in the repo that are referenced in docs.
+Depois de passar pelas [instruções de configuração para desenvolvimento](/contributing/setting-up-your-local-dev-environment/), existe algumas informações adicionais que você deve saber ao configurar o [site da documentação do Gatsby.js](/docs/), que está em sua maior parte nos diretórios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) e [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs). Temos alguns [exemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples) no repostiório, os quais são referenciados na documentações.
 
-- [Fork and clone the Gatsby repo](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
-- For docs-only changes, consider using `git checkout -b docs/some-change` or `git checkout -b docs-some-change`, as this will short circuit the CI process and only run linting tasks.
-- Change directories into the docs site folder: `cd www`
-- Install dependencies with Yarn: `yarn install`
-- Add the following env variable to an `.env.development` file inside the `www` directory to [enable image placeholders](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. This will speed up building the docs site significantly!
-- Start a build of `www` with `gatsby develop`.
-- Edit Markdown files in the [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) and [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) folders, as well as the [YAML sidebar files](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
-- View the changes in your browser at `http://localhost:8000`.
-- Commit your changes and [submit a pull request](/contributing/how-to-open-a-pull-request/)!
+- [Fork e Clone o repositório do Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
+- Para modificações apenas na documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, isso irá fazer com que o CI execute apenas as tarefas de _lint_
+- Navegue até a pasta do site da documentação: `cd www`
+- Instale as dependências Yarn: `yarn install`
+- Adicione a seguinte variável de ambiente no arquivo `.env.development` dentro do diretório `www` para [habilitar as imagens temporárias](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. This will speed up building the docs site significantly!
+- Começe o build do `www` com o comando `gatsby develop`.
+- Edite os arquivos de Markdown dentro das pastas [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) e [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing), bem como [os arquivos YAML da barra lateral](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
+- Veja as modificações em `http://localhost:8000`.
+- Commit suas modificações e [abra um pull request](/contributing/how-to-open-a-pull-request/)!
 
-## Docs renaming instructions
+## Instruções para renomear documentações
 
-Sometimes it makes sense to move or rename a file as part of docs restructuring or for content clarification. While we recommend keeping URLs consistent as often as possible, here are some tips to minimize errors and keep the docs in a good state:
+Às vezes faz sentido mover ou renomear um arquivo, como parte da reestruturação da documentação ou para esclarecimento de um conteúdo. Embora seja recomendável manter as URLs consistentes da melhor maneira possível, aqui estão algumas dicas para minimizar erros e manter as documentações em bom estado:
 
-- Run proposed structure changes by the Gatsby docs team in [a GitHub issue](/contributing/how-to-file-an-issue/) to ensure your change is accepted.
-- Update all instances of the old URL to your new one. [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) in VS Code can help. Check that the context of the original link reference still makes sense with the new one.
-- For SEO purposes, add a redirect to the `createPages` function in [`www/gatsby-node.js`](https://github.com/gatsbyjs/gatsby/tree/master/www/gatsby-node.js). Here's an example:
+- Execute as alterações de estrutura propostas conforme o time de documentação do Gatsby em [uma issue no GitHub](/contributing/how-to-file-an-issue/) para garantir que sua mudança seja aceita.
+- Atualize todas as referências de URL antigas para a nova. O comando [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) do VS Code pode ajudar. Veja se o contexto original onde o link era usado ainda faz sentido como o novo.
+- Para questões de SEO, adicione um redirecionamento na função `createPages` em [`www/gatsby-node.js`](https://github.com/gatsbyjs/gatsby/tree/master/www/gatsby-node.js). Aqui tem um exemplo:
 
 ```js:title=www/gatsby-node.js
 createRedirect({
@@ -110,14 +110,14 @@ createRedirect({
 })
 ```
 
-## Claim your swag
+## Solicite seu brinde
 
-After your first code contribution to the Gatsby repo (including documentation) you become eligible for a free shirt or pair of socks. See the [swag page](/contributing/contributor-swag/) for more details!
+Após seu primeiro código como contribuição (incluindo documentação) você torna-se elegível para ganhar uma camiseta ou um par de meias. Veja a página de [página de brindes](/contributing/contributor-swag/) para mais detalhes!
 
-## Want more?
+## Gostaria de mais?
 
-Check out our additional pages on docs contributions:
+Confira nossas páginas adicionais sobre contribuições para documentações:
 
 - [Gatsby Style Guide](/contributing/gatsby-style-guide/)
-- [Docs Templates](/contributing/docs-templates/)
-- [How to Write a Stub](/contributing/how-to-write-a-stub/)
+- [Templates de documentações](/contributing/docs-templates/)
+- [Como escrever um esboço](/contributing/how-to-write-a-stub/)
