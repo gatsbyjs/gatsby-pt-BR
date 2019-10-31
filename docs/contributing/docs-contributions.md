@@ -12,12 +12,12 @@ Procure no repositório do GitHub por _issues_ marcadas com ["documentation" e "
 
 ## Opções para contribuir com as documentações do Gatsby
 
-Ao trabalhar na documentação do Gatsby.js, você pode esconlher entre duas, mais comuns, formas de trabalhar:
+Ao trabalhar na documentação do Gatsby.js, você pode escolher entre duas, mais comuns, formas de trabalhar:
 
 - [Trabalhar diretamente na UI do GitHub](#modificando-arquivos-em-markdown), usando o _"Edit this File"_ e a função de _commit_. Isso é útil para atualizações rápidas da documentação, correções de erros de digitação e pequenas alterações no Markdown.
 - Clone o repositório do Gatsby.js e configure para que o site dentro de `www` rode localmente. Isso é necessário para obter um conteúdo mais completo da documentação e de alterações na infraestrutura. Aprenda como configurar usando as [instruções para configurar a documentação do Gatsby](#instruções-para-configurar-a-documentação-do-Gatsby).
 
-## Corrigindo o caminho de link e imagem
+## Corrigindo o caminho de links e imagems
 
 Se você encontrar uma URL de uma imagem corrompida na documentação do Gatsby, ela deve ser corrigida e mantida em relação à origem do site, ao invés de vinculado ao repositório remoto no GitHub. Isso garante que, quando o site for publicado, todas as imagens sejam incluídas na compilação.
 
@@ -70,13 +70,13 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
   ...
 ```
 
-3. (Opcional) se o título parecer longo, considere adicionar um `breadcrumbTitle` no arquivo `doc-links.yaml`, isso e uma versão curta do seu título, a qual será mostrada no _breadcrumb_ na página de documentação.
+3. (Opcional) se o título parecer longo, considere adicionar um `breadcrumbTitle` no arquivo `doc-links.yaml`, isso e uma versão curta do seu título, a qual será mostrada como um _breadcrumb_ na página de documentação.
 
 ```diff:title=www/src/data/sidebars/doc-links.yaml
   ...
   - title: Exemplo de título muito grande, mas muito grande mesmo, da documentação
     link: /docs/example-document/
-+   breadcrumbTitle: Título curto para mostrar
++   breadcrumbTitle: Título curto exibido
   ...
 ```
 
