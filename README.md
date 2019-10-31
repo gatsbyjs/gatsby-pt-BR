@@ -9,7 +9,7 @@ Caso você seja novo por aqui, segue uma lista de links que podem ser úteis
 
 * [Style Guide](/style-guide.md)
 * [Guia de tradução](https://www.gatsbyjs.org/contributing/gatsby-docs-translation-guide/)
-* [Nosso Discord](https://discordapp.com/invite/6r9SP9)
+* [Nosso Discord](https://discord.gg/EeGVj5H)
 
 ### Contribuição
 
