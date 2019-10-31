@@ -128,7 +128,7 @@ Gatsby supports two environments by default, the [development environment](#deve
 
 ### Filesystem
 
-A maneira como os arquivos são organizados. Com o Gatsby, significa ter arquivos no mesmo local que o código do seu site ou aplicativo, em vez de extrair dados de uma [fonte](#data-source) externa. O uso comum do sistema de arquivos no Gatsby inclui conteúdo Markdown, imagens, arquivos de dados e outros assets.
+A maneira como os arquivos são organizados. Com o Gatsby, significa ter arquivos no mesmo local que o código do seu site ou aplicativo, ao invés de extrair dados de uma [fonte](#data-source) externa. O uso comum do sistema de arquivos no Gatsby inclui conteúdo Markdown, imagens, arquivos de dados e outros _assets_.
 
 ### Frontend
 
