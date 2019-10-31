@@ -2,7 +2,7 @@
 title: Brindes (_Free Swag_) para Contribuidores do Gatsby!
 ---
 
-O Gatsby depende de contribuidores da comunidade _open source_, e nós queremos ter certeza de que você sabe o quanto significa para nós que você está disposto a se esforçar e nos dar um pouquinho do seu tempo [contribuindo para o Gatsby](/contributing/how-to-contribute/).
+O Gatsby depende de contribuidores da comunidade _open source_, e nós queremos ter certeza que você saiba o quanto significa para nós que você está disposto a se esforçar e nos dar um pouquinho do seu tempo [contribuindo para o Gatsby](/contributing/how-to-contribute/).
 
 Para demonstrar o nosso apreço, _**todo mundo que contribuir com o Gatsby é elegível para receber brindes (swag) gratuitos!**_
 
