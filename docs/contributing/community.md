@@ -4,7 +4,7 @@ title: Comunidade
 
 Desde Setembro de 2019, a comunidade Gatsby é composta por mais de 2.400 colaboradores e dezenas de milhares de desenvolvedores construindo websites pessoais e comerciais usando Gatsby.
 
-Open source nem sempre tem a melhor reputação de ser amigável e acolhedor, e isso nos deixa tristes. **Todos que pertencem ao open source, e o Gatsby está dedicado a fazer você se sentir acolhido.**
+_Open source_ nem sempre tem a melhor reputação de ser amigável e acolhedor, e isso nos deixa tristes. **Todos que pertencem ao _open source_, e Gatsby, estão dedicados a fazer você se sentir acolhido.**
 
 Nós nunca julgaremos ou excluíremos alguém. Ao invés disso, nós iremos além para dar suporte a comunidade, ajudando você a contribuir com o ecossistema do Gatsby, oferecendo [brindes para os colaboradores](https://gatsby.dev/swag), dando controle para a comunidade [convidar automaticamente todos os colaboradores da organização Gatsby no GitHub](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), um aberto e inclusivo [código de conduta](/contributing/code-of-conduct/), e outros meios que capacitam e abraçam a incrível comunidade que faz o Gatsby ser possível.
 
@@ -12,7 +12,7 @@ Um dos valores da nossa comunidade é: ["você faz parte disso"](/blog/2018-09-0
 
 ## Código de conduta do colaborador Gatsby
 
-No intuito de promover um ambiente aberto e acolhedor, nós, como contribuidores e mantenedores, nos comprometemos em tornar a participação em nossos projetos e em nossa comunidade o mais livre de assédio para todos, independentemente da idade, corpo, tamanho, deficiência, etnia, identidade ou expressão de gênero, nível de experiência, nacionalidade, aparência, raça, religião ou identidade e orientação sexual..
+No intuito de promover um ambiente aberto e acolhedor, nós, como contribuidores e mantenedores, nos comprometemos em tornar a participação em nossos projetos e em nossa comunidade o mais livre de assédio para todos, independentemente da idade, corpo, tamanho, deficiência, etnia, identidade ou expressão de gênero, nível de experiência, nacionalidade, aparência, raça, religião ou identidade e orientação sexual.
 
 [Leia todo o código de conduta](/contributing/code-of-conduct/)
 
@@ -40,7 +40,7 @@ Para últimas notícias sobre Gatsby,
 
 ### Encontro da comunidade de mantenedores
 
-A equipe principal do Gatsby (funcionários oficiais que estão trabalhando no open-source do Gatsby) realizam uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dúvidas e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações pertinentes e planos que são aplicáveis a comunidade!
+A equipe principal do Gatsby (funcionários oficiais que estão trabalhando no _open-source_ do Gatsby) realizam uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dúvidas e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações pertinentes e planos que são aplicáveis a comunidade!
 
 Esse evento é realizado de forma recorrente, toda Quarta-Feira às 08:30 (Horário padrão do Pacífico).
 
