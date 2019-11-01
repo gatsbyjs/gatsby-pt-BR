@@ -2,7 +2,7 @@
 title: Como Abrir uma Pull Request
 ---
 
-Uma boa parte de contribuição para open source consiste em enviar alterações para um projeto: melhorias no código-fonte ou nos testes, atualizações no conteúdo da documentação, ou até mesmo erros de digitação ou links quebrados. Este documento abordará o que você precisa saber para **abrir uma pull request** no Gatsby.
+Uma boa parte de contribuição para _open source_ consiste em enviar alterações para um projeto: melhorias no código-fonte ou nos testes, atualizações no conteúdo da documentação, ou até mesmo erros de digitação ou links quebrados. Este documento abordará o que você precisa saber para **abrir uma pull request** no Gatsby.
 
 ## O que é uma Pull Request (PR)?
 
@@ -35,7 +35,7 @@ Para qualquer tipo de alteração nos arquivos no repositório do Gatsby, você 
 
 Alguns PRs podem ser feitos completamente a partir do [GitHub UI](https://help.github.com/pt/articles/creating-a-pull-request), como edições em arquivos README ou documentações.
 
-Para testar alterações localmente no [site e arquivos do projeto] do Gatsby, você pode fazer um fork do repositório e instalar partes dele para executar na sua máquina local.
+Para testar alterações localmente no [site e arquivos do projeto](https://github.com/gatsbyjs/gatsby) do Gatsby, você pode fazer um fork do repositório e instalar partes dele para executar na sua máquina local.
 
 - [Crie um fork e clone o repositório Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
 - Instale o [yarn](https://yarnpkg.com/pt-BR/) para obter dependências e criar o projeto.
@@ -70,7 +70,7 @@ Para testar alterações localmente no [site e arquivos do projeto] do Gatsby, v
 
 O site da documentação do Gatsby.js está principalmente nos diretórios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) e [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) no GitHub, incluindo documentações e conteúdos de tutoriais. Também existem alguns [exemplos no repositório Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples) mencionado na documentação.
 
-Passos adicionais para documentar PR
+Passos adicionais para documentar PR:
 
 - Para alteraçÕes docs-only, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, pois isso irá encurtar o circuito do processo de CI e executar apenas as tarefas de linting.
 
@@ -95,7 +95,7 @@ Para o blog do Gatsby, é necessário executar sua ideia de conteúdo pela equip
 
 O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergir no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
 
-- Defina a URL do repositório do Gatsby como uma fonte remota. O nome do remoto é arbitrári; este exemplo usa `upstream`.
+- Defina a URL do repositório do Gatsby como uma fonte remota. O nome do remoto é arbitrário; este exemplo usa `upstream`.
   ```shell
   git remote add upstream git@github.com:gatsbyjs/gatsby.git
   ```
