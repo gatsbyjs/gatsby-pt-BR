@@ -323,7 +323,7 @@ Uma UI se refere a uma Interface do Usuário. No campo da interação humano-com
 
 ### Variáveis de Ambiente
 
-[Variáveis de ambiente](/docs/environment-variables/) permitem que você personalize o comportamento do seu site ou aplicativo de acordo com o [ambiente](#environment) em que ele está sendo utilizado.
+[Variáveis de ambiente](/docs/environment-variables/) permitem que você personalize o comportamento do seu site ou aplicativo de acordo com o [ambiente](#ambiente) em que ele está sendo utilizado.
 Por exemplo, você pode desejar carregar o conteúdo apartir de um CMS de validação (_staging_) durante a etapa de desenvolvimento e conectar com o CMS de produção apenas quando estiver [publicando](#build) o seu site.
 Utilizando _variáveis de ambiente_ você pode configurar um URL de conexão distinto para cada ambiente.
 
