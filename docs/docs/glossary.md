@@ -317,7 +317,7 @@ Um [plugin](#plugin) que transforma um tipo de dados em outro. Por exemplo, voc�
 
 ### UI
 
-Uma UI se refere a uma Interface do Usuário. No campo da interação humano-computador, uma UI é um espaço em que ocorrem interações entre humanos e máquinas. O objetivo dessa interação é permitir a operação e o controle efetivos da máquina a partir do lado humano, enquanto a máquina fornece informações simultaneamente que auxiliam no processo de tomada de decisão do usuário (como mensagens de erro ou notificações).
+Uma UI se refere a uma Interface do Usuário. No campo da interação humano-computador, uma UI é um espaço em que ocorrem interações entre humanos e máquinas. O objetivo dessa interação é permitir a operação e o controle efetivo da máquina a partir do lado humano, enquanto a máquina fornece informações simultaneamente que auxiliam no processo de tomada de decisão do usuário (como mensagens de erro ou notificações).
 
 ## V
 
