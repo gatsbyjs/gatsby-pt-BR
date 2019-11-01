@@ -38,7 +38,7 @@ O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#ambi
 
 ### Ambiente de Produção
 
-[Ambiente](#environment) para [compilação](#build) do site ou aplicação que será utilizada pelos usuários quando for [publicada](#deploy). Pode ser acessado através da [CLI](#cli) usando `gatsby build` ou `gatsby serve`.
+[Ambiente](#ambiente) para [compilação](#build) do site ou aplicação que será utilizada pelos usuários quando for [publicada](#deploy). Pode ser acessado através da [CLI](#cli) usando `gatsby build` ou `gatsby serve`.
 
 ## B
 
