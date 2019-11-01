@@ -16,7 +16,7 @@ slug={props.slug}
 
 ### AST
 
-Árvore Sintática Abstrata: Uma representação em árvore do código fonte encontrado durante uma etapa de [compilação](#compiler) entre duas linguagens. Por exemplo, [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) criará um AST do [Markdown](#markdown) para descrever um documento Markdown em uma estrutura de árvore usando o analisador [Remark](#remark).
+Árvore Sintática Abstrata: Uma representação em árvore do código fonte encontrado durante uma etapa de [compilação](#compilador) entre duas linguagens. Por exemplo, [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) criará um AST do [Markdown](#markdown) para descrever um documento Markdown em uma estrutura de árvore usando o analisador [Remark](#remark).
 
 ### API
 
@@ -38,21 +38,21 @@ O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#ambi
 
 ### Ambiente de Produção
 
-[Ambiente](#ambiente) para [compilação](#build) do site ou aplicação que será utilizada pelos usuários quando for [publicada](#deploy). Pode ser acessado através da [CLI](#cli) usando `gatsby build` ou `gatsby serve`.
+[Ambiente](#ambiente) para [build](#build) do site ou aplicação que será utilizada pelos usuários quando for [publicada](#publicação). Pode ser acessado através da [CLI](#cli) usando `gatsby build` ou `gatsby serve`.
 
 ## B
 
 ### Babel
 
-Uma ferramenta que permite escrever o [JavaScript](#javascript) mais moderno e durante a [compilação](#build) é [compilado](#compiler) para código que a maioria dos navegadores da web pode entender.
+Uma ferramenta que permite escrever o [JavaScript](#javascript) mais moderno e durante o [build](#build) é [compilado](#compilador) para código que a maioria dos navegadores da web pode entender.
 
 ### Backend
 
-Os bastidores que o [público](#public) não vê. Isso geralmente se refere ao painel de controle do seu [CMS](#cms). Geralmente, eles são desenvolvidos com linguagens de programação _server-side_ (aquelas que rodam no servidor), como Node.js, PHP, Go, ASP.net, Ruby, ou Java.
+Os bastidores que o [público](#público) não vê. Isso geralmente se refere ao painel de controle do seu [CMS](#cms). Geralmente, eles são desenvolvidos com linguagens de programação _server-side_ (aquelas que rodam no servidor), como Node.js, PHP, Go, ASP.net, Ruby, ou Java.
 
 ### Banco de dados
 
-Um banco de dados é uma coleção estruturada de dados ou conteúdo. Geralmente, um [CMS](#cms) é salvo em um banco de dados usando [tecnologias backend](#backend). Eles são frequentemente acessados no Gatsby por meio de um [plugin nativo](#source-plugin).
+Um banco de dados é uma coleção estruturada de dados ou conteúdo. Geralmente, um [CMS](#cms) é salvo em um banco de dados usando [tecnologias backend](#backend). Eles são frequentemente acessados no Gatsby por meio de um [plugin nativo](#plugin-nativo).
 
 ### Build
 
@@ -66,7 +66,7 @@ Um armazenamento local de informações que podem ser usadas novamente, para que
 
 ### CLI
 
-Interface de Linha de Comando: um aplicativo que é executado no seu computador através da [linha de comando](#command-line)  e interage com seu teclado.
+Interface de Linha de Comando: um aplicativo que é executado no seu computador através da [linha de comando](#linha-de-comando) e interage com seu teclado.
 
 Gatsby tem duas interfaces de linha de comando. Um, [`gatsby`](/docs/gatsby-cli/), para o desenvolvimento diário com Gatsby e outro, [`gatsby-dev`](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions), para aqueles que contribuem para o projeto Gatsby.
 
@@ -82,7 +82,7 @@ Sistema de Gerenciamento de Conteúdo: um aplicativo em que você pode gerenciar
 
 O código-fonte é o código que fica na pasta `/src/` e compõe os aspectos exclusivos do seu site ou aplicativo. É composto de [JavaScript](#javascript) e, às vezes, [CSS](#css) e outros arquivos.
 
-O código fonte é [incorporado](#build) ao site que o [público](#public) verá.
+O código fonte é [incorporado](#build) ao site que o [público](#público) verá.
 
 ### Compilador
 
@@ -92,7 +92,7 @@ Um compilador é um programa que converte código escrito em um linguagem para o
 
 Os componentes são blocos de código independentes e reutilizáveis do [React](#react) que, quando combinados, compõem seu site ou aplicativo.
 
-Um componente pode incluir componentes dentro dele. De fato, [páginas](#page) e [templates](#template) são exemplos de componentes.
+Um componente pode incluir componentes dentro dele. De fato, [páginas](#página) e [templates](#template) são exemplos de componentes.
 
 ### Configuração
 
@@ -110,13 +110,13 @@ A dissociação descreve a separação de diferentes preocupações. Com o [Gats
 
 ### DOM
 
-O Modelo de Objeto do Documento, conhecido como "o DOM", é uma API de navegador padrão que conecta páginas da web a scripts ou linguagens de programação, representando a estrutura de um documento HTML na memória. Os desenvolvedores geralmente interagem com o DOM por meio da marcação [HTML](#html) (escrita em JSX [JSX](#jsx) no Gatsby), além do código [React](https://pt-br.reactjs.org/docs/react-dom.html) e [vanilla JavaScript](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM/Introdu%C3%A7%C3%A3o#DOM_and_JavaScript). Outro aspecto importante da utilização do DOM em todo o seu potencial é escrever uma marcação HTML [acessível](#accessibility) para expor a estrutura de uma página à tecnologia assistida.
+O Modelo de Objeto do Documento, conhecido como "o DOM", é uma API de navegador padrão que conecta páginas da web a scripts ou linguagens de programação, representando a estrutura de um documento HTML na memória. Os desenvolvedores geralmente interagem com o DOM por meio da marcação [HTML](#html) (escrita em [JSX](#jsx) no Gatsby), além do código [React](https://pt-br.reactjs.org/docs/react-dom.html) e [vanilla JavaScript](https://developer.mozilla.org/pt-BR/docs/DOM/Referencia_do_DOM/Introdu%C3%A7%C3%A3o#DOM_and_JavaScript). Outro aspecto importante da utilização do DOM em todo o seu potencial é escrever uma marcação HTML [acessível](#acessibilidade) para expor a estrutura de uma página à tecnologia assistida.
 
 ## E
 
 ### ECMAScript
 
-ECMAScript (geralmente chamado de ES) é uma especificação para linguagens de script. [JavaScript](#javascript) é uma implementação do ECMAScript. Frequentemente, os desenvolvedores usam o [Babel](#babel) para [compilar](#compiler) o código ECMAScript mais recente em JavaScript mais amplamente suportado.
+ECMAScript (geralmente chamado de ES) é uma especificação para linguagens de script. [JavaScript](#javascript) é uma implementação do ECMAScript. Frequentemente, os desenvolvedores usam o [Babel](#babel) para [compilar](#compilador) o código ECMAScript mais recente em JavaScript mais amplamente suportado.
 
 ### Esquema
 
@@ -126,11 +126,11 @@ Uma representação exata de como os dados são armazenados em um sistema, como 
 
 ### Fonte de Dados
 
-Ponto de origem do conteúdo e dos dados, normalmente integrado ao Gatsby com [plugins nativo](#source-plugin). Uma fonte de dados geralmente é um [Headless CMS](#headless-cms), mas também pode incluir arquivos Markdown, JSON, ou arquivos YAML.
+Ponto de origem do conteúdo e dos dados, normalmente integrado ao Gatsby com [plugins nativo](#plugin-nativo). Uma fonte de dados geralmente é um [Headless CMS](#headless-cms), mas também pode incluir arquivos Markdown, JSON, ou arquivos YAML.
 
 ### Frontend
 
-A interface [voltada para o público](#public) do seu site ou aplicativo, fornecida usando tecnologias da web: HTML, CSS e JavaScript. Para obter mais informações sobre como a Plataforma Web reúne essas tecnologias, consulte este artigo em [Como Funcionam os Navegadores](https://www.html5rocks.com/pt/tutorials/internals/howbrowserswork/).
+A interface [voltada para o público](#público) do seu site ou aplicativo, fornecida usando tecnologias da web: HTML, CSS e JavaScript. Para obter mais informações sobre como a Plataforma Web reúne essas tecnologias, consulte este artigo em [Como Funcionam os Navegadores](https://www.html5rocks.com/pt/tutorials/internals/howbrowserswork/).
 
 ## G
 
@@ -154,7 +154,7 @@ Um [CMS](#cms) que lida apenas com o gerenciamento de conteúdo do [backend](#ba
 
 ### Hospedagem
 
-Um provedor de hospedagem mantém uma cópia do seu site ou aplicativo e o torna acessível [ao público](#public). Os [provedores de hospedagem comuns para projetos Gatsby](/docs/deploying-and-hosting/) incluem Netlify, AWS, S3, Surge, Heroku e mais.
+Um provedor de hospedagem mantém uma cópia do seu site ou aplicativo e o torna acessível [ao público](#público). Os [provedores de hospedagem comuns para projetos Gatsby](/docs/deploying-and-hosting/) incluem Netlify, AWS, S3, Surge, Heroku e mais.
 
 ### Hot module replacement
 
@@ -174,7 +174,7 @@ O JAMStack se refere a uma arquitetura moderna da web usando [JavaScript](#javas
 
 ### JavaScript
 
-Uma linguagem de programação que nos ajuda a tornar a web dinâmica e interativa. [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/Javascript) é uma tecnologia da Web amplamente implantada em navegadores. Também é usado no _server-side_ com [Node.js](#node). É uma implementação da especificação [ECMAScript](#ECMAScript).
+Uma linguagem de programação que nos ajuda a tornar a web dinâmica e interativa. [JavaScript](https://developer.mozilla.org/pt-BR/docs/Web/Javascript) é uma tecnologia da Web amplamente implantada em navegadores. Também é usado no _server-side_ com [Node.js](#nodejs). É uma implementação da especificação [ECMAScript](#ECMAScript).
 
 ### JSX
 
@@ -190,13 +190,13 @@ Uma interface baseada em texto para executar comandos no seu computador. Os apli
 
 ### Linting
 
-Linting é o processo de execução de um programa que analisará o código quanto a possíveis erros. O projeto Gatsby usa [prettier](https://prettier.io/) para identificar e corrigir problemas comuns de estilo. Outro exemplo de um linter comumente usado em projetos React é o [eslint-jsx-plugin-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), que verifica problemas comuns de [accessibility](#accessibility) no desenvolvimento.
+Linting é o processo de execução de um programa que analisará o código quanto a possíveis erros. O projeto Gatsby usa [prettier](https://prettier.io/) para identificar e corrigir problemas comuns de estilo. Outro exemplo de um linter comumente usado em projetos React é o [eslint-jsx-plugin-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y), que verifica problemas comuns de [acessibilidade](#acessibilidade) no desenvolvimento.
 
 ## M
 
 ### MDX
 
-Estende o [Markdown](#markdown) para dar suporte aos [componentes](#component) do [React](#react) dentro do seu conteúdo.
+Estende o [Markdown](#markdown) para dar suporte aos [componentes](#componente) do [React](#react) dentro do seu conteúdo.
 
 ### Markdown
 
@@ -210,11 +210,11 @@ Melhoramento progressivo (_progressive enhancement_) é uma estratégia de desen
 
 ### NPM
 
-Gerenciador de [Pacotes](#package) [Node](#node). Permite instalar e atualizar outros pacotes dos quais seu projeto depende. [Gatsby](#gatsby) e [React](#react) são exemplos das dependências do seu projeto. Consulte também: [Yarn](#yarn).
+Gerenciador de [Pacotes](#pacote) [Node](#nodejs). Permite instalar e atualizar outros pacotes dos quais seu projeto depende. [Gatsby](#gatsby) e [React](#react) são exemplos das dependências do seu projeto. Consulte também: [Yarn](#yarn).
 
 ### Node
 
-Gatsby usa [nós de dados](/docs/node-interface/) para representar um único pedaço de dados. Uma [fonte de dados](#data-source) criará vários nós.
+Gatsby usa [nós de dados](/docs/node-interface/) para representar um único pedaço de dados. Uma [fonte de dados](#fonte-de-dados) criará vários nós.
 
 ### Node.js
 
@@ -232,24 +232,24 @@ Um pacote geralmente descreve um programa [JavaScript](#javascript) ue possui in
 
 Uma página [HTML](#html).
 
-Isso também se refere frequentemente aos [componentes](#component) que ficam em `/src/pages/` e são convertidos em páginas pelo [Gatsby](#gatsby), além de [páginas criadas dinamicamente](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) no seu arquivo `gatsby-node.js`.
+Isso também se refere frequentemente aos [componentes](#componente) que ficam em `/src/pages/` e são convertidos em páginas pelo [Gatsby](#gatsby), além de [páginas criadas dinamicamente](/docs/creating-and-modifying-pages/#creating-pages-in-gatsby-nodejs) no seu arquivo `gatsby-node.js`.
 
 ### Plugin
 
 Código adicional que acrescenta funcionalidades a um projeto Gatsby que não estejam incluídas por padrão.
-Alguns [plugins](/plugins/) populares incluem os plugins [source](#source-plugins) e [transformer](#transformer) que são utilizados para carregar e manipular dados, respectivamente.
+Alguns [plugins](/plugins/) populares incluem os plugins [nativos](#plugin-nativo) e [transformer](#transformer) que são utilizados para carregar e manipular dados, respectivamente.
 
 ### Plugin Nativo
 
-Um [plugin](#plugin) que adiciona [fontes de dados](#data-source) adicionais ao Gatsby que podem ser [consultadas](#query) por suas [páginas](#page) e [componentes](#component).
+Um [plugin](#plugin) que adiciona [fontes de dados](#fonte-de-dados) adicionais ao Gatsby que podem ser [consultadas](#query) por suas [páginas](#página) e [componentes](#componente).
 
 ### Publicação
 
-O processo de [construção](#build) do seu site ou aplicativo e envio para um [provedor de hospedagem](#hosting).
+O processo de [construção](#build) do seu site ou aplicativo e envio para um [provedor de hospedagem](#hospedagem).
 
 ### Programaticamente
 
-Algo que acontece automaticamente com base no seu código e configuração. Por exemplo, você pode [configurar](#config) seu projeto para criar uma [página](#page) para cada postagem de blog escrita ou ler e exibir o ano atual como parte de um _copyright_ no rodapé do site.
+Algo que acontece automaticamente com base no seu código e configuração. Por exemplo, você pode [configurar](#configuração) seu projeto para criar uma [página](#página) para cada postagem de blog escrita ou ler e exibir o ano atual como parte de um _copyright_ no rodapé do site.
 
 ### Público
 
@@ -277,7 +277,7 @@ Tempo de execução é quando um programa está sendo executado (ou sendo execut
 
 ### Roteamento
 
-O roteamento é o mecanismo para carregar o conteúdo correto em um site ou aplicativo com base em uma solicitação de rede - geralmente uma URL. Por exemplo, ele permite rotear URLs como `/about-us` para a [página](#page), [template](#template), ou [componente](#component) apropriado.
+O roteamento é o mecanismo para carregar o conteúdo correto em um site ou aplicativo com base em uma solicitação de rede - geralmente uma URL. Por exemplo, ele permite rotear URLs como `/about-us` para a [página](#página), [template](#template), ou [componente](#componente) apropriado.
 
 ## S
 
@@ -287,7 +287,7 @@ A parte do server-side do [relacionamento cliente-servidor](https://pt.wikipedia
 
 ### Sistema de arquivo
 
-A maneira como os arquivos são organizados. Com o Gatsby, significa ter arquivos no mesmo local que o código do seu site ou aplicativo, ao invés de extrair dados de uma [fonte](#data-source) externa. O uso comum do sistema de arquivos no Gatsby inclui conteúdo Markdown, imagens, arquivos de dados e outros _assets_.
+A maneira como os arquivos são organizados. Com o Gatsby, significa ter arquivos no mesmo local que o código do seu site ou aplicativo, ao invés de extrair dados de uma [fonte](#fonte-de-dados) externa. O uso comum do sistema de arquivos no Gatsby inclui conteúdo Markdown, imagens, arquivos de dados e outros _assets_.
 
 ### Starter
 
@@ -295,9 +295,9 @@ Um projeto Gatsby pré-configurado que pode ser usado como ponto de partida para
 
 ### Static
 
-Gatsby [constrói](#build) versões estáticas da sua página que podem ser facilmente [hospedadas](#hosting). Isso contrasta com os sistemas dinâmicos nos quais cada página é gerada rapidamente. Ser estático proporciona grandes ganhos de desempenho porque o trabalho precisa ser feito apenas uma vez por alteração de conteúdo ou código.
+Gatsby [constrói](#build) versões estáticas da sua página que podem ser facilmente [hospedadas](#hospedagem). Isso contrasta com os sistemas dinâmicos nos quais cada página é gerada rapidamente. Ser estático proporciona grandes ganhos de desempenho porque o trabalho precisa ser feito apenas uma vez por alteração de conteúdo ou código.
 
-Também se refere à pasta `/static` que é automaticamente copiada para `/public` em cada [construção](#build) para arquivos que não precisam ser processados pelo Gatsby, mas que existem em [public](#public).
+Também se refere à pasta `/static` que é automaticamente copiada para `/public` em cada [construção](#build) para arquivos que não precisam ser processados pelo Gatsby, mas que existem em [public](#público).
 
 ## T
 
@@ -324,7 +324,7 @@ Uma UI se refere a uma Interface do Usuário. No campo da interação humano-com
 ### Variáveis de Ambiente
 
 [Variáveis de ambiente](/docs/environment-variables/) permitem que você personalize o comportamento do seu site ou aplicativo de acordo com o [ambiente](#ambiente) em que ele está sendo utilizado.
-Por exemplo, você pode desejar carregar o conteúdo a partir de um CMS de validação (_staging_) durante a etapa de desenvolvimento e conectar com o CMS de produção apenas quando estiver [publicando](#build) o seu site.
+Por exemplo, você pode desejar carregar o conteúdo a partir de um CMS de validação (_staging_) durante a etapa de desenvolvimento e conectar com o CMS de produção apenas quando estiver [_buildando_](#build) o seu site.
 Utilizando _variáveis de ambiente_ você pode configurar um URL de conexão distinto para cada ambiente.
 
 ## W
