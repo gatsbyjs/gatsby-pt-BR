@@ -303,7 +303,7 @@ Também se refere à pasta `/static` que é automaticamente copiada para `/publi
 
 ### Template
 
-Um [componente](#component) que é [programaticamente](#programmatically) transformado em uma página pelo Gatsby.
+Um [componente](#componente) que é [programaticamente](#programaticamente) transformado em uma página pelo Gatsby.
 
 ### Tema
 
