@@ -57,12 +57,12 @@ Claro que não! Você pode usar a API node `createPages` para injetar diretament
 
 Veja o guia [Usando Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/) para aprender como injetar dados no seu site Gatsby utilizando a API node `createPages` e ver um site de exemplo!
 
-### When do I use unstructured data vs GraphQL?
+### Quando eu uso dados desestruturados vs GraphQL?
 
-If you're building a small site, one efficient way to build it is to pull in unstructured data as outlined in this guide, using `createPages` API, and then if the site becomes more complex later on, you move on to building more complex sites, or you'd like to transform your data, follow these steps:
+Se você está construindo um pequeno site, uma forma eficiente de construi-lo é usar dados desestruturados conforme apresentado nesse guia, usando a API `createPages`, e caso o site se tornar mais complexo no futuro, você parte para a construção de sites mais complexos, ou caso você gostaria de transformar seus dados, siga esses passos:
 
-1.  Check out the [Plugin Library](/plugins/) to see if the source plugins and/or transformer plugins you'd like to use already exist
-2.  If they don't exist, read the [Plugin Authoring](/docs/creating-plugins/) guide and consider building your own!
+1.  Confira a [Biblioteca de Plugins](/plugins/) para ver se os plugins de extração e/ou plugins de transformação que você gostaria de utilizar já existem.
+2.  Se eles não existirem, leia o guia de [Autoria de Plugins](/docs/creating-plugins/) e considere construir você mesmo! 
 
 ### How Gatsby's data layer uses GraphQL to pull data into components
 
