@@ -2,43 +2,43 @@
 title: Como Abrir um Pull Request
 ---
 
-Uma boa parte de contribuição para _open source_ consiste em enviar alterações para um projeto: melhorias no código-fonte ou nos testes, atualizações no conteúdo da documentação, ou até mesmo erros de digitação ou links quebrados. Este documento abordará o que você precisa saber para **abrir um pull request** no Gatsby.
+Uma boa parte de contribuir com _open source_ consiste em enviar alterações para um projeto: melhorias no código-fonte ou nos testes, atualizações no conteúdo da documentação, ou até mesmo erros de digitação ou links quebrados. Este documento abordará o que você precisa saber para **abrir um pull request** no Gatsby.
 
 ## O que é um Pull Request (PR)?
 
 Caso você não esteja familiarizado, veja como o pessoal do GitHub [define um pull request](https://help.github.com/pt/articles/about-pull-requests):
 
-> Os pull requests permitem que você informe outras pessoas sobre as alterações das quais você fez push para uma branch em um repositório no GitHub. Depois que um pull request é aberta, você pode discutir e revisar as possíveis alterações com colaboradores e adicionar commits de acompanhamento antes que as alterações sofram merge no branch base.
+> Os pull requests permitem que você informe a outras pessoas sobre alterações feitas por você e que se encontram em uma branch de um repositório no GitHub. Depois que um pull request é aberta, você pode discutir e revisar as possíveis alterações com colaboradores e adicionar commits de acompanhamento antes que as alterações sofram merge na branch base.
 
-Gatsby usa o processo de PR para revisar e testar as alterações antes de serem adicionadas ao repositório do Gatsby no GitHub. Qualquer pessoa pode abrir um pull request. O mesmo processo é usado para todos os contribuidores, seja esta a sua primeira contribuição open source ou seja você um membro da equipe core do Gatsby.
+Gatsby usa o processo de PR para revisar e testar as alterações antes de serem adicionadas ao repositório do Gatsby no GitHub. Qualquer pessoa pode abrir um pull request. O mesmo processo é usado para todos os contribuidores, seja esta a sua primeira contribuição open source ou seja você um membro da equipe principal do Gatsby.
 
 Quando alguém desejar contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
 
-- [Documentação](#documentation)
-- [Código](#code-changes)
-- [Starters or Site Showcase](#starters-or-site-showcase)
-- [Blog posts](#blog-posts)
+- [Documentação](#documentação-de-prs)
+- [Código](#alterações-de-código)
+- [_Starters_ ou Amostras de Sites](#starters-ou-amostras-de-sites)
+- [Postagens do Blog](#postagens-do-blog)
 
-Recomendações para diferentes tipos de contribuições seguirão neste guia e ao longo das documentações de contribuição.
+Recomendações para diferentes tipos de contribuições estarão descritas neste guia e ao longo das documentações sobre contribuição.
 
 ## O que você deve saber antes de abrir um PR
 
 Normalmente recomendamos [abrir uma issue](/contributing/how-to-file-an-issue/) antes de um pull request, se ainda não houver uma issue para o problema que você deseja resolver. Isso ajuda a facilitar uma discussão antes de decidir sobre uma implementação.
 
-Para algumas alterações, como correções de erros de digitação ou links quebrados, pode ser apropriado abrir um pequeno PR por si só. Isso é um pouco subjetivo, portanto, se você tiver alguma dúvida, [não hesite em perguntar-nos](/contributing/how-to-contribute/#not-sure-how-to-start-contributing).
+Para algumas alterações, como correções de erros de digitação ou links quebrados, pode ser apropriado abrir um pequeno PR por si só. Isso é um pouco subjetivo, portanto, se você tiver alguma dúvida, [não hesite em nos perguntar](/contributing/how-to-contribute/#not-sure-how-to-start-contributing).
 
-A equipe core do Gatsby usa um processo de triagem descrito em [Gerenciando Pull Requests](/contributing/managing-pull-requests/), se você estiver interessado em aprender mais sobre como isso funciona.
+A equipe principal do Gatsby usa um processo de triagem descrito em [Gerenciando Pull Requests](/contributing/managing-pull-requests/), se você estiver interessado em aprender mais sobre como isso funciona.
 
 ## Abrindo PRs no Gatsby
 
-Para qualquer tipo de alteração nos arquivos no repositório do Gatsby, você pode seguir as etapas abaixo. Certifique-se de verificar as dicas adicionais para contribuir para várias partes do repo mais adiante neste documento, como mudanças nas docs, blog posts, starters, ou melhorias de código e testes.
+Para qualquer tipo de alteração nos arquivos do repositório do Gatsby, sugerimos que você siga as etapas abaixo. Certifique-se de verificar as dicas adicionais para contribuir para várias partes do repositório mais adiante neste documento, como mudanças nas documentações, postagens do blog, _starters_, ou melhorias de código e testes.
 
 Alguns PRs podem ser feitos completamente a partir do [GitHub UI](https://help.github.com/pt/articles/creating-a-pull-request), como edições em arquivos README ou documentações.
 
-Para testar alterações localmente no [site e arquivos do projeto](https://github.com/gatsbyjs/gatsby) do Gatsby, você pode fazer um fork do repositório e instalar partes dele para executar na sua máquina local.
+Para testar alterações localmente no [site e em arquivos do projeto](https://github.com/gatsbyjs/gatsby) do Gatsby, você pode fazer um fork do repositório e instalar partes dele para executar na sua máquina local.
 
 - [Crie um fork e clone o repositório Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
-- Instale o [yarn](https://yarnpkg.com/pt-BR/) para obter dependências e criar o projeto.
+- Instale o [yarn](https://yarnpkg.com/pt-BR/) para obter as dependências e criar o projeto.
 - Siga as instruções para a parte do projeto que você deseja alterar. (Veja seções específicas abaixo.)
 - [Crie uma branch no Git](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) para isolar suas alterações:
 
@@ -47,12 +47,12 @@ Para testar alterações localmente no [site e arquivos do projeto](https://gith
   ```
 
 * Assim que tiver alterações no Git que você deseje enviar, [adicione-os e crie um commit](https://help.github.com/pt/articles/adding-a-file-to-a-repository-using-the-command-line). Para obter informações sobre como estruturar seus commits, consulte a documentação [Gerenciando PRs](/contributing/managing-pull-requests/#commit-and-pr-title).
-  - Usando um caractere de ponto `.` adicionará todos os arquivos não rastreados no diretório e subdiretórios atuais.
+  - O caractere de ponto `.` adiciona todos os arquivos não rastreados no diretório e subdiretórios atuais.
   ```shell
   git add .
   ```
-  - Usando uma ferramenta visual como [GitHub Desktop](https://desktop.github.com/) ou [GitX](https://rowanj.github.io/gitx/) pode ajudar a escolher quais arquivos e linhas commitar.
-* Commitando código executará o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório base do projeto:
+  - O uso de uma ferramenta visual como o [GitHub Desktop](https://desktop.github.com/) ou o [GitX](https://rowanj.github.io/gitx/) pode lhe ajudar a escolher quais arquivos e linhas commitar.
+* Ao commitar o código,  será executado o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório base do projeto:
   ```shell
   npm run format
   ```
@@ -72,7 +72,7 @@ O site da documentação do Gatsby.js está principalmente nos diretórios [www]
 
 Passos adicionais para documentar PR:
 
-- Para alteraçÕes docs-only, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, pois isso irá encurtar o circuito do processo de CI e executar apenas as tarefas de linting.
+- Para alterações que envolvam apenas documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, para encurtar o processo de CI e executar apenas as tarefas de linting.
 
 Mais instruções podem ser encontradas na página de [contribuições de documentações](/contributing/docs-contributions/).
 
@@ -80,20 +80,20 @@ Mais instruções podem ser encontradas na página de [contribuições de docume
 
 Instruções para fazer alterações no código-fonte do Gatsby, testes, componentes internos, APIs, pacotes e muito mais podem ser encontradas nas documentações de contribuições sobre [configurando seu ambiente de desenvolvimento local](/contributing/setting-up-your-local-dev-environment/). Também há detalhes adicionais na página [Contribuições de código](/contributing/code-contributions/).
 
-### Starters ou Site Showcase
+### Starters ou Amostras de Sites
 
 Existem páginas específicas sobre como contribuir para várias partes do ecossistema de Gatsby:
 
-- [Submissões ao Showcase](/contributing/site-showcase-submissions/)
+- [Submissões de amostras de sites](/contributing/site-showcase-submissions/)
 - [Biblioteca Starter](/contributing/submit-to-starter-library/)
 
-### Blog posts
+### Postagens do Blog
 
-Para o blog do Gatsby, é necessário executar sua ideia de conteúdo pela equipe do Gatsby antes de enviá-la. Para obter mais informações, consulte a página de [contribuições de blog e site](/contributing/blog-and-website-contributions/), incluindo como propor uma idéia e configurar o blog para ser executado localmente.
+Para o blog do Gatsby, é necessário que sua ideia de conteúdo seja aprovada pela equipe do Gatsby antes de ser enviada. Para obter mais informações, consulte a página de [contribuições de blog e site](/contributing/blog-and-website-contributions/), incluindo como propor uma ideia e configurar o blog para ser executado localmente.
 
 ## Atualize seu fork com as alterações mais recentes do Gatsby
 
-O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergir no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
+O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder submeter no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
 
 - Defina a URL do repositório do Gatsby como uma fonte remota. O nome do remoto é arbitrário; este exemplo usa `upstream`.
   ```shell
