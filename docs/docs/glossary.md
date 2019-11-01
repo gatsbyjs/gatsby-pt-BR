@@ -16,7 +16,7 @@ slug={props.slug}
 
 ### AST
 
-Árvore de Sintaxe Abstrata: Uma representação em árvore do código fonte encontrado durante uma etapa de [compilação](#compiler) entre duas linguagens. Por exemplo, [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) criará um AST do [Markdown](#markdown) para descrever um documento Markdown em uma estrutura de árvore usando o analisador [Remark](#remark).
+Árvore Sintática Abstrata: Uma representação em árvore do código fonte encontrado durante uma etapa de [compilação](#compiler) entre duas linguagens. Por exemplo, [gatsby-transformer-remark](/packages/gatsby-transformer-remark/) criará um AST do [Markdown](#markdown) para descrever um documento Markdown em uma estrutura de árvore usando o analisador [Remark](#remark).
 
 ### API
 
