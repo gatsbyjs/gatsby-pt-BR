@@ -47,33 +47,23 @@ Para testar alterações localmente no [site e arquivos do projeto] do Gatsby, v
   ```
 
 * Assim que tiver alterações no Git que você deseje enviar, [adicione-os e crie um commit](https://help.github.com/pt/articles/adding-a-file-to-a-repository-using-the-command-line). Para obter informações sobre como estruturar seus commits, consulte a documentação [Gerenciando PRs](/contributing/managing-pull-requests/#commit-and-pr-title).
-
   - Usando um caractere de ponto `.` adicionará todos os arquivos não rastreados no diretório e subdiretórios atuais.
-
   ```shell
   git add .
   ```
-
   - Usando uma ferramenta visual como [GitHub Desktop](https://desktop.github.com/) ou [GitX](https://rowanj.github.io/gitx/) pode ajudar a escolher quais arquivos e linhas commitar.
-
 * Commitando código executará o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório base do projeto:
-
   ```shell
   npm run format
   ```
-
 * Crie um commit com as alterações de linting antes de enviar por push, [alterando o commit anterior](https://help.github.com/pt/articles/changing-a-commit-message) ou adicionando um novo commit. Para mais informações sobre linting e testes, visite a documentação [Gerenciando PRs](/contributing/managing-pull-requests/#automated-checks).
-
-```shell
-git commit --amend
-```
-
+  ```shell
+  git commit --amend
+  ```
 - Envie suas alterações para seu fork, assumindo que ele esteja configurado como [`origin`](https://www.git-tower.com/learn/git/glossary/origin):
-
   ```shell
   git push origin head
   ```
-
 - Para abrir uma PR com suas alterações no repositório Gatsby, você pode usar o [GitHub Pull Request UI](https://help.github.com/en/articles/creating-a-pull-request). Como alternativa, você pode usar a linha de comando: recomendamos [hub](https://github.com/github/hub) para isso.
 
 ### Documentação de PRs
@@ -106,35 +96,24 @@ Para o blog do Gatsby, é necessário executar sua ideia de conteúdo pela equip
 O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergir no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/en/articles/configuring-a-remote-for-a-fork):
 
 - Defina a URL do repositório do Gatsby como uma fonte remota. O nome do remoto é arbitrári; este exemplo usa `upstream`.
-
   ```shell
   git remote add upstream git@github.com:gatsbyjs/gatsby.git
   ```
-
   - _Nota: esta sintaxe [usa SSH e chaves: você também pode usar `https`](https://help.github.com/en/articles/which-remote-url-should-i-use) e seu usuário/senha._
-
 - Você pode verificar o nome e a URL remotos a qualquer momento:
-
   ```shell
   git remote -v
   ```
-
 - Obtenha as alterações mais recentes do Gatsby:
-
   ```shell
   git fetch upstream master
   ```
-
 - [Na branch](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) que você deseja atualizar, faça merge de todas as alterações do Gatsby no seu fork:
-
   ```shell
   git merge upstream/master
   ```
-
   - Se houver alguns [conflitos de mesclagem](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github), você vai querer resolver-los para obter um merge limpo.
-
 - Quando sua branch estiver funcionando em boas condições, faça push das alterações para o seu fork:
-
   ```shell
   git push origin head
   ```
