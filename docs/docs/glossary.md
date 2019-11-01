@@ -20,7 +20,7 @@ slug={props.slug}
 
 ### API
 
-Interface de Programação de Aplicações: Um método para um aplicativo se comunicar com outro. Por exemplo, um [plugin nativo](#source-plugin) geralmente usa uma API para obter seus dados.
+Interface de Programação de Aplicações: Um método para um aplicativo se comunicar com outro. Por exemplo, um [plugin nativo](#plugin-nativo) geralmente usa uma API para obter seus dados.
 
 ### Acessibilidade
 
