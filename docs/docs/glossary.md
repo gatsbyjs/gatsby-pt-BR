@@ -24,7 +24,7 @@ Interface de Programação de Aplicações: Um método para um aplicativo se com
 
 ### Acessibilidade
 
-A prática inclusiva de remover barreiras que impedem a interação ou acesso a sites por pessoas com deficiência. Quando os sites são projetados corretamente, desenvolvidos e editados para acessibilidade, geralmente todos os usuários têm acesso igual às informações e funcionalidades. Ler sobre [Compromisso do Gatsby com a Acessibilidade](/blog/2019-04-18-gatsby-commitment-to-accessibility/).
+A prática inclusiva de remover barreiras que impedem a interação ou acesso a sites por pessoas com deficiência. Quando os sites são projetados corretamente, desenvolvidos e editados para acessibilidade, geralmente todos os usuários têm acesso igual às informações e funcionalidades. Leia sobre o [Compromisso do Gatsby com a Acessibilidade](/blog/2019-04-18-gatsby-commitment-to-accessibility/).
 
 ### Ambiente
 
@@ -34,7 +34,7 @@ O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#deve
 
 ### Ambiente de Desenvolvimento
 
-[Ambiente](#environment) que você utiliza quando está programando. Esse ambiente é disponibilizado pela [CLI](#cli) ao executar o comando `gatsby develop` e exibe relatórios de erro, entre outros recursos que ajudam na soluçõa de problemas antes de publicar o site em um [ambiente de produção](#production-environment).
+[Ambiente](#environment) que você utiliza quando está programando. Esse ambiente é disponibilizado pela [CLI](#cli) ao executar o comando `gatsby develop` e exibe relatórios de erro, entre outros recursos que ajudam na solução de problemas antes de publicar o site em um [ambiente de produção](#production-environment).
 
 ### Ambiente de Produção
 
@@ -226,7 +226,7 @@ Um programa que permite executar o [JavaScript](#javascript) no seu computador. 
 
 ### Pacote
 
-Um pacote geralmente descreve um programa [JavaScript](#javascript) ue possui informações adicionais sobre como ele deve ser distribuído e usado, como o número da versão. O [NPM](#npm) e o [Yarn](#yarn) gerencia e instala os pacotes que seu projeto usa. O próprio [Gatsby](#gatsby) é um pacote.
+Um pacote geralmente descreve um programa [JavaScript](#javascript) ue possui informações adicionais sobre como ele deve ser distribuído e usado, como o número da versão. O [NPM](#npm) e o [Yarn](#yarn) gerenciam e instalam os pacotes que seu projeto usa. O próprio [Gatsby](#gatsby) é um pacote.
 
 ### Página
 
