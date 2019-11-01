@@ -2,7 +2,7 @@
 title: Sessões de programação em pares abertas à comunidade
 ---
 
-A melhor parte do _open source_ é a comunidade, e toda comunidade é mais forte quando trabalha em conjunto. Para ajudar a construir a comunidade mais forte possível, o Gatsby está oferecendo [sessões de programação em pares com duração de uma hora][cal] para todos da comunidade de código abertox.
+A melhor parte do _open source_ é a comunidade, e toda comunidade é mais forte quando trabalha em conjunto. Para ajudar a construir a comunidade mais forte possível, o Gatsby está oferecendo [sessões de programação em pares com duração de uma hora][cal] para todos da comunidade de código aberto.
 
 ## Como funcionam as sessões de programação em pares da comunidade
 
