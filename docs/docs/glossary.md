@@ -34,7 +34,7 @@ O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#deve
 
 ### Ambiente de Desenvolvimento
 
-[Ambiente](#environment) que você utiliza quando está programando. Esse ambiente é disponibilizado pela [CLI](#cli) ao executar o comando `gatsby develop` e exibe relatórios de erro, entre outros recursos que ajudam na solução de problemas antes de publicar o site em um [ambiente de produção](#production-environment).
+[Ambiente](#ambiente) que você utiliza quando está programando. Esse ambiente é disponibilizado pela [CLI](#cli) ao executar o comando `gatsby develop` e exibe relatórios de erro, entre outros recursos que ajudam na solução de problemas antes de publicar o site em um [ambiente de produção](#ambiente-de-produção).
 
 ### Ambiente de Produção
 
