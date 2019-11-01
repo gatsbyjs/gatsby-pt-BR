@@ -126,7 +126,7 @@ _**Nota:** como membro do repositório Gatsby, você também pode cloná-lo dire
 
 - CSS Tricks: [How to Contribute to an Open Source Project](https://css-tricks.com/how-to-contribute-to-an-open-source-project/)
 - [Criar um pull request](https://help.github.com/pt/articles/creating-a-pull-request) do GitHub
-- [Configurar remote para bifurcação](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork)
+- [Configurar remote para um fork](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork)
 - [Qual URL remote eu devo usar?](https://help.github.com/pt/articles/which-remote-url-should-i-use)
 - [Git Branching and Merging](https://git-scm.com/book/pt-br/v2/Git-Branching-Basic-Branching-and-Merging)
 - [Feature Branching and Workflows](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
