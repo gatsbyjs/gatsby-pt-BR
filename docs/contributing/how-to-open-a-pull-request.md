@@ -33,7 +33,7 @@ A equipe core do Gatsby usa um processo de triagem descrito em [Gerenciando Pull
 
 Para qualquer tipo de alteração nos arquivos no repositório do Gatsby, você pode seguir as etapas abaixo. Certifique-se de verificar as dicas adicionais para contribuir para várias partes do repo mais adiante neste documento, como mudanças nas docs, blog posts, starters, ou melhorias de código e testes.
 
-Alguns PRs podem ser feitos completamente a partir do [GitHub UI](https://help.github.com/en/articles/creating-a-pull-request), como edições em arquivos README ou documentações.
+Alguns PRs podem ser feitos completamente a partir do [GitHub UI](https://help.github.com/pt/articles/creating-a-pull-request), como edições em arquivos README ou documentações.
 
 Para testar alterações localmente no [site e arquivos do projeto] do Gatsby, você pode fazer um fork do repositório e instalar partes dele para executar na sua máquina local.
 
@@ -64,7 +64,7 @@ Para testar alterações localmente no [site e arquivos do projeto] do Gatsby, v
   ```shell
   git push origin head
   ```
-- Para abrir uma PR com suas alterações no repositório Gatsby, você pode usar o [GitHub Pull Request UI](https://help.github.com/en/articles/creating-a-pull-request). Como alternativa, você pode usar a linha de comando: recomendamos [hub](https://github.com/github/hub) para isso.
+- Para abrir uma PR com suas alterações no repositório Gatsby, você pode usar o [GitHub Pull Request UI](https://help.github.com/pt/articles/creating-a-pull-request). Como alternativa, você pode usar a linha de comando: recomendamos [hub](https://github.com/github/hub) para isso.
 
 ### Documentação de PRs
 
@@ -93,13 +93,13 @@ Para o blog do Gatsby, é necessário executar sua ideia de conteúdo pela equip
 
 ## Atualize seu fork com as alterações mais recentes do Gatsby
 
-O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergir no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/en/articles/configuring-a-remote-for-a-fork):
+O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergir no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
 
 - Defina a URL do repositório do Gatsby como uma fonte remota. O nome do remoto é arbitrári; este exemplo usa `upstream`.
   ```shell
   git remote add upstream git@github.com:gatsbyjs/gatsby.git
   ```
-  - _Nota: esta sintaxe [usa SSH e chaves: você também pode usar `https`](https://help.github.com/en/articles/which-remote-url-should-i-use) e seu usuário/senha._
+  - _Nota: esta sintaxe [usa SSH e chaves: você também pode usar `https`](https://help.github.com/pt/articles/which-remote-url-should-i-use) e seu usuário/senha._
 - Você pode verificar o nome e a URL remotos a qualquer momento:
   ```shell
   git remote -v
@@ -112,24 +112,24 @@ O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você
   ```shell
   git merge upstream/master
   ```
-  - Se houver alguns [conflitos de mesclagem](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github), você vai querer resolver-los para obter um merge limpo.
+  - Se houver alguns [conflitos de mesclagem](https://help.github.com/pt/articles/resolving-a-merge-conflict-on-github), você vai querer resolver-los para obter um merge limpo.
 - Quando sua branch estiver funcionando em boas condições, faça push das alterações para o seu fork:
   ```shell
   git push origin head
   ```
 
-Para mais informações sobre como trabalhar com repositórios upstream, [visite a documentação do GitHub](https://help.github.com/en/articles/configuring-a-remote-for-a-fork).
+Para mais informações sobre como trabalhar com repositórios upstream, [visite a documentação do GitHub](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork).
 
 _**Nota:** como membro do repositório Gatsby, você também pode cloná-lo diretamente (em vez de fazer um fork e usar um fluxo de trabalho remoto upstream). Você pode então enviar via push as alterações para [feature branches](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows) para abrir PRs._
 
 ## Recursos adicionais
 
 - CSS Tricks: [How to Contribute to an Open Source Project](https://css-tricks.com/how-to-contribute-to-an-open-source-project/)
-- [Creating a pull request](https://help.github.com/en/articles/creating-a-pull-request) from GitHub
-- [Configuring a remote for a fork](https://help.github.com/en/articles/configuring-a-remote-for-a-fork)
-- [Which remote URL should I use?](https://help.github.com/en/articles/which-remote-url-should-i-use)
-- [Git Branching and Merging](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+- [Criar uma pull request](https://help.github.com/pt/articles/creating-a-pull-request) do GitHub
+- [Configurar remote para bifurcação](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork)
+- [Qual URL remote eu devo usar?](https://help.github.com/pt/articles/which-remote-url-should-i-use)
+- [Git Branching and Merging](https://git-scm.com/book/pt-br/v2/Git-Branching-Basic-Branching-and-Merging)
 - [Feature Branching and Workflows](https://git-scm.com/book/en/v1/Git-Branching-Branching-Workflows)
-- [Resolving merge conflicts](https://help.github.com/en/articles/resolving-a-merge-conflict-on-github)
-- [Managing Pull Requests](/contributing/managing-pull-requests/) on the Gatsby core team
-- [Guide on Markdown Syntax](/docs/mdx/markdown-syntax/)
+- [Resolver um conflito de merge no GitHub](https://help.github.com/pt/articles/resolving-a-merge-conflict-on-github)
+- [Gerenciando Pull Requests](/contributing/managing-pull-requests/) na equipe core do Gatsby
+- [Guia sobre sintaxe de Markdown](/docs/mdx/markdown-syntax/)
