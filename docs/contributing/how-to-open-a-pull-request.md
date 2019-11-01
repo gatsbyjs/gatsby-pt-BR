@@ -8,7 +8,7 @@ Uma boa parte de contribuição para _open source_ consiste em enviar alteraçõ
 
 Caso você não esteja familiarizado, veja como o pessoal do GitHub [define um pull request](https://help.github.com/pt/articles/about-pull-requests):
 
-> Os pull requests permitem que você informe outras pessoas sobre as alterações das quais você fez push para um branch em um repositório no GitHub. Depois que um pull request é aberta, você pode discutir e revisar as possíveis alterações com colaboradores e adicionar commits de acompanhamento antes que as alterações sofram merge no branch base.
+> Os pull requests permitem que você informe outras pessoas sobre as alterações das quais você fez push para uma branch em um repositório no GitHub. Depois que um pull request é aberta, você pode discutir e revisar as possíveis alterações com colaboradores e adicionar commits de acompanhamento antes que as alterações sofram merge no branch base.
 
 Gatsby usa o processo de PR para revisar e testar as alterações antes de serem adicionadas ao repositório do Gatsby no GitHub. Qualquer pessoa pode abrir um pull request. O mesmo processo é usado para todos os contribuidores, seja esta a sua primeira contribuição open source ou seja você um membro da equipe core do Gatsby.
 
