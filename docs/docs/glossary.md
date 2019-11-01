@@ -339,6 +339,6 @@ Um aplicativo [JavaScript](#javascript) usado pelo Gatsby para agrupar o código
 
 ### Yarn
 
-Um gerenciador de [pacotes](#package) que alguns preferem ao [NPM](#npm). Também é necessário para o [desenvolvimento Gatsby](/contributing/setting-up-your-local-dev-environment/#using-yarn).
+Um gerenciador de [pacotes](#pacote) que alguns preferem ao [NPM](#npm). Também é necessário para o [desenvolvimento Gatsby](/contributing/setting-up-your-local-dev-environment/#using-yarn).
 
 ## Z
