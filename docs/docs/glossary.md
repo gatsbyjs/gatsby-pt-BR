@@ -30,7 +30,7 @@ A prática inclusiva de remover barreiras que impedem a interação ou acesso a 
 
 Ambiente no qual o seu projeto Gatsby está sendo executado. Por exemplo, quando você está desenvolvendo o site, você provavelmente deseja o máximo de informações de _debugging_ possível, no entanto esse recurso não é indicado para quando o site está _no ar_ ou quando o aplicativo está sendo utilizado no celular do usuário final. Através do conceito de _ambiente_, o Gatsby consegue se adaptar ao contexto no no qual ele está sendo utilizado.
 
-O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#development-environment) e [ambiente de produção](#production-environment).
+O Gatsby suporta dois ambientes por padrão: [ambiente de desenvolvimento](#ambiente-de-desenvolvimento) e [ambiente de produção](#ambiente-de-produção).
 
 ### Ambiente de Desenvolvimento
 
