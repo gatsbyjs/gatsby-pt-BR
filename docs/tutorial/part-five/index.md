@@ -19,7 +19,7 @@ Você pode acessá-lo quando o servidor de desenvolvimento está executando em
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
-  <p>Your browser does not support the video element.</p>
+  <p>Seu navegador não suporta o elemento HTML video.</p>
 </video>
 
 Explore o "tipo" `Site` já incluso e veja quais são os campos disponíveis nele -- incluindo o objeto `siteMetadata` que você recebeu na _query_ anteriormente. Tente abrir o GraphiQL e brinque com os seus dados! Aperte <kbd>Ctrl + Espaço</kbd> (ou use <kbd>Shift + Espaço</kbd> como um atalho alternativo do teclado) para trazer a janela de _autocomplete_ e <kbd>Ctrl + Enter</kbd> para executar a _query_ GraphQL. Você utilizará GraphiQL muito mais durante o restante desse tutorial.
@@ -33,11 +33,11 @@ O Explorador do GraphiQL permite que você construa interativamente _queries_ co
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## plugins de origem
+## Plugins de origem
 
 Dados em sites Gatsby podem vir de qualquer lugar: APIs, banco de dados, CMSs, arquivos locais, etc.
 
-plugins de origem buscam por dados através de sua origem. Por exemplo: o plugin de origem dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
+Plugins de origem buscam por dados através de sua origem. Por exemplo: o plugin de origem dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
 
 Adicione o [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) e explore como ele funciona.
 
@@ -146,7 +146,7 @@ A linha `console.log(data)` é destacada acima. Ela é geralmente útil quando s
 criando um novo componente para mostrar no console os dados que você está recebendo da _query_ GraphQL
 para que então você consiga explorar os dados no seu navegador enquanto constrói a interface do usuário.
 
-Se você visitar a nova página em `/my-files/` e abre o console do seu navegador
+Se você visitar a nova página em `/my-files/` e abrir o console do seu navegador
 você verá algo como:
 
 ![data-in-console](data-in-console.png)
@@ -214,4 +214,4 @@ E agora visite [http://localhost:8000/my-files](http://localhost:8000/my-files)�
 
 ## O que vem na sequência?
 
-Agora você aprendeu como os plugins de origem trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins de ogiem. A combinaçào de plugins de origem com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).
+Agora você aprendeu como os plugins de origem trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins de origem. A combinaçào de plugins de origem com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).
