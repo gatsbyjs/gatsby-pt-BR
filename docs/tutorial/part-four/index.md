@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Seja bem-vindo(a) a quarta parte do tutorial! Já estamos no meio do caminho! Esperamos que as coisas estejam começando a ficar familiares 😀
+Boas vindas a quarta parte do tutorial! Já estamos no meio do caminho! Esperamos que as coisas estejam começando a ficar familiares 😀
 
 ## Relembrando a primeira metade do tutorial
 
@@ -64,21 +64,21 @@ Se você está construindo um pequeno site, uma forma eficiente de construi-lo �
 1.  Confira a [Biblioteca de Plugins](/plugins/) para ver se os plugins de extração e/ou plugins de transformação que você gostaria de utilizar já existem.
 2.  Se eles não existirem, leia o guia de [Autoria de Plugins](/docs/creating-plugins/) e considere construir você mesmo! 
 
-### How Gatsby's data layer uses GraphQL to pull data into components
+### Como a camada de dados do Gatsby usa GraphQL para injetar dados nos componentes
 
-There are many options for loading data into React components. One of the most
-popular and powerful of these is a technology called
+Há muitas opções para injetar dados nos componentes React. Uma das mais 
+populares e poderosas é a tecnologia chamada 
 [GraphQL](http://graphql.org/).
 
-GraphQL was invented at Facebook to help product engineers _pull_ needed data into
-components.
+GraphQL foi criado pelo Facebook para ajudar engenheiros de produto _injetar_ os dados necessários nos
+componentes.
 
-GraphQL is a **q**uery **l**anguage (the _QL_ part of its name). If you're
-familiar with SQL, it works in a very similar way. Using a special syntax, you describe
-the data you want in your component and then that data is given
-to you.
+GraphQL é uma **q**uery **l**anguage (a parte _QL_ do seu nome), ou linguagem de consulta. Se você está
+familiarizado com SQL, ela funciona de uma forma muito similar. Usando uma sintaxe especial, você descreve
+quais dados você quer no seu componente e assim esses dados são entregues
+a você.
 
-Gatsby uses GraphQL to enable components to declare the data they need.
+Gatsby usa GraphQL para permitir que componentes declarem quais dados eles precisam.
 
 ## Create a new example site
 
