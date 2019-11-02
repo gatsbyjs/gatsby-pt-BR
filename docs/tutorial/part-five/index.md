@@ -81,7 +81,7 @@ No painel de _Explorer_, você verá `allFile` e `file` disponíveis como seleç
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
-Clique no `allFile` menu _dropdown_. Posicione seu cursor depois `allFile` na área de _query_, e então pressione <kbd>Ctrl + Enter</kbd>. Isso irá preencher uma _query_ para o id de cada arquivo. Aperte o "_Play_" para executar a _query_:
+Clique em `allFile` no menu _dropdown_. Posicione seu cursor depois de `allFile` na área de _query_, e então pressione <kbd>Ctrl + Enter</kbd>. Isso irá preencher uma _query_ para o id de cada arquivo. Aperte o botão "_Play_" para executar a _query_:
 
 ![filesystem-query](filesystem-query.png)
 
