@@ -85,7 +85,7 @@ Clique no `allFile` menu _dropdown_. Posicione seu cursor depois `allFile` na á
 
 ![filesystem-query](filesystem-query.png)
 
-No painel _Explorer_, o campo `id` foi automaticamente selecionado. Faça seleções para mais campos selecionando a _checkbox_ do respectivo campo. Pressione "_Play_" para executar a _query_ novamente, agora com os novos campos:
+No painel _Explorer_, o campo `id` foi automaticamente selecionado. Faça seleções para mais campos selecionando a caixa de seleção do respectivo campo. Pressione "_Play_" para executar a _query_ novamente, agora com os novos campos:
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
