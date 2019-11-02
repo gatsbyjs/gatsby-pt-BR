@@ -52,7 +52,7 @@ Para testar alterações localmente no [site e em arquivos do projeto](https://g
   git add .
   ```
   - O uso de uma ferramenta visual como o [GitHub Desktop](https://desktop.github.com/) ou o [GitX](https://rowanj.github.io/gitx/) pode lhe ajudar a escolher quais arquivos e linhas commitar.
-* Ao commitar o código,  será executado o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório base do projeto:
+* Ao commitar o código, será executado o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório base do projeto:
   ```shell
   npm run format
   ```
