@@ -53,7 +53,7 @@ Gatsby é único entre a maioria do projetos _open source_:
 - **Seja empático.** O autor de uma _issue_ pode estar perguntando algo que é óbvio para você mas, não significa que seja óbvio para ele - é importante enxergar a _issue_ sob o ponto de vista do autor. As pessoas frequentemente lembram-se de como você as fez sentir, e não do que você as disse.
 - **Contextualize.** Ao responder uma _issue_, pode ser útil anexar _links_ para a documentação existente, _issues_, PR's, ou fornecer um contexto relacionado. Assim, a _issue_ pode servir como referência para leitores futuros.
 - **Incentive contribuições da comunidade.** Envolver as pessoas causa um impacto enorme. Muitas vezes, vale mais a pena dedicar seu tempo para escrever uma _task_ `good first issue` do que propriamente resolver uma _issue_. Isso pode proporcionar uma maneira menos desgastante para alguém se envolver mais no _open source_!
-- **Dê tempo para os autores fecharem suas _issues_.** Às vezes, pode parecer que uma _issue_ está resolvida, no entanto, o autor pode ter questionamentos a serem feitos. Geralmente, é melhor dar a ele um ou dois dias para fecher a _issue_.
+- **Dê tempo para os autores fecharem suas _issues_.** Às vezes, pode parecer que uma _issue_ está resolvida, no entanto, o autor pode ter questionamentos a serem feitos. Geralmente, é melhor dar a ele um ou dois dias para fechar a _issue_.
 
 ### Etiquetas
 
