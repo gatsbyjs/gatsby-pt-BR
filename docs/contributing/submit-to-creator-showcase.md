@@ -62,7 +62,7 @@ Use o seguinte _template_ para garantir que os campos obrigatórios estão inser
   portfolio: (optional)
 ```
 
-4. Se você enviou seus websites para o Mostruário antes mas não preencheu o campo "built_by", você deve editar o arquivo [`sites.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml) e adicionar seu nome (e o campo built_by se ele não estiver presente) lá também para garantir que as peças do seu portifólio estão ligadas à sua página.
+4. Se você enviou seus websites para o Mostruário antes mas não preencheu o campo "built_by", você deve editar o arquivo [`sites.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml) e adicionar seu nome (e o campo `built_by` se ele não estiver presente) para garantir que as peças do seu portifólio estejam ligadas à sua página.
 
 ### Processo de revisão
 
