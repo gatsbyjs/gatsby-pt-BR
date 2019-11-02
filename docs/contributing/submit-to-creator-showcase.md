@@ -1,33 +1,33 @@
 ---
-title: Submit to Creator Showcase
+title: Submeter ao Mostruário de Criadores
 ---
 
-Want to be a part of the [Creator Showcase](/creators)? Follow these instructions.
+Quer fazer parte do [Mostruário de Criadores?](/creators)? Siga essas instruções.
 
-## Steps
+## Passos
 
-There are only two major steps :)
+Há apenas dois passos :)
 
-1.  If this is your first contribution to the Gatsby open source repo, follow the [Contribution guidelines](/contributing/code-contributions/).
+1.  Se é sua primeira contribuição para o repositório _open source_ do Gatsby, siga as [Orientaçòes de Contribuição](/contributing/code-contributions/).
 
-2.  Upload a photo of yourself or a logo of your company/agency to [`this directory`](https://github.com/gatsbyjs/gatsby/tree/master/docs/creators/images). Images should have a square aspect ratio with 500px minimum (e.g. 500px X 500px) to 1000px maximum resolution and should carry the same name as what you put in the name field on creators.yml, but with a dash instead of spaces.
+2.  Envie uma foto sua or um logo da sua empresa/agência para [`esse diretório`](https://github.com/gatsbyjs/gatsby/tree/master/docs/creators/images). Imagens devem ter um aspecto de proporção quadrado com o mínimo de 500px. (ex: 500px x 500px) até o máximo de resolução de 1000px e deve ter o mesmo nome que você colocar no campo nome em creators.yml, porém com hífens ao invés de espaços.
 
-    For example,
+    Por exemplo,
 
-    **if name is:** _Fabian Schultz_
+    **se o nome é:** _Fabian Schultz_
 
-    **image name should be,** _fabian-schultz.jpg_
+    **o nome da imagem deve ser,** _fabian-schultz.jpg_
 
-    **if name is:** _Iron Cove Solutions_
+    **se o nome é:** _Iron Cove Solutions_
 
-    **image name should be,** _iron-cove-solutions.jpg_
+    **o nome da imagem deve ser,** _iron-cove-solutions.jpg_
 
-3.  Edit the [`creators.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/creators/creators.yml) file by adding your submission to the bottom of the list of sites in the following format:
+3.  Edite o arquivo [`creators.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/creators/creators.yml) adicionando sua submissão para o fim da lista de sites no seguinte formato:
 
 ```yaml:title=docs/creators/creators.yml
 - name: Your Name
 
-  # You can choose one of three `types`: agency, company, or individual
+  # Você pode escolher um dos 3 tipos `types`: agency, company, or individual
   type: agency
   description: >-
     We help agencies and companies with JAMStack tools. This includes web
@@ -38,15 +38,15 @@ There are only two major steps :)
   github: "https://github.com/githubusername"
   image: images/image.jpg
 
-  # Right now, you can only answer true to either `for_hire` or for `hiring`, but not for both.
+  # Agora, você pode escolher true apenas para `for_hire` ou para `hiring`, mas não para ambos.
   for_hire: true
   hiring: false
 
-  # If you mark `portfolio: true`, any sites you have in the Site Showcase that say `built_by: [imagine your name here]` will be linked to your Creator Profile. So make sure that `name`in `creators.yml` is exactly the same as `built_by` in `sites.yml`.
+  # se você marcar `portfolio: true`, qualquer site que você tem no Mostruário de Sites será mostrado com `built_by: [imagine seu nome aqui]` será relacionado ao seu Perfil de Criador. Então certifique que o `name` em `creators.yml` é exatamente o mesmo em `built_by` em `sites.yml`.
   portfolio: true
 ```
 
-Use the following template to ensure required fields are filled:
+Use o seguinte template para garantir que os campos obrigatórios estão inseridos:
 
 ```yaml:title=docs/creators/creators.yml
 - name: (required)
@@ -62,12 +62,13 @@ Use the following template to ensure required fields are filled:
   portfolio: (optional)
 ```
 
-4. If you sent your websites to the Showcase before but have not filled out the "built_by" field, you should edit [`sites.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml) and add your name (and the built_by field if it is not there) there as well to make sure your portfolio pieces are linked to your page.
+4. Se você enviou seus websites para o Mostruário antes mas não preencheu o campo "built_by", você deve editar o arquivo [`sites.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml) e adicionar seu nome (e o campo built_by se ele não estiver presente) lá também para garantir que as peças do seu portifólio estão ligadas à sua página.
 
-### Review process
+### Processo de revisão
 
-By default, all edits submitted to the Creator Showcase will be reviewed through the regular PR approval and merge process.
+Por padráo, todas as edições enviadas ao Mostruário de Criadores será revisada pelo processo regular de aprovação de _PR_ e processos de _merge_.
 
-### Change your mind / need to edit your submission?
+### Mudou de ideia / precisa editar sua submissão?
 
 If you want to edit anything in your site submission later, simply edit the `creators.yml` file by submitting another PR.
+Se vocÊ precisa editar alguma coisa na sua submissão posteriormente, simplesmente edite o arquivo `creators.yml` submetendo outro PR.
