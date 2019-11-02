@@ -69,8 +69,8 @@ A comunidade DEV também é outra plataforma para fazer perguntas e compartilhar
 
 - [Por que contribuir para o Gatsby?](/contributing/why-contribute-to-gatsby/)
 - [Eventos da Comunidade Gatsby](/contributing/events/)
-- [Onde participar na comunidade?](/contributing/where-to-participate/)
+- [Onde participar da comunidade?](/contributing/where-to-participate/)
 - [Organize um evento Gatsby](/contributing/organize-a-gatsby-event/)
 - [Como dirigir um Workshop Gatsby](/contributing/how-to-run-a-gatsby-workshop/)
-- [How to Pitch Gatsby](/contributing/how-to-pitch-gatsby/)
+- [Como apresentar o Gatsby](/contributing/how-to-pitch-gatsby/)
 - [Postagens no Blog da comunidade Gatsby](/blog/tags/community/)
