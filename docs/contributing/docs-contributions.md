@@ -21,28 +21,28 @@ Ao trabalhar na documentação do Gatsby.js, você pode escolher entre duas, mai
 
 Se você encontrar uma URL de uma imagem corrompida na documentação do Gatsby, ela deve ser corrigida e mantida em relação à origem do site, ao invés de vinculado ao repositório remoto no GitHub. Isso garante que, quando o site for publicado, todas as imagens sejam incluídas na compilação.
 
-Para resolver as imagens faltantes, consulte a fonte do documento ou tutorial [no repositório do Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/docs) ver no histórico se foi movida e se as imagens ainda estão no local antigo. Verifique se essas imagens também são referenciadas em mais de um documento. Se não estiverem, mova-os para o novo diretório (e atualize as referências de URL relativas ao conteúdo, se necessário). Se eles forem referenciados em mais de um local, use caminhos relativos e não duplique imagens.
+Para resolver as imagens faltantes, consulte a fonte do documento ou tutorial [no repositório do Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/docs) ver no histórico se foram movidas e se as imagens ainda estão no local antigo. Verifique se essas imagens também são referenciadas em mais de um documento. Se não estiverem, mova-os para o novo diretório (e atualize as referências de URL relativas ao conteúdo, se necessário). Se eles estiverem sendo referenciados em mais de um local, use caminhos relativos e não duplique imagens.
 
-Se você encontrar um link quebrado na documentação do Gatsby, fique à vontade para corrigi-lo e enviar um PR!
+Se você encontrar um link quebrado na documentação do Gatsby, fique à vontade para corrigí-lo e enviar um PR!
 
 Lembre-se de que alguns links aqui já estão corretos porque funcionam no gatsbyjs.org. Embora seja bom ter links na documentação funcionando no GitHub, tê-los funcionando no gatsbyjs.org é prioritário!
 
 ## Títulos
 
-Documentos com o _frontmatter_ no topo, com um `title` terão um título `<h1>` na página renderizada, e este deve ser único. Títulos adicionais devem começar pelo `<h2>`, marcados com `##` no Markdown.
+Documentos com o _frontmatter_ no topo, com um `title` receberão um título `<h1>` na página renderizada, e este deve ser único. Títulos adicionais devem começar pelo `<h2>`, marcados com `##` no Markdown.
 
-Para fins de um documento acessível, os títulos do conteúdo devem ir de h2-h4 (`####`) até que todos os níveis tenham sido estabelecidos. Isso garantirá que os documentos do Gatsby tenham uma hierarquia de conteúdo que funcione bem para usuários de tecnologia assistida. Leia mais sobre a importância de [títulos e estrutura semântica no HTML](https://webaim.org/techniques/semanticstructure/).
+Para fins de tornar o documento acessível, os títulos do conteúdo devem ir de h2-h4 (`####`) até que todos os níveis tenham sido estabelecidos. Isso garantirá que os documentos do Gatsby tenham uma hierarquia de conteúdo que funcione bem para usuários de tecnologia assistida. Leia mais sobre a importância de [títulos e estrutura semântica no HTML](https://webaim.org/techniques/semanticstructure/).
 
 ## Modificando arquivos em Markdown
 
 > 💡 Primeira vez escrevendo Markdown? Veja o [guia para Markdown do Gatsby](/docs/mdx/markdown-syntax/)!
 
-1. Se você deseja adicionar / modificar qualquer documentação do Gatsby, vá para a
+1. Se você deseja adicionar/modificar qualquer documentação do Gatsby, vá para a
    [pasta _docs_](https://github.com/gatsbyjs/gatsby/tree/master/docs) ou para a [pasta _contributing_](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) no GitHub e 
    use o editor de arquivos para editar e visualizar suas alterações.
 2. Antes de enviar suas modificações e abrir o PR na UI, você precisa ter certeza que seu PR está de acordo com os critérios de contribuição para as documentações:
    - Seguindo os padrões descritos no [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/).
-   - Se o seu PR não tem como origem uma issue escrita pelo _core team_, por favor adicione um comentário no seu PR, explicando porque sua alteração deveria ser incluída na documentação, de acordo com os [quesitos para decisão da Documentação](/blog/2018-10-12-uptick-docs-contributions-hacktoberfest/#docs-decision-tree-and-examples).
+   - Se o seu PR não tem como origem uma issue escrita pelo _core team_, adicione um comentário no seu PR, explicando porque sua alteração deveria ser incluída na documentação, de acordo com os [quesitos para decisão da Documentação](/blog/2018-10-12-uptick-docs-contributions-hacktoberfest/#docs-decision-tree-and-examples).
      > Nota: Se a sua _issue_ e/ou PR não atender aos critérios de contribuição acima, ele poderá receber um comentário para lembrá-lo. Se, após duas semanas, essas alterações não tiverem sido feitas, sua _issue_ e/ou PR poderá ser encerrado, o que nos ajudará a triar _issues_ e PRs com eficiência. Você pode solicitar que seja reaberto se e quando estiver pronto para fazer as atualizações necessárias.
 3. O GitHub permite você modificar e abrir um PR na própria UI. Essa é a forma mais fácil de contribuir com o projeto!
 
@@ -60,7 +60,7 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
   ...
 ```
 
-2. Edite o `www/src/data/sidebars/doc-links.yaml` revomendo o asterisco antes do título do documento:
+2. Edite o arquivo `www/src/data/sidebars/doc-links.yaml` removendo o asterisco antes do título do documento:
 
 ```diff:title=www/src/data/sidebars/doc-links.yaml
   ...
