@@ -8,9 +8,9 @@ Quer fazer parte do [Mostruário de Criadores?](/creators)? Siga essas instruç�
 
 Há apenas dois passos :)
 
-1.  Se é sua primeira contribuição para o repositório _open source_ do Gatsby, siga as [Orientaçòes de Contribuição](/contributing/code-contributions/).
+1.  Se esta é sua primeira contribuição para o repositório _open source_ do Gatsby, siga as [Orientações de Contribuição](/contributing/code-contributions/).
 
-2.  Envie uma foto sua or um logo da sua empresa/agência para [`esse diretório`](https://github.com/gatsbyjs/gatsby/tree/master/docs/creators/images). Imagens devem ter um aspecto de proporção quadrado com o mínimo de 500px. (ex: 500px X 500px) até o máximo de resolução de 1000px e deve ter o mesmo nome que você colocar no campo nome em creators.yml, porém com hífens ao invés de espaços.
+2.  Envie uma foto sua ou um logo da sua empresa/agência para [`esse diretório`](https://github.com/gatsbyjs/gatsby/tree/master/docs/creators/images). Imagens devem ter um aspecto quadrado de proporção com uma resolução mínima de 500px (ex: 500px X 500px) e máxima de 1000px. A imagem deve possuir o mesmo nome que você colocar no campo "nome" em creators.yml, substituindo espaços por hífens.
 
     Por exemplo,
 
@@ -66,7 +66,7 @@ Use o seguinte _template_ para garantir que os campos obrigatórios estão inser
 
 ### Processo de revisão
 
-Por padráo, todas as edições enviadas ao Mostruário de Criadores será revisada pelo processo regular de aprovação de _PR_ e processos de _merge_.
+Por padrão, todas as edições enviadas ao Mostruário de Criadores será revisada pelo processo regular de aprovação de _PR_ e processos de _merge_.
 
 ### Mudou de ideia / precisa editar sua submissão?
 
