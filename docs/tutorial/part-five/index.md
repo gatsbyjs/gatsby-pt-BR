@@ -8,7 +8,7 @@ disableTableOfContents: true
 
 ## O que tem nesse tutorial?
 
-Nesse tutorial, você aprenderá como puxar dados para seu site Gatsby usando GraphQL e plugins de origem. Porém, antes de você aprender sobre esses plugins, você precisará saber como usar algo chamado GraphiQL, uma ferramenta que lhe ajudará a estruturar suas _queries_ corretamente.
+Neste tutorial, você aprenderá como puxar dados para seu site Gatsby usando GraphQL e plugins nativos. Porém, antes de você aprender sobre esses plugins, você precisará saber como usar algo chamado GraphiQL, uma ferramenta que lhe ajudará a estruturar suas _queries_ corretamente.
 
 ## Introduzindo GraphiQL
 
