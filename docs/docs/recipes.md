@@ -301,21 +301,21 @@ import "./src/styles/global.css"
 
 - Mais sobre [adicionando estilos globais sem um componente de layout](/docs/global-css/#adding-global-styles-without-a-layout-component)
 
-### Using global styles in a layout component
+### Usando estilos globais em um componente de layout
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/) with an index page component
+- Um [site Gatsby](/docs/quick-start/) com um componente da página de índice
 
-#### Directions
+#### Instruções
 
-You can add global styles to a [shared layout component](/tutorial/part-three/#your-first-layout-component). This component is used for things that are common throughout the site, like a header or footer.
+Você pode adicionar estilos globais a um [componente de layout compartilhado](/tutorial/part-three/#your-first-layout-component). Esse componente é usado para coisas comuns em todo o site, como um cabeçalho ou rodapé.
 
-1. If you don't already have one, create a new directory in your site at `/src/components`.
+1. Se você ainda não possui um, crie um novo diretório em seu site em `/src/components`.
 
-2. Inside the components directory, create two files: `layout.css` and `layout.js`.
+2. Dentro do diretório de componentes, crie dois arquivos: `layout.css` e` layout.js`.
 
-3. Add the following to `layout.css`:
+3. Adicione o seguinte trecho de código ao arquivo `layout.css`:
 
 ```css:title=/src/components/layout.css
 body {
@@ -323,7 +323,7 @@ body {
 }
 ```
 
-4. Edit `layout.js` to import the CSS file and output layout markup:
+4. Edite `layout.js` para importar o arquivo CSS e estilizar o layout:
 
 ```jsx:title=/src/components/layout.js
 import React from "react"
@@ -332,7 +332,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-5. Now edit your site's homepage at `/src/pages/index.js` and use the new layout component:
+5. Agora edite a página inicial do seu site em `/src/pages/.js` e use o novo componente de layout:
 
 ```jsx:title=/src/pages/index.js
 import React from "react"
@@ -341,10 +341,10 @@ import Layout from "../components/layout"
 export default () => <Layout>Hello world!</Layout>
 ```
 
-#### Additional resources
+#### Contéudo adicional
 
-- [Standard Styling with Global CSS Files](/docs/global-css/)
-- [More about layout components](/tutorial/part-three)
+- [Estilização padrão com arquivos CSS globais](/docs/global-css/)
+- [Mais sobre componentes de layout](/tutorial/part-three)
 
 ### Using Styled Components
 
