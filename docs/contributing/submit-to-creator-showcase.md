@@ -66,7 +66,7 @@ Use o seguinte _template_ para garantir que os campos obrigatórios estão inser
 
 ### Processo de revisão
 
-Por padrão, todas as edições enviadas ao Mostruário de Criadores será revisada pelo processo regular de aprovação de _PR_ e processos de _merge_.
+Por padrão, todas as edições enviadas ao Mostruário de Criadores serão revisadas pelos processos regulares de aprovação de _PR_ e de _merge_.
 
 ### Mudou de ideia / precisa editar sua submissão?
 
