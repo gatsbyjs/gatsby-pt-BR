@@ -565,23 +565,25 @@ Se as fontes não estiverem atualizando as etapas acima, certifique-se de substi
 
 - Mais sobre [importar assets dentro de arquivos](/docs/importing-assets-into-files/)
 
-### Using Emotion
+### Usando Emotion
 
 [Emotion](https://emotion.sh) is a powerful CSS-in-JS library that supports both inline CSS styles and styled components. You can use each styling feature individually or together in the same file.
 
-#### Prerequisites
+é uma poderosa biblioteca CSS-in-JS que suporta estilos CSS inline e styled components. Você pode usar cada recurso de estilo individualmente ou juntos no mesmo arquivo.
 
-- A [Gatsby site](/docs/quick-start)
+#### Pré-requisitos
 
-#### Directions
+- Um [site Gatsby](/docs/quick-start/)
 
-1. Install the [Gatsby Emotion plugin](/packages/gatsby-plugin-emotion/) and Emotion packages.
+#### Instruções
+
+1. Instale o [plugin Gatsby Emotion](/packages/gatsby-plugin-emotion/) e os pacotes Emotion.
 
 ```shell
 npm install --save gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
 
-2. Add the `gatsby-plugin-emotion` plugin to your `gatsby-config.js` file:
+2. Adicione o plugin `gatsby-plugin-emotion` ao seu arquivo` gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -589,9 +591,11 @@ module.exports = {
 }
 ```
 
-3. If you don't already have one, create a page in your Gatsby site at `src/pages/emotion-sample.js`.
+3. Se você ainda não possui uma, crie uma página no seu site do Gatsby em `src/pages/emotion-sample.js`.
 
 Import Emotion's `css` core package. You can then use the `css` prop to add [Emotion object styles](https://emotion.sh/docs/object-styles) to any element inside a component:
+
+Importar o pacote principal de `css` do Emotion. Você pode usar o prop `css` para adicionar [estilos de objetos do Emotion](https://emotion.sh/docs/object-styles) a qualquer elemento dentro de um componente:
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -611,7 +615,7 @@ export default () => (
 )
 ```
 
-4. To use Emotion's [styled components](https://emotion.sh/docs/styled), import the package and define them using the `styled` function.
+4. Para usar os [styled components do Emotion](https://emotion.sh/docs/styled), importe o pacote e defina-os usando a função `styled`.
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -632,11 +636,11 @@ export default () => (
 )
 ```
 
-#### Additional resources
+#### Conteúdo adicional
 
-- [Using Emotion in Gatsby](/docs/emotion/)
+- [Usando Emotion no Gatsby](/docs/emotion/)
 - [Emotion website](https://emotion.sh)
-- [Getting started with Emotion and Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
+- [Introdução ao Emotion e Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
 
 ### Using Google Fonts
 
