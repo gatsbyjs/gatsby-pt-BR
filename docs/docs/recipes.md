@@ -346,16 +346,16 @@ export default () => <Layout>Hello world!</Layout>
 - [Estilização padrão com arquivos CSS globais](/docs/global-css/)
 - [Mais sobre componentes de layout](/tutorial/part-three)
 
-### Using Styled Components
+### Usando Styled Components
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/) with an index page component
-- [gatsby-plugin-styled-components, styled-components, and babel-plugin-styled-components](/packages/gatsby-plugin-styled-components/) installed in `package.json`
+- Um [site Gatsby](/docs/quick-start/) com um componente da página de índice
+- [gatsby-plugin-styled-components, styled-components, e babel-plugin-styled-components](/packages/gatsby-plugin-styled-components/) instalados no seu `package.json`
 
-#### Directions
+#### Instruções
 
-1. Inside your `gatsby-config.js` file add `gatsby-plugin-styled-components`
+1. Dentro do seu arquivo `gatsby-config.js`, adicione` gatsby-plugin-style-components`
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -363,11 +363,11 @@ module.exports = {
 }
 ```
 
-2. Open the index page component (`src/pages/index.js`) and import the `styled-components` package
+2. Abra o componente da página de índice (`src/pages/index.js`) e importe o pacote` styled-components`
 
-3. Style components by creating style blocks for each element type
+3. Estilize os componentes criando blocos de estilo para cada tipo de elemento
 
-4. Apply to the page by including styled components in the JSX
+4. Aplique à página incluindo componentes estilizados no JSX
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -417,12 +417,12 @@ export default () => (
 )
 ```
 
-4. Run `gatsby develop` to see the changes
+4. Execute `gatsby develop` para ver as alterações
 
-#### Additional resources
+#### Contéudo adicional
 
-- [More on Using Styled Components](/docs/styled-components/)
-- [Egghead lesson](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
+- [Mais sobre o uso de Styled Components](/docs/styled-components/)
+- [Lições Egghead](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
 
 ### Using CSS Modules
 
