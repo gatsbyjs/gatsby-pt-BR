@@ -14,7 +14,7 @@ Uau! você chegou bem longe! Você aprendeu até o momento:
 - usar GraphQL para consultar dados para a página
 - criar páginas automaticamente a partir dos seus dados
 
-Nesta seção final, você passará por alguns dos passos comuns ao preparar um site para ir ao ar, introduzindo uma poderosa ferramenta chamada [Lighthouse](https:/developers.google.com/web/tools/lighthouse/). Ao longo do caminho nós iremos introduzir alguns plugins a mais que você possa vir a usar com frequência nos seus sites com Gatsby.
+Nesta seção final, você passará por alguns dos passos comuns ao preparar um site para ir ao ar, introduzindo uma poderosa ferramenta chamada [Lighthouse](https:/developers.google.com/web/tools/lighthouse/). Ao longo do caminho nós iremos introduzir alguns plugins a mais que você gostará de usar nos seus sites com Gatsby.
 
 ## Auditando com o Lighthouse
 
@@ -65,7 +65,7 @@ para que nenhuma extensão interfira no teste. Depois, abra o Chrome DevTools.
 
 ![Resultados da auditoria do Lighthouse](./lighthouse-audit-results.png)
 
-Como você pode ver, a performance do Gatsby é excelente por padrão, mas estão faltando algumas coisas para PWA, acessibilidade, melhores práticas e SEO isso vai te ajudar a  melhorar a sua pontuação (e durante o processo tornar o seu site muito mais amigável para visitantes e mecanismos de busca)
+Como você pode ver, a performance do Gatsby é excelente por padrão, mas estão faltando algumas coisas para PWA, acessibilidade, melhores práticas e SEO que te ajudarão a  melhorar a sua pontuação (e tornar o seu site muito mais amigável para visitantes e mecanismos de busca durante o processo).
 
 ## Adicionando o arquivo de manifesto
 
@@ -336,7 +336,7 @@ export const query = graphql`
 `
 ```
 
-O exemplo acima é baseado no [blog de exemplo do Gatsby](/starters/gatsbyjs/gatsby-starter-blog/). Passando props para o componente `<SEO>`, você pode dinamicamente mudar os metadados para o seu post. Nesse caso, o `title` e `excerpt` do seu blog (se eles existirem no arquivo markdown do post) serão utilizados ao invés dos padrões configurados em  `siteMetadata` do seu arquivo `gatsby-config.js`.
+O exemplo acima é baseado no [blog de exemplo do Gatsby](/starters/gatsbyjs/gatsby-starter-blog/). Passando props para o componente `<SEO>`, você pode dinamicamente mudar os metadados para o seu post. Nesse caso, o `title` e `excerpt` do seu blog (se existir no arquivo markdown do post) serão utilizados ao invés dos padrões configurados no  `siteMetadata` do seu arquivo `gatsby-config.js`.
 
 
 Agora, se você executar novamente a auditoria do Lighthouse, você deve atingir uma nota próxima --se não perfeita-- de 100 pontos!
@@ -369,7 +369,7 @@ A lista completa de todos os plugins oficiais mantidos pelo Gatsby.
 
 ## Isso é tudo, pessoal
 
-Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso
+Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso
 
 
 Esse é só o começo. Continue indo!
