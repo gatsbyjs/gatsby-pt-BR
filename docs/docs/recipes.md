@@ -467,31 +467,31 @@ Observe que a extensão do arquivo é `.module.css` em vez de` .css`, o que info
 - Mais sobre como [usar CSS Modules](/tutorial/part-two/#css-modules)
 - [Exemplo ao vivo usando CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
 
-### Using Sass/SCSS
+### Usando Sass/SCSS
 
-Sass is an extension of CSS that gives you more advanced features like nested rules, variables, mixins, and more.
+Sass é uma extensão do CSS que oferece recursos mais avançados, como regras aninhadas, variáveis, mixins e muito mais.
 
-Sass has 2 syntaxes. The most commonly used syntax is "SCSS", and is a superset of CSS. That means all valid CSS syntax, is valid SCSS syntax. SCSS files use the extension .scss
+O Sass possui 2 sintaxes. A sintaxe mais usada é "SCSS" e é um superconjunto de CSS. Isso significa que toda sintaxe CSS válida é sintaxe SCSS válida. Os arquivos SCSS usam a extensão .scss
 
-Sass will compile .scss and .sass files to .css files for you, so you can write your stylesheets with more advanced features.
+O Sass compilará arquivos .scss e .sass em arquivos .css para você, para que você possa escrever suas folhas de estilo com recursos mais avançados.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/).
+- Um [site Gatsby](/docs/quick-start/).
 
-#### Directions
+#### Instruções
 
-1. Install the Gatsby plugin [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and `node-sass`.
+1. Instale o plug-in Gatsby [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) e o `node-sass`.
 
 `npm install --save node-sass gatsby-plugin-sass`
 
-2. Include the plugin in your `gatsby-config.js` file.
+2. Inclua o plugin no seu arquivo `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
 ```
 
-3.  Write your stylesheets as `.sass` or `.scss` files and import them. If you don't know how to import styles, take a look at [Styling with CSS](/docs/recipes/#2-styling-with-css)
+3.  Escreva suas folhas de estilo como arquivos `.sass` ou` .scss` e importe-as. Se você não sabe importar estilos, dê uma olhada em [Estilizando com CSS](/docs/recipes/#2-styling-with-css)
 
 ```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -517,13 +517,13 @@ import "./styles.scss"
 import "./styles.sass"
 ```
 
-_Note: You can use Sass/SCSS files as modules too, like mentioned in the previous recipe about CSS modules, with the difference that instead of .css the extensions have to be .scss or .sass_
+>_Nota: Você também pode usar arquivos Sass / SCSS como módulos, como mencionado na receita anterior sobre módulos CSS, com a diferença de que, em vez de .css, as extensões devem ser .scss ou .sass_
 
-#### Additional resources
+#### Contéudo adicional
 
-- [Difference between .sass and .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
-- [Sass guide from the official Sass website](https://sass-lang.com/guide)
-- [A more complete installation tutorial on Sass with some more explanations and more resources](https://www.gatsbyjs.org/docs/sass/)
+- [Diferença entre .sass e .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
+- [Guia de Sass no site oficial do Sass](https://sass-lang.com/guide)
+- [Um tutorial de instalação mais completo sobre o Sass, com mais explicações e mais recursos](https://www.gatsbyjs.org/docs/sass/)
 
 ### Adding a Local Font
 
