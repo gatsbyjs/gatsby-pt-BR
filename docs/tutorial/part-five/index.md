@@ -14,7 +14,7 @@ Neste tutorial, você aprenderá como puxar dados para seu site Gatsby usando Gr
 
 GraphiQL é a _IDE_ (Ambiente de Desenvolvimento Integrado) do GraphQL. É uma poderosa e impressionante ferramenta que você utilizará com frequência enquanto estiver construindo websites em Gatsby.
 
-Você pode acessá-lo quando o servidor de desenvolvimento está executando em
+Você pode acessá-lo quando o servidor de desenvolvimento estiver executando em
 <http://localhost:8000/___graphql>.
 
 <video controls="controls" autoplay="true" loop="true">
