@@ -77,7 +77,7 @@ module.exports = {
 
 Salve o arquivo e reinicie o servidor de desenvolvimento do gatsby. Então, abra o GraphiQL novamente.
 
-No painel de _Explorer_, você verá `allFile` e `file` disponíveis como seleções:
+No painel de _Explorer_, você verá `allFile` e `file` disponíveis como opções:
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
