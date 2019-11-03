@@ -1,97 +1,97 @@
 ---
-title: How to label an issue
+title: Como classificar uma issue
 ---
 
-## What are issue labels?
+## O que são classificadores de issues?
 
-Issue labels are a tool in GitHub that are used to group issues into one or more categories.
+Classificadores de issues é uma ferramenta no GitHub usada para agrupar issues em uma ou mais categorias.
 
-[Check out Gatsby's labels (and their descriptions)](https://github.com/gatsbyjs/gatsby/issues/labels)
+[Veja as labels do Gatsby e suas definições](https://github.com/gatsbyjs/gatsby/issues/labels)
 
-## Why label issues?
+## Por que usar o classificador de issues?
 
-Gatsby is a very active project with many new issues opened each day. Labelling issues helps by identifying:
+Gatsby é um projeto bem ativo e diariamente tem novas issues abertas. Classificando as issues ajuda a identificar:
 
-- good issues for new contributors to work on
-- reported and confirmed bugs
-- feature requests
-- duplicate issues
-- issues that are stalled or blocked
+- boas issues para novos contruibuidores trabalharem nelas
+- reportar e confirmar bugs
+- solicitar novas features
+- issues duplicadas
+- issues que estão paradas ou bloqueadas
 
-## Who can label issues?
+## Quem pode classificar as issues?
 
-Anyone who's a member of the [Gatsby Maintainers team](https://github.com/orgs/gatsbyjs/teams/maintainers) can label issues.
+Qualquer um que seja membro do [Time de Mantenedores do Gatsby](https://github.com/orgs/gatsbyjs/teams/maintainers) pode classificar as issues.
 
-You can get an invite to the team by having a Pull Request merged into the Gatsby project. Check out the list of [`help wanted`](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) issues and the [How To Contribute Guide](/contributing/how-to-contribute/) to get started.
+Você pode receber um convite do time quando seu Pull Request for mergeado no projeto do Gatsby. Veja a lista de [`precisa de ajuda`](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) das issues e o [O Guia de Como Contribuir](/contributing/how-to-contribute/) para começar.
 
-**NOTE:** If you’ve already had a pull request merged and you have _not_ been invited to the maintainers team, please go to [the dashboard](https://store.gatsbyjs.org/) and request a discount code. You should get an invite to the team — _and you get free Gatsby swag!_ If that doesn’t work, please email team@gatsbyjs.com and we'll get you invited.
+**NOTA:** Se você já teve um pull resquest mergeado e _não_ foi convidado pelo time de mantenedores, por favor vá para [o dashboard](https://store.gatsbyjs.org/) e solicite um código de desconto. Você deve receber um convite do time - _e pegue de graça seu Gatsby swag!_ Se não funcionar, por favor envie um email para team@gatsbyjs.com e nós conseguiremos um convite para você.
 
-## How to label an issue
+## Como classificar uma issue
 
-Ideally, every issue should have a single `type:` label applied to it. Optionally a `status:` label or other labels may also be applied.
+Idealmente, toda issue deve ter um só `tipo:` de classificador aplicado a ela. Opcionalmente uma label `status:` ou mais labels, também podem ser aplicadas.
 
-Before continuing, get familiar with [Gatsby's issue labels and their descriptions](https://github.com/gatsbyjs/gatsby/issues/labels).
+Antes de continuar, familiarize-se com as [labels do Gatsby e suas definições](https://github.com/gatsbyjs/gatsby/issues/labels)
 
-The broad steps to labelling an issue are:
+As etapas princiapis para classificar uma issue são:
 
-- Read an issue
-- Choose the labels that apply to that issue
-- That's it - sit back and relax, maybe take a few moments to enjoy the satisfaction of a job well done
+- Leia a issue
+- Escolha as labels que aplicam para aquela issue
+- E é isso - sente e relaxe, e talvez curta por um momento a satisfação de ter feito um bom trabalho.
 
-The rest of this document will describe how to choose the right labels for an issue.
+O resto deste documento vai descrever como escolher as labels corretas para uma issue.
 
-### Find an issue that you're interested in
+### Encontre uma issue que você esteja interessado
 
-Start with [Gatsby's issues list](https://github.com/gatsbyjs/gatsby/issues) and scroll through until you see a recent one that strikes your interest. Alternatively, you can view the [list of unlabelled issues](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
+Comece com a [lista de issues do Gatsby](https://github.com/gatsbyjs/gatsby/issues) e procure até você encontrar uma nova issue que chame a sua atenção. Alternativamente, você pode ver a [lista de issues não classificadas](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+no%3Alabel).
 
-### Read the issue
+### Leia a issue
 
-Read the issue and any comments to understand what the issue is about.
+Leia a issue e qualquer comentários para entender do que ela se trata.
 
-### Choose one `type:` label
+### Escolha o `tipo:` label
 
-Choose a type label from the _labels_ dropdown to the right-hand side of the issue.
+Escolha o tipo de classificador do dropdown de _labels_ que estará do lado direito da issue.
 
 ![GitHub label dropdown](./images/github-label-list.png)
 
-You can check through the [label descriptions](https://github.com/gatsbyjs/gatsby/issues/labels) for more information on each one.
+Você também pode checar as [descrições das labels](https://github.com/gatsbyjs/gatsby/issues/labels) para entender melhor cada uma.
 
-The most common type of issue is `type: question or discussion`, typically you can apply this to issues that are open-ended or have no clear next step.
+O tipo mais comum de issue é `tipo: questão ou discussão`, normalmente você pode aplicar à issues que são open-ended ou não tem uma próxima etapa.
 
-It's OK to change the type of an issue as more information becomes available. What starts as `type: question or discussion`, might later need to be changed to `type: bug`.
+É OK mudar o tipo de issue assim que mais informações fiquem disponíveis. O que inicia um `tipo: questão ou discussão`, pode mais tarde mudar para `tipo: bug`.
 
-Changing labels is quick and easily reversible, so don't worry too much about applying a "wrong" label.
+Mudar as labels é rápido e facilmente reversível, então não se preocupe em aplicar uma label "errada".
 
-Choose an appropriate `type:` label and you're ready to move on to the next step.
+Escolha o `tipo:` de label apropriado e siga para o próximo passo.
 
-### Choose a `status:` label (optional)
+### Escolha um `status:` (opcional)
 
-Check through the [`status:` labels (and their descriptions)](https://github.com/gatsbyjs/gatsby/issues/labels), if any apply to this issue add them as necessary.
+Veja sobre [`status:` labels (e suas descrições)](https://github.com/gatsbyjs/gatsby/issues/labels), e se nenhum deles forem aplicável à issue, adicione um novo se necessário.
 
-Examples of applying `status:` labels might be:
+Exemplos de aplicação de `status:` devem ser:
 
-- An issue that depends on an external dependency being changed could be labelled with `status: blocked`
+- Uma issue que dependa de uma dependência externa, e esse dependência seja mudada, ela deve ser classificada como `status: bloqueada`
 
-- An issue with a clear description of how it can be resolved could be labelled `status: help wanted`.
+- Uma issue com uma descrição clara de como ser resolvida pode ser classificada como `status: precisa de ajuda`.
 
-- An issue that's missing information required to help the author could be labelled with `status: needs more info`
+- Uma issue que falta informações para ajudar o autor da issue a resolver, pode ser classificada como `status: precisa de mais informação`
 
-- An issue describing a bug without clear steps to reproduce could be labelled with `status: needs reproduction`
+- Uma issue descrevendo um bug, sem a clara informação de como reproduzir o bug, pode ser classificada como : `status: precisa de reprodução`
 
-- An issue describing a bug where there are steps to reproduce the bug _and_ you've run the code locally and seen the error yourself can be labelled `status: confirmed`
+- Uma issue descrevendo um bug com as etapas de reprodução do mesmo _e_ você rodou o código localmente e viu o erro, pode ser classificada como `status: confirmado`
 
-### Choose any other labels
+### Esolha outros classificadores
 
-There are a few other labels that can sometimes be applied to an issue. Here are some more examples of when to use them:
+Existem outros tipos de classificadores que podem às vezes ser aplicados a uma issue. Aqui são alguns exemplos de quando usá-los:
 
-- `good first issue` can be used when an issue is a small, clearly defined piece of work that could be completed by someone without in-depth knowledge of Gatsby and how it works. These issues are particularly suitable for people making their first open source contributions.
+- `boa primeira issue` pode ser usada quando uma issue é pequena, e a sua resolução pode ser feita por alguém que não tenha um conhecimento profundo de Gatsby e como ele funciona. Essas issues são particulamente adequadas para pessoes que estão fazendo suas primeiras contribuições open-source.
 
-- `stale?` can be used on an issue where the author has not replied to requests for further information in at least 20 days.
+- `obsoleto` pode ser usado em uma issue onde o autor não respondeu às perguntas para mais informações nos últimos 20 dias.
 
-### Finish
+### Terminar
 
-And you're done! You can call it a day or go back to the first step to label another issue.
+E é isso, você terminou! Você pode terminar o seu dia ou voltar para a primeira etapa, para classificar outra issue.
 
-## Conclusion
+### Conclusão
 
-Labelling issues is a great way to help out on the Gatsby project regardless of your experience level.
+Classificar issues é uma boa maneira de ajudar no projeto do Gatsby independente do seu nível de experiência.
