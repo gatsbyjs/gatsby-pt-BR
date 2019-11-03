@@ -716,38 +716,38 @@ gatsby develop
 - Navegue pela [biblioteca de Starter's](/starters/?v=2)
 - Confira o [starter padrão oficial do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default)
 
-## 4. Working with themes
+## 4. Trabalhando com Temas
 
-A Gatsby theme abstracts Gatsby configuration (shared functionality, data sourcing, design) into an installable package. This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+Um tema do Gatsby abstrai a configuração do Gatsby (funcionalidade compartilhada, fonte de dados, design) em um pacote instalável. Isso significa que a configuração e a funcionalidade não são gravadas diretamente no seu projeto, mas sim versionadas, gerenciadas centralmente e instaladas como uma dependência. Você pode atualizar perfeitamente um tema, compor temas juntos e até trocar um tema compatível por outro.
 
-- Read more on [What is a Gatsby Theme?](/docs/themes/what-are-gatsby-themes)
+- Leia mais sobre [o que é um tema Gatsby?](/docs/themes/what-are-gatsby-themes)
 
-### Creating a new site using a theme starter
+### Criando um novo site usando um starter de temas
 
-Creating a site based on a starter that configures a theme follows the same process as creating a site based on a starter that **doesn't** configure a theme. In this example you can use the [starter for creating a new site that uses the official Gatsby blog theme](https://github.com/gatsbyjs/gatsby-starter-blog-theme).
+A criação de um site baseado em um starter que configura um tema segue o mesmo processo que a criação de um site baseado em um starter que **não** configura um tema. Neste exemplo, você pode usar o [starter para criar um novo site que use o tema oficial do blog Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog-theme).
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-#### Directions
+#### Instruções
 
-1. Generate a new site based on the blog theme starter:
+1. Gere um novo site com base no starter de temas do blog:
 
 ```shell
-gatsby new {your-project-name} https://github.com/gatsbyjs/gatsby-starter-blog-theme
+gatsby new {nome-do-seu-projeto} https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-2. Run your new site:
+2. Execute seu novo site:
 
 ```shell
-cd {your-project-name}
+cd {nome-do-seu-projeto}
 gatsby develop
 ```
 
-#### Additional resources
+#### Conteúdo adicional
 
-- Learn how to use an existing Gatsby theme in the [shorter conceptual guide](/docs/themes/using-a-gatsby-theme) or the more detailed [step-by-step tutorial](/tutorial/using-a-theme).
+- Aprenda a usar um tema Gatsby existente no [guia conceitual mais curto](/docs/themes/using-a-gatsby-theme) ou no mais detalhado [tutorial passo a passo](/tutorial/using-a-theme)
 
 ### Building a new theme
 
