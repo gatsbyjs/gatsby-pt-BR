@@ -749,36 +749,36 @@ gatsby develop
 
 - Aprenda a usar um tema Gatsby existente no [guia conceitual mais curto](/docs/themes/using-a-gatsby-theme) ou no mais detalhado [tutorial passo a passo](/tutorial/using-a-theme)
 
-### Building a new theme
+### Criando um novo tema
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-use-the-gatsby-theme-workspace-starter-to-begin-building-a-new-theme"
   lessonTitle="Use the Gatsby Theme Workspace Starter to Begin Building a New Theme"
 />
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-* [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed
+* [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) instalado
 
-#### Directions
+#### Instruções
 
-1. Generate a new theme workspace using the [Gatsby theme workspace starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace):
+1. Gere um novo *workspace* com tema usando [Gatsby theme workspace starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace):
 
 ```shell
-gatsby new {your-project-name} https://github.com/gatsbyjs/gatsby-starter-theme-workspace
+gatsby new {nome-do-seu-projeto} https://github.com/gatsbyjs/gatsby-starter-theme-workspace
 ```
 
-2. Run the example site in the workspace:
+2. Execute o site de exemplo em seu *workspace*:
 
 ```shell
 yarn workspace example develop
 ```
 
-#### Additional resources
+#### Conteúdo adicional
 
-- Follow a [more detailed guide](/docs/themes/building-themes/) on using the Gatsby theme workspace starter.
+- Siga um [guia mais detalhado](/docs/themes/building-themes/) sobre o uso do starter do *Gatsby theme workspace*.
 - Learn how to build your own theme in the [Gatsby Theme Authoring video course on Egghead](https://egghead.io/courses/gatsby-theme-authoring), or in the [video course's complementary written tutorial companion](/tutorial/building-a-theme).
 
 ## 5. Sourcing data
