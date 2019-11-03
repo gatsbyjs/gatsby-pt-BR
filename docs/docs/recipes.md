@@ -59,7 +59,7 @@ Alguns arquivos notáveis e suas definições:
 - `gatsby-browser.js` — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby.
 - `gatsby-ssr.js` — use as APIs de server-side rendering (SSR) do Gatsby para personalizar as configurações padrão que afetam a server-side rendering (SSR).
 
-#### Recursos adicionais
+#### Contéudo adicional
 
 - Para realizar um tour em todas as pastas e arquivos comuns, leia os documentos em [Gatsby's Project Structure](/docs/gatsby-project-structure/).
 - Para comandos comuns, consulte o [Gatsby CLI docs](/docs/gatsby-cli).
@@ -95,7 +95,7 @@ export default AboutPage
 3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
 4. Visite sua nova página no navegador: `http://localhost:8000/about`
 
-#### Recursos adicionais
+#### Contéudo adicional
 
 - [Criando e modificando páginas](/docs/creating-and-modifying-pages/)
 
@@ -165,23 +165,23 @@ export default () => (
 )
 ```
 
-#### Recursos adicionais
+#### Contéudo adicional
 
 - Crie um componente de layout no [tutorial parte três](/tutorial/part-three/#your-first-layout-component)
 - Estilizando com [componentes de layout](/docs/layout-components/)
 
-### Creating pages programmatically with createPage
+### Criando páginas programaticamente com createPage
 
-You can create pages programmatically in the `gatsby-node.js` file with helper methods Gatsby provides.
+Você pode criar páginas programaticamente no arquivo `gatsby-node.js` com os métodos auxiliares que o Gatsby fornece.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- A `gatsby-node.js` file
+- Um [site Gatsby](/docs/quick-start)
+- Um arquivo `gatsby-node.js`
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-node.js`, add an export for `createPages`
+1. Em `gatsby-node.js`, adicione uma exportação para` createPages`
 
 ```javascript:title=gatsby-node.js
 // highlight-start
@@ -191,7 +191,7 @@ exports.createPages = ({ actions }) => {
 // highlight-end
 ```
 
-2. Destructure the `createPage` action from the available actions so it can be called by itself, and add or get data
+2. Faça uma desestruturação da ação `createPage`, para que possa ser chamada sozinha e você adicione ou obtenha dados
 
 ```javascript:title=gatsby-node.js
 exports.createPages = ({ actions }) => {
@@ -212,7 +212,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-3. Loop through the data in `gatsby-node.js` and provide the path, template, and context (data that will be passed in the props' pageContext) to `createPage` for each invocation
+3. Faça um loop pelos dados em `gatsby-node.js` e forneça o caminho, o modelo e o contexto (dados que serão passados no pageContext dos objetos) para` createPage` para cada chamada
 
 ```javascript:title=gatsby-node.js
 exports.createPages = ({ actions }) => {
@@ -240,7 +240,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-4. Create a React component to serve as the template for your page that was used in `createPage`
+4. Crie um componente React para servir como modelo para sua página que foi usada em `createPage`
 
 ```jsx:title=src/templates/dog-template.js
 import React from "react"
@@ -252,13 +252,13 @@ export default ({ pageContext: { dog } }) => (
 )
 ```
 
-5. Run `gatsby develop` and navigate to the path of one of the pages you created (like at `http://localhost:8000/Fido`) to see the data you passed it displayed on the page
+5. Execute `gatsby develop` e navegue até o caminho de uma das páginas que você criou (como em` http://localhost:8000/Fido`) para ver os dados que você passou exibidos na página
 
-#### Additional resources
+#### Contéudo adicional
 
-- Tutorial section on [programmatically creating pages from data](/tutorial/part-seven/)
-- Reference guide on [using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/)
-- [Example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) for this recipe
+- Seção do tutorial sobre [criar páginas programaticamente a partir de dados](/tutorial/part-seven/)
+- Guia de referência para [usar o Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/)
+- [Repositória exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) para esta receita
 
 ## 2. Styling with CSS
 
