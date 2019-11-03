@@ -103,7 +103,7 @@ O resultado é um vetor de nós do tipo `File` (nó é um nome chique para um ob
 
 ## Construa uma página com uma _query_ GraphQL
 
-Construindo novas páginas com o Gatsby geralmente começa no GraphiQL. Você primeiro fará um rascunho
+A construção de novas páginas com o Gatsby geralmente começa no GraphiQL. Você primeiro fará um rascunho
 da _query_ de dados explorando no GraphiQL para então fazer a cópia dele para um componente React
 para começar a construir a interface do usuário.
 
