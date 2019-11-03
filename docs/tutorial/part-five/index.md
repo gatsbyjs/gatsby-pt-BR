@@ -1,5 +1,5 @@
 ---
-title: Plugins de Origem
+title: Plugins Nativos
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
