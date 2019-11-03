@@ -424,15 +424,15 @@ export default () => (
 - [Mais sobre o uso de Styled Components](/docs/styled-components/)
 - [Lições Egghead](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
 
-### Using CSS Modules
+### Usando CSS Modules
 
-#### Prerequisites
+#### Pré-requisitos
 
-- An existing [Gatsby site](/docs/quick-start/) with an index page component
+- Um [site Gatsby](/docs/quick-start/) com um componente de página de índice
 
-#### Directions
+#### Instruções
 
-1. Create a CSS module as `src/pages/index.module.css` and paste the following into the module:
+1. Crie um módulo CSS como `src/pages/index.module.css` e cole o seguinte trecho de código no módulo:
 
 ```css:title=src/components/index.module.css
 .feature {
@@ -441,7 +441,7 @@ export default () => (
 }
 ```
 
-2. Import the CSS module as a JSX object `style` in the `index.js` file by modifying the page so it looks like the following:
+2. Importe o módulo CSS como um objeto JSX `style` no arquivo` index.js` modificando a página para que ela se pareça com o seguinte:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -457,15 +457,15 @@ export default () => (
 // highlight-end
 ```
 
-3. Run `gatsby develop` to see the changes.
+3. Execute `gatsby develop` para ver as alterações.
 
-**Note:**
-Notice that the file extension is `.module.css` instead of `.css`, which tells Gatsby that this is a CSS module.
+**Nota:**
+Observe que a extensão do arquivo é `.module.css` em vez de` .css`, o que informa ao Gatsby que este é um CSS module.
 
-#### Additional resources
+#### Contéudo adicional
 
-- More on [Using CSS Modules](/tutorial/part-two/#css-modules)
-- [Live example on Using CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
+- Mais sobre como [usar CSS Modules](/tutorial/part-two/#css-modules)
+- [Exemplo ao vivo usando CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
 
 ### Using Sass/SCSS
 
