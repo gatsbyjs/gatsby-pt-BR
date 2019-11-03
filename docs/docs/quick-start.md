@@ -39,7 +39,7 @@ gatsby develop
 
 O Gatsby iniciará um ambiente de desenvolvimento com *hot-reloading*, que pode ser acessado por padrão em `localhost:8000`.
 
-Tente editar as páginas JavaScript em `src/pages`. Mudanças salvas serão atualizadas automaticamente no navegador.
+Tente editar as páginas JavaScript em `src/pages`. As alterações salvas serão atualizadas automaticamente no navegador.
 
 ### Criando um pacote de produção.
 
