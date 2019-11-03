@@ -214,4 +214,4 @@ E agora visite [http://localhost:8000/my-files](http://localhost:8000/my-files)�
 
 ## O que vem na sequência?
 
-Agora você aprendeu como os plugins de origem trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins de origem. A combinaçào de plugins de origem com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).
+Agora você aprendeu como os plugins nativos trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins nativos. A combinaçào de plugins nativos com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).
