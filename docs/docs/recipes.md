@@ -260,20 +260,20 @@ export default ({ pageContext: { dog } }) => (
 - Guia de referência para [usar o Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/)
 - [Repositória exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) para esta receita
 
-## 2. Styling with CSS
+## 2. Estilizando com CSS
 
-There are so many ways to add styles to your website; Gatsby supports almost every possible option, through official and community plugins.
+Existem muitas maneiras de adicionar estilos ao seu site; O Gatsby suporta quase todas as opções possíveis, através de plugins oficiais e da comunidade.
 
-### Using global CSS files without a Layout component
+### Usando arquivos CSS globais sem um componente de Layout
 
-#### Prerequisites
+#### Pré-requisitos
 
-- An existing [Gatsby site](/docs/quick-start/) with an index page component
-- A `gatsby-browser.js` file
+- Um [site Gatsby](/docs/quick-start/) com um componente de página de índice
+- Um arquivo `gatsby-browser.js`
 
-#### Directions
+#### Instruções
 
-1. Create a global CSS file as `src/styles/global.css` and paste the following into the file:
+1. Crie um arquivo CSS global como `src/styles/global.css` e cole o seguinte trecho de código no arquivo:
 
 ```css:title=src/styles/styles/global.css
 html {
@@ -285,21 +285,21 @@ p {
 }
 ```
 
-2. Import the global CSS file in the `gatsby-browser.js` file such as the following:
+2. Importe o arquivo CSS global no arquivo `gatsby-browser.js`, da seguinte maneira:
 
 ```javascript:gatsby-browser.js
 import "./src/styles/global.css"
 ```
 
-> **Note:** You can also make use of `require('./src/styles/global.css')` to import the global CSS file in your `gatsby-config.js` file.
+> **Nota:** Você também pode usar `require('./src/styles/global.css')` para importar o arquivo CSS global no seu arquivo `gatsby-config.js`.
 
-3. Run `gatsby-develop` to observe the global styling being applied across your site.
+3. Execute `gatsby-develop` para observar o estilo global sendo aplicado em seu site.
 
-> **Note:** This approach is not the best fit if you are using CSS-in-JS for styling your site, in which case a layout page with all the shared components should be used. This is covered in the next recipe.
+> **Nota:** Essa abordagem não é a melhor opção se você estiver usando CSS-in-JS para estilizar seu site. Nesse caso, uma página de layout com todos os componentes compartilhados deve ser usada. Isso é abordado na próxima receita.
 
-#### Additional resources
+#### Contéudo adicional
 
-- More on [adding global styles without a layout component](/docs/global-css/#adding-global-styles-without-a-layout-component)
+- Mais sobre [adicionando estilos globais sem um componente de layout](/docs/global-css/#adding-global-styles-without-a-layout-component)
 
 ### Using global styles in a layout component
 
