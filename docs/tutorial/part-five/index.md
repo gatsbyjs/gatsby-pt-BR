@@ -37,7 +37,7 @@ O Explorador do GraphiQL permite que você construa interativamente _queries_ co
 
 Dados em sites Gatsby podem vir de qualquer lugar: APIs, banco de dados, CMSs, arquivos locais, etc.
 
-Plugins de origem buscam por dados através de sua origem. Por exemplo: o plugin de origem dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
+Plugins nativos buscam por dados através de sua origem. Por exemplo: o plugin nativo dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
 
 Adicione o [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) e explore como ele funciona.
 
