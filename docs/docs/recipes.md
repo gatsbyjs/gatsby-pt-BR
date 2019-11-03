@@ -680,41 +680,41 @@ _NOTA: Portanto, para o exemplo acima, a declaração CSS relevante seria `font-
 - [Documentação do The Typefaces Project](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
 - [Exemplo ao vivo em Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
 
-## 3. Working with starters
+## 3. Trabalhando com Starters
 
-[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
+[Starters](/docs/starters/) são sites padronizados do Gatsby mantidos oficialmente ou pela comunidade.
 
-### Using a starter
+### Usando um starter
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-#### Directions
+#### Instruções
 
-1. Find the starter you'd like to use. (_The [Starter Library](/starters/?v=2) is a good place to look!_)
+1. Encontre o starter que você gostaria de usar. (_O [Starter Library](/starters/?V=2) é um bom lugar para procurar!_)
 
-2. Generate a new site based on the starter. In the terminal, run:
+2.Gere um novo site com base no starter. No terminal, execute:
 
 ```shell
-gatsby new {your-project-name} {link-to-starter}
+gatsby new {nome-do-seu-projeto} {link-do-starter}
 ```
 
-> _Don't run the above command as-is -- remember to replace {your-project-name} and {link-to-starter}!_
+> _Não execute o comando acima como está - lembre-se de substituir {nome-do-seu-projeto} {link-do-starter}!_
 
-3. Run your new site:
+3. Execute seu novo site:
 
 ```shell
 cd {your-project-name}
 gatsby develop
 ```
 
-#### Additional resources
+#### Conteúdo adicional
 
-- Follow a [more detailed guide](/docs/starters/) on using Gatsby starters.
-- Learn how to use the [Gatsby CLI](/docs/gatsby-cli) tool to use starters in [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Browse the [Starter Library](/starters/?v=2)
-- Check out Gatsby's [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
+- Siga um [guia mais detalhado](/docs/starters/) sobre o uso de starters Gatsby.
+- Aprenda a usar a ferramenta [Gatsby CLI](/docs/gatsby-cli) para usar os starters no [tutorial parte um](/tutorial/part-one/#using-gatsby-starters)
+- Navegue pela [biblioteca de Starter's](/starters/?v=2)
+- Confira o [starter padrão oficial do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default)
 
 ## 4. Working with themes
 
