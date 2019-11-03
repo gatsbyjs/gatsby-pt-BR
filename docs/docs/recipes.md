@@ -842,23 +842,23 @@ query MyPokemonQuery {
 - Entenda os plugins de origem criando um no [tutorial do plugin de fonte Pixabay](/docs/pixabay-source-plugin-tutorial/)
 - A função createNode [documentação](/docs/actions/#createNode)
 
-### Sourcing Markdown data for blog posts and pages with GraphQL
+### Fornecendo dados de Markdown para postagens e páginas de blog com GraphQL
 
-You can source Markdown data and use Gatsby's [`createPages` API](/docs/actions/#createPage) to create pages dynamically.
+Você pode obter dados do Markdown e usar a API do Gatsby [`createPages`](/docs/actions/#createPage) para criar páginas dinamicamente.
 
-This recipe shows how to create pages from Markdown files on your local filesystem using Gatsby's GraphQL data layer.
+Esta receita mostra como criar páginas a partir de arquivos Markdown no seu sistema de arquivos local usando a camada de dados GraphQL do Gatsby.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start) with a `gatsby-config.js` file
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-- The [gatsby-source-filesystem plugin](/packages/gatsby-source-filesystem) installed
-- The [gatsby-transformer-remark plugin](/packages/gatsby-transformer-remark) installed
-- A `gatsby-node.js` file
+- Um [site Gatsby](/docs/quick-start/)
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
+- O [gatsby-source-filesystem plugin](/packages/gatsby-source-filesystem) instalado
+- O [gatsby-transformer-remark plugin](/packages/gatsby-transformer-remark) instalado
+- Um arquivo `gatsby-node.js`
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-config.js`, configure `gatsby-transformer-remark` along with `gatsby-source-filesystem` to pull in Markdown files from a source folder. This would be in addition to any previous `gatsby-source-filesystem` entries, such as for images:
+1. No `gatsby-config.js`, configure` gatsby-transformer-comment` junto com o `gatsby-source-filesystem` para extrair os arquivos Markdown de uma pasta de origem. Isso seria um acréscimo a quaisquer entradas anteriores do `gatsby-source-filesystem`, como para imagens:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -874,7 +874,7 @@ module.exports = {
   ]
 ```
 
-2. Add a Markdown post to `src/content`, including frontmatter for the title, date, and path, with some initial content for the body of the post:
+2. Adicione uma postagem do Markdown ao `src / content`, incluindo frontmatter para o título, data e caminho, com algum conteúdo inicial para o corpo da postagem:
 
 ```markdown:title=src/content/my-first-post.md
 ---
@@ -886,7 +886,7 @@ path: /my-first-post
 This is my first Gatsby post written in Markdown!
 ```
 
-3. Start up the development server with `gatsby develop`, navigate to the GraphiQL explorer at `http://localhost:8000/___graphql`, and write a query to get all markdown data:
+3. Inicie o servidor de desenvolvimento com `gatsby develop`, navegue até o GraphiQL explorer em` http://localhost:8000/___graphql` e escreva uma consulta para obter todos os dados de remarcação:
 
 ```graphql
 {
@@ -909,7 +909,7 @@ This is my first Gatsby post written in Markdown!
   height="300"
 />
 
-4. Add the JavaScript code to generate pages from Markdown posts at build time by copying the GraphQL query into `gatsby-node.js` and looping through the results:
+4. Adicione o código JavaScript para gerar páginas das postagens do Markdown no momento da construção, copiando a consulta GraphQL para `gatsby-node.js` e fazendo um loop pelos resultados:
 
 ```js:title=gatsby-node.js
 const path = require(`path`)
@@ -943,7 +943,7 @@ exports.createPages = async ({ actions, graphql }) => {
 }
 ```
 
-5. Add a post template in `src/templates`, including a GraphQL query for generating pages dynamically from Markdown content at build time:
+5. Adicione um modelo de postagem no `src/templates`, incluindo uma consulta GraphQL para gerar páginas dinamicamente a partir do conteúdo do Markdown no momento da criação:
 
 ```jsx:title=src/templates/post.js
 import React from "react"
@@ -978,15 +978,15 @@ export const pageQuery = graphql`
 `
 ```
 
-6. Run `gatsby develop` to restart the development server. View your post in the browser: `http://localhost:8000/my-first-post`
+6. Execute `gatsby develop` para reiniciar o servidor de desenvolvimento. Veja sua postagem no navegador: `http://localhost:8000/my-first-post`
 
-#### Additional resources
+#### Conteúdo adicional
 
-- [Tutorial: Programmatically create pages from data](/tutorial/part-seven/)
-- [Creating and modifying pages](/docs/creating-and-modifying-pages/)
-- [Adding Markdown pages](/docs/adding-markdown-pages/)
-- [Guide to creating pages from data programmatically](/docs/programmatically-create-pages-from-data/)
-- [Example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) for this recipe
+- [Tutorial: Crie programaticamente páginas a partir de dados](/tutorial/part-seven/)
+- [Criando e modificando páginas](/docs/creating-and-modifying-pages/)
+- [Adicionando páginas Markdown](/docs/adding-markdown-pages/)
+- [Guia para criar páginas de dados programaticamente](/docs/programmatically-create-pages-from-data/)
+- [Repositório de exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) para esta receita
 
 ### Pulling data from an external source and creating pages without GraphQL
 
