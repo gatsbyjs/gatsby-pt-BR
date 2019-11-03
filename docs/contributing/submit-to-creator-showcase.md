@@ -22,7 +22,7 @@ Há apenas dois passos :)
 
     **o nome da imagem deve ser,** _iron-cove-solutions.jpg_
 
-3.  Edite o arquivo [`creators.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/creators/creators.yml) adicionando sua submissão para o fim da lista de sites no seguinte formato:
+3.  Edite o arquivo [`creators.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/creators/creators.yml) adicionando sua submissão no fim da lista de sites no seguinte formato:
 
 ```yaml:title=docs/creators/creators.yml
 - name: Your Name
