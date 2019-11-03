@@ -781,19 +781,19 @@ yarn workspace example develop
 - Siga um [guia mais detalhado](/docs/themes/building-themes/) sobre o uso do starter do *Gatsby theme workspace*.
 - Learn how to build your own theme in the [Gatsby Theme Authoring video course on Egghead](https://egghead.io/courses/gatsby-theme-authoring), or in the [video course's complementary written tutorial companion](/tutorial/building-a-theme).
 
-## 5. Sourcing data
+## 5. Fonte de dados
 
-Data sourcing in Gatsby is plugin-driven; Source plugins fetch data from their source (e.g. the `gatsby-source-filesystem` plugin fetches data from the file system, the `gatsby-source-wordpress` plugin fetches data from the WordPress API, etc). You can also source the data yourself.
+A fonte de dados no Gatsby é orientada por plug-ins; Os plug-ins buscam dados de sua origem (por exemplo, o plug-in `gatsby-source-filesystem` busca dados do sistema de arquivos, o plug-in` gatsby-source-wordpress` busca dados da API do WordPress, etc.)
 
-### Adding data to GraphQL
+### Adicionando dados ao GraphQL
 
-Gatsby's [GraphQL data layer](/docs/querying-with-graphql/) uses nodes to model chunks of data. Gatsby source plugins add source nodes that you can query for, but you can also create source nodes yourself. To add custom data to the GraphQL data layer yourself, Gatsby provides methods you can leverage.
+A [camada de dados GraphQL](/docs/querying-with-graphql/) do Gatsby usa *nodes* para modelar blocos de dados. Os plug-ins de origem do Gatsby adicionam *nodes* de origem que você pode consultar, mas você também pode criar *nodes* de origem. Para adicionar dados personalizados à camada de dados do GraphQL, o Gatsby fornece métodos que você pode aproveitar.
 
-This recipe shows you how to add custom data using `createNode()`.
+Esta receita mostra como adicionar dados personalizados usando `createNode()`.
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-node.js` use `sourceNodes()` and `actions.createNode()` to create and export nodes to be able to query the data.
+1. Em `gatsby-node.js`, use `sourceNodes()` e `actions.createNode()` para criar e exportar *nodes* para poder consultar os dados.
 
 ```javascript:title=gatsby-node.js
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
@@ -817,11 +817,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 }
 ```
 
-2. Run `gatsby develop`.
+2. Execute `gatsby develop`.
 
-   > _Note: After making changes in `gatsby-node.js` you need to re-run `gatsby develop` for the changes to take effect._
+   > _Nota: Depois de fazer alterações no `gatsby-node.js`, você precisa executar novamente o` gatsby develop` para que as alterações entrem em vigor._
 
-3. Query the data (in GraphiQL or in your components).
+3. Consultar os dados (no GraphiQL ou em seus componentes).
 
 ```graphql
 query MyPokemonQuery {
@@ -835,12 +835,12 @@ query MyPokemonQuery {
 }
 ```
 
-#### Additional resources
+#### Conteúdo adicional
 
-- Walk through an example using the `gatsby-source-filesystem` plugin in [tutorial part five](/tutorial/part-five/#source-plugins)
-- Search available source plugins in the [Gatsby library](/plugins/?=source)
-- Understand source plugins by building one in the [Pixabay source plugin tutorial](/docs/pixabay-source-plugin-tutorial/)
-- The createNode function [documentation](/docs/actions/#createNode)
+- Veja um exemplo usando o plug-in `gatsby-source-filesystem` no [tutorial parte cinco](/tutorial/part-five/#source-plugins)
+- Pesquise plugins de origem disponíveis na [biblioteca Gatsby](/plugins/?=source)
+- Entenda os plugins de origem criando um no [tutorial do plugin de fonte Pixabay](/docs/pixabay-source-plugin-tutorial/)
+- A função createNode [documentação](/docs/actions/#createNode)
 
 ### Sourcing Markdown data for blog posts and pages with GraphQL
 
