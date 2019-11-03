@@ -642,29 +642,29 @@ export default () => (
 - [Emotion website](https://emotion.sh)
 - [Introdução ao Emotion e Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
 
-### Using Google Fonts
+### Usando Google Fonts
 
-Hosting your own [Google Fonts](https://fonts.google.com/) locally within a project means they won't have to be fetched over the network when your site loads, increasing your site's speed index by up to ~300 milliseconds on desktop and 1+ seconds on 3G. It's also recommended to limit custom font usage to only the essential for performance.
+Hospedar seu próprio [Google Fonts](https://fonts.google.com/) localmente em um projeto significa que eles não terão que ser buscados pela rede quando o site carregar, aumentando o índice de velocidade do site em até ~300 milissegundos no desktop e mais de 1 segundo no 3G. Também é recomendável limitar o uso de fontes personalizadas apenas ao essencial para o desempenho.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli/) installed
-- Choosing a font package from [the typefaces project](https://github.com/KyleAMathews/typefaces)
+- Um [site Gatsby](/docs/quick-start/)
+- O [Gatsby CLI](/docs/gatsby-cli/) instalado
+- Escolher um pacote de fonte de [the typefaces project](https://github.com/KyleAMathews/typefaces)
 
-#### Directions
+#### Instruções
 
-1. Run `npm install --save typeface-your-chosen-font`, replacing `your-chosen-font` with the name of the font you want to install from [the typefaces project](https://github.com/KyleAMathews/typefaces).
+1. Execute `npm install --save typeface-sua-fonte-escolhida`, substituindo `sua-fonte-escolhida` pelo nome da fonte que você deseja instalar a partir do [the typefaces project](https://github.com/KyleAMathews/typefaces).
 
-An example to load the popular 'Source Sans Pro' font would be: `npm install --save typeface-source-sans-pro`.
+Um bom exemplo para carregar uma fonte seria 'Source Sans Pro': `npm install --save typeface-source-sans-pro`.
 
-2. Add `import "typeface-your-chosen-font"` to a layout template, page component, or `gatsby-browser.js`.
+2. Adicione `import" typeface-sua-fonte-escolhida"` a um modelo de layout, componente de página ou `gatsby-browser.js`.
 
 ```jsx:title=src/components/layout.js
 import "typeface-your-chosen-font"
 ```
 
-3. Once it's imported, you can reference the font name in a CSS stylesheet, CSS Module, or CSS-in-JS.
+3. Depois de importado, você pode fazer referência ao nome da fonte em uma folha de estilo CSS, CSS module ou CSS-in-JS.
 
 ```css:title=src/components/layout.css
 body {
@@ -672,13 +672,13 @@ body {
 }
 ```
 
-_NOTE: So for the above example, the relevant CSS declaration would be `font-family: 'Source Sans Pro';`_
+_NOTA: Portanto, para o exemplo acima, a declaração CSS relevante seria `font-family: 'Source Sans Pro';`_
 
-#### Additional resources
+#### Conteúdo adicional
 
-- [Typography.js](/docs/typography-js/) - Another option for using Google fonts on a Gatsby site
-- [The Typefaces Project Docs](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
-- [Live example on Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
+- [Typography.js](/docs/typography-js/) - Outra opção para usar fontes do Google em um site do Gatsby
+- [Documentação do The Typefaces Project](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
+- [Exemplo ao vivo em Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
 
 ## 3. Working with starters
 
