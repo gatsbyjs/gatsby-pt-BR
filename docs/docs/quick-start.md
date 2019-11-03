@@ -37,7 +37,7 @@ cd gatsby-site
 gatsby develop
 ```
 
-O Gatsby iniciará um ambiente de desenvolvimento com *hot-reloading*, que pode ser acessado por padrão em `localhost:8000`.
+O Gatsby iniciará um ambiente de desenvolvimento com _hot-reloading_, que pode ser acessado por padrão em `localhost:8000`.
 
 Tente editar as páginas JavaScript em `src/pages`. As alterações salvas serão atualizadas automaticamente no navegador.
 
