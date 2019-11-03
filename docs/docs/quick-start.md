@@ -1,66 +1,66 @@
 ---
-title: Quick Start
+title: Início Rápido
 ---
 
-This quick start is intended for intermediate to advanced developers. For a gentler intro to Gatsby, [head to our tutorial](/tutorial/)!
+Esse guia de início rápido é direcionado para desenvolvedores com conhecimento intermediário ou avançado. Para uma introdução mais amigável ao Gatsby, [visite nosso tutorial](/tutorial/)!
 
-## Use the Gatsby CLI
+## Usando o Gatsby CLI
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-quick-start-with-gatsby-create-develop-and-build-gatsby-sites-from-the-command-line"
   lessonTitle="Quick Start with Gatsby: Create, Develop, and Build Gatsby Sites From the Command Line"
 />
 
-**Note**: this video uses `npx`, which is a tool to execute an npm package without first installing it. Running the command `npx gatsby new` is the same as running `gatsby new` after installing the gatsby-cli on your computer.
+**Nota**: este vídeo usa o `npx`, que é uma ferramenta para executar um pacote npm sem primeiro instalá-lo. Executar o comando `npx gatsby new` é o mesmo que executar `gatsby new` após instalar o gatsby-cli no seu computador.
 
-### Install the Gatsby CLI.
+### Instalando o Gatsby CLI.
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-### Create a new site.
+### Criando um novo site.
 
 ```shell
 gatsby new gatsby-site
 ```
 
-### Change directories into site folder.
+### Mudando o diretório para a pasta do site.
 
 ```shell
 cd gatsby-site
 ```
 
-### Start development server.
+### Iniciando o servidor de desenvolvimento.
 
 ```shell
 gatsby develop
 ```
 
-Gatsby will start a hot-reloading development environment accessible by default at `localhost:8000`.
+O Gatsby iniciará um ambiente de desenvolvimento com *hot-reloading*, que pode ser acessado por padrão em `localhost:8000`.
 
-Try editing the JavaScript pages in `src/pages`. Saved changes will live reload in the browser.
+Tente editar as páginas JavaScript em `src/pages`. Mudanças salvas serão atualizadas automaticamente no navegador.
 
-### Create a production build.
+### Criando um pacote de produção.
 
 ```shell
 gatsby build
 ```
 
-Gatsby will perform an optimized production build for your site, generating static HTML and per-route JavaScript code bundles.
+O Gatsby criará um pacote de produção otimizado para seu site, gerando HTML estático e pacotes JavaScript para cada rota.
 
-### Serve the production build locally.
+### Servindo o pacote de produção localmente.
 
 ```shell
 gatsby serve
 ```
 
-Gatsby starts a local HTML server for testing your built site. Remember to build your site using `gatsby build` before using this command.
+O Gatsby iniciará um servidor HTML local para testar seu site. Lembre-se de construir seu site usando `gatsby build` antes de usar este comando.
 
-### Access documentation for CLI commands
+### Acessando a documentação para comandos do CLI
 
-To see detailed documentation for the CLI commands, run `gatsby --help` in the terminal.
+Para ver a documentação detalhada de comandos do CLI, execute `gatsby --help` no terminal.
 
-For specific commands, run `gatsby COMMAND_NAME --help` e.g. `gatsby new --help`.
+Para comandos específicos, execute `gatsby COMMAND_NAME --help`, como por exemplo `gatsby new --help`.
 
-For more information on the Gatsby CLI, visit the [CLI reference](/docs/gatsby-cli/) section of the docs.
+Para mais informações sobre o Gatsby CLI, visite a [seção sobre o CLI](/docs/gatsby-cli/) na documentação.
