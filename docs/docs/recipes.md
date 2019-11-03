@@ -129,17 +129,17 @@ export default () => (
 
 > **Nota**: O componente `<Link />` do Gatsby é um invólucro em torno do componente Link do [`@reach/router`](https://reach.tech/router/api/Link). Para obter mais informações sobre o componente `<Link />` de Gatsby, consulte a [Referência da API](/docs/gatsby-link/).
 
-### Creating a layout component
+### Criando um componente de layout
 
-It's common to wrap pages with a React layout component, which makes it possible to share markup, styles, and functionality across multiple pages.
+É comum agrupar páginas com um componente de layout React, o que possibilita o compartilhamento de marcação, estilos e funcionalidade em várias páginas.
 
-#### Prerequisites
+#### Pré-requisitos
 
 - A Gatsby Site
 
-#### Directions
+#### Instruções
 
-1. Create a layout component in `src/components`, where child components will be passed in as props:
+1. Crie um componente de layout em `src/components`, onde os componentes filhos serão transmitidos como props:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -151,7 +151,7 @@ export default ({ children }) => (
 )
 ```
 
-2. Import and use the layout component in a page:
+2. Importe e use o componente de layout em uma página:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -165,10 +165,10 @@ export default () => (
 )
 ```
 
-#### Additional resources
+#### Recursos adicionais
 
-- Create a layout component in [tutorial part three](/tutorial/part-three/#your-first-layout-component)
-- Styling with [Layout Components](/docs/layout-components/)
+- Crie um componente de layout no [tutorial parte três](/tutorial/part-three/#your-first-layout-component)
+- Estilizando com [componentes de layout](/docs/layout-components/)
 
 ### Creating pages programmatically with createPage
 
