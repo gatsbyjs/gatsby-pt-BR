@@ -525,22 +525,22 @@ import "./styles.sass"
 - [Guia de Sass no site oficial do Sass](https://sass-lang.com/guide)
 - [Um tutorial de instalação mais completo sobre o Sass, com mais explicações e mais recursos](https://www.gatsbyjs.org/docs/sass/)
 
-### Adding a Local Font
+### Adicionando uma fonte local
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/)
-- A font file: `.woff2`, `.ttf`, etc.
+- Um [site Gatsby](/docs/quick-start/)
+- Um arquivo de fonte: `.woff2`, `.ttf`, etc.
 
-#### Directions
+#### Instruções
 
-1. Copy a font file into your Gatsby project, such as `src/fonts/fontname.woff2`.
+1. Copie um arquivo de fonte no seu projeto Gatsby, como `src/fonts/fontname.woff2`.
 
 ```
 src/fonts/fontname.woff2
 ```
 
-2. Import the font asset into a CSS file to bundle it into your Gatsby site:
+2. Importe o recurso de fonte em um arquivo CSS para agrupá-lo no site do Gatsby:
 
 ```css:title=src/css/typography.css
 @font-face {
@@ -549,7 +549,7 @@ src/fonts/fontname.woff2
 }
 ```
 
-**Note:** Make sure the font name is referenced from the relevant CSS, e.g.:
+**Nota:** Verifique se o nome da fonte é referenciado no CSS, por exemplo:
 
 ```css:title=src/components/layout.css
 body {
@@ -557,13 +557,13 @@ body {
 }
 ```
 
-By targeting the HTML `body` element, your font will apply to most text on the page. Additional CSS can target other elements, such as `button` or `textarea`.
+Ao direcionar o elemento HTML `body`, sua fonte será aplicada à maioria dos textos da página. CSS adicionais podem direcionar outros elementos, como `button` ou` textarea`.
 
-If fonts are not updating following steps above, make sure to replace the existing font-family in relevant CSS.
+Se as fontes não estiverem atualizando as etapas acima, certifique-se de substituir a família de fontes existente no CSS relevante.
 
-#### Additional resources
+#### Contéudo adicional
 
-- More on [importing assets into files](/docs/importing-assets-into-files/)
+- Mais sobre [importar assets dentro de arquivos](/docs/importing-assets-into-files/)
 
 ### Using Emotion
 
