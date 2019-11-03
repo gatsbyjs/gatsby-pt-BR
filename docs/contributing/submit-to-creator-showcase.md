@@ -42,7 +42,7 @@ Há apenas dois passos :)
   for_hire: true
   hiring: false
 
-  # Se você marcar `portfolio: true`, qualquer site que você tem no Mostruário de Sites será mostrado com `built_by: [imagine seu nome aqui]` será relacionado ao seu Perfil de Criador. Então certifique que o `name` em `creators.yml` é exatamente o mesmo em `built_by` em `sites.yml`.
+  # Se você marcar `portfolio: true`, qualquer site que você tem no Mostruário de Sites será mostrado com `built_by: [imagine seu nome aqui]` será relacionado ao seu Perfil de Criador. Então certifique que o `name` em `creators.yml` é exatamente o mesmo de `built_by` em `sites.yml`.
   portfolio: true
 ```
 
