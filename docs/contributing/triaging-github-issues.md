@@ -18,12 +18,12 @@ Uma _issue_ aberta poderia ser:
 
 - uma questão que pode ser respondida imediatamente
 - um relatório de um _bug_
-- uma solitação de uma _feature_
+- uma solicitação de uma _feature_
 - ou uma discussão sobre um caso de uso complicado
 
 No time principal, nós regularmente designamos alguém para ser um mantenedor de primeiro contato. Essa pessoa pode filtrar, triar, comunicar e gerenciar essa primeira linha de comunicação.
 
-Matenedores de primeiro contato tipicamente irão:
+Mantenedores de primeiro contato tipicamente irão:
 
 - responder perguntas que podem ser respondidas imediatamente
 - testar e reproduzir relatórios de possíveis _bugs_ e rotulá-los apropriadamente
@@ -65,7 +65,7 @@ Confira os [documentos sobre rotulagem](/contributing/how-to-label-an-issue/) pa
 
 ### Fluxograma de resolução
 
-O [fluxograma de resolução](https://whimsical.co/QvuMgo31T2C3xcWbou8xhy) fornece uma árvore de decisão a respeito de como as _issues_ devem ser categorizadas em um dos cinco tipos: _question or discussion_, _bug report_, _feature request_, _documentation_, or _maintenance_.
+O [fluxograma de resolução](https://whimsical.co/QvuMgo31T2C3xcWbou8xhy) fornece uma árvore de decisão a respeito de como as _issues_ devem ser categorizadas em um dos cinco tipos: _question ou discussion_, _bug report_, _feature request_, _documentation_, ou _maintenance_.
 
 ### Respostas salvas
 
