@@ -207,9 +207,9 @@ Você tem outro pequeno site com um layout e duas páginas.
 
 Agora você pode começar a consultar 😋
 
-## Your first GraphQL query
+## A sua primeira consulta com GraphQL
 
-When building sites, you'll probably want to reuse common bits of data -- like the _site title_ for example. Look at the `/about/` page. You'll notice that you have the site title (`Pandas Eating Lots`) in both the layout component (the site header) as well as in the `<h1 />` of the `about.js` page (the page header).
+Na construção de sites você provavelmente vai querer reutilizar partes comuns de dados -- como o _título do site_, por exemplo. Dê uma olhada na página `/about`. Você vai notar que o título do site (`Pandas Eating Lots`) tanto no componente de layout (o cabeçalho do site) quanto no `<h1 />` da página `about.js` (o cabeçalho da página).
 
 But what if you want to change the site title in the future? You'd have to search for the title across all your components and edit each instance. This is both cumbersome and error-prone, especially for larger, more complex sites. Instead, you can store the title in one location and reference that location from other files; change the title in a single place, and Gatsby will _pull_ your updated title into files that reference it.
 
