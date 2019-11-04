@@ -75,7 +75,7 @@ Os membros do time Gatsby salvaram certas [respostas comuns de formulário](http
 
 Temos um _bot_ que nos ajuda a automatizar algumas coisas:
 
-- _Issues_ com interrogação em seus títulos ou que começam com "como" são automaticamente etiquetadas como perguntas (`question`)
+- _Issues_ com interrogação em seus títulos ou que começam com _"how"_ ("como") são automaticamente etiquetadas como perguntas (`question`)
 - _Issues_ com um corpo vazio são fechadas
 - _Issues_ inativas são marcadas como obsoletas depois de 20 dias. Após mais 10 dias elas são então fechadas, a menos que existam comentários adicionais ou estejam com a etiqueta `not stale` ("não obsoleta").
 
