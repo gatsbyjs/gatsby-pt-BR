@@ -80,25 +80,26 @@ a você.
 
 Gatsby usa GraphQL para permitir que componentes declarem quais dados eles precisam.
 
-## Create a new example site
+## Crie um novo site de exemplo
 
-Create another new site for this part of the tutorial. You're going to build a Markdown blog called "Pandas Eating Lots". It's dedicated to showing off the best pictures and videos of pandas eating lots of food. Along the way, you'll be dipping your toes into GraphQL and Gatsby's Markdown support.
+Crie um novo site para essa parte do tutorial. Você vai construir um blog com Markdown chamado "Pandas Eating Lots". Ele é
+dedicado a mostrar as melhores fotos e vídeos de pandas comendo um monte de comida. Ao longo do caminho, você vai dar uma olhada no GraphQL e no suporte do Gatsby para Markdown.
 
-Open a new terminal window and run the following commands to create a new Gatsby site in a directory called `tutorial-part-four`. Then navigate to the new directory:
+Abra uma nova janela de terminal e rode os seguintes comandos para criar um novo site Gatsby em um diretório chamado `tutorial-part-four`. Navegue para o novo diretório:
 
 ```shell
 gatsby new tutorial-part-four https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd tutorial-part-four
 ```
 
-Then install some other needed dependencies at the root of the project. You'll use the Typography theme
-"Kirkham", and you'll try out a CSS-in-JS library, ["Emotion"](https://emotion.sh/):
+Instale algumas outras dependências necessárias na raiz do projeto. Você irá usar o tema de Tipografia
+"Kirkham", e você vai experimentar uma biblioteca CSS-in-JS, ["Emotion"](https://emotion.sh/):
 
 ```shell
 npm install --save gatsby-plugin-typography typography react-typography typography-theme-kirkham gatsby-plugin-emotion @emotion/core
 ```
 
-Set up a site similar to what you ended with in [Part Three](/tutorial/part-three). This site will have a layout component and two page components:
+Configure um site similar ao que você finalizou na [Parte Três](/tutorial/part-three). Esse site vai ter um componente de layout e dois componentes de página:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -182,7 +183,7 @@ export default typography
 export const rhythm = typography.rhythm
 ```
 
-`gatsby-config.js` (must be in the root of your project, not under src)
+`gatsby-config.js` (precisa estar na raiz do seu projeto, não em src)
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -198,13 +199,13 @@ module.exports = {
 }
 ```
 
-Add the above files and then run `gatsby develop`, per usual, and you should see the following:
+Adicione os arquivos acima e rode `gatsby develop`, como sempre, e você deve ver o seguinte:
 
 ![start](start.png)
 
-You have another small site with a layout and two pages.
+Você tem outro pequeno site com um layout e duas páginas.
 
-Now you can start querying 😋
+Agora você pode começar a consultar 😋
 
 ## Your first GraphQL query
 
