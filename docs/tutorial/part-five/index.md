@@ -33,7 +33,7 @@ O Explorador do GraphiQL permite que você construa interativamente _queries_ co
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## Plugins de origem
+## Plugins nativos
 
 Dados em sites Gatsby podem vir de qualquer lugar: APIs, banco de dados, CMSs, arquivos locais, etc.
 
