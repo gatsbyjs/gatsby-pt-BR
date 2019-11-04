@@ -6,9 +6,9 @@ title: Triagem de Issues do GitHub
 
 No time principal do Gatsby, nós encontramos padrões que nos ajudam efetivamente a realizar triagem das _issues_ recebidas no GitHub, responder aos questionamentos da comunidade, identificar _bugs_, e proporcionar oportunidades de contribuição. A triagem de _issues_ é uma ótima forma de contribuir com a comunidade Gatsby e compartilhar seu conhecimento, sem necessariamente conhecer a fundo como a base de código do Gatsby funciona.
 
-Queremos compartilhar esse padrões com toda a comunidade, de modo que, se você tem interesse em nos ajudar na triagem, que possa fazê-la de forma mais eficiente!
+Queremos compartilhar esse padrões com toda a comunidade, de modo que, se você tem interesse em nos ajudar na triagem, que possa fazê-la da forma mais eficiente possível!
 
-Nesse documento, iremos responder perguntas comuns, listar orientações e ilustrar uma árvore de decisão.
+Nesse documento, iremos responder perguntas frequentes, listar orientações e ilustrar uma árvore de decisão.
 
 ## Suporte ao primeiro contato
 
@@ -25,7 +25,7 @@ No time principal, nós regularmente designamos alguém para ser um mantenedor d
 
 Mantenedores de primeiro contato tipicamente irão:
 
-- responder perguntas que podem ser respondidas imediatamente
+- lidar com perguntas que podem ser respondidas imediatamente
 - testar e reproduzir relatórios de possíveis _bugs_ e rotulá-los apropriadamente
 - comunicar solicitações de _features_ para o restante do time e garantir uma resposta válida
 - possibilitar discussões sobre casos de uso complicados, seja entre os usuários ou através do time
@@ -35,7 +35,7 @@ Mantenedores de primeiro contato tipicamente irão:
 Fazemos isto porque:
 
 - As perguntas são respondidas rápida e corretamente, deixando os usuários felizes
-- Os relatórios de _bug_ são reproduzíveis e os dados mais relevantes são coletados antes que alguém apresente uma solução
+- Os relatórios de _bug_ são reproduzidos e os dados mais relevantes são coletados antes que alguém apresente uma solução
 - _Issues_ não relacionadas são resolvidas imediatamente, de modo que não gastamos muito tempo com elas
 
 ## O que o Gatsby tem de único?
@@ -50,9 +50,9 @@ Gatsby é único entre a maioria do projetos _open source_:
 
 ### Orientações gerais
 
-- **Seja empático.** O autor de uma _issue_ pode estar perguntando algo que é óbvio para você mas, não significa que seja óbvio para ele - é importante enxergar a _issue_ sob o ponto de vista do autor. As pessoas frequentemente lembram-se de como você as fez sentir, e não do que você as disse.
+- **Seja empático.** O autor de uma _issue_ pode estar perguntando algo que é óbvio para você, mas isso não significa que seja óbvio para ele - é importante enxergar a _issue_ sob o ponto de vista do autor. As pessoas frequentemente lembram-se de como você as fez sentir, e não do que você as disse.
 - **Contextualize.** Ao responder uma _issue_, pode ser útil anexar _links_ para a documentação existente, _issues_, PR's, ou fornecer um contexto relacionado. Assim, a _issue_ pode servir como referência para leitores futuros.
-- **Incentive contribuições da comunidade.** Envolver as pessoas causa um impacto enorme. Muitas vezes, vale mais a pena dedicar seu tempo para escrever uma _task_ `good first issue` do que propriamente resolver uma _issue_. Isso pode proporcionar uma maneira menos desgastante para alguém se envolver mais no _open source_!
+- **Incentive contribuições da comunidade.** Envolver as pessoas causa um impacto enorme. Muitas vezes, vale mais a pena dedicar seu tempo para escrever uma _task_ `good first issue` do que propriamente resolvê-la. Isso pode proporcionar uma maneira menos desgastante de alguém se envolver mais no _open source_!
 - **Dê tempo para os autores fecharem suas _issues_.** Às vezes, pode parecer que uma _issue_ está resolvida, no entanto, o autor pode ter questionamentos a serem feitos. Geralmente, é melhor dar a ele um ou dois dias para fechar a _issue_.
 
 ### Etiquetas
