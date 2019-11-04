@@ -14,7 +14,7 @@ Use essa seção para listar como algumas terminologias técnicas devem ser trad
 | class                  | classe                                      | ✅         |
 | CLI                    | ILC                                         | ✅         |
 | client                 | cliente                                     | ✅         |
-| client-side            | lado do cliente                             | ✅         |
+| client-side            | lado cliente                             | ✅         |
 | command line interface | interface de linha de comando               | ✅         |
 | command line tool      | ferramenta de interface de linha de comando | ✅         |
 | container              | contêiner                                   | ✅         |
@@ -36,7 +36,7 @@ Use essa seção para listar como algumas terminologias técnicas devem ser trad
 | React fragment         | Fragmento React                             | ✅         |
 | render                 | renderizar (verb), renderizado (noun)       | ✅         |
 | server                 | servidor                                    | ✅         |
-| server-side            | lado do servidor                            | ✅         |
+| server-side            | lado servidor                            | ✅         |
 | siblings               | irmãos                                      | ✅         |
 | source plugin          | plugins nativos                             | ✅         |
 | stateful component     | componente com estado                       | ✅         |
