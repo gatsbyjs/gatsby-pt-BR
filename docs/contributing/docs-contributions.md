@@ -70,7 +70,7 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
   ...
 ```
 
-3. (Opcional) se o título parecer longo, considere adicionar um `breadcrumbTitle` no arquivo `doc-links.yaml`, isso e uma versão curta do seu título, a qual será mostrada como um _breadcrumb_ na página de documentação.
+3. (Opcional) se o título parecer longo, considere adicionar um `breadcrumbTitle` no arquivo `doc-links.yaml`, isso é uma versão curta do seu título, a qual será mostrada como um _breadcrumb_ na página de documentação.
 
 ```diff:title=www/src/data/sidebars/doc-links.yaml
   ...
@@ -87,7 +87,7 @@ Depois de passar pelas [instruções de configuração para desenvolvimento](/co
 - [Fork e Clone o repositório do Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
 - Para modificações apenas na documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, isso irá fazer com que o CI execute apenas as tarefas de _lint_
 - Navegue até a pasta do site da documentação: `cd www`
-- Instale as dependências Yarn: `yarn install`
+- Instale as dependências usando o Yarn: `yarn install`
 - Adicione a seguinte variável de ambiente no arquivo `.env.development` dentro do diretório `www` para [habilitar as imagens temporárias](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. Isso vai acelerar o processo de _build_ do site da documentação de maneira significativa!
 - Comece o build do `www` com o comando `gatsby develop`.
 - Edite os arquivos de Markdown dentro das pastas [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) e [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing), bem como [os arquivos YAML da barra lateral](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
@@ -99,7 +99,7 @@ Depois de passar pelas [instruções de configuração para desenvolvimento](/co
 Às vezes faz sentido mover ou renomear um arquivo, como parte da reestruturação da documentação ou para esclarecimento de um conteúdo. Embora seja recomendável manter as URLs consistentes da melhor maneira possível, aqui estão algumas dicas para minimizar erros e manter as documentações em bom estado:
 
 - Execute as alterações de estrutura propostas conforme o time de documentação do Gatsby em [uma issue no GitHub](/contributing/how-to-file-an-issue/) para garantir que sua mudança seja aceita.
-- Atualize todas as referências de URL antigas para a nova. O comando [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) do VS Code pode ajudar. Veja se o contexto original onde o link era usado ainda faz sentido como o novo.
+- Atualize todas as referências de URL antigas para a nova. O comando [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) do VS Code pode ajudar. Veja se o contexto original onde o link era usado ainda faz sentido com o novo.
 - Para questões de SEO, adicione um redirecionamento na função `createPages` em [`www/gatsby-node.js`](https://github.com/gatsbyjs/gatsby/tree/master/www/gatsby-node.js). Aqui tem um exemplo:
 
 ```js:title=www/gatsby-node.js
@@ -112,7 +112,7 @@ createRedirect({
 
 ## Solicite seu brinde
 
-Após a sua primeira contribuição em um repositório Gatsby (incluindo documentação) você torna-se elegível para ganhar uma camiseta ou um par de meias. Veja a [página de brindes](/contributing/contributor-swag/) para mais detalhes!
+Após a sua primeira contribuição em um repositório Gatsby (incluindo documentação) você se torna elegível para ganhar uma camiseta ou um par de meias. Veja a [página de brindes](/contributing/contributor-swag/) para mais detalhes!
 
 ## Quer saber mais?
 
