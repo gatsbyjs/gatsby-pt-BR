@@ -22,7 +22,7 @@ Gatsby é um projeto bem ativo e diariamente tem novas issues abertas. Classific
 
 Qualquer um que seja membro do [Time de Mantenedores do Gatsby](https://github.com/orgs/gatsbyjs/teams/maintainers) pode classificar as issues.
 
-Você pode receber um convite do time quando seu Pull Request for mergeado no projeto do Gatsby. Veja a lista de [`precisa de ajuda`](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) das issues e o [O Guia de Como Contribuir](/contributing/how-to-contribute/) para começar.
+Você pode receber um convite do time quando seu Pull Request for mergeado no projeto do Gatsby. Veja a lista de [`help wanted (precisa de ajuda)`](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) das issues e o [O Guia de Como Contribuir](/contributing/how-to-contribute/) para começar.
 
 **NOTA:** Se você já teve um pull resquest mergeado e _não_ foi convidado pelo time de mantenedores, por favor vá para [o dashboard](https://store.gatsbyjs.org/) e solicite um código de desconto. Você deve receber um convite do time - _e pegue de graça seu Gatsby swag!_ Se não funcionar, por favor envie um email para team@gatsbyjs.com e nós conseguiremos um convite para você.
 
@@ -32,7 +32,7 @@ Idealmente, toda issue deve ter um só `tipo:` de classificador aplicado a ela. 
 
 Antes de continuar, familiarize-se com as [labels do Gatsby e suas definições](https://github.com/gatsbyjs/gatsby/issues/labels)
 
-As etapas princiapis para classificar uma issue são:
+As etapas principais para classificar uma issue são:
 
 - Leia a issue
 - Escolha as labels que aplicam para aquela issue
@@ -72,7 +72,7 @@ Exemplos de aplicação de `status:` devem ser:
 
 - Uma issue que dependa de uma dependência externa, e esse dependência seja mudada, ela deve ser classificada como `status: bloqueada`
 
-- Uma issue com uma descrição clara de como ser resolvida pode ser classificada como `status: precisa de ajuda`.
+- Uma issue com uma descrição clara de como ser resolvida pode ser classificada como `status: help wanted`.
 
 - Uma issue que falta informações para ajudar o autor da issue a resolver, pode ser classificada como `status: precisa de mais informação`
 
@@ -80,9 +80,9 @@ Exemplos de aplicação de `status:` devem ser:
 
 - Uma issue descrevendo um bug com as etapas de reprodução do mesmo _e_ você rodou o código localmente e viu o erro, pode ser classificada como `status: confirmado`
 
-### Esolha outros classificadores
+### Escolha outros classificadores
 
-Existem outros tipos de classificadores que podem às vezes ser aplicados a uma issue. Aqui são alguns exemplos de quando usá-los:
+Existem outros tipos de classificadores que podem às vezes ser aplicados a uma issue. Aqui estão alguns exemplos de quando usá-los:
 
 - `boa primeira issue` pode ser usada quando uma issue é pequena, e a sua resolução pode ser feita por alguém que não tenha um conhecimento profundo de Gatsby e como ele funciona. Essas issues são particulamente adequadas para pessoes que estão fazendo suas primeiras contribuições open-source.
 
@@ -92,6 +92,6 @@ Existem outros tipos de classificadores que podem às vezes ser aplicados a uma 
 
 E é isso, você terminou! Você pode terminar o seu dia ou voltar para a primeira etapa, para classificar outra issue.
 
-### Conclusão
+## Conclusão
 
 Classificar issues é uma boa maneira de ajudar no projeto do Gatsby independente do seu nível de experiência.
