@@ -12,7 +12,7 @@ Classificadores de issues é uma ferramenta no GitHub usada para agrupar issues 
 
 Gatsby é um projeto bem ativo e diariamente tem novas issues abertas. Classificar as issues ajuda a identificar:
 
-- boas issues para novos contruibuidores trabalharem
+- boas issues para novos contribuidores trabalharem
 - bugs reportados e confirmados
 - solicitar novas features
 - issues duplicadas
@@ -70,7 +70,7 @@ Veja sobre [`status:` labels (e suas descrições)](https://github.com/gatsbyjs/
 
 Exemplos de aplicação da _label_ `status:` podem ser:
 
-- Uma _issue_ que venha de uma mudança em uma dependência externa, poderia classificada como `status: blocked`
+- Uma _issue_ que dependa de uma mudança em uma dependência externa, poderia classificada como `status: blocked`
 
 - Uma issue com uma descrição clara de como ser resolvida poderia ser classificada como `status: help wanted`.
 
