@@ -22,7 +22,7 @@ A comunidade Gatsby está aberta a contribuições. Por favor, consulte os guias
 
 - [Como contribuir](/contributing/how-to-contribute/)
 - [Como reportar um problema](/contributing/how-to-file-an-issue/)
-- [Criar requisições de novas funções com um RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
+- [Criar requisições de novas funcionalidades com um RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
 - [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/)
 
 ## Notícias do Gatsby
@@ -40,7 +40,7 @@ Para últimas notícias sobre Gatsby,
 
 ### Encontro da Comunidade de Mantenedores
 
-A equipe principal do Gatsby (funcionários oficiais que estão trabalhando no _open-source_ do Gatsby) realiza uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dificuldades e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações e planos pertinentes à comunidade!
+O Gatsby Core Team (funcionários oficiais que estão trabalhando no _open-source_ do Gatsby) realiza uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dificuldades e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações e planos pertinentes à comunidade!
 
 Esse evento é realizado de forma recorrente, toda Quarta-Feira às 08:30 (Horário padrão do Pacífico).
 
@@ -58,12 +58,11 @@ Se você precisar de uma resposta imediatamente, confira o [Discord do Gatsby](h
 
 ### Hashnode
 
-Muitos membros da comunidade também usam Hashnode para fazer perguntas e compartilhar suas dicas. Leia as [perguntas e postagens existentes](https://hashnode.com/n/gatsby)
-marcado com `gatsby`, [faça sua própria pergunta](https://hashnode.com/create/question) ou [compartilhe sua história](https://hashnode.com/create/story) e adicione a _tag_ `gatsby`.
+Muitos membros da comunidade também usam Hashnode para fazer perguntas e compartilhar suas dicas. Leia as [perguntas e postagens existentes](https://hashnode.com/n/gatsby) marcadas com `gatsby`, [faça sua própria pergunta](https://hashnode.com/create/question) ou [compartilhe sua história](https://hashnode.com/create/story) e adicione a _tag_ `gatsby`.
 
 ### DEV Community
 
-A comunidade DEV também é outra plataforma para fazer perguntas e compartilhar dicas. Leia as [perguntas e postagens existentes](https://dev.to/t/gatsby) marcadas como ´gatsby´ ou [peça ajuda](https://dev.to/new/help). Você também pode [escrever sua postagem](https://dev.to/new/gatsby) com a tag ´gatsby´.
+A DEV Community também é outra plataforma para fazer perguntas e compartilhar dicas. Leia as [perguntas e postagens existentes](https://dev.to/t/gatsby) marcadas como ´gatsby´ ou [peça ajuda](https://dev.to/new/help). Você também pode [escrever sua postagem](https://dev.to/new/gatsby) com a tag ´gatsby´.
 
 ## Leia Mais Sobre Gatsby:
 
