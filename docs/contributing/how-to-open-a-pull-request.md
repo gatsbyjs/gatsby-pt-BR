@@ -47,12 +47,12 @@ Para testar alterações localmente no [site e em arquivos do projeto](https://g
   ```
 
 * Assim que tiver alterações no Git que você deseje enviar, [adicione-os e crie um commit](https://help.github.com/pt/articles/adding-a-file-to-a-repository-using-the-command-line). Para obter informações sobre como estruturar seus commits, consulte a documentação [Gerenciando PRs](/contributing/managing-pull-requests/#commit-and-pr-title).
-  - O caractere de ponto `.` adiciona todos os arquivos não rastreados no diretório e subdiretórios atuais.
+  - O caractere de ponto (`.`) adiciona todos os arquivos não rastreados no diretório e subdiretórios atuais.
   ```shell
   git add .
   ```
   - O uso de uma ferramenta visual como o [GitHub Desktop](https://desktop.github.com/) ou o [GitX](https://rowanj.github.io/gitx/) pode lhe ajudar a escolher quais arquivos e linhas commitar.
-* Ao commitar o código, será executado o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório base do projeto:
+* Ao commitar o código, será executado o linter automatizado usando o [Prettier](https://prettier.io). Para executar o linter manualmente, execute um script npm no diretório raiz do projeto:
   ```shell
   npm run format
   ```
@@ -72,13 +72,13 @@ O site da documentação do Gatsby.js está principalmente nos diretórios [www]
 
 Passos adicionais para documentar PR:
 
-- Para alterações que envolvam apenas documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, para encurtar o processo de CI e executar apenas as tarefas de linting.
+- Para alterações que envolvam apenas documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, para acelerar o processo de CI e executar apenas as tarefas de linting.
 
 Mais instruções podem ser encontradas na página de [contribuições de documentações](/contributing/docs-contributions/).
 
 ### Alterações de código
 
-Instruções para fazer alterações no código-fonte do Gatsby, testes, componentes internos, APIs, pacotes e muito mais podem ser encontradas nas documentações de contribuições sobre [configurando seu ambiente de desenvolvimento local](/contributing/setting-up-your-local-dev-environment/). Também há detalhes adicionais na página [Contribuições de código](/contributing/code-contributions/).
+Instruções para fazer alterações no código-fonte do Gatsby, testes, componentes internos, APIs, pacotes e muito mais podem ser encontradas na documentação sobre contribuições em: [configurando seu ambiente de desenvolvimento local](/contributing/setting-up-your-local-dev-environment/). Também há detalhes adicionais na página [Contribuições de código](/contributing/code-contributions/).
 
 ### Starters ou Amostras de Sites
 
@@ -93,7 +93,7 @@ Para o blog do Gatsby, é necessário que sua ideia de conteúdo seja aprovada p
 
 ## Atualize seu fork com as alterações mais recentes do Gatsby
 
-O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder submeter no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
+O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergear no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
 
 - Defina a URL do repositório do Gatsby como uma fonte remota. O nome do remoto é arbitrário; este exemplo usa `upstream`.
   ```shell
