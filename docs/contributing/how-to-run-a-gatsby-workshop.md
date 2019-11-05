@@ -14,7 +14,7 @@ Aqui estão algumas vantagens que vivenciamos nos workshops; se isso lhe agrada,
 
 - _Tempo e lugar dedicados para aprender:_ é mais fácil reservar um tempo para aprender algo novo quando você está em uma sala com outras pessoas fazendo a mesma coisa
 - _Resolução de problemas mais rápida:_ geralmente você pode obter respostas para suas perguntas e resolver problemas de uma forma mais rápida do que de outra maneira
-- _Conteúdo personalizado:_ o organizador do workshop pode personalizar o workshop para as necessidades do grupo com antecedência, enviando um formulário de pesquisa e o workshop pode mudar o foco, dependendo das necessidades em tempo real e das perguntas do grupo e dos indivíduos
+- _Conteúdo personalizado:_ o organizador do workshop pode personalizar o workshop para as necessidades do grupo com antecedência, enviando um formulário de pesquisa, e o workshop pode mudar o foco, dependendo das necessidades em tempo real e das perguntas do grupo e dos indivíduos
 
 ## Onde encontrar recursos para fazer um workshop
 
