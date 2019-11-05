@@ -10,7 +10,7 @@ Compartilhe suas idéias e relate como esses workshops são úteis para você no
 
 ## Por que você pode querer organizar um workshop
 
-Aqui estão algumas vantagens que vivenciamos nos workshops; se isso lhe agrada, você pode considerar organizar seu próprio workshop em seu trabalho, em um meetup ou em qualquer outro local que faça sentido!
+Aqui estão algumas vantagens que vivenciamos nos workshops; se isso lhe agrada, você pode considerar organizar seu próprio workshop em seu trabalho, um meetup ou qualquer outra configuração que faça sentido!
 
 - _Tempo e lugar dedicados para aprender:_ é mais fácil reservar um tempo para aprender algo novo quando você está em uma sala com outras pessoas fazendo a mesma coisa
 - _Resolução de problemas mais rápida:_ geralmente você pode obter respostas para suas perguntas e resolver problemas de uma forma mais rápida do que de outra maneira
