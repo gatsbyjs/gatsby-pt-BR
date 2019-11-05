@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-Bem-vindo a parte três!
+Boas-vindas a parte três!
 
 ## O que veremos nesse tutorial?
 
@@ -12,7 +12,7 @@ Nessa parte, você irá aprender sobre plugins do Gatsby e como criar componente
 
 Plugins do Gatsby são pacotes JavaScript que ajudam a adicionar funcionalidades a um site Gatsby. O Gatsby foi projetado para ser extensível, o que significa que os plugins podem estender e modificar praticamente qualquer coisa que o Gatsby faz.
 
-Componentes de layout são para seções do seu site que você quer compartilhar entre diversas páginas. Por exemplo, normalmente sites tem componentes de layout para um cabeçalho e rodapé que são compartilhados. Outras coisas comuns de se adicionar em um layout são *sidebars* e/ou menu de navegação. Nesta página, por exemplo, o cabeçalho no topo é parte de um componente de layout do gatsbyjs.org.
+Componentes de layout são para seções do seu site que você quer compartilhar entre diversas páginas. Por exemplo, normalmente sites tem componentes de layout para um cabeçalho e rodapé que são compartilhados. Outras coisas comuns de se adicionar em um layout são _sidebars_ e/ou menu de navegação. Nesta página, por exemplo, o cabeçalho no topo é parte de um componente de layout do gatsbyjs.org.
 
 Vamos nos aprofundar na parte três.
 
@@ -32,7 +32,7 @@ Para uma introdução inicial em como utilizar plugins, vamos instalar e impleme
 
 ### ✋ Criar um novo site Gatsby
 
-Como mencionamos na [parte dois](/tutorial/part-two/), a partir desse ponto é, provavelmente, uma boa ideia fecha as janelas do terminal e os arquivos das partes anteriores do tutorial, de modo que as coisas se mantenham organizadas na sua área de trabalho. Em seguida, abra uma nova janela do terminal e rode os seguintes comandos para criar um novo site Gatsby em um novo diretório chamado `tutorial-part-three` e entrar nesse diretório.
+Como mencionamos na [parte dois](/tutorial/part-two/), a partir desse ponto é, provavelmente, uma boa ideia fechar as janelas do terminal e os arquivos das partes anteriores do tutorial, de modo que as coisas mantenham-se organizadas na sua área de trabalho. Em seguida, abra uma nova janela do terminal e execute os seguintes comandos para criar um novo site Gatsby em um novo diretório chamado `tutorial-part-three` e entrar nesse diretório.
 
 ```shell
 gatsby new tutorial-part-three https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -114,7 +114,7 @@ Agora seu site deve se paracer com isso:
 
 ![no-layout](no-layout.png)
 
-Vamos fazer uma pequena melhoria. Muitos sites tem uma coluna unica de texto centralizadas no centro da página. Para criar isso adicione os seguintes estilos na
+Vamos fazer uma pequena melhoria. Muitos sites tem uma coluna única de texto centralizadas no centro da página. Para criar isso adicione os seguintes estilos na
 `<div>` em `src/pages/index.js`.
 
 ```jsx:title=src/pages/index.js
@@ -278,4 +278,4 @@ _Desafio:_ Com os poderes do seu novo "componente de layout", tente adicionar ca
 
 ## O que vem a seguir?
 
-Continue na [parte quatro do tutorial](/tutorial/part-four/) onde você irá começar a aprenter sobre a camada de dados do Gatsby e como criar páginas programaticamente.
+Continue na [parte quatro do tutorial](/tutorial/part-four/) onde você irá começar a aprender sobre a camada de dados do Gatsby e como criar páginas programaticamente.
