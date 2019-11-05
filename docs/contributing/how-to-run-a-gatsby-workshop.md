@@ -6,7 +6,7 @@ Organizar um workshop com foco no Gatsby.js é uma maneira fantástica de ensina
 
 Nós da equipe do Gatsby realizamos vários workshops presenciais, e você pode ler sobre algumas de nossas [descobertas iniciais](https://www.gatsbyjs.org/blog/2018-05-31-open-sourcing-gatsby-workshops/). Se você estiver interessado em realizar um workshop por conta própria, incentivamos você a fazer isso e oferecemos esta página de recursos para ajudá-lo.
 
-Compartilhe suas idéias e relate como esses workshops são úteis para você no [Repositório open source](https://github.com/gatsbyjs/gatsby) através de issues e PRs (se você teve problemas com os workshops e/ou tem idéias de como melhorá-los) ou no [Twitter](https://twitter.com/gatsbyjs) se você deseja compartilhar um workshop que esteja organizando.
+Compartilhe suas ideias e relate como esses workshops são úteis para você no [repositório Open Source](https://github.com/gatsbyjs/gatsby) através de issues e PRs (se você teve problemas com os workshops e/ou tem ideias de como melhorá-los) ou no [Twitter](https://twitter.com/gatsbyjs) se você deseja compartilhar um workshop que esteja organizando.
 
 ## Por que você pode querer organizar um workshop
 
