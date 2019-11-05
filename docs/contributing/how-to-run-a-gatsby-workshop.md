@@ -25,4 +25,4 @@ Use os seguintes links do repositório open source do Gatsby para encontrar mate
 - [Agenda para os participantes do workshop](https://docs.google.com/document/d/1gn5dk5RkuOXgZatd-Ow4XGqKY1NWZVCaUhyOwrRP0JE/edit?usp=sharing)
 - [Guia passo a passo para o anfitrião do workshop](https://docs.google.com/document/d/1epeLO_7xkbd-WvPDCEZZ8f2GV5uMLHHM_UIhpZxqRbo/edit?usp=sharing)
 
-Esperamos que esses materiais de workshop ajudem você a compartilhar Gatsby no trabalho, nos meetups e em qualquer outro lugar que faça sentido. Deixe-nos saber como está indo e como você personaliza ou modifica esses materiais para os workshops!
+Esperamos que esses materiais de workshop ajudem você a compartilhar o Gatsby no trabalho, nos meetups e em qualquer outro lugar que faça sentido. Deixe-nos saber como está indo e como você personaliza ou modifica esses materiais para os seus workshops!
