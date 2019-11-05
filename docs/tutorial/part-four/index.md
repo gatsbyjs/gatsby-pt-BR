@@ -211,9 +211,9 @@ Agora você pode começar a consultar 😋
 
 Na construção de sites você provavelmente vai querer reutilizar partes comuns de dados -- como o _título do site_, por exemplo. Dê uma olhada na página `/about`. Você vai notar que o título do site (`Pandas Eating Lots`) tanto no componente de layout (o cabeçalho do site) quanto no `<h1 />` da página `about.js` (o cabeçalho da página).
 
-But what if you want to change the site title in the future? You'd have to search for the title across all your components and edit each instance. This is both cumbersome and error-prone, especially for larger, more complex sites. Instead, you can store the title in one location and reference that location from other files; change the title in a single place, and Gatsby will _pull_ your updated title into files that reference it.
+Mas e se você quiser mudar o título do site no futuro? Você teria que procurar pelo título ao longo de todos os componentes e editar cada instância. Isso é trabalhoso e susceptível a erros, especialmente para sites maiores e mais complexos. Ao invés disso, você pode armazenar o título em um lugar e referenciar esse lugar de outros arquivos; altere o título em um único lugar e o Gatsby vai _injetar_ seu título atualizado nos arquivos que o referenciam.
 
-The place for these common bits of data is the `siteMetadata` object in the `gatsby-config.js` file. Add your site title to the `gatsby-config.js` file:
+O lugar para esses fragmentos comuns de dados é o objeto `siteMetadata` no arquivo `gatsby-config.js`. Adicione o título do seu site no arquivo `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -234,7 +234,7 @@ module.exports = {
 }
 ```
 
-Restart the development server.
+Reinicie o servidor de desenvolvimento.
 
 ### Use a page query
 
