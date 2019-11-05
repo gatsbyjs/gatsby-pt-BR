@@ -81,10 +81,4 @@ For links that have no equivalent (Stack Overflow, YouTube videos, etc.), just u
 
 ## Glossary
 
-Use this section to list how common technical terminology should be translated.
-
-| Term   | Translation |
-| ------ | ----------- |
-| Plugin | ??          |
-| Theme  | ??          |
-| Query  | ??          |
+Please refer to our [Glossary file](GLOSSARY.md) to see common translations.
