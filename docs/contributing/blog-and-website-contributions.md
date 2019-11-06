@@ -13,7 +13,7 @@ Aqui estão algumas coisas a ter em mente ao decidir para onde contribuir com o 
 ## Contribuindo para o blog
 Nota: Antes de adicionar uma postagem ao blog, certifique-se de ter a aprovação de um membro do time do Gatsby. Você pode fazer isso [abrindo uma issue](https://github.com/gatsbyjs/gatsby/issues/new/choose) ou entrando em contato com [@gatsbyjs no Twitter](https://twitter.com/gatsbyjs).
 
-Para adicionar uma nova postagem ao blog do gatsbyjs.org:
+? Para adicionar uma nova postagem ao blog do gatsbyjs.org:
 
 - Clone [o repositório do Gatsby](https://github.com/gatsbyjs/gatsby/) e navegue até `/www`.
 - Execute `yarn` para instalar todas as dependências do site ([Por que Yarn?](/contributing/setting-up-your-local-dev-environment#using-yarn))

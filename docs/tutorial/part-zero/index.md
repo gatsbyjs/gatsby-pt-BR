@@ -25,10 +25,10 @@ Como instalar ou verificar o Homebrew no seu computador:
 
 ### Usuário de Mac: instale as ferramentas de linha de comando do Xcode
 
-1. Abra seu Terminal.
-1. Em um Mac, instale as ferramentas de linha de comando do Xcode executando o comando `xcode-select --install`.
-   1. Se isso falhar, faça o download [diretamente do site da Apple](https://developer.apple.com/download/more/), após fazer login na conta de desenvolvedor da Apple.
-1. Ao iniciar a instalação, você será solicitado novamente a aceitar uma licença de software para o download das ferramentas.
+? 1. Abra seu Terminal.
+? 1. Em um Mac, instale as ferramentas de linha de comando do Xcode executando o comando `xcode-select --install`.
+?    1. Se isso falhar, faça o download [diretamente do site da Apple](https://developer.apple.com/download/more/), após fazer login na conta de desenvolvedor da Apple.
+? 1. Ao iniciar a instalação, você será solicitado novamente a aceitar uma licença de software para o download das ferramentas.
 
 ## ⌚ Instale o Node.js e o npm
 
