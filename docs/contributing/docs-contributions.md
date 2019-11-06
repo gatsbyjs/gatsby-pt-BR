@@ -25,7 +25,7 @@ Para resolver as imagens faltantes, consulte a fonte do documento ou tutorial [n
 
 Se você encontrar um link quebrado na documentação do Gatsby, fique à vontade para corrigí-lo e enviar um PR!
 
-? ? ? Lembre-se de que alguns links aqui já estão corretos porque funcionam no gatsbyjs.org. Embora seja bom ter links na documentação funcionando no GitHub, tê-los funcionando no gatsbyjs.org é prioritário!
+? ? ? ? Lembre-se de que alguns links aqui já estão corretos porque funcionam no gatsbyjs.org. Embora seja bom ter links na documentação funcionando no GitHub, tê-los funcionando no gatsbyjs.org é prioritário!
 
 ## Títulos
 
@@ -84,15 +84,15 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
 
 Depois de passar pelas [instruções de configuração para desenvolvimento](/contributing/setting-up-your-local-dev-environment/), existem algumas informações adicionais que você deve saber ao configurar o [site da documentação do Gatsby.js](/docs/), que está em sua maior parte nos diretórios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) e [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs). Temos alguns [exemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples) no repositório, os quais são referenciados na documentação.
 
-? ? ? - [Fork e Clone o repositório do Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
-? ? ? - Para modificações apenas na documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, isso irá fazer com que o CI execute apenas as tarefas de _lint_
-? ? ? - Navegue até a pasta do site da documentação: `cd www`
-? ? ? - Instale as dependências usando o Yarn: `yarn install`
-? ? ? - Adicione a seguinte variável de ambiente no arquivo `.env.development` dentro do diretório `www` para [habilitar as imagens temporárias](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. Isso vai acelerar o processo de _build_ do site da documentação de maneira significativa!
-? ? ? - Comece o build do `www` com o comando `gatsby develop`.
-? ? ? - Edite os arquivos de Markdown dentro das pastas [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) e [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing), bem como [os arquivos YAML da barra lateral](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
-? ? ? - Veja as modificações em `http://localhost:8000`.
-? ? ? - Commit suas modificações e [abra um pull request](/contributing/how-to-open-a-pull-request/)!
+? ? ? ? - [Fork e Clone o repositório do Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
+? ? ? ? - Para modificações apenas na documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, isso irá fazer com que o CI execute apenas as tarefas de _lint_
+? ? ? ? - Navegue até a pasta do site da documentação: `cd www`
+? ? ? ? - Instale as dependências usando o Yarn: `yarn install`
+? ? ? ? - Adicione a seguinte variável de ambiente no arquivo `.env.development` dentro do diretório `www` para [habilitar as imagens temporárias](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. Isso vai acelerar o processo de _build_ do site da documentação de maneira significativa!
+? ? ? ? - Comece o build do `www` com o comando `gatsby develop`.
+? ? ? ? - Edite os arquivos de Markdown dentro das pastas [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) e [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing), bem como [os arquivos YAML da barra lateral](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
+? ? ? ? - Veja as modificações em `http://localhost:8000`.
+? ? ? ? - Commit suas modificações e [abra um pull request](/contributing/how-to-open-a-pull-request/)!
 
 ## Instruções para renomear documentações
 
