@@ -31,4 +31,4 @@ Você pode incluir outras palavras-chave _relevantes_ no seu arquivo `package.js
 
 ### Imagens
 
-Se você utiliza imagens no arquivo README do seu plugin, certifique-se que você referencia as imagens usando uma URL absoluta para que sejam exibidas na página do plugin.
+Se você utiliza imagens no arquivo README do seu plugin, certifique-se que você está referenciando as imagens usando uma URL absoluta para que sejam exibidas na página do plugin.
