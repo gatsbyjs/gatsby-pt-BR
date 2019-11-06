@@ -1,23 +1,23 @@
 ---
-title: Submit to Plugin Library
+title: Enviar para a biblioteca de plugins
 ---
 
-## Publishing a plugin to the library
+## Publicando um plugin na biblioteca
 
-In order to add your plugin to the [Plugin Library](/plugins/), you need to:
+Para adicionar o seu plugin na [biblioteca de plugins](/plugins), você precisa:
 
-1.  publish a package to npm (learn how [here](https://docs.npmjs.com/getting-started/publishing-npm-packages)),
-2.  include the [required files](/docs/files-gatsby-looks-for-in-a-plugin/) in your plugin code,
-3.  **include a `keywords` field** in your plugin's `package.json`, containing `gatsby` and `gatsby-plugin`,
-4.  and document your plugin with a README, there are [plugin templates](/contributing/docs-templates/#plugin-readme-template) available to be used as reference.
+1.  publicar um pacote no npm (aprenda como [aqui](https://docs.npmjs.com/getting-started/publishing-npm-packages)),
+2.  incluir os [arquivos requeridos](/docs/files-gatsby-looks-for-in-a-plugin/) no seu plugin,
+3.  **incluir o campo `keywords` (palavras-chave)** no `package.json` do seu plugin, contendo `gatsby` e `gatsby-plugin`,
+4.  e documentar o seu plugin com um arquivo README, existem [modelos de plugin](/contributing/docs-templates/#plugin-readme-template) disponíveis que podem ser usados como referência.
 
-After doing so, Algolia will take up to 12 hours to add it to the library search index (the exact time necessary is still unknown), and wait for the daily rebuild of https://gatsbyjs.org to automatically include your plugin page to the website. Then, all you have to do is share your wonderful plugin with the community!
+Depois de fazer isso, o sistema de busca Algolia levará cerca de 12 horas para incluir seu plugin na busca da biblioteca de plugins (o tempo exato ainda não é conhecido), e é preciso aguardar o rebuild diário do https://gatsbyjs.org para incluir automaticamente o seu plugin na página do site. Então, tudo que você precisa fazer é compartilhar o seu maravilhoso plugin com a comunidade!
 
-## Notes
+## Notas
 
-### Keywords
+### Palavras-chave
 
-You can include other _relevant_ keywords to your `package.json` file to help interested users in finding it. As an example, a Markdown MathJax transformer would include:
+Você pode incluir outras palavras-chave _relevantes_ no seu arquivo `package.json` para ajudar os usuários a encontrarem o seu plugin. Por exemplo, um plugin que transforma marcações em MathJax para Markdown incluiria:
 
 ```json:title=package.json
 "keywords": [
@@ -29,6 +29,6 @@ You can include other _relevant_ keywords to your `package.json` file to help in
 ]
 ```
 
-### Images
+### Imagens
 
-If you include images in your plugin repo's README, please make sure you are referencing the image using an absolute URL in order for the image to show on your plugin page.
+Se você utiliza imagens no arquivo README do seu plugin, certifique-se que você referencia as imagens usando uma URL absoluta para que sejam exibidas na página do plugin.
