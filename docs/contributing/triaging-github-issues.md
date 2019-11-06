@@ -12,7 +12,7 @@ Nesse documento, iremos responder perguntas frequentes, listar orientações e i
 
 ## Suporte ao primeiro contato
 
-Para o Gatsby, a primeira linha de comunicação entre um usuário e o time são as _issues_ no GitHub. Tipicamente, todo dia são abertas 20-30 _issues_ -- e isso a cada hora!
+Para o Gatsby, a primeira linha de comunicação entre um usuário e o time são as _issues_ no GitHub. Tipicamente, todo dia são abertas 20-30 _issues_ -- isso significa que recebemos uma a cada hora!
 
 Uma _issue_ aberta poderia ser:
 
