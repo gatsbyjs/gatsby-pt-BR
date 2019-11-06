@@ -40,7 +40,7 @@ Fazemos isto porque:
 
 ## O que o Gatsby tem de único?
 
-Gatsby é único entre a maioria do projetos _open source_:
+Gatsby é único entre a maioria do projetos _open source_ porque:
 
 - Gatsby se integra a muitas ferramentas de terceiros (WordPress, Drupal, Contentful etc) através de _plugins_ e, consequentemente, o escopo típico das _issues_ aumenta de modo significativo
 - Gatsby visa ser realmente amigável para os iniciantes (queremos ser a nova forma de iniciar no desenvolvimento web) e isso significa que precisamos acomodar uma ampla gama de níveis de habilidades
@@ -51,7 +51,7 @@ Gatsby é único entre a maioria do projetos _open source_:
 ### Orientações gerais
 
 - **Seja empático.** O autor de uma _issue_ pode estar perguntando algo que é óbvio para você, mas isso não significa que seja óbvio para ele - é importante enxergar a _issue_ sob o ponto de vista do autor. As pessoas frequentemente lembram-se de como você as fez sentir, e não do que você as disse.
-- **Contextualize.** Ao responder uma _issue_, pode ser útil anexar _links_ para a documentação existente, _issues_, PR's, ou fornecer um contexto relacionado. Assim, a _issue_ pode servir como referência para leitores futuros.
+- **Contextualize.** Ao responder uma _issue_, pode ser útil anexar _links_ para documentação, _issues_ ou PR's existentes, ou fornecer um contexto relacionado. Assim, a _issue_ pode servir como referência para leitores futuros.
 - **Incentive contribuições da comunidade.** Envolver as pessoas causa um impacto enorme. Muitas vezes, vale mais a pena dedicar seu tempo para escrever uma _task_ `good first issue` do que propriamente resolvê-la. Isso pode proporcionar uma maneira menos desgastante de alguém se envolver mais no _open source_!
 - **Dê tempo para os autores fecharem suas _issues_.** Às vezes, pode parecer que uma _issue_ está resolvida, no entanto, o autor pode ter questionamentos a serem feitos. Geralmente, é melhor dar a ele um ou dois dias para fechar a _issue_.
 
@@ -95,7 +95,7 @@ Algumas _issues_ demandam mais tempo que outras e não há nenhuma regra rígida
 
 > Eu tenho que olhar o Discord?
 
-Você não precisa. Alguns de nós são ativos no Discord, e você pode ser também se desejar.
+Você não precisa. Alguns de nós são ativos no Discord, e você pode ser também, se desejar.
 
 > Uso a mesma _issue_ para rastrear adições na documentação ou abro uma nova?
 
