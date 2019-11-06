@@ -236,9 +236,9 @@ module.exports = {
 
 Reinicie o servidor de desenvolvimento.
 
-### Use a page query
+### Use uma consulta de página
 
-Now the site title is available to be queried; Add it to the `about.js` file using a [page query](/docs/page-query):
+Agora o título do site está disponível para ser consultado; Adicione-o ao arquivos `about.js` usando uma [consulta de página](/docs/page-query):
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -269,11 +269,11 @@ export const query = graphql`
 // highlight-end
 ```
 
-It worked! 🎉
+Funcionou! 🎉
 
 ![Page title pulling from siteMetadata](site-metadata-title.png)
 
-The basic GraphQL query that retrieves the `title` in your `about.js` changes above is:
+A consulta básica em GraphQL que retorna as mudanças no `title` em seu `about.js` logo acima é:
 
 ```graphql:title=src/pages/about.js
 {
@@ -285,9 +285,9 @@ The basic GraphQL query that retrieves the `title` in your `about.js` changes ab
 }
 ```
 
-> 💡 In [part five](/tutorial/part-five/#introducing-graphiql), you'll meet a tool that lets us interactively explore the data available through GraphQL, and help formulate queries like the one above.
+> 💡 Na [quinta parte](/tutorial/part-five/#introducing-graphiql), você conhecerá uma ferramenta que permite você explorar interativamente os dados disponíveis através do GraphQL, e ajuda na formulação de consultas como essa acima.
 
-Page queries live outside of the component definition -- by convention at the end of a page component file -- and are only available on page components.
+Consultas de página vivem fora da definição do componente -- por convenção no final do arquivo do componente de página -- e só estão disponíveis em componentes de página.
 
 ### Use a StaticQuery
 
