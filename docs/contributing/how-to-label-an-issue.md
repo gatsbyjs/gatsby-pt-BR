@@ -24,7 +24,7 @@ Qualquer um que seja membro do [Time de Mantenedores do Gatsby](https://github.c
 
 Você pode receber um convite do time quando seu Pull Request for _mergeado_ no projeto do Gatsby. Veja a lista de [`help wanted (precisa de ajuda)`](https://github.com/gatsbyjs/gatsby/labels/%F0%9F%93%8D%20status%3A%20help%20wanted) das issues e o [O Guia de Como Contribuir](/contributing/how-to-contribute/) para começar.
 
-**NOTA:** Se você já teve um pull resquest _mergeado_ e _não_ foi convidado pelo time de mantenedores, por favor vá para [o dashboard](https://store.gatsbyjs.org/) e solicite um código de desconto. Você deve receber um convite do time - _e pegue de graça seu Gatsby swag!_ Se não funcionar, por favor envie um email para team@gatsbyjs.com e nós conseguiremos um convite para você.
+**NOTA:** Se você já teve um pull request _mergeado_ e _não_ foi convidado pelo time de mantenedores, por favor vá para [o dashboard](https://store.gatsbyjs.org/) e solicite um código de desconto. Você deve receber um convite do time - _e pegue de graça seu Gatsby swag!_ Se não funcionar, por favor envie um email para team@gatsbyjs.com e nós conseguiremos um convite para você.
 
 ## Como classificar uma issue
 
