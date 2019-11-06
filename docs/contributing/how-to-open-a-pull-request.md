@@ -14,8 +14,8 @@ Gatsby usa o processo de PR para revisar e testar as alterações antes de serem
 
 Quando alguém desejar contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
 
-? - [Documentação](#documentation)
-? - [Código](#code-changes)
+? ? - [Documentação](#documentation)
+? ? - [Código](#code-changes)
 - [Starters or Site Showcase](#starters-or-site-showcase)
 - [Blog posts](#blog-posts)
 
@@ -91,7 +91,7 @@ Existem páginas específicas sobre como contribuir para várias partes do ecoss
 
 Para o blog do Gatsby, é necessário executar sua ideia de conteúdo pela equipe do Gatsby antes de enviá-la. Para obter mais informações, consulte a página de [contribuições de blog e site](/contributing/blog-and-website-contributions/), incluindo como propor uma idéia e configurar o blog para ser executado localmente.
 
-? ## Atualize seu fork com as alterações mais recentes do Gatsby
+? ? ## Atualize seu fork com as alterações mais recentes do Gatsby
 
 O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergir no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
 
