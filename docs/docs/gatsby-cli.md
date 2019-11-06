@@ -395,4 +395,4 @@ Para mais informações, consulte a [documentação do REPL Gatsby](/docs/gatsby
 
   
 
-? ? ? ? Além da opção `--no-color` , a ILC  reconhece também a variável de ambiente  `NO_COLOR`  (mais informações em [no-color.org](https://no-color.org/)).
+? ? ? ? ? Além da opção `--no-color` , a ILC  reconhece também a variável de ambiente  `NO_COLOR`  (mais informações em [no-color.org](https://no-color.org/)).

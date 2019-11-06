@@ -100,7 +100,7 @@ O arquivo de configuração, `gatsby-config.js` informa ao Gatsby informações 
 
 ### CSS
 
-? ? ? ? [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) significa Folhas de Estilo em Cascata, e é uma parte importante da Plataforma Web com [HTML](#html) e [JavaScript](#javascript). CSS é uma linguagem para estilizar páginas da web projetadas para serem altamente compatíveis com versões anteriores. À medida que novos recursos são lançados para os usuários finais, os [analisadores de CSS](https://www.html5rocks.com/pt/tutorials/internals/howbrowserswork/#CSS_parsing) podem ignorar com segurança os recursos não suportados e aprimorar as propriedades que eles suportam. O CSS realiza isso com seu design em _cascata_, fundamental para criar estilos com novas técnicas, como [CSS Grid](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) ao mesmo tempo em que fornece alternativas para navegadores mais antigos. O Gatsby suporta várias [abordagens de estilo](/docs/styling/), incluindo arquivos CSS regulares, módulos CSS e CSS-in-JS.
+? ? ? ? ? [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS) significa Folhas de Estilo em Cascata, e é uma parte importante da Plataforma Web com [HTML](#html) e [JavaScript](#javascript). CSS é uma linguagem para estilizar páginas da web projetadas para serem altamente compatíveis com versões anteriores. À medida que novos recursos são lançados para os usuários finais, os [analisadores de CSS](https://www.html5rocks.com/pt/tutorials/internals/howbrowserswork/#CSS_parsing) podem ignorar com segurança os recursos não suportados e aprimorar as propriedades que eles suportam. O CSS realiza isso com seu design em _cascata_, fundamental para criar estilos com novas técnicas, como [CSS Grid](https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/CSS_Grid_and_Progressive_Enhancement) ao mesmo tempo em que fornece alternativas para navegadores mais antigos. O Gatsby suporta várias [abordagens de estilo](/docs/styling/), incluindo arquivos CSS regulares, módulos CSS e CSS-in-JS.
 
 ## D
 
@@ -249,7 +249,7 @@ O processo de [construção](#build) do seu site ou aplicativo e envio para um [
 
 ### Programaticamente
 
-? ? ? ? Algo que acontece automaticamente com base no seu código e configuração. Por exemplo, você pode [configurar](#configuração) seu projeto para criar uma [página](#página) para cada postagem de blog escrita ou ler e exibir o ano atual como parte de um _copyright_ no rodapé do site.
+? ? ? ? ? Algo que acontece automaticamente com base no seu código e configuração. Por exemplo, você pode [configurar](#configuração) seu projeto para criar uma [página](#página) para cada postagem de blog escrita ou ler e exibir o ano atual como parte de um _copyright_ no rodapé do site.
 
 ### Público
 
