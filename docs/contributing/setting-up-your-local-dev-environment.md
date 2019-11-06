@@ -27,7 +27,7 @@ Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https
 - Configure o repositório e instale as dependências: `yarn run bootstrap`
 - Certifique-se de que os testes estão passando para você: `yarn test`
 - Crie um branch com um nome bem descritivo: `git checkout -b topics/new-feature-name`
-- Veja as [instruções para configurar a documentação do Gatsby](/contributing/docs-contributions#instruções-para-configurar-a-documentação-do-Gatsby) abaixo para alterações apenas na documentação.
+- Veja as [instruções para configurar a documentação do Gatsby](/contributing/docs-contributions#instruções-para-configurar-a-documentação-do-Gatsby) para alterações apenas na documentação.
 - Execute `yarn run watch` a partir da raiz do seu repositório para observar mudanças no código fonte dos pacotes e compilar estas mudanças automaticamente conforme você trabalha.
   - Note que o comando watch pode consumir bastante recursos. Para limitá-lo aos pacotes que você está trabalhando, adicione um argumento scope, como `yarn run watch --scope={gatsby,gatsby-cli}`.
   - Para observar apenas um pacote, execute `yarn run watch --scope=gatsby`.
