@@ -285,7 +285,7 @@ A consulta básica em GraphQL que retorna as mudanças no `title` em seu `about.
 }
 ```
 
-> 💡 Na [quinta parte](/tutorial/part-five/#introducing-graphiql), você conhecerá uma ferramenta que permite você explorar interativamente os dados disponíveis através do GraphQL, e ajuda na formulação de consultas como essa acima.
+> 💡 Na [quinta parte](/tutorial/part-five/#introducing-graphiql), você conhecerá uma ferramenta que além de permitir você explorar interativamente os dados disponíveis através do GraphQL, ajuda na formulação de consultas como essa acima.
 
 Consultas de página vivem fora da definição do componente -- por convenção no final do arquivo do componente de página -- e só estão disponíveis em componentes de página.
 
