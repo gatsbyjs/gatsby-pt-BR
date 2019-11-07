@@ -230,7 +230,6 @@ export default ({ children }) => (
 )
 ```
 
-If you go to any of your three pages, you'll see the same title added, e.g. the `/about/` page:
 Se você for a qualquer uma das suas três páginas, você verá o mesmo título adicionado, por exemplo como na página `/about/`:
 
 ![with-title](with-title.png)
