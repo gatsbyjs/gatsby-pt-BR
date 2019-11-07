@@ -23,7 +23,7 @@ Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https
 - [Instale](https://yarnpkg.com/en/docs/install) o gerenciador de pacotes Yarn.
 - Certifique-se de ter a última versão do Yarn instalada (>= 1.0.2). `yarn --version`
 - Faça um fork do [repositório oficial do Gastby](https://github.com/gatsbyjs/gatsby).
-- Clone o seu fork: `git clone --depth=1 https://github.com/<your-username>/gatsby.git`
+- Clone o seu fork: `git clone --depth=1 https://github.com/<seu-username>/gatsby.git`
 - Configure o repositório e instale as dependências: `yarn run bootstrap`
 - Certifique-se de que os testes estão passando para você: `yarn test`
 - Crie um branch com um nome bem descritivo: `git checkout -b topics/new-feature-name`
