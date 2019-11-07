@@ -4,7 +4,7 @@ title: Enviar para a biblioteca de plugins
 
 ## Publicando um plugin na biblioteca
 
-Para adicionar o seu plugin na [biblioteca de plugins](/plugins), você precisa:
+Para adicionar o seu plugin à [biblioteca de plugins](/plugins), você precisa:
 
 1.  publicar um pacote no npm (aprenda como [aqui](https://docs.npmjs.com/getting-started/publishing-npm-packages)),
 2.  incluir os [arquivos requeridos](/docs/files-gatsby-looks-for-in-a-plugin/) no seu plugin,
