@@ -24,7 +24,7 @@ Membros da comunidade (como você!) podem contribuir com plugins (pequenas quant
 
 > Existem centenas de plugins! Explore a [Biblioteca de Plugins](/plugins) do Gatsby.
 
-Nosso objetivo com plugins é que eles sejam simples de instalar e utilizar. Provavelmente você irá utilizar plugins em qualquer site Gatsby que você for construir. Enquanto você estiver percorrendo o restante do tutorial você terá muitas oportunidades para praticar a instalação e utilização de plugins.
+Nosso objetivo com plugins é que eles sejam simples de instalar e utilizar. Provavelmente você irá utilizar plugins em quase todos os sites Gatsby que você for construir. Enquanto você estiver percorrendo o restante do tutorial você terá muitas oportunidades para praticar a instalação e utilização de plugins.
 
 Para uma introdução inicial em como utilizar plugins, vamos instalar e implementar o plugin Gatsby para Typography.js
 
@@ -70,7 +70,7 @@ O `gatsby-config.js` é outro arquivo especial que o Gatsby irá reconhecer auto
 
 > Se deseja saber mais, confira a [documentação sobre gatsby-config.js](/docs/gatsby-config/).
 
-2. Typography.js precisa de um arquivo de configuração. Cria uma nova pasta chamada `utils` dentro da pasta `src`. Em seguida, adicione um novo arquivo chamado `typography.js` na pasta `utils` e copie o seguinte conteúdo para dentro do arquivo:
+3. Typography.js precisa de um arquivo de configuração. Crie uma nova pasta chamada `utils` dentro da pasta `src`. Em seguida, adicione um novo arquivo chamado `typography.js` na pasta `utils` e copie o seguinte conteúdo para dentro do arquivo:
 
 ```javascript:title=src/utils/typography.js
 import Typography from "typography"
@@ -168,7 +168,7 @@ Vamos ver como a nova página *sobre* ficou:
 
 ![about-uncentered](about-uncentered.png)
 
-Hmm. Seria legal se o conteúdo das duas páginas fossem centralizados como na página inicial. E também serial legal se tivéssemos alguma navegação global para que os visitantes encontrem e visitem as outras páginas.
+Hmm. Seria legal se o conteúdo das duas páginas fossem centralizados como na página inicial. E também serial legal se tivéssemos alguma navegação global, facilitando que os novos visitantes encontrem e visitem as outras páginas.
 
 Você irá realizar essas mudanças criando seu primeiro componente de layout
 
@@ -207,7 +207,7 @@ export default () => (
 
 ![with-layout2](with-layout2.png)
 
-Que ótimo, o layout está funcionado! O conteúdo da sua página incial ainda está centralizado.
+Que ótimo, o layout está funcionando! O conteúdo da sua página inicial ainda está centralizado.
 
 Mas tente navegar para `/about/`, ou `/contact`. O conteúdo nessas páginas não estão centralizados ainda.
 
