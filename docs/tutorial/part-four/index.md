@@ -289,12 +289,12 @@ A consulta básica em GraphQL que retorna as mudanças no `title` em seu `about.
 
 Consultas de página vivem fora da definição do componente -- por convenção no final do arquivo do componente de página -- e só estão disponíveis em componentes de página.
 
-### Use a StaticQuery
+### Use uma StaticQuery
 
-[StaticQuery](/docs/static-query/) is a new API introduced in Gatsby v2 that allows non-page components (like your `layout.js` component), to retrieve data via GraphQL queries.
-Let's use its newly introduced hook version — [`useStaticQuery`](/docs/use-static-query/).
+[StaticQuery](/docs/static-query/) é uma nova API introduzida no Gatsby v2 que permite componentes que não são páginas (como o seu componente `layout.js`) retornar dados através de consultas GraphQL.
+Vamos utilizar a sua recém lançada versão em hook — [`useStaticQuery`](/docs/use-static-query/).
 
-Go ahead and make some changes to your `src/components/layout.js` file to use the `useStaticQuery` hook and a `{data.site.siteMetadata.title}` reference that uses this data. When you are done, your file will look like this:
+Vá em frente e faça algumas mudanças no seu arquivo `src/components/layout.js` a fim de utilizar o hook `useStaticQuery` e uma referência `{data.site.siteMetadata.title}` para utilizar esses dados. Quando você terminar, seu arquivo vai estar mais ou menos assim:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -353,7 +353,7 @@ export default ({ children }) => {
 // highlight-end
 ```
 
-Another success! 🎉
+Outro sucesso! 🎉
 
 ![Page title and layout title both pulling from siteMetadata](site-metadata-two-titles.png)
 
