@@ -42,11 +42,11 @@ Há apenas dois passos :)
   for_hire: true
   hiring: false
 
-  # Se você marcar `portfolio: true`, qualquer site que você tem no Mostruário de Sites será mostrado com `built_by: [imagine seu nome aqui]` será relacionado ao seu Perfil de Criador. Então certifique que o `name` em `creators.yml` é exatamente o mesmo de `built_by` em `sites.yml`.
+  # Se você marcar `portfolio: true`, qualquer site que você tem no Mostruário de Sites será mostrado com `built_by: [imagine seu nome aqui]` será relacionado ao seu Perfil de Criador. Então certifique-se de que o `name` em `creators.yml` é exatamente o mesmo de `built_by` em `sites.yml`.
   portfolio: true
 ```
 
-Use o seguinte _template_ para garantir que os campos obrigatórios estão inseridos:
+Use o seguinte modelo para garantir que os campos obrigatórios estão preenchidos:
 
 ```yaml:title=docs/creators/creators.yml
 - name: (required)
@@ -70,4 +70,4 @@ Por padrão, todas as edições enviadas ao Mostruário de Criadores serão revi
 
 ### Mudou de ideia / precisa editar sua submissão?
 
-Se você precisa editar alguma coisa na sua submissão posteriormente, simplesmente edite o arquivo `creators.yml` submetendo outro PR.
+Se você precisar editar alguma coisa na sua submissão posteriormente, simplesmente edite o arquivo `creators.yml` submetendo outro PR.
