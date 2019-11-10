@@ -1,5 +1,5 @@
 ---
-title: Organize um evento Gatsby
+title: Organizar um evento Gatsby
 ---
 
 Interessado em organizar um evento Gatsby? Nós queremos ajudar a desenvolver a comunidade Gatsby em sua área. Se o seu evento atender a alguns requisitos básicos listados abaixo, você pode ser elegível para receber apoio do Gatsby, como camisas do Gatsby, 300 doláres para alimentação, material de estudo, entre outros. Comece solicitando suporte ao evento abaixo.
