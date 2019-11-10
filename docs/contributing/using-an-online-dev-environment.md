@@ -2,7 +2,7 @@
 title: Utilizando Gitpod, Ambiente de Desenvolvimento Online
 ---
 
-Esta página nos dá um esboço de como utilizar o Gitpod, um ambiente online gratuito, para contribuir com o core do Gatsby e seu ecossistema. Para obter instruções sobre a configuração de um ambiente de desenvolvimento local, visite a página de [configuração local](/contributing/setting-up-your-local-dev-environment/).
+Esta página nos dá um esboço de como utilizar o Gitpod, um ambiente de desenvolvimento online gratuito, para contribuir com o core do Gatsby e seu ecossistema. Para obter instruções sobre a configuração de um ambiente de desenvolvimento local, visite a página de [configuração local](/contributing/setting-up-your-local-dev-environment/).
 
 ## Sobre o Gitpod
 
