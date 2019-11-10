@@ -1,12 +1,13 @@
 ---
-title: Utilizando Gitpod, um Ambiente Dev Online
+title: Utilizando Gitpod, Ambiente de Desenvolvimento Online
 ---
 
-Esta página nos da um esboço de como utilizar o Gitpod, um ambiente online gratuito, para contribuir com o core do Gatsby e seu ecossistema. Para obter instruções sobre a configuração de um ambiente de desenvolvimento local, visite a página de [configuração local](/contributing/setting-up-your-local-dev-environment/).
+Esta página nos dá um esboço de como utilizar o Gitpod, um ambiente online gratuito, para contribuir com o core do Gatsby e seu ecossistema. Para obter instruções sobre a configuração de um ambiente de desenvolvimento local, visite a página de [configuração local](/contributing/setting-up-your-local-dev-environment/).
 
 ## Sobre o Gitpod
 
-Gitpod deixa as contribuições no Github mais fáceis, pois permite a configuração automatizada de um ambiente de desenvolvimento. Ao invés de escrever uma longa documentação de como instalar e configurar deixando todo contribuidor passar por essa aventura, a configuração é automatizada e reproduzível.
+Gitpod deixa as contribuições no Github mais fáceis, pois permite a configuração automatizada de um ambiente de desenvolvimento. Ao invés de escrever uma longa
+documentação de como instalar e configurar deixando todo contribuidor passar por essa aventura, a configuração é automatizada e reproduzível.
 
 Além disso, o Gitpod pré-builda qualquer branch de um repositório para que você não precise aguardar por uma instalação, clonando e buildando.
 
@@ -39,13 +40,13 @@ Agora você pode codar, testar, comitar, fazer pushs e criar um PR de dentro do 
 
 ## Revisão de Código
 
-Algumas das mudanças feitas precisam de uma revisão de código mais detalhada do que oque é possível no Github. Prefixar um PR com `gitpod.io/#` irá abrir este branch em modo de revisão de código.
+Algumas das mudanças feitas precisam de uma revisão de código mais detalhada do que oque é possível se fazer no Github. Prefixar um _PR_ com `gitpod.io/#` irá abrir este branch em modo de revisão de código.
 
 Neste modo você verá a lista de arquivos modificados na esquerda, pelos quais se pode navegar. Ainda, pode-se rodar o app e utilizar as funcionalidades modificadas para explorar mais o código alterado. Você pode ver comentários existentes ou adicionar novos comentários no editor e submeter o resultado da sua revisão também.
 
-## Como rodar outro exemplo
+## Como executar outro exemplo
 
-Se quiser rodar outro exemplo vocẽ pode abrir um novo ou um já existente terminal e rodar os seguintes comandos:
+Se quiser executar outro exemplo vocẽ pode abrir um novo ou um já existente terminal e rodar os seguintes comandos:
 
 ```shell
 yarn install
