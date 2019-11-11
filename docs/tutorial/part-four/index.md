@@ -70,7 +70,7 @@ Há muitas opções para injetar dados nos componentes React. Uma das mais
 populares e poderosas é a tecnologia chamada 
 [GraphQL](http://graphql.org/).
 
-GraphQL foi criado pelo Facebook para ajudar engenheiros de produto _injetar_ os dados necessários nos
+GraphQL foi criado pelo Facebook para ajudar engenheiros de produto a _injetar_ os dados necessários nos
 componentes.
 
 GraphQL é uma **q**uery **l**anguage (a parte _QL_ do seu nome), ou linguagem de consulta. Se você está
@@ -377,7 +377,7 @@ quando você faz qualquer mudança no código, você deveria ver imediatamente o
 entrada do Gatsby e vê a nova mudança aparecendo na tela.
 
 Então em quase todos os lugares, mudanças que você faz irão imediatamente tomar efeito. Edite o arquivo `gatsby-config.js`
-novamente, dessa vez mudando o `title` devolta para "Pandas Eating Lots". A mudança deve aparecer rapidamente nas páginas
+novamente, dessa vez mudando o `title` de volta para "Pandas Eating Lots". A mudança deve aparecer rapidamente nas páginas
 do seu site.
 
 ![Both titles say Pandas Eating Lots](pandas-eating-lots-titles.png)
