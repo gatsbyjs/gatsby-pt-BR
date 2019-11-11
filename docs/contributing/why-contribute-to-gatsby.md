@@ -2,7 +2,7 @@
 title: Por que contribuir com Gatsby.js?
 ---
 
-Existem muitas razões para comtribuir com o Gatsby.js e softwares open source em geral. Aqui estão alguns benefícios em participar:
+Existem muitas razões para contribuir com o Gatsby.js e softwares open source em geral. Aqui estão alguns benefícios em participar:
 
 - **Crescer sua comunidade.** Trabalhar no open source do Gatsby.js pode conectar você com pessoas trabalhando em coisas similares. Você pode ajudar ou ser ajudado, talvez você até conheça alguém pessoalmente! Isso já aconteceu.
 
