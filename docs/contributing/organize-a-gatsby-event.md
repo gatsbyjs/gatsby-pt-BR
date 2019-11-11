@@ -35,5 +35,4 @@ Para solicitar suporte e enviar o seu evento para a página de eventos do Gatsby
 [Solicitar Suporte para Evento](https://airtable.com/shrpwc99yogJm9sfI)
 
 ## Links Relacionados
-- [Gatsby's Community Events](/contributing/events/)
 - [Eventos da Comunidade Gatsby](/contributing/events)
