@@ -54,16 +54,16 @@ Dentro de um projeto Gatsby, você pode ver algumas ou todas as seguintes pastas
 
 Alguns arquivos notáveis e suas definições:
 
-- `gatsby-config.js` — configurar opções para um site do Gatsby, com metadados para o título do projeto, descrição, plugins, etc.
-- `gatsby-node.js` — implementar APIs Node.js do Gatsby para personalizar e estender as configurações padrão que afetam o processo de criação.
-- `gatsby-browser.js` — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby.
-- `gatsby-ssr.js` — use as APIs de renderização do lado servidor do Gatsby para personalizar as configurações padrão que afetam a renderização do lado servidor.
+- `gatsby-config.js` — configurar opções para um site do Gatsby, com metadados para o título do projeto, descrição, plugins, etc
+- `gatsby-node.js` — implementar APIs Node.js do Gatsby para personalizar e estender as configurações padrão que afetam o processo de criação
+- `gatsby-browser.js` — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby
+- `gatsby-ssr.js` — use as APIs de renderização do lado servidor do Gatsby para personalizar as configurações padrão que afetam a renderização do lado servidor
 
 #### Conteúdos adicionais
 
-- Para realizar um tour em todas as pastas e arquivos comuns, leia os documentos referentes a [Estrutura de um Projeto Gatsby](/docs/gatsby-project-structure/).
-- Para comandos comuns, consulte a [documentação do Gatsby CLI](/docs/gatsby-cli).
-- Confira a [folha de colas do Gatsby](/docs/cheat-sheet/) para obter informações de download.
+- Para realizar um tour em todas as pastas e arquivos comuns, leia os documentos referentes a [Estrutura de um Projeto Gatsby](/docs/gatsby-project-structure/)
+- Para comandos comuns, consulte a [documentação do Gatsby CLI](/docs/gatsby-cli)
+- Confira a [folha de colas do Gatsby](/docs/cheat-sheet/) para obter informações de download
 
 ### Criando páginas automaticamente
 
@@ -76,7 +76,7 @@ O Gatsby _core_ transforma automaticamente os componentes React dentro de `src/p
 
 #### Instruções
 
-1. Crie um diretório para `src/pages` se o seu site ainda não tiver um.
+1. Crie um diretório para `src/pages` se o seu site ainda não tiver um
 2. Adicione um novo componente ao diretório de páginas:
 
 ```jsx:title=src/pages/about.js
@@ -92,7 +92,7 @@ const AboutPage = () => (
 export default AboutPage
 ```
 
-3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento
 4. Visite sua nova página no navegador: `http://localhost:8000/about`
 
 #### Conteúdos adicionais
@@ -131,11 +131,11 @@ export default () => (
 
 ### Criando um componente de layout
 
-É comum agrupar páginas com um componente de layout React, o que possibilita o compartilhamento de marcação, estilos e funcionalidade em várias páginas.
+É comum agrupar páginas com um componente de layout React, o que possibilita o compartilhamento de marcação, estilos e funcionalidade em várias páginas
 
 #### Pré-requisitos
 
-- A Gatsby Site
+- Um [site Gatsby](/docs/quick-start)
 
 #### Instruções
 
@@ -311,9 +311,9 @@ import "./src/styles/global.css"
 
 Você pode adicionar estilos globais a um [componente de layout compartilhado](/tutorial/part-three/#your-first-layout-component). Esse componente é usado para coisas comuns em todo o site, como um cabeçalho ou rodapé.
 
-1. Se você ainda não possui um, crie um novo diretório em seu site em `/src/components`.
+1. Se você ainda não possui um, crie um novo diretório em seu site em `/src/components`
 
-2. Dentro do diretório de componentes, crie dois arquivos: `layout.css` e `layout.js`.
+2. Dentro do diretório de componentes, crie dois arquivos: `layout.css` e `layout.js`
 
 3. Adicione o seguinte trecho de código ao arquivo `layout.css`:
 
@@ -457,7 +457,7 @@ export default () => (
 // highlight-end
 ```
 
-3. Execute `gatsby develop` para ver as alterações.
+3. Execute `gatsby develop` para ver as alterações
 
 **Nota:**
 Observe que a extensão do arquivo é `.module.css` em vez de `.css`, o que informa ao Gatsby que este é um CSS module.
@@ -465,7 +465,7 @@ Observe que a extensão do arquivo é `.module.css` em vez de `.css`, o que info
 #### Conteúdos adicionais
 
 - Mais sobre como [usar CSS Modules](/tutorial/part-two/#css-modules)
-- [Exemplo ao vivo usando CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
+- [Exemplo usando CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
 
 ### Usando Sass/SCSS
 
@@ -481,11 +481,11 @@ O Sass compilará arquivos .scss e .sass em arquivos .css para você, para que v
 
 #### Instruções
 
-1. Instale o plugin Gatsby [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) e o `node-sass`.
+1. Instale o plugin Gatsby [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) e o `node-sass`
 
 `npm install --save node-sass gatsby-plugin-sass`
 
-2. Inclua o plugin no seu arquivo `gatsby-config.js`.
+2. Inclua o plugin no seu arquivo `gatsby-config.js`
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
@@ -534,7 +534,7 @@ import "./styles.sass"
 
 #### Instruções
 
-1. Copie um arquivo de fonte no seu projeto Gatsby, como `src/fonts/fontname.woff2`.
+1. Copie um arquivo de fonte no seu projeto Gatsby, como `src/fonts/fontname.woff2`
 
 ```
 src/fonts/fontname.woff2
@@ -567,9 +567,7 @@ Se ao seguir as etapas acima, as fontes não estiverem atualizando, certifique-s
 
 ### Usando Emotion
 
-[Emotion](https://emotion.sh) is a powerful CSS-in-JS library that supports both inline CSS styles and styled components. You can use each styling feature individually or together in the same file.
-
-[Emotion](https://emotion.sh) é uma poderosa biblioteca CSS-in-JS que suporta estilos CSS inline e _styled components_. Você pode usar cada recurso de estilo individualmente ou juntos no mesmo arquivo.
+[Emotion](https://emotion.sh) é uma poderosa biblioteca CSS-in-JS que suporta estilos CSS inline e _styled components_. Você pode usar cada recurso de estilo individualmente ou juntos no mesmo arquivo
 
 #### Pré-requisitos
 
@@ -592,8 +590,6 @@ module.exports = {
 ```
 
 3. Se você ainda não possui uma, crie uma página no seu site do Gatsby em `src/pages/emotion-sample.js`.
-
-Import Emotion's `css` core package. You can then use the `css` prop to add [Emotion object styles](https://emotion.sh/docs/object-styles) to any element inside a component:
 
 Importar o pacote principal de `css` do Emotion. Você pode usar o prop `css` para adicionar [estilos de objetos do Emotion](https://emotion.sh/docs/object-styles) a qualquer elemento dentro de um componente:
 
@@ -678,7 +674,7 @@ _NOTA: Portanto, para o exemplo acima, a declaração CSS relevante seria `font-
 
 - [Typography.js](/docs/typography-js/) - Outra opção para usar fontes do Google em um site do Gatsby
 - [Documentação do The Typefaces Project](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
-- [Exemplo ao vivo em Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
+- [Exemplo de Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
 
 ## 3. Trabalhando com Starters
 
@@ -779,7 +775,7 @@ yarn workspace example develop
 #### Conteúdos adicionais
 
 - Siga um [guia mais detalhado](/docs/themes/building-themes/) sobre o uso do starter do _Gatsby theme workspace_.
-- Learn how to build your own theme in the [Gatsby Theme Authoring video course on Egghead](https://egghead.io/courses/gatsby-theme-authoring), or in the [video course's complementary written tutorial companion](/tutorial/building-a-theme).
+- Aprenda como criar seu próprio tema no [curso em vídeo aula Gatsby Theme Authoring do Egghead](https://egghead.io/courses/gatsby-theme-authoring), ou nos cursos em [vídeo complementares do tutorial](/tutorial/building-a-theme).
 
 ## 5. Fonte de dados
 
@@ -883,7 +879,7 @@ date: 2019-07-10
 path: /my-first-post
 ---
 
-This is my first Gatsby post written in Markdown!
+Este é o meu primeiro post do Gatsby escrito em Markdown!
 ```
 
 3. Inicie o servidor de desenvolvimento com `gatsby develop`, navegue até o GraphiQL explorer em `http://localhost:8000/___graphql` e escreva uma consulta para obter todos os dados do markdown:
