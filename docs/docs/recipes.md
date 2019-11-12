@@ -1295,21 +1295,21 @@ export default NonPageComponent
 - [Mais sobre o hook de useStaticQuery](/docs/use-static-query/)
 - [Visualize seus dados com o GraphiQL](/docs/introducing-graphiql/)
 
-### Limiting with GraphQL
+### Limitando com GraphQL
 
-When querying for data with GraphQL, you can limit the number of results returned with a specific number. This is helpful if you only need a few pieces of data or need to [paginate data](/docs/adding-pagination/).
+Ao consultar dados com o GraphQL, você pode limitar o número de resultados retornados com um número específico. Isso é útil se você precisar apenas de alguns dados ou [paginar dados](/docs/adding-pagination/).
 
-To limit data, you'll need a Gatsby site with some nodes in the GraphQL data layer. All sites have some nodes like `allSitePage` and `sitePage` created automatically: more can be added by installing source plugins like `gatsby-source-filesystem` in `gatsby-config.js`.
+Para limitar os dados, você precisará de um site Gatsby com alguns nodes na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como `allSitePage` e `sitePage` criados automaticamente: mais pode ser adicionado instalando plugins de origem como `gatsby-source-filesystem` em `gatsby-config.js`.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/)
+- Um [site Gatsby](/docs/quick-start/)
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open a tab in your browser at: `http://localhost:8000/___graphql`.
-3. Add a query in the editor with the following fields on `allSitePage` to start off:
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra uma guia no seu navegador em: `http://localhost:8000/___graphql`.
+3. Adicione uma consulta no editor com os seguintes campos em `allSitePage` para começar:
 
 ```graphql
 {
@@ -1324,7 +1324,7 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
 }
 ```
 
-4. Add a `limit` argument to the `allSitePage` field and give it an integer value `3`.
+4. Adicione um argumento `limit` ao campo `allSitePage` e atribua um valor inteiro `3`.
 
 ```graphql
 {
@@ -1339,13 +1339,13 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
 }
 ```
 
-5. Click the play button in the GraphiQL page and the data in the `edges` field will be limited to the number specified.
+5. Clique no botão play na página GraphiQL e os dados no campo `edge` serão limitados ao número especificado.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- [Gatsby GraphQL reference for limiting](/docs/graphql-reference/#limit)
-- Live example:
+- Aprenda sobre [_nodes_ na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- [Referência do Gatsby GraphQL para limitar](/docs/graphql-reference/#limit)
+- Exemplo:
 
 <iframe
   title="Limiting returned data"
