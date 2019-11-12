@@ -1203,13 +1203,13 @@ export default IndexPage
 - [Mais sobre como consultar dados em páginas com o GraphQL](/docs/page-query/)
 - [MDN em Tagged Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) como os usados no GraphQL
 
-### Querying data with the StaticQuery Component
+### Consultando dados com o StaticQuery Component
 
-`StaticQuery` is a component for retrieving data from Gatsby's data layer in [non-page components](/docs/static-query/), such as a header, navigation, or any other child component.
+`StaticQuery` é um componente para recuperar dados da camada de dados do Gatsby em [componentes que não são de página](/docs/static-query/), como um _header_, _navigation_ ou qualquer outro componente filho.
 
-#### Directions
+#### Instruções
 
-1. The `StaticQuery` Component requires two render props: `query` and `render`.
+1. O componente `StaticQuery` requer dois objetos de renderização: `query` e `render`
 
 ```jsx:title=src/components/NonPageComponent.js
 import React from "react"
@@ -1240,26 +1240,26 @@ const NonPageComponent = () => (
 export default NonPageComponent
 ```
 
-2. You can now use this component as you would [any other component](/docs/building-with-components#non-page-components) by importing it into a larger page of JSX components and HTML markup.
+2. Agora você pode usar esse componente como faria com [qualquer outro componente](/docs/building-with-components#non-page-components) importando-o para uma página maior de componentes JSX e marcação HTML.
 
-### Querying data with the useStaticQuery hook
+### Consultando dados com _hook_ de useStaticQuery
 
-Since Gatsby v2.1.0, you can use the `useStaticQuery` hook to query data with a JavaScript function instead of a component. The syntax removes the need for a `<StaticQuery>` component to wrap everything, which some people find simpler to write.
+Desde o Gatsby v2.1.0, você pode usar o _hook_ `useStaticQuery` para consultar dados com uma função JavaScript em vez de um componente. A sintaxe elimina a necessidade de um componente `<StaticQuery>` para agrupar tudo, o que algumas pessoas acham mais simples de escrever.
 
-The `useStaticQuery` hook takes a GraphQL query and returns the requested data. It can be stored in a variable and used later in your JSX templates.
+O _hook_ `useStaticQuery` pega uma consulta GraphQL e retorna os dados solicitados. Ele pode ser armazenado em uma variável e usada posteriormente em seus modelos JSX.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- You'll need React and ReactDOM 16.8.0 or later (keeping Gatsby updated handles this)
-- Recommended reading: the [Rules of React Hooks](https://reactjs.org/docs/hooks-rules.html)
+- Você precisará do React e ReactDOM 16.8.0 ou posterior (manter o Gatsby atualizado)
+- Leitura recomendada: as [regras de React Hooks](https://reactjs.org/docs/hooks-rules.html)
 
-#### Directions
+#### Instruções
 
-1. Import `useStaticQuery` and `graphql` from `gatsby` in order to use the hook query the data.
+1. Importe `useStaticQuery` e `graphql` de `gatsby` para usar o _hook_ para consultar os dados.
 
-2. In the start of a stateless functional component, assign a variable to the value of `useStaticQuery` with your `graphql` query passed as an argument.
+2. No início de um componente funcional sem estado, atribua uma variável ao valor de `useStaticQuery` com sua consulta `graphql` passada como argumento.
 
-3. In the JSX code returned from your component, you can reference that variable to handle the returned data.
+3. No código JSX retornado do seu componente, é possível referenciar essa variável para manipular os dados retornados.
 
 ```jsx:title=src/components/NonPageComponent.js
 import React from "react"
@@ -1288,12 +1288,12 @@ const NonPageComponent = () => {
 export default NonPageComponent
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [More on Static Query for querying data in components](/docs/static-query/)
-- [The difference between a static query and a page query](/docs/static-query/#how-staticquery-differs-from-page-query)
-- [More on the useStaticQuery hook](/docs/use-static-query/)
-- [Visualize your data with GraphiQL](/docs/introducing-graphiql/)
+- [Mais sobre consulta estática para consultar dados em componentes](/docs/static-query/)
+- [A diferença entre uma consulta estática e uma consulta de página](/docs/static-query/#how-staticquery-differs-from-page-query)
+- [Mais sobre o hook de useStaticQuery](/docs/use-static-query/)
+- [Visualize seus dados com o GraphiQL](/docs/introducing-graphiql/)
 
 ### Limiting with GraphQL
 
