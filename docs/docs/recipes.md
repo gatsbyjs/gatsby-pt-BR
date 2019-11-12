@@ -1480,17 +1480,17 @@ Para esta receita, você precisará de um site Gatsby com uma coleção de _node
   height="300"
 />
 
-### GraphQL Query Aliases
+### GraphQL Query Alias 
 
-You can rename any field in a GraphQL query with an alias.
+Você pode renomear qualquer campo em uma consulta GraphQL com um _alias_.
 
-If you would like to run two queries on the same datasource, you can use an alias to avoid a naming collision with two queries of the same name.
+Se você deseja executar duas consultas na mesma fonte de dados, pode usar um _alias_ para evitar uma colisão de nomes com duas consultas com o mesmo nome.
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor using two fields of the same name like `allFile`
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL Explorer em uma nova guia do navegador em: `http://localhost:8000/___ graphql`
+3. Adicione uma consulta no editor usando dois campos com o mesmo nome como `allFile`
 
 ```graphql
 {
@@ -1505,7 +1505,7 @@ If you would like to run two queries on the same datasource, you can use an alia
 }
 ```
 
-4. Add the name you would like to use for any field before the name of the field in your GraphQL schema, separated by a colon. (E.g. `[alias-name]: [original-name]`)
+4. Adicione o nome que você gostaria de usar para qualquer campo antes do nome do campo no esquema do GraphQL, separado por dois pontos. (Por exemplo, `[nome-do-alias]: [nome-original]`)
 
 ```graphql
 {
@@ -1520,12 +1520,12 @@ If you would like to run two queries on the same datasource, you can use an alia
 }
 ```
 
-5. Click the play button in the GraphiQL page and 2 objects with alias names you provided should be output.
+5. Clique no botão play na página GraphiQL e 2 objetos com nomes alternativos que você forneceu devem ser exibidos.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Gatsby GraphQL reference for aliasing](/docs/graphql-reference/#aliasing)
-- Live example:
+- [Referência do Gatsby GraphQL para _alias_](/docs/graphql-reference/#aliasing)
+- Exemplo:
 
 <iframe
   title="Using aliases"
