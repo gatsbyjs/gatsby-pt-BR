@@ -1,45 +1,35 @@
 ---
-title: Programmatically create pages from data
+title: Crie págianas programaticamente a partir de dados
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), and [part 6](/tutorial/part-six/) before continuing here.
+> Este tutorial é parte de uma serie sobre a camada de dados do Gatsby. Certifique-se que você passou por[part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), and [part 6](/tutorial/part-six/) antes de continuar aqui.
 
-## What's in this tutorial?
+## O que há neste tutorial?
 
-In the previous tutorial, you created a nice index page that queries markdown
-files and produces a list of blog post titles and excerpts. But you don't want to just see excerpts, you want actual pages for your
-markdown files.
+No tutorial anterior, você criou uma boa página index que consulta arquivos markdown e produziu uma lista de títulos e trechos de postagens de blog. Mas você não quer apenas ver trechos, você quer páginas reais para seus arquivos markdown.
 
-You could continue to create pages by placing React components in `src/pages`. However, you'll
-now learn how to _programmatically_ create pages from _data_. Gatsby is _not_
-limited to making pages from files like many static site generators. Gatsby lets
-you use GraphQL to query your _data_ and _map_ the query results to _pages_—all at build
-time. This is a really powerful idea. You'll be exploring its implications and
-ways to use it for the remainder of this part of the tutorial.
+Você pode continuar criando paginas colocando componentes React em `src/pages`. Contudo, você agora vai aprender como _programaticamente_ criar páginas a partir de _dados_. Gatsby _não_ se limita a criar páginas a partir de arquivos como muitos geradores de sites estáticos. Gatsby te permite usar GraphQL para consultar seus _dados_ e _mapear_ os resultados da consulta para _páginas_ — tudo em tempo de compilação. Esta é uma ideia realmente poderosa. Você vai explorar suas implicações e formas de usa-lo no resto desta parte do tutorial.
 
-Let's get started.
+Vamos começar.
 
-## Creating slugs for pages
+## Criar slugs para páginas
 
-Creating new pages has two steps:
+Criar novas páginas tem dois passos:
 
-1.  Generate the "path" or "slug" for the page.
-2.  Create the page.
+1.  Gerar a "rota" ou "slug" para a página.
+2.  Criar a página.
 
-_**Note**: Often data sources will directly provide a slug or pathname for content — when working with one of those systems (e.g. a CMS), you don't need to create the slugs yourself as you do with markdown files._
+_**Nota**: Geralmente as fontes de dados fornecem diretamente um slug ou nome de rota para o conteúdo — quando trabalha com um desses sistemas (por exemplo um CMS), você não precisa criar os slugs você mesmo como faz com os arquivos markdown._
 
-To create your markdown pages, you'll learn to use two Gatsby APIs:
-[`onCreateNode`](/docs/node-apis/#onCreateNode) and
-[`createPages`](/docs/node-apis/#createPages). These are two workhorse APIs
-you'll see used in many sites and plugins.
+Para criar suas páginas markdown, você vai aprender a usar duas APIs Gatsby:
+[`onCreateNode`](/docs/node-apis/#onCreateNode) e
+[`createPages`](/docs/node-apis/#createPages). Estas são duas APIs workhorse que você verá sendo usadas em vários sites e plugins.
 
-We do our best to make Gatsby APIs simple to implement. To implement an API, you export a function
-with the name of the API from `gatsby-node.js`.
+Fazemos nosso melhor para que as APIs Gatsby sejam simples de implementar. Para implementar uma API, exporte uma função com o nome da API de `gatsby-node.js`.
 
-So, here's where you'll do that. In the root of your site, create a file named
-`gatsby-node.js`. Then add the following.
+Então, aqui é onde você fará isto. Na raiz do seu site, crie um arquivo nomeado `gatsby-node.js`. Logo após adicione o seguinte.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
