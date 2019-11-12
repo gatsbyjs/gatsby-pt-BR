@@ -25,9 +25,11 @@ _**Nota**: Geralmente as fontes de dados fornecem diretamente um slug ou nome de
 
 Para criar suas páginas markdown, você vai aprender a usar duas APIs Gatsby:
 [`onCreateNode`](/docs/node-apis/#onCreateNode) e
-[`createPages`](/docs/node-apis/#createPages). Estas são duas APIs workhorse que você verá sendo usadas em vários sites e plugins.
+[`createPages`](/docs/node-apis/#createPages). 
+Estas são duas APIs workhorse que você verá sendo usadas em vários sites e plugins.
 
-Fazemos nosso melhor para que as APIs Gatsby sejam simples de implementar. Para implementar uma API, exporte uma função com o nome da API de `gatsby-node.js`.
+Fazemos nosso melhor para que as APIs Gatsby sejam simples de implementar. 
+Para implementar uma API, exporte uma função com o nome da API de `gatsby-node.js`.
 
 Então, aqui é onde você fará isto. Na raiz do seu site, crie um arquivo nomeado `gatsby-node.js`. Logo após adicione o seguinte.
 
@@ -54,12 +56,11 @@ exports.onCreateNode = ({ node }) => {
   // highlight-end
 }
 ```
-
-You want to use each markdown file name to create the page slug. So
-`pandas-and-bananas.md` will become `/pandas-and-bananas/`. But how do you get
-the file name from the `MarkdownRemark` node? To get it, you need to _traverse_
-the "node graph" to its _parent_ `File` node, as `File` nodes contain data you
-need about files on disk. To do that, modify your function again:
+Você quer utilizar cada nome de arquivo markdown para criar o slug da página. Para que 
+`pandas-and-bananas.md` se torne `/pandas-and-bananas/`. 
+Mas como você consegue o nome do arquivo do nó `MarkdownRemark`? Para consegui-lo, 
+você precisa _atravessar_ o "grafo do nó" até seu nó pai `File`, pois os nós `File` contêm 
+dados que precisa sobre os arquivos em disco. Para fazer isso, modifique sua função novamente:
 
 ```javascript:title=gatsby-node.js
 // highlight-next-line
@@ -73,14 +74,14 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-After restarting your development server, you should see the relative paths for your two markdown
-files print to the terminal screen.
+Após reinicar seu servidor de desenvolvimento, você deve ver as rotas relativas para seus dois 
+arquivos markdown impressos na tela do terminal.
 
 ![markdown-relative-path](markdown-relative-path.png)
 
-Now you'll have to create slugs. As the logic for creating slugs from file names can get
-tricky, the `gatsby-source-filesystem` plugin ships with a function for creating
-slugs. Let's use that.
+Agora terá que criar slugs. Como a lógica para criar slugs a partir dos nomes de 
+arquivo pode ser complicada, o plug-in `gatsby-source-filesystem` é fornecido com uma 
+função para criar slugs. Vamos usar isso.
 
 ```javascript:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`) // highlight-line
