@@ -1415,22 +1415,22 @@ Para esta receita, você precisará de um site Gatsby com uma coleção de _node
   height="300"
 />
 
-### Filtering with GraphQL
+### Filtrando com GraphQL
 
-Queried results can be filtered down with operators like `eq` (equals), `ne` (not equals), `in`, and `regex` on specified fields.
+Os resultados consultados podem ser filtrados com operadores como `eq` (igual), `ne` (não igual), `in` e `regex` em campos especificados.
 
-For this recipe, you'll need a Gatsby site with a collection of nodes to filter in the GraphQL data layer. All sites have some nodes like `allSitePage` created automatically: more can be added by installing source and transformer plugins like `gatsby-source-filesystem` and `gatsby-transformer-remark` in `gatsby-config.js` to produce `allMarkdownRemark`.
+Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para filtrar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais pode ser adicionado instalando plugins de fonte e transformador, como `gatsby-source-filesystem` e `gatsby-transformer-comment` em `gatsby-config.js` para produzir `allMarkdownRemark `.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- Queryable fields prefixed with `all`, e.g. `allSitePage` or `allMarkdownRemark`
+- Um [site Gatsby](/docs/quick-start)
+- Campos consultáveis prefixados com `all`, por exemplo `allSitePage` ou `allMarkdownRemark`
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor using a field prefixed by 'all', like `allMarkdownRemark` (meaning that it will return a list of nodes)
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL Explorer em uma nova guia do navegador em: `http://localhost:8000/___ graphql`
+3. Adicione uma consulta no editor usando um campo prefixado por 'all', como `allMarkdownRemark`(o que significa que ele retornará uma lista de _nodes_)
 
 ```graphql
 {
@@ -1447,7 +1447,7 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
 }
 ```
 
-4. Add a `filter` argument to the `allMarkdownRemark` field and give it an object with the fields you'd like to filter by. In this example, Markdown content is filtered by the `categories` attribute in frontmatter metadata. The next value is the operator: in this case `eq`, or equals, with a value of 'magical creatures'.
+4. Adicione um argumento `filter` ao campo `allMarkdownRemark` e atribua a ele um objeto com os campos pelos quais você deseja filtrar. Neste exemplo, o conteúdo do Markdown é filtrado pelo atributo `categories` nos metadados do frontmatter. O próximo valor é o operador: neste caso, `eq`, ou igual a um valor de 'criaturas mágicas'.
 
 ```graphql
 {
@@ -1464,14 +1464,14 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
 }
 ```
 
-5. Click the play button in the GraphiQL page. The data that matches the filter parameters should be returned, in this case only sourced Markdown files tagged with a category of 'magical creatures'.
+5. Clique no botão play na página GraphiQL. Os dados que correspondem aos parâmetros do filtro devem ser retornados; nesse caso, apenas os arquivos Markdown de origem marcados com uma categoria de 'criaturas mágicas'.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Gatsby GraphQL reference for filtering](/docs/graphql-reference/#filter)
-- [Complete list of possible operators](/docs/graphql-reference/#complete-list-of-possible-operators)
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- Live example:
+- [Referência do Gatsby GraphQL para filtragem](/docs/graphql-reference/#filter)
+- [Lista completa de possíveis operadores](/docs/graphql-reference/#complete-list-of-possible-operators)
+- Aprenda sobre [_nodes_ na API de dados GraphQL do Gatsby](/docs/node-interface/)
+- Exemplo:
 
 <iframe
   title="Filtering data"
