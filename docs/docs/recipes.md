@@ -1151,21 +1151,21 @@ export const query = graphql`
 - [Mais informações sobre o Drupal](/docs/sourcing-from-drupal)
 - [Tutorial: criar programaticamente páginas a partir de dados](/tutorial/part-seven/)
 
-## 6. Querying data
+## 6. Consultando dados
 
-### Querying data with a Page Query
+### Consultando dados com uma Consulta de Página
 
-You can use the `graphql` tag to query data in the pages of your Gatsby site. This gives you access to anything included in Gatsby's data layer, such as site metadata, source plugins, images, and more.
+Você pode usar a tag `graphql` para consultar dados nas páginas do seu site do Gatsby. Isso fornece acesso a qualquer coisa incluída na camada de dados do Gatsby, como metadados do site, plugins de origem, imagens e muito mais.
 
-#### Directions
+#### Instruções
 
-1. Import `graphql` from `gatsby`.
+1. Importe `graphql` de `gatsby`.
 
-2. Export a constant named `query` and set its value to be a `graphql` template with the query between two backticks.
+2. Exporte uma constante chamada `query` e defina seu valor como um modelo `graphql` com a consulta entre dois _backticks_.
 
-3. Pass in `data` as a prop to the component.
+3. Passe `data` como _prop_ para o componente.
 
-4. The `data` variable holds the queried data and can be referenced in JSX to output HTML.
+4. A variável `data` contém os dados consultados e pode ser referenciada no JSX para gerar um HTML.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -1197,11 +1197,11 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [GraphQL and Gatsby](/docs/graphql/): understanding the expected shape of your data
-- [More on querying data in pages with GraphQL](/docs/page-query/)
-- [MDN on Tagged Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like the ones used in GraphQL
+- [GraphQL e Gatsby](/docs/graphql/): Entendendo a forma esperada dos seus dados
+- [Mais sobre como consultar dados em páginas com o GraphQL](/docs/page-query/)
+- [MDN em Tagged Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) como os usados no GraphQL
 
 ### Querying data with the StaticQuery Component
 
