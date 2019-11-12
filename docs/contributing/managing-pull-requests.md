@@ -1,5 +1,5 @@
 ---
-title: Gerencie Pull Requests
+title: Gerenciando Pull Requests
 ---
 
 Se você deseja ajudar a gerenciar PRs no repositório Gatsby no Github, este documento é para você. Abordaremos as convenções preferidas pela equipe, o que foi verificado em diversos tipos de pull requests, permissões, e orientações de como deixar um comentário. 
@@ -16,7 +16,7 @@ Para introduzir o que são Pull Requests e como abrir um, confira o documento de
 
 ### Diretrizes Gerais
 
-Algumas coisas gerais para serem verificadas em um pull request:
+Algumas coisas gerais para serem verificadas em um pull request são:
 
 - Os links devem ser relativos, em vez de absolutos, ao vincular documentos (`/docs/some-reference/` ao invés de `https://www.gatsbyjs.org/docs/some-reference/`)
 - A linguagem deve ser inclusiva e acessível
@@ -32,52 +32,52 @@ Vamos examiná-las abaixo.
 
 #### Documentação
 
-Normalmente, procuramos o seguinte em [PRs que adicionam documentação](/contribuindo/docs-contribuicoes/): 
+Normalmente, procuramos o seguinte em [PRs que adicionam documentação](/contributing/docs-contributions/): 
 
 - Correção - se a documentação adicionada está tecnicamente correta
-- Estilo - se a linguagem escrita segue o nosso [guia de estilo](/contribuindo/guia-estilo-gatsby/)
+- Estilo - se a linguagem escrita segue o nosso [guia de estilo](/contributing/gatsby-style-guide/)
 - Cabeçalhos – se os níveis de cabeçalho em um documento começam com h2 (`##` no Markdown) e crescem em ordem, estabelecendo uma hierarquia de conteúdo acessível
-- Tipo e Formato - se os documentos e os materiais de aprendizagem estão alinhados com nossas recomendações e [modelos de documentos](/contribuindo/modelos-documentos/) 
+- Tipo e Formato - se os documentos e os materiais de aprendizagem estão alinhados com nossas recomendações e [modelos de documentos](/contributing/docs-templates/) 
 
 #### Código
 
-Para [PRs que adicionam código](/contribuindo/contribuicao-código/) (seja um recurso ou uma correção) procuramos o seguinte: 
+Para [PRs que adicionam código](/contributing/code-contributions/) (seja um recurso ou uma correção) procuramos o seguinte: 
 
 - Correção — se o código faz o que pensamos que faz
 - Testes — ao corrigir um bug ou adicionar um novo recurso, pode ser muito valioso adicionar testes. Embora mergeamos alguns PRs pequenos sem teste, mais frequentemente do que não, é bom ter testes afirmando o comportamento. Pode ser uma combinação de testes de unitários para um pacote específico, testes de captura instantânea e testes de ponta a ponta. O objetivo aqui é garantir que algo que está sendo corrigido ou adicionado _permanece_ corrigigo ou funcione da maneira que é esperada. Bons testes garantem isso.
-- Qualidade do código — concentre-se em alterações razoáveis que provavelmente melhorarão a manutenção, compreensão ou correção do código. Alterações estilísticas são tipicamente sugeridas por Prettier. Não escolha.
+- Qualidade do código — concentre-se em alterações razoáveis que provavelmente melhorarão a manutenção, compreensão ou correção do código. Alterações estilísticas são tipicamente sugeridas pelo Prettier. Não escolha.
 - Documentação no README do pacote se você estiver adicionando algo
 
-#### Iniciantes ou Mostruários de Site
+#### Starters ou Mostruários de Site
 
-Para PRs que adicionam um site ou um iniciante de mostruário, devemos verificar:
+Para PRs que adicionam um site ou um starter ao mostruário, devemos verificar:
 
-- Verifique se o site ou o iniciador foi criado com Gatsby
+- Verifique se o site ou o starter foi criado com Gatsby
 - Links — verifique se os links estão funcionando e acessíveis
 - Tags — verifique se as tags correspondem às tags existentes
 - Status em destaque — novos sites não devem ser marcados em destaque. 
-Os sites em destaque são ocasionalmente atualizados por um mebro da equipe Gatsby.
+Os sites em destaque são ocasionalmente atualizados por um membro da equipe Gatsby.
 
 #### Postagens no blog
 
 Para PRs que adicionam postagens, devemos verificar: 
 
 - Correção — se a documentação adicionada está tecnicamente correta
-- Estilo — se a linguagem escrita segue o nosso [guia de estilo](/contribuindo/guia-estilo-gatsby/)
+- Estilo — se a linguagem escrita segue o nosso [guia de estilo](/contributing/gatsby-style-guide/)
 - Assunto — as postagens do blog não devem ser puramente promocionais com spam ou inapropriadas. Um autor deve verificar com um membro da equipe do Gatsby se sua postagem é apropriada para o blog antes de criar seu PR.
-- Sensibilidade ao tempo — as postagens do blog levam mais tempo do que os documentos, especialmente porque são enterradas após a publicação de mais postagens. Se algo é continuamente relevante e mais próximo de um tutorial genérico, provavelmente deve estar na seção [Guias de referência](/documentos/guias/) dos documentos.
+- Sensibilidade ao tempo — as postagens do blog levam mais tempo do que os documentos, especialmente porque são enterradas após a publicação de mais postagens. Se algo é continuamente relevante e mais próximo de um tutorial genérico, provavelmente deve estar na seção [Guias de referência](/docs/guides/) dos documentos.
 
 ## Verificações automáticas
 
-Nosso repositório no [GitHub](https://github.com/gatsbyjs/gatsby) possui várias verificações de IC automatizadas que são executadas automaticamente para todos os PRs. Isso inclui testes, linting e até visualizações para o [gatsbyjs.org](https://www.gatsbyjs.org).
+Nosso repositório no [GitHub](https://github.com/gatsbyjs/gatsby) possui várias verificações de _CI_ (Integração Contínua) automatizadas que são executadas automaticamente para todos os PRs. Isso inclui testes, _linting_ e até visualizações para o [gatsbyjs.org](https://www.gatsbyjs.org).
 
 Queremos que todas essas verificações passem. Embora seja bom revisar um PR em andamento com algumas verificações com falha, um PR está pronto para ser enviado quando todos os testes forem aprovados.
 
-Vamos examinar alguns casos falhos comund e como corrigi-los:
+Vamos examinar alguns casos falhos comuns e como corrigi-los:
 
 ### Linting
 
-Conhecemos todo o código e documentação para obter consistência. Você pode achar que seu PR falhou na verificação do linting.
+Conhecemos todo o código e documentação para obter consistência. Você pode achar que seu PR falhou na verificação do _linting_.
 
 Se este for o seu PR e você tiver o código verificado em sua máquina, poderá executar:
 
@@ -85,17 +85,17 @@ Se este for o seu PR e você tiver o código verificado em sua máquina, poderá
 npm run format
 ```
 
-Isso reformatará automaticamente suas alterações para atender aos requisitos do linting. Não se esqueça de fazer git commit e push com suas novas alterações.
+Isso reformatará automaticamente suas alterações para atender aos requisitos do _linting_. Não se esqueça de fazer git commit e push com suas novas alterações.
 
 ## Outras verificações
 
 ### Testando localmente
 
-Embora tenhamos muitos _muitos_ testes em nosso repositório (que são executados automaticamente em cada confirmação), pode haver momentos em que exista um caso específico (ou cinco) que não seja coberto por eles.
+Embora tenhamos muitos _muitos_ testes em nosso repositório (que são executados automaticamente em cada commit), pode haver momentos em que exista um caso específico (ou cinco) que não seja coberto por eles.
 
 Nessas situações, testar a alteração localmente pode ser muito valioso.
 
-> 💡 Caso seja a primeira vez que você faça isso, talvez seja necessário [configurar seu ambiente de desenvolvimento](/contribuir/configurar-seu-ambiente-de-desenvolvimento).
+> 💡 Caso seja a primeira vez que você faça isso, talvez seja necessário [configurar seu ambiente de desenvolvimento](/contributing/setting-up-your-local-dev-environment).
 
 Testar pacotes não publicados localmente pode ser complicado. Temos apenas a ferramenta para facilitar isso.
 
@@ -111,7 +111,7 @@ Confira o arquivo [`gatsby-dev-cli` README](https://github.com/gatsbyjs/gatsby/t
 
 É bom ter mensagens de commit descritivas para que outras pessoas possam entender o que seu commit está fazendo. Gostamos de [commits convencionais](https://www.conventionalcommits.org/en/v1.0.0-beta.3).
 
-No entanto, os PRs são adicionados quando mergeados, de modo que as mensagens individuais de confirmação não são tão importantes quanto os títulos de PR.
+No entanto, os PRs são adicionados quando mergeados, de modo que as mensagens individuais de commit não são tão importantes quanto os títulos de PR.
 
 Vejamos alguns exemplos de bons e ruins títulos de PR:
 
@@ -147,7 +147,7 @@ Esses são títulos ruins de PR porque são genéricos, não comunicam a altera�
 
 Se você é um membro da organização [gatsbyjs](http://github.com/gatsbyjs) no GitHub, pode revisar um PR.
 
-> 💡 Ainda não é membro? Deseja [participar da contribuição](/contribuicao/como-contribuir/) para projetos de código aberto? Faça sua primeira contribuição e você será convidado automaticamentre!
+> 💡 Ainda não é membro? Deseja [participar da contribuição](/contributing/how-to-contribute/) para projetos open source? Faça sua primeira contribuição e você será convidado automaticamente!
 
 ### Quem pode aprovar um PR?
 
