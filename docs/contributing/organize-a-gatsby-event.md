@@ -6,7 +6,7 @@ Interessado em organizar um evento Gatsby? Nós queremos ajudar a desenvolver a 
 
 [Solicitar suporte a evento](https://airtable.com/shrpwc99yogJm9sfI)
 
-## O que constituí um evento Gatsby?
+## O que constitui um evento Gatsby?
 
 Um evento Gatsby organizado pela comunidade pode ser um encontro local, uma pequena conferência, um _lanche e estudos_ com colegas de trabalho ou um grande evento. É sua a decisão de quantas pessoas serão convidadas e quão casual será o ambiente. Você pode organizar um evento no seu local de trabalho ou na sua comunidade.
 
