@@ -37,15 +37,13 @@ exports.onCreateNode = ({ node }) => {
 }
 ```
 
-This `onCreateNode` function will be called by Gatsby whenever a new node is created (or updated).
+Esta função `onCreateNode` será chamada pelo Gatsby sempre que um novo nó é criado (ou atualizado).
 
-Stop and restart the development server. As you do, you'll see quite a few newly
-created nodes get logged to the terminal console.
+Pare e reinicie o servidor de desenvolvimento. Ao fazer isto, verá vários nós recem criados sendo registrados no console do terminal.
 
-Use this API to add the slugs for your markdown pages to `MarkdownRemark`
-nodes.
+Use esta API para adicionar os slugs das suas páginas de markdown para os nós `MarkdownRemark`.
 
-Change your function so it now only logs `MarkdownRemark` nodes.
+Modifique sua função para que agora apenas registre nós `MarkdownRemark`.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
