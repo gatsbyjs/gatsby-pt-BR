@@ -1354,22 +1354,22 @@ Para limitar os dados, você precisará de um site Gatsby com alguns nodes na ca
   height="300"
 />
 
-### Sorting with GraphQL
+### Classificando com GraphQL
 
-The ordering of your results can be specified with the GraphQL `sort` argument. You can specify which fields to sort by and the order to sort in.
+A ordem dos seus resultados pode ser especificada com o argumento do GraphQL  `sort`. Você pode especificar em quais campos classificar e a ordem em que serão classificados.
 
-For this recipe, you'll need a Gatsby site with a collection of nodes to sort in the GraphQL data layer. All sites have some nodes like `allSitePage` created automatically: more can be added by installing source plugins.
+Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para classificar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais podem ser adicionados instalando plugins de origem.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- Queryable fields prefixed with `all`, e.g. `allSitePage`
+- Um [site Gatsby](/docs/quick-start)
+- Campos consultáveis prefixados com `all`, por exemplo `allSitePage`
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor with the following fields on `allSitePage` to start off:
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL Explorer em uma nova guia do navegador em: `http://localhost:8000/___ graphql`
+3. Adicione uma consulta no editor com os seguintes campos em `allSitePage` para começar:
 
 ```graphql
 {
@@ -1384,7 +1384,7 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
 }
 ```
 
-4. Add a `sort` argument to the `allSitePage` field and give it an object with the `fields` and `order` attributes. The value for `fields` can be a field or an array of fields to sort by (this example uses the `path` field), the `order` can be either `ASC` or `DESC` for ascending and descending respectively.
+4. Adicione um argumento `sort` ao campo `allSitePage` e atribua a ele um objeto com os atributos `fields` e `order`. O valor para `fields` pode ser um campo ou uma matriz de campos para classificar (este exemplo usa o campo` path`); o `order` pode ser` ASC` ou `DESC` para crescente  e decrescente, respectivamente.
 
 ```graphql
 {
@@ -1400,13 +1400,13 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
 
 ```
 
-5. Click the play button in the GraphiQL page and the data returned will be sorted ascending by the `path` field.
+5. Clique no botão play na página GraphiQL e os dados retornados serão classificados em ordem crescente pelo campo `path`.
 
-#### Additional resources
+#### Conteúdo adicional
 
-- [Gatsby GraphQL reference for sorting](/docs/graphql-reference/#sort)
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- Live example:
+- [Referência do Gatsby GraphQL para classificação](/docs/graphql-reference/#sort)
+- Aprenda sobre [_nodes_ na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- Exemplo:
 
 <iframe
   title="Sorting data"
