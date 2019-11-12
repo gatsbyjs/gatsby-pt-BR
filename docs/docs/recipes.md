@@ -197,7 +197,7 @@ exports.createPages = ({ actions }) => {
 exports.createPages = ({ actions }) => {
   // highlight-start
   const { createPage } = actions
-  // pull in or use whatever data
+  // puxe ou use quaisquer dados
   const dogData = [
     {
       name: "Fido",
@@ -946,7 +946,7 @@ import React from "react"
 import { graphql } from "gatsby"
 
 export default function Template({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data // data.markdownRemark mantém seus dados da postagem
   const { frontmatter, html } = markdownRemark
   return (
     <div className="blog-post">
@@ -984,21 +984,21 @@ export const pageQuery = graphql`
 - [Guia para criar páginas de dados programaticamente](/docs/programmatically-create-pages-from-data/)
 - [Repositório de exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) para esta receita
 
-### Pulling data from an external source and creating pages without GraphQL
+### Pegando dados de uma fonte externa e criando páginas sem o GraphQL
 
-You don't have to use the GraphQL data layer to include data in pages, [though there are reasons why you should consider GraphQL](/docs/why-gatsby-uses-graphql/). You can use the node `createPages` API to pull unstructured data directly into Gatsby sites rather than through GraphQL and source plugins.
+Você não precisa usar a camada de dados GraphQL para incluir dados nas páginas, [embora haja razões pelas quais você deve considerar o GraphQL](/docs/why-gatsby-uses-graphql/). Você pode usar o _node API_ `createPages` para extrair dados não estruturados diretamente para sites do Gatsby, e não através do GraphQL e plugins de origem.
 
-In this recipe, you'll create dynamic pages from data fetched from the [PokéAPI’s REST endpoints](https://www.pokeapi.co/). The [full example](https://github.com/jlengstorf/gatsby-with-unstructured-data/) can be found on GitHub.
+Nesta receita, você criará páginas dinâmicas a partir de dados buscados no [PokéAPI’s REST endpoints](https://www.pokeapi.co/). O [exemplo completo](https://github.com/jlengstorf/gatsby-with-unstructured-data/) pode ser encontrado no GitHub.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A Gatsby Site with a `gatsby-node.js` file
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-- The [axios](https://www.npmjs.com/package/axios) package installed through npm
+- Um site Gatsby com um arquivo `gatsby-node.js`
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
+- O pacote [axios](https://www.npmjs.com/package/axios) instalado através do _npm_
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-node.js`, add the JavaScript code to fetch data from the PokéAPI and programmatically create an index page:
+1. No arquivo `gatsby-node.js`, adicione o código JavaScript para buscar dados da PokéAPI e crie programaticamente uma página de índice:
 
 ```js:title=gatsby-node.js
 const axios = require("axios")
@@ -1015,7 +1015,7 @@ const getPokemonData = names =>
 exports.createPages = async ({ actions: { createPage } }) => {
   const allPokemon = await getPokemonData(["pikachu", "charizard", "squirtle"])
 
-  // Create a page that lists Pokémon.
+  // Crie uma página que lista os Pokémon.
   createPage({
     path: `/`,
     component: require.resolve("./src/templates/all-pokemon.js"),
@@ -1024,7 +1024,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
 }
 ```
 
-2. Create a template to display Pokémon on the homepage:
+2. Crie um modelo para exibir Pokémon na página inicial:
 
 ```js:title=src/templates/all-pokemon.js
 import React from "react"
@@ -1044,14 +1044,14 @@ export default ({ pageContext: { allPokemon } }) => (
 )
 ```
 
-3. Run `gatsby develop` to fetch the data, build pages, and start the development server.
-4. View your homepage in a browser: `http://localhost:8000`
+3. Execute `gatsby develop` para buscar os dados, criar páginas e iniciar o servidor de desenvolvimento.
+4. Veja sua página inicial em um navegador: `http://localhost:8000`
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Full Pokemon data repo](https://github.com/jlengstorf/gatsby-with-unstructured-data/)
-- More on using unstructured data in [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/)
-- When and how to [query data with GraphQL](/docs/querying-with-graphql/) for more complex Gatsby sites
+- [Repositório Pokemon com dados completos](https://github.com/jlengstorf/gatsby-with-unstructured-data/)
+- Mais sobre o uso de dados não estruturados em [Usando o Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/)
+- Quando e como [consultar dados com o GraphQL](/docs/querying-with-graphql/) para sites mais complexos usando Gatsby
 
 ### Sourcing content from Drupal
 
@@ -1078,7 +1078,7 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: `https://your-website/`,
-        apiBase: `api`, // optional, defaults to `jsonapi`
+        apiBase: `api`, // opcional, o padrão é `jsonapi`
       },
     },
   ],
@@ -1602,7 +1602,7 @@ Images can be imported right into a JavaScript module with webpack. This process
 
 ```jsx:title=src/pages/index.js
 import React from "react"
-// Tell webpack this JS file uses this image
+// Informe ao webpack que este arquivo JS usa esta imagem
 import FiestaImg from "../assets/fiesta.jpg" // highlight-line
 ```
 
@@ -1613,7 +1613,7 @@ import React from "react"
 import FiestaImg from "../assets/fiesta.jpg"
 
 export default () => (
-  // The import result is the URL of your image
+  // O resultado da importação é o URL da sua imagem
   <img src={FiestaImg} alt="A dog smiling in a party hat" /> // highlight-line
 )
 ```
@@ -1775,7 +1775,7 @@ return (
     {data.allFile.edges.map(image => (
       <Img
         fluid={image.node.childImageSharp.fluid}
-        alt={image.node.base.split(".")[0]} // only use section of the file extension with the filename
+        alt={image.node.base.split(".")[0]} // use somente a seção da extensão do arquivo com o nome do arquivo
       />
     ))}
     // highlight-end
@@ -1907,7 +1907,7 @@ Post content...
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // query for all markdown
+  // consulta para todas as remarcações
 
   result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
@@ -1993,7 +1993,7 @@ The `gatsby-transformer-remark` plugin can transform Markdown files to HTML.
 
 ```js:title=gatsby-config.js
 plugins: [
-  // not shown: gatsby-source-filesystem for creating nodes to transform
+  // não mostrado: gatsby-source-filesystem para criar _nodes_ para transformar
   `gatsby-transformer-remark`
 ],
 ```
