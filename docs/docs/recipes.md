@@ -1053,23 +1053,23 @@ export default ({ pageContext: { allPokemon } }) => (
 - Mais sobre o uso de dados não estruturados em [Usando o Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/)
 - Quando e como [consultar dados com o GraphQL](/docs/querying-with-graphql/) para sites mais complexos usando Gatsby
 
-### Sourcing content from Drupal
+### Fornecendo conteúdo do Drupal
 
-#### Prerequisites
+#### Pré-requisitos
 
 - A [Gatsby site](/docs/quick-start)
 - A [Drupal](http://drupal.org) site
 - The [JSON:API module](https://www.drupal.org/project/jsonapi) installed and enabled on the Drupal site
 
-#### Directions
+#### Instruções
 
-1. Install the `gatsby-source-drupal` plugin.
+1. Instale o plugin `gatsby-source-drupal`.
 
 ```
 npm install --save gatsby-source-drupal
 ```
 
-2. Edit your `gatsby-config.js` file to enable the plugin and configure it.
+2. Edite seu arquivo `gatsby-config.js` para ativar o plugin e configurá-lo.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -1085,7 +1085,7 @@ module.exports = {
 }
 ```
 
-3. Start the development server with `gatsby develop`, and open the GraphiQL explorer at `http://localhost:8000/___graphql`. Under the Explorer tab, you should see new node types, such as `allBlockBlock` for Drupal blocks, and one for every content type in your Drupal site. For example, if you have a "Page" content type, it will be available as `allNodePage`. To query all "Page" nodes for their title and body, use a query like:
+3. Inicie o servidor de desenvolvimento com `gatsby develop` e abra o explorador GraphiQL em `http://localhost:8000/___ graphql`. Na guia Explorer, você verá novos tipos de _node_, como `allBlockBlock` para blocos Drupal, e um para cada tipo de conteúdo no site Drupal. Por exemplo, se você tiver um tipo de conteúdo "Página", ele estará disponível como `allNodePage`. Para consultar todos os _nodes_ "Página" por seu título e conteúdo, use uma consulta como:
 
 ```graphql
 {
@@ -1102,9 +1102,9 @@ module.exports = {
 }
 ```
 
-4. To use your Drupal data, create a new page in your Gatsby site at `src/pages/drupal.js`. This page will list all Drupal "Page" nodes.
+4. Para usar seus dados do Drupal, crie uma nova página no seu site do Gatsby em `src/pages/drupal.js`. Esta página listará todos os _nodes_ da "Página" do Drupal.
 
-_**Note:** the exact GraphQL schema will depend on your how Drupal instance is structured._
+_**Nota:** o esquema exato do GraphQL dependerá de como a instância do Drupal está estruturada._
 
 ```jsx:title=src/pages/drupal.js
 import React from "react"
@@ -1143,13 +1143,13 @@ export const query = graphql`
 }
 ```
 
-5. With the development server running, you can view the new page by visiting `http://localhost:8000/drupal`.
+5. Com o servidor de desenvolvimento em execução, você pode visualizar a nova página visitando `http://localhost:8000/drupal`.
 
-#### Additional Resources
+#### Conteúdos adicionais
 
-- [Using Decoupled Drupal with Gatsby](/blog/2018-08-13-using-decoupled-drupal-with-gatsby/)
-- [More on sourcing from Drupal](/docs/sourcing-from-drupal)
-- [Tutorial: Programmatically create pages from data](/tutorial/part-seven/)
+- [Usando Drupal desacoplado com Gatsby](/blog/2018-08-13-using-decoupled-drupal-with-gatsby/)
+- [Mais informações sobre o Drupal](/docs/sourcing-from-drupal)
+- [Tutorial: criar programaticamente páginas a partir de dados](/tutorial/part-seven/)
 
 ## 6. Querying data
 
