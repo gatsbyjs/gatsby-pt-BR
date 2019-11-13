@@ -1534,15 +1534,15 @@ Se você deseja executar duas consultas na mesma fonte de dados, pode usar um _a
   height="300"
 />
 
-### GraphQL Query Fragments
+### Fragmentos de Consulta GraphQL
 
-GraphQL fragments are shareable chunks of a query that can be reused.
+Os fragmentos do GraphQL são pedaços compartilháveis de uma consulta que pode ser reutilizada.
 
-You might want to use them to share multiple fields between queries or to colocate a component with the data it uses.
+Você pode usá-los para compartilhar vários campos entre as consultas ou para colocar um componente nos dados que ele usa.
 
-#### Directions
+#### Instruções
 
-1. Declare a `graphql` template string with a Fragment in it. The fragment should be made up of the keyword `fragment`, a name, the GraphQL type it is associated with (in this case of type `Site`, as demonstrated by `on Site`), and the fields that make up the fragment:
+1. Declare uma string de modelo `graphql` com um fragmento nela. O fragmento deve ser composto da palavra-chave `fragment`, um nome, o tipo GraphQL ao qual está associado (neste caso, do tipo `Site`, conforme demonstrado em `on Site`), e os campos que compõem o fragmento:
 
 ```jsx
 export const query = graphql`
@@ -1555,7 +1555,7 @@ export const query = graphql`
 `
 ```
 
-2. Now, include the fragment in a query for a field of the type specified by the fragment. This includes those fields without having to declare them all independently:
+2. Agora, inclua o fragmento em uma consulta para um campo do tipo especificado pelo fragmento. Isso inclui esses campos sem precisar declará-los todos de forma independente:
 
 ```diff
 export const pageQuery = graphql`
@@ -1569,16 +1569,16 @@ export const pageQuery = graphql`
 `
 ```
 
-**Note**: Fragments don't need to be imported in Gatsby. Exporting a query with a Fragment makes that Fragment available in _all_ queries in your project.
+**Nota**: Fragmentos não precisam ser importados no Gatsby. A exportação de uma consulta com um fragmento torna esse fragmento disponível em _todas_ consultas no seu projeto.
 
-Fragments can be nested inside other fragments, and multiple fragments can be used in the same query.
+Fragmentos podem ser aninhados dentro de outros fragmentos e vários fragmentos podem ser usados na mesma consulta.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Simple example repo using fragments](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-fragments)
-- [Gatsby GraphQL reference for fragments](/docs/graphql-reference/#fragments)
-- [Gatsby image fragments](/docs/gatsby-image/#image-query-fragments)
-- [Example repo with co-located data](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
+- [Exemplo simples de repositório usando fragmentos](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-fragments)
+- [Referência do Gatsby GraphQL para fragmentos](/docs/graphql-reference/#fragments)
+- [Fragmentos de imagem do Gatsby](/docs/gatsby-image/#image-query-fragments)
+- [Exemplo de repositório com dados co-localizados](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
 
 ## 7. Working with images
 
