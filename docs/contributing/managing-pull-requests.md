@@ -44,7 +44,7 @@ Normalmente, procuramos o seguinte em [PRs que adicionam documentação](/contri
 Para [PRs que adicionam código](/contributing/code-contributions/) (seja um recurso ou uma correção) procuramos o seguinte: 
 
 - Corretude — se o código faz o que pensamos que faz
-- Testes — ao corrigir um bug ou adicionar um novo recurso, pode ser muito valioso adicionar testes. Embora mergeamos alguns PRs pequenos sem teste, mais frequentemente do que não, é bom ter testes afirmando o comportamento. Pode ser uma combinação de testes de unitários para um pacote específico, testes de captura instantânea e testes de ponta a ponta. O objetivo aqui é garantir que algo que está sendo corrigido ou adicionado _permanece_ corrigigo ou funcione da maneira que é esperada. Bons testes garantem isso.
+- Testes — ao corrigir um bug ou adicionar um novo recurso, pode ser muito valioso adicionar testes. Embora mergeamos alguns PRs pequenos sem teste, mais frequentemente do que não, é bom ter testes afirmando o comportamento. Pode ser uma combinação de testes unitários para um pacote específico, testes de captura instantânea e testes de ponta a ponta. O objetivo aqui é garantir que algo que está sendo corrigido ou adicionado _permanece_ corrigido ou funcione da maneira que é esperada. Bons testes garantem isso.
 - Qualidade do código — concentre-se em alterações razoáveis que provavelmente melhorarão a manutenção, compreensão ou correção do código. Alterações estilísticas são tipicamente sugeridas pelo Prettier. Não escolha.
 - Documentação no README do pacote se você estiver adicionando algo
 
