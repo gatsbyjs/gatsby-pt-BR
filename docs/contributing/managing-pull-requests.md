@@ -22,7 +22,7 @@ Algumas coisas gerais para serem verificadas em um pull request são:
 - A linguagem deve ser inclusiva e acessível
 - Issues e RFCs (se tiver) devem estar vinculados ao endereço deste PR 
 
-> 💡 Ao olhar para um PR pela primeira vez, pode ajudar a ler sobre problemas vinculados ou [RFCs](/contributing/rfc-process/) (se houver) para entender o contexto sobre o que PR pretende adicionar ou corrigir.
+> 💡 Ao olhar para um PR pela primeira vez, pode ser de grande ajuda ler sobre problemas vinculados ou [RFCs](/contributing/rfc-process/) (se houver) para entender o contexto sobre o que o PR pretende adicionar ou corrigir.
 
 ### Tipos Específicos de Diretrizes
 
@@ -43,7 +43,7 @@ Normalmente, procuramos o seguinte em [PRs que adicionam documentação](/contri
 
 Para [PRs que adicionam código](/contributing/code-contributions/) (seja um recurso ou uma correção) procuramos o seguinte: 
 
-- Correção — se o código faz o que pensamos que faz
+- Corretude — se o código faz o que pensamos que faz
 - Testes — ao corrigir um bug ou adicionar um novo recurso, pode ser muito valioso adicionar testes. Embora mergeamos alguns PRs pequenos sem teste, mais frequentemente do que não, é bom ter testes afirmando o comportamento. Pode ser uma combinação de testes de unitários para um pacote específico, testes de captura instantânea e testes de ponta a ponta. O objetivo aqui é garantir que algo que está sendo corrigido ou adicionado _permanece_ corrigigo ou funcione da maneira que é esperada. Bons testes garantem isso.
 - Qualidade do código — concentre-se em alterações razoáveis que provavelmente melhorarão a manutenção, compreensão ou correção do código. Alterações estilísticas são tipicamente sugeridas pelo Prettier. Não escolha.
 - Documentação no README do pacote se você estiver adicionando algo
@@ -53,7 +53,7 @@ Para [PRs que adicionam código](/contributing/code-contributions/) (seja um rec
 Para PRs que adicionam um site ou um starter ao mostruário, devemos verificar:
 
 - Verifique se o site ou o starter foi criado com Gatsby
-- Links — verifique se os links estão funcionando e acessíveis
+- Links — verifique se os links estão acessíveis e funcionando
 - Tags — verifique se as tags correspondem às tags existentes
 - Status em destaque — novos sites não devem ser marcados em destaque. 
 Os sites em destaque são ocasionalmente atualizados por um membro da equipe Gatsby.
@@ -62,14 +62,14 @@ Os sites em destaque são ocasionalmente atualizados por um membro da equipe Gat
 
 Para PRs que adicionam postagens, devemos verificar: 
 
-- Correção — se a documentação adicionada está tecnicamente correta
+- Corretude — se a documentação adicionada está tecnicamente correta
 - Estilo — se a linguagem escrita segue o nosso [guia de estilo](/contributing/gatsby-style-guide/)
-- Assunto — as postagens do blog não devem ser puramente promocionais com spam ou inapropriadas. Um autor deve verificar com um membro da equipe do Gatsby se sua postagem é apropriada para o blog antes de criar seu PR.
+- Assunto — as postagens do blog não devem ser puramente promocionais, com spam ou inapropriadas. Um autor deve verificar com um membro da equipe do Gatsby se sua postagem é apropriada para o blog antes de criar seu PR.
 - Sensibilidade ao tempo — as postagens do blog levam mais tempo do que os documentos, especialmente porque são enterradas após a publicação de mais postagens. Se algo é continuamente relevante e mais próximo de um tutorial genérico, provavelmente deve estar na seção [Guias de referência](/docs/guides/) dos documentos.
 
 ## Verificações automáticas
 
-Nosso repositório no [GitHub](https://github.com/gatsbyjs/gatsby) possui várias verificações de _CI_ (Integração Contínua) automatizadas que são executadas automaticamente para todos os PRs. Isso inclui testes, _linting_ e até visualizações para o [gatsbyjs.org](https://www.gatsbyjs.org).
+Nosso repositório no [GitHub](https://github.com/gatsbyjs/gatsby) possui várias verificações de _CI_ (Integração Contínua) automatizadas que são executadas automaticamente para todos os PRs. Isso inclui testes, _linting_ e até pré-visualizações para o [gatsbyjs.org](https://www.gatsbyjs.org).
 
 Queremos que todas essas verificações passem. Embora seja bom revisar um PR em andamento com algumas verificações com falha, um PR está pronto para ser enviado quando todos os testes forem aprovados.
 
@@ -77,9 +77,9 @@ Vamos examinar alguns casos falhos comuns e como corrigi-los:
 
 ### Linting
 
-Conhecemos todo o código e documentação para obter consistência. Você pode achar que seu PR falhou na verificação do _linting_.
+Executamos o _lint_ em todo o código e documentação para obter consistência. Você pode acabar desconfiando que seu PR falhou na verificação do _linting_.
 
-Se este for o seu PR e você tiver o código verificado em sua máquina, poderá executar:
+Caso o PR seja seu e você tiver o código em sua máquina, você pode executar:
 
 ```shell
 npm run format
@@ -91,13 +91,13 @@ Isso reformatará automaticamente suas alterações para atender aos requisitos 
 
 ### Testando localmente
 
-Embora tenhamos muitos _muitos_ testes em nosso repositório (que são executados automaticamente em cada commit), pode haver momentos em que exista um caso específico (ou cinco) que não seja coberto por eles.
+Embora tenhamos muitos e _muitos_ testes em nosso repositório (que são executados automaticamente em cada commit), pode haver momentos em que exista um caso específico (ou cinco) que não seja coberto por eles.
 
 Nessas situações, testar a alteração localmente pode ser muito valioso.
 
 > 💡 Caso seja a primeira vez que você faça isso, talvez seja necessário [configurar seu ambiente de desenvolvimento](/contributing/setting-up-your-local-dev-environment).
 
-Testar pacotes não publicados localmente pode ser complicado. Temos apenas a ferramenta para facilitar isso.
+Testar pacotes não publicados localmente pode ser complicado. Felizmente Temos a ferramenta certa para facilitar isso.
 
 Diga olá para o seu novo melhor amigo, `gatsby-dev-cli`.
 
@@ -117,11 +117,11 @@ Vejamos alguns exemplos de bons e ruins títulos de PR:
 
 #### Bons títulos de PR ✅
 
-- tarefa(documentos): Corrija os links na página de contribuições
-- feat(gatsby): Adicionar suporte para manifestos por página
-- correções(gatsby-plugin-sharp): Verifique se as imagens existem antes de tentar converter
+- tarefa(documentos): Correção dos links na página de contribuições
+- feat(gatsby): adição do suporte para manifestos por página
+- correções(gatsby-plugin-sharp): Verificação das existência das imagens antes de tentar converter
 
-Estes são bons títulos de PR porque são concisos, específicos e usam o formato [commit convencional](https://www.conventionalcommits.org/en/v1.0.0-beta.3).
+Estes são bons títulos de PR porque são concisos, específicos e usam o formato [commit convencional](https://www.conventionalcommits.org/pt-br/v1.0.0-beta.4/).
 
 #### Títulos ruins de PR ❌
 
@@ -129,11 +129,11 @@ Estes são bons títulos de PR porque são concisos, específicos e usam o forma
 - adicionar suporte para meus novos cms
 - correção de bug no gatsby
 
-Esses são títulos ruins de PR porque são genéricos, não comunicam a alteração corretamente e  não usam o formato de commit convencional.
+Esses são títulos ruins de PR porque são genéricos, não comunicam a alteração corretamente e não usam o formato de commit convencional.
 
-## Dar Feedback
+## Fornecer Feedback
 
-- Seja _gentil_. Todos os dias somos mais fortes por causa da nossa comunidade, por isso a compaixão é importante. Queremos que todos os colaboradores se sintam bem-vindos. 
+- Seja _gentil_. Nos tornamos mais fortes a cada dia por causa da nossa comunidade, por isso a compaixão é importante. Queremos que todos os colaboradores se sintam bem-vindos. 
 - Faça sugestões usando o [Recurso de sugestões do GitHub](https://help.github.com/en/articles/commenting-on-a-pull-request#adding-line-comments-to-a-pull-request), se possível. Isso facilita a aceitação de suas sugestões para o autor.
 - Link para exemplos quando necessário.
 - Tente não fazer [exageros](http://bikeshed.com/) demais.
@@ -151,7 +151,7 @@ Se você é um membro da organização [gatsbyjs](http://github.com/gatsbyjs) no
 
 ### Quem pode aprovar um PR?
 
-Todo PR aberto no repositório precisa ser aprovado antes que possa  ser mergeado. Embora qualquer pessoa que seja membro da organização [gatsbyjs](http://github.com/gatsbyjs) possa aprovar um PR, para ser mergeado, ele precisa ser revisado por um membro da equipe Gatsby.
+Todo PR aberto no repositório precisa ser aprovado antes que possa ser mergeado. Embora qualquer pessoa que seja membro da organização [gatsbyjs](http://github.com/gatsbyjs) possa aprovar um PR, para ser mergeado, ele precisa ser revisado por um membro da equipe Gatsby.
 
 Normalmente é isso:
 
