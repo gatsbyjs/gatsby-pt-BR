@@ -1,5 +1,5 @@
 ---
-title: Crie págianas programaticamente a partir de dados
+title: Crie páginas programaticamente a partir de dados
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -412,21 +412,22 @@ E aí está! Um blog funcionando, mesmo que pequeno.
 
 ## Desafio
 
-Try playing more with the site. Try adding some more markdown files. Explore
-querying other data from the `MarkdownRemark` nodes and adding them to the
-frontpage or blog posts pages.
+Tente jogar mais com o site. Tente adicionar mais alguns arquivos markdown. 
+Explore consultando outros dados dos nós MarkdownRemark e adicione-os à 
+primeira página ou às páginas de postagens do blog.
 
-In this part of the tutorial, you've learned the foundations of building with
-Gatsby's data layer. You've learned how to _source_ and _transform_ data using
-plugins, how to use GraphQL to _map_ data to pages, and then how to build _page
-template components_ where you query for data for each page.
+Nesta parte do tutorial, você aprendeu os conceitos básicos de construção 
+com a camada de dados Gatsby. Você aprendeu como _originar_ e _transformar_ dados 
+usando plugins, como usar o GraphQL para mapear dados para páginas e, em 
+seguida, como criar _componentes de template de página_ onde você consulta 
+dados para cada página.
 
-## What's coming next?
+## O que vem depois?
 
-Now that you've built a Gatsby site, where do you go next?
+Agora que você criou um site Gatsby, para onde irá?
 
-- Share your Gatsby site on Twitter and see what other people have created by searching for #gatsbytutorial! Make sure to mention @gatsbyjs in your Tweet and include the hashtag #gatsbytutorial :)
-- You could take a look at some [example sites](https://github.com/gatsbyjs/gatsby/tree/master/examples#gatsby-example-websites)
-- Explore more [plugins](/docs/plugins/)
-- See what [other people are building with Gatsby](/showcase/)
-- Check out the documentation on [Gatsby's APIs](/docs/api-specification/), [nodes](/docs/node-interface/), or [GraphQL](/docs/graphql-reference/)
+- Compartilhe seu site Gatsby no Twitter e veja o que outras pessoas criaram pesquisando #gatsbytutorial! Não se esqueça de mencionar @gatsbyjs no seu Tweet e incluir a hashtag #gatsbytutorial :)
+- Você pode dar uma olhada em alguns [exemplos de site](https://github.com/gatsbyjs/gatsby/tree/master/examples#gatsby-example-websites)
+- Explore mais [plugins](/docs/plugins/)
+- Veja o que [outras pessoas estão criando com Gatsby](/showcase/)
+- Confira a documentação em [Gatsby's APIs](/docs/api-specification/), [nodes](/docs/node-interface/), ou [GraphQL](/docs/graphql-reference/)
