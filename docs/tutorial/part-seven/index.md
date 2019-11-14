@@ -412,7 +412,7 @@ E aí está! Um blog funcionando, mesmo que pequeno.
 
 ## Desafio
 
-Tente jogar mais com o site. Tente adicionar mais alguns arquivos markdown. 
+Tente brincar mais com o site. Tente adicionar mais alguns arquivos markdown. 
 Explore consultando outros dados dos nós MarkdownRemark e adicione-os à 
 primeira página ou às páginas de postagens do blog.
 
