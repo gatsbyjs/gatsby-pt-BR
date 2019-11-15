@@ -10,7 +10,7 @@ disableTableOfContents: true
 
 No tutorial anterior, você criou uma boa página index que consulta arquivos markdown e produziu uma lista de títulos e trechos de postagens de blog. Mas você não quer apenas ver trechos, você quer páginas reais para seus arquivos markdown.
 
-Você pode continuar criando paginas colocando componentes React em `src/pages`. Contudo, você agora vai aprender como _programaticamente_ criar páginas a partir de _dados_. Gatsby _não_ se limita a criar páginas a partir de arquivos como muitos geradores de sites estáticos. Gatsby te permite usar GraphQL para consultar seus _dados_ e _mapear_ os resultados da consulta para _páginas_ — tudo em tempo de compilação. Esta é uma ideia realmente poderosa. Você vai explorar suas implicações e formas de usa-lo no resto desta parte do tutorial.
+Você pode continuar criando páginas colocando componentes React em `src/pages`. Contudo, você agora vai aprender como _programaticamente_ criar páginas a partir de _dados_. Gatsby _não_ se limita a criar páginas a partir de arquivos como muitos geradores de sites estáticos. Gatsby te permite usar GraphQL para consultar seus _dados_ e _mapear_ os resultados da consulta para _páginas_ — tudo em tempo de compilação. Esta é uma ideia realmente poderosa. Você vai explorar suas implicações e formas de usá-lo no resto desta parte do tutorial.
 
 Vamos começar.
 
