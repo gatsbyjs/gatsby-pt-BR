@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> Este tutorial é parte de uma serie sobre a camada de dados do Gatsby. Certifique-se que você passou por [part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), e [part 6](/tutorial/part-six/) antes de continuar aqui.
+> Este tutorial é parte de uma série sobre a camada de dados do Gatsby. Certifique-se que você passou por [part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), e [part 6](/tutorial/part-six/) antes de continuar aqui.
 
 ## O que há neste tutorial?
 
@@ -21,7 +21,7 @@ Criar novas páginas tem dois passos:
 1.  Gerar a "rota" ou "slug" para a página.
 2.  Criar a página.
 
-_**Nota**: Geralmente as fontes de dados fornecem diretamente um slug ou nome de rota para o conteúdo — quando trabalha com um desses sistemas (por exemplo um CMS), você não precisa criar os slugs você mesmo como faz com os arquivos markdown._
+_**Nota**: Geralmente as fontes de dados fornecem diretamente um slug ou nome de rota para o conteúdo — quando trabalha com um desses sistemas (por exemplo um CMS), você não precisa criar os slugs você mesmo, como faz com os arquivos markdown._
 
 Para criar suas páginas markdown, você vai aprender a usar duas APIs Gatsby:
 [`onCreateNode`](/docs/node-apis/#onCreateNode) e
@@ -60,7 +60,7 @@ Você quer utilizar cada nome de arquivo markdown para criar o slug da página. 
 `pandas-and-bananas.md` se torne `/pandas-and-bananas/`. 
 Mas como você consegue o nome do arquivo do nó `MarkdownRemark`? Para consegui-lo, 
 você precisa _atravessar_ o "grafo do nó" até seu nó pai `File`, pois os nós `File` contêm 
-dados que precisa sobre os arquivos em disco. Para fazer isso, modifique sua função novamente:
+dados que você precisa sobre os arquivos em disco. Para fazer isso, modifique sua função novamente:
 
 ```javascript:title=gatsby-node.js
 // highlight-next-line
@@ -80,7 +80,7 @@ arquivos markdown impressos na tela do terminal.
 ![markdown-relative-path](markdown-relative-path.png)
 
 Agora terá que criar slugs. Como a lógica para criar slugs a partir dos nomes de 
-arquivo pode ser complicada, o plug-in `gatsby-source-filesystem` é fornecido com uma 
+arquivo pode ser complicada, o plugin `gatsby-source-filesystem` é fornecido com uma 
 função para criar slugs. Vamos usar isso.
 
 ```javascript:title=gatsby-node.js
@@ -104,7 +104,7 @@ criar as páginas.
 
 Para fazer isso, você usará uma função passada para sua implementação de API chamada 
 [`createNodeField`](/docs/actions/#createNodeField). Esta função permite você criar 
-campos adicionais em nós criados por outros plugins. Apenas o criador origianl de um 
+campos adicionais em nós criados por outros plugins. Apenas o criador original de um 
 nó pode modifica-lo diretamento—todos os outros plugins (incluindo seu `gatsby-node.js`)
 devem usar esta função para criar campos adicionais.
 
@@ -187,7 +187,7 @@ exports.createPages = async ({ graphql, actions }) => {
 // highlight-end
 ```
 
-Você adicionou uma implementação de [`createPages`](/docs/node-apis/#createPages) API 
+Você adicionou uma implementação de [`createPages`](/docs/node-apis/#createPages) da API 
 que Gatsby chama para que plugins possam adicionar páginas.
 
 Conforme foi mencionado na introdução desta parte do tutorial, os passos para criar páginas programaticamente são:
