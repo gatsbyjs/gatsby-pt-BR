@@ -8,15 +8,15 @@ disableTableOfContents: true
 
 ## O que há neste tutorial?
 
-No tutorial anterior, você criou uma boa página index que consulta arquivos markdown e produziu uma lista de títulos e trechos de postagens de blog. Mas você não quer apenas ver trechos, você quer páginas reais para seus arquivos markdown.
+No tutorial anterior, você criou uma boa página index que consulta arquivos markdown e produz uma lista de títulos e trechos de postagens de blog. Mas você não quer apenas ver trechos, você quer páginas reais para seus arquivos markdown.
 
 Você pode continuar criando páginas colocando componentes React em `src/pages`. Contudo, você agora vai aprender como _programaticamente_ criar páginas a partir de _dados_. Gatsby _não_ se limita a criar páginas a partir de arquivos como muitos geradores de sites estáticos. Gatsby te permite usar GraphQL para consultar seus _dados_ e _mapear_ os resultados da consulta para _páginas_ — tudo em tempo de compilação. Esta é uma ideia realmente poderosa. Você vai explorar suas implicações e formas de usá-lo no resto desta parte do tutorial.
 
 Vamos começar.
 
-## Criar slugs para páginas
+## Criando slugs para páginas
 
-Criar novas páginas tem dois passos:
+A criação de novas páginas tem dois passos:
 
 1.  Gerar a "rota" ou "slug" para a página.
 2.  Criar a página.
@@ -26,7 +26,7 @@ _**Nota**: Geralmente as fontes de dados fornecem diretamente um slug ou nome de
 Para criar suas páginas markdown, você vai aprender a usar duas APIs Gatsby:
 [`onCreateNode`](/docs/node-apis/#onCreateNode) e
 [`createPages`](/docs/node-apis/#createPages). 
-Estas são duas APIs workhorse que você verá sendo usadas em vários sites e plugins.
+Estas são duas robustas APIs que você verá sendo usadas em vários sites e plugins.
 
 Fazemos nosso melhor para que as APIs Gatsby sejam simples de implementar. 
 Para implementar uma API, exporte uma função com o nome da API de `gatsby-node.js`.
@@ -80,7 +80,7 @@ arquivos markdown impressos na tela do terminal.
 ![markdown-relative-path](markdown-relative-path.png)
 
 Agora terá que criar slugs. Como a lógica para criar slugs a partir dos nomes de 
-arquivo pode ser complicada, o plugin `gatsby-source-filesystem` é fornecido com uma 
+arquivo pode ser complicada, o plugin `gatsby-source-filesystem` é equipado com uma 
 função para criar slugs. Vamos usar isso.
 
 ```javascript:title=gatsby-node.js
@@ -94,10 +94,10 @@ exports.onCreateNode = ({ node, getNode }) => {
 ```
 
 A função lida com a localização do nó pai `File` juntamente com a criação do slug. 
-Execute o servidor de desenvolvimento novamente e deverá ver registrado no terminal 
+Execute o servidor de desenvolvimento novamente e você deverá ver registrado no terminal 
 dois slugs, um para cada arquivo markdown.
 
-Agora pode adicionar seus novos slugs diretamente nos nós `MarkdownRemark`. Isto é 
+Agora você pode adicionar seus novos slugs diretamente nos nós `MarkdownRemark`. Isto é 
 poderoso, já que qualquer dado que você adicione aos nós estará disponível para consulta 
 posterior com o GraphQL. Portanto, será fácil obter o slug quando chegar o momento de 
 criar as páginas.
@@ -105,7 +105,7 @@ criar as páginas.
 Para fazer isso, você usará uma função passada para sua implementação de API chamada 
 [`createNodeField`](/docs/actions/#createNodeField). Esta função permite você criar 
 campos adicionais em nós criados por outros plugins. Apenas o criador original de um 
-nó pode modifica-lo diretamento—todos os outros plugins (incluindo seu `gatsby-node.js`)
+nó pode modificá-lo diretamento—todos os outros plugins (incluindo seu `gatsby-node.js`)
 devem usar esta função para criar campos adicionais.
 
 ```javascript:title=gatsby-node.js
@@ -413,7 +413,7 @@ E aí está! Um blog funcionando, mesmo que pequeno.
 ## Desafio
 
 Tente brincar mais com o site. Tente adicionar mais alguns arquivos markdown. 
-Explore consultando outros dados dos nós MarkdownRemark e adicione-os à 
+Explore consultando outros dados dos nós `MarkdownRemark` e adicione-os à 
 primeira página ou às páginas de postagens do blog.
 
 Nesta parte do tutorial, você aprendeu os conceitos básicos de construção 
