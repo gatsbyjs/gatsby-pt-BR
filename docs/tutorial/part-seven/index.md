@@ -16,7 +16,7 @@ Vamos começar.
 
 ## Criando slugs para páginas
 
-A criação de novas páginas tem dois passos:
+A criação de novas páginas segue dois passos:
 
 1.  Gerar a "rota" ou "slug" para a página.
 2.  Criar a página.
