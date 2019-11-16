@@ -31,7 +31,7 @@ Estas são duas robustas APIs que você verá sendo usadas em vários sites e pl
 Fazemos nosso melhor para que as APIs Gatsby sejam simples de implementar. 
 Para implementar uma API, exporte uma função com o nome da API de `gatsby-node.js`.
 
-Então, aqui é onde você fará isto. Na raiz do seu site, crie um arquivo nomeado `gatsby-node.js`. Logo após adicione o seguinte.
+Então, aqui é onde você fará isto. Na raiz do seu site, crie um arquivo com o nome de `gatsby-node.js`. Logo após, adicione o seguinte.
 
 ```javascript:title=gatsby-node.js
 exports.onCreateNode = ({ node }) => {
@@ -41,7 +41,7 @@ exports.onCreateNode = ({ node }) => {
 
 Esta função `onCreateNode` será chamada pelo Gatsby sempre que um novo nó é criado (ou atualizado).
 
-Pare e reinicie o servidor de desenvolvimento. Ao fazer isto, verá vários nós recem criados sendo registrados no console do terminal.
+Pare e reinicie o servidor de desenvolvimento. Ao fazer isto, verá vários nós recém-criados sendo registrados no console do terminal.
 
 Use esta API para adicionar os slugs das suas páginas de markdown para os nós `MarkdownRemark`.
 
@@ -58,8 +58,8 @@ exports.onCreateNode = ({ node }) => {
 ```
 Você quer utilizar cada nome de arquivo markdown para criar o slug da página. Para que 
 `pandas-and-bananas.md` se torne `/pandas-and-bananas/`. 
-Mas como você consegue o nome do arquivo do nó `MarkdownRemark`? Para consegui-lo, 
-você precisa _atravessar_ o "grafo do nó" até seu nó pai `File`, pois os nós `File` contêm 
+Mas como conseguir o nome do arquivo do nó `MarkdownRemark`? Para consegui-lo, 
+você precisa _atravessar_ o "grafo do nó" até seu nó pai `File`, pois os nós `File` contêm os 
 dados que você precisa sobre os arquivos em disco. Para fazer isso, modifique sua função novamente:
 
 ```javascript:title=gatsby-node.js
