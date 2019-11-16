@@ -591,7 +591,7 @@ module.exports = {
 
 3. Se você ainda não possui uma, crie uma página no seu site do Gatsby em `src/pages/emotion-sample.js`.
 
-Importar o pacote principal de `css` do Emotion. Você pode usar o prop `css` para adicionar [estilos de objetos do Emotion](https://emotion.sh/docs/object-styles) a qualquer elemento dentro de um componente:
+Importe o pacote principal de `css` do Emotion. Você pode usar o prop `css` para adicionar [estilos de objetos do Emotion](https://emotion.sh/docs/object-styles) a qualquer elemento dentro de um componente:
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -1251,7 +1251,7 @@ O _hook_ `useStaticQuery` pega uma consulta GraphQL e retorna os dados solicitad
 #### Pré-requisitos
 
 - Você precisará do React e ReactDOM 16.8.0 ou posterior (manter o Gatsby atualizado)
-- Leitura recomendada: as [regras de React Hooks](https://reactjs.org/docs/hooks-rules.html)
+- Leitura recomendada: as [regras de React Hooks](https://pt-br.reactjs.org/docs/hooks-rules.html)
 
 #### Instruções
 
@@ -1299,7 +1299,7 @@ export default NonPageComponent
 
 Ao consultar dados com o GraphQL, você pode limitar o número de resultados retornados com um número específico. Isso é útil se você precisar apenas de alguns dados ou [paginar dados](/docs/adding-pagination/).
 
-Para limitar os dados, você precisará de um site Gatsby com alguns nodes na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como `allSitePage` e `sitePage` criados automaticamente: mais pode ser adicionado instalando plugins de origem como `gatsby-source-filesystem` em `gatsby-config.js`.
+Para limitar os dados, você precisará de um site Gatsby com alguns nodes na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como `allSitePage` e `sitePage` criados automaticamente: mais _nodes_ podem ser adicionados instalando plugins de origem como `gatsby-source-filesystem` em `gatsby-config.js`.
 
 #### Pré-requisitos
 
@@ -1358,7 +1358,7 @@ Para limitar os dados, você precisará de um site Gatsby com alguns nodes na ca
 
 A ordem dos seus resultados pode ser especificada com o argumento do GraphQL  `sort`. Você pode especificar em quais campos classificar e a ordem em que serão classificados.
 
-Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para classificar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais podem ser adicionados instalando plugins de origem.
+Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para classificar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais _nodes_ podem ser adicionados instalando plugins de origem.
 
 #### Pré-requisitos
 
@@ -1419,7 +1419,7 @@ Para esta receita, você precisará de um site Gatsby com uma coleção de _node
 
 Os resultados consultados podem ser filtrados com operadores como `eq` (igual), `ne` (não igual), `in` e `regex` em campos especificados.
 
-Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para filtrar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais pode ser adicionado instalando plugins de fonte e transformador, como `gatsby-source-filesystem` e `gatsby-transformer-comment` em `gatsby-config.js` para produzir `allMarkdownRemark `.
+Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para filtrar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais _nodes_  podem ser adicionados instalando plugins de fonte e transformadores, como `gatsby-source-filesystem` e `gatsby-transformer-comment` em `gatsby-config.js` para produzir `allMarkdownRemark `.
 
 #### Pré-requisitos
 
