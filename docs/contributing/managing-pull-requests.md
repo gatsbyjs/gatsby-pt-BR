@@ -97,7 +97,7 @@ Nessas situações, testar a alteração localmente pode ser muito valioso.
 
 > 💡 Caso seja a primeira vez que você faça isso, talvez seja necessário [configurar seu ambiente de desenvolvimento](/contributing/setting-up-your-local-dev-environment).
 
-Testar pacotes não publicados localmente pode ser complicado. Felizmente Temos a ferramenta certa para facilitar isso.
+Testar pacotes não publicados localmente pode ser complicado. Felizmente temos a ferramenta certa para facilitar isso.
 
 Diga olá para o seu novo melhor amigo, `gatsby-dev-cli`.
 
