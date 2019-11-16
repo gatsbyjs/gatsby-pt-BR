@@ -16,7 +16,7 @@ Existem várias formas que o Gatsby pode apoiar o seu evento:
 
 - Divulgar o evento na [Página de Eventos do Gatsbyjs.org](/contributing/events)
 - Divulgar o evento pelo [Twitter do Gatsby](https://twitter.com/gatsbyjs)
-- US$ 300 de despesas de alimentação 
+- US$ 300 para despesas com alimentação
 - Adesivos Gatsby grátis da [Loja Gatsby](https://store.gatsbyjs.org/)
 - 20% de desconto na [Loja Gatsby](https://store.gatsbyjs.org/) para seus participantes
 - Palestrante membro do time Gatsby (quando disponível)
