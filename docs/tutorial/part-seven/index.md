@@ -4,7 +4,7 @@ typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> Este tutorial é parte de uma série sobre a camada de dados do Gatsby. Certifique-se que você passou por [part 4](/tutorial/part-four/), [part 5](/tutorial/part-five/), e [part 6](/tutorial/part-six/) antes de continuar aqui.
+> Este tutorial é parte de uma série sobre a camada de dados do Gatsby. Certifique-se que você passou pela [parte 4](/tutorial/part-four/), [parte 5](/tutorial/part-five/), e [parte 6](/tutorial/part-six/) antes de continuar aqui.
 
 ## O que há neste tutorial?
 
