@@ -25,7 +25,7 @@ Existem várias formas que o Gatsby pode apoiar o seu evento:
 
 - O evento precisa ter, no mínimo, metade do conteúdo focado em Gatsby ou em tópicos relacionados ao Gatsby (como JAMstack)
 - Eventos localizados nos Estados Unidos e Internacionalmente são elegíveis para receber suporte
-- Se você tiver interesse nos US$300 de despesas de alimentação será necessário enviar um recibo das despesas
+- Se você tiver interesse nos US$300 para despesas com alimentação será necessário enviar um recibo das despesas
 - O evento precisa estar de acordo com o [Código de Conduta do Gatsby](/contributing/code-of-conduct/) e seguir o [Manual de Identidade Visual do Gatsby](/guidelines/logo/)
 
 ## Como você se qualifica para receber suporte do Gatsby?
