@@ -277,4 +277,4 @@ _Desafio:_ Com os poderes do seu novo "componente de layout", tente adicionar ca
 
 ## O que vem a seguir?
 
-Continue na [parte quatro do tutorial](/tutorial/part-four/) onde você irá começar a aprender sobre a camada de dados do Gatsby e como criar páginas programaticamente.
+Siga para a [parte quatro do tutorial](/tutorial/part-four/) onde você irá começar a aprender sobre a camada de dados do Gatsby e como criar páginas programaticamente.
