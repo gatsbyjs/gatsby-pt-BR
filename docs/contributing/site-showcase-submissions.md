@@ -8,7 +8,7 @@ Quer enviar um site para o [Site Showcase](/showcase/)? Siga estas instruções.
 
 São basicamente 3 passos:
 
-1. Se esse é sua primeira contribuição para o repositório open source do Gatsby, siga as [Instruções de contribuição](/contributing/code-contributions/).
+1. Se essa é sua primeira contribuição para o repositório open source do Gatsby, siga as [Instruções de contribuição](/contributing/code-contributions/).
 
 2. Se existe a possíbilidade de alguém já ter submetido o site, certifique-se que ninguém tenha submetido procurando nos PRs existentes: https://github.com/gatsbyjs/gatsby/pulls
 
@@ -17,7 +17,7 @@ São basicamente 3 passos:
 ```yaml:title=docs/sites.yml
 - title: Title of the Site
 
-  # esta URL que é vinculada no showcase
+  # esta é a URL que é vinculada no showcase
   main_url: https://titleofthesite.com
 
   # esta URL é utilizada para gerar a captura da tela
@@ -44,7 +44,7 @@ São basicamente 3 passos:
   featured: false
 ```
 
-Use o seguinte templete para garantir que os campos obrigatórios estão preenchidos:
+Use o seguinte template para garantir que os campos obrigatórios estão preenchidos:
 
 ```yaml:title=docs/sites.yml
 - title: (obrigatório)
@@ -65,7 +65,7 @@ Use o seguinte templete para garantir que os campos obrigatórios estão preench
 ### Categorias
 
 
-Atualmente, categorias incluem dois _tipos de site_ (estrutura) e o _conteúdo do site_. Por ora, você deverá colocar todas em "categorias" na sua submissão. As razões pelas quais esses dois estão em listas separadas é para mostrar que você pode ter um site para marketing de uma escola (tipo do site seria marketing, e conteúdo seria educação) ou um site que entrega ensino de marketing online (tipo de site seria educação e conteúdo seria marketing).
+Atualmente, entendemos por categorias _tipos de site_ (estrutura) e _conteúdos do site_. Por ora, você deverá colocar todas em "categorias" na sua submissão. As razões pelas quais esses dois estão em listas separadas é para mostrar que você pode ter um site para marketing de uma escola (tipo do site seria marketing, e conteúdo seria educação) ou um site que entrega ensino de marketing online (tipo de site seria educação e conteúdo seria marketing).
 
 
 #### Tipo de site
@@ -81,7 +81,7 @@ Atualmente, categorias incluem dois _tipos de site_ (estrutura) e o _conteúdo d
 
 #### Conteúdo do site
 
-Algumas notas sobre o conteúdo do site: uma pergunta que é comum: "todos os sites Gatsby não estão tecnicamente na categoria "_web development_"? Bem, não, por que esta categoria significa que o _conteúdo_ do site deveria ser sobre desenvolvimento web, como [ReactJS](https://reactjs.org/). Ainda, a diferença entre tecnologia e desenvolvimento web é como isto. [Cardiogram](https://cardiogr.am/) é uma tecnologia, enquanto [ReactJS](https://reactjs.org/) é desenvolvimento web.
+Algumas notas sobre o conteúdo do site: uma pergunta que é comum: "todos os sites Gatsby não estão tecnicamente na categoria "_web development_"? Bem, não, por que esta categoria significa que o _conteúdo_ do site deveria ser sobre desenvolvimento web, como [ReactJS](https://reactjs.org/). Ainda, a diferença entre `technology` e `web development` pode ser explicada da seguinte maneira: [Cardiogram](https://cardiogr.am/) se encaixa na categoria `technology`, enquanto [ReactJS](https://reactjs.org/) se encaixa em `web development`.
 
 - Agency
 - Education
