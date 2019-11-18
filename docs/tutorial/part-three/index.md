@@ -66,7 +66,7 @@ module.exports = {
 }
 ```
 
-O `gatsby-config.js` é outro arquivo especial que o Gatsby irá reconhecer automaticamente. É nesse arquivo que você adiciona plugins e outras configrações do site.
+O `gatsby-config.js` é outro arquivo especial que o Gatsby irá reconhecer automaticamente. É nesse arquivo que você adiciona plugins e outras configurações do site.
 
 > Se deseja saber mais, confira a [documentação sobre gatsby-config.js](/docs/gatsby-config/).
 
@@ -110,7 +110,7 @@ export default () => (
 )
 ```
 
-Agora seu site deve se paracer com isso:
+Agora seu site deve se parecer com isso:
 
 ![no-layout](no-layout.png)
 
