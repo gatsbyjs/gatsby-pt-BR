@@ -167,8 +167,9 @@ Tentamos garantir que qualquer RFC que aceitamos seja aceito na reunião semanal
 
 <!-- We try to make sure that any RFC that we accept is accepted at the weekly team meeting. Every accepted feature should have a core team champion, who will represent the feature and its progress. -->
 
-**O processo RFC de Gatsby deve sua inspiração ao [processo RFC do React], [processo RFC do Yarn], [processo RFC Rust] e [processo RFC Ember]**
-**Gatsby's RFC process owes its inspiration to the [React RFC process], [Yarn RFC process], [Rust RFC process], and [Ember RFC process]**
+**O processo RFC de Gatsby deve sua inspiração ao [processo RFC do React], [processo RFC do Yarn], [processo RFC do Rust] e [processo RFC do Ember]**
+
+<!-- **Gatsby's RFC process owes its inspiration to the [React RFC process], [Yarn RFC process], [Rust RFC process], and [Ember RFC process]** -->
 
 [processo rfc do react]: https://github.com/reactjs/rfcs
 [processo rfc do yarn]: https://github.com/yarnpkg/rfcs
