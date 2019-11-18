@@ -1,5 +1,5 @@
 ---
-title: Submit to Site Showcase
+title: Envie para o _Site Showcase_
 ---
 
 Quer enviar um site para o [Site Showcase](/showcase/)? Siga estas instruções.
