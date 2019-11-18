@@ -133,29 +133,49 @@ Depois que uma RFC se torna ativa, os autores podem implementá-la e submeter o 
 
 <!-- Once an RFC becomes active, then authors may implement it and submit the feature as a pull request to the Gatsby repo. Becoming 'active' is not a rubber stamp, and in particular still does not mean the feature will ultimately be merged; it does mean that the core team has agreed to it in principle and are amenable to merging it. -->
 
-Furthermore, the fact that a given RFC has been accepted and is 'active' implies nothing about what priority is assigned to its implementation, nor whether anybody is currently working on it.
+Além disso, o fato de uma determinada RFC ter sido aceita e está 'ativa' não implica nada sobre qual prioridade é atribuída à sua implementação, nem se alguém está atualmente trabalhando nela.
+
+<!-- Furthermore, the fact that a given RFC has been accepted and is 'active' implies nothing about what priority is assigned to its implementation, nor whether anybody is currently working on it. -->
+
+<!-- Modificações nas RFCs ativas podem ser feitas nos PRs seguintes. Nós nos esforçamos para escrever cada RFC de uma maneira que reflita o design final do recurso; mas a natureza do processo significa que não podemos esperar que todas as RFCs mescladas reflitam realmente qual será o resultado final no momento do próximo grande lançamento; portanto, tentamos manter cada documento RFC um pouco sincronizado com o recurso de idioma conforme planejado, rastreando essas alterações por meio de solicitações de recebimento de solicitação ao documento. -->
 
 Modifications to active RFCs can be done in followup PRs. We strive to write each RFC in a manner that it will reflect the final design of the feature; but the nature of the process means that we cannot expect every merged RFC to actually reflect what the end result will be at the time of the next major release; therefore we try to keep each RFC document somewhat in sync with the language feature as planned, tracking such changes via followup pull requests to the document.
 
-## Implementing an RFC
+## Implementando uma RFC
 
-The author of an RFC is not obligated to implement it. Of course, the RFC
-author (like any other developer) is welcome to post an implementation for
-review after the RFC has been accepted.
+<!-- ## Implementing an RFC -->
 
-If you are interested in working on the implementation for an 'active' RFC, but
+O autor de uma RFC não é obrigado a implementá-la. Obviamente, o autor da RFC (como qualquer outro desenvolvedor) pode publicar uma implementação para revisão após a aceitação da RFC.
+
+<!-- The author of an RFC is not obligated to implement it. Of course, the RFC author (like any other developer) is welcome to post an implementation for review after the RFC has been accepted. -->
+
+Se você estiver interessado em trabalhar na implementação de uma RFC 'ativa', mas não puder determinar se alguém já está trabalhando nela, não hesite em perguntar (por exemplo, deixando um comentário sobre o problema associado).
+
+<!-- If you are interested in working on the implementation for an 'active' RFC, but
 cannot determine if someone else is already working on it, feel free to ask
-(e.g. by leaving a comment on the associated issue).
+(e.g. by leaving a comment on the associated issue). -->
 
-## Reviewing RFCs
+## Revisando RFCs
 
-Each week the team will attempt to review some set of open RFC pull requests.
+<!-- ## Reviewing RFCs -->
 
-We try to make sure that any RFC that we accept is accepted at the weekly team meeting. Every accepted feature should have a core team champion, who will represent the feature and its progress.
+A cada semana, a equipe tenta revisar algum conjunto de _pull requests_ de RFC abertas.
 
+<!-- Each week the team will attempt to review some set of open RFC pull requests. -->
+
+Tentamos garantir que qualquer RFC que aceitamos seja aceito na reunião semanal da equipe. Todo recurso aceito deve ter um ("core team champion")(?), que irá representá-lo, bem como o seu progresso.
+
+<!-- We try to make sure that any RFC that we accept is accepted at the weekly team meeting. Every accepted feature should have a core team champion, who will represent the feature and its progress. -->
+
+**O processo RFC de Gatsby deve sua inspiração ao [processo RFC do React], [processo RFC do Yarn], [processo RFC Rust] e [processo RFC Ember]**
 **Gatsby's RFC process owes its inspiration to the [React RFC process], [Yarn RFC process], [Rust RFC process], and [Ember RFC process]**
 
-[react rfc process]: https://github.com/reactjs/rfcs
+[processo rfc do react]: https://github.com/reactjs/rfcs
+[processo rfc do yarn]: https://github.com/yarnpkg/rfcs
+[processo rfc do rust]: https://github.com/rust-lang/rfcs
+[processo rfc do ember]: https://github.com/emberjs/rfcs
+
+<!-- [react rfc process]: https://github.com/reactjs/rfcs
 [yarn rfc process]: https://github.com/yarnpkg/rfcs
 [rust rfc process]: https://github.com/rust-lang/rfcs
-[ember rfc process]: https://github.com/emberjs/rfcs
+[ember rfc process]: https://github.com/emberjs/rfcs -->
