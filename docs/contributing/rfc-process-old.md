@@ -1,39 +1,29 @@
 ---
-title: Processo RFC
+title: RFC process
 ---
 
-## O que é o processo RFC?
+## What is the RFC process?
 
-Muitas mudanças, incluindo correções de bugs e melhorias na documentação, podem ser implementadas e revistas através do fluxo de trabalho normal do GitHub _pull request_.
+Many changes, including bug fixes and documentation improvements can be
+implemented and reviewed via the normal GitHub pull request workflow.
 
-<!-- Many changes, including bug fixes and documentation improvements can be
-implemented and reviewed via the normal GitHub pull request workflow. -->
+Some changes, however, are "substantial", and we ask that these be put through
+a bit of a design process and produce a consensus among the Gatsby core team.
 
-Algumas mudanças, no entanto, são "substancias", e por esse motivo, solicitamos que sejam submetidas a um processo de _design_, de modo a produzir um consenso entre os participantes da equipe principal do Gatsby.
+The "RFC" (request for comments) process is intended to provide a consistent
+and controlled path for new features to enter the project.
 
-<!-- Some changes, however, are "substantial", and we ask that these be put through
-a bit of a design process and produce a consensus among the Gatsby core team. -->
+[Active RFC List](https://github.com/gatsbyjs/rfcs/pulls)
 
-O processo "RFC" (em português, "solicitação de comentários") visa fornecer um caminho consistente e controlado para que novos recursos sejam inseridos no projeto.
+Gatsby is still **actively developing** this process, and it will still change
+as more features are implemented and the community settles on specific
+approaches to feature development.
 
- <!-- 
-The "RFC" (request for comments) process is intended to provide a consistent and controlled path for new features to enter the project. -->
+## When to follow this process
 
-[Lista RFC Ativa](https://github.com/gatsbyjs/rfcs/pulls)
-
-<!-- [Active RFC List](https://github.com/gatsbyjs/rfcs/pulls) -->
-
-Gatsby ainda está **desenvolvendo ativamente** esse processo, e ainda o mudará à medida que mais recursos forem implementados e a comunidade optar por abordagens específicas para o desenvolvimento de recursos.
-
-<!-- Gatsby is still **actively developing** this process, and it will still change as more features are implemented and the community settles on specific approaches to feature development.  -->
-
-## Quando seguir esse processo
-
-<!-- ## When to follow this process -->
-
-Você deve considerar usar esse processo se pretende fazer alterações "substanciais" no Gatsby ou em sua documentação. Alguns exemplos que se beneficiariam de uma RFC são:
-
-<!-- You should consider using this process if you intend to make "substantial" changes to Gatsby or its documentation. Some examples that would benefit from an RFC are: -->
+You should consider using this process if you intend to make "substantial"
+changes to Gatsby or its documentation. Some examples that would benefit from
+an RFC are:
 
 - A new feature that creates new API surface area, and would
   require a feature flag if introduced.
@@ -85,17 +75,34 @@ Gatsby.
 - RFCs that are candidates for inclusion in Gatsby will enter a "final comment
   period" lasting 3 calendar days. The beginning of this period will be signaled
   with a comment and tag on the RFCs pull request.
-- An RFC can be modified based upon feedback from the team and community. Significant modifications may trigger a new final comment period.
-- An RFC may be rejected by the team after public discussion has settled and comments have been made summarizing the rationale for rejection. A member of the team should then close the RFCs associated pull request.
-- An RFC may be accepted at the close of its final comment period. A team member will merge the RFCs associated pull request, at which point the RFC will become 'active'.
+- An RFC can be modified based upon feedback from the team and community.
+  Significant modifications may trigger a new final comment period.
+- An RFC may be rejected by the team after public discussion has settled
+  and comments have been made summarizing the rationale for rejection. A member
+  of the team should then close the RFCs associated pull request.
+- An RFC may be accepted at the close of its final comment period. A team
+  member will merge the RFCs associated pull request, at which point the RFC will
+  become 'active'.
 
 ## The RFC life-cycle
 
-Once an RFC becomes active, then authors may implement it and submit the feature as a pull request to the Gatsby repo. Becoming 'active' is not a rubber stamp, and in particular still does not mean the feature will ultimately be merged; it does mean that the core team has agreed to it in principle and are amenable to merging it.
+Once an RFC becomes active, then authors may implement it and submit the
+feature as a pull request to the Gatsby repo. Becoming 'active' is not a rubber
+stamp, and in particular still does not mean the feature will ultimately be
+merged; it does mean that the core team has agreed to it in principle and are
+amenable to merging it.
 
-Furthermore, the fact that a given RFC has been accepted and is 'active' implies nothing about what priority is assigned to its implementation, nor whether anybody is currently working on it.
+Furthermore, the fact that a given RFC has been accepted and is 'active'
+implies nothing about what priority is assigned to its implementation, nor
+whether anybody is currently working on it.
 
-Modifications to active RFCs can be done in followup PRs. We strive to write each RFC in a manner that it will reflect the final design of the feature; but the nature of the process means that we cannot expect every merged RFC to actually reflect what the end result will be at the time of the next major release; therefore we try to keep each RFC document somewhat in sync with the language feature as planned, tracking such changes via followup pull requests to the document.
+Modifications to active RFCs can be done in followup PRs. We strive to write
+each RFC in a manner that it will reflect the final design of the feature; but
+the nature of the process means that we cannot expect every merged RFC to
+actually reflect what the end result will be at the time of the next major
+release; therefore we try to keep each RFC document somewhat in sync with the
+language feature as planned, tracking such changes via followup pull requests
+to the document.
 
 ## Implementing an RFC
 
