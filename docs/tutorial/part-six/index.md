@@ -152,7 +152,7 @@ Agora a página deve se parecer com:
 
 ![frontpage](frontpage.png)
 
-Mas sua unica publicação parece estar um pouco solitária. Então, vamos adicionar outra em 
+Mas sua única publicação parece estar um pouco solitária. Então, vamos adicionar outra em 
 `src/pages/pandas-and-bananas.md`
 
 ```markdown:title=src/pages/pandas-and-bananas.md
@@ -170,7 +170,7 @@ Os Pandas comem bananas? Veja este pequeno vídeo que mostra que sim! Pandas par
 
 Parece ótimo! Exceto... a ordem das publicações está errada.
 
-Mas isso é fácil de resolver. Ao consultar uma conexão de algum tipo, você pode passar uma variedade de parâmetros para a consulta GraphQL. Você pode ordenar (`sort`) e filtrar (`filter`) nós, defina quantos nós devem ser ignorados (`skip`), e escolha o limite (`limit`) de quandos nós recuperar. Com esse poderosos conjunto de operadores, você pode selecionar qualquer data que você quiser no formato que você precisa.
+Mas isso é fácil de resolver. Ao consultar uma conexão de algum tipo, você pode passar uma variedade de parâmetros para a consulta GraphQL. Você pode ordenar (`sort`) e filtrar (`filter`) nós, defina quantos nós devem ser ignorados (`skip`), e escolha o limite (`limit`) de quantos nós deseja buscar. Com esse poderosos conjunto de operadores, você pode selecionar qualquer data que você quiser no formato que você precisa.
 
 Na consulta GraphQL da página de índice, mude `allMarkdownRemark` para `allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC })`. _Nota: Há 3 sublinhados entre `frontmatter` and `date`._ Salve isso e a ordem de classificação deve ser corrigida.
 
@@ -180,7 +180,7 @@ Para obter mais informação sobre nossos operadores de consulta, explore nosso 
 
 ## Desafio
 
-Tente criar uma nova página contendo um publicações do blog e veja o que acontece com a lista de publicações do blog na página inicial!
+Tente criar uma nova página contendo um publicação do blog e veja o que acontece com a lista de publicações do blog na página inicial!
 
 ## O que está por vir?
 
