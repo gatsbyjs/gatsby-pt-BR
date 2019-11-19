@@ -2,7 +2,7 @@
 title: Suporte do Navegador
 ---
 
-O Gatsby suporta [os mesmos navegadores que a versão estável atual do React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support) que atualmente é o IE9 +, assim como as versões mais recentes de outros navegadores populares.
+O Gatsby suporta [os mesmos navegadores que a versão estável atual do React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support) que atualmente é o IE9+, assim como as versões mais recentes de outros navegadores populares.
 
 ## Polyfills
 
@@ -10,12 +10,12 @@ Gatsby aproveita a capacidade do Babel 7 de adicionar automaticamente polyfills 
 
 Navegadores mais novos suportam mais APIs JavaScript do que navegadores mais antigos. Para versões mais antigas, o Gatsby (via Babel) adiciona automaticamente os "polyfills" mínimos necessários para que seu código funcione nesses navegadores.
 
-Se você começar a usar uma API do JavaScript mais recente, como `[].includes`, que não é suportada por alguns dos navegadores escolhidos, você não precisará se preocupar com a quebra dos navegadores mais antigos, pois o Babel adicionará automaticamente o polyfill `core-js/modules/es7.array.includes`.
+Se você começar a usar uma API mais recente do JavaScript, como `[].includes`, que não é suportada por alguns dos navegadores escolhidos, você não precisará se preocupar com a quebra dos navegadores mais antigos, pois o Babel adicionará automaticamente o polyfill `core-js/modules/es7.array.includes`.
 
 ## Especifique quais navegadores seu projeto suporta usando "Browserslist"
 
 Você pode personalizar sua lista de versões suportadas dos navegadores declarando uma [`"browserslist"`](https://github.com/ai/browserslist) dentro do seu `package.json`. Alterar esses valores modificará seu JavaScript (via
-[`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers)) e resultado do seu CSS (via [`autoprefixer`](https://github.com/postcss/autoprefixer)).
+[`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers)) e o resultado do seu CSS (via [`autoprefixer`](https://github.com/postcss/autoprefixer)).
 
 Este artigo é uma boa introdução á crescente comunidade de ferramentas em torno da lista de navegadores (Browserslist)  — https://css-tricks.com/browserlist-good-idea/
 
