@@ -26,7 +26,7 @@ O processo RFC é uma ótima oportunidade para atrair mais atenção da sua prop
 
 O processo RFC também pode ser útil para incentivar discussões sobre um recurso proposto enquanto ele está sendo projetado e incorporar restrições importantes ao design enquanto é mais fácil alterá-lo, antes da sua completa implementação.
 
-Algumas alterações não requerem um RFC:
+Algumas alterações não requerem uma RFC:
 
 - Reformular, reorganizar ou refatorar a adição ou remoção de avisos
 - Modificações que melhoram estritamente os critérios de qualidade numéricos e objetivos (aceleração, melhor suporte ao navegador)
@@ -37,7 +37,7 @@ Algumas alterações não requerem um RFC:
 Em resumo, para adicionar um recurso importante ao Gatsby, geralmente é possível fazer o _merge_ da RFC ao repositório de RFCs como um arquivo _markdown_. Nesse ponto, a RFC está 'ativa' e pode ser implementada com o objetivo de eventual inclusão no Gatsby.
 
 - Faça o _fork_ do repositório RFC https://github.com/gatsbyjs/rfcs. Copie `0000-template.md` para
-- `text / 0000-my-feature.md` (onde 'my-feature' é descritivo. Não atribua um número ao RFC ainda).
+- `text / 0000-my-feature.md` (onde 'my-feature' é descritivo. Não atribua um número à RFC ainda).
 - Preencha a RFC. Tenha cuidado com os detalhes: **RFCs que não apresentar motivação convincente, demonstrar uma compreensão do impacto do design ou ser dissimulados sobre os inconvenientes ou as alternativas tendem a ser mal recebidas**.
 - Envie uma _pull request_. Como _pull request_, a RFC receberá um _feedback_ de design da comunidade, e o autor deve estar preparado para revisá-lo em resposta.
 - Crie consenso e integre feedback. As RFCs que têm amplo suporte têm muito mais probabilidade de progredir do que aquelas que não recebem comentários.
@@ -49,7 +49,7 @@ Em resumo, para adicionar um recurso importante ao Gatsby, geralmente é possív
 
 ## O ciclo de vida da RFC
 
-Depois que uma RFC se torna ativa, os autores podem implementá-la e submeter o recurso como uma _pull request_ ao repositório Gatsby. Tornar-se "ativo" não corresponde a uma "aprovação automática" e, em particular, ainda não significa que o recurso será posto em produção; isso indica apenas que, a princípio, há concordância com equipe principal, e que o _merge_ é factível.
+Depois que uma RFC se torna ativa, os autores podem implementá-la e submeter o recurso como uma _pull request_ ao repositório Gatsby. Tornar-se "ativa" não corresponde a uma "aprovação automática" e, em particular, ainda não significa que o recurso será posto em produção; isso indica apenas que, a princípio, há concordância com equipe principal, e que o _merge_ é factível.
 
 Além disso, o fato de uma determinada RFC ter sido aceita e está 'ativa' não implica nada sobre qual prioridade é atribuída à sua implementação, nem se alguém está atualmente trabalhando nela.
 
