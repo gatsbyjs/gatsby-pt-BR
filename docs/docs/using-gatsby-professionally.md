@@ -7,7 +7,7 @@ Como um desenvolvedor e entusiasta do Gatsby, você pode estar interessado em co
 
 Você pode perceber problemas acontecerem ao seu redor que você sabe que o Gatsby poderia resolver e querer que outras pessoas adotem o Gatsby para que não enfrentem esses problemas no futuro. Você pode estar interessado em impulsionar metas de negócio, tais como expandir sua organização ou aumentar receita. Ou, simplesmente, você pode adorar construir com Gatsby e querer fazer mais.
 
-Esta seção da documentação tem o intuito de ajudá-lo a passar mais tempo como um desenvolvedor Gatsby, fornecendo as ferramentas para difundi-lo dentro da sua organização ou convencer os clientes de que o Gatsby é a ferramenta certa para eles.
+Esta seção da documentação tem o intuito de ajudá-lo a passar mais tempo como um desenvolvedor Gatsby, fornecendo as ferramentas para difundir o Gatsby dentro da sua organização ou convencer os clientes de que é a ferramenta certa para eles.
 
 A seção inclui recursos sobre como explicar o Gatsby para diferentes partes interessadas, tais como outros desenvolvedores, líderes de engenharia, comerciantes, executivos e clientes.
 
