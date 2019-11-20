@@ -132,7 +132,7 @@ export default ({ children }) => (
 )
 ```
 
-Um usuário final do seu site poderia então [escrever seus próprios estilos CSS](https://mediatemple.net/blog/tips/bend-websites-css-will-stylish-stylebot/) correspondentes aos elementos HTML usando um nome de classe ` .container`. Se o seu estilo CSS-in-JS mudar, ele não afetará a folha de estilo do usuário final.
+Um usuário final do seu site poderia então [escrever seus próprios estilos CSS](https://mediatemple.net/blog/tips/bend-websites-css-will-stylish-stylebot/) correspondentes aos elementos HTML usando um nome de classe `.container`. Se o seu estilo CSS-in-JS mudar, ele não afetará a folha de estilo do usuário final.
 
 ```css:title=user-stylesheet.css
 .container {
