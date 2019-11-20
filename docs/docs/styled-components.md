@@ -38,7 +38,7 @@ module.exports = {
 
 Finalmente, no seu terminal, execute `gatsby develop` para iniciar o servidor de desenvolvimento Gatsby.
 
-Agora crie uma página de amostra de Styled Components em `src/pages/index.js`:
+Agora crie uma página exemplo de Styled Components em `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
