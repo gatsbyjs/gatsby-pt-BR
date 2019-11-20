@@ -1,18 +1,18 @@
 ---
-title: Using Gatsby Professionally
+title: Utilizando o Gatsby Profissionalmente
 overview: true
 ---
 
-As a Gatsby developer and enthusiast, you may be interested in how you can spend more of your time professionally building with Gatsby.
+Como um desenvolvedor e entusiasta do Gatsby, você pode estar interessado em como passar mais do seu tempo construindo profissionalmente com Gatsby.
 
-You may see problems happen around you that you know Gatsby could solve, and want others to adopt Gatsby so they don't encounter them in the future. You may be interested in driving business goals, such as growing your organization or increasing revenue. Or, you may simply love building with Gatsby and want to do it more.
+Você pode perceber problemas acontecerem ao seu redor que você sabe que o Gatsby poderia resolver e querer que outras pessoas adotem o Gatsby para que não enfrentem esses problemas no futuro. Você pode estar interessado em impulsionar metas de negócio, tais como expandir sua organização ou aumentar receita. Ou, simplesmente, você pode adorar construir com Gatsby e querer fazer mais.
 
-This section of the documentation is aimed to help you spend more time as a Gatsby developer by giving you the tools to spread Gatsby within your organization, or convince clients that Gatsby is the right tool for them.
+Esta seção da documentação tem o intuito de ajudá-lo a passar mais tempo como um desenvolvedor Gatsby, fornecendo as ferramentas para difundi-lo dentro da sua organização ou convencer os clientes de que o Gatsby é a ferramenta certa para eles.
 
-It includes resources for how to explain Gatsby to different stakeholders, such as other developers, engineering leaders, marketers, executives and clients.
+A seção inclui recursos sobre como explicar o Gatsby para diferentes partes interessadas, tais como outros desenvolvedores, líderes de engenharia, comerciantes, executivos e clientes.
 
-It also includes resources that help your teams develop more effectively at scale -- when there are multiple developers on a project, or multiple projects in the organization.
+Também inclui recursos que ajudam seus times a desenvolverem em escala - quando há múltiplos desenvolvedores em um projeto ou múltiplos projetos na organização - de maneira mais eficiente.
 
-Finally, it includes resources for you about how Gatsby can help you advance professionally within your career -- whatever your goals and ambitions are.
+Por fim, inclui recursos para você sobre como o Gatsby pode ajudá-lo a avançar profissionalmente na sua carreira - quaisquer que sejam seus objetivos e ambições.
 
 <GuideList slug={props.slug} />
