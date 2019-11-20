@@ -36,7 +36,7 @@ module.exports = {
 }
 ```
 
-Em seguida, no seu terminal, execute `gatsby develop` para iniciar o servidor de desenvolvimento Gatsby.
+Finalmente, no seu terminal, execute `gatsby develop` para iniciar o servidor de desenvolvimento Gatsby.
 
 Agora crie uma página de amostra de Styled Components em `src/pages/index.js`:
 
