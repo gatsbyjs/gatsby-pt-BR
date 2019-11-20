@@ -4,7 +4,7 @@ title: Styled Components
 
 Neste guia, você aprenderá como configurar um site com a biblioteca CSS-in-JS [Styled Components](https://www.styled-components.com/).
 
-Styled Components permite você usar a sintaxe CSS real dentro de seus components. Styled Components é uma variante do "CSS-in-JS" — que resolve muitos dos problemas do CSS tradicional.
+Styled Components permite você usar a sintaxe CSS real dentro de seus componentes. Styled Components é uma variante do "CSS-in-JS" — que resolve muitos dos problemas do CSS tradicional.
 
 Um dos problemas mais importantes que ele resolve é a colisão de nomes de seletores. Com o CSS tradicional, você deve tomar cuidado para não sobrescrever os seletores de CSS usados em outras partes de um site, porque todos os seletores de CSS vivem no mesmo espaço de nome global. Essa infeliz restrição pode levar a elaborar (e muitas vezes confuso) esquemas de nomeação de seletores.
 
