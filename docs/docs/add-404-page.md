@@ -4,12 +4,12 @@ title: Adicionando uma página 404
 
 Para criar uma página 404, crie uma página cuja rota corresponde ao regex 
 `^\/?404\/?$` (`/404/`, `/404`, `404/` ou `404`). Na maioria das vezes, 
-você desejará criar uma página de component React em `src/pages/404.js`.
+você desejará criar uma página de componente React em `src/pages/404.js`.
 
 Gatsby garante que sua página 404 seja construida como `404.html` já que muitas 
 plataformas de hospedagem estática usam esta por padrão como sua página de erro 404. 
 Se você está hospedando seu site de outra maneira, você vai precisar configurar uma
-regra personalizada para veicular esse arquivo para erros 404.
+regra personalizada para vincular esse arquivo para erros 404.
 
 Como o Gatsby cria essa página para você por padrão, não há necessidade de configurá-la em seu arquivo `gatsby-node.js`.
 
