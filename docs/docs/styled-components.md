@@ -114,7 +114,7 @@ export default () => (
 
 ### Ativando folhas de estilo do usuário com um nome de classe estável
 
-Adicionar um nome de classe CSS persistente aos seus componentes de estilo pode facilitar para os usuários finais do seu site para tirar proveito das [folhas de estilos do usuário](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para acessibilidade.
+Adicionar um nome de classe CSS (className) persistente aos seus componentes de estilo pode facilitar para os usuários finais do seu site para tirar proveito das [folhas de estilos do usuário](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para acessibilidade.
 
 Aqui está um exemplo onde o nome da classe `container` é adicionado ao DOM junto com os nomes de classe criados dinamicamente por Styled Components:
 
