@@ -7,7 +7,7 @@ Esta página nos dá um esboço de como utilizar o Gitpod, um ambiente de desenv
 ## Sobre o Gitpod
 
 Gitpod deixa as contribuições no Github mais fáceis, pois permite a configuração automatizada de um ambiente de desenvolvimento. Ao invés de escrever uma longa
-documentação de como instalar e configurar deixando todo contribuidor passar por essa aventura, a configuração é automatizada e reproduzível.
+documentação de como instalar e configurar, deixando todo contribuidor passar por essa aventura, a configuração é automatizada e reproduzível.
 
 Além disso, o Gitpod pré-builda qualquer branch de um repositório para que você não precise aguardar pela instalação, clone e build.
 
