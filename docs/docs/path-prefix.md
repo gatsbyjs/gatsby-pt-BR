@@ -1,21 +1,20 @@
 ---
-title: Adding a Path Prefix
+title: Adicionando um prefixo na rota
 ---
 
-Many applications are hosted at something other than the root (`/`) of their domain.
+Muitas aplicações são hospedadas em alguma outra rota ao invés da raiz (`/`) de seu domínio.
 
-For example, a Gatsby blog could live at `example.com/blog/`, or a site could be hosted on GitHub Pages at `example.github.io/my-gatsby-site/`.
+Por exemplo, um blog feito com Gatsby poderia viver em `example.com/blog/`, ou um website poderia ser hospedado no GitHub Pages em `example.github.io/my-gatsby-site/`.
 
-Each of these sites need a prefix added to all paths on the site. So a link to
-`/my-sweet-blog-post/` should be rewritten as `/blog/my-sweet-blog-post`.
+Cada um destes websites precisam de um prefixo adicionado para todas as rotas no website. Então um link para `/my-sweet-blog-post` deveria ser reescrito como `/blog/my-sweet-blog-post`.
 
-In addition, links to various resources (JavaScript, CSS, images, and other static content) need the same prefix, so that the site continues to function correctly when served with the path prefix in place.
+Além disso, links para vários recursos (JavaScript, CSS, imagens, e outros conteúdos estáticos) precisam do mesmo prefixo para que o website continue a funcionar corretamente quando servido com a rota e prefixo no lugar.
 
-Adding the path prefix is a two step process, as follows:
+Adicionar o prefixo na rota é um processo de dois passos, são eles:
 
-### Add to `gatsby-config.js`
+### Adicione no `gatsby-config.js`
 
-Firstly, add a `pathPrefix` value to your `gatsby-config.js`.
+Primeiramente, adicione o valor do `pathPrefix` no seu `gatsby-config.js`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -25,21 +24,21 @@ module.exports = {
 
 ### Build
 
-The final step is to build your application with the `--prefix-paths` flag, like so:
+O passo final é fazer o _build_ da sua aplicação com a opção `--prefix-paths`, assim:
 
 ```shell
 gatsby build --prefix-paths
 ```
 
-If this flag is not passed, Gatsby will ignore your `pathPrefix` and build the site as if hosted from the root domain.
+Se essa opção não for passada, Gatsby ignorará seu `pathPrefix` e fará o build do website como se estivesse hospedado na raiz do domínio.
 
-### In-app linking
+### Links dentro da aplicação
 
-Gatsby provides APIs and libraries to make using this feature seamless. Specifically, the [`Link`](/docs/gatsby-link/) component has built-in functionality to handle path prefixing.
+O Gatsby provê APIs e bibliotecas para fazer uso dessa funcionalidade sem problemas. Especificamente, o componente [`Link`](/docs/gatsby-link/) tem uma funcionalidade embutida para lidar com prefixo na rota.
 
-For example, if you want to link to the location `/page-2`, but the actual link will be prefixed (e.g. `/blog/page-2`); you don't need to hard code the prefix into your links. By using the Gatsby `Link` component, paths will automatically be prefixed with the `pathPrefix` value assigned in your `gatsby-config.js` file. If you later migrate away from using a path prefix, your links will _still_ work seamlessly.
+Por exemplo, se você quiser um link para a rota `/page-2`, mas na realidade o link final será prefixado (e.g. `/blog/page-2`); você não precisa colocar o prefixo em todos os seus links. Usando o componente `Link` do Gatsby, as rotas serão prefixadas automaticamente com o valor do `pathPrefix` especificado no seu arquivo `gatsby-config.js`. Se depois você migrar e não usar mais o prefixo na rota, seus links _ainda_ continuarão funcionando sem problemas.
 
-For example, when navigating to the `page-2` location in the `Link` component below; the location will be automatically prefixed with your assigned `pathPrefix` value.
+Por exemplo, quando navegando para a rota `page-2` no componente de `Link` abaixo; a localização será automaticamente prefixada com o seu valor especificado como `pathPrefix`.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -56,7 +55,7 @@ function Index() {
 }
 ```
 
-If you want to do programmatic/dynamic navigation, this is also possible! Expose the Gatsby `navigate` helper, and this too automatically handles path prefixing.
+Se você quiser fazer navegação programática/dinâmica isso também é possível! Utilize a função auxiliar `navigate` do Gatsby e ela também cuidará automaticamente do prefixo na rota.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -66,7 +65,7 @@ import Layout from "../components/layout"
 export default function Index() {
   return (
     <Layout>
-      {/* Note: this is an intentionally contrived example, but you get the idea! */}
+      {/* Nota: esse é um exemplo propositalmente simples, mas você pegou a ideia! */}
       {/* highlight-next-line */}
       <button onClick={() => navigate("/page-2")}>
         Go to page 2, dynamically
@@ -76,12 +75,12 @@ export default function Index() {
 }
 ```
 
-### Add the path prefix to paths using `withPrefix`
+### Adicione o prefixo nas rotas que usando `withPrefix`
 
-For pathnames you construct manually, there’s a helper function, [`withPrefix`](/docs/gatsby-link/#add-the-path-prefix-to-paths-using-withprefix) that prepends your path prefix in production (but doesn’t during development where paths don’t need prefixed).
+Para rotas construídas manualmente, existe essa função auxiliar, [`withPrefix`](/docs/gatsby-link/#add-the-path-prefix-to-paths-using-withprefix) que prefixa a sua rota em produção (mas não durante o desenvolvimento onde as rotas não precisam ser prefixadas).
 
-### Additional Considerations
+### Considerações adicionais
 
-The [`assetPrefix`](/docs/asset-prefix/) feature can be thought of as semi-related to this feature. That feature allows your assets (non-HTML files, e.g. images, JavaScript, etc.) to be hosted on a separate domain, for example a CDN.
+A funcionalidade de [`assetPrefix`](/docs/asset-prefix/) pode ser imaginada como relacionada em parte a esta funcionalidade. Esta funcionalidade permite que seus _assets_ (arquivos não-HTML, e.g. imagens, JavaScript, etc.) sejam hospedados em um domínio separado, por exemplo em uma _CDN_.
 
-This feature works seamlessly with `assetPrefix`. Build out your application with the `--prefix-paths` flag and you'll be well on your way to hosting an application with its assets hosted on a CDN, and its core functionality available behind a path prefix.
+Essa funcionalidade funciona sem problemas com `assetPrefix`. Faça o _build_ da sua aplicação com a opção `--prefix-paths` e você estará na direção certa para hospedar uma aplicação com seus _assets_ hospedados em uma CDN, e sua funcionalidade mais importante disponível na rota prefixada.
