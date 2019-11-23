@@ -16,7 +16,7 @@ Este é um esboço. Ajude nossa comunidade a expandi-lo.
 
 Por favor use o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que seu pull request será aceito.
 ```
-Se você tiver qualquer pergunta sobre títulos ou outros detalhes relacionados a criação de esboços, sinta-se livre para nos perguntar em uma issue relevante do GitHub.
+Se você tiver qualquer pergunta sobre títulos ou outros detalhes relacionados a criação de esboços, sinta-se livre para nos perguntar em uma issue relevante no GitHub.
 
 ## Sessões de Programação Conjunta da Comunidade
 
