@@ -10,7 +10,7 @@ O Gatsby suporta, por padrão, as duas últimas versões dos principais navegado
 
 Isso significa que compilamos automaticamente seu JavaScript para garantir que ele funcione em navegadores mais antigos. Também adicionamos automaticamente polyfills conforme necessário — chega de enviar código que misteriosamente quebra em navegadores mais antigos!
 
-Se você segmentar apenas navegadores mais novos, consulte a página de documentação de [Suporte ao Navegador](/docs/browser-support/) para saber como instruir o Gatsby em quais navegadores você suporta e, em seguida, Babel começará a compilar apenas esses navegadores.
+Se o seu foco é apenas navegadores mais novos, consulte a página de documentação de [Suporte ao Navegador](/docs/browser-support/) para saber como instruir o Gatsby em quais navegadores você suporta e, em seguida, Babel começará a compilar apenas esses navegadores.
 
 ## Como usar um arquivo .babelrc personalizado
 
