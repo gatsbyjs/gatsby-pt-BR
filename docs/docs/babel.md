@@ -14,7 +14,7 @@ Se você segmentar apenas navegadores mais novos, consulte a página de document
 
 ## Como usar um arquivo .babelrc personalizado
 
-O Gatsby é fornecido com uma configuração .babelrc padrão que deve funcionar na maioria dos sites. Se você deseja adicionar predefinições ou plugins personalizados do Babel, pode criar seu próprio `.babelrc` na raiz do seu site, importar o [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby) e adicionar plugins adicionais, presets e passar opções para o `babel-preset-gatsby`, por exemplo `targets`.
+O Gatsby já vem com uma configuração .babelrc padrão que deve funcionar na maioria dos sites. Se você deseja adicionar predefinições ou plugins personalizados do Babel, pode criar seu próprio `.babelrc` na raiz do seu site, importar o [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby) e adicionar plugins adicionais, _presets_ e passar opções para o `babel-preset-gatsby`, por exemplo, `targets`.
 
 ```shell
 npm install --save-dev babel-preset-gatsby
