@@ -38,4 +38,4 @@ npm install --save-dev babel-preset-gatsby
 ```
 <!-- prettier-ignore-end -->
 
-Para configurações mais avançadas, você também pode copiar os padrões de [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby) e personalizá-los para atender às duas necessidades.
+Para configurações mais avançadas, você também pode copiar os padrões de [`babel-preset-gatsby`](https://github.com/gatsbyjs/gatsby/tree/master/packages/babel-preset-gatsby) e personalizá-los para atender às suas necessidades.
