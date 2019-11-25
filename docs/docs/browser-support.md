@@ -2,7 +2,7 @@
 title: Suporte do Navegador
 ---
 
-O Gatsby suporta [os mesmos navegadores que a versão estável atual do React.js](https://facebook.github.io/react/docs/react-dom.html#browser-support) que atualmente é o IE9+, assim como as versões mais recentes de outros navegadores populares.
+O Gatsby suporta [os mesmos navegadores que a versão estável atual do React.js](https://pt-br.reactjs.org/docs/react-dom.html#browser-support) que atualmente é o IE9+, assim como as versões mais recentes de outros navegadores populares.
 
 ## Polyfills
 
