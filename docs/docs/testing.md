@@ -5,8 +5,8 @@ overview: true
 
 <GuideList slug={props.slug} />
 
-## Other resources
+## Outros recursos
 
-- Read the article ["Quality assurance in GatsbyJS projects - linting and testing" by Kalin Chernev](https://kalinchernev.github.io/gatsbyjs-qa-linting-testing/)
-- [Gatsby blog posts on testing in Gatsby](/blog/tags/testing)
-- [Jason Lengstorf's livestream with Kent Dodds adding tests to a Gatsby site](https://www.youtube.com/watch?v=BzRAYt7BHRw&t=2024s).
+- Leia o artigo ["Quality assurance in GatsbyJS projects - linting and testing" de Kalin Chernev](https://kalinchernev.github.io/gatsbyjs-qa-linting-testing/)
+- [Postagens no blog do Gatsby sobre testes em Gatsby](/blog/tags/testing)
+- [Transmissão ao vivo de Jason Lengstorf com Kent Dodds adicionando testes a um site de Gatsby](https://www.youtube.com/watch?v=BzRAYt7BHRw&t=2024s).
