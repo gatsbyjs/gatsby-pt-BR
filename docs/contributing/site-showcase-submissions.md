@@ -31,7 +31,7 @@ São basicamente 3 passos:
     {titleofthesite} is a shiny new website built with Gatsby v2 that makes important contributions towards a faster web for everyone.
 
   # Você pode listar quantas categorias você quiser. Verifique a lista de categorias abaixo nessa documentação!
-  # Se você gostaria de criar uma nova categoria, simplesmente liste aqui.
+  # Caso queira criar uma nova categoria, fique a vontade para adicioná-la na lista abaixo.
   categories:
     - Relevant category 1
     - Relevant category 2
