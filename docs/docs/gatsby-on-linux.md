@@ -1,54 +1,54 @@
 ---
-title: Gatsby on Linux
+title: Gatsby no Linux
 ---
 
 # Linux
 
-> This is a TODO. Help our community expand it.
+> Isto é um TODO. Ajude a nossa comunidade a expandi-lo.
 
-> Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your pull request gets accepted.
+> Por favor utilize o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que seu Pull Request seja aceito.
 
 ## Windows Subsystem Linux (WSL)
 
-As of October 17th 2017, Windows 10 ships with WSL and Linux distributions are available via the [Windows Store], there are several different distributions to use which can be configured via `wslconfig` if you have more than one distribution installed.
+A partir de 17 de outubro de 2017, o Windows 10 vem com WSL e distribuições Linux estarão disponíveis através da [Windows Store], as quais podem ser configuradas através do `wslconfig` caso haja mais de uma distribuição instalada.
 
 ```shell
-# set default distribution to Ubuntu
+# definir a distribuição padrão para o Ubuntu
 wslconfig /setdefault ubuntu
 ```
 
-### Using Windows Subsystem Linux: Ubuntu
+### Utilizando Windows Subsystem Linux: Ubuntu
 
-If you have a fresh install of Ubuntu then update and upgrade:
+Se você tem uma instalação limpa do Ubuntu, atualize-o:
 
 ```shell
 sudo apt update
 sudo apt -y upgrade
 ```
 
-> Only use `-y` if you're happy to upgrade to the latest versions of the software.
+> Só utilize `-y` se você quiser atualizar para a ultima versão do software.
 
-**Build tools**
+**Ferramentas de build**
 
-To compile and install native addons from npm you may also need to install build tools for `node-gyp`:
+Para compilar e instalar addons nativos do npm, talvez você precise instalar ferramentas nativas para `node-gyp`:
 
 ```shell
 sudo apt install -y build-essential
 ```
 
-**Install node**
+**Instalando o node**
 
-Following the install instructions on nodejs.org leaves a slightly broken install (i.e. permission errors when trying to `npm install`). Instead try installing node versions using [n] which you can install with [n-install]:
+Seguindo as instruções de instalação do nodejs.org deixa uma instalação ligeiramente quebrada (e.g erros de permissão quando tenta executar `npm install`). Ao invés disso, tente instalar versões do node utilizando [n] que você pode instalar com [n-install]:
 
 ```shell
 curl -L https://git.io/n-install | bash
 ```
 
-There are other alternatives for managing your node versions such as [nvm] but this is known to slow down [bash startup] on WSL.
+Existem outras alternativas para gerenciar as versões do node como o [nvm], contudo sabe-se que o uso desse gerenciador é lento [bash startup] no WSL.
 
-### Using Windows Subsystem Linux: Debian
+### Utilizando Windows Subsystem Linux: Debian
 
-Debian setup is nearly identical to Ubuntu except for the additional installs of `git` and `libpng-dev`.
+A configuração do Debian é aproximadamente idêntica ao Ubuntu, com exceção da instalação adicional do `git` e do `libpng-dev`.
 
 ```shell
 sudo apt update
@@ -58,7 +58,7 @@ sudo apt install git
 sudo apt install libpng-dev
 ```
 
-Or to install all at the same time and approve `(y)` all installs:
+Ou para instalar todos ao mesmo tempo e aprovar `(y)` em todas as instalações:
 
 ```shell
 sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && sudo apt install git && sudo apt install libpng-dev
