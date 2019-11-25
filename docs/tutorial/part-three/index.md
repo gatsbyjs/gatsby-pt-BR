@@ -138,7 +138,7 @@ Maravilha. Você instalou e configurou seu primeiríssimo plugin do Gatsby!
 
 ## Criando componentes de layout
 
-Agora vamos aprender sobre componentes de layout. Para se preparar para essa parte, adicione algumas novas páginas no seu projeto: uma página *sobre* e uma página de *contato*
+Agora vamos aprender sobre componentes de layout. Para se preparar para essa parte, adicione algumas novas páginas no seu projeto: uma página _sobre_ e uma página de _contato_
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -164,7 +164,7 @@ export default () => (
 )
 ```
 
-Vamos ver como a nova página *sobre* ficou:
+Vamos ver como a nova página _sobre_ ficou:
 
 ![about-uncentered](about-uncentered.png)
 
@@ -230,7 +230,7 @@ export default ({ children }) => (
 )
 ```
 
-Se você for a qualquer uma das suas três páginas, você verá o mesmo título adicionado, por exemplo como na página `/about/`:
+Se você for a qualquer uma das suas três páginas, você verá o mesmo título adicionado, como, por exemplo, na página `/about/`:
 
 ![with-title](with-title.png)
 
