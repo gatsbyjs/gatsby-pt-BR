@@ -36,7 +36,7 @@ São basicamente 3 passos:
     - Relevant category 1
     - Relevant category 2
 
-  # Adicione o nome (desenvolvedor ou empresa) e URL (por exemplo, Twitter, GitHub, portfólio) para ser usada para atribuição
+  # Adicione o nome (desenvolvedor ou empresa) e URL (por exemplo, Twitter, GitHub, portfólio) para ser usada na atribuição
   built_by: Jane Q. Developer
   built_by_url: https://example.org
 
@@ -65,7 +65,7 @@ Use o seguinte template para garantir que os campos obrigatórios estão preench
 ### Categorias
 
 
-Atualmente, entendemos por categorias _tipos de site_ (estrutura) e _conteúdos do site_. Por ora, você deverá colocar todas em "categorias" na sua submissão. As razões pelas quais esses dois estão em listas separadas é para mostrar que você pode ter um site para marketing de uma escola (tipo do site seria marketing, e conteúdo seria educação) ou um site que entrega ensino de marketing online (tipo de site seria educação e conteúdo seria marketing).
+Atualmente, entendemos por categorias como sendo _tipos de site_ (estrutura) e _conteúdos do site_. Por ora, você deverá colocar todas em "categorias" na sua submissão. As razões pelas quais esses dois estão em listas separadas é para mostrar que você pode ter um site para marketing de uma escola (tipo do site seria marketing, e conteúdo seria educação) ou um site que entrega ensino de marketing online (tipo de site seria educação e conteúdo seria marketing).
 
 
 #### Tipo de site
