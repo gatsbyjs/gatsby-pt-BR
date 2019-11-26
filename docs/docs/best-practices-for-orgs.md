@@ -11,4 +11,4 @@ Quando você tem vários times construindo sites Gatsby, há algumas práticas p
 
 Isso é apenas um esboço. Ajude nossa comunidade a expandí-lo.
 
-Por favor use o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que a sua _Pull Request_ seja aceita.
+Por favor use o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que o seu _Pull Request_ seja aceito.
