@@ -1,24 +1,27 @@
 ---
-title: Adding Page Metadata
+title: Adicionando metadados da página
 ---
 
-If you've run an [audit with Lighthouse](/docs/audit-with-lighthouse/), you may have noticed a lackluster score in the "SEO" category. Let's address how you can improve that score.
+Se você já fez uma [auditoria no Lighthouse](/docs/audit-with-lighthouse/), você pode ter notado
+uma pontuação baixa na categoria "SEO". Vamos abordar como você pode melhorar essa pontuação.
 
-Adding metadata to pages (such as a title or description) is key in helping search engines like Google understand your content, and decide when to surface it in search results.
+Adicionar metadados às páginas (como um título ou descrição) é a chave para ajudar mecanismos
+de busca como o Google a entender seu conteúdo, e decidir quando mostrá-lo nos resultados de pesquisa.
 
-[React Helmet](https://github.com/nfl/react-helmet) is a package that provides a React component interface for you to manage your [document head](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
+[React Helmet](https://github.com/nfl/react-helmet) é um pacote que fornece uma interface de componente React para você gerenciar seu [cabeçalho do documento](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
-Gatsby's [react helmet plugin](/packages/gatsby-plugin-react-helmet/) provides drop-in support for server rendering data added with React Helmet. Using the plugin, attributes you add to React Helmet will be added to the static HTML pages that Gatsby builds.
+O [plugin react helmet](/packages/gatsby-plugin-react-helmet/) do Gatsby fornece suporte drop-in 
+para dados de renderização de servidor adicionados ao React Helmet. Usando o plugin, os atributos que você adicionar ao React Helmet serão adicionados às páginas HTML estáticas que o Gatsby cria.
 
-### Using `React Helmet` and `gatsby-plugin-react-helmet`
+### Usando `React Helmet` e `gatsby-plugin-react-helmet`
 
-1. Install both packages:
+1. Instale os dois pacotes:
 
 ```shell
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
 
-2. Add the plugin to the `plugins` array in your `gatsby-config.js` file.
+2. Adicione o plugin ao array `plugins` no seu arquivo `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 {
@@ -26,7 +29,7 @@ npm install --save gatsby-plugin-react-helmet react-helmet
 }
 ```
 
-3. Use `React Helmet` in your pages:
+3. Use o `React Helmet` nas suas páginas:
 
 ```jsx
 import React from "react"
@@ -49,6 +52,7 @@ class Application extends React.Component {
 }
 ```
 
-> 💡 The above example is from the [React Helmet docs](https://github.com/nfl/react-helmet#example). Check those out for more!
+> 💡 O exemplo acima é dos [documentos do React Helmet](https://github.com/nfl/react-helmet#example). Confira-os para mais informação!
 
-You may also be interested in checking out the doc on [adding an SEO component](/docs/add-seo-component/).
+Você também pode estar interessado em consultar o documento sobre 
+[como adicionar um componente de SEO](/docs/add-seo-component/).
