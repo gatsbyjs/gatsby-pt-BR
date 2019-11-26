@@ -38,13 +38,13 @@ sudo apt install -y build-essential
 
 **Instalando o node**
 
-Seguindo as instruções de instalação do nodejs.org deixa uma instalação ligeiramente quebrada (e.g erros de permissão quando tenta executar `npm install`). Ao invés disso, tente instalar versões do node utilizando [n] que você pode instalar com [n-install]:
+Seguir as instruções de instalação do nodejs.org pode resultar em uma instalação ligeiramente quebrada (e.g erros de permissão quando tenta executar `npm install`). Ao invés disso, tente instalar versões do node utilizando [n] que você pode instalar com [n-install]:
 
 ```shell
 curl -L https://git.io/n-install | bash
 ```
 
-Existem outras alternativas para gerenciar as versões do node como o [nvm], contudo sabe-se que o uso desse gerenciador é lento [bash startup] no WSL.
+Existem outras alternativas para gerenciar as versões do node, como o [nvm], contudo sabe-se que o uso desse gerenciador é lento [bash startup] no WSL.
 
 ### Utilizando Windows Subsystem Linux: Debian
 
