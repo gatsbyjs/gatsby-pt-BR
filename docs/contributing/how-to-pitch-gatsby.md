@@ -4,9 +4,9 @@ title: How to Pitch Gatsby
 
 Se você ama Gatsby.js como nós amamos, você pode convencer seus colegas, gerentes ou qualquer um que você considere que seja interessante apresentar. Juntamos alguns pontos que pode ajudar você a construir um projeto utilizando Gatsby:
 
-Build blazing-fast websites without the hosting hassles of managing complex, costly infrastructure or fear that your site might go down. **Gatsby is a website development tool for React, the most modern way to build reliable, lightning fast websites.**
+Construir sites super rapidos sem ter que gerenciar toda complexidade de hospedagem, custos de infraestrutura ou medo de que seu site possa ficar fora do ar. **Gatsby é a ferramenta certa para desenvolver sites com React, o jeito mais moderno, confiável e que seja rapido.**
 
-## A website built with Gatsby is:
+## Um site construido com Gatsby é:
 
 - **Rápido:** Think rocket ship vs. Winnebago. Gatsby takes fast to a whole new level with
   websites that live on the edge—right where your customers are. Pages load in milliseconds
