@@ -26,7 +26,7 @@ sudo apt update
 sudo apt -y upgrade
 ```
 
-> Só utilize `-y` se você quiser atualizar para a ultima versão do software.
+> Só utilize `-y` se você quiser atualizar para a última versão do software.
 
 **Ferramentas de build**
 
