@@ -2,7 +2,7 @@
 title: Carregando Conteúdo e Dados
 ---
 
-O principal benefício em usar a técnica **"dados de qualquer lugar"**, é que ela permite que times consigam gerenciar seu conteúdo no backend que preferirem. Isso é parte do que torna o Gatsby mais poderoso que os geradores de sites estáticos que são limitados a carregar conteúdo apenas de arquivos *Markdown*.
+O principal benefício em usar a técnica **"dados de qualquer lugar"**. Isso é parte do que torna o Gatsby mais poderoso que os geradores de sites estáticos que são limitados a carregar conteúdo apenas de arquivos *Markdown*.
 
 Um benefício essencial de usar a técnica "dados de qualquer lugar", é que isso permite que times consigam gerenciar seu conteúdo no [backend](/docs/glossary/#backend) que preferirem. 
 
