@@ -8,11 +8,11 @@ Por exemplo, um blog feito com Gatsby poderia viver em `example.com/blog/`, ou u
 
 Cada um destes websites precisam de um prefixo adicionado para todas as rotas no website. Fazendo com que um link para `/my-sweet-blog-post` devesse ser reescrito como `/blog/my-sweet-blog-post`.
 
-Além disso, links para vários recursos (JavaScript, CSS, imagens, e outros conteúdos estáticos) precisam do mesmo prefixo para que o website continue a funcionar corretamente quando servido com a rota e prefixo no lugar.
+Além disso, links para vários recursos (JavaScript, CSS, imagens, e outros conteúdos estáticos) precisam do mesmo prefixo para que o website continue a funcionar corretamente quando servido com o prefixo adicionado.
 
 Adicionar o prefixo na rota é um processo de dois passos, são eles:
 
-### Adicionar no `gatsby-config.js`
+### Adicionar em `gatsby-config.js`
 
 Primeiramente, adicione o valor do `pathPrefix` no seu `gatsby-config.js`.
 
