@@ -1,5 +1,5 @@
 ---
-title: Testing React Components
+title: Testando Componentes React
 ---
 
 _O framework de teste recomendado é o [Jest](https://jestjs.io/). Este guia pressupõe que você seguiu o guia [Teste de Unidade](/docs/unit-testing) para configurar o Jest._
@@ -43,12 +43,12 @@ import React from "react"
 import { render } from "@testing-library/react"
 
 // You have to write data-testid
-const Title = () => <h1 data-testid="hero-title">Gatsby is awesome!</h1>
+const Title = () => <h1 data-testid="hero-title">Gatsby é incrível!</h1>
 
 test("Displays the correct title", () => {
   const { getByTestId } = render(<Title />)
   // Assertion
-  expect(getByTestId("hero-title")).toHaveTextContent("Gatsby is awesome!")
+  expect(getByTestId("hero-title")).toHaveTextContent("Gatsby é incrível!")
   // --> Test will pass
 })
 ```
