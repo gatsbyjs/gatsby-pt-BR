@@ -14,10 +14,10 @@ Se você começar a usar uma API mais recente do JavaScript, como `[].includes`,
 
 ## Especifique quais navegadores seu projeto suporta usando "Browserslist"
 
-Você pode personalizar sua lista de versões suportadas dos navegadores declarando uma [`"browserslist"`](https://github.com/ai/browserslist) dentro do seu `package.json`. Alterar esses valores modificará seu JavaScript (via
-[`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers)) e o resultado do seu CSS (via [`autoprefixer`](https://github.com/postcss/autoprefixer)).
+Você pode personalizar sua lista de versões suportadas dos navegadores declarando uma [`"browserslist"`](https://github.com/ai/browserslist) dentro do seu `package.json`. Alterar esses valores irá modificar o resultado de seu JavaScript (via
+[`babel-preset-env`](https://github.com/babel/babel-preset-env#targetsbrowsers)) e CSS (via [`autoprefixer`](https://github.com/postcss/autoprefixer)).
 
-Este artigo é uma boa introdução á crescente comunidade de ferramentas em torno da lista de navegadores (Browserslist)  — https://css-tricks.com/browserlist-good-idea/
+Este artigo é uma boa introdução à crescente comunidade de ferramentas em torno da lista de navegadores (Browserslist)  — https://css-tricks.com/browserlist-good-idea/
 
 Por padrão, o Gatsby emula a seguinte configuração:
 
