@@ -2,7 +2,7 @@
 title: Carregando Conteúdo e Dados
 ---
 
-Um dos principais recursos do Gatsby é a capacidade de **carregar dados de qualquer lugar**. Isso faz parte do que torna o Gatsby mais poderoso que os geradores de sites estáticos, limitados a carregar apenas o conteúdo dos arquivos *Markdown*.
+Um dos principais recursos do Gatsby é a capacidade de **carregar dados de qualquer lugar**. Isso é parte do que torna o Gatsby mais poderoso que os geradores de sites estáticos que são limitados a carregar conteúdo apenas de arquivos *Markdown*.
 
 Um benefício principal do approach de "dados de qualquer lugar", é que isso permite times gerenciar seu conteúdo em praticamente qualquer [backend](/docs/glossary/#backend) de sua preferência. 
 
