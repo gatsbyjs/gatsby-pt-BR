@@ -6,7 +6,7 @@ Um dos principais recursos do Gatsby é a capacidade de **carregar dados de qual
 
 Um benefício principal do approach de "dados de qualquer lugar", é que isso permite times gerenciar seu conteúdo em praticamente qualquer [backend](/docs/glossary/#backend) de sua preferência. 
 
-O Gatsby usa *source plugins* (plugins de fonte de dados) para trazer os dados. [Existem Inúmeros plugins de fonte de dados](/plugins/?=gatsby-source) para trazer os dados de diferentes APIs, CMSs, e banco de dados. Cada plugin carrega os dados de sua fonte, significando que o plugin de fonte de dados via sistema de arquivos, sabe como obter dados do sistema de arquivos, o plugin de fonte de dados via WP sabe como obter tados da API do WordPress, etc. Ao incluir múltiplos plugins, você pode obter os dados e combinar isso tudo em uma camada de dados.
+O Gatsby usa *source plugins* (plugins de fonte de dados) para trazer os dados. [Existem inúmeros plugins de fonte de dados](/plugins/?=gatsby-source) para trazer os dados de diferentes APIs, CMSs, e banco de dados. Cada plugin carrega os dados de sua fonte, significando que o plugin de fonte de dados via sistema de arquivos sabe como obter dados do sistema de arquivos, o plugin do Wordpress sabe como obter dados da API do WordPress, etc. Ao incluir múltiplos plugins, você pode obter e combinar todos esses dados em uma única camada de dados.
 
 Bonus: leia sobre [Temas e documentos distribuídos Gatsby](/blog/2019-07-03-using-themes-for-distributed-docs/) trabalhando bem juntos no blog do Gatsby.
 
