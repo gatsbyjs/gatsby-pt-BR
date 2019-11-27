@@ -8,11 +8,11 @@ O [@testing-library/react](https://github.com/testing-library/react-testing-libr
 
 > Quanto mais seus testes se assemelharem à maneira como seu software é usado, mais confiança eles podem oferecer.
 
-Ele fornece funções leves de utilidade em cima do `react-dom` e `react-dom/test-utils` e lhe dá a confiança de que os refatores do seu componente em relação à implementação (mas não à funcionalidade) não quebrem seus testes.
+Ele fornece funções leves de utilidade em cima do `react-dom` e `react-dom/test-utils` e lhe dá a confiança de que as refatorações do seu componente em relação à implementação (mas não à funcionalidade) não quebrem seus testes.
 
 ## Instalação
 
-Instale a biblioteca como uma das `devDependencies` do seu projeto. Opcionalmente, você pode instalar o `jest-dom` para usar seus [matchers personalizados do jest](https://github.com/testing-library/jest-dom#custom-matchers)..
+Instale a biblioteca como uma das `devDependencies` do seu projeto. Opcionalmente, você pode instalar o `jest-dom` para usar seus [matchers personalizados do jest](https://github.com/testing-library/jest-dom#custom-matchers).
 
 ```shell
 npm install --save-dev @testing-library/react @testing-library/jest-dom
