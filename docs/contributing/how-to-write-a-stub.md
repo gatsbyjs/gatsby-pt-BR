@@ -18,7 +18,7 @@ Por favor use o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) pa
 ```
 Se você tiver qualquer pergunta sobre títulos ou outros detalhes relacionados a criação de esboços, sinta-se livre para nos perguntar em uma issue relevante no GitHub.
 
-## Sessões de Programação Conjunta da Comunidade
+## Sessões de Programação em Pares da Comunidade
 
 Se você criou ou viu um esboço no Gatsby.js e sentiu-se interessado em adicionar o conteúdo, verifique o [Programa de Programação em Pares](/contributing/pair-programming/) do Gatsby.js. Nós adoraremos trabalhar com você em nossa jornada de contribuição para o open source.
 
