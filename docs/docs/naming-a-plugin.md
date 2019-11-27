@@ -15,5 +15,5 @@ No Gatsby existem quatro padrões de nomes para plugins:
 - **`gatsby-[plugin-name]-*`** — se o plugin for um plugin para outro plugin 😅, ele deve ser prefixado com o nome do plugin o qual ele estende (por exemplo, se o plugin adiciona emojis para a saida do `gatsby-transformer-remark`, chame-o de `gatsby-remark-add-emoji`).   Utilize este padrão de nome sempre que seu plugin for incluído nos objetos `options` de outro plugin.
   - Exemplo: [`gatsby-remark-images`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-remark-images)
 - **`gatsby-theme-*`** — este padrão de nome deve ser usado para [temas Gatsby](/docs/themes/), os quais são um tipo de plugin.
-- **`gatsby-plugin-*`** — este é o tipo mais geral de plugin. Utilize este padrão de nome se o seu plugin não se encaixa em nenhum dos requerimentos dos plugins anteriomente citados.
+- **`gatsby-plugin-*`** — este é o tipo mais geral de plugin. Utilize este padrão de nome se o seu plugin não se encaixa em nenhum dos requerimentos dos plugins anteriormente citados.
   - Exemplo: [`gatsby-plugin-sharp`](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-sharp)
