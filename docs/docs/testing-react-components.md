@@ -36,19 +36,19 @@ module.exports = {
 
 ## Uso
 
-Vamos criar um pequeno exemplo de teste usando a biblioteca recém-adicionada. Se você ainda não leu o [guia de teste de unidade][unit testing guide](/docs/unit-testing) — essencialmente você usará `@testing-library/react` em vez de `react-test-renderer` agora. Existem muitas opções quando se trata de seletores, este exemplo escolhe `getByTestId` aqui. Ele também utiliza `toHaveTextContent` do `jest-dom`:
+Vamos criar um pequeno exemplo de teste usando a biblioteca recém-adicionada. Se você ainda não leu o [guia de teste de unidade](/docs/unit-testing) — essencialmente você usará `@testing-library/react` em vez de `react-test-renderer` agora. Existem muitas opções quando se trata de seletores, este exemplo escolhe `getByTestId` aqui. Ele também utiliza `toHaveTextContent` do `jest-dom`:
 
 ```js
 import React from "react"
 import { render } from "@testing-library/react"
 
-// You have to write data-testid
+// Você tem que escrever data-testid
 const Title = () => <h1 data-testid="hero-title">Gatsby é incrível!</h1>
 
 test("Displays the correct title", () => {
   const { getByTestId } = render(<Title />)
-  // Assertion
+  // Asserção
   expect(getByTestId("hero-title")).toHaveTextContent("Gatsby é incrível!")
-  // --> Test will pass
+  // --> Teste vai passar
 })
 ```
