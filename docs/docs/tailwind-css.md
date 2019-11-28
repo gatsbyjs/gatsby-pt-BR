@@ -4,7 +4,7 @@ title: Tailwind CSS
 
 Tailwind é uma estrutura [utility-first](https://tailwindcss.com/docs/utility-first/) CSS para criar rapidamente interfaces de usuário personalizadas. Esta guia mostra como iniciar com Gatsby e o [Tailwind CSS](https://tailwindcss.com/).
 
-## Visão Geral
+## Visão geral
 
 Existem duas maneiras de usar o Tailwind com o Gatsby:
 
@@ -35,7 +35,7 @@ npx tailwind init
 
 ### Opção #1: PostCSS
 
-1.  Instale o plug-in Gatsby PostCSS ([**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss)).
+1.  Instale o plugin Gatsby PostCSS ([**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss)).
 
 ```shell
 npm install --save gatsby-plugin-postcss
@@ -65,7 +65,7 @@ Para saber mais sobre como usar o Tailwind no seu CSS, visite a [Documentação 
 
 ### Opção #2: CSS-in-JS
 
-Essas etapas supõem que você já tenha uma biblioteca CSS-in-JS instalada e os exemplos são baseados em Styled Components.
+Essas etapas supõem que você já tenha uma biblioteca CSS-in-JS instalada e os exemplos são baseados na biblioteca Styled Components.
 
 1. Instale o Tailwind Babel Macro
 
