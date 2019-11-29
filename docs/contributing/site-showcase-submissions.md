@@ -1,72 +1,74 @@
 ---
-title: Submit to Site Showcase
+title: Envie para o _Site Showcase_
 ---
 
-Want to submit a site to the [Site Showcase](/showcase/)? Follow these instructions.
+Quer enviar um site para o [Site Showcase](/showcase/)? Siga estas instruções.
 
-## Steps
+## Passos
 
-There are three major steps:
+São basicamente 3 passos:
 
-1.  If this is your first contribution to the Gatsby open source repo, follow the [Contribution guidelines](/contributing/code-contributions/).
+1. Se essa é sua primeira contribuição para o repositório open source do Gatsby, siga as [Instruções de contribuição](/contributing/code-contributions/).
 
-2.  If there is a chance that someone else could have already submitted the site, please make sure no one else has already submitted it by searching existing PRs: https://github.com/gatsbyjs/gatsby/pulls
+2. Se existe a possíbilidade de alguém já ter submetido o site, certifique-se que ninguém tenha submetido procurando nos PRs existentes: https://github.com/gatsbyjs/gatsby/pulls
 
-3.  Edit the [`sites.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml) file by adding your submission to the bottom of the list of sites in the following format:
+3. Edite o arquivo [`sites.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/sites.yml) e adicione sua submissão no final da lista dos sites seguindo o seguinte formato:
 
 ```yaml:title=docs/sites.yml
 - title: Title of the Site
 
-  # this is the URL that is linked from the showcase
+  # esta é a URL que é vinculada no showcase
   main_url: https://titleofthesite.com
 
-  # this URL is used to generate a screenshot
+  # esta URL é utilizada para gerar a captura da tela
   url: https://titleofthesite.com/portfolio
 
-  # optional: for open-source sites, this URL points to the repo that powers the site
+  # opcional: para sites open-source, esta URL aponta pra o repositório que contém o site
   source_url: https://github.com/{username}/{titleofthesite}
 
-  # optional: short paragraph describing the content and/or purpose of the site that will appear in the modal detail view and permalink views for your site
+  # opcional: um parágrafo curto descrevendo o conteúdo e/ou propósito do site que irá aparecer no modal de visualização de detalhes e permalink para seu site
   description: >
     {titleofthesite} is a shiny new website built with Gatsby v2 that makes important contributions towards a faster web for everyone.
 
-  # You can list as many categories as you want here. Check list of Categories below in this doc!
-  # If you'd like to create a new category, simply list it here.
+  # Você pode listar quantas categorias você quiser. Verifique a lista de categorias abaixo nessa documentação!
+  # Caso queira criar uma nova categoria, fique a vontade para adicioná-la na lista abaixo.
   categories:
     - Relevant category 1
     - Relevant category 2
 
-  # Add the name (developer or company) and URL (e.g. Twitter, GitHub, portfolio) to be used for attribution
+  # Adicione o nome (desenvolvedor ou empresa) e URL (por exemplo, Twitter, GitHub, portfólio) para ser usada na atribuição
   built_by: Jane Q. Developer
   built_by_url: https://example.org
 
-  # leave as false, the Gatsby site review board will choose featured sites quarterly
+  # deixe como falso, o time de revisão do Gatsby irá escolher os sites em destaque trimestralmente
   featured: false
 ```
 
-Use the following template to ensure required fields are filled:
+Use o seguinte template para garantir que os campos obrigatórios estão preenchidos:
 
 ```yaml:title=docs/sites.yml
-- title: (required)
-  url: (required)
-  main_url: (required)
-  source_url: (optional - https://github.com/{username}/{titleofthesite})
+- title: (obrigatório)
+  url: (obrigatório)
+  main_url: (obrigatório)
+  source_url: (opcional - https://github.com/{username}/{titleofthesite})
   description: >
-    (optional)
+    (opcional)
   categories:
-    - (required)
-  built_by: (optional)
-  built_by_url: (optional)
+    - (obrigatório)
+  built_by: (opcional)
+  built_by_url: (opcional)
   featured: false
 ```
 
-## Helpful information
+## Informações úteis
 
-### Categories
+### Categorias
 
-Categories currently include both _type of site_ (structure) and the _content of the site_. You will place all these under "categories" in your submission for now. The reason these are in two separate lists here is to show that you can have a school's marketing site (type of site would be marketing, and content would be education) or a site that delivers online learning about marketing (type of site would be education and content would be marketing).
 
-#### Type of site
+Atualmente, entendemos por categorias como sendo _tipos de site_ (estrutura) e _conteúdos do site_. Por ora, você deverá colocar todas em "categorias" na sua submissão. As razões pelas quais esses dois estão em listas separadas é para mostrar que você pode ter um site para marketing de uma escola (tipo do site seria marketing, e conteúdo seria educação) ou um site que entrega ensino de marketing online (tipo de site seria educação e conteúdo seria marketing).
+
+
+#### Tipo de site
 
 - Blog
 - Directory
@@ -75,11 +77,11 @@ Categories currently include both _type of site_ (structure) and the _content of
 - Education
 - Portfolio
 - Gallery
-- See [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) for an up to date list of valid categories.
+- Confira [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) para uma lista atualizada de categorias válidas.
 
-#### Content of site
+#### Conteúdo do site
 
-A few notes on site content: a common question is this: "aren't all Gatsby sites technically in the "web development" category?" Well, no because this category means the _content_ of the site has to be about web development, like [ReactJS](https://reactjs.org/). Also, the difference between technology and web development is like this. [Cardiogram](https://cardiogr.am/) is technology, while [ReactJS](https://reactjs.org/) is web development.
+Algumas notas sobre o conteúdo do site: uma pergunta que é comum: "todos os sites Gatsby não estão tecnicamente na categoria "_web development_"? Bem, não, por que esta categoria significa que o _conteúdo_ do site deveria ser sobre desenvolvimento web, como [ReactJS](https://reactjs.org/). Ainda, a diferença entre `technology` e `web development` pode ser explicada da seguinte maneira: [Cardiogram](https://cardiogr.am/) se encaixa na categoria `technology`, enquanto [ReactJS](https://reactjs.org/) se encaixa em `web development`.
 
 - Agency
 - Education
@@ -99,44 +101,45 @@ A few notes on site content: a common question is this: "aren't all Gatsby sites
 - Science
 - Technology
 - Web Development
-- See [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) for an up to date list of valid categories.
+- Veja [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) para uma lista atualizada de categorias válidas.
 
-#### Adding new tag
+#### Adicionando uma nova tag
 
-If you think that there is something missing in the tag list, you can update [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) and add a new one. However, we encourage you to use existing tags.
+Caso você ache que há alguma _tag_ faltando na lista, você pode atualizar o arquivo [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) e adicionar uma tag nova. No entanto, encorajamos que utilize as _tags_ existentes.
 
-### Notes on featured sites
+### Notas sobre sites em destaque
 
-#### Review process
+#### Processo de Revisão
 
-By default, all sites submitted to the Site Showcase will be reviewed by the Gatsby Site Review Board as a candidate for the 'Featured Sites' section of the showcase. If you do not want your site to be featured, please add 'DO NOT FEATURE' to the pull request.
+Por padrão, todos os sites que são enviados ao _showcase_ de sites serão revisados pelo comitê revisor de sites do Gatsby como um candidato para a seção de "Sites em Destaque" do _showcase_. Se você não quer que seu site seja destacado, adicione 'DO NOT FEATURE' no _pull request_.
 
-Featured sites will be chosen quarterly based on the following criteria:
+Sites em destaque serão escolhidos trimestralmente baseados nos seguintes critérios:
 
-- Well known brands
-- Use case diversity
-- Visual appeal
-- Visual diversity
 
-#### How many can be featured at a time?
+- Marcas bem conhecidas
+- Diversidade de casos de uso
+- Apelo visual
+- Diversidade visual
 
-9, since that’s what can fit on one page of the site showcase
+#### Quantos podem ser destacados ao mesmo tempo?
 
-#### How to set a site as featured
+9, por que essa é a quantidade que cabe na pagina de _showcase_ do site.
 
-_Note: the Gatsby team will choose featured sites, leave as `featured: false` when first posting_
+#### Como definir um site como destacado
 
-If your site is chosen as featured, here's what to do next:
+_Nota: O time do Gatsby irá escolher sites em destaque, deixe como `featured: false` na primeira submissão_
 
-1.  Change `featured: false` to `featured: true`
+Se seu site for escolhido como destaque, você precisará fazer isso:
 
-2.  Add `featured` as a category:
+1.  Altere `featured: false` para `featured: true`
+
+2.  Adicione `featured` como categoria.
 
 ```shell
 categories:
   - featured
 ```
 
-### Need to change your submission?
+### Precisa alterar sua submissão?
 
-If you want to edit anything in your site submission later, simply edit the .yml file by submitting another PR.
+Caso, queira editar qualquer coisa na submissão do seu site posteriormente, simplesmente edite o arquivo `.yml` submetendo outro PR.
