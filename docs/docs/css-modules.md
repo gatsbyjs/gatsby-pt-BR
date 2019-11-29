@@ -1,22 +1,22 @@
 ---
-title: Component-Scoped Styles with CSS Modules
+title: Estilo de Componentes de Escopo com CSS Modules
 ---
 
-Component-scoped CSS allows you to write traditional, portable CSS with minimal side-effects: gone are the worries of selector name collisions or affecting other components' styles.
+Componentes de Escopo CSS permite que você escreva um CSS portável com um efeito colateral mínimo: com eles, desaparecem as preocupações de colisões de nomes de seletor ou de afetar o estilo de outros componentes
 
-Gatsby works out of the box with [CSS Modules](https://github.com/css-modules/css-modules), a popular solution for writing component-scoped CSS. Here is an [example site that uses CSS Modules](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-css-modules).
+Gatsby funciona por padrão com [CSS Modules](https://github.com/css-modules/css-modules), uma solução popular para escrita de Componentes de Escopo CSS. Aqui está um [exemplo de site que usa CSS Modules](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-css-modules).
 
-## What is a CSS Module?
+## O que é CSS Module?
 
-Quoting from [the CSS Module homepage](https://github.com/css-modules/css-modules):
+Citação da [CSS Module homepage](https://github.com/css-modules/css-modules):
 
-> A **CSS Module** is a CSS file in which all class names and animation names are scoped locally by default.
+> Um **CSS Module** é um arquivo CSS onde todos os nomes de classe e animação são de escopo local por padrão
 
-CSS Modules let you write styles in CSS files but consume them as JavaScript objects for additional processing and safety. CSS Modules are very popular because they automatically make class and animation names unique so you don't have to worry about selector name collisions.
+CSS Modules permite você escrever estilos em arquivos CSS mas consumi-los como objetos JavaScript para processamento adicional e segurança. CSS Modules são bastante populares por que eles fazem automaticamente nomes de classes e animações únicos para que você não tenha que se preocupar com colisões de nomes de seletor.
 
-### CSS Module example
+### Exemplo de CSS Module
 
-The CSS in a CSS module is no different than normal CSS, but the extension of the file is different to mark that the file will be processed.
+O CSS em um módulo CSS não é diferente de um CSS comum, mas a extensão do arquivo é diferente para marcar que aquele arquivo será processado.
 
 ```css:title=src/components/container.module.css
 .container {
@@ -36,13 +36,13 @@ export default ({ children }) => (
 )
 ```
 
-In this example, a CSS module is imported and declared as a JavaScript object called `containerStyles`. Then, a CSS class from that object is referenced in the JSX `className` attribute with `containerStyles.container`, which renders into HTML with dynamic CSS class names like `container-module--container--3MbgH`.
+Neste exemplo, um módulo CSS foi importado e declarado como um objeto JavaScript chamado `containerStyles`. Então, uma classe CSS daquele objeto é referenciada no atributo JSX `className` com `containerStyles.container` que renderiza em HTML com nomes de classes CSS dinâmicas como `container-module--container--3MbgH`.
 
-### Enabling user stylesheets with a stable class name
+### Habilitando stylesheets do usuário com um nome de classe estável
 
-Adding a persistent CSS `className` to your JSX markup along with your CSS Modules code can make it easier for users to take advantage of [User Stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) for accessibility.
+Adicionando um CSS `className` persitente à sua marcação JSX juntamente com o seu código de CSS Modules facilita usuários a ter vantagem sobre o [User Stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para ter acessibilidade.
 
-Here's an example where the class name `container` is added to the DOM along with the module's dynamically-created class names:
+Aqui está um exemplo onde o nome de classe `container` é adicionado ao DOM junto com os nomes de classe criados dinamicamente pelo módulo:
 
 ```jsx:title=src/components/container.js
 import React from "react"
@@ -54,14 +54,12 @@ export default ({ children }) => (
   </section>
 )
 ```
+Um usuário do site poderia então escrever seus próprios estilos CSS combinando elementos HTML com um nome de classe de `.container`, e ele não seria afetado se o nome ou caminho do módulo CSS mudasse.
 
-A site user could then write their own CSS styles matching HTML elements with a class name of `.container`, and it wouldn't be affected if the CSS module name or path changed.
+## Quando usar CSS Modules
 
-## When to use CSS Modules
+CSS Modules são altamente recomendados para aqueles que começaram um projeto com Gatsby (e com React em geral) pois eles permitem que você escreva arquivos CSS regulares e portáteis enquanto obtém benefícios de desempenho como apenas empacotar código referenciado.
 
-CSS Modules are highly recommended for those new to building with Gatsby (and React in general) as they allow you to write regular, portable CSS files while gaining
-performance benefits like only bundling referenced code.
+## Como construir uma página usando CSS Modules
 
-## How to build a page using CSS Modules
-
-Visit the [CSS Modules section of the tutorial](/tutorial/part-two/#css-modules) for a guided tour of building a page with CSS Modules.
+Visite a [seção CSS Modules deste tutorial](/tutorial/part-two/#css-modules) para uma visita guiada à construção de uma página com módulos CSS.
