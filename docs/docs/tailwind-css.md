@@ -71,13 +71,13 @@ Essas etapas supõem que você já tenha uma biblioteca CSS-in-JS instalada e os
 
 **Nota**: `tailwind.macro` atualmente não é compatível com Tailwind 1.0.0+. Contudo, um beta compatível está disponível em `tailwind.macro@next`. Sinta-se à vontade para usar o beta ou reverter para o TailwindCSS 0.7.4.
 
-**Option 1**: Instale `tailwind.macro@next` e use o Tailwind 1.0.0+
+**Opção 1**: Instale `tailwind.macro@next` e use o Tailwind 1.0.0+
 
 ```shell
 npm install --save tailwind.macro@next
 ```
 
-**Option 2**: Instale o `tailwind.macro` estável e use o Tailwind 0.7.4
+**Opção 2**: Instale o `tailwind.macro` estável e use o Tailwind 0.7.4
 
 ```bash
 // Remova o tailwind 1.0.0+ se você já o instalou
