@@ -1,13 +1,13 @@
 ---
-title: What is a Headless CMS and How to Source Content from One
+title: O que é um Headless CMS e como fornecer conteúdo através de um
 overview: true
 ---
 
-A _headless CMS_ is content management software that enables writers to produce and organize content, while providing developers with structured data that can be displayed using a separate system on the frontend of a website or app.
+Um _headless CMS_ é um software para gerenciamento de conteúdo que permite a criadores de conteúdo produzirem e organizarem seus conteúdos enquanto fornece aos desenvolvedores dados estruturados que podem ser exibidos utilizando um sistema separado no frontend de um site ou aplicativo. 
 
-A traditional, monolithic CMS is responsible for both the backend management of content, and serving that content to end users. In contrast, a headless CMS is decoupled from frontend concerns, which frees developers to build rich experiences for end users, using the best technology available.
+Um CMS monolítico, tradicional, é responsável tanto pelo gerenciamento do conteúdo no backend quanto por servir este conteúdo aos usuários finais. Em constraste, um headless CMS é desacoplado das preocupações do frontend, o que deixa os desenvolvedores livres para criar ricas experiências para os usuários finais utilizando as melhores tecnologias disponíveis.
 
-Many content management systems (CMS) now support a “headless” or “decoupled” mode, which is perfect for Gatsby sites.
+Muitos sistemas gerenciadores de conteúdo (CMS) agora suportam um modo “headless” ou “desacoplado”, o que é perfeito para sites criados com Gatsby.
 
 Through use of [source plugins](/plugins/?=source), Gatsby has support for dozens of headless CMS options, allowing your content team the comfort and familiarity of its preferred admin interface, and your development team the improved developer experience and performance gains of using Gatsby, GraphQL, and React to build the frontend.
 
