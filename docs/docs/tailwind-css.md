@@ -2,7 +2,7 @@
 title: Tailwind CSS
 ---
 
-Tailwind é uma estrutura [utility-first](https://tailwindcss.com/docs/utility-first/) CSS para criar rapidamente interfaces de usuário personalizadas. Esta guia mostra como iniciar com Gatsby e o [Tailwind CSS](https://tailwindcss.com/).
+Tailwind é uma estrutura [utility-first](https://tailwindcss.com/docs/utility-first/) CSS para criar rapidamente interfaces de usuário personalizadas. Este guia mostra como iniciar com Gatsby e o [Tailwind CSS](https://tailwindcss.com/).
 
 ## Visão geral
 
@@ -11,7 +11,7 @@ Existem duas maneiras de usar o Tailwind com o Gatsby:
 1. Standard: Use o PostCSS para gerar classes Tailwind, e você poderá aplicá-las usando `className`.
 2. CSS-in-JS: Integrar classes Tailwind com Styled-Components.
 
-Você precisa instalar e configurar o Tailwind para ambos os métodos, portanto, esta guia percorrerá essa etapa primeiro, e então você pode seguir as instruções para PostCSS ou CSS-in-JS.
+Você precisa instalar e configurar o Tailwind para ambos os métodos, portanto, este guia percorrerá essa etapa primeiro, e então você pode seguir as instruções para PostCSS ou CSS-in-JS.
 
 ## Instalando e configurando o Tailwind
 
@@ -23,7 +23,7 @@ Este guia pressupõe que você já tenha um projeto Gatsby configurado. Se você
 npm install tailwindcss --save-dev
 ```
 
-2. Gerar arquivo de configuração Tailwind  (opcional)
+2. Gere o arquivo de configuração Tailwind  (opcional)
 
 **Nota**: Não é necessário um arquivo de configuração para o Tailwind 1.0.0+
 
@@ -35,7 +35,7 @@ npx tailwind init
 
 ### Opção #1: PostCSS
 
-1.  Instale o plugin Gatsby PostCSS ([**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss)).
+1.  Instale o plugin Gatsby PostCSS [**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss).
 
 ```shell
 npm install --save gatsby-plugin-postcss
@@ -47,7 +47,7 @@ npm install --save gatsby-plugin-postcss
 plugins: [`gatsby-plugin-postcss`],
 ```
 
-3. Configurar o PostCSS para usar o Tailwind
+3. Configure o PostCSS para usar o Tailwind
 
 Crie um `postcss.config.js` na pasta raiz do seu projeto com o seguinte conteúdo.
 
@@ -77,13 +77,13 @@ Essas etapas supõem que você já tenha uma biblioteca CSS-in-JS instalada e os
 npm install --save tailwind.macro@next
 ```
 
-**Opção 2**: Instale o `tailwind.macro` estável e use o Tailwind 0.7.4
+**Opção 2**: Instale a versão estável do `tailwind.macro` estável e use o Tailwind 0.7.4
 
 ```bash
 // Remova o tailwind 1.0.0+ se você já o instalou
 npm uninstall tailwindcss
 
-// Instale o tailwind 0.7.4 e o tailwind.macro estável
+// Instale o tailwind 0.7.4 e a versão estável do tailwind.macro
 npm install tailwindcss@0.7.4
 npm install tailwind.macro
 ```
