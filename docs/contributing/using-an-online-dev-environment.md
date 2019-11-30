@@ -31,7 +31,7 @@ A aplicação exemplo será exibida no lado direito, em uma janela de pré-visua
 
 ## Trabalhando em uma Issue
 
-Para começar a trabalhar em uma issue, você pode pode prefixar a URL da issue com `gitpod.io/#`.
+Para começar a trabalhar em uma issue, você pode prefixar a URL da issue com `gitpod.io/#`.
 
 > Exemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby/issues/1199
 
@@ -46,7 +46,7 @@ Neste modo você verá a lista de arquivos modificados na esquerda, pelos quais 
 
 ## Como executar outro exemplo
 
-Se quiser executar outro exemplo vocẽ pode abrir um novo ou um já existente terminal e rodar os seguintes comandos:
+Se quiser executar outro exemplo você pode abrir um novo ou um já existente terminal e rodar os seguintes comandos:
 
 ```shell
 yarn install
