@@ -1,15 +1,15 @@
 ---
-title: Sourcing Content and Data
+title: Carregando Conteúdo e Dados
 ---
 
-A core feature of Gatsby is its ability to **load data from anywhere**. This is part of what makes Gatsby more powerful than static site generators that are limited to only loading content from Markdown files.
+Um dos principais recursos do Gatsby é a capacidade de **carregar dados de qualquer lugar**. Isso é parte do que torna o Gatsby mais poderoso que os geradores de sites estáticos que são limitados a carregar conteúdo apenas de arquivos *Markdown*.
 
-A core benefit of this “data from anywhere” approach is that it allows teams to manage their content in nearly any [backend](/docs/glossary/#backend) they prefer.
+Um benefício essencial de usar a técnica "dados de qualquer lugar", é que isso permite que times consigam gerenciar seu conteúdo no [backend](/docs/glossary/#backend) que preferirem. 
 
-Gatsby uses source plugins to pull in data. [Numerous source plugins already exist](/plugins/?=gatsby-source) for pulling in data from other APIs, CMSs, and databases. Each plugin fetches data from their source, meaning the filesystem source plugin knows how to fetch data from the file system, the WordPress plugin knows how to fetch data from the WordPress API, etc. By including multiple source plugins, you can fetch data and combine it all in one data layer.
+O Gatsby usa *source plugins* (plugins de fonte de dados) para trazer os dados. [Existem inúmeros plugins de fonte de dados](/plugins/?=gatsby-source) para trazer os dados de diferentes APIs, CMSs, e banco de dados. Cada plugin carrega os dados de sua fonte, significando que o plugin de fonte de dados via sistema de arquivos sabe como obter dados do sistema de arquivos, o plugin do Wordpress sabe como obter dados da API do WordPress, etc. Ao incluir múltiplos plugins, você pode obter e combinar todos esses dados em uma única camada de dados.
 
-Bonus: read about [Gatsby themes and distributed docs](/blog/2019-07-03-using-themes-for-distributed-docs/) working well together on the Gatsby blog.
+Bônus: leia sobre [temas Gatsby e documentos distribuídos](/blog/2019-07-03-using-themes-for-distributed-docs/) trabalhando juntos no blog do Gatsby.
 
-_(If there isn’t a plugin yet for your favorite option, consider [contributing](/docs/creating-plugins) one!)_
+_(Caso não tenha um plugin para a sua opção favorita, considere [contribuir](/docs/creating-plugins) com um!)_
 
 <GuideList slug={props.slug} />
