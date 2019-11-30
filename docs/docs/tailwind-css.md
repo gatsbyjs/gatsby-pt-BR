@@ -23,7 +23,7 @@ Este guia pressupõe que você já tenha um projeto Gatsby configurado. Se você
 npm install tailwindcss --save-dev
 ```
 
-2. Gere o arquivo de configuração Tailwind  (opcional)
+2. Gere o arquivo de configuração Tailwind (opcional)
 
 **Nota**: Não é necessário um arquivo de configuração para o Tailwind 1.0.0+
 
@@ -53,8 +53,8 @@ Crie um `postcss.config.js` na pasta raiz do seu projeto com o seguinte conteúd
 
 ```javascript:title=postcss.config.js
 module.exports = () => ({
-  plugins: [require("tailwindcss")],
-})
+  plugins: [require("tailwindcss")]
+});
 ```
 
 4. Use as diretivas Tailwind no seu CSS
@@ -77,7 +77,7 @@ Essas etapas supõem que você já tenha uma biblioteca CSS-in-JS instalada e os
 npm install --save tailwind.macro@next
 ```
 
-**Opção 2**: Instale a versão estável do `tailwind.macro` estável e use o Tailwind 0.7.4
+**Opção 2**: Instale a versão estável do `tailwind.macro` e use o Tailwind 0.7.4
 
 ```bash
 // Remova o tailwind 1.0.0+ se você já o instalou
@@ -91,18 +91,18 @@ npm install tailwind.macro
 2. Use o Babel Macro (tailwind.macro) no seu styled component
 
 ```javascript
-import styled from "styled-components"
-import tw from "tailwind.macro"
+import styled from "styled-components";
+import tw from "tailwind.macro";
 
 // Todas as versões
 const Button = styled.button`
   ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`};
-`
+`;
 
 // tailwind.macro@next
 const Button = tw.button`
   bg-blue hover:bg-blue-dark text-white p-2 rounded
-`
+`;
 ```
 
 ## Outros recursos
