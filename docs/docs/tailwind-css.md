@@ -54,7 +54,7 @@ Crie um `postcss.config.js` na pasta raiz do seu projeto com o seguinte conteúd
 ```javascript:title=postcss.config.js
 module.exports = () => ({
   plugins: [require("tailwindcss")]
-});
+})
 ```
 
 4. Use as diretivas Tailwind no seu CSS
@@ -91,18 +91,18 @@ npm install tailwind.macro
 2. Use o Babel Macro (tailwind.macro) no seu styled component
 
 ```javascript
-import styled from "styled-components";
-import tw from "tailwind.macro";
+import styled from "styled-components"
+import tw from "tailwind.macro"
 
 // Todas as versões
 const Button = styled.button`
-  ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`};
+  ${tw`bg-blue hover:bg-blue-dark text-white p-2 rounded`}
 `;
 
 // tailwind.macro@next
 const Button = tw.button`
   bg-blue hover:bg-blue-dark text-white p-2 rounded
-`;
+`
 ```
 
 ## Outros recursos
