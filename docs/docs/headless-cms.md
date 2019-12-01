@@ -3,13 +3,13 @@ title: O que é um Headless CMS e como fornecer conteúdo através de um
 overview: true
 ---
 
-Um _headless CMS_ é um software para gerenciamento de conteúdo que permite a escritores produzirem e organizarem seus conteúdos enquanto fornece aos desenvolvedores dados estruturados que podem ser exibidos utilizando um sistema separado no frontend de um site ou aplicativo. 
+Um _headless CMS_ é um software para gerenciamento de conteúdo que permite a escritores produzirem e organizarem seus conteúdos, enquanto fornece aos desenvolvedores dados estruturados que podem ser exibidos utilizando um sistema separado no frontend de um site ou aplicativo. 
 
 Um CMS monolítico, tradicional, é responsável tanto pelo gerenciamento do conteúdo no backend quanto por servir este conteúdo aos usuários finais. Em contraste, um headless CMS é desacoplado das preocupações do frontend, o que deixa os desenvolvedores livres para criar ricas experiências para os usuários finais utilizando as melhores tecnologias disponíveis.
 
 Muitos sistemas gerenciadores de conteúdo (CMS) agora suportam um modo “headless” ou “desacoplado”, o que é perfeito para sites criados com Gatsby.
 
-o Gatsby possui suporte a dezenas de opções de headless CMS através do uso de [plugins fornecedores de dados](/plugins/?=source), permitindo a sua equipe de produção de conteúdo o conforto e a famialiridade do seu painel de administração preferido, e a sua equipe de desenvolvemimento uma melhor esperiência para o desenvolvedor e os ganhos de performance ao utilizar o Gatsby, GraphQL, e React para construir o frontend.
+Através do uso de [plugins fornecedores de dados](/plugins/?=source), o Gatsby possui suporte a dezenas de opções de headless CMS permitindo a sua equipe de produção de conteúdo o conforto e a familiaridade do seu painel de administração preferido, e a sua equipe de desenvolvimento uma melhor experiência para o desenvolvedor e os ganhos de performance ao utilizar o Gatsby, GraphQL, e React para construir o frontend.
 
 Os guias nesta seção irão te auxiliar através do processo de configuração do fornecimento de dados através de alguns dos mais populares headless CMS em uso da atualidade.
 <GuideList slug={props.slug} />
