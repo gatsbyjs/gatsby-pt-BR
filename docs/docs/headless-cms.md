@@ -3,7 +3,7 @@ title: O que é um Headless CMS e como fornecer conteúdo através de um
 overview: true
 ---
 
-Um _headless CMS_ é um software para gerenciamento de conteúdo que permite a escritores produzirem e organizarem seus conteúdos, enquanto fornece aos desenvolvedores dados estruturados que podem ser exibidos utilizando um sistema separado no frontend de um site ou aplicativo. 
+Um _headless CMS_ é um software para gerenciamento de conteúdo que permite a escritores produzirem e organizarem conteúdos, enquanto fornece aos desenvolvedores dados estruturados que podem ser exibidos utilizando um sistema separado no frontend de um site ou aplicativo. 
 
 Um CMS monolítico, tradicional, é responsável tanto pelo gerenciamento do conteúdo no backend quanto por servir este conteúdo aos usuários finais. Em contraste, um headless CMS é desacoplado das preocupações do frontend, o que deixa os desenvolvedores livres para criar ricas experiências para os usuários finais utilizando as melhores tecnologias disponíveis.
 
