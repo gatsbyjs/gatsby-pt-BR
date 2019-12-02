@@ -11,6 +11,6 @@ Explicar bem o Gatsby para outros e ajudar a convencê-los a usá-lo (ou permiti
 
 Requer entender o que as pessoas ao seu redor valorizam e ajudá-los a entender como o Gatsby atende as necessidades _deles_, ao invés de simplesmente como o Gatsby atende as suas necessidades.
 
-Gatsby é uma tecnologia transformativa e times que o utilizam têm a chance de melhorar radicalmente a forma como projetam,desenvolvem e disponibilizam websites. Ao ajudar outros a entender como o Gatsby atende às necessidades deles, você facilita o seu dessas pessoas.
+Gatsby é uma tecnologia transformativa e times que o utilizam têm a chance de melhorar radicalmente a forma como projetam,desenvolvem e disponibilizam websites. Ao ajudar outros a entender como o Gatsby atende às necessidades deles, você facilita o crescimento dessas pessoas.
 
 https://twitter.com/ryanflorence/status/1104060348363988992
