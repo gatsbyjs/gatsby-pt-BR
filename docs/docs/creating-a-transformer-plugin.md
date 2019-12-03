@@ -2,10 +2,10 @@
 title: Criando um Plugin de Transformação
 ---
 
-Existem dois tipos de _plugins_ que funcionam com o sistema de dados do Gatsby, os _plugins_ "_source_" de fonte de dados e "_transformer_" de transformação.
+Existem dois tipos de _plugins_ que funcionam com o sistema de dados do Gatsby, os _plugins_ de fonte de dados ("_source_") e os _plugins_ de transformação ("_transformer_").
 
-- **Source** _plugins_ ou _plugins_ de fonte de dados, proveem informação de uma fonte remota ou local para o que o Gatsby chama de [nós](/docs/node-interface/).
-- **Transformer** _plugins_ ou _plugins_ de transformação, "transformam" informação provida por _source plugins_ para novos nós e/ou para campos dos nós.
+- **Source** _plugins_, ou _plugins_ de fonte de dados, proveem informação de uma fonte remota ou local para o que o Gatsby chama de [nós](/docs/node-interface/).
+- **Transformer** _plugins_, ou _plugins_ de transformação, "transformam" informação provida por _source plugins_ para novos nós e/ou para campos dos nós.
 
 O objetivo deste documento é:
 
@@ -14,7 +14,7 @@ O objetivo deste documento é:
 
 ## O que _plugins_ de transformação fazem?
 
-_Plugins_ de transformação, "transformam" dados de um tipo para outro tipo. Você frequentemente usará ambos os plugins de fonte de dados e de transformação no seu website feito com Gatsby.
+_Plugins_ de transformação "transformam" dados de um tipo para outro tipo. Você frequentemente usará ambos os plugins de fonte de dados e de transformação no seu website feito com Gatsby.
 
 Esse acoplamento flexível entre os _plugins_ de fonte de dados e de transformação permitem que os desenvolvedores que usam Gatsby montem rapidamente pipelines de transformação de dados complexos com pouco trabalho.
 
@@ -22,9 +22,9 @@ Esse acoplamento flexível entre os _plugins_ de fonte de dados e de transforma�
 
 Assim como o _plugin_ de fonte dados, o _plugin_ de transformação é um pacote NPM normal. Ele possui um arquivo `package.json` com dependências opcionais assim como um arquivo `gatsby-node.js` onde você implementa as APIs Node.js do Gatsby.
 
-`gatsby-transformer-yaml` é um _plugin_ de transformação que procura por novos nós com o tipo de media igual a _text/yaml_ (e.g. um arquivo .yaml) e cria um novo filho, nó YAML, montando o arquivo de fonte YAML em objetos JavaScript.
+`gatsby-transformer-yaml` é um _plugin_ de transformação que procura por novos nós com o _media type_ igual a _text/yaml_ (e.g. um arquivo .yaml) e cria novo(s) nó(s) filho(s) do tipo YAML através do processamento  do arquivo fonte YAML em objetos JavaScript.
 
-Confira este exemplo de reconstrução simplificada de um `gatsby-transformador-yaml` diretamente em um site. Digamos que você tenha um site inicial padrão do Gatsby que inclua um arquivo `src/data/example.yml`:
+Confira este exemplo de reconstrução simplificada de um `gatsby-transformer-yaml` diretamente em um site. Digamos que você tenha um site inicial padrão do Gatsby que inclua um arquivo `src/data/example.yml`:
 
 ```yaml:title=src/data/example.yml
 - name: Jane Doe
@@ -33,7 +33,7 @@ Confira este exemplo de reconstrução simplificada de um `gatsby-transformador-
   bio: Developer based in Maintown, USA
 ```
 
-### Verifique que os dados são providos por uma fonte
+### Verifique que os dados estão sendo providos
 
 Primeiro, no `gatsby-config.js`, use o _plugin_ `gatsby-source-filesystem` para criar nós de arquivo.
 
@@ -97,7 +97,7 @@ Agora você tem um nó de arquivo para trabalhar:
 
 Agora, transforme os nós de arquivo recém-criados, conectando-os à API `onCreateNode` em `gatsby-node.js`.
 
-Se você estiver acompanhando em um projeto de exemplo, instale os seguintes pacotes:
+Se você estiver acompanhando a partir de um projeto exemplo, instale os seguintes pacotes:
 
 ```shell
 npm install --save js-yaml lodash
@@ -267,7 +267,7 @@ Confira o [código fonte completo](https://github.com/gatsbyjs/gatsby/blob/maste
 
 ## Usando a cache
 
-Às vezes, transformar propriedades custa tempo e recursos. Para evitar recriar essas propriedades a cada execução, você pode aproveitar o mecanismo de cache global fornecido por Gatsby.
+As vezes transformar propriedades custa tempo e recursos. Para evitar recriar essas propriedades a cada execução, você pode aproveitar o mecanismo de cache global fornecido por Gatsby.
 
 As chaves de cache devem conter pelo menos o contentDigest do nó em questão. Por exemplo, o `gatsby-transformer-remark` usa a seguinte chave de cache para o nó html:
 
