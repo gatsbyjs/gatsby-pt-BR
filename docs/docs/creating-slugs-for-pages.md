@@ -1,18 +1,18 @@
 ---
-title: Creating Slugs for Pages
+title: Criando _Slugs_ Para Páginas
 ---
 
-The logic for creating slugs from file names can get tricky, the `gatsby-source-filesystem` plugin ships with a function for creating them.
+A lógica para criação de _slugs_ a partir de nomes de arquivos pode ser complicada, o _plugin_ `gatsby-source-filesystem` é fornecido com uma função para criá-los.
 
-## Install
+## Instalação
 
 `npm install --save gatsby-source-filesystem`
 
-## Create slugs in gatsby-node.js
+## Criação de _slugs_ com gatsby-node.js
 
-Add your new slugs directly onto the `MarkdownRemark` nodes. Any data you add to nodes is available to query later with GraphQL.
+Adicione os novos _slugs_ diretamente nos nós `MarkdownRemark`. Todos os dados adicionados aos nós estão disponíveis para futuras consultas com GraphQL.
 
-To do so, you'll use a function passed to our API implementation called [`createNodeField`](/docs/actions/#createNodeField). This function allows you to create additional fields on nodes created by other plugins.
+Para fazer isso, você usará uma função passada para a nossa implementação de API chamada [`createNodeField`](/docs/actions/#createNodeField). Essa função permite a criação de campos adicionais em nós criados por outros _plugins_.
 
 ```javascript:title=gatsby-node.js
 const { createFilePath } = require(`gatsby-source-filesystem`)
@@ -34,9 +34,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 }
 ```
 
-## Query created slugs
+## Consulta aos _slugs_ criados
 
-Open refresh GraphiQL, then run this GraphQL query to see all your slugs:
+Recarregue e abra o GraphiQL, então execute a seguinte consulta GraphQL para visualizar todos os seus _slugs_:
 
 ```graphql
 {
