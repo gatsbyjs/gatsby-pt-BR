@@ -40,7 +40,7 @@ Neste exemplo, um módulo CSS foi importado e declarado como um objeto JavaScrip
 
 ### Habilitando stylesheets do usuário com um nome de classe estável
 
-Adicionando um CSS `className` persitente à sua marcação JSX juntamente com o seu código de CSS Modules facilita usuários a ter vantagem sobre o [User Stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para ter acessibilidade.
+Adicionando um CSS `className` persistente à sua marcação JSX juntamente com o seu código de CSS Modules facilita usuários a ter vantagem sobre o [User Stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para ter acessibilidade.
 
 Aqui está um exemplo onde o nome de classe `container` é adicionado ao DOM junto com os nomes de classe criados dinamicamente pelo módulo:
 
