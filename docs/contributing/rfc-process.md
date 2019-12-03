@@ -53,7 +53,7 @@ Depois que uma RFC se torna ativa, os autores podem implementá-la e submeter o 
 
 Além disso, o fato de uma determinada RFC ter sido aceita e está 'ativa' não implica nada sobre qual prioridade é atribuída à sua implementação, nem se alguém está atualmente trabalhando nela.
 
-Modifications to active RFCs can be done in followup PRs. We strive to write each RFC in a manner that it will reflect the final design of the feature; but the nature of the process means that we cannot expect every merged RFC to actually reflect what the end result will be at the time of the next major release; therefore we try to keep each RFC document somewhat in sync with the language feature as planned, tracking such changes via followup pull requests to the document.
+Modificações nas RFCs ativas podem ser feitas nas PRs seguintes. Nós nos esforçamos para escrever cada RFC de uma maneira que reflita o _design_ final do recurso; mas a natureza do processo significa que não podemos esperar que todas as RFCs que sofreram _merge_ reflitam realmente qual será o resultado final no momento do lançamento da próxima versão principal; portanto, tentamos manter cada documento RFC sincronizado de alguma maneira com o recurso de linguagem conforme planejado, rastreando essas alterações por meio das _pull requests_ seguintes.
 
 ## Implementando uma RFC
 
