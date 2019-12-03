@@ -65,7 +65,7 @@ Se você estiver interessado em trabalhar na implementação de uma RFC 'ativa',
 
 A cada semana, a equipe tenta revisar algum conjunto de _pull requests_ de RFC abertas.
 
-Tentamos garantir que qualquer RFC que aceitamos seja aceito na reunião semanal da equipe. Todo recurso aceito deve ter um ("core team champion")(?), que irá representá-lo, bem como o seu progresso.
+Tentamos garantir que qualquer RFC que aceitamos seja aceito na reunião semanal da equipe. Todo recurso aceito deve ter um membro da equipe principal, que irá representá-lo, bem como o seu progresso.
 
 **O processo RFC de Gatsby deve sua inspiração ao [processo RFC do React], [processo RFC do Yarn], [processo RFC do Rust] e [processo RFC do Ember]**
 
