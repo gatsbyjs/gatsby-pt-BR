@@ -14,23 +14,23 @@ O objetivo deste documento é:
 
 ## O que _plugins_ de transformação fazem?
 
-_Plugins_ de transformação "transformam" dados de um tipo para outro tipo. Você frequentemente usará ambos os plugins de fonte de dados e de transformação no seu website feito com Gatsby.
+_Plugins_ de transformação "transformam" dados de um tipo para outro tipo. Você frequentemente usará ambos os plugins de fonte de dados e os plugins de transformação no seu website feito com Gatsby.
 
-Esse acoplamento flexível entre os _plugins_ de fonte de dados e de transformação permitem que os desenvolvedores que usam Gatsby montem rapidamente pipelines de transformação de dados complexos com pouco trabalho.
+Esse acoplamento flexível entre os _plugins_ de fonte de dados e de transformação permitem que os desenvolvedores que usam Gatsby montem rapidamente _pipelines_ de transformação de dados complexos com pouco trabalho.
 
 ## Como criar um _plugin_ de transformação?
 
 Assim como o _plugin_ de fonte dados, o _plugin_ de transformação é um pacote NPM normal. Ele possui um arquivo `package.json` com dependências opcionais assim como um arquivo `gatsby-node.js` onde você implementa as APIs Node.js do Gatsby.
 
-`gatsby-transformer-yaml` é um _plugin_ de transformação que procura por novos nós com o _media type_ igual a _text/yaml_ (e.g. um arquivo .yaml) e cria novo(s) nó(s) filho(s) do tipo YAML através do processamento  do arquivo fonte YAML em objetos JavaScript.
+`gatsby-transformer-yaml` é um _plugin_ de transformação que procura por novos nós com o _media type_ igual a _text/yaml_ (e.g. um arquivo .yaml) e cria novo(s) nó(s) filho(s) do tipo YAML através da análise do arquivo fonte YAML em objetos JavaScript.
 
-Confira este exemplo de reconstrução simplificada de um `gatsby-transformer-yaml` diretamente em um site. Digamos que você tenha um site inicial padrão do Gatsby que inclua um arquivo `src/data/example.yml`:
+Confira este exemplo de reconstrução simplificada de um `gatsby-transformer-yaml` diretamente em um website. Digamos que você tenha um site inicial padrão do Gatsby que inclua um arquivo `src/data/example.yml`:
 
 ```yaml:title=src/data/example.yml
 - name: Jane Doe
-  bio: Developer based in Somewhere, USA
+  bio: Desenvolvedor residente de  Somewhere, USA
 - name: John Smith
-  bio: Developer based in Maintown, USA
+  bio: Desenvolvedor residente de  Maintown, USA
 ```
 
 ### Verifique que os dados estão sendo providos
@@ -125,9 +125,9 @@ Conteúdo do arquivo:
 
 ```text
 - id: Jane Doe
-  bio: Developer based in Somewhere, USA
+  bio: Desenvolvedor residente de  Somewhere, USA
 - id: John Smith
-  bio: Developer based in Maintown, USA
+  bio: Desenvolvedor residente de  Maintown, USA
 ```
 
 Conteúdo YAML analisado:
@@ -136,11 +136,11 @@ Conteúdo YAML analisado:
 ;[
   {
     id: "Jane Doe",
-    bio: "Developer based in Somewhere, USA",
+    bio: "Desenvolvedor residente de   Somewhere, USA",
   },
   {
     id: "John Smith",
-    bio: "Developer based in Maintown, USA",
+    bio: "Desenvolvedor residente de   Maintown, USA",
   },
 ]
 ```
@@ -164,7 +164,7 @@ function transformObject(obj, id, type) {
 }
 ```
 
-Acima, você cria um objeto `yamlNode` com a forma esperada pelo [`createNode`] (/docs/actions/#createNode).
+Acima, você cria um objeto `yamlNode` com o formato esperada pelo [`createNode`] (/docs/actions/#createNode).
 
 Então você cria um link entre o nó pai (arquivo) e o nó filho (conteúdo do yaml).
 
@@ -247,14 +247,14 @@ query {
           "node": {
             "id": "3baa5e64-ac2a-5234-ba35-7af86746713f",
             "name": "Jane Doe",
-            "bio": "Developer based in Somewhere, USA"
+            "bio": "Desenvolvedor residente de   Somewhere, USA"
           }
         },
         {
           "node": {
             "id": "2c733815-c342-5d85-aa3f-6795d0f25909",
             "name": "John Smith",
-            "bio": "Developer based in Maintown, USA"
+            "bio": "Desenvolvedor residente de   Maintown, USA"
           }
         }
       ]
@@ -267,16 +267,16 @@ Confira o [código fonte completo](https://github.com/gatsbyjs/gatsby/blob/maste
 
 ## Usando a cache
 
-As vezes transformar propriedades custa tempo e recursos. Para evitar recriar essas propriedades a cada execução, você pode aproveitar o mecanismo de cache global fornecido por Gatsby.
+Às vezes transformar propriedades custa tempo e recursos. Para evitar recriar essas propriedades a cada execução, você pode aproveitar o mecanismo de _cache_ global fornecido por Gatsby.
 
-As chaves de cache devem conter pelo menos o contentDigest do nó em questão. Por exemplo, o `gatsby-transformer-remark` usa a seguinte chave de cache para o nó html:
+As chaves de cache devem conter pelo menos o contentDigest do nó em questão. Por exemplo, o `gatsby-transformer-remark` usa a seguinte chave de _cache_ para o nó html:
 
 ```javascript:title=extend-node-type.js
 const htmlCacheKey = node =>
   `transformer-remark-markdown-html-${node.internal.contentDigest}-${pluginsCacheStr}-${pathPrefixCacheStr}`
 ```
 
-O acesso e a configuração de conteúdo no cache são tão simples quanto:
+Acessar e configurar o conteúdo na _cache_ é tão simples quanto:
 
 ```javascript:title=extend-node-type.js
 const cachedHTML = await cache.get(htmlCacheKey(markdownNode))
