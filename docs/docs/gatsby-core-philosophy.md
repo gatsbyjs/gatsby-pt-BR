@@ -8,7 +8,7 @@ A filosofia central de Gatsby pode ser dividida em três partes.
 
 **Segundo, [nossa filosofia de ferramentas](#filosofia-de-ferramentas-de-gatsby).** Para tornar a construção de sites divertida, as ferramentas do Gatsby devem incorporar certas qualidades. Esses incluem:
 
-- [agrupar o ecossistema de JavaScript moderno](#agrupe-o-ecossistema-javascript-moderno-para-a-web-de-conteúdo)
+- [agrupar o ecossistema de JavaScript moderno](#agrupe-o-ecossistema-de-javascript-moderno-para-a-web-de-conteúdo)
 - [divulgação progressiva da complexidade](#divulgar-progressivamente-a-complexidade)
 
 **Terceiro, [nossa filosofia comunitária](#filosofia-comunitária-do-gatsby).** Não podemos fazer isso sozinhos, por isso estamos nos esforçando para criar a comunidade mais inclusiva na web. Por esse motivo, nós _[trabalhamos abertamente](#trabalhe-abertamente)_. Em todos os momentos, acreditamos e nos esforçamos para comunicar que _[você pertence aqui](#você-pertence-aqui)_.
