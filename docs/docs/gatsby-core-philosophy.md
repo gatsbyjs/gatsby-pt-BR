@@ -1,168 +1,168 @@
 ---
-title: Gatsby Core Philosophy
+title: Filosofia central do Gatsby
 ---
 
-Gatsby's core philosophy can be divided into three parts.
+A filosofia central de Gatsby pode ser dividida em três partes.
 
-**First, [our vision](#the-gatsby-vision).** Our vision is to _[construct higher-level web building blocks](#construct-new-higher-level-web-building-blocks)_, and _[create a cohesive content mesh system](#create-a-cohesive-content-mesh-system)_, in order to _[make building websites fun](#make-building-websites-fun)_ and _[build a better web](#build-a-better-web)_.
+**Primeiro, [nossa visão](#the-gatsby-vision).** Nossa visão é _[construir novos alicerces da Web de alto nível](#construct-new-higher-level-web-building-blocks)_, e _[criar um sistema de malha de conteúdo coeso](#create-a-cohesive-content-mesh-system)_, para _[tornar a construção de sites divertida](#make-building-websites-fun)_ e _[construir uma web melhor](#build-a-better-web)_.
 
-**Second, [our tooling philosophy](#gatsbys-tooling-philosophy).** In order to make website building fun, Gatsby's tooling must embody certain qualities. These include:
+**Segundo, [nossa filosofia de ferramentas](#gatsbys-tooling-philosophy).** Para tornar a construção de sites divertida, as ferramentas do Gatsby devem incorporar certas qualidades. Esses incluem:
 
-- [bundling the modern JavaScript ecosystem](#bundle-the-modern-javascript-ecosystem-for-the-content-web)
-- [progressive disclosure of complexity](#progressively-disclose-complexity)
+- [agrupando o moderno ecossistema JavaScript](#bundle-the-modern-javascript-ecosystem-for-the-content-web)
+- [divulgação progressiva da complexidade](#progressively-disclose-complexity)
 
-**Third, [our community philosophy](#gatsbys-community-philosophy).** We can't do this alone, so we're striving to build the most inclusive community on the web. For that reason, we _[work in the open](#work-in-the-open)_. At all times, we believe, and strive to communicate, that _[you belong here](#you-belong-here)_.
+**Terceiro, [nossa filosofia comunitária](#gatsbys-community-philosophy).** Não podemos fazer isso sozinhos, por isso estamos nos esforçando para criar a comunidade mais inclusiva na web. Por esse motivo, nós _[trabalhamos abertamente](#work-in-the-open)_. Em todos os momentos, acreditamos e nos esforçamos para comunicar que _[você pertence aqui](#you-belong-here)_.
 
-## The Gatsby Vision
+## A visão do Gatsby
 
-### Construct new, higher-level web building blocks
+### Construir novos alicerces da Web de alto nível
 
-Today's building blocks for the web are components of HTML, CSS, and JavaScript.
+Os alicerces de hoje para a Web são componentes de HTML, CSS e JavaScript.
 
-We believe that in 5 or 10 years, we'll look back at many of these blocks like we look back at machine code or assembly language today; low-level languages that are great compile targets for higher-level languages that are easier to write in.
+Acreditamos que em 5 ou 10 anos, olharemos para muitos desses blocos como para o código de máquina ou a linguagem assembly atualmente; idiomas de baixo nível que são ótimos destinos de compilação para idiomas de alto nível mais fáceis de escrever.
 
-Using abstractions like React components, `gatsby-image`, and `gatsby-link`, we've begun to craft this higher-level language. But we're just getting started. Gatsby is a playground for discovering new building blocks for the web.
+Usando abstrações como componentes React, `gatsby-image`, e `gatsby-link`, começamos a criar essa linguagem de alto nível. Mas estamos apenas começando. Gatsby é um playground para descobrir novos blocos de construção para a web.
 
-To [quote Alan Kay](https://www.youtube.com/watch?v=NdSD07U5uBs):
+Para [citar Alan Kay](https://www.youtube.com/watch?v=NdSD07U5uBs):
 
-> “You get simplicity by finding slightly more sophisticated building blocks“.
+> “Você obtém simplicidade ao encontrar alicerces um pouco mais sofisticados“.
 
-[Read more here](/blog/2017-10-16-making-website-building-fun/#find-the-right-building-blocks).
+[Leia mais aqui](/blog/2017-10-16-making-website-building-fun/#find-the-right-building-blocks).
 
-### Create a cohesive "content mesh system"
+### Crie um "sistema de malha de conteúdo" coeso
 
-Over the last few years, teams have begun moving from monolithic, integrated CMS setups to a modular "content mesh" pulling content and functionality from multiple sources and APIs. Their key challenge: pragmatically integrating all these pieces together.
+Nos últimos anos, as equipes começaram a mudar de configurações integradas monolíticas de CMS para uma "malha de conteúdo" modular, puxando conteúdo e funcionalidade de várias fontes e APIs. O principal desafio: integrar pragmaticamente todas essas peças.
 
-Gatsby's goal is to build a "content mesh system" that knits modular, best-of-breed tools in content modeling, authentication, search, analytics, payments, UI frameworks, and so on -- into a unified, high-quality whole.
+O objetivo de Gatsby é criar um "sistema de malha de conteúdo" que integre as melhores ferramentas modulares de modelagem de conteúdo, autenticação, pesquisa, análise, pagamentos, frameworks de interface do usuário etc. - em um todo unificado e de alta qualidade.
 
-Read more on a [journey to the content mesh](/blog/2018-10-04-journey-to-the-content-mesh).
+Leia mais em uma [jornada para a malha de conteúdo](/blog/2018-10-04-journey-to-the-content-mesh).
 
-### Make building websites fun
+### Tornar a construção de sites divertida
 
-Gatsby's vision is to make website development fun by making it simple.
+A visão de Gatsby é tornar o desenvolvimento de sites divertido, simplificando-o.
 
-Fred Brooks wrote in _The Mythical Man-Month_:
+Fred Brooks escreveu em _The Mythical Man-Month_:
 
-> The programmer, like the poet, works only slightly removed from pure thought-stuff. [They] build [their] castles in the air, from air, creating by exertion of the imagination. Few media of creation are so flexible, so easy to polish and rework, so readily capable of realizing grand conceptual structures…
+> O programador, como o poeta, trabalha apenas um pouco afastado do puro pensamento. [Eles] constroem [seus] castelos no ar, do ar, criando pelo esforço da imaginação. Poucos meios de criação são tão flexíveis, fáceis de polir e retrabalhar, tão prontamente capazes de realizar grandes estruturas conceituais...
 
-Technology is incredibly fun when we, like the wizard of fantasy, can type an incantation on our computer and a new creation comes to life.
+A tecnologia é incrivelmente divertida quando nós, como o mago da fantasia, podemos digitar um encantamento em nosso computador e uma nova criação ganha vida.
 
-When this incantation is simple and takes seconds, we can easily get lost for hours in the rush of creation trying one thing after another improvising our way to an eventual design.
+Quando esse encantamento é simples e leva segundos, podemos facilmente nos perder por horas na corrida da criação, tentando uma coisa após a outra, improvisando nosso caminho para um design eventual.
 
-Developers, designers, demand-gen marketers, copywriters -- every stakeholder in a website project _can_ feel this -- with proper tooling.
+Desenvolvedores, designers, profissionais de marketing de demanda, redatores -- todas as partes interessadas em um projeto de site _podem_ sentir isso -- com as ferramentas adequadas.
 
-As Bret Victor suggested in _Inventing on Principle_, each creator needs "an immediate connection to what they're making.”
+Como Bret Victor sugeriu em _Inventing on Principle_, cada criador precisa "de uma conexão imediata com o que está criando".
 
-These instant feedback loops are often felt near the beginning of projects. But they can quickly be drowned by project complexity.
+Esses loops de feedback instantâneo geralmente são sentidos perto do início dos projetos. Mas eles podem ser rapidamente afogados pela complexidade do projeto.
 
-Developers can spend hours waiting for deploys, tracking down phantom "tooling" bugs, and so on.
+Os desenvolvedores podem passar horas esperando implantações, rastreando bugs fantasmas de "ferramentas" e assim por diante.
 
-We believe that with the right building blocks, and an integrated content mesh system, website projects should continue to feel fun no matter how big they get. We believe that every member of a website team deserves the ability to easily see how their work fits into the whole.
+Acreditamos que, com os blocos de construção certos e um sistema integrado de malha de conteúdo, os projetos de sites devem continuar a ser divertidos, independentemente do tamanho deles. Acreditamos que todo membro de uma equipe de sites merece a capacidade de ver facilmente como o trabalho deles se encaixa no todo.
 
-When a copywriter edits a headline in their CMS, a designer draws a button in their illustration app, or a developer adds an if statement in their text editor, they shouldn’t have to imagine what their change looks like in context. They should see it -- immediately.
+Quando um redator edita uma manchete em seu CMS, um designer desenha um botão em seu aplicativo de ilustração ou um desenvolvedor adiciona uma instrução if em seu editor de texto, els não deveriam precisar imaginar como é a alteração no contexto. Eles deveriam vê-la imediatamente.
 
-[Read more here](/blog/2017-10-16-making-website-building-fun/).
+[Leia mais aqui](/blog/2017-10-16-making-website-building-fun/).
 
-### Build a better web
+### Crie uma web melhor
 
-Websites can have, or lack, many qualities. They can be fast, secure, maintainable, beautiful, accessible, and cheap (or not). They can be easy to build and iterate on, have great SEO, and fun to work on (or not).
+Os sites podem ter ou não ter muitas qualidades. Eles podem ser rápidos, seguros, sustentáveis, bonitos, acessíveis e baratos (ou não). Eles podem ser fáceis de criar e interagir, ter um ótimo SEO e divertido de trabalhar (ou não).
 
-We believe that these qualities should be baked into frameworks, so they are delivered _by default_ rather than implemented on a per-site basis.
+Acreditamos que essas qualidades devem ser integradas em frameworks, para que sejam entregues _por padrão_ em vez de implementadas por site.
 
-When features and qualities are only available if you implement them, that makes them a luxury -- available only to a few websites.
+Quando recursos e qualidades estão disponíveis apenas se você os implementar, isso os torna um luxo -- disponível apenas para alguns sites.
 
-By contrast, by baking in qualities such as performance and security by default, Gatsby makes the right thing the easy thing.
+Por outro lado, ao incorporar qualidades como desempenho e segurança por padrão, Gatsby torna a coisa certa, a coisa fácil.
 
-We believe the most high-impact way to make the web better is to make it high-quality by default.
+Acreditamos que a maneira de maior impacto para melhorar a Web é torná-la de alta qualidade por padrão.
 
-## Gatsby's tooling philosophy
+## Filosofia de ferramentas de Gatsby
 
-### Bundle the modern JavaScript ecosystem for the content web
+### Agrupe o moderno ecossistema JavaScript para a web de conteúdo
 
-One key way Gatsby makes the content web high-quality by default is to neatly bundle the modern JavaScript ecosystem.
+Uma maneira importante de o Gatsby tornar a Web de conteúdo de alta qualidade por padrão é agrupar o ecossistema moderno do JavaScript.
 
-Traditional CMS development [presents many challenges](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#traditional-cms-development-presents-challenges) such as walled-garden development, difficult-to-maintain local environments, and a challenging target environment.
+Desenvolvimento tradicional de CMS [apresenta muitos desafios](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#traditional-cms-development-presents-challenges) como o desenvolvimento em jardins murados, ambientes locais difíceis de manter e um ambiente-alvo desafiador.
 
-Modern web development [bundles advances](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#modern-frameworks-offer-stability-and-faster-development) in **performance** (bundle splitting, asset prefetching, offline support, image optimization, or server side rendering), **developer experience** (componentization via React, transpilation via Babel, webpack, hot reloading), **accessibility**, and **security** together.
+Agrupadores de desenvolvimento web moderno [avançam](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#modern-frameworks-offer-stability-and-faster-development) em **desempenho** (divisão de pacotes, pré-busca de assets, suporte offline, otimização de imagem ou renderização no servidor), **experiência do desenvolvedor** (componenteização via React, transpilação via Babel, webpack, hot reloading), **acessibilidade**, e **segurança** juntos.
 
-Gatsby's goal is to bundle these advances in an easy to use package. We're open to any and all advances being made in the modern JavaScript world and would love to incorporate them into Gatsby!
+O objetivo do Gatsby é agrupar esses avanços em um pacote fácil de usar. Estamos abertos a todos e quaisquer avanços que estão sendo feitos no mundo moderno do JavaScript e gostaríamos de incorporá-los ao Gatsby!
 
-For more on this, look at [the features Gatsby bundles together](/features).
+Para mais informações, veja [os recursos que o Gatsby agrupa](/features).
 
-### Progressively disclose complexity
+### Divulgar progressivamente a complexidade
 
-One concept UX designers use to make applications easier to learn and less error-prone is called “progressive disclosure".
+Um conceito que os designers de UX usam para tornar os aplicativos mais fáceis de aprender e menos propensos a erros é chamado de "divulgação progressiva".
 
-If you were designing a user interface, you might move advanced or rarely-used features to a secondary screen, such as "advanced settings".
+Se você estava projetando uma interface do usuário, pode mover recursos avançados ou raramente usados ​​para uma tela secundária, como "configurações avançadas".
 
-Progressive disclosure simplifies the experience for most people without limiting the abilities of more advanced users.
+A divulgação progressiva simplifica a experiência para a maioria das pessoas, sem limitar as habilidades dos usuários mais avançados.
 
-We progressively disclose complexity by making features such as modifying webpack / Babel config, `gatsby-image`, and `gatsby-link` opt-in, simple one-off configuration choices. We avoid all-or-nothing "ejection" scenarios where to add further customization you have to leave the tool behind and manage all complexity (e.g. dependencies) yourself.
+Divulgamos progressivamente a complexidade criando recursos como modificar a configuração do webpack / Babel, `gatsby-image`, e `gatsby-link` opcionais, opções de configuração únicas e simples. Evitamos cenários de "ejeção" do tipo tudo ou nada, nos quais, para adicionar mais personalização, você precisa deixar a ferramenta para trás e gerenciar toda a complexidade (por exemplo, dependências).
 
-[Read more here](https://lengstorf.com/progressive-disclosure-of-complexity/).
+[Leia mais aqui](https://lengstorf.com/progressive-disclosure-of-complexity/).
 
-## Gatsby's community philosophy
+## Filosofia comunitária do Gatsby
 
-### Work in the open
+### Trabalhe abertamente
 
-Open source is at the core of Gatsby’s success, and one of the central tenets of open source is that things are done in the open and without smoke and mirrors.
+O open source está no centro do sucesso de Gatsby, e um dos princípios centrais do open source é que as coisas são feitas abertamente e sem fumaça e espelhos.
 
-Two of Gatsby’s core strengths are its community and ecosystem.
+Dois dos principais pontos fortes de Gatsby são sua comunidade e ecossistema.
 
-We’re convinced that the right path forward is to continue working in the open with both trust and support of our community.
+Estamos convencidos de que o caminho certo a seguir é continuar trabalhando abertamente com confiança e apoio de nossa comunidade.
 
-Anyone can [open an issue](/contributing/how-to-file-an-issue/) and ask a question, and we'll respond. Anyone can submit a pull request, and we'll give honest feedback on it. Anyone can [submit an RFC](/contributing/rfc-process/) to make a major change to Gatsby. And when we want to do this, we'll submit an RFC as a proposal.
+Qualquer um pode [abrir uma issue](/contributing/how-to-file-an-issue/) e fazer uma pergunta, e nós responderemos. Qualquer pessoa pode enviar uma pull request e forneceremos um feedback honesto sobre ela. Qualquer pessoa pode [enviar uma RFC](/contributing/rfc-process/) para fazer uma grande mudança em Gatsby. E quando quisermos fazer isso, enviaremos uma RFC como proposta.
 
-Many of Gatsby's key features emerged from conversation between contributors. If you plumb through Gatsby's old issues, you'll see discussion of many of the core ideas that led to Gatsby -- from our plugin system to performance optimizations and so on.
+Muitos dos principais recursos de Gatsby surgiram da conversa entre colaboradores. Se você examinar as issues antigas do Gatsby, verá uma discussão sobre muitas das principais idéias que levaram ao Gatsby - do nosso sistema de plugins às otimizações de desempenho e assim por diante.
 
-### You belong here
+### Você pertence aqui
 
-Open source is great for developers. It lets you:
+Open source é ótimo para desenvolvedores. Permite:
 
-- create a body of work and experience that looks great on a resumé or CV
-- build a referral network for paid work
-- turn it into a sustainable source of income
+- criar um corpo de trabalho e experiência que pareça ótimo em um currículo ou CV
+- construir uma rede de referência para trabalho remunerado
+- transformá-lo em uma fonte sustentável de renda
 
-#### Barriers to contributing to open source
+#### Barreiras à contribuição para o open source
 
-However, there are significant barriers to getting started in open source.
+No entanto, existem barreiras significativas para começar no open source.
 
-First, **getting started in open source is daunting**. OSS projects can be intimidating. They often have thousands of lines of code and tons of required context and history. Navigating GitHub can be confusing. And there can be awkward social dynamics: imposter syndrome and lack of support.
+Primeiro, **começar em open source é assustador**. Projetos de OSS podem ser intimidantes. Eles geralmente têm milhares de linhas de código e toneladas de contexto e histórico necessários. Navegar no GitHub pode ser confuso. E pode haver uma dinâmica social embaraçosa: síndrome do impostor e falta de apoio.
 
-Second, **open source is an expense not everyone can afford**. Potential contributors may not have free time to work on open source, and their jobs may not support contributing as part of our workload.
+Segundo, **open source é uma despesa que nem todos podem pagar**. Os contribuidores em potencial podem não ter tempo livre para trabalhar em open source e seus trabalhos podem não suportar a contribuição como parte de nossa carga de trabalho.
 
-Third, **many people don’t see themselves represented in open source.**
+Terceiro, **muitas pessoas não se vêem representadas em open source.**
 
-#### Overcoming these obstacles
+#### Superando esses obstáculos
 
-We believe that these barriers aren't simply obstacles to contributing, they're also obstacles to creating thriving projects. When these barriers persist:
+Acreditamos que essas barreiras não são apenas obstáculos à contribuição, mas também obstáculos à criação de projetos prósperos. Quando essas barreiras persistem:
 
-- projects lose so many brilliant people who have so much to contribute
-- projects lose an opportunity to add more maintainers
-- existing maintainers lose the opportunity to build support networks
+- projetos perdem tantas pessoas brilhantes que têm muito a contribuir
+- projetos perdem a oportunidade de adicionar mais mantenedores
+- mantenedores existentes perdem a oportunidade de construir redes de suporte
 
-Our approach is to be proactive in creating community by:
+Nossa abordagem é ser proativo na criação de comunidade:
 
-- actively reaching out and welcoming new contributors
-- remembering how steep the learning curve can be
-- investing in community as a primary measure of success
+- ativamente contatando e acolhendo novos colaboradores
+- lembrando o quão acentuada a curva de aprendizado pode ser
+- investir na comunidade como medida primária de sucesso
 
-#### Community is everything
+#### Comunidade é tudo
 
-For Gatsby, the open source community is everything. We want to be the most welcoming, most inclusive, most fun open source community on the planet.
+Para Gatsby, a comunidade de open source é tudo. Queremos ser a comunidade de open source mais acolhedora, inclusiva e divertida do planeta.
 
-To accomplish this, we follow a guiding core value: you belong here.
+Para isso, seguimos um valor fundamental: você pertence aqui.
 
-Some things we do in order to create an inclusive, welcoming community include:
+Algumas coisas que fazemos para criar uma comunidade inclusiva e acolhedora incluem:
 
-- An enforced [Code of conduct](/contributing/code-of-conduct/)
-- [Commitment to accessibility](/blog/2019-04-18-gatsby-commitment-to-accessibility/)
-- [Extensive docs](/docs)
-- Friendlier robots
-- Implicit trust
-- Active gratitude
-- [Active mentorship](/contributing/pair-programming/)
+- Um [Código de conduta imposto](/contributing/code-of-conduct/)
+- [Compromisso de acessibilidade](/blog/2019-04-18-gatsby-commitment-to-accessibility/)
+- [Documentos abrangentes](/docs)
+- Robôs mais amigáveis
+- Confiança implícita
+- Gratidão ativa
+- [Mentoria ativa](/contributing/pair-programming/)
 
-We’ve built an active community with hundreds of contributors, and we want to live the example of what a great open source community can be.
+Criamos uma comunidade ativa com centenas de colaboradores e queremos viver o exemplo do que pode ser uma grande comunidade de open source.
 
-[See more here](https://www.youtube.com/watch?v=8ARA7AD4yPs&feature=youtu.be&list=PLz8Iz-Fnk_eQGt4-VFFCXYuYcuKaw4F07)
+[Veja mais aqui](https://www.youtube.com/watch?v=8ARA7AD4yPs&feature=youtu.be&list=PLz8Iz-Fnk_eQGt4-VFFCXYuYcuKaw4F07)
