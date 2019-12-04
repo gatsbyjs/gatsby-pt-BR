@@ -4,14 +4,14 @@ title: Filosofia central do Gatsby
 
 A filosofia central de Gatsby pode ser dividida em três partes.
 
-**Primeiro, [nossa visão](#the-gatsby-vision).** Nossa visão é _[construir novos alicerces da Web de alto nível](#construct-new-higher-level-web-building-blocks)_, e _[criar um sistema de malha de conteúdo coeso](#create-a-cohesive-content-mesh-system)_, para _[tornar a construção de sites divertida](#make-building-websites-fun)_ e _[construir uma web melhor](#build-a-better-web)_.
+**Primeiro, [nossa visão](#a-visão-do-gatsby).** Nossa visão é _[construir novos alicerces da Web de alto nível](#construir-novos-alicerces-da-web-de-alto-nível)_, e _[criar um sistema de malha de conteúdo coeso](#crie-um-sistema-de-malha-de-conteúdo-coeso)_, para _[tornar a construção de sites divertida](#tornar-a-construção-de-sites-divertida)_ e _[criar uma web melhor](#crie-uma-web-melhor)_.
 
-**Segundo, [nossa filosofia de ferramentas](#gatsbys-tooling-philosophy).** Para tornar a construção de sites divertida, as ferramentas do Gatsby devem incorporar certas qualidades. Esses incluem:
+**Segundo, [nossa filosofia de ferramentas](#filosofia-de-ferramentas-de-gatsby).** Para tornar a construção de sites divertida, as ferramentas do Gatsby devem incorporar certas qualidades. Esses incluem:
 
-- [agrupando o moderno ecossistema JavaScript](#bundle-the-modern-javascript-ecosystem-for-the-content-web)
-- [divulgação progressiva da complexidade](#progressively-disclose-complexity)
+- [agrupar o ecossistema de JavaScript moderno](#agrupe-o-ecossistema-javascript-moderno-para-a-web-de-conteúdo)
+- [divulgação progressiva da complexidade](#divulgar-progressivamente-a-complexidade)
 
-**Terceiro, [nossa filosofia comunitária](#gatsbys-community-philosophy).** Não podemos fazer isso sozinhos, por isso estamos nos esforçando para criar a comunidade mais inclusiva na web. Por esse motivo, nós _[trabalhamos abertamente](#work-in-the-open)_. Em todos os momentos, acreditamos e nos esforçamos para comunicar que _[você pertence aqui](#you-belong-here)_.
+**Terceiro, [nossa filosofia comunitária](#filosofia-comunitária-do-gatsby).** Não podemos fazer isso sozinhos, por isso estamos nos esforçando para criar a comunidade mais inclusiva na web. Por esse motivo, nós _[trabalhamos abertamente](#trabalhe-abertamente)_. Em todos os momentos, acreditamos e nos esforçamos para comunicar que _[você pertence aqui](#você-pertence-aqui)_.
 
 ## A visão do Gatsby
 
@@ -77,7 +77,7 @@ Acreditamos que a maneira de maior impacto para melhorar a Web é torná-la de a
 
 ## Filosofia de ferramentas de Gatsby
 
-### Agrupe o moderno ecossistema JavaScript para a web de conteúdo
+### Agrupe o ecossistema de JavaScript moderno para a web de conteúdo
 
 Uma maneira importante de o Gatsby tornar a Web de conteúdo de alta qualidade por padrão é agrupar o ecossistema moderno do JavaScript.
 
