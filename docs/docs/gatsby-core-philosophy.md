@@ -8,7 +8,7 @@ A filosofia central de Gatsby pode ser dividida em três partes.
 
 **Segundo, [nossa filosofia de ferramentas](#filosofia-de-ferramentas-de-gatsby).** Para tornar a construção de sites divertida, as ferramentas do Gatsby devem incorporar certas qualidades. Esses incluem:
 
-- [agrupar o ecossistema de JavaScript moderno](#agrupe-o-ecossistema-de-javascript-moderno-para-a-web-de-conteúdo)
+- [agrupar o ecossistema de JavaScript moderno](#agrupe-o-ecossistema-de-javascript-moderno-para-o-conteúdo-da-web)
 - [divulgação progressiva da complexidade](#divulgar-progressivamente-a-complexidade)
 
 **Terceiro, [nossa filosofia comunitária](#filosofia-comunitária-do-gatsby).** Não podemos fazer isso sozinhos, por isso estamos nos esforçando para criar a comunidade mais inclusiva na web. Por esse motivo, nós _[trabalhamos abertamente](#trabalhe-abertamente)_. Em todos os momentos, acreditamos e nos esforçamos para comunicar que _[você pertence aqui](#você-pertence-aqui)_.
@@ -59,13 +59,13 @@ Os desenvolvedores podem passar horas esperando implantações, rastreando bugs 
 
 Acreditamos que, com os blocos de construção certos e um sistema integrado de malha de conteúdo, os projetos de sites devem continuar a ser divertidos, independentemente do tamanho deles. Acreditamos que todo membro de uma equipe de sites merece a capacidade de ver facilmente como o trabalho deles se encaixa no todo.
 
-Quando um redator edita uma manchete em seu CMS, um designer desenha um botão em seu aplicativo de ilustração ou um desenvolvedor adiciona uma instrução if em seu editor de texto, els não deveriam precisar imaginar como é a alteração no contexto. Eles deveriam vê-la imediatamente.
+Quando um redator edita uma manchete em seu CMS, um designer desenha um botão em seu aplicativo de ilustração ou um desenvolvedor adiciona uma instrução _if_ em seu editor de texto, eles não deveriam precisar imaginar como é a alteração no contexto. Eles deveriam vê-la imediatamente.
 
 [Leia mais aqui](/blog/2017-10-16-making-website-building-fun/).
 
 ### Crie uma web melhor
 
-Os sites podem ter ou não ter muitas qualidades. Eles podem ser rápidos, seguros, sustentáveis, bonitos, acessíveis e baratos (ou não). Eles podem ser fáceis de criar e interagir, ter um ótimo SEO e divertido de trabalhar (ou não).
+Os sites podem ter ou não ter muitas qualidades. Eles podem ser rápidos, seguros, sustentáveis, bonitos, acessíveis e baratos (ou não). Eles podem ser fáceis de criar e interagir, ter um ótimo SEO e serem divertido de trabalhar (ou não).
 
 Acreditamos que essas qualidades devem ser integradas em frameworks, para que sejam entregues _por padrão_ em vez de implementadas por site.
 
@@ -77,13 +77,13 @@ Acreditamos que a maneira de maior impacto para melhorar a Web é torná-la de a
 
 ## Filosofia de ferramentas de Gatsby
 
-### Agrupe o ecossistema de JavaScript moderno para a web de conteúdo
+### Agrupe o ecossistema de JavaScript moderno para o conteúdo da web
 
-Uma maneira importante de o Gatsby tornar a Web de conteúdo de alta qualidade por padrão é agrupar o ecossistema moderno do JavaScript.
+Uma maneira importante de o Gatsby tornar o conteúdo da web de alta qualidade por padrão é agrupar o ecossistema moderno do JavaScript.
 
 Desenvolvimento tradicional de CMS [apresenta muitos desafios](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#traditional-cms-development-presents-challenges) como o desenvolvimento em jardins murados, ambientes locais difíceis de manter e um ambiente-alvo desafiador.
 
-Agrupadores de desenvolvimento web moderno [avançam](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#modern-frameworks-offer-stability-and-faster-development) em **desempenho** (divisão de pacotes, pré-busca de assets, suporte offline, otimização de imagem ou renderização no servidor), **experiência do desenvolvedor** (componenteização via React, transpilação via Babel, webpack, hot reloading), **acessibilidade**, e **segurança** juntos.
+Agrupadores de desenvolvimento web moderno [avançam](https://www.gatsbyjs.org/blog/2018-10-11-rise-of-modern-web-development/#modern-frameworks-offer-stability-and-faster-development) em **desempenho** (divisão de pacotes, pré-busca de assets, suporte offline, otimização de imagem ou renderização no servidor), **experiência do desenvolvedor** (componentização via React, transpilação via Babel, webpack, hot reloading), **acessibilidade**, e **segurança** juntos.
 
 O objetivo do Gatsby é agrupar esses avanços em um pacote fácil de usar. Estamos abertos a todos e quaisquer avanços que estão sendo feitos no mundo moderno do JavaScript e gostaríamos de incorporá-los ao Gatsby!
 
