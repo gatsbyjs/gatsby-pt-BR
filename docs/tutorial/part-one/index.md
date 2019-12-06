@@ -42,11 +42,11 @@ Abra o código em `src/pages/index.js`. O código nesse arquivo cria um componen
 
 ### ✋ Faça alterações na página inicial do “Hello World”
 
-1.  Mude o “Hello World!” texto para “Hello Gatsby!” e save o seu arquivo. Se as suas páginas estão lado a lado, você pode ver que as alterações no seu código e conteúdo são refletidas quase instantaneamente no navegador depois de salvar o arquivo.
+1.  Mude o texto “Hello World!” para “Hello Gatsby!” e salve o seu arquivo. Se as suas páginas estão lado a lado, você pode ver que as alterações no seu código e conteúdo são refletidas quase instantaneamente no navegador depois de salvar o arquivo.
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="./02-demo-hot-reloading.mp4"></source>
-  <p>Sorry! Your browser doesn't support this video.</p>
+  <p>Desculpe! O seu browser não suporta este video.</p>
 </video>
 
 > 💡 O Gatsby utiliza **hot reloading** para acelerar o seu processo de desenvolvimento. Essencialmente, quando você está rodando um servidor de desenvolvimento do Gatsby, os arquivos do site estão sendo “observados” em background — toda vez que você salvar um arquivo, suas alterações vão ser refletidas imediatamente no navegador. Você não precisa recarregar a página ou reiniciar o servidor de desenvolvimento — suas alterações simplesmente aparecem.
@@ -54,11 +54,11 @@ Abra o código em `src/pages/index.js`. O código nesse arquivo cria um componen
 2.  Agora que você pode tornar suas alterações um pouco mais visíveis. Tente substituir o código em `src/pages/index.js` pelo código abaixo e salve novamente. Você verá alterações no texto — a cor do texto será roxa e o tamanho da fonte maior.
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default () => (
   <div style={{ color: `purple`, fontSize: `72px` }}>Hello Gatsby!</div>
-);
+)
 ```
 
 > 💡 Abordaremos mais sobre estilo no Gatsby na [**parte dois**](/tutorial/part-two/) do tutorial.
@@ -83,7 +83,7 @@ export default () => (
 4.  Adicione uma imagem. (Nesse caso, uma imagem aleatória do Unsplash).
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default () => (
   <div style={{ color: `purple` }}>
@@ -92,7 +92,7 @@ export default () => (
     {/* highlight-next-line */}
     <img src="https://source.unsplash.com/random/400x200" alt="" />
   </div>
-);
+)
 ```
 
 ![Adicione uma imagem](04-add-image.png)
@@ -104,24 +104,24 @@ _Se você é familiar com React e JSX, sinta-se à vontade para pular essa seç�
 Considere o conteúdo original do arquivo `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
-export default () => <div>Hello world!</div>;
+export default () => <div>Hello world!</div>
 ```
 
 Em JavaScript puro, parece mais com isso:
 
 ```javascript:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
-export default () => React.createElement("div", null, "Hello world!");
+export default () => React.createElement("div", null, "Hello world!")
 ```
 
 Agora você pode identificar o uso da importação `'react'`! Mas espere. Você está escrevendo JSX, não HTML e JavaScript puro. Como o navegador lê isso? A resposta curta: ele não lê. Sites Gatsby vem com ferramentas já configuradas para converter seu código fonte em algo que os navegadores possam interpretar.
 
 ## Construindo com componentes
 
-A página inicial na qual você estava editando foi criada com a definição de um componente da página. O que exatamente é um“componente”?
+A página inicial na qual você estava editando foi criada com a definição de um componente de página. O que exatamente é um “componente”?
 
 Amplamente definido, um componente é um bloco de código para o seu site; É um trecho de código independente que descreve uma seção da UI (interface do usuário).
 
@@ -150,52 +150,52 @@ Os componentes se tornam elementos construtivos do seu site. Ao invés de se lim
 
 Qualquer componente React que estiver dentro de `src/pages/*.js` se tornará automaticamente uma página. Vamos ver isso na prática.
 
-Você já possui um arquivo `src/pages/index.js` que veio com o “Hello World” starter. Vamos criar uma página de sobre.
+Você já possui um arquivo `src/pages/index.js` que veio com o “Hello World” starter. Vamos criar uma página "Sobre".
 
 1.  Crie um novo arquivo em `src/pages/about.js`, copie o código abaixo no novo arquivo e salve.
 
 ```jsx:title=src/pages/about.js
-import React from "react";
+import React from "react"
 
 export default () => (
   <div style={{ color: `teal` }}>
     <h1>About Gatsby</h1>
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 2.  Abra o seguinte link no seu navegador: http://localhost:8000/about/.
 
-![Nova página de sobre](05-about-page.png)
+![Nova página "Sobre"](05-about-page.png)
 
 Apenas colocando um componente React no arquivo `src/pages/about.js`, agora você tem uma página acessível em `/about`.
 
 ### ✋ Utilizando subcomponentes
 
-Digamos que a página inicial e a página de sobre ficaram muito grandes e você estava reescrevendo muitas coisas. Nesse caso, você pode utilizar subcomponentes para dividir a interface do usuário em partes reutilizáveis. Ambas as páginas tem cabeçalhos `<h1>` — crie um componente que descreverá um `Header`.
+Digamos que a página inicial e a página "Sobre" ficaram muito grandes e você estava reescrevendo muitas coisas. Nesse caso, você pode utilizar subcomponentes para dividir a interface do usuário em partes reutilizáveis. Ambas as páginas tem cabeçalhos `<h1>` — crie um componente que descreverá um `Header`.
 
 1.  Crie um novo diretório `components` dentro de `src` e um arquivo dentro desse diretório chamado `header.js`.
 2.  Adicione o seguindo trecho de código para o novo arquivo em `src/components/header.js`.
 
 ```jsx:title=src/components/header.js
-import React from "react";
+import React from "react"
 
-export default () => <h1>This is a header.</h1>;
+export default () => <h1>This is a header.</h1>
 ```
 
 3.  Modifique o arquivo `about.js` para importar o componente `Header`. Substitua o `h1` pelo `<Header />`:
 
 ```jsx:title=src/pages/about.js
-import React from "react";
-import Header from "../components/header"; // highlight-line
+import React from "react"
+import Header from "../components/header" // highlight-line
 
 export default () => (
   <div style={{ color: `teal` }}>
     <Header /> {/* highlight-line */}
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 ![Adicionando um componente de Header](06-header-component.png)
@@ -213,15 +213,15 @@ export default props => <h1>{props.headerText}</h1> {/* highlight-line */}
 5.  Volte para `src/pages/about.js` e faça as seguintes alterações:
 
 ```jsx:title=src/pages/about.js
-import React from "react";
-import Header from "../components/header";
+import React from "react"
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `teal` }}>
     <Header headerText="About Gatsby" /> {/* highlight-line */}
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 ![Passando dados para o header](07-pass-data-header.png)
@@ -232,13 +232,13 @@ Agora você deve ver o header “About Gatsby” novamente!
 
 Anteriormente, você definiu os componentes React como trechos de código reutilizáveis que descrevem uma interface do usuário. Para deixar esses trechos dinâmicos, você precisa ser capaz de fornecer dados diferentes. Você faz isso com a entrada chamada "props". Props são (adequadamente) propriedades fornecidas aos componentes do React.
 
-Na página `about.js` você passou uma propriedade `headerText` com o valor `"About Gatsby"` para o importado subcomponente `Header` :
+Na página `about.js` você passou uma propriedade `headerText` com o valor `"About Gatsby"` para o subcomponente importado `Header` :
 
 ```jsx:title=src/pages/about.js
 <Header headerText="About Gatsby" />
 ```
 
-No `header.js`, o componente de header espera receber a propriedade `headerText` (porque você escreveu para esperar). Para que você possa acessá-lo assim:
+No `header.js`, o componente de header espera receber a propriedade `headerText` (porque você o escreveu para esperar isso). Para que você possa acessá-lo assim:
 
 ```jsx:title=src/components/header.js
 <h1>{props.headerText}</h1>
@@ -254,11 +254,11 @@ Se você tivesse passado outra propriedade para o seu componente `<Header />`, i
 
 ...você poderia acessar a propriedade `arbitraryPhrase` com: `{props.arbitraryPhrase}`.
 
-6.  Para enfatizar como isso torna seus componentes reutilizáveis, adicione um componente extra `<Header />` à página about e adicione o seguinte código ao arquivo `src/pages/about.js` e salve.
+6.  Para enfatizar como isso torna seus componentes reutilizáveis, adicione um componente extra `<Header />` à página "Sobre" e adicione o seguinte código ao arquivo `src/pages/about.js` e salve.
 
 ```jsx:title=src/pages/about.js
-import React from "react";
-import Header from "../components/header";
+import React from "react"
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `teal` }}>
@@ -266,7 +266,7 @@ export default () => (
     <Header headerText="It's pretty cool" /> {/* highlight-line */}
     <p>Such wow. Very React.</p>
   </div>
-);
+)
 ```
 
 ![Header duplicado para mostrar reusabilidade](08-duplicate-header.png)
@@ -288,9 +288,9 @@ Muitas vezes, você precisa navegar entre páginas — Vamos ver sobre navegaç�
 1.  Abra o componente da página index (`src/pages/index.js`), importe o component `<Link />` do Gatsby, adicione o  `<Link />` acima do header, e dê a ele uma propriedade `to` com o valor `"/contact/"` para o nome do caminho:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
-import { Link } from "gatsby"; // highlight-line
-import Header from "../components/header";
+import React from "react"
+import { Link } from "gatsby" // highlight-line
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `purple` }}>
@@ -299,7 +299,7 @@ export default () => (
     <p>What a world.</p>
     <img src="https://source.unsplash.com/random/400x200" alt="" />
   </div>
-);
+)
 ```
 
 Ao clicar no novo link "Contato" na página inicial, você verá...
@@ -311,9 +311,9 @@ Ao clicar no novo link "Contato" na página inicial, você verá...
 2.  Agora você precisa criar um componente de página para a sua nova página de "Contato" em `src/pages/contact.js` e colocar um link de volta para a página inicial:
 
 ```jsx:title=src/pages/contact.js
-import React from "react";
-import { Link } from "gatsby";
-import Header from "../components/header";
+import React from "react"
+import { Link } from "gatsby"
+import Header from "../components/header"
 
 export default () => (
   <div style={{ color: `teal` }}>
@@ -321,7 +321,7 @@ export default () => (
     <Header headerText="Contact" />
     <p>Send us a message!</p>
   </div>
-);
+)
 ```
 
 Depois que você salvar o arquivo, você deve ver um página de contato e deve poder navegar entre essas páginas.
@@ -339,7 +339,7 @@ O Gatsby.js é um _gerador de site moderno_, o que significa que não há servid
 
 Tente usar o [Surge](http://surge.sh/) para fazer o deploy do seu primeiro site Gatsby. O Surge é um dos muitos "hosts de sites estáticos" que possibilitam o deploy de sites Gatsby.
 
-Se você não instalou o Surge anteriormente, abra uma nova janela do terminal e instale a linha de comando:
+Se você não instalou o Surge anteriormente, abra uma nova janela do terminal e instale a partir dessa linha de comando:
 
 ```shell
 npm install --global surge
@@ -356,7 +356,7 @@ gatsby build
 
 O build deve levar de 15 a 30 segundos. Após a conclusão do build, é interessante dar uma olhada nos arquivos que o comando `gatsby build` acabou de preparar para deploy.
 
-Dê uma olhada na lista dos arquivos gerados digitando o seguinte comando terminal na raiz do seu site, o que permitirá que você veja o diretório `public`:
+Dê uma olhada na lista dos arquivos gerados digitando o seguinte comando de terminal na raiz do seu site, o que permitirá que você veja o diretório `public`:
 
 ```shell
 ls public
