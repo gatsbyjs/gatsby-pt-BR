@@ -1,178 +1,180 @@
 ---
-title: Adding Forms
+title: Adicionando Formulários
 ---
 
-Gatsby is built on top of React. So anything that is possible with a React form is possible in Gatsby. Additional details about how to create React forms can be found in the [React forms documentation](https://reactjs.org/docs/forms.html) (which happens to be built with Gatsby!)
+Gatsby é construído utilizando o React. Portanto, tudo o que é possível fazer com um formulário React é possível fazer também no Gatsby. Detalhes adicionais sobre como criar formulários do React podem ser encontrados na [Documentação de Formulários do React](https://pt-br.reactjs.org/docs/forms.html) (Ah, documentação que foi criada com o Gatsby!)
 
-Let's start with the following page.
+Vamos começar com a seguinte página.
 
 ```jsx:title=src/pages/index.js
-import React from "react"
+import React from "react";
 
-export default () => <div>Hello world!</div>
+export default () => <div>Hello world!</div>;
 ```
 
-This Gatsby page is a React component. When you want to create a form, you need to store the state of the form - what the user has entered. Convert your function (stateless) component to a class (stateful) component.
+Esta página do Gatsby é um componente do React. Quando você deseja criar um formulário, é necessário armazenar o estado do formulário - o que o usuário digitou. Converta seu componente de função (stateless) em um componente de classe (stateful).
 
 ```jsx:title=src/pages/index.js
-import React from "react"
+import React from "react";
 
 export default class IndexPage extends React.Component {
   render() {
-    return <div>Hello world!</div>
+    return <div>Hello world!</div>;
   }
 }
 ```
 
-Now that you have created a class component, you can add `state` to the component.
+Agora que você criou um componente de classe, você pode adicionar um estado(`state`) ao componente.
 
 ```jsx:title=src/pages/index.js
-import React from "react"
+import React from "react";
 
 export default class IndexPage extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
-  }
+    nome: "",
+    sobrenome: ""
+  };
 
   render() {
-    return <div>Hello world!</div>
+    return <div>Hello world!</div>;
   }
 }
 ```
 
-And now you can add a few input fields:
+Agora você pode adicionar alguns campos de `input`:
 
 ```jsx:title=src/pages/index.js
-import React from "react"
+import React from "react";
 
 export default class IndexPage extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
-  }
-
-  render() {
-    return (
-      <form>
-        <label>
-          First name
-          <input type="text" name="firstName" />
-        </label>
-        <label>
-          Last name
-          <input type="text" name="lastName" />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-    )
-  }
-}
-```
-
-When a user types into an input box, the state should update. Add an `onChange` prop to update state and add a `value` prop to keep the input up to date with the new state:
-
-```jsx:title=src/pages/index.js
-import React from "react"
-
-export default class IndexPage extends React.Component {
-  state = {
-    firstName: "",
-    lastName: "",
-  }
-
-  handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
-
-    this.setState({
-      [name]: value,
-    })
-  }
+    nome: "",
+    sobrenome: ""
+  };
 
   render() {
     return (
       <form>
         <label>
-          First name
-          <input
-            type="text"
-            name="firstName"
-            value={this.state.firstName}
-            onChange={this.handleInputChange}
-          />
+          Nome
+          <input type="text" name="nome" />
         </label>
         <label>
-          Last name
-          <input
-            type="text"
-            name="lastName"
-            value={this.state.lastName}
-            onChange={this.handleInputChange}
-          />
+          Sobrenome
+          <input type="text" name="sobrenome" />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Enviar</button>
       </form>
-    )
+    );
   }
 }
 ```
 
-Now that your inputs are working, you want something to happen when you submit the form. Add `onSubmit` props to the form element and add `handleSubmit` to show an alert when the user submits the form:
+Quando o usuário digita em um `input`, o estado deve ser atualizado. Adicione a propriedade `onChange` para atualizar o estado e adicione a propriedade `value` para manter o `input` atualizado com o novo estado:
 
 ```jsx:title=src/pages/index.js
-import React from "react"
+import React from "react";
 
 export default class IndexPage extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
-  }
+    nome: "",
+    sobrenome: ""
+  };
 
   handleInputChange = event => {
-    const target = event.target
-    const value = target.value
-    const name = target.name
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
 
     this.setState({
-      [name]: value,
-    })
+      [name]: value
+    });
+  };
+
+  render() {
+    return (
+      <form>
+        <label>
+          Nome
+          <input
+            type="text"
+            name="nome"
+            value={this.state.nome}
+            onChange={this.handleInputChange}
+          />
+        </label>
+        <label>
+          Sobrenome
+          <input
+            type="text"
+            name="sobrenome"
+            value={this.state.sobrenome}
+            onChange={this.handleInputChange}
+          />
+        </label>
+        <button type="submit">Enviar</button>
+      </form>
+    );
   }
+}
+```
+
+Agora que os seus `inputs` estão funcionando, você deseja que algo aconteça ao enviar o formulário, certo?
+
+Então, adicione a propriedade `onSubmit` no `form` e crie uma função chamada `handleSubmit` para mostrar um alerta quando o usuário enviar o formulário:
+
+```jsx:title=src/pages/index.js
+import React from "react";
+
+export default class IndexPage extends React.Component {
+  state = {
+    nome: "",
+    sobrenome: ""
+  };
+
+  handleInputChange = event => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({
+      [name]: value
+    });
+  };
 
   handleSubmit = event => {
-    event.preventDefault()
-    alert(`Welcome ${this.state.firstName} ${this.state.lastName}!`)
-  }
+    event.preventDefault();
+    alert(`Bem-vindo ${this.state.nome} ${this.state.sobrenome}!`);
+  };
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-          First name
+          Nome
           <input
             type="text"
-            name="firstName"
-            value={this.state.firstName}
+            name="nome"
+            value={this.state.nome}
             onChange={this.handleInputChange}
           />
         </label>
         <label>
-          Last name
+          Sobrenome
           <input
             type="text"
-            name="lastName"
-            value={this.state.lastName}
+            name="sobrenome"
+            value={this.state.sobrenome}
             onChange={this.handleInputChange}
           />
         </label>
-        <button type="submit">Submit</button>
+        <button type="submit">Enviar</button>
       </form>
-    )
+    );
   }
 }
 ```
 
-This form isn't doing anything besides showing the user information that they just entered. At this point, you may want to move this form to a component, send the form state to a backend server, or add robust validation. You can also use fantastic React form libraries like [Formik](https://github.com/jaredpalmer/formik) or [Final Form](https://github.com/final-form/react-final-form) to speed up your development process.
+Este formulário não está fazendo nada além de mostrar as informações do usuário que ele acabou de informar. Neste ponto, convém mover este formulário para um componente, envie o estado do formulário para um servidor back-end, ou adicione uma validação robusta. Você também pode usar fantásticas bibliotecas de formulários do React, como o [Formik](https://github.com/jaredpalmer/formik), [Final Form](https://github.com/final-form/react-final-form) ou o [Unform](https://github.com/Rocketseat/unform) para acelerar seu processo de desenvolvimento.
 
-All of this is possible and more by leveraging the power of Gatsby and the React ecosystem!
+Tudo isso é possível e muito mais, aproveitando o poder do Gatsby e do ecossistema React!
