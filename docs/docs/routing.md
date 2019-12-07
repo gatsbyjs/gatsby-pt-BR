@@ -4,7 +4,7 @@ title: Roteamento
 
 ## Criando rotas
 
-Gatsby facilita o controle pragmático de suas páginas. Páginas podem ser criadas de três maneiras:
+Gatsby facilita o controle programático de suas páginas. Páginas podem ser criadas de três maneiras:
 
 - No arquivo gatsby-node.js de seu site implementando a API [`createPages`](/docs/node-apis/#createPages)
 - O Gatsby transforma automaticamente componentes React na pasta `src/pages` em páginas
