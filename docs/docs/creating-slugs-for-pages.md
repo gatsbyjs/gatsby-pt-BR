@@ -10,7 +10,7 @@ A lógica para criação de _slugs_ a partir de nomes de arquivos pode ser compl
 
 ## Criação de _slugs_ com gatsby-node.js
 
-Adicione os novos _slugs_ diretamente nos nós `MarkdownRemark`. Todos os dados adicionados aos nós estão disponíveis para futuras consultas com GraphQL.
+Adicione os novos _slugs_ diretamente nos nós `MarkdownRemark`. Todos os dados adicionados aos nós estarão disponíveis para futuras consultas com GraphQL.
 
 Para fazer isso, você usará uma função passada para a nossa implementação de API chamada [`createNodeField`](/docs/actions/#createNodeField). Essa função permite a criação de campos adicionais em nós criados por outros _plugins_.
 
