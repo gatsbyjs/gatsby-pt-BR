@@ -1,5 +1,5 @@
 ---
-title: Preparando um site para implatanção (deploy)
+title: Preparando um site para publicação
 ---
 
 ## Criar um novo projeto com Gatsby
@@ -33,11 +33,11 @@ gatsby build
 
 Então, no diretório `public` haverá arquivos para copiar para o servidor.
 
-## Adicionando um prefixo de caminho
+## Adicionando um prefixo de rota
 
-Se você quer ir para um prefixo de caminho específico, por exemplo `exemplo.com/blog/` ao invés de `exemplo.com/` leia [Adicionando um prefixo de caminho](/docs/path-prefix)
+Se você quer ir para um prefixo de rota específico, por exemplo `exemplo.com/blog/` ao invés de `exemplo.com/` leia [Adicionando um prefixo de rota](/docs/path-prefix)
 
-## Implantação específica
+## Publicação específica
 
 Ações adicionais podem ser obrigatórias, dependendo de qual servidor você usa.
 Se você possui um servidor de um dos provedores a seguir, leia as subpáginas individuais:
@@ -53,4 +53,4 @@ Se você possui um servidor de um dos provedores a seguir, leia as subpáginas i
 - [Surge](/docs/deploying-to-surge)
 - [GitHub Pages](/docs/how-gatsby-works-with-github-pages)
 
-Se você não vê a hospedagem você está interessado, é possível adicionar outros provedores de hospedagem por meio de [contribuições aos documentos](/contributing/docs-contributions).
+Se você não vê a hospedagem que você está interessado, é possível adicionar outros provedores de hospedagem através de [contribuições aos documentos](/contributing/docs-contributions).
