@@ -24,4 +24,3 @@ Isso significa que a primeira utilização normalmente não é ocasionada por um
 
 This could be one-off campaigns, landing pages, brochure sites, as well as documentation pages or other internal resources.
 Poderiam ser campanhas pontuais, _landing pages_, sites de propaganda, assim como páginas de documentação ou outros recursos internos.
-
