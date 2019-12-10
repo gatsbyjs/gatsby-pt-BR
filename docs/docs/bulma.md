@@ -1,43 +1,43 @@
 ---
-title: Bulma
+título: Bulma
 ---
 
-[Bulma](https://bulma.io) is a free, open source CSS framework based on Flexbox. This guide will show you how to get started with Gatsby and Bulma.
+[Bulma](https://bulma.io) é uma framework CSS gratuita e de código aberto baseada no Flexbox. Este guia mostrará como começar com Gatsby e Bulma.
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [**Quick Start guide**](/docs/quick-start), then come back.
+Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você precisar configurar um projeto, vá para o [**Guia de início rápido**](/docs/quick-start) e depois volte.
 
-### Installation
+### Instalação
 
-For starters, lets install all the required packages we're going to need.
+Para iniciantes, vamos instalar todos os pacotes necessários que precisaremos.
 
 `yarn add bulma node-sass gatsby-plugin-sass`
 
-Then add the `gatsby-plugin-sass` in to `gatsby-config.js`.
+Em seguida, adicione o  `gatsby-plugin-sass` no `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
 ```
 
-### File for styles
+### Arquivo para estilização
 
-Now is the time to create a scss-file that holds our simple style customisation and the import statement for bulma.
+Agora é a hora de criar um arquivo scss que contém nossa customização simples e a importação do bulma.
 
-(To keep things simple, insert the file next to index.js in the pages-directory)
+(Para simplificar, insira o arquivo ao lado de index.js no diretório de páginas)
 
 ```scss:title=mystyles.scss
 @charset "utf-8";
 
-// If need, change your variables before importing Bulma
+// Se necessário, altere suas variáveis ​​antes de importar o Bulma
 $title-color: #ff0000;
 
 @import "~bulma/bulma.sass";
 ```
 
-### Using Bulma
+### Usando o Bulma
 
-The last step is to import the style and use it.
+O último passo é importar o estilo e usá-lo.
 
-Let's replace the default contents of the index.js file.
+Vamos substituir o conteúdo padrão do arquivo index.js.
 
 ```javascript:title=index.js
 import React from "react"
@@ -48,13 +48,13 @@ const IndexPage = () => {
     <div className="container">
       <div className="columns">
         <div className="column">
-          <h2 className="title is-2">Level 2 heading</h2>
-          <p className="content">Cool content. Using Bulma!</p>
+          <h2 className="title is-2">Título do nível 2</h2>
+          <p className="content">Conteúdo legal. Usando Bulma!</p>
         </div>
 
         <div className="column is-four-fifths">
-          <h2 className="title is-2">Level 2 heading</h2>
-          <p className="content">This column is cool too!</p>
+          <h2 className="title is-2">Título do nível 2 </h2>
+          <p className="content">Esta coluna também é legal!</p>
         </div>
       </div>
     </div>
@@ -63,9 +63,8 @@ const IndexPage = () => {
 
 export default IndexPage
 ```
+E é só isso! Agora você pode usar o Bulma como faria normalmente.
 
-And that's all there is to it! Now you can use Bulma as you normally would.
+### Recursos
 
-### Resources
-
-- [Bulma documentation on how to use sass](https://bulma.io/documentation/customize/with-node-sass/)
+- [Documentação do Bulma sobre como usar o sass](https://bulma.io/documentation/customize/with-node-sass/)
