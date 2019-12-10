@@ -4,8 +4,8 @@ title: Conceitos de GraphQL
 
 import LayerModel from "../../www/src/components/layer-model"
 
-Existem muitas opções para carregar dados nos componentes do React. Uma dss mais
-populares e poderosas delas é uma tecnologia chamada
+Existem muitas opções para carregar dados nos componentes do React. Uma das mais
+populares e poderosas é uma tecnologia chamada
 [GraphQL](http://graphql.org/).
 
 O GraphQL foi inventado no Facebook para ajudar os engenheiros de produto a _puxar_ os dados necessários para os
@@ -123,11 +123,11 @@ Ao iniciar o GraphQL, recomendamos os dois tutoriais a seguir:
 ## Como o GraphQL e o Gatsby trabalham juntos?
 
 Uma das grandes vantagens do GraphQL é a sua flexibilidade. As pessoas usam o GraphQL
-com [muitas linguagens de programação diferentes](http://graphql.org/code/) e para aplicativos web e nativos.
+com [muitas linguagens de programação diferentes](http://graphql.org/code/), para aplicativos web e nativos.
 
 A maioria das pessoas executa o GraphQL em um servidor para responder ao vivo a solicitações de
-dados de clientes. Você define um esquema (um esquema é uma maneira formal de descrever
-o formato dos seus dados) para o seu servidor GraphQL e, em seguida, seus resolvedores GraphQL
+dados de clientes. Você define um schema (um schema é uma maneira formal de descrever
+o formato dos seus dados) para o seu servidor GraphQL e, em seguida, seus resolvers GraphQL
 recebem dados de bancos de dados e/ou outras APIs.
 
 Gatsby usa o GraphQL em _build-time_ e _não_ para sites
@@ -138,11 +138,11 @@ Gatsby é um ótimo framework para criar aplicativos, por isso é possível e in
 emparelhar o GraphQL nativo em tempo de construção do Gatsby com consultas GraphQL executando em
 um servidor GraphQL ativo a partir do navegador.
 
-## De onde vem o esquema GraphQL do Gatsby?
+## De onde vem o schema GraphQL do Gatsby?
 
-A maioria dos usos do GraphQL envolve a criação manual de um esquema GraphQL.
+A maioria dos usos do GraphQL envolve a criação manual de um schema GraphQL.
 
-O Gatsby usa plugins que podem buscar dados de diferentes fontes. Esses dados são usados ​​para _inferir_ automaticamente um esquema do GraphQL.
+O Gatsby usa plugins que podem buscar dados de diferentes fontes. Esses dados são usados ​​para _inferir_ automaticamente um schema do GraphQL.
 
 Se você fornecer dados ao Gatsby com esta aparência:
 
@@ -152,7 +152,7 @@ Se você fornecer dados ao Gatsby com esta aparência:
 }
 ```
 
-O Gatsby criará um esquema parecido com isso:
+O Gatsby criará um schema parecido com isso:
 
 ```
 title: String
@@ -162,13 +162,13 @@ Isso facilita a extração de dados de qualquer lugar e a escrita imediata
 de consultas GraphQL nos seus dados.
 
 Isso pode causar confusão, pois algumas fontes de dados permitem definir
-um esquema mesmo quando não há dados adicionados para partes ou todo o esquema. Se partes dos dados não foram adicionadas, essas partes do esquema podem não ser recriadas no Gatsby.
+um schema mesmo quando não há dados adicionados para partes ou todo o schema. Se partes dos dados não foram adicionadas, essas partes do schema podem não ser recriadas no Gatsby.
 
 ## Transformações de dados poderosas
 
 O GraphQL habilita outro recurso exclusivo do Gatsby - permite controlar transformações de dados com argumentos para suas consultas. Alguns exemplos a seguir.
 
-### Formatting dates
+### Formatando datas
 
 As pessoas costumam armazenar datas como "2018-01-05", mas desejam exibir a data de alguma outra forma, como "5 de janeiro de 2018". Uma maneira de fazer isso é carregar uma biblioteca JavaScript de formatação de data no navegador. Ou, com a camada GraphQL de Gatsby, você pode fazer a formatação no momento da consulta, como:
 
@@ -190,7 +190,7 @@ markdownRemark {
 }
 ```
 
-### Images
+### Imagens
 
 Gatsby tem um rico suporte para o processamento de imagens. As imagens responsivas são uma grande parte da web moderna e geralmente envolvem a criação de miniaturas de mais de 5 tamanhos por foto. Com o [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) do Gatsby, você pode _consultar_ suas imagens para versões responsivas. A consulta cria automaticamente todas as miniaturas responsivas necessárias e retorna os campos `src` e `srcSet` para adicionar ao seu elemento de imagem.
 
