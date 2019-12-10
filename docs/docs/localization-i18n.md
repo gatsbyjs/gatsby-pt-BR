@@ -15,7 +15,7 @@ Existem alguns pacotes React i18n disponíveis. Várias opções incluem [react-
 
 ### gatsby-plugin-i18n
 
-Este plugin ajuda você a usar `react-intl`,` i18next` ou qualquer outra biblioteca i18n com o Gatsby. Este plug-in não traduz nem formata seu conteúdo, mas cria rotas para cada idioma, permitindo que o Google encontre mais facilmente a versão correta do seu site e, se necessário, designa interfaces de usuário alternativas.
+Este plugin ajuda você a usar `react-intl`, `i18next` ou qualquer outra biblioteca i18n com o Gatsby. Este plug-in não traduz nem formata seu conteúdo, mas cria rotas para cada idioma, permitindo que o Google encontre mais facilmente a versão correta do seu site e, se necessário, designa interfaces de usuário alternativas.
 
 O formato de nomeação segue .**languageKey**.js para arquivos e /**languageKey**/caminho/ nomeDoArquivo para URLs.
 
@@ -31,7 +31,7 @@ URL - /**en**/about
 
 O React-intl faz parte do conjunto FormatJS de bibliotecas i18n e fornece suporte para mais de 150 idiomas. Ele se baseia na [API de internacionalização](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) do JavaScript, que fornece APIs e componentes aprimorados. O React-intl usa o contexto React e os HOCs (Higher Order Components) para fornecer traduções, permitindo que você carregue dinamicamente os módulos de idioma conforme necessário. Também há opções de polyfill disponíveis para navegadores mais antigos que não suportam a API JavaScript i18n básica.
 
-Informações mais detalhadas sobre as [APIs](https://github.com/formatjs/react-intl/blob/master/docs/API.md) de react-intl e [components](https://github.com/formatjs/ react-intl / blob / master / docs / Components.md), incluindo [demos](https://github.com/formatjs/react-intl/tree/master/examples), estão disponíveis na [documentação](https : //github.com/formatjs/react-intl/tree/master/docs).
+Informações mais detalhadas sobre as [APIs](https://github.com/formatjs/react-intl/blob/master/docs/API.md) de react-intl e [components](https://github.com/formatjs/react-intl/blob/master/docs/Components.md), incluindo [demos](https://github.com/formatjs/react-intl/tree/master/examples), estão disponíveis na [documentação](https://github.com/formatjs/react-intl/tree/master/docs).
 
 ### react-i18next
 
