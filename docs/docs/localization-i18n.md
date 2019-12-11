@@ -1,5 +1,5 @@
 ---
-título: Localização e internacionalização com Gatsby (i18n)
+title: Localização e internacionalização com Gatsby (i18n)
 ---
 
 Fornecer o conteúdo dos usuários de uma maneira adaptada ao idioma e à cultura deles constrói uma ótima experiência do usuário. Quando você faz um esforço para adaptar o conteúdo da Web à localização de um usuário, essa prática é chamada internacionalização (i18n).
