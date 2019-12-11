@@ -2,13 +2,13 @@
 title: Bulma
 ---
 
-[Bulma](https://bulma.io) é uma framework CSS gratuito e de código aberto baseado no Flexbox. Este guia mostrará como começar com Gatsby e Bulma.
+[Bulma](https://bulma.io) é um framework CSS gratuito e de código aberto baseado no Flexbox. Este guia mostrará como começar com Gatsby e Bulma.
 
 Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você precisar configurar um projeto, vá para o [**Guia de início rápido**](/docs/quick-start) e depois volte.
 
 ### Instalação
 
-Para iniciantes, vamos instalar todos os pacotes necessários.
+Para começar, vamos instalar todos os pacotes necessários.
 
 `yarn add bulma node-sass gatsby-plugin-sass`
 
@@ -20,7 +20,7 @@ plugins: [`gatsby-plugin-sass`],
 
 ### Arquivo para estilização
 
-Agora é a hora de criar um arquivo _scss_ que contém nossa simples customização de estilo e a importação do Bulma.
+Agora é a hora de criar um arquivo _scss_ que contém nossa simples customização de estilo, além da importação do Bulma.
 
 (Para simplificar, insira o arquivo junto do _index.js_ no diretório de páginas)
 
