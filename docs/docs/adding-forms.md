@@ -33,10 +33,10 @@ export default class IndexPage extends React.Component {
   state = {
     nome: "",
     sobrenome: ""
-  };
+  }
 
   render() {
-    return <div>Hello world!</div>;
+    return <div>Hello world!</div>
   }
 }
 ```
@@ -44,13 +44,13 @@ export default class IndexPage extends React.Component {
 Agora você pode adicionar alguns campos de `input`:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default class IndexPage extends React.Component {
   state = {
     nome: "",
     sobrenome: ""
-  };
+  }
 
   render() {
     return (
@@ -65,7 +65,7 @@ export default class IndexPage extends React.Component {
         </label>
         <button type="submit">Enviar</button>
       </form>
-    );
+    )
   }
 }
 ```
@@ -73,23 +73,23 @@ export default class IndexPage extends React.Component {
 Quando o usuário digita em um `input`, o estado deve ser atualizado. Adicione a propriedade `onChange` para atualizar o estado e adicione a propriedade `value` para manter o `input` atualizado com o novo estado:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default class IndexPage extends React.Component {
   state = {
     nome: "",
     sobrenome: ""
-  };
+  }
 
   handleInputChange = event => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+    const target = event.target
+    const value = target.value
+    const name = target.name
 
     this.setState({
       [name]: value
-    });
-  };
+    })
+  }
 
   render() {
     return (
@@ -114,7 +114,7 @@ export default class IndexPage extends React.Component {
         </label>
         <button type="submit">Enviar</button>
       </form>
-    );
+    )
   }
 }
 ```
@@ -124,26 +124,26 @@ Agora que os seus `inputs` estão funcionando, você deseja que algo aconteça a
 Então, adicione a propriedade `onSubmit` no `form` e crie uma função chamada `handleSubmit` para mostrar um alerta quando o usuário enviar o formulário:
 
 ```jsx:title=src/pages/index.js
-import React from "react";
+import React from "react"
 
 export default class IndexPage extends React.Component {
   state = {
     nome: "",
     sobrenome: ""
-  };
+  }
 
   handleInputChange = event => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
+    const target = event.target
+    const value = target.value
+    const name = target.name
 
     this.setState({
       [name]: value
-    });
-  };
+    })
+  }
 
   handleSubmit = event => {
-    event.preventDefault();
+    event.preventDefault()
     alert(`Bem-vindo ${this.state.nome} ${this.state.sobrenome}!`)
   }
 
