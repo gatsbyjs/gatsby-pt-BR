@@ -2,7 +2,7 @@
 title: Localização e internacionalização com Gatsby (i18n)
 ---
 
-Fornecer o conteúdo dos usuários de uma maneira adaptada ao idioma e à cultura deles constrói uma ótima experiência do usuário. Quando você faz um esforço para adaptar o conteúdo da Web à localização de um usuário, essa prática é chamada internacionalização (i18n).
+Fornecer conteúdo aos usuários de uma maneira adaptada ao idioma e à cultura deles constrói uma ótima experiência do usuário. Quando você faz um esforço para adaptar o conteúdo da Web à localização de um usuário, essa prática é chamada internacionalização (i18n).
 
 Na prática, o i18n envolve a tradução de texto e formatação de datas, números e sequências de caracteres com base no local do usuário. Por exemplo, uma data exibida para um usuário nos Estados Unidos seguiria o formato de data em mm/dd/aa, mas para um usuário no Reino Unido, o formato da data mudaria para dd/mm/aa.
 
