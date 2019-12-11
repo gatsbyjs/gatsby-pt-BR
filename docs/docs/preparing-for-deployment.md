@@ -53,4 +53,4 @@ Se você possui um servidor de um dos provedores a seguir, leia as subpáginas i
 - [Surge](/docs/deploying-to-surge)
 - [GitHub Pages](/docs/how-gatsby-works-with-github-pages)
 
-Se você não vê a hospedagem que você está interessado, é possível adicionar outros provedores de hospedagem através de [contribuições aos documentos](/contributing/docs-contributions).
+Se você não vê a hospedagem que você está interessado, é possível adicionar outros provedores de hospedagem através de [contribuições a documentação](/contributing/docs-contributions).
