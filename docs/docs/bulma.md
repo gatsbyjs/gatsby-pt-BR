@@ -22,7 +22,7 @@ plugins: [`gatsby-plugin-sass`],
 
 Agora é a hora de criar um arquivo scss que contém nossa customização simples e a importação do bulma.
 
-(Para simplificar, insira o arquivo ao lado de index.js no diretório de páginas)
+(Para simplificar, insira o arquivo junto do _index.js_ no diretório de páginas)
 
 ```scss:title=mystyles.scss
 @charset "utf-8";
