@@ -2,7 +2,7 @@
 título: Bulma
 ---
 
-[Bulma](https://bulma.io) é uma framework CSS gratuita e de código aberto baseada no Flexbox. Este guia mostrará como começar com Gatsby e Bulma.
+[Bulma](https://bulma.io) é uma framework CSS gratuito e de código aberto baseado no Flexbox. Este guia mostrará como começar com Gatsby e Bulma.
 
 Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você precisar configurar um projeto, vá para o [**Guia de início rápido**](/docs/quick-start) e depois volte.
 
