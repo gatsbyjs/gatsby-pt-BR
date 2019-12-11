@@ -8,7 +8,7 @@ Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você pre
 
 ### Instalação
 
-Para iniciantes, vamos instalar todos os pacotes necessários que precisaremos.
+Para iniciantes, vamos instalar todos os pacotes necessários.
 
 `yarn add bulma node-sass gatsby-plugin-sass`
 
