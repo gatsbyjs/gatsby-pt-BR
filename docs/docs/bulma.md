@@ -20,7 +20,7 @@ plugins: [`gatsby-plugin-sass`],
 
 ### Arquivo para estilização
 
-Agora é a hora de criar um arquivo scss que contém nossa customização simples e a importação do bulma.
+Agora é a hora de criar um arquivo _scss_ que contém nossa simples customização de estilo e a importação do Bulma.
 
 (Para simplificar, insira o arquivo junto do _index.js_ no diretório de páginas)
 
