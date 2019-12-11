@@ -1,8 +1,8 @@
 ---
-title: Custom Configuration
+title: Configuração Personalizada
 overview: true
 ---
 
-Sometimes you may find yourself in a situation where Gatsby's default configuration just isn't quite what you need for your site. If you should find yourself in this situation, have no fear my friend, you can customize Gatsby's config for `babel` and `webpack`. You can also customize `html.js`, the React component used to generate the initial HTML file of your build. You'll also find guides on how to get custom environment variables into your website, as well how to proxy API requests in development so your API calls aren't interpreted by your server as static assets.
+Às vezes, você pode se encontrar em uma situação em que a configuração padrão do Gatsby não é exatamente o que você precisa para o seu site. Se você se encontrar nessa situação, não tenha medo, meu amigo, você pode personalizar a configuração do Gatsby para `babel` e `webpack`. Você também pode personalizar o `html.js`, o componente React usado para gerar o arquivo HTML inicial da sua compilação. Você também encontrará guias sobre como obter variáveis de ambiente personalizadas em seu site, bem como proxy de solicitações de API em desenvolvimento para que suas chamadas à API não sejam interpretadas pelo servidor como ativos estáticos.
 
 <GuideList slug={props.slug} />
