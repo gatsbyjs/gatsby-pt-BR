@@ -12,7 +12,7 @@ O componente `<Link />` do Gatsby é usado para vincular as páginas do seu site
 
 Aqui está um exemplo de criação de um vínculo entre duas páginas em um site com o Gatsby.
 
-Abra o componente de página (ex. `src/pages/index.js`) no seu site. Importe o componente `Link` do Gatsby, o que o torna disponível no componente. 
+Abra o componente de página (ex. `src/pages/index.js`) no seu site. Importe o componente `Link` do Gatsby, o que permite que ele seja usado dentro do componente de página.
 Adicione o componente `<Link />` abaixo do cabeçalho, e adicione a propriedade `to` e como valor o caminho `"/contato/"`:
 
 ```jsx
@@ -30,11 +30,11 @@ O código acima adicionará um vínculo à página de contato, renderizado autom
 
 > **Nota:** o valor `"/"` para a propriedade `to` levará os usuários para a página inicial.
 
-## Usansdo `<a>` para vínculos externos
+## Usando `<a>` para vínculos externos
 
-Se você estiver vinculando páginas que não são controladas pelo site com Gatsby (como em um domínio diferente), use a tag nativa do HTML `<a>`, em vez do _Link_ do Gatsby.
+Se você estiver vinculando páginas que não são controladas pelo seu site Gatsby (como em um domínio diferente), use a tag nativa do HTML `<a>`, em vez do _Link_ do Gatsby.
 
-Além disso se você deseja abrir um vínculo externo em uma nova janela usando o atributo `target`, use o atributo `rel` para evitar uma vunerabilidade onde a [página de referência](https://developer.mozilla.org/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pode ser substituída dinamicamente via JavaScript:
+Além disso se você deseja abrir um vínculo externo em uma nova janela usando o atributo `target`, use o atributo `rel` para evitar uma vulnerabilidade onde a [página de referência](https://developer.mozilla.org/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pode ser substituída dinamicamente via JavaScript:
 
 ```jsx
 import React from "react"
