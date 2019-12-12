@@ -2,7 +2,7 @@
 title: Recrutamento mais Rápido
 ---
 
-Com o crescimento do React, ficou mais fácil encontrar desenvolvedores talentosos com habilidades no React, que desenvolvedores com habilidades de desenvolvimento em vários CMS e UI frameworks.
+Com o crescimento do React, ficou mais fácil encontrar desenvolvedores talentosos com habilidades no React, do que encontrar desenvolvedores com habilidades de desenvolvimento em vários CMS e UI frameworks.
 
 Jesus Olivas, chefe de engenharia da WeKnow, uma agência de 40 pessoas com sede em San Diego, CA,[explica](https://www.youtube.com/watch?v=tWu1xfF18FI&feature=youtu.be&t=2392):
 
