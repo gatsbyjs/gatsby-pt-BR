@@ -4,7 +4,7 @@ title: Usando ESLint
 
 ESLint é um utilitário de JavaScript de código aberto para _linting_ de código. _Code linting_ é um tipo de análise estática que é freqüentemente usada para encontrar padrões problemáticos. Existem ferramentas de _linting_ de código para a maioria das linguagens de programação e, às vezes, os compiladores incorporam o _linting_ no processo de compilação.
 
-O JavaScript, por ser uma linguagem dinâmica e de tipo fraco, é especialmente propenso a erros de desenvolvedor. Sem o benefício de um processo de compilação, o código JavaScript geralmente é executado para encontrar sintaxe ou outros erros. Ferramentas de _linting_ como o ESLint permitem que os desenvolvedores descubram problemas com seu código JavaScript sem executá-lo.
+O JavaScript, por ser uma linguagem dinâmica e fracamente tipada, é especialmente propenso a erros de desenvolvedor. Sem o benefício de um processo de compilação, o código JavaScript geralmente é executado para encontrar erros de sintaxe ou outros erros. Ferramentas de _linting_ como o ESLint permitem que os desenvolvedores descubram problemas com seu código JavaScript sem executá-lo.
 
 ## Como usar o ESLint
 
