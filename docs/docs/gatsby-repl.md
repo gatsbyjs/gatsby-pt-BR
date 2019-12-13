@@ -2,9 +2,9 @@
 title: Gatsby REPL
 ---
 
-O REPL ("read-eval-print loop") do Gatsby está disponível através do comando `gatsby repl`. Esse comando fornece acesso a um shell REPL interativo dentro do contexto do seu ambiente Gatsby. Podemos usa-lo para extrair dados gerais e interagir programaticamente com eles. Se você tem uma sugestão para novo comando, sinta-se livre para criar uma PR para ele!
+O REPL ("read-eval-print loop") do Gatsby está disponível através do comando `gatsby repl`. Esse comando fornece acesso a um shell REPL interativo dentro do contexto do seu ambiente Gatsby. Podemos usá-lo para extrair dados gerais e interagir programaticamente com eles. Se você tem uma sugestão para um novo comando, sinta-se livre para criar um PR para ele!
 
-Esse documento dará uma breve descrição de cada comando REPL, o output esperado, e um exemplo do que podemos fazer com o comando para manipular dados. Os exemplos usam o [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/) como ambiente demo, já que atualmente é o starter mais conceituado e também por prover um output padrão para a maioria desses comandos.
+Esse documento dará uma breve descrição de cada comando REPL, a saida esperada, e um exemplo do que podemos fazer com o comando para manipular dados. Os exemplos usam o [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/) como ambiente de demonstração, já que atualmente é o starter mais conceituado e também por prover uma saida padrão para a maioria desses comandos.
 
 Para iniciar, no seu terminal, após ter realizado a configuração inicial do site [aqui](/docs/quick-start), rode o comando `gatsby repl` para entrar no shell interativo. Se você estiver escrevendo uma função, você pode escreve-la em múltiplas linhas, contanto que você não use ponto e vírgula ou feche um parêntesis ou uma chave prematuramente. Isso é útil para rodar buscas no GraphQL e funções callback.
 
@@ -109,7 +109,7 @@ gatsby > getNodes().filter(node=> {if('MarkdownRemark' == node.internal.type) re
 
 `nodes` é como `getNodes()`, mas retorna um array **indexado** de objetos (os nós). Também podemos passar o índice do nó desejado, com isso teremos o retorno de um array com um único objeto de nó.
 
-Usos: `nodes` retorna o array, ou `nodes[<id>]` retorna um array com um objeto de nó.
+Uso: `nodes` retorna o array, ou `nodes[<id>]` retorna um array com um objeto de nó.
 
 Exemplos:
 
@@ -140,7 +140,7 @@ gatsby > nodes[47]
 
 Retorna um array indexado de arrays. Cada array contém uma chave que é o slug, e um valor que é o objeto de nó da página.
 
-Usos: `pages` ou `pages[<index>]`
+Uso: `pages` ou `pages[<index>]`
 
 Exemplo:
 
@@ -160,7 +160,7 @@ gatsby > pages[0]
 
 Retorna o schema GraphQL do seu ambiente Gatsby como um objeto.
 
-Usos: `schema` ou `schema[<property>]`
+Uso: `schema` ou `schema[<property>]`
 
 Exemplo:
 
@@ -183,7 +183,7 @@ gatsby > schema._implementations
 
 Retorna as configurações encontradas no arquivo `gatsby-config.js` do seu site como um objeto.
 
-Usos: `siteConfig` ou `siteConfig[<property>]`
+Uso: `siteConfig` ou `siteConfig[<property>]`
 
 Exemplo:
 
