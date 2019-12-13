@@ -8,7 +8,7 @@ Por quê?
 
 ## Lançar sites Gatsby muda a história
 
-- **Lançado significa mais real.** É comum conversar sobre tecnologias extremamente novas, mas é muito menos comum vê-las sendo realmente utilizadas em produção.
+- **Lançado significa mais real.** É comum conversar sobre tecnologias extremamente novas, mas é bem menos comum vê-las sendo realmente utilizadas em produção.
 - **Ver é acreditar.** Sites Gatsby chocam as pessoas devido a sua rapidez. Quando alguém lança um site Gatsby, outras pessoas começam a perguntar como fazer sites tão rápidos.
 
 https://twitter.com/Netlify/status/1011344285529182211
@@ -18,8 +18,8 @@ https://twitter.com/Netlify/status/1011344285529182211
 
 ## Como lançar o seu primeiro site
 
-A adoção do Gatsby dentro das empresas tende a seguir uma abordagem "bottom-up" ao invés de "top-down".
+A adoção do Gatsby dentro das empresas tende a seguir uma abordagem "bottom-up" (ascendente) ao invés de "top-down" (descendente).
 
-Isso significa que a primeira utilização normalmente não é ocasionada por uma ordem de um executivo para um projeto de alto nível. Ao invés disso, normalmente, os primeiros sites são geralmente menores ou têm poucos interessados.
+Significa que a primeira vez em que é utilizado geralmente não acontece em um projeto que os gestores da empresa consideram importante. Ao invés disso, normalmente, os primeiros sites são geralmente menores ou têm poucos interessados.
 
-Poderiam ser campanhas pontuais, _landing pages_, sites de propaganda, assim como páginas de documentação ou outros recursos internos.
+Poderiam ser campanhas pontuais, _landing pages_, sites de propaganda, assim como páginas de documentação ou outros projetos internos.
