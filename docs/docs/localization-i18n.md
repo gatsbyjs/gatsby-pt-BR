@@ -1,52 +1,53 @@
 ---
-title: Localization and Internationalization with Gatsby (i18n)
+title: Localização e internacionalização com Gatsby (i18n)
 ---
 
-Serving users content in a way that is adapted to their language & culture is part of a great user experience. When you make an effort to adapt web content to a user's location, that practice is called internationalization (i18n).
+Fornecer conteúdo aos usuários de uma maneira adaptada ao idioma e à cultura deles constrói uma ótima experiência do usuário. Quando você faz um esforço para adaptar o conteúdo da Web à localização de um usuário, essa prática é chamada internacionalização (i18n).
 
-In practice i18n involves translating text and formatting dates, numbers, and strings based on the user's detected location. For example, a date displayed for a user in the United States would follow the mm/dd/year date format, but for a user in the UK the date format would change to dd/mm/year.
+Na prática, o i18n envolve a tradução de texto e formatação de datas, números e sequências de caracteres com base no local do usuário. Por exemplo, uma data exibida para um usuário nos Estados Unidos seguiria o formato de data em mm/dd/aa, mas para um usuário no Reino Unido, o formato da data mudaria para dd/mm/aa.
 
-This guide is a brief look at the options that exist for enhancing your Gatsby project for internationalization.
+Este guia é uma breve descrição das opções existentes para aprimorar a internacionalização do seu projeto Gatsby.
 
-## Choosing a package
+## Escolhendo um pacote
 
-There are a few React i18n packages out there. Several options include [react-intl](https://github.com/yahoo/react-intl), the community [Gatsby plugin](https://www.npmjs.com/package/gatsby-plugin-i18n) and [react-i18next](https://github.com/i18next/react-i18next/). There are several factors to consider when choosing a package: Do you already use a similar package in another project? How well does the package meet the needs of your users? Are you or your team already familiar with a certain package? Is the package well documented and maintained?
+Existem alguns pacotes React i18n disponíveis. Várias opções incluem [react-intl](https://github.com/yahoo/react-intl), a comunidade [plugin do Gatsby](https://www.npmjs.com/package/gatsby-plugin-i18n) e [react-i18next](https://github.com/i18next/react-i18next/). Existem vários fatores a serem considerados ao escolher um pacote: Você já usa um pacote semelhante em outro projeto? Quão bem o pacote atende às necessidades de seus usuários? Você ou sua equipe já estão familiarizados com um determinado pacote? O pacote está bem documentado e mantido?
+
 
 ### gatsby-plugin-i18n
 
-This plugin helps you use `react-intl`, `i18next` or any other i18n library with Gatsby. This plugin does not translate or format your content, but rather it creates routes for each language, allowing Google to more easily find the correct version of your site, and if you need to, designate alternative UI layouts.
+Este plugin ajuda você a usar `react-intl`, `i18next` ou qualquer outra biblioteca i18n com o Gatsby. Este plugin não traduz nem formata seu conteúdo, mas cria rotas para cada idioma, permitindo que o Google encontre mais facilmente a versão correta do seu site e, se necessário, designa interfaces de usuário alternativas.
 
-The naming format follows .**languageKey**.js for files and /**languageKey**/path/fileName for URLs.
+O formato de nomeação segue .**languageKey**.js para arquivos e /**languageKey**/caminho/nomeDoArquivo para URLs.
 
-**Example:**
+**Exemplo:**
 
-File - src/pages/about.**en**.js
+Arquivo - src/pages/about.**en**.js
 
 URL - /**en**/about
 
-[gatsby-plugin-i18n on GitHub](https://github.com/angeloocana/gatsby-plugin-i18n)
+[gatsby-plugin-i18n no GitHub](https://github.com/angeloocana/gatsby-plugin-i18n)
 
 ### react-intl
 
-React-intl is a part of the FormatJS set of i18n libraries and provides support for over 150+ languages. It builds on JavaScript's [Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) providing enhanced APIs and components. React-intl uses React context and HOCs (Higher Order Components) to provide translations allowing you to dynamically load language modules as you need them. There are also polyfill options available for older browsers that do not support the base JavaScript i18n API.
+O React-intl faz parte do conjunto FormatJS de bibliotecas i18n e fornece suporte para mais de 150 idiomas. Ele se baseia na [API de internacionalização](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl) do JavaScript, que fornece APIs e componentes aprimorados. O React-intl usa o contexto React e os HOCs (Higher Order Components) para fornecer traduções, permitindo que você carregue dinamicamente os módulos de idioma conforme necessário. Também há opções de polyfill disponíveis para navegadores mais antigos que não suportam a API JavaScript i18n básica.
 
-More detailed information about react-intl's [APIs](https://github.com/formatjs/react-intl/blob/master/docs/API.md) and [components](https://github.com/formatjs/react-intl/blob/master/docs/Components.md), including [demos](https://github.com/formatjs/react-intl/tree/master/examples), are available in the [documentation](https://github.com/formatjs/react-intl/tree/master/docs).
+Informações mais detalhadas sobre as [APIs](https://github.com/formatjs/react-intl/blob/master/docs/API.md) de react-intl e [componentes](https://github.com/formatjs/react-intl/blob/master/docs/Components.md), incluindo [demos](https://github.com/formatjs/react-intl/tree/master/examples), estão disponíveis na [documentação](https://github.com/formatjs/react-intl/tree/master/docs).
 
 ### react-i18next
 
-React-i18next is an internationalization library built on the i18next framework. It uses components to make sure translations render correctly or to re-render your content when the user language changes.
+O React-i18next é uma biblioteca de internacionalização criada na estrutura do i18next. Ele usa componentes para garantir que as traduções sejam renderizadas corretamente ou para renderizar novamente seu conteúdo quando o idioma do usuário for alterado.
 
-React-i18next is more extensible than other options with a variety of plugins, utilities, and configurations. Common plugins allow for detecting a user's language or adding an additional layer of local caching. Other options include caching, a backend plugin to load translations from your server, or bundling translations with Webpack.
+O React-i18next é mais extensível que outras opções com uma variedade de plugins, utilitários e configurações. Os plugins comuns permitem detectar o idioma de um usuário ou adicionar uma camada adicional de cache local. Outras opções incluem cache, um plugin de backend para carregar traduções do seu servidor ou empacotar traduções com o Webpack.
 
-This framework also has experimental support for the React suspense API and React hooks.
+Este framework também possui suporte experimental para a API do React suspense e React hooks.
 
-## Other resources
+## Outros recursos
 
-- [Building i18n with Gatsby](https://www.gatsbyjs.org/blog/2017-10-17-building-i18n-with-gatsby/)
+- [Construindo i18n com Gatsby](https://www.gatsbyjs.org/blog/2017-10-17-building-i18n-with-gatsby/)
 
-- [Building Eviction Free NYC with GatsbyJS + Contentful](https://www.gatsbyjs.org/blog/2018-04-27-building-eviction-free-nyc-with-gatsbyjs-and-contentful/)
+- [Construindo Eviction Free NYC com GatsbyJS e Contentful](https://www.gatsbyjs.org/blog/2018-04-27-building-eviction-free-nyc-with-gatsbyjs-and-contentful/)
 
-- [Gatsby i18n packages](https://www.gatsbyjs.org/packages/gatsby-plugin-i18n/?=i18)
+- [Pacotes do Gatsby i18n](https://www.gatsbyjs.org/packages/gatsby-plugin-i18n/?=i18)
 
-- [Gatsby i18n articles](https://www.gatsbyjs.org/blog/tags/i-18-n/)
-- [W3C's i18n resources](http://w3c.github.io/i18n-drafts/getting-started/contentdev.en#reference)
+- [Artigos Gatsby i18n](https://www.gatsbyjs.org/blog/tags/i-18-n/)
+- [Recursos i18n do W3C](http://w3c.github.io/i18n-drafts/getting-started/contentdev.en#reference)
