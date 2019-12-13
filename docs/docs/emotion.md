@@ -4,9 +4,9 @@ title: Emotion
 
 Neste tutorial, você irá aprender como configurar um site com a biblioteca CSS-in-JS [Emotion](https://emotion.sh).
 
-Emotion é uma performática e flexível biblioteca CSS-in-JS. Com base em muitas outras bibliotecas CSS-in-JS, ele permite que você crie estilos de objetos ou strings rapidamente. Tem uma composição previsível para evitar problemas de especificidade com o CSS. Com source maps e rótulos, Emotion tem uma grande experiência de desenvolvimento e grande desempenho com caching pesado na produção.
+Emotion é uma performática e flexível biblioteca CSS-in-JS. Com base em muitas outras bibliotecas CSS-in-JS, ele permite que você crie estilize suas aplicações rapidamente utilizando objetos ou strings de estilo. Tem uma composição previsível para evitar problemas de especificidade com o CSS. Com source maps e rótulos, Emotion tem uma grande experiência de desenvolvimento e grande desempenho com caching pesado na produção.
 
-[Renderização do lado do servidor](https://emotion.sh/docs/ssr) funciona por padrão no Emotion. Você pode usar o método `renderToString` ou `renderToNodeStream` do React sem qualquer configuração extra. A função `extractCritical` remove regras não usadas que foram criadas com emotion e ajuda a carregar páginas rapidamente.
+[Renderização do lado do servidor](https://emotion.sh/docs/ssr) funciona por padrão no Emotion. Você pode usar o método `renderToString` ou `renderToNodeStream` do React sem qualquer configuração adicional. A função `extractCritical` remove regras não usadas que foram criadas com emotion e ajuda a carregar as páginas rapidamente.
 
 Primeiro, abra uma nova janela de terminal e execute o seguinte comando para criar um novo site:
 
@@ -116,7 +116,7 @@ export default () => (
 
 ## Adicionando estilos globais no Gatsby com Emotion
 
-Para iniciar, crie um novo site Gatsby com o [olá mundo iniciante](https://github.com/gatsbyjs/gatsby-starter-hello-world) e instalar [`gatsby-plugin-emotion`](/packages/gatsby-plugin-emotion/) e suas dependências:
+Para iniciar, crie um novo site Gatsby com o [starter _hello world_](https://github.com/gatsbyjs/gatsby-starter-hello-world) e instale o [`gatsby-plugin-emotion`](/packages/gatsby-plugin-emotion/) e suas dependências:
 
 ```shell
 gatsby new global-styles https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -132,7 +132,7 @@ module.exports = {
 }
 ```
 
-Em seguida, adicione um componente layout ao `src/components/layout.js`:
+Em seguida, adicione o componente _layout_ ao `src/components/layout.js`:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -158,7 +158,7 @@ export default ({ children }) => (
   </Wrapper>
 )
 ```
-Depois, atualize o `src/pages/index.js` para usar o layout:
+Depois, atualize o `src/pages/index.js` para usar o _layout_:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
