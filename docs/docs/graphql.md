@@ -27,8 +27,8 @@ Que retorna o seguinte resultado:
 }
 ```
 
-Note como o formato da consulta tem exatamente o mesmo formato dos dados retornados em JSON. Isso é possivel por que em GraphQL, a consulta é comparada com um modelo de dados, `schema`, que é a representação dos dados disponíveis. Não se preocupe ainda sobre de onde vem o modelo de dados. O Gatsby organiza todos os seus dados para você e os torna acessíveis através de uma ferramenta chamada GraphiQL. GraphiQL e uma interface gráfica que permite que você 1) faça consultas em seus dados através do navegador, e 2) investigue a estrutura dos dados disponiveis a você através de um navegador de tipo de dados.
+Note como o formato da consulta tem exatamente o mesmo formato dos dados retornados em JSON. Isso é possivel por que em GraphQL, a consulta é comparada com um modelo de dados, `schema`, que é a representação dos dados disponíveis. Não se preocupe ainda sobre de onde vem o modelo de dados. O Gatsby organiza todos os seus dados para você e os torna acessíveis através de uma ferramenta chamada GraphiQL. GraphiQL é uma interface gráfica que permite que você 1) faça consultas em seus dados usando o navegador de sua preferência, e 2) investigue a estrutura dos dados disponíveis a você através de uma ferramenta de exploração de estruturas de dados.
 
-Se você quiser saber mais sobre GraphQL, você pode ler sobre o [porquê do Gatsby usar isso](/docs/why-gatsby-uses-graphql/), e conferir o [guia conceitual](/docs/querying-with-graphql/) sobre a consulta de dados utilizando GraphQL.
+Se você quiser saber mais sobre GraphQL, você pode ler sobre o [porque do Gatsby adotar essa tecnologia](/docs/why-gatsby-uses-graphql/), e conferir o [guia conceitual](/docs/querying-with-graphql/) sobre como consultar dados utilizando o GraphQL.
 
 <GuideList slug={props.slug} />
