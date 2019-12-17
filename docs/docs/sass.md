@@ -1,30 +1,30 @@
 ---
-title: Using Sass in Gatsby
+title: Usando Sass no Gatsby
 ---
 
-[Sass](https://sass-lang.com) is an extension of CSS, adding nested rules, variables, mixins, selector inheritance, and more. In Gatsby, Sass code can be translated to well-formatted, standard CSS using a plugin.
+[Sass](https://sass-lang.com) é uma extensão do CSS, adicionando regras aninhadas, variáveis, mixins, herança de seletor e muito mais. No Gatsby, o código Sass pode ser traduzido para o padrão CSS bem formatado usando um plugin.
 
-Sass will compile `.sass` and `.scss` files to `.css` files for you, so you can write your stylesheets with more advanced features.
+O Sass compilará arquivos `.sass` e `.scss` em arquivos `.css`, para que você possa escrever suas folhas de estilo com recursos mais avançados.
 
-> **Note**: the difference between using a `.sass` or `.scss` file is the syntax that you write your styles in. All valid CSS is valid SCSS as well so it is the easiest to use and most popular. You can read more about the differences in the [Sass documentation](https://sass-lang.com/documentation/syntax).
+> **Nota**: a diferença entre usar um arquivo `.sass` ou `.scss` é a sintaxe em que você escreve seus estilos. Todo CSS válido é SCSS válido, além de ser o mais fácil de usar e o mais popular. Você pode ler mais sobre as diferenças na [documentação do Sass](https://sass-lang.com/documentation/syntax).
 
-## Installing and Configuring Sass
+## Instalando e configurando o Sass
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [**Quick Start guide**](/docs/quick-start/), then come back.
+Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você precisar configurar um projeto, vá para o [**Guia de início rápido**](/docs/quick-start/), e volte depois.
 
-1.  Install the Gatsby plugin [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass/) and `node-sass`, a required peer dependency as of v2.0.0.
+1.  Instale o plugin Gatsby [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass/) e `node-sass`, uma dependência necessária a partir da versão 2.0.0.
 
 `npm install --save node-sass gatsby-plugin-sass`
 
-2.  Include the plugin in your `gatsby-config.js` file.
+2.  Inclua o plugin no seu arquivo  `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
 ```
 
-> **Note**: You can configure [additional plugin options](/packages/gatsby-plugin-sass/#other-options) like paths to include and options for `css-loader`.
+> **Nota**: Você pode configurar [opções adicionais de plugin](/packages/gatsby-plugin-sass/#other-options) como caminhos a serem incluídos e opções para `css-loader`.
 
-3.  Write your stylesheets as `.sass` or `.scss` files and require or import them as normal.
+3.  Escreva suas folhas de estilo como arquivos `.sass` ou `.scss` e declare ou importe-as normalmente.
 
 ```css:styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -50,8 +50,8 @@ import "./styles.scss"
 import "./styles.sass"
 ```
 
-## Other resources
+## Outros recursos
 
-- [Introduction to Sass](https://designmodo.com/introduction-sass/)
-- [Sass Documentation](https://sass-lang.com/documentation)
-- [Gatsby starters that use Sass](/starters/?c=Styling%3ASCSS)
+- [Introdução ao Sass](https://designmodo.com/introduction-sass/)
+- [Documentação do Sass](https://sass-lang.com/documentation)
+- [Starters Gatsby que usam Sass](/starters/?c=Styling%3ASCSS)
