@@ -55,7 +55,7 @@ SEO.defaultProps = {
 }
 ```
 
-**Nota:** `propTypes` são incluídas nesse exemplo para ajudar você a garantir que toda informação que você precisa estão no componente, e para ajudar a servir como um guia enquanto faz a desestruturação/uso dessas propriedades.
+**Nota:** `propTypes` são incluídas nesse exemplo para ajudar você a garantir que toda informação que você precisa está no componente, e para ajudar a servir como um guia enquanto faz a desestruturação/uso dessas propriedades.
 
 Como o componente de SEO também deve ser usado em outros arquivos, por exemplo, um arquivo de template, o componente também aceita propriedades para as quais você define padrões sensíveis na seção `SEO.defaultProps`. Desse modo a informação que você colocar no `siteMetadata` é utilizada, a menos que você defina a propriedade explicitamente.
 
@@ -221,4 +221,4 @@ Você também pode colocar as _meta-tags_ do Facebook e Twitter em seus próprio
 - [marisamorby.com](https://github.com/marisamorby/marisamorby.com/blob/master/packages/gatsby-theme-blog-sanity/src/components/seo.js)
 - [gatsby-starter-prismic](https://github.com/LeKoArts/gatsby-starter-prismic/blob/master/src/components/SEO/SEO.jsx)
 
-Conforme mencionado no começo, você também pode usar o componente em modelos em templates, como [no exemplo](https://github.com/jlengstorf/marisamorby.com/blob/6e86f845185f9650ff95316d3475bb8ac86b15bf/src/templates/post.js#L12-L18).
+Conforme mencionado no começo, você também pode usar o componente em modelos, como [no exemplo](https://github.com/jlengstorf/marisamorby.com/blob/6e86f845185f9650ff95316d3475bb8ac86b15bf/src/templates/post.js#L12-L18).
