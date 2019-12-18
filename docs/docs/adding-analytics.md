@@ -24,7 +24,7 @@ O ID de acompanhamento é o que é usado para identificar dados relacionados ao 
 
 Agora você deve ter um ID de acompanhamento; anote-o, pois seu site precisará referenciá-lo ao enviar as visualizações das páginas para o Google Analytics. O ID deve estar no formato `UA-XXXXXXXXX-X`.
 
-Você pode encontrar este ID de acompanhamento mais tarde, indo para `Administrador > Informações de acompanhamento > Código de acompanhamento`.
+Você pode encontrar este ID de acompanhamento mais tarde, indo para `Administração > Informações de acompanhamento > Código de acompanhamento`.
 
 ## Usando `gatsby-plugin-google-analytics`
 
