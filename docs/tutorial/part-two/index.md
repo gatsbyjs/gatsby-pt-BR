@@ -108,7 +108,7 @@ A estrutura de arquivos do seu projeto agora deve parecer com isso:
 2. Importe sua folha de estilos recentemente criada no arquivo `gatsby-browser.js`:
 
 ```javascript:title=gatsby-browser.js
-import "./src/styles/global.css";
+import "./src/styles/global.css"
 
 // ou:
 // require('./src/styles/global.css')
