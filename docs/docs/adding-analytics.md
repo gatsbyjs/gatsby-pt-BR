@@ -28,7 +28,7 @@ Você pode encontrar este ID de acompanhamento mais tarde, indo para `Administra
 
 ## Usando `gatsby-plugin-google-analytics`
 
-Agora, é hora de configurar o Gatsby para enviar visualizações de páginas para sua conta do Google Analytics.
+Agora, é hora de configurar o Gatsby para enviar visualizações das páginas para sua conta do Google Analytics.
 
 Vamos usar `gatsby-plugin-google-analytics`. Para outras opções de analytics (incluindo Google Analytics gtag.js e Google Tag Manager), verifique [Outros plugins de Analytics do Gatsby](#outros-plugins-de-analytics-do-gatsby).
 
