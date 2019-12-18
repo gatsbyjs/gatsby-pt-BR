@@ -47,7 +47,7 @@ module.exports = {
       },
     },
   ],
-};
+}
 ```
 
 > Observação: Leia mais sobre [gatsby-config.js](/docs/gatsby-config/)
