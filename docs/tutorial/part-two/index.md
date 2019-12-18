@@ -294,7 +294,7 @@ export default () => (
     />
     {/* highlight-end */}
   </Container>
-);
+)
 ```
 
 > Dica: Geralmente, se você usa um componente em vários locais de um site, ele deve estar em seu próprio arquivo de módulo no diretório `components`. Mas, se for usado apenas em um arquivo, crie-o inline.
