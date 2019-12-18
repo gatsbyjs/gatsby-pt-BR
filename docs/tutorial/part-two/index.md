@@ -317,7 +317,7 @@ Se você estiver interessado em ler mais, confira[Christopher "vjeux" Chedeau's 
 
 ### Outras opções de CSS
 
-O Gatsby suporta quase todas as opções de estilo possíveis (se ainda não houver um plug-in para a sua opção CSS favorita, [por favor contribua com um!](/contributing/how-to-contribute/))
+O Gatsby suporta quase todas as opções de estilo possíveis (se ainda não houver um plugin para a sua opção CSS favorita, [por favor contribua com um!](/contributing/how-to-contribute/))
 
 - [Typography.js](/packages/gatsby-plugin-typography/)
 - [Sass](/packages/gatsby-plugin-sass/)
