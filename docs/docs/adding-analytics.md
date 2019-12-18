@@ -46,7 +46,7 @@ module.exports = {
         trackingId: "UA-XXXXXXXXX-X",
       },
     },
-  ]
+  ],
 };
 ```
 
