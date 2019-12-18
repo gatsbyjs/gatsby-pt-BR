@@ -20,7 +20,7 @@ O Google também tem uma [página inicial](https://support.google.com/analytics/
 
 Uma vez que você tenha uma conta, você será solicitado a configurar uma nova propriedade. Esta propriedade terá um ID de acompanhamento associado a ela. Neste caso, a propriedade será o próprio site. Preencha o formulário com o nome e URL do seu site.
 
-O ID de acompanhamento é o que é usado para identificar dados com o tráfego do seu site. Normalmente, você usaria um ID de acompanhamento diferente para cada site que estiver monitorando.
+O ID de acompanhamento é o que é usado para identificar dados relacionados ao tráfego do seu site. Normalmente, você usaria um ID de acompanhamento diferente para cada site que estiver monitorando.
 
 Agora você deve ter uma ID de acompanhamento; anote-a, pois seu site precisará referenciá-la ao enviar visualizações de páginas para o Google Analytics. Deve estar no formato `UA-XXXXXXXXX-X`.
 
