@@ -2,7 +2,7 @@
 title: Tabela de Referência (Cheat Sheet)
 ---
 
-A equipe do Gatsby criou um recurso que você pode achar útil ao criar um site do Gatsby: uma lista com todos os principais comandos e dicas de desenvolvimento! Sinta-se à vontade para baixar e imprimir uma cópia (e cole-a na sua estação de trabalho!). Para informações on-line relacionadas, visite [Início Rápido](/docs/quick-start/) e [Comandos (Gatsby CLI)](/docs/gatsby-cli/).
+A equipe do Gatsby criou um recurso que você pode achar útil ao criar um site do Gatsby: uma lista com todos os principais comandos e dicas de desenvolvimento! Sinta-se à vontade para baixar e imprimir uma cópia (e cole-a na sua estação de trabalho!). Para informações online relacionadas, visite [Início Rápido](/docs/quick-start/) e [Comandos (Gatsby CLI)](/docs/gatsby-cli/).
 
 Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
 
@@ -59,7 +59,7 @@ Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
             </tr>
             <tr>
                 <td>
-                    <p>Iniciantes em Gatsby</p>
+                    <p>Starters Gatsby</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/starters">gatsby.dev/starters</a></p>
@@ -139,7 +139,7 @@ Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
         <code>npm install -g gatsby-cli</code></p>
     <p>Run <code>gatsby --help</code> para uma lista de comandos e opções.</p>
     <h3><code>gatsby novo <span style="font-weight:normal">nome-do-meu-site</span></code></h3>
-    <p>Crie um novo site local do Gatsby usando o iniciador padrão (consulte “Comandos de iniciação rápida” nesta folha de dicas sobre como usar outros iniciadores).</p>
+    <p>Crie um novo site local do Gatsby usando o iniciador padrão (consulte “Comandos de iniciação rápida” nesta folha de dicas sobre como usar outros starters).</p>
     <h3><code>gatsby develop</code></h3>
     <p>Inicie o servidor de desenvolvimento Gatsby.</p>
     <table>
@@ -195,7 +195,7 @@ Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
                     <p><code>--no-uglify</code></p>
                 </td>
                 <td>
-                    <p>Construir sites sem pacotes 'uglifying JS'<br />(para depuração(debug))</p>
+                    <p>Construir sites sem pacotes 'uglifying JS'<br />(para depuração)</p>
                 </td>
             </tr>
             <tr>
@@ -266,14 +266,14 @@ Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
     <p>Inscreva-se na newsletter do Gatsby e <strong>ganhe 30% de desconto</strong> em sua compra na loja Gatsby!(<a href="https://gatsby.dev/store">gatsby.dev/store</a>)</p>
     <p>Inscreva-se<a href="https://gatsby.dev/discount">gatsby.dev/discount</a></p>
     <h2>Comandos de início rápido</h2>
-    <p>Crie um novo site usando "Blog" starter:<br />
+    <p>Crie um novo site usando o starter "Blog":<br />
     <code>gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog</code></p>
     <p>Navegue até o diretório do seu novo site e inicie-o:<br />
     <code>cd my-blog-starter/<br />
     desenvolvimento gatsby</code></p>
     <p>Seu site agora está sendo executado em <code>http://localhost:8000</code>!</p>
     <p>Você também verá um segundo link: <code>http://localhost:8000/___graphql</code>. Esta é uma ferramenta que você pode usar para experimentar a consulta de seus dados. Saiba mais sobre isso em <a href="https://gatsby.dev/tutorial">gatsby.dev/tutorial</a></p>
-    <p>Para os iniciantes no Gatsby, visite <a href="https://gatsby.dev/starters">gatsby.dev/starters</a>.</p>
+    <p>Para mais starters Gatsby, visite <a href="https://gatsby.dev/starters">gatsby.dev/starters</a>.</p>
     <h2>Definições úteis de arquivo</h2>
     <p>Cada um desses arquivos deve estar na raiz da pasta do projeto Gatsby. Veja <a href="https://gatsby.dev/projects">gatsby.dev/projects</a></p>
     <p><code>gatsby-config.js</code> — configurar opções para um site feito com Gatsby, com metadados para o título do projeto, descrição, plugins, etc.</p>
