@@ -274,7 +274,7 @@ const User = props => (
       <p className={styles.excerpt}>{props.excerpt}</p>
     </div>
   </div>
-);
+)
 // highlight-end
 
 export default () => (
