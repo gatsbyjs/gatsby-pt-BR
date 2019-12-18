@@ -10,7 +10,7 @@ Uma vez que você tem o seu site no ar você vai começar a querer ter uma ideia
 - De onde vêm os meus visitantes?
 - Quando é que as pessoas visitam o meu site?
 
-O Google Analytics oferece uma maneira de coletar esses dados e realizar análises sobre eles, respondendo às perguntas acima, entre muitas outras. A plataforma é gratuita para 10 milhões de visitas por mês por ID de acompanhamento. Há outras opções de análise - veja a seção "Outros plugins de Analytics do Gatsby" na parte inferior deste documento para obter ideias.
+O Google Analytics oferece uma maneira de coletar esses dados e realizar análises sobre eles, respondendo às perguntas acima, entre muitas outras. A plataforma é gratuita para 10 milhões de visitas por mês por ID de acompanhamento. Há outras opções de análise - veja a seção "Outros plugins de Analytics do Gatsby" na parte inferior deste documento para obter mais ideias.
 
 ## Configurando o Google Analytics
 
