@@ -14,7 +14,7 @@ disableTableOfContents: true
 
 -->
 
-Bem-vindo a parte dois do Gatsby tutorial.
+Bem-vindo a parte dois do tutorial Gatsby!
 
 ## O que é esse tutorial?
 
