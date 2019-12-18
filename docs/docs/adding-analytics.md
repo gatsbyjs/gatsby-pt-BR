@@ -2,7 +2,7 @@
 title: Adicionando o Analytics
 ---
 
-## Porquê usar o analytics?
+## Por que usar o analytics?
 
 Uma vez que você tem o seu site no ar você vai começar a querer ter uma ideia de quantos visitantes estão chegando ao seu site, juntamente com outras métricas, tais como:
 
