@@ -44,7 +44,7 @@ module.exports = {
       options: {
         // substitua "UA-XXXXXXXXX-X" pelo seu próprio ID de acompanhamento
         trackingId: "UA-XXXXXXXXX-X",
-      }
+      },
     }
   ]
 };
