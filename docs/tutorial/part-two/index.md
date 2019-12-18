@@ -22,7 +22,7 @@ Nessa parte, você vai explorar opções para estilizar websites feitos com Gats
 
 ## Usando estilos globais
 
-Todo site tem algum estilo global. Isto inclue coisas como fontes e cores de fundo do site. Esses estilos definem a aparência geral do site - muito parecido com a cor e a textura de uma parede, define a aparência geral de uma sala.
+Todo site tem algum estilo global. Isto inclue coisas como fontes e cores de fundo do site. Esses estilos definem a aparência geral do site - muito parecido com como a cor e a textura de uma parede definem a aparência geral de uma sala.
 
 ### Criando estilos globais com arquivos padrão de CSS
 
