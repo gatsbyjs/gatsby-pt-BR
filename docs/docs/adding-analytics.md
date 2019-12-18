@@ -14,7 +14,7 @@ O Google Analytics oferece uma maneira de coletar esses dados e realizar anális
 
 ## Configurando o Google Analytics
 
-O primeiro passo é configurar uma conta do Google Analytics. Você pode fazer isso [aqui](https://analytics.google.com/) acessando sua conta do Google.
+O primeiro passo é configurar uma conta do Google Analytics. Você pode fazer isso [aqui](https://analytics.google.com/) acessando a partir da sua conta do Google.
 
 O Google também tem uma [página inicial](https://support.google.com/analytics/answer/1008015?hl=pt-BR) para referência.
 
