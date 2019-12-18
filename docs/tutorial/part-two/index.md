@@ -261,7 +261,7 @@ Crie um novo componente `<User />` inline na página `about-css-modules.js`. Mod
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react";
 import styles from "./about-css-modules.module.css";
-import Container from "../components/container";
+import Container from "../components/container"
 
 console.log(styles)
 
