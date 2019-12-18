@@ -1,10 +1,10 @@
 ---
-title: "Adding an SEO Component"
+title: "Adicionando um Componente SEO"
 ---
 
-Todo site na web tem _meta-tags_ básicas, como o título, favicon ou descrição da página no elemento `<head>`. Essas informações são exibidas no navegador e são usadas quando alguém compartilha o seu site, por exemplo, no Twitter. Você pode fornecer dados adicionais aos usuários e aos sites para eles incorporarem — e é aí que entra esse guia para um componente de SEO. No final, você terá um componente que pode ser inserido no arquivo de layout e terá visualização avançadas para outros clientes, usuários de smartphone e mecanismos de pesquisa.
+Todo site na web tem _meta-tags_ básicas, como o título, favicon ou descrição da página no elemento `<head>`. Essas informações são exibidas no navegador e são usadas quando alguém compartilha o seu site, por exemplo, no Twitter. Você pode fornecer dados adicionais aos usuários e aos sites para eles incorporarem — e é aí que entra esse guia para um componente de SEO. No final, você terá um componente que pode ser inserido no arquivo de layout e terá visualizações avançadas para outros clientes, usuários de smartphone e mecanismos de pesquisa.
 
-_Nota: Esse componente usará StaticQuery. Se você não estiver familiarizado, consulte a [documentação do StaticQuery](/docs/static-query/). Você também precisa ter o `react-helmet` instalado, para o qual pode dar uma olhada [nesse guia](/docs/add-page-metadata)._
+_Nota: Esse componente usará StaticQuery. Se você não estiver familiarizado, consulte a [documentação do StaticQuery](/docs/static-query/). Você também precisa ter o `react-helmet` instalado, o qual você pode dar uma olhada [nesse guia](/docs/add-page-metadata)._
 
 ## gatsby-config.js
 
@@ -55,7 +55,7 @@ SEO.defaultProps = {
 }
 ```
 
-**Nota:** `propTypes` são incluídas nesse exemplo para ajudar você a garantir que toda informação que você precisa estão no componente, e para ajudar a servir como um guia enquanto faz a destruturação/uso dessas propriededes.
+**Nota:** `propTypes` são incluídas nesse exemplo para ajudar você a garantir que toda informação que você precisa estão no componente, e para ajudar a servir como um guia enquanto faz a desestruturação/uso dessas propriedades.
 
 Como o componente de SEO também deve ser usado em outros arquivos, por exemplo, um arquivo de template, o componente também aceita propriedades para as quais você define padrões sensíveis na seção `SEO.defaultProps`. Desse modo a informação que você colocar no `siteMetadata` é utilizada, a menos que você defina a propriedade explicitamente.
 
