@@ -144,7 +144,7 @@ CSS Modules são muito populares porque eles deixam você escrecer CSS normalmen
 
 Gatsby trabalha fora da caixa com CSS Modules, Esta abordagem é altamente recomendada para novos projetos com Gatbsy(e React no geral).
 
-#### ✋ Criandou uma nova página usando CSS Modules
+#### ✋ Criando uma nova página usando CSS Modules
 
 Nesta seção, você vai criar uma nova página e estiliza-lá usando CSS Module.
 
