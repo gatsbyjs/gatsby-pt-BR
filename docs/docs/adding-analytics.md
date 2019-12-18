@@ -22,7 +22,7 @@ Uma vez que você tenha uma conta, você será solicitado a configurar uma nova 
 
 O ID de acompanhamento é o que é usado para identificar dados relacionados ao tráfego do seu site. Normalmente, você usaria um ID de acompanhamento diferente para cada site que estiver monitorando.
 
-Agora você deve ter uma ID de acompanhamento; anote-a, pois seu site precisará referenciá-la ao enviar visualizações de páginas para o Google Analytics. Deve estar no formato `UA-XXXXXXXXX-X`.
+Agora você deve ter um ID de acompanhamento; anote-o, pois seu site precisará referenciá-lo ao enviar as visualizações das páginas para o Google Analytics. O ID deve estar no formato `UA-XXXXXXXXX-X`.
 
 Você pode encontrar este ID de acompanhamento mais tarde, indo para `Administrador > Informações de acompanhamento > Código de acompanhamento`.
 
