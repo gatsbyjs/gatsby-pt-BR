@@ -1580,71 +1580,71 @@ Fragmentos podem ser aninhados dentro de outros fragmentos e vários fragmentos 
 - [Fragmentos de imagem do Gatsby](/docs/gatsby-image/#image-query-fragments)
 - [Exemplo de repositório com dados co-localizados](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
 
-## 7. Working with images
+## 7. Trabalhando com imagens
 
-### Import an image into a component with webpack
+### Importar uma imagem para um componente com o webpack
 
-Images can be imported right into a JavaScript module with webpack. This process automatically minifies and copies the image to your site's `public` folder, providing a dynamic image URL for you to pass to an HTML `<img>` element like a regular file path.
+As imagens podem ser importadas diretamente para um módulo JavaScript com o webpack. Esse processo reduz e copia automaticamente a imagem para a pasta `public` do seu site, fornecendo uma URL de imagem dinâmica para você passar para um elemento HTML `<img>` como um caminho de arquivo comum.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-import-a-local-image-into-a-gatsby-component-with-webpack"
-  lessonTitle="Import a Local Image into a Gatsby Component with webpack"
+  lessonTitle="Importar uma imagem local para um componente Gatsby com webpack"
 />
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby Site](/docs/quick-start) with a `.js` file exporting a React component
-- an image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) in the `src` folder
+- Um [site Gatsby](/docs/quick-start) com um arquivo `.js` exportando um componente React
+- Uma imagem (`.jpg`, `.png`, `.gif`, `.svg`, etc.) na pasta `src`
 
-#### Directions
+#### Instruções
 
-1. Import your file from its path in the `src` folder:
+1. Importe o caminho do seu arquivo em relação a pasta `src`:
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-// Informe ao webpack que este arquivo JS usa esta imagem
-import FiestaImg from "../assets/fiesta.jpg" // highlight-line
+import React from 'react'
+// Informa ao webpack que este arquivo JS usa esta imagem
+import FiestaImg from '../assets/fiesta.jpg' // highlight-line
 ```
 
-2. In `index.js`, add an `<img>` tag with the `src` as the name of the import you used from webpack (in this case `FiestaImg`), and add an `alt` attribute [describing the image](https://webaim.org/techniques/alttext/):
+2. No `index.js`, adicione uma tag `<img>` com o `src` como o nome da importação que você usou do webpack (nesse caso `FiestaImg`), e adicione um atributo `alt` [descrevendo a imagem](https://webaim.org/techniques/alttext/):
 
 ```jsx:title=src/pages/index.js
-import React from "react"
-import FiestaImg from "../assets/fiesta.jpg"
+import React from 'react'
+import FiestaImg from '../assets/fiesta.jpg'
 
 export default () => (
   // O resultado da importação é o URL da sua imagem
-  <img src={FiestaImg} alt="A dog smiling in a party hat" /> // highlight-line
+  <img src={FiestaImg} alt='A dog smiling in a party hat' /> // highlight-line
 )
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. View your image in the browser: `http://localhost:8000/`
+3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+4. Veja sua imagem no navegador: `http://localhost:8000/`
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Example repo importing an image with webpack](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-webpack-image)
-- [More on all image techniques in Gatsby](/docs/images-and-files/)
+- [Exemplo de repositório importando uma imagem com o webpack](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-webpack-image)
+- [Mais sobre todas as técnicas de imagem em Gatsby](/docs/images-and-files/)
 
-### Reference an image from the `static` folder
+### Referencie uma imagem da pasta `static`
 
-As an alternative to importing assets with webpack, the `static` folder allows access to content that gets automatically copied into the `public` folder when built.
+Como alternativa à importação de ativos com o webpack, a pasta `static` permite o acesso ao conteúdo que é automaticamente copiado para a pasta `public` quando o site é criado.
 
-This is an **escape route** for [specific use cases](/docs/static-folder/#when-to-use-the-static-folder), and other methods like [importing with webpack](#import-an-image-into-a-component-with-webpack) are recommended to leverage optimizations made by Gatsby.
+Isto é uma **rota de fuga** para [casos de uso específicos](/docs/static-folder/#when-to-use-the-static-folder), e outros métodos como [importando com o webpack](#import-an-image-into-a-component-with-webpack) são recomendados para aproveitar as otimizações feitas pelo Gatsby.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-use-a-local-image-from-the-static-folder-in-a-gatsby-component"
-  lessonTitle="Use a local image from the static folder in a Gatsby component"
+  lessonTitle="Use uma imagem local da pasta estática em um componente Gatsby"
 />
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby Site](/docs/quick-start) with a `.js` file exporting a React component
-- An image (`.jpg`, `.png`, `.gif`, `.svg`, etc.) in the `static` folder
+- Um [Site Gatsby](/docs/quick-start) com um arquivo `.js` exportando um componente React
+- Uma imagem (`.jpg`, `.png`, `.gif`, `.svg`, etc.) na pasta `static`
 
-#### Directions
+#### Instruções
 
-1. Ensure that the image is in your `static` folder at the root of the project. Your project structure might look something like this:
+1. Certifique-se de que a imagem esteja na sua pasta `static` na raiz do projeto. A estrutura do seu projeto pode ser algo como isto:
 
 ```
 ├── gatsby-config.js
@@ -1655,50 +1655,50 @@ This is an **escape route** for [specific use cases](/docs/static-folder/#when-t
 │       └── fiesta.jpg
 ```
 
-2. In `index.js`, add an `<img>` tag with the `src` as the relative path of the file from the `static` folder, and add an `alt` attribute [describing the image](https://webaim.org/techniques/alttext/):
+2. No `index.js`, adicione uma tag `<img>` com o `src` como o caminho relativo do arquivo da pasta `static`, e adicione um atributo `alt` [descrevendo a imagem](https://webaim.org/techniques/alttext/):
 
 ```jsx:title=src/pages/index.js
-import React from "react"
+import React from 'react'
 
 export default () => (
-  <img src={`fiesta.jpg`} alt="A dog smiling in a party hat" /> // highlight-line
+  <img src={`fiesta.jpg`} alt='A dog smiling in a party hat' /> // highlight-line
 )
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. View your image in the browser: `http://localhost:8000/`
+3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+4. Veja sua imagem no navegador:`http://localhost:8000/`
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Example repo referencing an image from the static folder](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
-- [Using the Static Folder](/docs/static-folder/)
-- [More on all image techniques in Gatsby](/docs/images-and-files/)
+- [Exemplo de repositório referenciando uma imagem da pasta estática](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
+- [Usando a Pasta Static](/docs/static-folder/)
+- [Mais sobre todas as técnicas de imagem em Gatsby](/docs/images-and-files/)
 
-### Optimizing and querying local images with gatsby-image
+### Otimizando e consultando imagens locais com gatsby-image
 
-The `gatsby-image` plugin can relieve much of the pain associated with optimizing images in your site.
+O plugin `gatsby-image` pode aliviar grande parte da dor associada à otimização de imagens no seu site.
 
-Gatsby will generate optimized resources which can be queried with GraphQL and passed into Gatsby's image component. This takes care of the heavy lifting including creating several image sizes and loading them at the right time.
+O Gatsby irá gerar recursos otimizados que podem ser consultados com o GraphQL e passados ​​para o componente de imagem do Gatsby. Isso cuida do trabalho pesado, incluindo a criação de vários tamanhos de imagem e o carregamento no momento certo.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The `gatsby-image`, `gatsby-transformer-sharp`, and `gatsby-plugin-sharp` packages installed and added to the plugins array in `gatsby-config`
-- [Images sourced](/packages/gatsby-image/#install) in your `gatsby-config` using a plugin like `gatsby-source-filesystem`
+- Os pacotes `gatsby-image`, `gatsby-transformer-sharp` e `gatsby-plugin-sharp` instalados e adicionados ao array de plugins em `gatsby-config`
+- [Imagens obtidas](/packages/gatsby-image/#install) no seu `gatsby-config` usando um plugin como `gatsby-source-filesystem`
 
-#### Directions
+#### Instruções
 
-1. First, import `Img` from `gatsby-image`, as well as `graphql` and `useStaticQuery` from `gatsby`
+1. Primeiro, importe `Img` de `gatsby-image`, bem como `graphql` e `useStaticQuery` de `gatsby`
 
 ```jsx
-import { useStaticQuery, graphql } from "gatsby" // to query for image data
-import Img from "gatsby-image" // to take image data and render it
+import { useStaticQuery, graphql } from 'gatsby' // para consultar dados de imagem
+import Img from 'gatsby-image' // para pegar dados de imagem e renderizá-los
 ```
 
-2. Write a query to get image data, and pass the data into the `<Img />` component:
+2. Escreva uma consulta para obter dados da imagem e passe os dados para o componente `<Img />`:
 
-Choose any of the following options or a combination of them.
+Escolha qualquer uma das seguintes opções ou uma combinação delas.
 
-a. a single image queried by its file [path](/docs/content-and-data/) (Example: `images/corgi.jpg`)
+a. uma única imagem consultada por seu [caminho de arquivo](/docs/content-and-data/) (Exemplo: `images/corgi.jpg`)
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -1718,11 +1718,11 @@ const data = useStaticQuery(graphql`
 `)
 
 return (
-  <Img fluid={data.file.childImageSharp.fluid} alt="A corgi smiling happily" />
+  <Img fluid={data.file.childImageSharp.fluid} alt='A corgi smiling happily' />
 )
 ```
 
-b. using a [GraphQL fragment](/docs/using-fragments/), to query for the necessary fields more tersely
+b. usando um [fragmento GraphQL](/docs/using-fragments/), para consultar os campos necessários de forma mais concisa
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -1738,11 +1738,11 @@ const data = useStaticQuery(graphql`
 `)
 
 return (
-  <Img fluid={data.file.childImageSharp.fluid} alt="A corgi smiling happily" />
+  <Img fluid={data.file.childImageSharp.fluid} alt='A corgi smiling happily' />
 )
 ```
 
-c. several images from a directory (Example: `images/dogs`) [filtered](/docs/graphql-reference/#filter) by the `extension` and `relativeDirectory` fields, and then mapped into `Img` components
+c. várias imagens de um diretório (Exemplo: `images/dogs`) [filtradas](/docs/graphql-reference/#filter) pelos campos `extension` e `relativeDirectory`, e depois mapeado para os componentes `Img`
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -1775,7 +1775,7 @@ return (
     {data.allFile.edges.map(image => (
       <Img
         fluid={image.node.childImageSharp.fluid}
-        alt={image.node.base.split(".")[0]} // use somente a seção da extensão do arquivo com o nome do arquivo
+        alt={image.node.base.split('.')[0]} // use somente a seção da extensão do arquivo com o nome do arquivo
       />
     ))}
     // highlight-end
@@ -1783,9 +1783,9 @@ return (
 )
 ```
 
-**Note**: This method can make it difficult to match images with `alt` text for accessibility. This example uses images with `alt` text included in the filename, like `dog in a party hat.jpg`.
+**Nota**: Este método pode dificultar a correspondência de imagens com o texto `alt` para acessibilidade. Este exemplo usa imagens com o texto `alt` incluído no nome do arquivo, como `dog in a party hat.jpg`.
 
-d. an image of a fixed size using the `fixed` field instead of `fluid`
+d. uma imagem de tamanho fixo usando o campo `fixed` em vez de `fluid`
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -1800,11 +1800,11 @@ const data = useStaticQuery(graphql`
   }
 `)
 return (
-  <Img fixed={data.file.childImageSharp.fixed} alt="A corgi smiling happily" />
+  <Img fixed={data.file.childImageSharp.fixed} alt='A corgi smiling happily' />
 )
 ```
 
-e. an image of a fixed size with a `maxWidth`
+e. uma imagem de tamanho fixo com um `maxWidth`
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -1819,11 +1819,11 @@ const data = useStaticQuery(graphql`
   }
 `)
 return (
-  <Img fixed={data.file.childImageSharp.fixed} alt="A corgi smiling happily" /> // highlight-line
+  <Img fixed={data.file.childImageSharp.fixed} alt='A corgi smiling happily' /> // highlight-line
 )
 ```
 
-f. an image filling a fluid container with a max width (in pixels) and a higher quality (the default value is 50 i.e. 50%)
+f. uma imagem preenchendo um recipiente de fluido com uma largura máxima (em pixels) e uma qualidade mais alta (o valor padrão é 50, ou seja, 50%)
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -1839,58 +1839,58 @@ const data = useStaticQuery(graphql`
 `)
 
 return (
-  <Img fluid={data.file.childImageSharp.fluid} alt="A corgi smiling happily" />
+  <Img fluid={data.file.childImageSharp.fluid} alt='A corgi smiling happily' />
 )
 ```
 
-3. (Optional) Add inline styles to the `<Img />` like you would to other components
+3. (Opcional) Adicione estilos embutidos ao `<Img />` como faria com outros componentes
 
 ```jsx
 <Img
   fluid={data.file.childImageSharp.fluid}
-  alt="A corgi smiling happily"
-  style={{ border: "2px solid rebeccapurple", borderRadius: 5, height: 250 }} // highlight-line
+  alt='A corgi smiling happily'
+  style={{ border: '2px solid rebeccapurple', borderRadius: 5, height: 250 }} // highlight-line
 />
 ```
 
-4. (Optional) Force an image into a desired aspect ratio by overriding the `aspectRatio` field returned by the GraphQL query before it is passed into the `<Img />` component
+4. (Opcional) Forçar uma imagem na proporção desejada, substituindo o campo `aspectRatio` retornado pela consulta GraphQL antes de ser transmitida para o componente `<Img />`
 
 ```jsx
 <Img
   fluid={{
     ...data.file.childImageSharp.fluid,
-    aspectRatio: 1.6, // 1280 / 800 = 1.6
+    aspectRatio: 1.6 // 1280 / 800 = 1.6
   }}
-  alt="A corgi smiling happily"
+  alt='A corgi smiling happily'
 />
 ```
 
-5. Run `gatsby develop`, to generate images from files in the filesystem (if not done already) and cache them
+5. Execute `gatsby develop`, para gerar imagens de arquivos no sistema de arquivos (se ainda não o tiver feito) e armazená-las em cache
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Example repository illustrating these examples](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
-- [Gatsby Image API](/docs/gatsby-image/)
-- [Using Gatsby Image](/docs/using-gatsby-image)
-- [More on working with images in Gatsby](/docs/working-with-images/)
-- [Free egghead.io videos explaining these steps](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e)
+- [Repositório de exemplo ilustrando estes exemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
+- [API de imagem do Gatsby](/docs/gatsby-image/)
+- [Usado Gatsby Image](/docs/using-gatsby-image)
+- [Mais sobre como trabalhar com imagens em Gatsby](/docs/working-with-images/)
+- [Vídeos gratuitos do egghead.io explicando essas etapas](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e)
 
-### Optimizing and querying images in post frontmatter with gatsby-image
+### Otimizando e consultando imagens no pós frontmatter com gatsby-image
 
-For use cases like a featured image in a blog post, you can _still_ use `gatsby-image`. The `Img` component needs processed image data, which can come from a local (or remote) file, including from a URL in the frontmatter of a `.md` or `.mdx` file.
+Para casos de uso como uma imagem em destaque em uma postagem de blog, você _ainda_ pode usar `gatsby-image`. O componente `Img` precisa de dados de imagem processados, que podem vir de um arquivo local (ou remoto), incluindo de uma URL no frontmatter de um arquivo `.md` ou `.mdx`.
 
-To inline images in markdown (using the `![]()` syntax), consider using a plugin like [`gatsby-remark-images`](/packages/gatsby-remark-images/)
+Para embutir imagens no markdown (usando a sintaxe `![]()`), considere usar um plugin como [`gatsby-remark-images`](/packages/gatsby-remark-images/)
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The `gatsby-image`, `gatsby-transformer-sharp`, and `gatsby-plugin-sharp` packages installed and added to the plugins array in `gatsby-config`
-- [Images sourced](/packages/gatsby-image/#install) in your `gatsby-config` using a plugin like `gatsby-source-filesystem`
-- Markdown files sourced in your `gatsby-config` with image URLs in frontmatter
-- [Pages created](/docs/creating-and-modifying-pages/) from Markdown using [`createPages`](https://www.gatsbyjs.org/docs/node-apis/#createPages)
+- Os pacotes `gatsby-image`, `gatsby-transformer-sharp` e `gatsby-plugin-sharp` instalados e adicionados ao array de plugins em `gatsby-config`
+- [Imagens obtidas](/packages/gatsby-image/#install) no seu `gatsby-config` usando um plugin como `gatsby-source-filesystem`
+- Arquivos markdown originados em seu `gatsby-config` com URLs de imagem no frontmatter
+- [Páginas criadas](/docs/creating-and-modifying-pages/) de Markdown usando [`createPages`](https://www.gatsbyjs.org/docs/node-apis/#createPages)
 
-#### Directions
+#### Instruções
 
-1. Verify that the Markdown file has an image URL with a valid path to an image file in your project
+1. Verifique se o arquivo Markdown tem um URL de imagem com um caminho válido para um arquivo de imagem no seu projeto
 
 ```mdx:title=post.mdx
 ---
@@ -1901,13 +1901,13 @@ featuredImage: ./corgi.png // highlight-line
 Post content...
 ```
 
-2. Verify that a unique identifier (a slug in this example) is passed in context when `createPages` is called in `gatsby-node.js`, which will later be passed into a GraphQL query in the Layout component
+2. Verifique se um identificador exclusivo (um slug neste exemplo) é passado no contexto quando `createPages` é chamado em `gatsby-node.js`, que posteriormente será passado para uma consulta GraphQL no componente Layout
 
 ```js:title=gatsby-node.js
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // consulta para todas as remarcações
+  // consulta para todas as markdowns
 
   result.data.allMdx.edges.forEach(({ node }) => {
     createPage({
@@ -1915,27 +1915,27 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/components/markdown-layout.js`),
       // highlight-start
       context: {
-        slug: node.fields.slug,
-      },
+        slug: node.fields.slug
+      }
       // highlight-end
     })
   })
 }
 ```
 
-3. Now, import `Img` from `gatsby-image`, and `graphql` from `gatsby` into the template component, write a [pageQuery](/docs/page-query/) to get image data based on the passed in `slug` and pass that data to the `<Img />` component:
+3. Agora, importe `Img` de `gatsby-image` e `graphql` de `gatsby` para o componente do modelo, escreva uma [pageQuery](/docs/page-query/) para obter dados de imagem com base nos dados passados ​​no `slug` e passar esses dados para o componente `<Img />`:
 
 ```jsx:title=markdown-layout.jsx
-import React from "react"
-import { graphql } from "gatsby" // highlight-line
-import Img from "gatsby-image" // highlight-line
+import React from 'react'
+import { graphql } from 'gatsby' // highlight-line
+import Img from 'gatsby-image' // highlight-line
 
 export default ({ children, data }) => (
   <main>
     // highlight-start
     <Img
       fluid={data.markdown.frontmatter.image.childImageSharp.fluid}
-      alt="A corgi smiling happily"
+      alt='A corgi smiling happily'
     />
     // highlight-end
     {children}
@@ -1962,43 +1962,43 @@ export const pageQuery = graphql`
 // highlight-end
 ```
 
-4. Run `gatsby develop`, which will generate images for files sourced in the filesystem
+4. Execute `gatsby develop`, que irá gerar imagens para os arquivos originados no sistema de arquivos
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Example repository using this recipe](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
-- [Featured images with frontmatter](/docs/working-with-images-in-markdown/#featured-images-with-frontmatter-metadata)
-- [Gatsby Image API](/docs/gatsby-image/)
-- [Using Gatsby Image](/docs/using-gatsby-image)
-- [More on working with images in Gatsby](/docs/working-with-images/)
+- [Exemplo de repositório usando esta receita](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
+- [Imagens em destaque com frontmatter](/docs/working-with-images-in-markdown/#featured-images-with-frontmatter-metadata)
+- [API Gatsby Image](/docs/gatsby-image/)
+- [UsandoGatsby Image](/docs/using-gatsby-image)
+- [Mais sobre como trabalhar com imagens em Gatsby](/docs/working-with-images/)
 
-## 8. Transforming data
+## 8. Transformando dados
 
-Transforming data in Gatsby is plugin-driven. Transformer plugins take data fetched using source plugins, and process it into something more usable (e.g. JSON into JavaScript objects, and more).
+A transformação de dados no Gatsby é orientada por plugins. Os plugins transformadores obtêm os dados buscados usando os plugins de origem e os transformam em algo mais utilizável (por exemplo. JSON em objetos JavaScript e muito mais).
 
-### Transforming Markdown into HTML
+### Transformando Markdown em HTML
 
-The `gatsby-transformer-remark` plugin can transform Markdown files to HTML.
+O plugin `gatsby-transformer-remark` pode transformar arquivos Markdown em HTML.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A Gatsby site with `gatsby-config.js` and an `index.js` page
-- A Markdown file saved in your Gatsby site `src` directory
-- A source plugin installed, such as `gatsby-source-filesystem`
-- The `gatsby-transformer-remark` plugin installed
+- Um site de Gatsby com `gatsby-config.js` e uma página `index.js`
+- Um arquivo Markdown salvo no diretório `src` do seu site Gatsby
+- Um plugin de origem instalado, como `gatsby-source-filesystem`
+- O plugin `gatsby-transformer-remark` instalado
 
-#### Directions
+#### Instruções
 
-1. Add the transformer plugin in your `gatsby-config.js`:
+1. Adicione o plugin transformador no seu `gatsby-config.js`:
 
 ```js:title=gatsby-config.js
 plugins: [
-  // não mostrado: gatsby-source-filesystem para criar _nodes_ para transformar
+  // não mostrado: gatsby-source-filesystem para criar nós para transformar
   `gatsby-transformer-remark`
 ],
 ```
 
-2. Add a GraphQL query to the `index.js` file of your Gatsby site to fetch `MarkdownRemark` nodes:
+2. Adicione uma consulta GraphQL ao arquivo `index.js` do seu site Gatsby para buscar os nós `MarkdownRemark`:
 
 ```jsx:title=src/pages/index.js
 export const query = graphql`
@@ -2020,113 +2020,113 @@ export const query = graphql`
 `
 ```
 
-3. Restart the development server and open GraphiQL at `http://localhost:8000/___graphql`. Explore the fields available on the `MarkdownRemark` node.
+3. Reinicie o servidor de desenvolvimento e abra o GraphiQL em `http://localhost:8000/___graphql`. Explore os campos disponíveis no nó `MarkdownRemark`.
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Tutorial on transforming Markdown to HTML](/tutorial/part-six/#transformer-plugins) using `gatsby-transformer-remark`
-- Browse available transformer plugins in the [Gatsby plugin library](/plugins/?=transformer)
+- [Tutorial sobre como transformar Markdown em HTML](/tutorial/part-six/#transformer-plugins) usando `gatsby-transformer-remark`
+- Procure plugins transformadores disponíveis na [biblioteca de plugins do Gatsby](/plugins/?=transformer)
 
-## 9. Deploying your site
+## 9. Implantando seu site
 
-Showtime. Once you are happy with your site, you are ready to go live with it!
+Hora de mostrar. Quando estiver satisfeito com o seu site, você estará pronto para publicá-lo!
 
-### Preparing for deployment
+### Preparando para implantação
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Um [site Gatsby](/docs/quick-start)
+- A [ILC Gatsby](/docs/gatsby-cli) instalada
 
-#### Directions
+#### Instruções
 
-1. Stop your development server if it is running (`Ctrl + C` on your command line in most cases)
+1. Pare o servidor de desenvolvimento se estiver em execução (`Ctrl + C` na sua linha de comando na maioria dos casos)
 
-2. For the standard site path at the root directory (`/`), run `gatsby build` using the Gatsby CLI on the command line. The built files will now be in the `public` folder.
+2. Para o caminho padrão do site no diretório raiz (`/`), execute `gatsby build` usando a ILC do Gatsby na linha de comandos. Os arquivos construídos estarão agora na pasta `public`.
 
 ```shell
 gatsby build
 ```
 
-3. To include a site path other than `/` (such as `/site-name/`), set a path prefix by adding the following to your `gatsby-config.js` and replacing `yourpathprefix` with your desired path prefix:
+3. Para incluir um caminho de site diferente de `/` (tal como `/site-name/`), defina um prefixo de caminho adicionando o seguinte ao seu `gatsby-config.js` e substituindo `yourpathprefix` pelo prefixo do caminho desejado:
 
 ```js:title=gatsby-config.js
 module.exports = {
-  pathPrefix: `/yourpathprefix`,
+  pathPrefix: `/yourpathprefix`
 }
 ```
 
-There are a few reasons to do this -- for instance, hosting a blog built with Gatsby on a domain with another site not built on Gatsby. The main site would direct to `example.com`, and the Gatsby site with a path prefix could live at `example.com/blog`.
+Existem algumas razões para fazer isso -- por exemplo, hospedar um blog criado com o Gatsby em um domínio com outro site não criado no Gatsby. O site principal direcionaria para `example.com`, e o site Gatsby com um prefixo de caminho poderia morar em `example.com/blog`.
 
-4. With a path prefix set in `gatsby-config.js`, run `gatsby build` with the `--prefix-paths` flag to automatically add the prefix to the beginning of all Gatsby site URLs and `<Link>` tags.
+4. Com um prefixo de caminho definido em `gatsby-config.js`, execute `gatsby build` com a flag `--prefix-paths` para adicionar automaticamente o prefixo ao início de todos os URLs do site Gatsby e tags `<Link>`.
 
 ```shell
 gatsby build --prefix-paths
 ```
 
-5. Make sure that your site looks the same when running `gatsby build` as with `gatsby develop`. By running `gatsby serve` when you build your site, you can test out (and debug if necessary) the finished product before deploying it live.
+5. Certifique-se de que o seu site tenha a mesma aparência ao executar o `gatsby build` como no `gatsby develop`. Executando `gatsby serve` ao criar seu site, você pode testar (e depurar, se necessário) o produto final antes de implantá-lo ao vivo.
 
 ```shell
 gatsby build && gatsby serve
 ```
 
-#### Additional resources
+#### Recursos adicionais
 
-- Walk through building and deploying an example site in [tutorial part one](/tutorial/part-one/#deploying-a-gatsby-site)
-- Learn about [performance optimization](/docs/performance/)
-- Read about [other deployment related topics](/docs/preparing-for-deployment/)
-- Check out the [deployment docs](/docs/deploying-and-hosting/) for specific hosting platforms and how to deploy to them
+- Caminho para criação e implantação de um site de exemplo no [tutorial parte um](/tutorial/part-one/#deploying-a-gatsby-site)
+- Aprenda sobre [otimização de desempenho](/docs/performance/)
+- Leia sobre [outros tópicos relacionados à implantação](/docs/preparing-for-deployment/)
+- Confira os [documentos de implantação](/docs/deploying-and-hosting/) para plataformas de hospedagem específicas e como implantar nelas
 
-### Deploying to Netlify
+### Implantando em Netlify
 
-Use [`netlify-cli`](https://www.netlify.com/docs/cli/) to deploy your Gatsby application without leaving the command-line interface.
+Use [`netlify-cli`](https://www.netlify.com/docs/cli/) para implantar seu aplicativo Gatsby sem sair da interface da linha de comandos.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- The [netlify-cli](https://www.npmjs.com/package/netlify-cli) package installed
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Um [site Gatsby](/docs/quick-start) com um único componente `index.js`
+- O pacote [netlify-cli](https://www.npmjs.com/package/netlify-cli) instalado
+- A [ILC Gatsby](/docs/gatsby-cli) instalada
 
-#### Directions
+#### Instruções
 
-1. Build your gatsby application using `gatsby build`
+1. Crie seu aplicativo gatsby usando `gatsby build`
 
-2. Login into Netlify using `netlify login`
+2. Entre no Netlify usando `netlify login`
 
-3. Run the command `netlify init`. Select the "Create & configure a new site" option.
+3. Execute o comando `netlify init`. Selecione a opção "Create & configure a new site".
 
-4. Choose a custom website name if you want or press enter to receive a random one.
+4. Escolha um nome de site personalizado, se desejar, ou pressione enter para receber um nome aleatório.
 
-5. Choose your [Team](https://www.netlify.com/docs/teams/).
+5. Escolha seu [Team](https://www.netlify.com/docs/teams/).
 
-6. Change the deploy path to `public/`
+6. Mude o caminho de implantação para `public/`
 
-7. Make sure that everything looks fine before deploying to production using `netlify deploy --prod`
+7. Verifique se tudo está bem antes de implantar na produção usando `netlify deploy --prod`
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Hosting on Netlify](/docs/hosting-on-netlify)
+- [Hospedagem em Netlify](/docs/hosting-on-netlify)
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
 
-### Deploying to ZEIT Now
+### Implantando em ZEIT Now
 
-Use [Now CLI](https://zeit.co/download) to deploy your Gatsby application without leaving the command-line interface.
+Use [Now CLI](https://zeit.co/download) para implantar seu aplicativo Gatsby sem sair da interface da linha de comandos.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [ZEIT Now](https://zeit.co/signup) account
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- [Now CLI](https://zeit.co/download) package installed
-- [Gatsby CLI](/docs/gatsby-cli) installed
+- Uma conta [ZEIT Now](https://zeit.co/signup)
+- Um [site Gatsby](/docs/quick-start) com um único componente `index.js`
+- Pacote [Now CLI](https://zeit.co/download) instalado
+- [ILC Gatsby](/docs/gatsby-cli) instalado
 
-#### Directions
+#### Instruções
 
-1. Login into Now CLI using `now login`
+1. Faça login na Now CLI usando `now login`
 
-2. Change to the directory of your Gatsby.js application in the Terminal if you aren't already there
+2. Mude para o diretório do seu aplicativo Gatsby.js no Terminal se você ainda não estiver lá
 
-3. Run `now` to deploy it
+3. Execute `now` para implementá-lo
 
-#### Additional resources
+#### Recursos adicionais
 
-- [Deploying to ZEIT Now](/docs/deploying-to-zeit-now/)
+- [Implantando em ZEIT Now](/docs/deploying-to-zeit-now/)
