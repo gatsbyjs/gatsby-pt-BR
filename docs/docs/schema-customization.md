@@ -955,7 +955,8 @@ export const query = graphql`
 ### Interfaces consultáveis ​​com a extensão `@nodeInterface`
 
 Desde o Gatsby 2.13.22, você pode obter o mesmo que foi mencionado acima adicionando a extensão
-`@nodeInterface` à interface `TeamMember`. Isso tratará a interface como um tipo de alto nível normal que implementa a interface `Node`, e, assim, adiciona automaticamente
+`@nodeInterface` à interface `TeamMember`. Isso tratará a interface como um tipo de
+alto nível normal que implementa a interface `Node`, e, assim, adiciona automaticamente
 campos de consulta raiz à interface.
 
 ```js:title=gatsby-node.js
