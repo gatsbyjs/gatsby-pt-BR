@@ -140,9 +140,9 @@ Vamos explorar o **CSS Modules**. Citando de
 > A **CSS Module** é um arquivo CSS no qual todos os nomes de classe e de animação
 > têm escopo localmente por padrão.
 
-CSS Modules são muito populares porque eles deixam você escrecer CSS normalmente, mas com muito mais egurança. A ferramenta gera classes únicas e nomes de animações de forma automática, então você não precisa se preocupar com conflitos entre os seletores.
+CSS Modules são muito populares porque eles deixam você escrecer CSS normalmente, mas com muito mais segurança. A ferramenta gera classes únicas e nomes de animações de forma automática, então você não precisa se preocupar com conflitos entre os seletores.
 
-Gatsby trabalha fora da caixa com CSS Modules, Esta abordagem é altamente recomendada para novos projetos com Gatbsy(e React no geral).
+Gatsby trabalha fora da caixa com CSS Modules, Esta abordagem é altamente recomendada para novos projetos com Gatbsy (e React no geral).
 
 #### ✋ Criando uma nova página usando CSS Modules
 
@@ -150,18 +150,18 @@ Nesta seção, você vai criar uma nova página e estiliza-lá usando CSS Module
 
 Primeiro, crie um novo componente chamado `Container`.
 
-1. Cria uma nova pasta em `src/components` e então, in neste diretório, cria um arquivo chamado `container.js` e cole o seguinte código:
+1. Cria uma nova pasta em `src/components` e então, dentro deste diretório, crie um arquivo chamado `container.js` e cole o seguinte código:
 
 ```javascript:title=src/components/container.js
-import React from "react";
-import containerStyles from "./container.module.css";
+import React from "react"
+import containerStyles from "./container.module.css"
 
 export default ({ children }) => (
   <div className={containerStyles.container}>{children}</div>
-);
+)
 ```
 
-Você notará que importou um arquivo de módulo css chamado`container.module.css`. Vamos criar esse arquivo agora.
+Você notará que importou um arquivo de módulo css chamado `container.module.css`. Vamos criar esse arquivo agora.
 
 2. No mesmo diretório (`src/components`), crie um arquivo `container.module.css` e copie/cole o seguinte código:
 
@@ -178,19 +178,19 @@ Você noratá que o arquivo tem `.module.css` no final do seu nome em vez do usu
    `src/pages/about-css-modules.js`:
 
 ```javascript:title=src/pages/about-css-modules.js
-import React from "react";
+import React from "react"
 
-import Container from "../components/container";
+import Container from "../components/container"
 
 export default () => (
   <Container>
     <h1>About CSS Modules</h1>
     <p>CSS Modules are cool</p>
   </Container>
-);
+)
 ```
 
-Agore, se você visitar, `http://localhost:8000/about-css-modules/`, sua página deve ficar da seguinte forma:
+Agore, se você visitar `http://localhost:8000/about-css-modules/`, sua página deve ficar da seguinte forma:
 
 ![Page with CSS module styles](css-modules-basic.png)
 
@@ -239,28 +239,28 @@ Nesta seção, você vai criar uma lista de pessoas com nomes, fotos e pequenas 
 3. Importe o novo arquivo `src/pages/about-css-modules.module.css` na página `about-css-modules.js` que você criou mais cedo editando as primeiras linhas da seguinte forma:
 
 ```javascript:title=src/pages/about-css-modules.js
-import React from "react";
+import React from "react"
 // highlight-next-line
-import styles from "./about-css-modules.module.css";
-import Container from "../components/container";
+import styles from "./about-css-modules.module.css"
+import Container from "../components/container"
 
 // highlight-next-line
-console.log(styles);
+console.log(styles)
 ```
 
-O código `console.log (styles)` mostrará a importação resultante para que você possa ver o resultado do seu arquivo `. / About-css-modules.module.css` processado. Se você abrir o console do desenvolvedor (usando por exemplo, Firefox ou Chrome developer tools) em seu navefador, você vai ver:
+O código `console.log(styles)` mostrará a importação resultante para que você possa ver o resultado do seu arquivo `. /about-css-modules.module.css` processado. Se você abrir o console do desenvolvedor (usando por exemplo, Firefox ou Chrome developer tools) em seu navegador, você vai ver:
 
 ![Import result of CSS module in console](css-modules-console.png)
 
-Se você comprarar isso com seu arquivo CSS, você vai ver que cada classe agora é uma chave no objeto importado apontando para uma longa string, por exemplo, `avatar` aponta para `src-pages----about-css-modules-module---avatar---2lRF7`. Essas são os nomes das classes geradas pelo CSS Modules. Elas são únicas em todo seu site. E como você precisa importá-los para usar as classes,nunca há dúvidas sobre onde algum CSS está sendo usado.
+Se você comprarar isso com seu arquivo CSS, você vai ver que cada classe agora é uma chave no objeto importado apontando para uma longa string, por exemplo, `avatar` aponta para `src-pages----about-css-modules-module---avatar---2lRF7`. Essas são os nomes das classes geradas pelo CSS Modules. Elas são únicas em todo seu site. E como você precisa importá-los para usar as classes, nunca há dúvidas sobre onde algum CSS está sendo usado.
 
 4. Crie um componente `User`.
 
 Crie um novo componente `<User />` inline na página `about-css-modules.js`. Modifique `about-css-modules.js` para ficar parecido com o seguinte código:
 
 ```jsx:title=src/pages/about-css-modules.js
-import React from "react";
-import styles from "./about-css-modules.module.css";
+import React from "react"
+import styles from "./about-css-modules.module.css"
 import Container from "../components/container"
 
 console.log(styles)
