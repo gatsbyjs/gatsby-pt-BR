@@ -221,4 +221,4 @@ Você também pode colocar as _meta-tags_ do Facebook e Twitter em seus próprio
 - [marisamorby.com](https://github.com/marisamorby/marisamorby.com/blob/master/packages/gatsby-theme-blog-sanity/src/components/seo.js)
 - [gatsby-starter-prismic](https://github.com/LeKoArts/gatsby-starter-prismic/blob/master/src/components/SEO/SEO.jsx)
 
-Conforme mencionado no começo, você também pode usar o componente em modelos, como [no exemplo](https://github.com/jlengstorf/marisamorby.com/blob/6e86f845185f9650ff95316d3475bb8ac86b15bf/src/templates/post.js#L12-L18).
+Conforme mencionado no começo, você também pode usar o componente em modelos, como [neste exemplo](https://github.com/jlengstorf/marisamorby.com/blob/6e86f845185f9650ff95316d3475bb8ac86b15bf/src/templates/post.js#L12-L18).
