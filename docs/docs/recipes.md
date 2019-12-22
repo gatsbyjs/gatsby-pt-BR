@@ -1670,7 +1670,7 @@ export default () => (
 
 #### Recursos adicionais
 
-- [Exemplo de repositório referenciando uma imagem da pasta estática](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
+- [Exemplo de repositório referenciando uma imagem da pasta static](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
 - [Usando a Pasta Static](/docs/static-folder/)
 - [Mais sobre todas as técnicas de imagem em Gatsby](/docs/images-and-files/)
 
@@ -1678,7 +1678,7 @@ export default () => (
 
 O plugin `gatsby-image` pode aliviar grande parte da dor associada à otimização de imagens no seu site.
 
-O Gatsby irá gerar recursos otimizados que podem ser consultados com o GraphQL e passados ​​para o componente de imagem do Gatsby. Isso cuida do trabalho pesado, incluindo a criação de vários tamanhos de imagem e o carregamento no momento certo.
+O Gatsby irá gerar recursos otimizados que podem ser consultados com o GraphQL e passados ​​para o componente de imagem do Gatsby. Isso elimina a parte mais complexa, incluindo a criação de vários tamanhos de imagem e o carregamento no momento certo.
 
 #### Pré-requisitos
 
@@ -1742,7 +1742,7 @@ return (
 )
 ```
 
-c. várias imagens de um diretório (Exemplo: `images/dogs`) [filtradas](/docs/graphql-reference/#filter) pelos campos `extension` e `relativeDirectory`, e depois mapeado para os componentes `Img`
+c. múltiplas imagens de um diretório (Exemplo: `images/dogs`) [filtradas](/docs/graphql-reference/#filter) pelos campos `extension` e `relativeDirectory`, e depois mapeado para os componentes `Img`
 
 ```jsx
 const data = useStaticQuery(graphql`
@@ -2056,7 +2056,7 @@ module.exports = {
 }
 ```
 
-Existem algumas razões para fazer isso -- por exemplo, hospedar um blog criado com o Gatsby em um domínio com outro site não criado no Gatsby. O site principal direcionaria para `example.com`, e o site Gatsby com um prefixo de caminho poderia morar em `example.com/blog`.
+Existem algumas razões para fazer isso -- por exemplo, hospedar um blog criado com o Gatsby em um domínio com outro site não criado no Gatsby. O site principal direcionaria para `example.com`, e o site Gatsby com um prefixo de caminho poderia estar disponível em `example.com/blog`.
 
 4. Com um prefixo de caminho definido em `gatsby-config.js`, execute `gatsby build` com a flag `--prefix-paths` para adicionar automaticamente o prefixo ao início de todos os URLs do site Gatsby e tags `<Link>`.
 
@@ -2072,12 +2072,12 @@ gatsby build && gatsby serve
 
 #### Recursos adicionais
 
-- Caminho para criação e implantação de um site de exemplo no [tutorial parte um](/tutorial/part-one/#deploying-a-gatsby-site)
+- Caminho para criação e publicação de um site de exemplo no [tutorial parte um](/tutorial/part-one/#deploying-a-gatsby-site)
 - Aprenda sobre [otimização de desempenho](/docs/performance/)
-- Leia sobre [outros tópicos relacionados à implantação](/docs/preparing-for-deployment/)
-- Confira os [documentos de implantação](/docs/deploying-and-hosting/) para plataformas de hospedagem específicas e como implantar nelas
+- Leia sobre [outros tópicos relacionados à publicação](/docs/preparing-for-deployment/)
+- Confira os [documentos de publicação](/docs/deploying-and-hosting/) para plataformas de hospedagem específicas e como publicarar nelas
 
-### Implantando em Netlify
+### Publicando no Netlify
 
 Use [`netlify-cli`](https://www.netlify.com/docs/cli/) para implantar seu aplicativo Gatsby sem sair da interface da linha de comandos.
 
@@ -2091,7 +2091,7 @@ Use [`netlify-cli`](https://www.netlify.com/docs/cli/) para implantar seu aplica
 
 1. Crie seu aplicativo gatsby usando `gatsby build`
 
-2. Entre no Netlify usando `netlify login`
+2. Faça o login no Netlify usando `netlify login`
 
 3. Execute o comando `netlify init`. Selecione a opção "Create & configure a new site".
 
@@ -2099,13 +2099,13 @@ Use [`netlify-cli`](https://www.netlify.com/docs/cli/) para implantar seu aplica
 
 5. Escolha seu [Team](https://www.netlify.com/docs/teams/).
 
-6. Mude o caminho de implantação para `public/`
+6. Mude o caminho de publicação para `public/`
 
-7. Verifique se tudo está bem antes de implantar na produção usando `netlify deploy --prod`
+7. Verifique se tudo está bem antes de disponibilizar no ambiente de produção usando `netlify deploy --prod`
 
 #### Recursos adicionais
 
-- [Hospedagem em Netlify](/docs/hosting-on-netlify)
+- [Hospedagem no Netlify](/docs/hosting-on-netlify)
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
 
 ### Implantando em ZEIT Now
@@ -2116,7 +2116,7 @@ Use [Now CLI](https://zeit.co/download) para implantar seu aplicativo Gatsby sem
 
 - Uma conta [ZEIT Now](https://zeit.co/signup)
 - Um [site Gatsby](/docs/quick-start) com um único componente `index.js`
-- Pacote [Now CLI](https://zeit.co/download) instalado
+- Pacote [Now ILC](https://zeit.co/download) instalado
 - [ILC Gatsby](/docs/gatsby-cli) instalado
 
 #### Instruções
@@ -2125,8 +2125,8 @@ Use [Now CLI](https://zeit.co/download) para implantar seu aplicativo Gatsby sem
 
 2. Mude para o diretório do seu aplicativo Gatsby.js no Terminal se você ainda não estiver lá
 
-3. Execute `now` para implementá-lo
+3. Execute `now` para publicá-lo
 
 #### Recursos adicionais
 
-- [Implantando em ZEIT Now](/docs/deploying-to-zeit-now/)
+- [Publicar em ZEIT Now](/docs/deploying-to-zeit-now/)
