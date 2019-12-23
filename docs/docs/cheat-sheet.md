@@ -261,7 +261,7 @@ Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
         </tbody>
     </table>
     <h3>gatsby limpo</h3>
-    <p>Destrua o <code>cache</code> do Gatsby. e diretórios <code>públicos</code>.</p>
+    <p>Destrua o <code>.cache</code> do Gatsby e diretórios públicos <code>(public)</code>.</p>
     <h2>Camisetas, chapéus, moletom, e mais!</h2>
     <p>Inscreva-se na newsletter do Gatsby e <strong>ganhe 30% de desconto</strong> em sua compra na loja Gatsby!(<a href="https://gatsby.dev/store">gatsby.dev/store</a>)</p>
     <p>Inscreva-se<a href="https://gatsby.dev/discount">gatsby.dev/discount</a></p>
