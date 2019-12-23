@@ -1,18 +1,18 @@
 ---
-title: Adding a Manifest File
+Título: Adicionando o Arquivo _Manifest
 ---
 
-Se você executou [audit with Lighthouse](/docs/audit-with-lighthouse/), você pode ter notado uma pontuação ruim na categoria "Progressive Web App". Vamos abordar como você pode melhorar essa pontuação.
+Se você executou uma [verificação com o Lighthouse](/docs/audit-with-lighthouse/), pode ter notado uma pontuação ruim na categoria "Progressive Web App". Vamos abordar como você pode melhorar essa pontuação.
 
 Mas primeiro, o que _são_ exatamente PWAs?
 
-São sites regulares que aproveitam as funcionalidade modernas dos navegadores para aumentar a experiência na web com recursos e benefícios semelhantes a dos aplicativos. Confira [Google's overview](https://developers.google.com/web/progressive-web-apps/) para saber o que define uma experiência de PWA e [Progressive web apps (PWAs) doc](/docs/progressive-web-app/) para saber como um site Gatsby é um aplicativo da web progressivo.
+São sites regulares que aproveitam as funcionalidade modernas dos navegadores para aumentar a experiência na web com recursos e benefícios semelhantes a dos aplicativos. Confira [Google's overview](https://developers.google.com/web/progressive-web-apps/) para saber o que define uma experiência de PWA e [Progressive web apps (PWAs) doc](/docs/progressive-web-app/) para saber como um site Gatsby é um progressive web app.
 
-A inclusão de um manifesto de aplicativo da web é um dos três geralmente aceitos [baseline requirements for a PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
+A inclusão de um manifesto de aplicativo da web é um dos três, geralmente aceitos, [requisitos mínimos para um PWA](https://alistapart.com/article/yes-that-web-project-should-be-a-pwa#section1).
 
 Citação [Google](https://developers.google.com/web/fundamentals/web-app-manifest/):
 
-> O manifesto do aplicativo da web é um arquivo JSON simples que informa ao navegador sobre seu aplicativo da web e como ele deve se comportar quando 'instalado' no dispositivo móvel ou na área de trabalho do usuário.
+> O manifesto do aplicativo da web é um arquivo JSON simples que informa ao navegador sobre seu aplicativo web e como ele deve se comportar quando 'instalado' no dispositivo móvel ou na área de trabalho do usuário.
 
 [Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configura o Gatsby para criar um arquivo `manifest.webmanifest` em cada compilação do site.
 
@@ -44,7 +44,7 @@ npm install --save gatsby-plugin-manifest
         display: "standalone",
         icon: "src/images/icon.png", // Esse caminho é relativo a raiz do site.
         // Um atributo opcional que fornece suporte para verificação CORS
-        // If you do not provide a crossOrigin option, it will skip CORS for manifest. Se você não fornecer a opção crossOrigin, ele pulará o CORS para manifesto
+        // Se você não fornecer a opção crossOrigin, ele pulará o CORS para manifesto
         // Qualquer palavra-chave inválida ou string vazia assume o padrão "anônimo"
         crossOrigin: `use-credentials`,
       },
