@@ -46,7 +46,8 @@ Tenha em mente as desvantagens dessa implementação:
 Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de fonte](/docs/importing-assets-into-files/) pelo JavaScript. A pasta
 `static` é util como um contorno para um pequeno número de casos comuns, como:
 
-- Você precisa de um arquivo com um nome específico na saída do _build_, como [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+- Você precisa de um arquivo com um nome específico na saída do _build_,
+  como [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 - Voce tem milhares de imagens e precisa referenciar dinamicamente seus caminhos.
 - Você gostaria de adicionar um script pequeno como
   [`pace.js`](http://github.hubspot.com/pace/docs/welcome/)fora do
