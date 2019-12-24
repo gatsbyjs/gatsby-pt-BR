@@ -1,5 +1,5 @@
 ---
-Título: Adicionando o Arquivo _Manifest
+Título: Adicionando o Arquivo _Manifest_
 ---
 
 Se você executou uma [verificação com o Lighthouse](/docs/audit-with-lighthouse/), pode ter notado uma pontuação ruim na categoria "Progressive Web App". Vamos abordar como você pode melhorar essa pontuação.
