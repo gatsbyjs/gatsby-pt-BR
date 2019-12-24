@@ -2,7 +2,7 @@
 title: Criação de Página
 ---
 
-Uma página é criada chamando a ação [createPage](/docs/actions/#createPage). Existem três principais consequências que ocorrem quando uma página é criada.
+Uma página é criada chamando a função [createPage](/docs/actions/#createPage). Existem três principais consequências que ocorrem quando uma página é criada.
 
 1. O namespace redux das `páginas` é atualizado
 2. O namespace redux dos `componentes` é atualizado
