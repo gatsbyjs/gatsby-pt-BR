@@ -150,7 +150,7 @@ não é uma Data válida.
 Isso confundirá a inferência de tipo de Gatsby, já que o campo `joinAt`
 agora terá os valores Date e String.
 
-#### Fixando tipos de campos
+#### Consertando tipos de campos
 
 Para garantir que o campo sempre seja do tipo Date, você pode fornecer definições
 explícitas de tipo para Gatsby com a action [`createTypes`](/docs/actions/#createTypes).
@@ -176,7 +176,7 @@ fornecidos, eles ainda serão tratados pela inferência de tipo do Gatsby.
 > (available in Gatsby v2.12 and above),
 > e [`sourcesNodes`](/docs/node-apis/#sourceNodes).
 
-#### Optar pela inferência de tipo
+#### Não optando pela inferência de tipo
 
 No entanto, existem vantagens em fornecer definições completas para um tipo de node, e
 ignorar completamente o mecanismo de inferência de tipo. Em projetos de menor escala,
