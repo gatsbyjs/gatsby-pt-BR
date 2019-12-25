@@ -16,7 +16,7 @@ Veja [Criando e Modificando Páginas](/docs/creating-and-modifying-pages) para m
 
 Você pode usar `gatsby-link` para vincular rotas -- isso irá disponibilizar transições de páginas quase instantâneas via _prefetching_. [Veja mais em Gatsby Link](/docs/gatsby-link/).
 
-Você também pode utilizar o padrão de links com `<a>`, mas neste caso você não terá o benefício do _prefetching_.
+Você também pode utilizar links normais ( _tag_ `<a>`) para vincular rotas, mas neste caso você não terá o benefício do _prefetching_.
 
 ## Criandos links com autenticação
 
