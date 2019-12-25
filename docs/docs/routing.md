@@ -18,7 +18,7 @@ Você pode usar `gatsby-link` para vincular rotas -- isso irá disponibilizar tr
 
 Você também pode utilizar links normais ( _tag_ `<a>`) para vincular rotas, mas neste caso você não terá o benefício do _prefetching_.
 
-## Criandos links com autenticação
+## Criandos links para rotas autenticadas
 
 Se você não deseja que todo seu conteúdo esteja disponível publicamente na web, o Gatsby permite que você crie [rotas "client-only"](/docs/client-only-routes-and-user-authentication) que ficam por trás de uma camada de autenticação.
 
