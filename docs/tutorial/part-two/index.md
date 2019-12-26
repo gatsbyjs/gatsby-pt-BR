@@ -172,7 +172,7 @@ Você notará que importou um arquivo de módulo css chamado `container.module.c
 }
 ```
 
-Você noratá que o arquivo tem `.module.css` no final do seu nome em vez do usual `.css`. Esta é a forma como avisamos ao Gatsby que este arquivo deve ser processado como um CSS Module em vez de CSS comum.
+Você notara que o arquivo tem `.module.css` no final do seu nome em vez do usual `.css`. Esta é a forma como avisamos ao Gatsby que este arquivo deve ser processado como um CSS Module em vez de CSS comum.
 
 3. Crie uma nova página criando um arquivo em:
    `src/pages/about-css-modules.js`:
@@ -252,7 +252,7 @@ O código `console.log(styles)` mostrará a importação resultante para que voc
 
 ![Import result of CSS module in console](css-modules-console.png)
 
-Se você comprarar isso com seu arquivo CSS, você vai ver que cada classe agora é uma chave no objeto importado apontando para uma longa string, por exemplo, `avatar` aponta para `src-pages----about-css-modules-module---avatar---2lRF7`. Essas são os nomes das classes geradas pelo CSS Modules. Elas são únicas em todo seu site. E como você precisa importá-los para usar as classes, nunca há dúvidas sobre onde algum CSS está sendo usado.
+Se você comparar isso com seu arquivo CSS, você vai ver que cada classe agora é uma chave no objeto importado apontando para uma longa string, por exemplo, `avatar` aponta para `src-pages----about-css-modules-module---avatar---2lRF7`. Essas são os nomes das classes geradas pelo CSS Modules. Elas são únicas em todo seu site. E como você precisa importá-los para usar as classes, nunca há dúvidas sobre onde algum CSS está sendo usado.
 
 4. Crie um componente `User`.
 
