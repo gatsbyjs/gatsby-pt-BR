@@ -1,44 +1,43 @@
 ---
-title: SEO with Gatsby
+title: SEO com Gatsby
 ---
 
-Gatsby helps your site place better in search engines. Some advantages come out of the box and some require configuration.
+Gatsby ajuda seu site ser melhor classificado nos motores de busca. algumas vantagens vem prontas para uso e outras requer alguma configuração. 
 
-## Server rendering
+## Renderização no servidor
 
-Because Gatsby pages are server-rendered, all the page content is available to Google and other search engines or crawlers.
+Como as páginas gatsby são renderizados no servidor, todos os conteúdos e páginas estão disponíveis para o Google e outros motores de busca ou crawlers. 
 
-You can see this by viewing the source for this page with `curl` (in your terminal):
+Você pode vizualizar o código-fonte desta página com o `culr`( no seu terminal): 
 
 ```shell
 curl https://www.gatsbyjs.org/docs/seo
 ```
+`Clique-botão-direito => Exibir código-fonte` isto não exibirá o html real (mas ainda assim são renderizadas no servidor) como este site está usando service workers. [Ler estas anotações](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes) para aprender mais.
 
-`Right-Click => View source` won't show you the actual HTML (but the pages are still server-rendered!) as this site is using service workers. [Read these notes](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes) to learn more.
+## Aumento de velocidade
 
-## Speed boost
+Gatsby tem muitas otimizações de desempenhos integradas. como renderização de arquivos estatícos, carregamento progressivo de imagem, e o [PRPL pattern](/docs/prpl-pattern/)—ajuda seu site ser extremamente rápido por default.
 
-Gatsby's many built-in performance optimizations, such as rendering to static files, progressive image loading, and the [PRPL pattern](/docs/prpl-pattern/)—all help your site be lightning-fast by default.
+A partir de janeiro 2018, Google [recompensa sites mais rápidos com um aumento no ranking de busca](https://searchengineland.com/google-speed-update-page-speed-will-become-ranking-factor-mobile-search-289904).
 
-Starting in January 2018, Google [rewards faster sites with a bump in search rankings](https://searchengineland.com/google-speed-update-page-speed-will-become-ranking-factor-mobile-search-289904).
+## Metadados da página
 
-## Page metadata
+Adicionando metadados para as páginas, como título da página e descrição, ajuda os motores de busca entender seu conteúdo e exibir suas páginas nos resultados de buscas. 
 
-Adding metadata to pages, such as page title and description, helps search engines understand your content and when to show your pages in search results.
+Uma forma comum para adicionar metadados as páginas é adicionar componentes [react-helmet](https://github.com/nfl/react-helmet) (juntamente com o gatsby [React helmet plugin](/packages/gatsby-plugin-react-helmet) para suporte SSR) para os componentes de sua página, aqui está um [guia de como  adicionar um componente de SEO](https://www.gatsbyjs.org/docs/add-seo-component/) para sua aplicação Gatsby. 
 
-A common way to add metadata to pages is to add [react-helmet](https://github.com/nfl/react-helmet) components (together with the [Gatsby React Helmet plugin](/packages/gatsby-plugin-react-helmet) for SSR support) to your page components. Here's a [guide on how to add an SEO component](https://www.gatsbyjs.org/docs/add-seo-component/) to your Gatsby app.
+alguns exemplos usando react-helmet: 
 
-Some examples using react-helmet:
+- [Site Oficial GatsbyJS.org](https://github.com/gatsbyjs/gatsby/blob/87ad6e81b9bd78b25d089434600750f5903baaee/www/src/components/package-readme.js#L16-L25)
+- [Oficial GatsbyJS default starter](https://github.com/gatsbyjs/gatsby/blob/776dc1d6fe8d5ce7b5ea6d884736bb3c76280975/starters/default/src/components/seo.js)
+- [E-mail Gatsby](https://github.com/DSchau/gatsby-mail/blob/89b467e5654619ffe3073133ef0ae48b4d7502e3/src/components/meta.js)
+- [Blog pessoal de Jason Lengstorf](https://github.com/jlengstorf/gatsby-theme-jason-blog/blob/e6d25ca927afdc75c759e611d4ba6ba086452bb8/src/components/SEO/SEO.js)
 
-- [Official GatsbyJS.org site](https://github.com/gatsbyjs/gatsby/blob/87ad6e81b9bd78b25d089434600750f5903baaee/www/src/components/package-readme.js#L16-L25)
-- [Official GatsbyJS default starter](https://github.com/gatsbyjs/gatsby/blob/776dc1d6fe8d5ce7b5ea6d884736bb3c76280975/starters/default/src/components/seo.js)
-- [Gatsby Mail](https://github.com/DSchau/gatsby-mail/blob/89b467e5654619ffe3073133ef0ae48b4d7502e3/src/components/meta.js)
-- [Jason Lengstorf’s personal blog](https://github.com/jlengstorf/gatsby-theme-jason-blog/blob/e6d25ca927afdc75c759e611d4ba6ba086452bb8/src/components/SEO/SEO.js)
+## Gere ricos trechos em motores de busca usando dados estruturados
 
-## Generate rich snippets in search engines using structured data
-
-Google uses structured data that it finds on the web to understand the content of the page, as well as to gather information about the web and the world in general.
-For example, here is a structured data snippet in the [JSON-LD format](https://developers.google.com/search/docs/guides/intro-structured-data) (JavaScript Object Notation for Linked Data) that might appear on the contact page of a company called Spooky Technologies, describing their contact information:
+Google utiliza dados estruturados encontrados na web para entender o conteúdo das páginas, bem como adquirir informações sobre web e do mundo em geral.
+Por exemplo, aqui está um trecho de dados estruturado em [formato JSON-LD](https://developers.google.com/search/docs/guides/intro-structured-data) (Notação de Objetos JavaScript para vincular os dados) que podem aparecer na página de contato de uma compania chamada spooky technologies, descrevendo suas informações de contatos:
 
 ```js
 <script type="application/ld+json">
@@ -56,8 +55,8 @@ For example, here is a structured data snippet in the [JSON-LD format](https://d
 </script>
 ```
 
-When using structured data, you'll need to test during development and the [Structured Data Testing Tool](https://search.google.com/structured-data/testing-tool) from Google is one recommended method. After deployment, their [Rich result status reports](https://support.google.com/webmasters/answer/7552505?hl=en) may help to monitor the health of your pages and mitigate any templating or serving issues.
+Quando se utiliza dados estruturados, você vai precisar realizar testar durante o desenvolvimento e a [ferramenta de teste de dados estruturados](https://search.google.com/structured-data/testing-tool) do google e um método recomendado. depois da publicação, seus [relatórios de status da pesquisa aprimorada](https://support.google.com/webmasters/answer/7552505?hl=en) pode ajudar a monitorar a integridade de sua página e mitigar quaisquer problemas de modelagem ou veiculação.
 
-## Additional resources
+## Recursos adicionais
 
-You might also be interested in [blog posts about SEO in Gatsby](/blog/tags/seo/)
+Você também pode estar interessado em [postagens no blog sobre SEO em Gatsby](/blog/tags/seo/)
