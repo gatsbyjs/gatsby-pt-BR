@@ -14,6 +14,7 @@ Sem fornecer algum contexto, o GraphQL pode parecer um exagero para algo como Ga
 />
 
 Para qualquer tipo de página que não seja diretamente criada em `src/pages/`, você precisará do Gatsby [`createPages` Node API](/docs/node-apis/#createPages) para criar páginas de forma dinâmica.
+
 Tudo que é necessário para criar uma página é um `path` onde ela deve ser criada e o componente que deve ser renderizado nela.
 
 Por exemplo, se você tivesse o seguinte componente:
@@ -76,7 +77,7 @@ exports.createPages = ({ actions: { createPage } }) => {
 
 A propriedade `context` aceita um objeto, e podemos passar qualquer dado que queremos que a página seja capaz de acessar.
 
-> **NOTE:** Existem alguns nomes reservados que _cannot_ podem ser usados em `context`. Eles são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
+> **NOTE:** Existem alguns nomes reservados que _não podem_ ser usados em `context`. Eles são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
 
 Quando Gatsby cria páginas, ele inclui uma propriedade chamada `pageContext` e define o seu valor para `context`, para que possamos acessar qualquer um dos valores em nosso componente:
 
@@ -186,7 +187,7 @@ Execute `gatsby develop`, depois abra `localhost:8000/product/space-socks/` para
 Isto faz o trabalho, mas tem algumas falhas que vão ficando mais complicadas com o passar do tempo:
 
 1. As imagens e os dados do produto estão em diferentes lugares no código fonte.
-2. Os caminhos da imagem são absolutos do _built_, não do código fonte, o que torna confuso saber como encontrá-los a partir do JSON.
+2. Os caminhos da imagem são absolutos do _site construído_, não do código fonte, o que torna confuso saber como encontrá-los a partir do JSON.
 3. As imagens não são otimizadas, e qualquer otimização que você fizer teria que ser manual.
 4. Para criar uma listagem prévia de todos os produtos, precisaríamos passar _todas_ as informações do produto em `context`, o que ficaria complicado à medida que o número de produtos aumenta.
 5. Não é muito óbvio de onde os dados vêm nos modelos que renderizam as páginas, portanto, atualizar os dados pode ser confuso mais tarde.
@@ -251,7 +252,7 @@ Para checar se isso funcionou, você pode usar o GraphQL Playground, que está d
 GATSBY_GRAPHQL_IDE=playground gatsby develop
 ```
 
-> **NOTE:** A parte `GATSBY_GRAPHQL_IDE=playground` deste comando é opcional. Ele ativa o GraphQL Playground em vez do GraphiQL, que é uma interface mais antiga para explorar o GraphQL.
+> **NOTA:** A parte `GATSBY_GRAPHQL_IDE=playground` deste comando é opcional. Ele ativa o GraphQL Playground em vez do GraphiQL, que é uma interface mais antiga para explorar o GraphQL.
 
 Você pode explorar o esquema de dados disponíveis usando o separador “Docs” à direita.
 
@@ -371,7 +372,7 @@ export default Product
 Algumas notas sobre este arquivo:
 
 1. O resultado da consulta é adicionado ao componente modelo como a propriedade `data`.
-2. O caminho da imagem foi automaticamente convertido pelo transformador Sharp em um "child node" que inclui versões otimizadas da imagem.
+2. O caminho da imagem foi automaticamente convertido pelo transformador _Sharp_ em um "nó filho" que inclui versões otimizadas da imagem.
 3. A consulta usa um [fragmento de GraphQL](/packages/gatsby-image/#fragments) para consultar todos os dados necessários para imagens otimizadas. Fragmentos de GraphQL _não funcionam_ no Playground GraphQL.
 4. A tag `img` foi trocada por um componente `gatsby-image` chamado `Image`. Ao invés de um atributo `src`, ele aceita um objeto com dados da imagem otimizados.
 
@@ -379,7 +380,7 @@ Salve esse arquivo, execute `gatsby develop`, e depois abra `localhost:8000/gql/
 
 ![Lazy loaded image of an angry cat wearing the purple hat.](./images/why-gql-images.gif)
 
-A imagem agora está otimizada e com lazy loaded.
+A imagem agora está otimizada e carregada de maneira _lazy_
 
 Após a configuração inicial, o carregamento de dados com GraphQL é bastante semelhante ao carregamento direto de JSON, mas oferece benefícios extras como a otimização automática das imagens e a manutenção do carregamento de dados no mesmo local onde é utilizado.
 
