@@ -77,7 +77,7 @@ exports.createPages = ({ actions: { createPage } }) => {
 
 A propriedade `context` aceita um objeto, e podemos passar qualquer dado que queremos que a página seja capaz de acessar.
 
-> **NOTE:** Existem alguns nomes reservados que _não podem_ ser usados em `context`. Eles são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
+> **NOTA:** Existem alguns nomes reservados que _não podem_ ser usados em `context`. Eles são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
 
 Quando Gatsby cria páginas, ele inclui uma propriedade chamada `pageContext` e define o seu valor para `context`, para que possamos acessar qualquer um dos valores em nosso componente:
 
