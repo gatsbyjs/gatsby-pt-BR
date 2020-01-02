@@ -30,7 +30,7 @@ starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele p
 
 Se você já tem um site em Gatsby e quer adicionar arquivos MDX, você pode seguir os passos de configuração do plugin [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/):
 
-1. **Adicione o `gatsby-plugin-mdx`** e as dependencias do MDX
+1. **Adicione o `gatsby-plugin-mdx`** e as dependências do MDX
 
    ```shell
    npm install gatsby-plugin-mdx @mdx-js/mdx @mdx-js/react
