@@ -22,7 +22,7 @@ Você pode referenciar _assets_ da pasta `static` no seu código sem precisar de
 ```js
 render() {
   // Nota: essa é uma saída que deve ser usada com moderação!
-  // Normalmente nós recomandamos usar `import` para pegar URLs de assets
+  // Normalmente nós recomendamos usar `import` para pegar URLs de assets
   // como descrito na página "Importando _Assets_ diretamente".
   return <img src={'/logo.png'} alt="Logo" />;
 }
