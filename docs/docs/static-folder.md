@@ -52,4 +52,4 @@ Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de 
 - Você gostaria de adicionar um script pequeno como
   [`pace.js`](http://github.hubspot.com/pace/docs/welcome/)fora do
   código empacotado.
-- Algumas bibliotecas podem ser incompatíveis com Webpack e você não tem outra opçào senão a incluir dcomo uma tag `<script>`.
+- Algumas bibliotecas podem ser incompatíveis com Webpack e você não tem outra opçào senão a incluir como uma tag `<script>`.
