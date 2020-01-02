@@ -23,7 +23,7 @@ starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele p
 1. **Abra o site** que está rodando em `http://localhost:8000`
 
 1. **Atualize o conteúdo do arquivo MDX** abrindo a pasta `my-mdx-starter` 
-   no seu editor de codigo e edite o arquivo `src/pages/index.mdx`.
+   no seu editor de código e edite o arquivo `src/pages/index.mdx`.
    Salve as alterações e o navegador irá atualizar automaticamente!
 
 ## Adicionando arquivos MDX a um site Gatsby já existente
