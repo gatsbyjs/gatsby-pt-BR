@@ -1,26 +1,25 @@
 ---
-title: Routing
+title: Roteamento
 ---
 
-## Creating routes
+## Criando rotas
 
-Gatsby makes it easy to programmatically control your pages. Pages can be created in three ways:
+Gatsby facilita o controle programático de suas páginas. Páginas podem ser criadas de três maneiras:
 
-- In your site's gatsby-node.js by implementing the API
-  [`createPages`](/docs/node-apis/#createPages)
-- Gatsby core automatically turns React components in `src/pages` into pages
-- Plugins can also implement `createPages` and create pages for you
+- No arquivo gatsby-node.js de seu site implementando a API [`createPages`](/docs/node-apis/#createPages)
+- O Gatsby transforma automaticamente componentes React na pasta `src/pages` em páginas
+- Plugins também podem implementar o `createPages` e criar páginas para você
 
-See the [Creating and Modifying Pages](/docs/creating-and-modifying-pages) for more detail.
+Veja [Criando e Modificando Páginas](/docs/creating-and-modifying-pages) para mais detalhes.
 
-## Linking between routes
+## Vinculação entre rotas
 
-You can use `gatsby-link` to link to these routes -- this will provide almost-instantaneous page transitions via prefetching. [More on Gatsby Link](/docs/gatsby-link/).
+Você pode usar `gatsby-link` para vincular rotas -- isso irá disponibilizar transições de páginas quase instantâneas via _prefetching_. [Veja mais em Gatsby Link](/docs/gatsby-link/).
 
-You can also use standard `<a>` links, but you won't get the benefit of prefetching in this case.
+Você também pode utilizar links normais ( _tag_ `<a>`) para vincular rotas, mas neste caso você não terá o benefício do _prefetching_.
 
-## Creating authentication-gated links
+## Criandos links para rotas autenticadas
 
-If you don't want all of your content available on the public web, Gatsby lets you create ["client-only" routes](/docs/client-only-routes-and-user-authentication) that live behind an authentication gate.
+Se você não deseja que todo seu conteúdo esteja disponível publicamente na web, o Gatsby permite que você crie [rotas "client-only"](/docs/client-only-routes-and-user-authentication) que ficam por trás de uma camada de autenticação.
 
 <GuideList slug={props.slug} />
