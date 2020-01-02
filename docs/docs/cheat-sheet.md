@@ -1,33 +1,33 @@
 ---
-title: Cheat Sheet
+title: Tabela de Referência (Cheat Sheet)
 ---
 
-The Gatsby team has created a resource that you might find useful when building a Gatsby site: a cheat sheet with all the top commands and development tips! Feel free to download and print yourself a copy (and tape it by your workstation!). For related online information, visit [Quick Start](/docs/quick-start/) and [Commands (Gatsby CLI)](/docs/gatsby-cli/).
+A equipe do Gatsby criou um recurso que você pode achar útil ao criar um site do Gatsby: uma lista com todos os principais comandos e dicas de desenvolvimento! Sinta-se à vontade para baixar e imprimir uma cópia (e cole-a na sua estação de trabalho!). Para informações online relacionadas, visite [Início Rápido](/docs/quick-start/) e [Comandos (Gatsby CLI)](/docs/gatsby-cli/).
 
-Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</a>
+Baixe o PDF: <a href="/gatsby-cheat-sheet.pdf" baixar>gatsby-cheat-sheet.pdf</a>
 
 <figure aria-labelledby="cheat_sheet-text">
     <h2>Page 1</h2>
-    <a href="/cheat-sheet_page_1.png" title="Click to open image in a new window" target="_blank" style="display:block;">
+    <a href="/cheat-sheet_page_1.png" title="Clique para abrir a imagem em uma nova janela" target="_blank" style="display:block;">
         <img src="/cheat-sheet_page_1.png" alt="Cheat Sheet - page 1" style="display:block; margin:0;" />
     </a>
     <h2>Page 2</h2>
-    <a href="/cheat-sheet_page_2.png" title="Click to open image in a new window" target="_blank" style="display:block;">
+    <a href="/cheat-sheet_page_2.png" title="Clique para abrir a imagem em uma nova janela" target="_blank" style="display:block;">
         <img src="/cheat-sheet_page_2.png" alt="Cheat Sheet - page 2" style="display:block; margin:0;" />
     </a>
 </figure>
 
 <div id="cheat_sheet-text" style=" position: absolute; height: 1px; width: 1px;overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
-    <h2>Gatsby Cheat Sheet contents</h2>
-    <p>v1.0 for Gatsby 2.x
-        <a href="https://gatsby.dev/cheatsheet">Latest version <span aria-hidden="true">↗</span></a>
+    <h2>Folha de dicas do Gatsby</h2>
+    <p>v1.0 para Gatsby 2.x
+        <a href="https://gatsby.dev/cheatsheet">Última versão <span aria-hidden="true">↗</span></a>
     </p>
-    <h2>Top Docs</h2>
+    <h2>Principais Documentos</h2>
     <table>
         <tbody>
             <tr>
                 <td>
-                    <p>Gatsby Docs</p>
+                    <p>Documentos Gatsby</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/docs">gatsby.dev/docs</a></p>
@@ -35,7 +35,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Gatsby on GitHub</p>
+                    <p>Gatsby no GitHub</p>
                 </td>
                 <td>
                     <p><a href="https://github.com/gatsbyjs/gatsby">github.com/gatsbyjs/gatsby</a></p>
@@ -43,7 +43,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Gatsby Tutorial</p>
+                    <p>Tutorial Gatsby</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/tutorial">gatsby.dev/tutorial</a></p>
@@ -51,7 +51,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Quick Start<br />(for intermediate and advanced developers)</p>
+                    <p>Ínicio Rápido<br />(para desenvolvedores intermediários e avançados)</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/quick-start">gatsby.dev/quick-start</a></p>
@@ -59,7 +59,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Gatsby Starters</p>
+                    <p>Starters Gatsby</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/starters">gatsby.dev/starters</a></p>
@@ -67,7 +67,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Quick Reference Guide</p>
+                    <p>Guia de Referência Rápido</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/recipes">gatsby.dev/recipes</a></p>
@@ -75,7 +75,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Adding Images</p>
+                    <p>Adicionando Imagens</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/image">gatsby.dev/image</a></p>
@@ -83,7 +83,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Gatsby Node APIs</p>
+                    <p>APIs Node Gatsby</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/api">gatsby.dev/api</a></p>
@@ -91,7 +91,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Querying with GraphQL</p>
+                    <p>Consultas com GraphQL</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/graphql">gatsby.dev/graphql</a></p>
@@ -99,10 +99,10 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Deploying and Hosting</p>
+                    <p>Deploy e Hospedagem</p>
                 </td>
                 <td>
-                    <p><a href="https://gatsby.dev/deploy">gatsby.dev/deploy</a></p>
+                    <p><a href="https://gatsby.dev/deploy">gatsby.dev/publicação</a></p>
                 </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>Static Query</p>
+                    <p>Consulta Estática</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/static-query">gatsby.dev/static-query</a></p>
@@ -123,7 +123,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
             </tr>
             <tr>
                 <td>
-                    <p>How to Contribute</p>
+                    <p>Como Contribuir</p>
                 </td>
                 <td>
                     <p><a href="https://gatsby.dev/contribute">gatsby.dev/contribute</a></p>
@@ -133,15 +133,15 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
     </table>
     <p><a href="https://www.gatsbyjs.org/">gatsbyjs.org</a></p>
     <p><a href="https://twitter.com/gatsbyjs">twitter.com/gatsbyjs</a></p>
-    <h2>Gatsby CLI Commands</h2>
-    <p>First, install the global executable:
+    <h2>Comandos Gatsby CLI</h2>
+    <p>Primeiro, instale o executável global:
         <br />
         <code>npm install -g gatsby-cli</code></p>
-    <p>Run <code>gatsby --help</code> for a list of commands and options.</p>
-    <h3><code>gatsby new <span style="font-weight:normal">my-site-name</span></code></h3>
-    <p>Create a new local Gatsby site using the default starter (see “Quick Start Commands” in this cheat sheet on how to use other starters).</p>
+    <p>Run <code>gatsby --help</code> para uma lista de comandos e opções.</p>
+    <h3><code>gatsby novo <span style="font-weight:normal">nome-do-meu-site</span></code></h3>
+    <p>Crie um novo site local do Gatsby usando o iniciador padrão (consulte “Comandos de iniciação rápida” nesta folha de dicas sobre como usar outros starters).</p>
     <h3><code>gatsby develop</code></h3>
-    <p>Start the Gatsby development server.</p>
+    <p>Inicie o servidor de desenvolvimento Gatsby.</p>
     <table>
         <tbody>
             <tr>
@@ -165,7 +165,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>-o, --open</code></p>
                 </td>
                 <td>
-                    <p>Open the site in your (default) browser for you</p>
+                    <p>Abra o site no seu navegador (padrão)</p>
                 </td>
             </tr>
             <tr>
@@ -179,7 +179,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
         </tbody>
     </table>
     <h3><code>gatsby build</code></h3>
-    <p>Compile your application and make it ready for deployment.<br /></p>
+    <p>Compile seu aplicativo e prepare-o para publicação.<br /></p>
     <table>
         <tbody>
             <tr>
@@ -187,7 +187,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>--prefix-paths</code></p>
                 </td>
                 <td>
-                    <p>Build site with link paths prefixed<br />(set <code>pathPrefix</code> in your config)</p>
+                    <p>Construir um site com caminhos de link predefinidos<br />(set <code>pathPrefix</code> in your config)</p>
                 </td>
             </tr>
             <tr>
@@ -195,7 +195,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>--no-uglify</code></p>
                 </td>
                 <td>
-                    <p>Build site without uglifying JS bundles<br />(for debugging)</p>
+                    <p>Construir sites sem pacotes 'uglifying JS'<br />(para depuração)</p>
                 </td>
             </tr>
             <tr>
@@ -203,13 +203,13 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>--open-tracing-config-file</code></p>
                 </td>
                 <td>
-                    <p>Tracer configuration file (OpenTracing compatible). See <a href="https://gatsby.dev/tracing">gatsby.dev/tracing</a></p>
+                    <p>Arquivo de configuração do Tracer (compatível com OpenTracing). Veja <a href="https://gatsby.dev/tracing">gatsby.dev/tracing</a></p>
                 </td>
             </tr>
         </tbody>
     </table>
     <h3><code>gatsby serve</code></h3>
-    <p>Serve the production build for testing.</p>
+    <p>Fornece a configuração de produção para teste.</p>
     <table>
         <tbody>
             <tr>
@@ -217,7 +217,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>-H, --host</code></p>
                 </td>
                 <td>
-                    <p>Set host. Defaults to <code>localhost</code></p>
+                    <p>Definir host. O padrão é <code>localhost</code></p>
                 </td>
             </tr>
             <tr>
@@ -225,7 +225,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>-p, --port</code></p>
                 </td>
                 <td>
-                    <p>Set port. Defaults to <code>9000</code></p>
+                    <p>Definir porta. O padrão é <code>9000</code></p>
                 </td>
             </tr>
             <tr>
@@ -233,7 +233,7 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>-o, --open</code></p>
                 </td>
                 <td>
-                    <p>Open the site in your (default) browser for you</p>
+                    <p>Abra o site no seu navegador (padrão)</p>
                 </td>
             </tr>
             <tr>
@@ -241,13 +241,13 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>--prefix-paths</code></p>
                 </td>
                 <td>
-                    <p>Serve site with link paths prefixed (if built with <code>pathPrefix</code> in your <code>gatsby-config.js</code>)</p>
+                    <p>Fornece sites com caminho de links predefinidos (se contruir com <code>pathPrefix</code> em seu <code>gatsby-config.js</code>)</p>
                 </td>
             </tr>
         </tbody>
     </table>
-    <h3><code>gatsby info</code></h3>
-    <p>Get helpful environment information which will be required when reporting a bug at <a href="https://github.com/gatsbyjs/gatsby/issues">github.com/gatsbyjs/gatsby/issues</a>.</p>
+    <h3><code>informações do gatsby</code></h3>
+    <p>Obtenha informações úteis sobre o ambiente, será necessário quando for relatar um bug em <a href="https://github.com/gatsbyjs/gatsby/issues">github.com/gatsbyjs/gatsby/issues</a>.</p>
     <table>
         <tbody>
             <tr>
@@ -255,29 +255,29 @@ Get the PDF: <a href="/gatsby-cheat-sheet.pdf" download>gatsby-cheat-sheet.pdf</
                     <p><code>-C, --clipboard</code></p>
                 </td>
                 <td>
-                    <p>Automagically copy environment information to clipboard</p>
+                    <p>Copia automaticamente as informações do ambiente para a área de transferência</p>
                 </td>
             </tr>
         </tbody>
     </table>
-    <h3>gatsby clean</h3>
-    <p>Wipe out Gatsby’s <code>.cache</code> and <code>public</code> directories.</p>
-    <h2>T-Shirts, Hats, Hoodies, and more!</h2>
-    <p>Sign up for the Gatsby Newsletter and <strong>get 30% off</strong> your Gatsby Store purchase! (<a href="https://gatsby.dev/store">gatsby.dev/store</a>)</p>
-    <p>Sign up at <a href="https://gatsby.dev/discount">gatsby.dev/discount</a></p>
-    <h2>Quick Start Commands</h2>
-    <p>Create a new Gatsby site using the “Blog” starter:<br />
+    <h3>gatsby limpo</h3>
+    <p>Destrua o <code>.cache</code> do Gatsby e diretórios públicos <code>(public)</code>.</p>
+    <h2>Camisetas, chapéus, moletom, e mais!</h2>
+    <p>Inscreva-se na newsletter do Gatsby e <strong>ganhe 30% de desconto</strong> em sua compra na loja Gatsby!(<a href="https://gatsby.dev/store">gatsby.dev/store</a>)</p>
+    <p>Inscreva-se<a href="https://gatsby.dev/discount">gatsby.dev/discount</a></p>
+    <h2>Comandos de início rápido</h2>
+    <p>Crie um novo site usando o starter "Blog":<br />
     <code>gatsby new my-blog-starter https://github.com/gatsbyjs/gatsby-starter-blog</code></p>
-    <p>Navigate into your new site’s directory and start it up:<br />
+    <p>Navegue até o diretório do seu novo site e inicie-o:<br />
     <code>cd my-blog-starter/<br />
-    gatsby develop</code></p>
-    <p>Your site is now running at <code>http://localhost:8000</code>!</p>
-    <p>You’ll also see a second link: <code>http://localhost:8000/___graphql</code>. This is a tool you can use to experiment with querying your data. Learn more about it at <a href="https://gatsby.dev/tutorial">gatsby.dev/tutorial</a></p>
-    <p>For more Gatsby starters, visit <a href="https://gatsby.dev/starters">gatsby.dev/starters</a>.</p>
-    <h2>Helpful File Definitions</h2>
-    <p>Each of these files should live at the root of your Gatsby project folder. See <a href="https://gatsby.dev/projects">gatsby.dev/projects</a></p>
-    <p><code>gatsby-config.js</code> — configure options for a Gatsby site, with metadata for project title, description, plugins, etc.</p>
-    <p><code>gatsby-node.js</code> — implement Gatsby’s Node.js APIs to customize and extend default settings affecting the build process</p>
-    <p><code>gatsby-browser.js</code> — customize and extend default settings affecting the browser, using Gatsby’s browser APIs</p>
-    <p><code>gatsby-ssr.js</code> — use Gatsby’s server-side rendering APIs to customize default settings affecting server-side rendering</p>
+    desenvolvimento gatsby</code></p>
+    <p>Seu site agora está sendo executado em <code>http://localhost:8000</code>!</p>
+    <p>Você também verá um segundo link: <code>http://localhost:8000/___graphql</code>. Esta é uma ferramenta que você pode usar para experimentar a consulta de seus dados. Saiba mais sobre isso em <a href="https://gatsby.dev/tutorial">gatsby.dev/tutorial</a></p>
+    <p>Para mais starters Gatsby, visite <a href="https://gatsby.dev/starters">gatsby.dev/starters</a>.</p>
+    <h2>Definições úteis de arquivo</h2>
+    <p>Cada um desses arquivos deve estar na raiz da pasta do projeto Gatsby. Veja <a href="https://gatsby.dev/projects">gatsby.dev/projects</a></p>
+    <p><code>gatsby-config.js</code> — configurar opções para um site feito com Gatsby, com metadados para o título do projeto, descrição, plugins, etc.</p>
+    <p><code>gatsby-node.js</code> — implementar APIs Node.js do Gatsby para personalizar e estender as configurações padrão que afetam o processo de criação</p>
+    <p><code>gatsby-browser.js</code> — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby</p>
+    <p><code>gatsby-ssr.js</code> — use as APIs de renderização do lado do servidor do Gatsby para personalizar as configurações padrão que afetam a renderização</p>
 </div>
