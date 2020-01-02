@@ -3,7 +3,7 @@ title: Iniciando com MDX
 ---
 
 A maneira mais facil de iniciar com Gatsby + MDX é usando o [MDX
-starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele permite escrever arquivos .mdx na pasta `src/pages` para criar novas paginas no seu site.
+starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele permite escrever arquivos .mdx na pasta `src/pages` para criar novas páginas no seu site.
 
 ## 🚀 Iniciando rapidamente
 
