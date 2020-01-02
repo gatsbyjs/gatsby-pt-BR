@@ -50,6 +50,6 @@ Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de 
   como [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 - Voce tem milhares de imagens e precisa referenciar dinamicamente seus caminhos.
 - Você gostaria de adicionar um script pequeno como
-  [`pace.js`](http://github.hubspot.com/pace/docs/welcome/)fora do
+  [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) fora do
   código empacotado.
 - Algumas bibliotecas podem ser incompatíveis com Webpack e você não tem outra opçào senão a incluir como uma tag `<script>`.
