@@ -3,7 +3,7 @@ title: Usando a Pasta de Arquivos Estáticos
 ---
 
 No geral, todo _website_ precisa de _assets_: imagens, folhas de estilo, _scripts_, etc. Quando se está usando Gatsby, nós recomendamos
-[Importando _Assets_ diretamente](/docs/importing-assets-into-files/) em arquivos JavaScript, por causa dos benefícios que são adquiridos:
+[Importar _Assets_ diretamente](/docs/importing-assets-into-files/) em arquivos JavaScript, por causa dos benefícios que são adquiridos:
 
 - _Scripts_ e folhas de estilo são minificados e empacotados juntos para evitar chamadas adicionais de rede.
 - Arquivos não encontrados causam erros de compilação ao invés de erros 404 para seus usuários.
