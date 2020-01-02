@@ -1,25 +1,25 @@
 ---
-title: Importing Media Content
+title: Importando Conteúdo de Mídia
 ---
 
-"Media content" is a broad term that generally includes images, videos, documents and files that are displayed on your website. For Gatsby sites, you have multiple options for importing media content depending on the type:
+"Conteúdo de mídia" é um termo amplo que geralmente inclui imagens, vídeos, documentos e arquivos que são exibidos em seu site. Para sites Gatsby, você tem várias opções para importar conteúdo de mídia dependendo do tipo:
 
-## Images, SVG, and PDFs
+## Imagens, SVG e PDFs
 
-- [Image graphics can be imported](/docs/importing-assets-into-files/) with Webpack and queried with GraphQL.
-- Images can also be [included from the `static folder`](/docs/static-folder/).
-- SVG content can be embedded into JSX. Here's a [handy JSX converter](https://transform.tools/svg-to-jsx).
-- SVG can be included in `img` tags or CSS backgrounds. [SVG Tips from CSS Tricks](https://css-tricks.com/using-svg/).
-- For PDF files, we recommend embedding an [image of the PDF](https://helpx.adobe.com/acrobat/using/exporting-pdfs-file-formats.html) with [alternative text](https://a11y-101.com/development/infographics), and providing a link to download a [tagged PDF](https://helpx.adobe.com/acrobat/using/creating-accessible-pdfs.html).
+- [Gráficos de imagem podem ser importados](/docs/importing-assets-in-files/) com Webpack e consultados com GraphQL.
+- Imagens também podem ser [incluidas da 'pasta static'](/docs/static-folder/).
+- O conteúdo SVG pode ser incorporado no JSX. Aqui está um [prático conversor JSX](https://transform.tools/svg-to-jsx).
+- O SVG pode ser incluído em tags `img` ou fundos CSS. [Dicas de SVG do CSS Tricks](https://css-tricks.com/using-svg/).
+- Para arquivos PDF, recomendamos incorporar uma [imagem do PDF](https://helpx.adobe.com/acrobat/using/exporting-pdfs-file-formats.html) com [texto alternativo](https://a11y-101.com/development/infographics), e fornecer um link para baixar um [PDF marcado](https://helpx.adobe.com/acrobat/using/creating-accessible-pdfs.html).
 
-## Video assets
+## Assets de vídeo
 
-Like images, video assets present many options and requirements for cross-browser support. Learn about video embeds on the Gatsby docs page on [working with video](/docs/working-with-video/).
+Como imagens, assets de vídeo apresentam muitas opções e requisitos para suporte a cross-browsers. Saiba mais sobre os vídeos incorporados na página de documentos Gatsby em [trabalhando com vídeo](/docs/working-with-video/).
 
-## Canvas and WebGL
+## Canvas e WebGL
 
-The HTML5 `<canvas>` element provides a space for 2-dimensional drawing in a web environment. In Gatsby and React, it may help to include a library like [react-konva](https://github.com/konvajs/react-konva) or one of the comparison libraries to cut down on boilerplate and make drawing easier.
+O elemento HTML5 `<canvas>` fornece um espaço para desenho bidimensional em um ambiente web. Em Gatsby e React, incluir uma biblioteca como [react-konva](https://github.com/konvajs/react-konva) ou uma das bibliotecas de comparação para cortar o boilerplate, pode facilitar o desenho dentro do `canvas`.
 
-[WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), on the other hand, creates a 3-dimensional space in a web environment using the `<canvas>` element. Libraries like [Three.js](https://threejs.org/) are often used to enable WebGL experiences in React apps.
+[WebGL](https://developer.mozilla.org/en-US/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL), por outro lado, cria um espaço tridimensional em um ambiente web usando o elemento `<canvas>`. Bibliotecas como [Three.js](https://threejs.org/) são frequentemente usadas para habilitar experiências WebGL em aplicativos React.
 
-> Using canvas and/or WebGL may require modifying your Webpack config. Do you have experience with making this work in your Gatsby site? Contribute to the docs by adding more details to this page.
+> A utilização de canvas e/ou WebGL pode exigir a modificação da configuração do seu Webpack. Você tem experiência em fazer isso funcionar no seu site Gatsby? Contribua para os documentos adicionando mais detalhes a esta página.
