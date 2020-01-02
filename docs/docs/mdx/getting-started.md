@@ -53,7 +53,7 @@ Se você já tem um site em Gatsby e quer adicionar arquivos MDX, você pode seg
 
 > **Nota:** Se você quer fazer uma query para `frontmatter`, `exports`, ou outro tipo de campo como
 > `tableOfContents` e você ainda não adicionou um campo `gatsby-source-filesystem`
-> apontado para a pasta `src/pages` no seu projeto, você deve adicionar agora.
+> apontando para a pasta `src/pages` no seu projeto, você deve adicionar agora.
 
 ## O que vem a seguir?
 
