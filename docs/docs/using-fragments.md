@@ -6,7 +6,7 @@ Fragmentos permitem a reutilização de consultas GraphQL. Elas também permitem
 
 ## Os blocos que compõem um fragmento
 
-Aqui temos um fragmento de exemplo:
+Aqui temos um exemplo de fragmento:
 
 ```graphql
 fragment NomeDoFragmento on NomeDoTipo {
