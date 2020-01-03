@@ -4,7 +4,7 @@ title: Utilizando Fragmentos
 
 Fragmentos permitem a reutilização de consultas GraphQL. Elas também permitem a divisão de consultas complexas em componentes menores e de fácil compreensão.
 
-## Os blocos que compõe um fragmento
+## Os blocos que compõem um fragmento
 
 Aqui temos um fragmento de exemplo:
 
