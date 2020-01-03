@@ -17,7 +17,7 @@ fragment FragmentName on TypeName {
 
 Um fragmento consiste de três componentes:
 
-1. `NomeDoFragmento`: o nome do fragmento que será referenciado posteriormente.
+1. `FragmentName`: o nome do fragmento que será referenciado posteriormente.
 2. `NomeDoTipo`: o [tipo de objeto GraphQL](https://graphql.org/graphql-js/object-types/) no qual o fragmento será utilizado. Isso é importante porque só é possível consultar campos que existam em um determinado objeto.
 3. O corpo da consulta. Pode-se definir quaisquer campos em qualquer nível de aninhamento, da mesma maneira que seria feito em outras consultas GraphQL.
 
