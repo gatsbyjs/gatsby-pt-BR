@@ -23,7 +23,7 @@ Um fragmento consiste de três componentes:
 
 ## Criando e utilizando um fragmento
 
-Um fragmento pode ser criado dentro de qualquer consulta GraphQL, mas é uma boa prática criar a consulta separadamente. Mais conselhos organizacionais em [Guia Conceitual](/docs/querying-with-graphql/#fragments).
+Um fragmento pode ser criado dentro de qualquer consulta GraphQL, mas é uma boa prática criar a consulta separadamente. Mais conselhos organizacionais no [Guia Conceitual](/docs/querying-with-graphql/#fragments).
 
 ```jsx:title=src/components/IndexPost.jsx
 import React from "react"
