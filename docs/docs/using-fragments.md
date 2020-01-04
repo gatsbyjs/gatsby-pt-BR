@@ -74,7 +74,7 @@ export const query = graphql`
 `
 ```
 
-Ao compilar o site, o Gatsby preprocessa todas as consultas GraphQL encontradas, portanto, qualquer arquivo incluso no seu projeto pode definir um trecho. No entanto, apenas Páginas podem definir consultas GraphQL que realmente retornem dados, por isso que é possível definir fragmentos no arquivo do componente - ele não retorna nenhum dado diretamente.
+Ao compilar o site, o Gatsby pré-processa todas as consultas GraphQL encontradas, portanto, qualquer arquivo incluso no seu projeto pode definir um trecho. No entanto, apenas Páginas podem definir consultas GraphQL que realmente retornem dados, por isso que é possível definir fragmentos no arquivo do componente - ele não retorna nenhum dado diretamente.
 
 ## Leituras Adicionais
 
