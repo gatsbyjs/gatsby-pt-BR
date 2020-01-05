@@ -14,7 +14,7 @@ Esse guia irá orientar você sobre o uso de [Gatsby](/) com a [API de Conteúdo
 
 ## Início Rápido
 
-O jeito mais rápido de começar é com o repositório oficial **Gatsby Starter Ghost**, no qual contém uma estrutura mínima de consultas e _templates_ para se ter um _site_ em funcionamento.
+O jeito mais rápido de começar é com o repositório oficial **Gatsby Starter Ghost**, no qual contém uma estrutura básica de consultas e _templates_ para se ter um _site_ em funcionamento.
 
 
 - Repositório: https://github.com/tryghost/gatsby-starter-ghost
@@ -28,7 +28,7 @@ O jeito mais rápido de começar é com o repositório oficial **Gatsby Starter 
 
 ## Instalação e Configuração
 
-Se você prefere iniciar do zero ou integrar o conteúdo da API do Ghost em um _site_ existente, você pode configurar o plugin **Gastby Source Ghost**.
+Se você prefere iniciar do zero ou integrar o conteúdo da API do Ghost em um _site_ existente, você pode configurar o plugin **Gatsby Source Ghost**.
 
 ```shell
 npm install --save gatsby-source-ghost
@@ -114,7 +114,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 ## Saída de dados
 
-Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria como esse:
+Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria algo como:
 
 ```javascript:title=templates/post.js
 import React from "react"
