@@ -27,7 +27,7 @@ npm config ls -l
 ### Utilizando yarn para configurar o cafile
 
 ```shell
-yarn config set cafile "path-to-my-cert.pem"
+yarn config set cafile "caminho-para-o-meu-certificado.pem"
 ```
 
 Agora você pode verificar os valores na configuração do seu yarn com o seguinte comando:
