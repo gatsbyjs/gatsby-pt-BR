@@ -77,7 +77,7 @@ exports.createPages = ({ actions: { createPage } }) => {
 
 A propriedade `context` aceita um objeto, e podemos passar qualquer dado que queremos que a página seja capaz de acessar.
 
-> **NOTA:** Existem alguns nomes reservados que _não podem_ ser usados em `context`. Eles são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
+> **NOTA:** Existem alguns nomes reservados que _não podem_ ser usados em `context`. Eles são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE` e `pluginCreatorId`.
 
 Quando Gatsby cria páginas, ele inclui uma propriedade chamada `pageContext` e define o seu valor para `context`, para que possamos acessar qualquer um dos valores em nosso componente:
 
@@ -107,7 +107,7 @@ Em alguns casos, essa abordagem pode ser suficiente. No entanto, muitas vezes é
   lessonTitle="Create Pages from JSON With Images"
 />
 
-Em muitos casos, os dados das páginas não podem ser codificado em `gatsby-node.js`. É mais provável que venham de uma fonte externa, como uma API de terceiros, Markdown local, ou arquivos JSON.
+Em muitos casos, os dados das páginas não podem ser codificado em `gatsby-node.js`. É mais provável que venham de uma fonte externa, como uma API de terceiros, um Markdown local ou arquivos JSON.
 
 Por exemplo, você pode ter um arquivo JSON com dados de postagem:
 
@@ -137,7 +137,7 @@ Por exemplo, você pode ter um arquivo JSON com dados de postagem:
 ]
 ```
 
-As imagens precisam ser adicionadas à pasta `/static/images/`. (É aqui que as coisas começam a ficar difícil de gerir — o JSON e as imagens não estão no mesmo lugar).
+As imagens precisam ser adicionadas à pasta `/static/images/`. (É aqui que as coisas começam a ficar difíceis de gerir — o JSON e as imagens não estão no mesmo lugar).
 
 Uma vez que o JSON e as imagens são adicionados, você pode criar páginas de produtos importando o JSON em `gatsby-node.js` e fazer um loop através das entradas para criar páginas:
 
@@ -202,11 +202,11 @@ Usando `data/products.json` como exemplo, somos capazes de resolver todas as lim
 
 1. As imagens podem ser colocadas com os produtos em `data/images/`.
 2. Os caminhos da imagem em `data/products.json` podem ser relativas ao arquivo JSON.
-3. Gatsby pode otimizar automaticamente as imagens para um carregamento mais  rápido e uma melhor experiência de usuário.
-4. Você precisa mais passar todos os dados do produto para o `context` quando criar páginas.
-5. Os dados são carregados usando GraphQL nos componentes onde são usado, tornando muito mais fácil ver de onde os dados vêm e como alterá-los.
+3. Gatsby pode otimizar automaticamente as imagens para um carregamento mais rápido e para uma melhor experiência de usuário.
+4. Você não precisa mais passar todos os dados do produto para o `context` quando criar páginas.
+5. Os dados são carregados usando GraphQL nos componentes onde são usados, tornando muito mais fácil ver de onde os dados vêm e como alterá-los.
 
-### Adicione os plugins necessários para carregar os dados no GraphQL.
+### Adicione os plugins necessários para carregar os dados no GraphQL
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-make-data-queryable-in-graphql-with-gatsby"
@@ -220,7 +220,7 @@ A fim de carregar os dados do produto e da imagem no GraphQL, você precisa adic
 - Otimizar imagens ([`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/))
 - Adicionar dados sobre imagens otimizadas ao armazenamento de dados do Gatsby ([`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/))
 
-Além dos plugins, utilizaremos [`gatsby-image`](/packages/gatsby-image/) para exibir as imagens otimizadas images com lazy loading.
+Além dos plugins, utilizaremos [`gatsby-image`](/packages/gatsby-image/) para exibir as imagens otimizadas com lazy loading.
 
 Instale esses pacotes usando a linha de comando:
 
@@ -256,9 +256,9 @@ GATSBY_GRAPHQL_IDE=playground gatsby develop
 
 Você pode explorar o esquema de dados disponíveis usando o separador “Docs” à direita.
 
-Uma das opções disponíveis é `allProductsJson`, que contém “edges”, que contém “nodes”.
+Uma das opções disponíveis é `allProductsJson`, que contém “edges”, estes contendo “nodes”.
 
-O plugin do transformador JSON criou um node para cada produto, e dentro do node você pode selecionar os dados que você precisa para aquele produto.
+O plugin _JSON transformer_ criou um node para cada produto, e dentro do node você pode selecionar os dados que você precisa para aquele produto.
 
 Você pode escrever uma consulta para selecionar o slug de cada produto, desta forma:
 
