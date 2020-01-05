@@ -42,5 +42,5 @@ yarn config list
 Como forma alternativa você também pode configurar isto para Node.js na sua máquina. Exporte o caminho para o seu certificado com a variável `NODE_EXTRA_CA_CERTS`:
 
 ```shell
-export NODE_EXTRA_CA_CERTS=["path-to-my-cert.pem"]
+export NODE_EXTRA_CA_CERTS=["caminho-para-o-meu-certificado.pem"]
 ```
