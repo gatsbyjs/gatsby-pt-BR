@@ -38,7 +38,6 @@ yarn config list
 
 ### Utilizando Node.js
 
-### Using Node.js
 
 Como forma alternativa você também pode configurar isto para Node.js na sua máquina. Exporte o caminho para o seu certificado com a variável `NODE_EXTRA_CA_CERTS`:
 
