@@ -16,16 +16,16 @@ rodando `npm install windows-build-tools -g` no console PowerShell como administ
 Ao instalar este pacote, ele baixa e instala o Visual C++
 Build Tools 2015, fornecido gratuitamente pela Microsoft. Essas ferramentas são necessárias para compilar módulos nativos populares. Ele também instalará o Python 2.7, configurando sua máquina e npm adequadamente.
 
-Se sua instalação do `windows-build-tools` trava após a conclusão do Visual Studio Build Tools, [este remédio](https://github.com/felixrieseberg/windows-build-tools/issues/47#issuecomment-296881488) pode ajudar.
+Se sua instalação do `windows-build-tools` trava após a conclusão do Visual Studio Build Tools, [esta solução](https://github.com/felixrieseberg/windows-build-tools/issues/47#issuecomment-296881488) pode ajudar.
 
-### Se `npm install` ainda falha...
+### Se `npm install` continua falhando...
 
 Às vezes, o `windows-build-tools` não instala corretamente as
 bibliotecas. Isso é verdade se você já possui um ambiente de desenvolvimento .NET
-apropriado. Isso foi relatado no Windows 10 x64 (e possivelmente em outros
+apropriado. Isso foi relatado no Windows 10 x64 (e possivelmente em outras
 arquiteturas ou versões do Windows).
 
-Esse pode ser o seu problema se, depois de executar o `npm install` em um site do Gatsby, você veja erros de compilação como `node-gyp` ou` sharp` ou `binding.gyp not found`.
+Esse pode ser o seu problema se, depois de executar o `npm install` em um site do Gatsby, você tenha visto erros de compilação como `node-gyp` ou` sharp` ou `binding.gyp not found`.
 
 Se você suspeitar que este é seu problema, baixe o
 [Pacote da Comunidade do Visual Studio 2015](https://www.visualstudio.com/vs/older-downloads/) (também disponível neste [link de download direto](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409))
@@ -70,7 +70,7 @@ Você deve estar com tudo pronto.
 
 Se isso ainda não funcionar, consulte a
 [página inicial do pacote`node-gyp` npm](https://www.npmjs.com/package/node-gyp) para
-instruções adicionais, entre em contato com a equipe `node-gyp` em
+instruções adicionais e entre em contato com a equipe `node-gyp` em
 [GitHub](https://github.com/nodejs/node-gyp/issues).
 
 ## gatsby-plugin-sharp precisa do Node x64
@@ -79,7 +79,7 @@ Alguns plugins que dependem de dependências nativas do NPM requerem a compilaç
 
 ## gatsby-plugin-sharp requer libvips
 
-Sharp usa uma biblioteca C, libvips. Se você estiver tendo problemas ao instalar o Sharp, tente remover `C:\Usuários\[usuário]\AppData\Roaming\npm-cache\_libvips`.
+Sharp usa uma biblioteca C, libvips. Se você estiver tendo problemas ao instalar o Sharp, tente remover `C:\Users\[usuário]\AppData\Roaming\npm-cache\_libvips`.
 
 ## Subsistema do Windows para Linux
 
