@@ -4,7 +4,7 @@ title: O arquivo da API gatsby-config.js
 
 O arquivo `gatsby-config.js` define os metadados do seu website, _plugins_, e outras configurações gerais. Este arquivo deve estar na raiz do seu website Gastby.
 
-Se você criou um Gatsby website com o comando `gatsby new`, já deve existir um arquivo de configuração de exemplo na pasta do seu website.
+Se você criou um website Gatsby com o comando `gatsby new`, já deve existir um arquivo de configuração de exemplo na pasta do seu website.
 
 ## Construindo o arquivo de configuração
 
@@ -16,7 +16,7 @@ module.exports = {
 }
 ```
 
-Um exemplo de arquivo `gatsby-config.js` poderia ficar assim:
+Um exemplo de arquivo `gatsby-config.js` poderia ser algo do tipo:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -58,7 +58,7 @@ Você pode então [acessar o título do website usando GraphQL](/tutorial/part-f
 
 _Plugins_ adicionam novas funcionalidades no seu website Gatsby. Por exemplo, alguns _plugins_ buscam dados de um serviço hospedado, transformam a formatação dos dados, ou redimensionam imagens. A [biblioteca de _plugins_ do Gatsby](/plugins) ajuda você a encontrar o _plugin_ correto para suas necessidades.
 
-Instalando um _plugin_ utilizando um gerenciador de pacotes como o `npm` **não** habilita ele no seu Gatsby website. Para finalizar a adição de um _plugin_ tenha certeza que seu arquivo `gatsby-config.js` tenha o array, `_plugins_`, então você pode incluir um espaço para os _plugins_ necessários para construir o seu website:
+Instalando um _plugin_ utilizando um gerenciador de pacotes como o `npm` **não** habilita ele no seu website Gatsby. Para finalizar a adição de um _plugin_ tenha certeza que seu arquivo `gatsby-config.js` contenha o array `_plugins_`,permitindo então que você possa incluir os _plugins_ necessários para construir o seu website dentro dele:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
