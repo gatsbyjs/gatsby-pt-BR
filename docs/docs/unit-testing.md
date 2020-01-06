@@ -1,12 +1,8 @@
 ---
-title: Unit Testing
+title: Teste Unitário
 ---
 
-Unit testing is a great way to protect against errors in your code before you
-deploy it. While Gatsby does not include support for unit testing out of the
-box, it only takes a few steps to get up and running. However there are a few
-features of the Gatsby build process that mean the standard Jest setup doesn't
-quite work. This guide shows you how to set it up.
+Teste unitário(ou teste de unidade) é uma ótima forma de proteger seu código contra erros antes de você disponibilizá-lo. Embora Gatsby não ofereça suporte para testes unitários nativamente, basta apenas alguns passos para poder implementar. No entanto, existem alguns recursos do processo de construção do Gatsby, como a configuração padrão do Jest, que não funcionam corretamente. Esse guia mostra como configurar.
 
 ## Setting up your environment
 
