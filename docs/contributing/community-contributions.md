@@ -8,7 +8,7 @@ Suas contribuições enriquecem a experiência do Gatsby e o torna melhor a cada
 Nós encarecidamente recebemos as suas contribuições na comunidade e ficaríamos felizes em ampliar a sua voz. As contribuições não se limitam a código e podem assumir todas as formas e formatos:
 
 - Seu maravilhoso site Gatsby.js!
-- Iniciadores Gatsby
+- Starters Gatsby
 - Plugins Gatsby
 - Publicações em blogs e estudos de caso 
 - Palestras e conferências em vídeo
