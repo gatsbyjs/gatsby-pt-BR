@@ -18,7 +18,7 @@ Nós encarecidamente recebemos as suas contribuições na comunidade e ficaríam
 ... e o que mais você imaginar. Nossa vitrine e documentação de contribuição são bons lugares para começar.
 
 - [Submeter para a vitrine](/contributing/site-showcase-submissions)
-- [Submeter para a biblioteca de iniciadores](/contributing/submit-to-starter-library/)
+- [Submeter para a biblioteca de starters](/contributing/submit-to-starter-library/)
 - [Submeter para a biblioteca de plugins](/contributing/submit-to-plugin-library/)
 
 Leia atentamente o restante da nossa documentação de contribuição e entre em contato conosco pelo [Twitter](https://twitter.com/gatsbyjs), [Discord](https://gatsby.dev/discord) ou abra uma [issue no Github](/contributing/how-to-file-an-issue/) caso tenha alguma dúvida sobre como contribuir!
