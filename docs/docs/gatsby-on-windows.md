@@ -10,11 +10,10 @@ Para fazer isso, você precisa de um ambiente de construção funcional (Python 
 
 A maneira mais fácil de configurar seu ambiente de compilação no Windows é instalar o pacote
 [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
-rodando `npm install windows-build-tools -g` no console PowerShell como administrador. 
+rodando `npm install windows-build-tools -g` no console PowerShell como administrador.
 
 
-Ao instalar este pacote, ele baixa e instala o Visual C++
-Build Tools 2015, fornecido gratuitamente pela Microsoft. Essas ferramentas são necessárias para compilar módulos nativos populares. Ele também instalará o Python 2.7, configurando sua máquina e npm adequadamente.
+Ao instalar este pacote, ele baixa e instala o Visual C++ Build Tools 2015, fornecido gratuitamente pela Microsoft. Essas ferramentas são necessárias para compilar módulos nativos populares. Ele também instalará o Python 2.7, configurando sua máquina e npm adequadamente.
 
 Se sua instalação do `windows-build-tools` trava após a conclusão do Visual Studio Build Tools, [esta solução](https://github.com/felixrieseberg/windows-build-tools/issues/47#issuecomment-296881488) pode ajudar.
 
@@ -44,15 +43,15 @@ npm cache clean -f
 npm install
 ```
 
-Para o Visual Studio 2017, baixe [Visual Studio Community 2017](https://visualstudio.microsoft.com/vs/community/) e instale o desenvolvimento Desktop com fluxo de trabalho C++. Você pode desmarcar todo o resto.
+Para o Visual Studio 2017, baixe [Visual Studio Community 2017](https://visualstudio.microsoft.com/vs/community/) e instale o _Desktop Development with C++ workflow_. Você pode desmarcar todo o resto.
 
-![Desenvolvimento Desktop com fluxo de trabalho C++](https://i.imgur.com/dPknorD.png)
+![Desktop Development with C++ workflow.](https://i.imgur.com/dPknorD.png)
 
 Caso você já tenha instalado o Visual Studio 2017, execute o Instalador do Visual Studio.
 
 ![Instalador do Visual Studio](https://i.imgur.com/H5PVEbu.png)
 
-Na lista de produtos, selecione o menu suspenso "Mais" ao lado do Visual Studio 2017 e selecione a opção Modificar. Na próxima tela, selecione o fluxo de trabalho Desenvolvimento desktop com C++.
+Na lista de produtos, selecione o menu suspenso "Mais" ao lado do Visual Studio 2017 e selecione a opção Modificar. Na próxima tela, selecione o _Desktop Development with C++ workflow_.
 
 ![Instalador do Visual Studio](https://i.imgur.com/7SFsS99.png)
 
