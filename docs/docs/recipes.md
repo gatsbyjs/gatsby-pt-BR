@@ -1601,16 +1601,16 @@ As imagens podem ser importadas diretamente para um módulo JavaScript com o web
 1. Importe o caminho do seu arquivo em relação a pasta `src`:
 
 ```jsx:title=src/pages/index.js
-import React from 'react'
+import React from "react"
 // Informa ao webpack que este arquivo JS usa esta imagem
-import FiestaImg from '../assets/fiesta.jpg' // highlight-line
+import FiestaImg from "../assets/fiesta.jpg" // highlight-line
 ```
 
 2. No `index.js`, adicione uma tag `<img>` com o `src` como o nome da importação que você usou do webpack (nesse caso `FiestaImg`), e adicione um atributo `alt` [descrevendo a imagem](https://webaim.org/techniques/alttext/):
 
 ```jsx:title=src/pages/index.js
-import React from 'react'
-import FiestaImg from '../assets/fiesta.jpg'
+import React from "react"
+import FiestaImg from "../assets/fiesta.jpg"
 
 export default () => (
   // O resultado da importação é o URL da sua imagem
@@ -1624,13 +1624,13 @@ export default () => (
 #### Recursos adicionais
 
 - [Exemplo de repositório importando uma imagem com o webpack](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-webpack-image)
-- [Mais sobre todas as técnicas de imagem em Gatsby](/docs/images-and-files/)
+- [Mais sobre todas as técnicas de imagem no Gatsby](/docs/images-and-files/)
 
 ### Referencie uma imagem da pasta `static`
 
 Como alternativa à importação de ativos com o webpack, a pasta `static` permite o acesso ao conteúdo que é automaticamente copiado para a pasta `public` quando o site é criado.
 
-Isto é uma **rota de fuga** para [casos de uso específicos](/docs/static-folder/#when-to-use-the-static-folder), e outros métodos como [importando com o webpack](#import-an-image-into-a-component-with-webpack) são recomendados para aproveitar as otimizações feitas pelo Gatsby.
+Isto é uma **rota de fuga** para [casos de uso específicos](/docs/static-folder/#when-to-use-the-static-folder), e outros métodos como [importando com o webpack](#importar-uma-imagem-para-um-componente-com-o-webpack) são recomendados para aproveitar as otimizações feitas pelo Gatsby.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-use-a-local-image-from-the-static-folder-in-a-gatsby-component"
@@ -1658,10 +1658,10 @@ Isto é uma **rota de fuga** para [casos de uso específicos](/docs/static-folde
 2. No `index.js`, adicione uma tag `<img>` com o `src` como o caminho relativo do arquivo da pasta `static`, e adicione um atributo `alt` [descrevendo a imagem](https://webaim.org/techniques/alttext/):
 
 ```jsx:title=src/pages/index.js
-import React from 'react'
+import React from "react"
 
 export default () => (
-  <img src={`fiesta.jpg`} alt='A dog smiling in a party hat' /> // highlight-line
+  <img src={`fiesta.jpg`} alt="A dog smiling in a party hat" /> // highlight-line
 )
 ```
 
@@ -1672,7 +1672,7 @@ export default () => (
 
 - [Exemplo de repositório referenciando uma imagem da pasta static](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-static-image)
 - [Usando a Pasta Static](/docs/static-folder/)
-- [Mais sobre todas as técnicas de imagem em Gatsby](/docs/images-and-files/)
+- [Mais sobre todas as técnicas de imagem no Gatsby](/docs/images-and-files/)
 
 ### Otimizando e consultando imagens locais com gatsby-image
 
@@ -1690,8 +1690,8 @@ O Gatsby irá gerar recursos otimizados que podem ser consultados com o GraphQL 
 1. Primeiro, importe `Img` de `gatsby-image`, bem como `graphql` e `useStaticQuery` de `gatsby`
 
 ```jsx
-import { useStaticQuery, graphql } from 'gatsby' // para consultar dados de imagem
-import Img from 'gatsby-image' // para pegar dados de imagem e renderizá-los
+import { useStaticQuery, graphql } from "gatsby" // para consultar dados de imagem
+import Img from "gatsby-image" // para pegar dados de imagem e renderizá-los
 ```
 
 2. Escreva uma consulta para obter dados da imagem e passe os dados para o componente `<Img />`:
@@ -1718,7 +1718,7 @@ const data = useStaticQuery(graphql`
 `)
 
 return (
-  <Img fluid={data.file.childImageSharp.fluid} alt='A corgi smiling happily' />
+  <Img fluid={data.file.childImageSharp.fluid} alt="A corgi smiling happily" />
 )
 ```
 
@@ -1738,7 +1738,7 @@ const data = useStaticQuery(graphql`
 `)
 
 return (
-  <Img fluid={data.file.childImageSharp.fluid} alt='A corgi smiling happily' />
+  <Img fluid={data.file.childImageSharp.fluid} alt="A corgi smiling happily" />
 )
 ```
 
@@ -1775,7 +1775,7 @@ return (
     {data.allFile.edges.map(image => (
       <Img
         fluid={image.node.childImageSharp.fluid}
-        alt={image.node.base.split('.')[0]} // use somente a seção da extensão do arquivo com o nome do arquivo
+        alt={image.node.base.split(".")[0]} // use somente a seção da extensão do arquivo com o nome do arquivo
       />
     ))}
     // highlight-end
@@ -1800,7 +1800,7 @@ const data = useStaticQuery(graphql`
   }
 `)
 return (
-  <Img fixed={data.file.childImageSharp.fixed} alt='A corgi smiling happily' />
+  <Img fixed={data.file.childImageSharp.fixed} alt="A corgi smiling happily" />
 )
 ```
 
@@ -1819,7 +1819,7 @@ const data = useStaticQuery(graphql`
   }
 `)
 return (
-  <Img fixed={data.file.childImageSharp.fixed} alt='A corgi smiling happily' /> // highlight-line
+  <Img fixed={data.file.childImageSharp.fixed} alt="A corgi smiling happily" /> // highlight-line
 )
 ```
 
@@ -1839,7 +1839,7 @@ const data = useStaticQuery(graphql`
 `)
 
 return (
-  <Img fluid={data.file.childImageSharp.fluid} alt='A corgi smiling happily' />
+  <Img fluid={data.file.childImageSharp.fluid} alt="A corgi smiling happily" />
 )
 ```
 
@@ -1848,8 +1848,8 @@ return (
 ```jsx
 <Img
   fluid={data.file.childImageSharp.fluid}
-  alt='A corgi smiling happily'
-  style={{ border: '2px solid rebeccapurple', borderRadius: 5, height: 250 }} // highlight-line
+  alt="A corgi smiling happily"
+  style={{ border: "2px solid rebeccapurple", borderRadius: 5, height: 250 }} // highlight-line
 />
 ```
 
@@ -1861,7 +1861,7 @@ return (
     ...data.file.childImageSharp.fluid,
     aspectRatio: 1.6 // 1280 / 800 = 1.6
   }}
-  alt='A corgi smiling happily'
+  alt="A corgi smiling happily"
 />
 ```
 
@@ -1871,7 +1871,7 @@ return (
 
 - [Repositório de exemplo ilustrando estes exemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
 - [API de imagem do Gatsby](/docs/gatsby-image/)
-- [Usado Gatsby Image](/docs/using-gatsby-image)
+- [Usando Gatsby Image](/docs/using-gatsby-image)
 - [Mais sobre como trabalhar com imagens em Gatsby](/docs/working-with-images/)
 - [Vídeos gratuitos do egghead.io explicando essas etapas](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e)
 
@@ -1915,27 +1915,27 @@ exports.createPages = async ({ graphql, actions }) => {
       component: path.resolve(`./src/components/markdown-layout.js`),
       // highlight-start
       context: {
-        slug: node.fields.slug
-      }
+        slug: node.fields.slug,
+      },
       // highlight-end
     })
   })
 }
 ```
 
-3. Agora, importe `Img` de `gatsby-image` e `graphql` de `gatsby` para o componente do modelo, escreva uma [pageQuery](/docs/page-query/) para obter dados de imagem com base nos dados passados ​​no `slug` e passar esses dados para o componente `<Img />`:
+3. Agora, importe `Img` de `gatsby-image` e `graphql` de `gatsby` para o componente do modelo, escreva uma [pageQuery](/docs/page-query/) para obter dados de imagem com base nos dados passados ​​no `slug` e passe esses dados para o componente `<Img />`:
 
 ```jsx:title=markdown-layout.jsx
-import React from 'react'
-import { graphql } from 'gatsby' // highlight-line
-import Img from 'gatsby-image' // highlight-line
+import React from "react"
+import { graphql } from "gatsby" // highlight-line
+import Img from "gatsby-image" // highlight-line
 
 export default ({ children, data }) => (
   <main>
     // highlight-start
     <Img
       fluid={data.markdown.frontmatter.image.childImageSharp.fluid}
-      alt='A corgi smiling happily'
+      alt="A corgi smiling happily"
     />
     // highlight-end
     {children}
@@ -2075,7 +2075,7 @@ gatsby build && gatsby serve
 - Caminho para criação e publicação de um site de exemplo no [tutorial parte um](/tutorial/part-one/#deploying-a-gatsby-site)
 - Aprenda sobre [otimização de desempenho](/docs/performance/)
 - Leia sobre [outros tópicos relacionados à publicação](/docs/preparing-for-deployment/)
-- Confira os [documentos de publicação](/docs/deploying-and-hosting/) para plataformas de hospedagem específicas e como publicarar nelas
+- Confira a [documentação de publicação](/docs/deploying-and-hosting/) para plataformas de hospedagem específicas e como publicar nelas
 
 ### Publicando no Netlify
 
