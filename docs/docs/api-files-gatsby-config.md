@@ -42,7 +42,7 @@ Existem [muitas opções de configuração](/docs/gatsby-config) disponíveis, m
 
 ### Metadados do website
 
-O objeto `siteMetadata` pode conter qualquer dado que você queira compartilhar em seu website. Um exemplo útil é o título do website. Se você guardar o título em `siteMetadata`, você pode alterar o título em um único lugar, e ele será atualizado por todo seu website. Para adicionar metadados inclua o objeto `siteMetadata` no seu arquivo de configuração:
+O objeto `siteMetadata` pode conter qualquer dado que você queira compartilhar em seu website. Um exemplo útil é o título do website. Se você guardar o título em `siteMetadata`, você pode alterá-lo apenas em um único lugar, e ele será atualizado por todo seu website. Para adicionar metadados inclua o objeto `siteMetadata` no seu arquivo de configuração:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
