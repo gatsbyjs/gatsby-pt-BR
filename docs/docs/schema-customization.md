@@ -686,7 +686,7 @@ a action `createTypes`.
 
 Como mencionado acima, os recursos internos de consulta e armazenamento de dados de Gatsby estão
 disponíveis para _resolvers_ de campo customizados no argumento `context.nodeModel` passado
-para todos resolvers. Acessando node(s) por `id` (e opcionalmente `type`) é possível
+para todos _resolvers_. Acessando node(s) por `id` (e opcionalmente `type`) é possível
 com [`getNodeById`](/docs/node-model/#getNodeById) e
 [`getNodesByIds`](/docs/node-model/#getNodesByIds). Para obter todos os nodes ou todos
 nodes de um certo tipo, use [`getAllNodes`](/docs/node-model/#getAllNodes).
