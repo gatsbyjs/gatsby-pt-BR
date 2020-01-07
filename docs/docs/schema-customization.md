@@ -849,10 +849,10 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-### Cuidando da recarga a quente
+### Cuidando do hot reloading
 
 Ao criar _resolvers_ de campos personalizados, é importante garantir que o Gatsby
-conheça os dados de que uma página depende para que o recarregamento a quente funcione corretamente. Quando
+conheça os dados de que uma página depende para que o hot reloading funcione corretamente. Quando
 você recebe nodes do armazenamento com métodos [`context.nodeModel`](/docs/node-model/),
 geralmente não é necessário fazer nada manualmente, porque o Gatsby registrará
 dependências para os resultados da consulta automaticamente. A exceção é `getAllNodes`
