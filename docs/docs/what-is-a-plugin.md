@@ -1,14 +1,13 @@
 ---
-title: What is a Plugin?
+title: O que é um Plugin?
 ---
+Os plugins do Gatsby são pacotes Node.js que implementam APIs do Gatsby. Para sites maiores e mais complexos, os plugins permitem modularizar as funcionalidades personalizadas do site em plugins específicos.
 
-Gatsby plugins are Node.js packages that implement Gatsby APIs. For larger, more complex sites, plugins let you modularize your site customizations into site-specific plugins.
+Uma das melhores maneiras de adicionar funcionalidade ao Gatsby é através do nosso sistema de plugins. O Gatsby foi projetado para ser extensível, o que significa que os plugins podem estender e modificar praticamente tudo o que o Gatsby faz.
 
-One of the best ways to add functionality to Gatsby is through our plugin system. Gatsby is designed to be extensible, which means plugins are able to extend and modify just about everything Gatsby does.
+Das muitas possibilidades, com os plugins você pode:
 
-Of the many possibilities, plugins can:
-
-- add external data or content (e.g. your CMS, static files, a REST API) to your Gatsby GraphQL data
-- transform data from other formats (e.g. Markdown, YAML, CSV) to JSON objects
-- add third-party services (e.g. Google Analytics, Instagram) to your site
-- do anything you can dream up!
+- adicionar dados ou conteúdo externos (por exemplo, seu CMS, arquivos estáticos, uma API REST) aos seus dados do Gatsby GraphQL
+- transformar dados de outros formatos (por exemplo, Markdown, YAML, CSV) em objetos JSON
+- adicionar serviços de terceiros (por exemplo, Google Analytics, Instagram) ao seu site
+- faça o que você poder imaginar!
