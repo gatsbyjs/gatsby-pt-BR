@@ -1,9 +1,8 @@
 ---
-title: Security in Gatsby
+title: Segurança no Gatsby
 issue: https://github.com/gatsbyjs/gatsby/issues/13305
 ---
 
-This is a stub. Help our community expand it.
+Isto é um esboço. Ajude nossa comunidade a expandí-lo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, utilize o [Guia de estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que seu Pull Request será aceito.
