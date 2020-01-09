@@ -1,28 +1,28 @@
 ---
-title: Using a Gatsby Theme
+título: Usando um tema no Gatsby
 ---
 
-The quickest way to get started using a Gatsby theme is to use a starter that's configured to use the theme.
+A forma mais rápida de usar um tema no Gatsby é usar uma entrada que está configurada para usar o tema.
 
-For example, `gatsby-starter-blog-theme` is a theme starter for the `gatsby-theme-blog` package.
+Por exemplo, `gatsby-starter-blog-theme` é um tema de entrada para o pacote `gatsby-theme-blog`.
 
-A **regular Gatsby starter** creates a new Gatsby site that is preconfigured for a particular use case. The resulting site effectively forks off the starter — after it’s created, the site maintains no connection to the starter.
+Uma **entrada Gatsby normal** cria um novo site em Gatsby que é pré-configurado para um uso específico. O site resultante bifurca efetivamente a entrada — após criado, não mantém conexões com a entrada.
 
-A **Gatsby theme starter** creates a new Gatsby site that installs and configures one or more Gatsby themes. When a starter installs a theme, it maintains the connection to that theme as a standalone npm package.
+Um **tema de entrada no Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando uma entrada instala um tema, mantém-se a conexão com aquele tema como um pacote npm standalone.
 
-Installing the Gatsby blog theme starter is the same process as a regular Gatsby starter:
+Instalar um tema de entrada blog no Gatsby é o mesmo processo de uma entrada normal:
 
 ```shell
 gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-## What does a theme starter do?
+## O que um tema de entrada faz?
 
-The starter for the official Gatsby blog theme does the following:
+A entrada para o tema blog oficial faz o seguinte:
 
-### 1. The starter installs the theme and configures it
+### 1. A entrada instala o tema e o configura.
 
-When you use a starter that's built with a theme, you will often see that you're initially presented with a lighter weight `gatsby-config.js`. Themes start doing their magic when installed via the `plugins` array:
+Quando você usa uma entrada que foi criada com um tema, você irá ver frequentemente que foi apresentado uma versão mais leve do `gatsby-config.js`. Temas irão começar a fazer sua mágica quando instalados através do vetor `plugins`.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -52,7 +52,7 @@ module.exports = {
 }
 ```
 
-### 2. The starter scaffolds out example blog posts.
+### 2. A entrada escala blog posts de exemplo.
 
 ```md:title=/content/posts/hello-world.mdx
 ---
@@ -63,10 +63,10 @@ path: /hello-world
 I'm an example post!
 ```
 
-Once you've made some edits, run `gatsby develop` to start a development server and view your changes in a browser.
+Assim que você fizer algumas edições, rode `gatsby develop` para iniciar o servidor de desenvolvimento e ver as alterações no navegador
 
-## Updating a theme
+## Atualizando um tema.
 
-To pull in the latest updates of your theme you can update the `gatsby-theme-blog` version in your site's `package.json`.
+Para carregar as últimas atualizações do seu tema, você pode atualizar a versão do `gatsby-theme-blog` no `package.json` do seu site.
 
-You can do this by running the install of the theme package again: `npm install --save gatsby-theme-blog`.
+Você pode fazer isso rodando o instalador do pacote do tema novamente: `npm install --save gatsby-theme-blog`.
