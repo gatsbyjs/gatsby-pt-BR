@@ -58,7 +58,7 @@ Você pode então [acessar o título do website usando GraphQL](/tutorial/part-f
 
 _Plugins_ adicionam novas funcionalidades no seu website Gatsby. Por exemplo, alguns _plugins_ buscam dados de um serviço hospedado, transformam a formatação dos dados, ou redimensionam imagens. A [biblioteca de _plugins_ do Gatsby](/plugins) ajuda você a encontrar o _plugin_ correto para suas necessidades.
 
-Instalando um _plugin_ utilizando um gerenciador de pacotes como o `npm` **não** habilita ele no seu website Gatsby. Para finalizar a adição de um _plugin_ tenha certeza que seu arquivo `gatsby-config.js` contenha o array `_plugins_`,permitindo então que você possa incluir os _plugins_ necessários para construir o seu website dentro dele:
+Instalar um _plugin_ utilizando um gerenciador de pacotes como o `npm` **não** habilita ele no seu website Gatsby. Para finalizar a adição de um _plugin_ tenha certeza que seu arquivo `gatsby-config.js` contenha o array `plugins`, permitindo então que você possa incluir os _plugins_ necessários para construir o seu website dentro dele:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -68,7 +68,7 @@ module.exports = {
 }
 ```
 
-Quando adicionando multiplos _plugins_, eles devem estar separados por vírgulas no array `_plugins_` para ser uma sintaxe válida de JavaScript.
+Quando for adicionar múltiplos _plugins_, eles devem estar separados por vírgulas no array `_plugins_` para ser uma sintaxe válida de JavaScript.
 
 #### _Plugins_ sem opções
 
@@ -121,4 +121,4 @@ module.exports = {
 
 ## Opções de configuração adicionais
 
-Existem várias configurações opções disponíveis para o arquivo `gatsby-config.js`. Você pode encontrar uma lista de cada opçõe na página [Configuração da API do Gatsby](/docs/gatsby-config/).
+Existem várias outras opções de configurações disponíveis para o arquivo `gatsby-config.js`. Você pode encontrar uma lista de cada opção na página [Configuração da API do Gatsby](/docs/gatsby-config/).
