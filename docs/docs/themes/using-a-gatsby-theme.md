@@ -20,7 +20,7 @@ gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 
 O starter oficial para o tema do blog segue o seguinte:
 
-### 1. A entrada instala o tema e o configura.
+### 1. O starter instala o tema e o configura.
 
 Quando você usa um starter que foi criado com um tema, você irá ver frequentemente que foi gerado uma versão mais leve do `gatsby-config.js`. Temas irão começar a fazer sua mágica quando instalados através do array `plugins`.
 
