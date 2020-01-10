@@ -10,7 +10,7 @@ Um **starter normal Gatsby" cria um novo site Gatsby que é pré-configurado par
 
 Um **tema starter do Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando um starter instala um tema, mantém-se a conexão com aquele tema como um pacote npm standalone.
 
-Instalar um tema de entrada blog no Gatsby é o mesmo processo de uma entrada normal:
+Instalar um blog Gatsby a partir de um tema starter é o mesmo processo de um starter normal:
 
 ```shell
 gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
