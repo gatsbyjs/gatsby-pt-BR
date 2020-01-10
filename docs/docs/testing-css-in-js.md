@@ -2,11 +2,11 @@
 title: Testando CSS-in-JS
 ---
 
-Bibliotecas populares de CSS-in-JS como [styled-components](https://github.com/styled-components/styled-components) ou [emotion](https://github.com/emotion-js/emotion) podem ser testadas com a ajuda de [jest-styled-components](https://github.com/styled-components/jest-styled-components) ou [jest-emotion](https://github.com/emotion-js/emotion/tree/master/packages/jest-emotion) respectivamente. Esses pacotes melhoram a experiência de testes de snapshot com Jest e são uma ótima maneira de ajudar a evitar alterações indesejadas na UI do seu site. Consulte a documentação do seu pacote para ver se ele também oferece recursos de teste.
+Bibliotecas populares de CSS-in-JS como [styled-components](https://github.com/styled-components/styled-components) ou [emotion](https://github.com/emotion-js/emotion) também podem ser testadas com a ajuda de [jest-styled-components](https://github.com/styled-components/jest-styled-components) ou [jest-emotion](https://github.com/emotion-js/emotion/tree/master/packages/jest-emotion) respectivamente. Esses pacotes melhoram a experiência de testes de _snapshot_ com Jest e são uma ótima maneira de ajudar a evitar alterações indesejadas na UI do seu _site_. Consulte a documentação do seu pacote para ver se ele também oferece recursos de teste.
 
-_Snapshot serializers_ como `jest-styled-components` ou `jest-emotion` modificam a saída padrão para um snapshot mais significativo e legível, por exemplo removendo informações desnecessárias ou exibindo dados em outro formato. O que leva a testes de snapshot mais comparáveis ​​e eficazes.
+Serializadores de _snapshot_ como `jest-styled-components` ou `jest-emotion` modificam a saída padrão para um _snapshot_ mais significativo e legível, por exemplo removendo informações desnecessárias ou exibindo dados em outro formato. O que leva a testes de _snapshot_ mais comparáveis ​​e eficazes.
 
-Por padrão, os snapshots de seus styled components mostram os nomes de classe gerados (que você não definiu) e nenhuma informação de estilização. Ao alterar os estilos, você verá apenas a diferença de alguns nomes de classe criptografados (hashes). É por isso que você deve usar os _snapshot serializers_ acima mencionados. Eles removem os hashes e formatam o CSS em elementos de estilo.
+Por padrão, os _snapshots_ de seus styled components mostram os nomes de classe gerados (que você não definiu) e nenhuma informação de estilização. Ao alterar os estilos, você verá apenas a diferença de alguns nomes de classe criptografados (_hashes_). É por isso que você deve usar os serializadores de _snapshot_ mencionados acima. Eles removem os _hashes_ e formatam o CSS em elementos de estilo.
 
 Para esse exemplo você vai usar o emotion. Os utilitários de teste do emotion e glamor são amplamente baseados em [jest-styled-components](https://github.com/styled-components/jest-styled-components) então eles tem usos parecidos. Por favor dê uma olhada na seção de testes da sua biblioteca para seguir em frente.
 
@@ -18,7 +18,7 @@ npm install --save-dev jest-emotion babel-plugin-emotion
 
 Como o [Gatsby's emotion plugin](/packages/gatsby-plugin-emotion/) está usando `babel-plugin-emotion` por baixo dos panos, você também precisará instalá-lo para que o Jest possa usá-lo.
 
-Se você seguiu o [Unit testing guide](/docs/unit-testing) terá o arquivo `jest-preprocess.js` na raiz do seu projeto. Abra esse arquivo e adicione o plugin:
+Se você seguiu o [guia de testes unitários](/docs/unit-testing) terá o arquivo `jest-preprocess.js` na raiz do seu projeto. Abra esse arquivo e adicione o plugin:
 
 ```diff:title=jest-preprocess.js
 const babelOptions = {
@@ -49,7 +49,7 @@ Por fim, você precisa informar ao Jest onde encontrar esse arquivo. Abra seu `p
 
 ## Utilização
 
-Neste exemplo, você usará o `react-test-renderer`, mas também poderá usar [@testing-library/react](/docs/testing-react-components) ou qualquer outra biblioteca apropriada. Como você criou o arquivo `setup-test-env.js`, você pode escrever seus testes de unidade como costumava fazer. Mas agora você também receberá as informações de estilização!
+Neste exemplo, você usará o `react-test-renderer`, mas também poderá usar [@testing-library/react](/docs/testing-react-components) ou qualquer outra biblioteca apropriada. Como você criou o arquivo `setup-test-env.js`, você pode escrever seus testes unitários como costumava fazer. Mas agora você também receberá as informações de estilização!
 
 ```js:title=src/components/Button.test.js
 import React from "react"
@@ -67,7 +67,7 @@ test("Button renders correctly", () => {
 })
 ```
 
-O snapshot resultante vai ser parecido com isso:
+O _snapshot_ resultante vai ser parecido com isso:
 
 ```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
@@ -85,12 +85,12 @@ exports[`Button renders correctly 1`] = `
 `
 ```
 
-Se o seu componente estilizado depende do `theme` via` ThemeProvider`, você terá duas opções:
+Se o seu styled component depende do `theme` via` ThemeProvider`, você terá duas opções:
 
 - Encapsular todos os seus componentes com o `ThemeProvider`
 - Usar auxiliares de API (consulte a documentação da biblioteca, por exemplo, [styled-components](https://github.com/styled-components/jest-styled-components#theming) ou [emotion](https://github.com/emotion-js/emotion/tree/master/packages/emotion-theming#createbroadcast-function))
 
-E é aqui que os testes de snapshots realmente brilham. Se você mudar, por exemplo a cor principal do seu arquivo de tema, você verá quais componentes são afetados por essa alteração. Dessa forma, você pode capturar alterações indesejadas na estilização de seus componentes.
+E é aqui que os testes de _snapshots_ realmente brilham. Se você mudar, por exemplo a cor principal no seu arquivo de tema, você verá quais componentes são afetados por essa alteração. Dessa forma, você pode capturar alterações indesejadas na estilização de seus componentes.
 
 Este exemplo usa a primeira opção:
 
@@ -120,7 +120,7 @@ test("Wrapper renders correctly", () => {
 })
 ```
 
-O snapshot resultante vai ser parecido com isso:
+O _snapshot_ resultante vai ser parecido com isso:
 
 ```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
