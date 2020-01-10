@@ -16,7 +16,7 @@ Instalar um tema de entrada blog no Gatsby é o mesmo processo de uma entrada no
 gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-## O que um tema de entrada faz?
+## O que um tema starter faz?
 
 O starter oficial para o tema do blog segue o seguinte:
 
