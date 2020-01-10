@@ -34,7 +34,7 @@ Alguns exemplos usando react-helmet:
 - [E-mail Gatsby](https://github.com/DSchau/gatsby-mail/blob/89b467e5654619ffe3073133ef0ae48b4d7502e3/src/components/meta.js)
 - [Blog pessoal de Jason Lengstorf](https://github.com/jlengstorf/gatsby-theme-jason-blog/blob/e6d25ca927afdc75c759e611d4ba6ba086452bb8/src/components/SEO/SEO.js)
 
-## Gerando ricos fragmentos em motores de busca usando dados estruturados
+## Gerando rich snippets em motores de busca usando dados estruturados
 
 Google utiliza dados estruturados encontrados na web para entender o conteúdo das páginas, bem como adquirir informações da web e do mundo em geral.
 Por exemplo, aqui está um trecho de dados estruturados em [formato JSON-LD](https://developers.google.com/search/docs/guides/intro-structured-data) (Notação de Objetos JavaScript para vincular os dados) que podem aparecer na página de contato de uma companhia chamada Spooky Technologies, descrevendo suas informações de contatos:
