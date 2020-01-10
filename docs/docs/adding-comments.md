@@ -20,7 +20,7 @@ Você também pode [desenvolver sua própria ferramenta de comentários](/blog/2
 
 Neste guia, mostraremos como implementar o Disqus em seu blog, pois ele possui vários recursos interessantes.
 
-- É de baixa manutenção, que significa menos problemas para [moderar seus comentários e manter seu forúm](https://help.disqus.com/moderation/moderating-101).
+- É de baixa manutenção, o que significa menos problemas para [moderar seus comentários e manter seu fórum](https://help.disqus.com/moderation/moderating-101).
 - O [suporte ao React](https://github.com/disqus/disqus-react) é oficial.
 - Oferece um [nível gratuito generoso](https://disqus.com/pricing).
 - [Parece ser o serviço mais utilizado](https://www.datanyze.com/market-share/comment-systems/disqus-market-share).
@@ -28,7 +28,7 @@ Neste guia, mostraremos como implementar o Disqus em seu blog, pois ele possui v
 - A interface de usuário do Disqus tem uma aparência distinta, porém discreta, na qual muitos usuários reconhecem e confiam.
 - Todos os componentes do Disqus são _Lazy-Loaded_, o que significa que não afetarão negativamente o tempo de carregamento de suas postagens.
 
-No entanto, lembre-se de que a escolha do Disqus também gera um ponto negativo. Seu site não é mais totalmente estático, mas depende de uma plataforma externa para enviar seus comentários por meio de `iframe` incorporado em tempo real. Além disso, você deve considerar as implicações de privacidade ao permitir que terceiros armazenem os comentários de seus visitantes e potencialmente rastreiem o comportamento de navegação deles. Você pode consultar a [política de privacidade Disqus](https://help.disqus.com/terms-and-policies/disqus-privacy-policy), as [FAQs sobre privacidade](https://help.disqus.com/terms-and-policies/privacy-faq) (especificamente a última pergunta sobre conformidade com GDPR) e informe seus usuários [como editar suas configurações de compartilhamento de dados](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings).
+No entanto, lembre-se de que a escolha do Disqus também gera um ponto negativo. Seu site não é mais totalmente estático, dependendo de uma plataforma externa para enviar seus comentários por meio de um `iframe` incorporado em tempo real. Além disso, você deve considerar as implicações de privacidade ao permitir que terceiros armazenem os comentários de seus visitantes e potencialmente rastreiem o comportamento de navegação deles. Você pode consultar a [política de privacidade Disqus](https://help.disqus.com/terms-and-policies/disqus-privacy-policy), as [FAQs sobre privacidade](https://help.disqus.com/terms-and-policies/privacy-faq) (especificamente a última pergunta sobre conformidade com GDPR) e informe seus usuários [como editar suas configurações de compartilhamento de dados](https://help.disqus.com/terms-and-policies/how-to-edit-your-data-sharing-settings).
 
 Se essas preocupações superam os benefícios do Disqus, convém examinar algumas das outras opções acima. Nós incentivamos os _pulls requests_ para expandir este guia com instruções de configuração para outros serviços.
 
@@ -45,7 +45,7 @@ Aqui estão as etapas para adicionar comentários do Disqus ao seu próprio blog
 npm install disqus-react
 ```
 
-3. Adicione o nome abreviado da etapa 1 como `GATSBY_DISQUS_NAME` nos arquivos `.env` e `.env.example` para que as pessoas que estão participando do seu repositório saberem que precisam fornecer esse valor para que os comentários funcionem. (Você precisa prefixar a variável de ambiente com `GATSBY_` para [disponibilizá-la no código do lado do cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
+3. Adicione o nome abreviado da etapa 1 como `GATSBY_DISQUS_NAME` nos seus arquivos `.env` e `.env.example` para que as pessoas que estão participando do seu repositório saibam que precisam fornecer esse valor para que os comentários funcionem. (Você precisa prefixar a variável de ambiente com `GATSBY_` para [disponibilizá-la no código do lado do cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
 
 ```title=.env.example
 # ativa comentários do Disqus para postagens do blog
