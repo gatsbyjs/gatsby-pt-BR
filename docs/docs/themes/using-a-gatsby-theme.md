@@ -52,7 +52,7 @@ module.exports = {
 }
 ```
 
-### 2. A entrada escala blog posts de exemplo.
+### 2. O starter cria exemplos de posts no blog.
 
 ```md:title=/content/posts/hello-world.mdx
 ---
