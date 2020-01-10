@@ -6,7 +6,7 @@ Gatsby ajuda seu site a ser melhor classificado nos motores de busca. Algumas va
 
 ## Renderização no servidor
 
-Como as páginas Gatsby são renderizados no servidor, todos os conteúdos e páginas estão disponíveis para o Google e outros motores de busca ou crawlers.
+Como as páginas Gatsby são renderizadas no servidor, todos os conteúdos das páginas estão disponíveis para o Google e outros motores de busca ou crawlers.
 
 Você pode vizualizar o código-fonte desta página com o `curl`( no seu terminal): 
 
