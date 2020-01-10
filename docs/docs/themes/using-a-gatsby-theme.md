@@ -1,5 +1,5 @@
 ---
-título: Usando um tema no Gatsby
+title: Usando um tema Gatsby
 ---
 
 A forma mais rápida de usar um tema no Gatsby é usar uma entrada que está configurada para usar o tema.
