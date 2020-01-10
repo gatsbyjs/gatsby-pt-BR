@@ -16,9 +16,9 @@ Para esse exemplo você vai usar o emotion. Os utilitários de teste do emotion 
 npm install --save-dev jest-emotion babel-plugin-emotion
 ```
 
-Como o [Gatsby's emotion plugin](/packages/gatsby-plugin-emotion/) está usando `babel-plugin-emotion` por baixo dos panos, você também precisará instalá-lo para que o Jest possa usá-lo.
+Como o [plugin emotion do Gatsby](/packages/gatsby-plugin-emotion/) está usando `babel-plugin-emotion` por baixo dos panos, você também precisará instalá-lo para que o Jest possa usá-lo.
 
-Se você seguiu o [guia de testes unitários](/docs/unit-testing) terá o arquivo `jest-preprocess.js` na raiz do seu projeto. Abra esse arquivo e adicione o plugin:
+Se você seguiu o [guia de Testes Unitários](/docs/unit-testing) terá o arquivo `jest-preprocess.js` na raiz do seu projeto. Abra esse arquivo e adicione o plugin:
 
 ```diff:title=jest-preprocess.js
 const babelOptions = {
@@ -39,7 +39,7 @@ import * as emotion from "@emotion/core"
 expect.addSnapshotSerializer(createSerializer(emotion))
 ```
 
-Por fim, você precisa informar ao Jest onde encontrar esse arquivo. Abra seu `package.json` e adicione esta entrada à sua seção` "jest" `:
+Por fim, você precisa informar ao Jest onde encontrar esse arquivo. Abra seu `package.json` e adicione esta entrada à sua seção `"jest"`:
 
 ```json:title=package.json
 "jest": {
@@ -85,7 +85,7 @@ exports[`Button renders correctly 1`] = `
 `
 ```
 
-Se o seu styled component depende do `theme` via` ThemeProvider`, você terá duas opções:
+Se o seu styled component depende do `theme` via `ThemeProvider`, você terá duas opções:
 
 - Encapsular todos os seus componentes com o `ThemeProvider`
 - Usar auxiliares de API (consulte a documentação da biblioteca, por exemplo, [styled-components](https://github.com/styled-components/jest-styled-components#theming) ou [emotion](https://github.com/emotion-js/emotion/tree/master/packages/emotion-theming#createbroadcast-function))
