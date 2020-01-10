@@ -17,7 +17,7 @@ curl https://www.gatsbyjs.org/docs/seo
 
 ## Aumento de velocidade
 
-Gatsby tem muitas otimizações de desempenhos integradas, como renderização de arquivos estáticos, carregamento progressivo de imagem, e o [PRPL pattern](/docs/prpl-pattern/)—todos eles ajudam seu site ser extremamente rápido por default.
+Gatsby tem muitas otimizações de desempenho integradas, como renderização de arquivos estáticos, carregamento progressivo de imagem, e o [PRPL pattern](/docs/prpl-pattern/)—todos eles ajudam seu site a ser extremamente rápido por padrão.
 
 Desde Janeiro de 2018, o Google têm [recompensado sites mais rápidos com um aumento no ranking de busca](https://searchengineland.com/google-speed-update-page-speed-will-become-ranking-factor-mobile-search-289904).
 
