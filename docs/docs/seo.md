@@ -55,7 +55,7 @@ Por exemplo, aqui está um trecho de dados estruturados em [formato JSON-LD](htt
 </script>
 ```
 
-Quando se utiliza dados estruturados, você vai precisar realizar testes durante o desenvolvimento e a [ferramenta de teste de dados estruturados](https://search.google.com/structured-data/testing-tool) do Google e um método recomendado. Depois da publicação, os [resultados dos relatórios de status](https://support.google.com/webmasters/answer/7552505?hl=en) podem ajudar a monitorar a integridade de sua página e mitigar quaisquer problemas de modelagem ou veiculação.
+Quando se utiliza dados estruturados, você vai precisar realizar testes durante o desenvolvimento e a [ferramenta de teste de dados estruturados](https://search.google.com/structured-data/testing-tool) do Google é um método recomendado. Depois da publicação, os [resultados dos relatórios de status](https://support.google.com/webmasters/answer/7552505?hl=en) podem ajudar a monitorar a integridade de sua página e mitigar quaisquer problemas de modelagem ou veiculação.
 
 ## Recursos adicionais
 
