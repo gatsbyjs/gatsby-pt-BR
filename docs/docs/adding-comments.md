@@ -61,7 +61,7 @@ GATSBY_DISQUS_NAME=yourSiteShortname
 ```js:title=src/templates/post.js
 import React from "react"
 import { graphql } from "gatsby"
-// destaque para a próxima linha
+// highlight-next-line
 import { DiscussionEmbed } from "disqus-react"
 ```
 
@@ -80,7 +80,7 @@ Onde `identifier` deve ser uma string ou número único que identifique a postag
 return (
   <Global>
     <PageBody>
-      {/* destaque para a próxima linha */}
+      {/* highlight-next-line */}
       <DiscussionEmbed {...disqusConfig} />
     </PageBody>
   </Global>
