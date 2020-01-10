@@ -8,7 +8,7 @@ Por exemplo, `gatsby-starter-blog-theme` é um tema de entrada para o pacote `ga
 
 Uma **entrada Gatsby normal** cria um novo site em Gatsby que é pré-configurado para um uso específico. O site resultante bifurca efetivamente a entrada — após criado, não mantém conexões com a entrada.
 
-Um **tema de entrada no Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando uma entrada instala um tema, mantém-se a conexão com aquele tema como um pacote npm standalone.
+Um **tema starter do Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando um starter instala um tema, mantém-se a conexão com aquele tema como um pacote npm standalone.
 
 Instalar um tema de entrada blog no Gatsby é o mesmo processo de uma entrada normal:
 
