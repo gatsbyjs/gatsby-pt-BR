@@ -6,7 +6,7 @@ A forma mais rápida de usar um tema Gatsby é usar um starter que está configu
 
 Por exemplo, `gatsby-starter-blog-theme` é um tema de entrada para o pacote `gatsby-theme-blog`.
 
-Uma **entrada Gatsby normal** cria um novo site em Gatsby que é pré-configurado para um uso específico. O site resultante bifurca efetivamente a entrada — após criado, não mantém conexões com a entrada.
+Um **starter normal Gatsby" cria um novo site Gatsby que é pré-configurado para um uso específico. O site resultante é realmente uma bifurcação do starter — entretanto, após criado, ele não mantém conexões com o starter.
 
 Um **tema starter do Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando um starter instala um tema, mantém-se a conexão com aquele tema como um pacote npm standalone.
 
