@@ -18,7 +18,7 @@ gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 
 ## O que um tema de entrada faz?
 
-A entrada para o tema blog oficial faz o seguinte:
+O starter oficial para o tema do blog segue o seguinte:
 
 ### 1. A entrada instala o tema e o configura.
 
