@@ -8,7 +8,7 @@ _Snapshot serializers_ como `jest-styled-components` ou `jest-emotion` modificam
 
 Por padrão, os snapshots de seus componentes estilizados mostram os nomes de classe gerados (que você não definiu) e nenhuma informação de estilização. Ao alterar os estilos, você verá apenas a diferença de alguns nomes de classe criptografados (hashes). É por isso que você deve usar os _snapshot serializers_ acima mencionados. Eles removem os hashes e formatam o CSS em elementos de estilo.
 
-Para esse exemplo você vai usar o emotion. Os utilitários de teste do emotion e glamor são amplamente baseadas em [jest-styled-components](https://github.com/styled-components/jest-styled-components) então eles tem usos parecidos. Por favor dê uma olhada na seção de testes da sua biblioteca para seguir em frente.
+Para esse exemplo você vai usar o emotion. Os utilitários de teste do emotion e glamor são amplamente baseados em [jest-styled-components](https://github.com/styled-components/jest-styled-components) então eles tem usos parecidos. Por favor dê uma olhada na seção de testes da sua biblioteca para seguir em frente.
 
 ## Instalação
 
