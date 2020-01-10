@@ -2,7 +2,7 @@
 title: Testando CSS-in-JS
 ---
 
-Bibliotecas populares de CSS-in-JS como [styled-components](https://github.com/styled-components/styled-components) ou [emotion](https://github.com/emotion-js/emotion) só podem ser testadas com a ajuda de [jest-styled-components](https://github.com/styled-components/jest-styled-components) ou [jest-emotion](https://github.com/emotion-js/emotion/tree/master/packages/jest-emotion) respectivamente. Esses pacotes melhoram a experiência de teste com snapshots de Jest's embutidos e são uma ótima maneira de ajudar a evitar alterações indesejadas na UI do seu site. Consulte a documentação do seu pacote para ver se ele também oferece recursos de teste.
+Bibliotecas populares de CSS-in-JS como [styled-components](https://github.com/styled-components/styled-components) ou [emotion](https://github.com/emotion-js/emotion) podem ser testadas com a ajuda de [jest-styled-components](https://github.com/styled-components/jest-styled-components) ou [jest-emotion](https://github.com/emotion-js/emotion/tree/master/packages/jest-emotion) respectivamente. Esses pacotes melhoram a experiência de testes de snapshot com Jest e são uma ótima maneira de ajudar a evitar alterações indesejadas na UI do seu site. Consulte a documentação do seu pacote para ver se ele também oferece recursos de teste.
 
 _Snapshot serializers_ como `jest-styled-components` ou `jest-emotion` modificam a saída padrão para um snapshot mais significativo e legível, por exemplo removendo informações desnecessárias ou exibindo dados em outro formato. O que leva a testes de snapshot mais comparáveis ​​e eficazes.
 
