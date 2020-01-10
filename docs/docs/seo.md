@@ -23,7 +23,7 @@ Desde Janeiro de 2018, o Google têm [recompensado sites mais rápidos com um au
 
 ## Metadados da página
 
-Adicionar metadados para as páginas, como título e descrição, ajuda os motores de busca a entender seu conteúdo e exibir suas páginas nos resultados de buscas.
+Adicionar metadados para as páginas, como título e descrição, ajuda os motores de busca a entenderem seu conteúdo e exibirem suas páginas nos resultados de buscas.
 
 Uma forma comum para adicionar metadados as páginas é adicionar componentes [react-helmet](https://github.com/nfl/react-helmet) (juntamente com o [Gatsby React Helmet plugin](/packages/gatsby-plugin-react-helmet) para suporte SSR) para os componentes de sua página, aqui está um [guia de como adicionar um componente de SEO](https://www.gatsbyjs.org/docs/add-seo-component/) para sua aplicação Gatsby.
 
