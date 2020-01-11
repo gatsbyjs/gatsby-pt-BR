@@ -65,7 +65,7 @@ I'm an example post!
 
 Assim que você fizer algumas edições, rode `gatsby develop` para iniciar o servidor de desenvolvimento e ver as alterações no navegador
 
-## Atualizando um tema.
+## Atualizando um tema
 
 Para carregar as últimas atualizações do seu tema, você pode atualizar a versão do `gatsby-theme-blog` no `package.json` do seu site.
 
