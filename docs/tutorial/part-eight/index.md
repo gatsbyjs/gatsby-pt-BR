@@ -22,7 +22,6 @@ Citando o [site do Lighthouse](https://developers.google.com/web/tools/lighthous
 
 > Lighthouse é uma ferramenta de código aberto, automatizada para melhorar a qualidade de páginas na web. Você pode executar em qualquer página, seja ela pública ou que precise de autenticação. É possível realizar auditorias de performance, acessibilidade, progressive web apps (PWAs) entre outras.
 
-
 Lighthouse está incluso no Chrome DevTools. Executar sua auditoria - e então consertar os erros apontados e implementar as melhorias sugeridas - é uma ótima forma de preparar o seu site para ir ao ar. Isso te ajuda a ganhar confiança que o seu site é rápido e acessível o máximo possível.
 
 Tente você mesmo!
@@ -31,7 +30,7 @@ Primeiro, você precisa criar um build de produção do seu site Gatsby. O servi
 
 ### ✋ Criando o build de produção
 
-1.  Pare o servidor de desenvolvimento (se você ainda estiver executando) e execute o seguinte comando:
+1. Pare o servidor de desenvolvimento (se você ainda estiver executando) e execute o seguinte comando:
 
 ```shell
 gatsby build
@@ -39,7 +38,6 @@ gatsby build
 
 > 💡 Como você aprendeu na [parte 1](/tutorial/part-one/), esse comando gera um
 build de produção do seu site, gerando arquivos estáticos na pasta `public`
-
 
 2.  Para ver a versão de produção do seu site localmente, execute:
 
@@ -49,15 +47,14 @@ gatsby serve
 
 Uma vez iniciado, você pode ver o seu site em [`localhost:9000`](http://localhost:9000).
 
-
 ### Executando uma auditoria do Lighthouse
 
 Agora você vai executar o seu primeiro teste com o Lighthouse
 
-1.  Se você ainda não fez isso, abra o seu site numa aba anônima do Google Chrome
+1. Se você ainda não fez isso, abra o seu site numa aba anônima do Google Chrome
 para que nenhuma extensão interfira no teste. Depois, abra o Chrome DevTools.
 
-2.  Clique na aba "Audits" onde você verá uma tela parecida com isso:
+2. Clique na aba "Audits" onde você verá uma tela parecida com isso:
 
 ![Começo da auditoria do Lighthouse](./lighthouse-audit.png)
 
@@ -86,7 +83,7 @@ configura o Gatsby para criar um arquivo `manifest.webmanifest` a cada build do 
 
 ### ✋ Usando o `gatsby-plugin-manifest`
 
-1.  Instale o plugin:
+1. Instale o plugin:
 
 ```shell
 npm install --save gatsby-plugin-manifest
@@ -127,7 +124,7 @@ Um outro requisito para um site ser classificado como PWA é o uso de um [servic
 
 ### ✋ Usando o `gatsby-plugin-offline`
 
-1.  Instale o plugin:
+1. Instale o plugin:
 
 ```shell
 npm install --save gatsby-plugin-offline
@@ -172,11 +169,12 @@ O [plugin react helmet](/packages/gatsby-plugin-react-helmet/) do Gatsby possui 
 
 ### ✋ Usando `React Helmet` e `gatsby-plugin-react-helmet`
 
-1.  Instale os dois pacotes:
+1. Instale os dois pacotes:
 
 ```shell
 npm install --save gatsby-plugin-react-helmet react-helmet
 ```
+
 2. Tenha certeza que você possua os atributos `description` e `author` configurados dentro do seu objeto `siteMetadata`. Adicione também o plugin `gatsby-plugin-react-helmet` ao array `plugins` no seu arquivo `gatsby-config.js`
 
 ```javascript:title=gatsby-config.js
@@ -338,11 +336,9 @@ export const query = graphql`
 
 O exemplo acima é baseado no [blog de exemplo do Gatsby](/starters/gatsbyjs/gatsby-starter-blog/). Passando props para o componente `<SEO>`, você pode dinamicamente mudar os metadados para o seu post. Nesse caso, o `title` e `excerpt` do seu blog (se existir no arquivo markdown do post) serão utilizados ao invés dos padrões configurados no  `siteMetadata` do seu arquivo `gatsby-config.js`.
 
-
 Agora, se você executar novamente a auditoria do Lighthouse, você deve atingir uma nota próxima --se não perfeita-- de 100 pontos!
 
 > 💡 Para uma leitura futura e exemplos, leia [Adicionando um componente SEO](/docs/add-seo-component/) e a [documentação do React Helmet](https://github.com/nfl/react-helmet#example)!
-
 
 ## Deixando ainda melhor
 
@@ -363,18 +359,15 @@ A lista completa de todos os plugins oficiais mantidos pelo Gatsby.
 
 ### Guias oficiais
 
-1.  [Guia padrão do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default): Início rápido para seu projeto com esse modelo padrão. Esse modelo básico vem junto com os principais arquivos de configuração que você pode precisar  _[Exemplo funcional](http://gatsbyjs.github.io/gatsby-starter-default/)_
-2.  [Guia inicial de um blog Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog): Guia do Gatsby para criar um  blog incrível e absurdamente rápido. _[Exemplo funcional](http://gatsbyjs.github.io/gatsby-starter-blog/)_
-3.  [Olá mundo inicial do Gatsby](https://github.com/gatsbyjs/gatsby-starter-hello-world): Guia do Gatsby com o mínimo necessário para criar um site Gatsby. _[Exemplo funcional](https://gatsby-starter-hello-world-demo.netlify.com/)_
+1. [Guia padrão do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default): Início rápido para seu projeto com esse modelo padrão. Esse modelo básico vem junto com os principais arquivos de configuração que você pode precisar  _[Exemplo funcional](http://gatsbyjs.github.io/gatsby-starter-default/)_
+2. [Guia inicial de um blog Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog): Guia do Gatsby para criar um  blog incrível e absurdamente rápido. _[Exemplo funcional](http://gatsbyjs.github.io/gatsby-starter-blog/)_
+3. [Olá mundo inicial do Gatsby](https://github.com/gatsbyjs/gatsby-starter-hello-world): Guia do Gatsby com o mínimo necessário para criar um site Gatsby. _[Exemplo funcional](https://gatsby-starter-hello-world-demo.netlify.com/)_
 
 ## Isso é tudo, pessoal
 
 Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso
 
-
 Esse é só o começo. Continue indo!
-
-
 
 - Você criou alguma coisa legal? Compartilhe no Twitter, com a hashtag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), e [@nos mencione](https://twitter.com/gatsbyjs)!
 - Você escreveu um post legal sobre o que você aprendeu? Compartilhe conosco também!
