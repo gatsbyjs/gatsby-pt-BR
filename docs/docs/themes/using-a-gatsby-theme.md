@@ -8,7 +8,7 @@ Por exemplo, `gatsby-starter-blog-theme` é um tema starter para o pacote `gatsb
 
 Um **starter normal Gatsby** cria um novo site Gatsby que é pré-configurado para um uso específico. O site resultante é realmente uma bifurcação do starter — após criado, ele não mantém conexões com o starter.
 
-Um **tema starter do Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando um starter instala um tema, mantém-se a conexão com aquele tema como um pacote npm standalone.
+Um **tema starter do Gatsby** cria um novo site Gatsby que instala e configura um ou mais temas. Quando um starter instala um tema, mantém-se a conexão com aquele tema como um pacote npm _standalone_.
 
 Instalar um blog Gatsby a partir de um tema starter é o mesmo processo de um starter normal:
 
