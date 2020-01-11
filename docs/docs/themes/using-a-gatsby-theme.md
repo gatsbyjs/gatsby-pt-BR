@@ -4,7 +4,7 @@ title: Usando um tema Gatsby
 
 A forma mais rápida de usar um tema Gatsby é usar um starter que está configurada para usar o tema.
 
-Por exemplo, `gatsby-starter-blog-theme` é um tema de entrada para o pacote `gatsby-theme-blog`.
+Por exemplo, `gatsby-starter-blog-theme` é um tema starter para o pacote `gatsby-theme-blog`.
 
 Um **starter normal Gatsby" cria um novo site Gatsby que é pré-configurado para um uso específico. O site resultante é realmente uma bifurcação do starter — entretanto, após criado, ele não mantém conexões com o starter.
 
