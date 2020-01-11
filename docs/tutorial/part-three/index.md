@@ -1,5 +1,5 @@
 ---
-title: Creating Nested Layout Components
+title: Criando Layouts de Componentes Aninhados
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -101,10 +101,9 @@ import React from "react"
 
 export default () => (
   <div>
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Oi! Estou construindo um site Gatsby falso como parte de um tutorial!</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      O que eu gosto de fazer? Muitas coisas, claro, mas com certeza gosto de construir websites.
     </p>
   </div>
 )
@@ -123,10 +122,9 @@ import React from "react"
 export default () => (
   // highlight-next-line
   <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Oi! Estou construindo um site Gatsby falso como parte de um tutorial!</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      O que eu gosto de fazer? Muitas coisas, claro, mas com certeza gosto de construir websites.
     </p>
   </div>
 )
@@ -140,25 +138,25 @@ Maravilha. Você instalou e configurou seu primeiríssimo plugin do Gatsby!
 
 Agora vamos aprender sobre componentes de layout. Para se preparar para essa parte, adicione algumas novas páginas no seu projeto: uma página _sobre_ e uma página de _contato_
 
-```jsx:title=src/pages/about.js
+```jsx:title=src/pages/sobre.js
 import React from "react"
 
 export default () => (
   <div>
-    <h1>About me</h1>
-    <p>I’m good enough, I’m smart enough, and gosh darn it, people like me!</p>
+    <h1>Sobre mim</h1>
+    <p>Eu sou bom o suficiente, eu sou inteligente o suficiente, e caramba, as pessoas gostam de mim!</p>
   </div>
 )
 ```
 
-```jsx:title=src/pages/contact.js
+```jsx:title=src/pages/contato.js
 import React from "react"
 
 export default () => (
   <div>
-    <h1>I'd love to talk! Email me at the address below</h1>
+    <h1>Eu adoraria conversar! Me envie um e-mail no endereço abaixo</h1>
     <p>
-      <a href="mailto:me@example.com">me@example.com</a>
+      <a href="mailto:eu@exemplo.com">eu@exemplo.com</a>
     </p>
   </div>
 )
@@ -196,10 +194,9 @@ import Layout from "../components/layout" // highlight-line
 
 export default () => (
   <Layout> {/* highlight-line */}
-    <h1>Hi! I'm building a fake Gatsby site as part of a tutorial!</h1>
+    <h1>Oi! Estou construindo um site Gatsby falso como parte de um tutorial!</h1>
     <p>
-      What do I like to do? Lots of course but definitely enjoy building
-      websites.
+      O que eu gosto de fazer? Muitas coisas, claro, mas com certeza gosto de construir websites.
     </p>
   </Layout> {/* highlight-line */}
 )
@@ -209,7 +206,7 @@ export default () => (
 
 Que ótimo, o layout está funcionando! O conteúdo da sua página inicial ainda está centralizado.
 
-Mas tente navegar para `/about/`, ou `/contact`. O conteúdo nessas páginas não estão centralizados ainda.
+Mas tente navegar para `/sobre/`, ou `/contato`. O conteúdo nessas páginas não estão centralizados ainda.
 
 4. Importe o componente de layout no `about.js` e `contact.js` (como você fez no `index.js` no passo anterior).
 
@@ -224,13 +221,13 @@ import React from "react"
 
 export default ({ children }) => (
   <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-    <h3>MySweetSite</h3> {/* highlight-line */}
+    <h3>MeuSitezinho</h3> {/* highlight-line */}
     {children}
   </div>
 )
 ```
 
-Se você for a qualquer uma das suas três páginas, você verá o mesmo título adicionado, como, por exemplo, na página `/about/`:
+Se você for a qualquer uma das suas três páginas, você verá o mesmo título adicionado, como, por exemplo, na página `/sobre/`:
 
 ![with-title](with-title.png)
 
@@ -255,12 +252,12 @@ export default ({ children }) => (
     {/* highlight-start */}
     <header style={{ marginBottom: `1.5rem` }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>MySweetSite</h3>
+        <h3 style={{ display: `inline` }}>MeuSitezinho</h3>
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
         <ListLink to="/">Home</ListLink>
-        <ListLink to="/about/">About</ListLink>
-        <ListLink to="/contact/">Contact</ListLink>
+        <ListLink to="/sobre/">Sobre</ListLink>
+        <ListLink to="/contato/">Contato</ListLink>
       </ul>
     </header>
     {/* highlight-end */}
