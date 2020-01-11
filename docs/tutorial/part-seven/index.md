@@ -18,14 +18,13 @@ Vamos começar.
 
 A criação de novas páginas segue dois passos:
 
-1.  Gerar a "rota" ou "slug" para a página.
-2.  Criar a página.
+1. Gerar a "rota" ou "slug" para a página.
+2. Criar a página.
 
 _**Nota**: Geralmente as fontes de dados fornecem diretamente um slug ou nome de rota para o conteúdo — quando trabalha com um desses sistemas (por exemplo um CMS), você não precisa criar os slugs você mesmo, como faz com os arquivos markdown._
 
 Para criar suas páginas markdown, você vai aprender a usar duas APIs Gatsby:
-[`onCreateNode`](/docs/node-apis/#onCreateNode) e
-[`createPages`](/docs/node-apis/#createPages). 
+[`onCreateNode`](/docs/node-apis/#onCreateNode) e [`createPages`](/docs/node-apis/#createPages).
 Estas são duas robustas APIs que você verá sendo usadas em vários sites e plugins.
 
 Fazemos nosso melhor para que as APIs Gatsby sejam simples de implementar. 
@@ -56,6 +55,7 @@ exports.onCreateNode = ({ node }) => {
   // highlight-end
 }
 ```
+
 Você quer utilizar cada nome de arquivo markdown para criar o slug da página. Para que 
 `pandas-and-bananas.md` se torne `/pandas-and-bananas/`. 
 Mas como conseguir o nome do arquivo do nó `MarkdownRemark`? Para consegui-lo, 
@@ -93,8 +93,8 @@ exports.onCreateNode = ({ node, getNode }) => {
 }
 ```
 
-A função lida com a localização do nó pai `File` juntamente com a criação do slug. 
-Execute o servidor de desenvolvimento novamente e você deverá ver registrado no terminal 
+A função lida com a localização do nó pai `File` juntamente com a criação do slug.
+Execute o servidor de desenvolvimento novamente e você deverá ver registrado no terminal
 dois slugs, um para cada arquivo markdown.
 
 Agora você pode adicionar seus novos slugs diretamente nos nós `MarkdownRemark`. Isto é 
@@ -192,8 +192,8 @@ que Gatsby chama para que plugins possam adicionar páginas.
 
 Conforme foi mencionado na introdução desta parte do tutorial, os passos para criar páginas programaticamente são:
 
-1.  Consultar dados com GraphQL
-2.  Mapear os resultados das consultas às páginas
+1. Consultar dados com GraphQL
+2. Mapear os resultados das consultas às páginas
 
 O código acima é o primeiro passo para criar páginas a partir de seu markdown, 
 já que está usando a função `graphql` fornecida para consultar os slugs markdown que criou. 
