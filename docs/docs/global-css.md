@@ -2,23 +2,23 @@
 title: Standard Styling with Global CSS Files
 ---
 
-Traditionally, websites are styled using global CSS files.
+Tradicionalmente, os sites são estilizados utilizando arquivos CSS globais.
 
-Globally-scoped CSS rules are declared in external `.css` stylesheets, and [CSS specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) and [the Cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/Cascade) determine how styles are applied.
+As regras de escopo global são declaradas em arquivos `.css` externos, [Especificidade CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity) e o [Cascade](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Cascade) determinam como os estilos são aplicados.
 
-## Adding global styles with a layout component
+## Adicionando estilos globais com um componente de layout
 
-The best way to add global styles is with a [shared layout component](/tutorial/part-three/#your-first-layout-component). This layout component is used for things that are shared throughout the site, including styles, header components, and other common items.
+A melhor maneira de adicionar estilos globais é com um [componente de layout compartilhado](/tutorial/part-three/#your-first-layout-component). Esse componente é utilizado para itens que são compartilhados em todo o site, incluindo estilos, componentes do cabeçalho e outros itens comuns.
 
-> **NOTE:** This pattern is implemented by default in [the default starter](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
+> **NOTA:** Esse padrão é implementado em [o padrão inicial](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
 
-To create a shared layout with global styles, start by creating a new Gatsby site with the [hello world starter](https://github.com/gatsbyjs/gatsby-starter-hello-world).
+Para criar um layout compartilhado com estilos globais, comece criando um novo site Gatsby com o [hello world inicial](https://github.com/gatsbyjs/gatsby-starter-hello-world).
 
 ```shell
-gatsby new global-styles https://github.com/gatsbyjs/gatsby-starter-hello-world
+gatsby new estilos-globais https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-Open your new site in your code editor and create a new directory at `/src/components`. Inside, create two new files:
+Abra seu novo site em seu editor e crie um novo diretório em `/src/components`. Dentro, crie dois novos arquivos:
 
 ```diff
   global-styles/
@@ -31,7 +31,7 @@ Open your new site in your code editor and create a new directory at `/src/compo
           └─  index.js
 ```
 
-Inside `src/components/layout.css`, add some global styles:
+Dentro de `src/components/layout.css`, adicione alguns estilos globais como:
 
 ```css:title=src/components/layout.css
 div {
@@ -40,7 +40,7 @@ div {
 }
 ```
 
-In `src/components/layout.js`, include the stylesheet and export a layout component:
+Em `src/components/layout.js`, inclua a folha de estilos e exporte como um componente de layout:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -49,7 +49,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-Finally, update `src/pages/index.js` to use the new layout component:
+Finalmente, atualize o arquivo `src/pages/index.js` para usar o novo componente de layout:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -58,7 +58,7 @@ import Layout from "../components/layout"
 export default () => <Layout>Hello world!</Layout>
 ```
 
-Run `npm run develop` and you’ll see the global styles applied.
+Execute o comando `npm run develop` e você irá ver o novo estilo global aplicado.
 
 ![Global styles](./images/global-styles.png)
 
