@@ -1,26 +1,27 @@
 ---
-title: Free Swag for Gatsby Contributors!
+title: Brindes (_Free Swag_) para Contribuidores do Gatsby!
 ---
 
-Gatsby relies on contributors from the open source community, and we want to make sure you know how much it means to us that you’re willing to put time and effort into [contributing to Gatsby](/contributing/how-to-contribute/).
+O Gatsby depende de contribuidores da comunidade _open source_, e nós queremos ter certeza que você saiba o quanto significa para nós que você está disposto a se esforçar e nos dar um pouquinho do seu tempo [contribuindo para o Gatsby](/contributing/how-to-contribute/).
 
-To show our appreciation, _**everyone who contributes to Gatsby is eligible to receive free swag!**_
+Para demonstrar o nosso apreço, _**todo mundo que contribuir com o Gatsby é elegível para receber brindes (swag) gratuitos!**_
 
-![Gatsby contributors wearing swag.](./images/gatsby-swag.jpg)
+![Contribuidores do Gatsby usando seus brindes.](./images/gatsby-swag.jpg)
 
-### How to claim your free swag
+### Como reivindicar seus brindes
 
-If you contribute to the Gatsby organization on GitHub, you can claim your swag by [logging into the Gatsby Store](https://store.gatsbyjs.org/) and requesting a discount code. With five or more contributions, you can claim your _**Level 2**_ swag.
+Se você contribuir com a organização Gatsby através do Github, você pode reivindicar seu brinde [acessando a Gatsby Store](https://store.gatsbyjs.org/) e requisitando um código de desconto. Com cinco ou mais contribuições, você pode solicitar um brinde _**Nível 2**_.
 
-If you’ve contributed in other ways, such as giving talks about Gatsby, teaching others to use it, writing Gatsby articles/tutorials, participating in a Gatsby research project, or any other way, please email <mailto:marketing@gatsbyjs.com> or [tweet at Gatsby on Twitter](https://twitter.com/gatsbyjs) to claim your swag.
+Se você tiver contribuído de outra maneira, como ministrando palestras sobre o Gatsby, ensinando outros a usarem ele, escrevendo artigos/tutorias sobre o Gatsby, participando de projetos de pesquisa do Gatsby, ou de qualquer outra maneira, por favor envie um e-mail para <mailto:marketing@gatsbyjs.com> ou [tweete para Gatsby no Twitter](https://twitter.com/gatsbyjs) para poder receber seu brinde.
 
-### Details about free swag
 
-- We will send one item from our [swag store](https://store.gatsbyjs.org/) per swag tier
-- Tier 1 swag includes most items \$10 and under
-- Tier 2 swag includes most items \$26 and under
-- Not all items are eligible due to high cost to create the swag. We’ll make it clear which items are not eligible
-- There’s a limit of one free swag item per swag tier
-- Shipping is free worldwide
+### Detalhes sobre os brindes
 
-> **NOTE:** Worldwide free shipping is a pilot program. If shipping costs get out of control, we may need to adjust this policy in the future.
+- Nós lhe enviaremos um item da nossa [loja de _swags_](https://store.gatsbyjs.org/) por nível.
+- O _swag_ de Nível 1 inclui a maioria dos itens por \$10 ou menos
+- O _swag_ de Nível 2 inclui a maioria dos itens por \$26 ou menos
+- Nem todos os itens são elegíveis devido ao alto custo de fabricação do mesmo. Nós deixaremos claro quais itens não são elegíveis
+- Existe um limite de um único brinde por nível
+- Frete é gratuito para qualquer parte do mundo
+  
+> **NOTA:** O frete gratuito é um programa piloto. Se os custos de envio começarem a sair de controle, nós nos reservamos o direito de ajustar essa política no futuro.

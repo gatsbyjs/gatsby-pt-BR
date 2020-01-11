@@ -8,36 +8,36 @@ Antes de começar a construir seu primeiro site Gatsby, você precisará se fami
 
 ## Familiarize-se com a linha de comando
 
-A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. As vezes, você encontrará artigos a referenciando como terminal. Neste tutorial, usaremos os dois de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando é uma maneira poderosa e baseada em texto de interagir com o seu computador.
+A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. Às vezes, você encontrará artigos se referindo a ela como _terminal_. Neste tutorial, usaremos os dois termos de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando permite uma interação poderosa com os recursos que o seu computador oferece.
 
-Reserve um momento para localizar e abrir a interface da linha de comandos (Command Line Interface - CLI) do seu computador. Dependendo do sistema operacional que você estiver usando, consulte as [**instruções para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instruções para Windows**](ttps://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instruções para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+Reserve um momento para localizar e acessar a interface da linha de comandos (Command Line Interface - CLI) do seu computador. Dependendo do sistema operacional que você estiver usando, consulte as [**instruções para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instruções para Windows**](ttps://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instruções para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
 ## Instale o Homebrew para Node.js
 
-Para instalar o Gatsby e o Node.js, é recomendável usar o [Homebrew](https://brew.sh/). Uma pequena configuração no início pode evitar algumas dores de cabeça mais tarde!
+Para instalar o Gatsby e o Node.js, é recomendável usar o [Homebrew](https://brew.sh/). Investir em uma configuração mínima nesse momento inicial pode te poupar algumas dores de cabeça mais tarde!
 
 Como instalar ou verificar o Homebrew no seu computador:
 
 1. Abra seu Terminal.
-1. Veja se o Homebrew está instalado executando `brew -v`. Você deve ver "Homebrew" e um número de versão.
+1. Veja se o Homebrew está instalado executando `brew -v`. Você deverá ver a palavra "Homebrew" e um número de versão.
 1. Caso contrário, faça o download e instale o [Homebrew com as instruções](https://docs.brew.sh/Installation) para o seu sistema operacional (Mac, Linux ou Windows).
-1. Depois de instalar o Homebrew, repita a etapa 2 para verificar.
+1. Depois de instalar o Homebrew, repita a etapa 2 para confirmar o sucesso da instalação.
 
-### Usuários de Mac: instale as ferramentas de linha de comando do Xcode
+### Usuário de Mac: instale as ferramentas de linha de comando do Xcode
 
 1. Abra seu Terminal.
-1. Em um Mac, instale as ferramentas de linha de comando do Xcode executando `xcode-select --install`.
-   1. Se isso falhar, faça o download [diretamente do site da Apple](https://developer.apple.com/download/more/), depois de fazer login na conta de desenvolvedor da Apple
-1. Depois de ser solicitado a iniciar a instalação, você será solicitado novamente a aceitar uma licença de software para o download das ferramentas.
+1. Em um Mac, instale as ferramentas de linha de comando do Xcode executando o comando `xcode-select --install`.
+   1. Se isso falhar, faça o download [diretamente do site da Apple](https://developer.apple.com/download/more/), após fazer login na conta de desenvolvedor da Apple.
+1. Ao iniciar a instalação, você será solicitado novamente a aceitar uma licença de software para o download das ferramentas.
 
 ## ⌚ Instale o Node.js e o npm
 
-O Node.js é um ambiente que pode executar código JavaScript fora de um navegador da web. Gatsby é construído com Node.js. Para começar a trabalhar com o Gatsby, é necessário ter uma versão recente instalada no seu computador.
+O Node.js é um ambiente que pode executar código JavaScript fora de um navegador da _web_. Gatsby é construído com Node.js. Para começar a trabalhar com o Gatsby, é necessário ter uma versão recente do Node.js instalada no seu computador.
 
-_Nota: a versão mínima suportada do Node.js. do Gatsby é o Node 8, mas fique à vontade para usar uma versão mais recente._
+_Nota: a versão mínima do Node.js suportada pelo Gatsby é a 8.0, mas fique à vontade para usar uma versão mais recente._
 
 1. Abra seu terminal.
-1. Execute `brew update` para garantir que você tenha a versão mais recente do Homebrew.
+1. Execute `brew update` para garantir que você estará usando a versão mais recente do Homebrew.
 1. Execute este comando para instalar o Node e o npm de uma só vez: `brew install node`
 
 Depois de seguir as etapas de instalação, verifique se tudo foi instalado corretamente:
@@ -45,16 +45,16 @@ Depois de seguir as etapas de instalação, verifique se tudo foi instalado corr
 ### Verifique sua instalação do Node.js
 
 1. Abra seu terminal.
-2. Execute `node --version`. (Se o terminal é algo novo para você, "Execute `node --version`" significa "escreva `node --version`" no terminal, e clique na tecla Enter. Onde `node --version` pode ser outro comando. "Executar `comando`" terá esse significado daqui em diante).
+2. Execute `node --version`. (Se o terminal é algo novo para você, "Execute `node --version`" significa que você deve escrever o comando no terminal - nesse caso o comando é `node --version` - e em seguida pressionar a tecla _Enter_.  "Executar `comando`" terá esse significado daqui em diante).
 3. Execute `npm --version`.
 
-A saída de cada um desses comandos deve ser um número de versão. Suas versões podem não ser as mesmas mostradas abaixo! Se inserir esses comandos não mostrar um número de versão, volte e verifique se instalou o Node.js.
+A saída de cada um desses comandos deve ser um número de versão. Suas versões podem não ser as mesmas mostradas abaixo! Se ao executar esses comandos não for exibido um número de versão, refaça a operação para confirmar que instalou o Node.js corretamente.
 
 ![Verifique as versões do node e npm no terminal](01-node-npm-versions.png)
 
 ## Instale o Git
 
-O Git é um sistema de controle de versão distribuído de código aberto e gratuito, projetado para lidar com tudo, desde projetos pequenos a grandes, com velocidade e eficiência. Quando você instala um site "starter" do Gatsby, o Gatsby usa o Git nos bastidores para baixar e instalar os arquivos necessários para seu starter. Você precisará ter o Git instalado para configurar seu primeiro site Gatsby.
+O Git é um sistema de controle de versão distribuído de código aberto e gratuito, projetado para lidar com tudo, desde projetos pequenos a grandes, com rapidez e eficiência. Quando você instala um site _starter_ do Gatsby, o Gatsby usa o Git nos bastidores para baixar e instalar os arquivos necessários para seu starter. Você precisará ter o Git instalado para configurar seu primeiro site Gatsby.
 
 As etapas para baixar e instalar o Git dependem do seu sistema operacional. Siga o guia para o seu sistema:
 
@@ -64,24 +64,24 @@ As etapas para baixar e instalar o Git dependem do seu sistema operacional. Siga
 
 ## Usando a CLI do Gatsby
 
-A ferramenta CLI do Gatsby permite criar rapidamente novos sites com tecnologia Gatsby e executar comandos para o desenvolvimento de sites Gatsby. É um pacote npm publicado.
+A ferramenta CLI do Gatsby permite que você execute os comandos necessários para desenvolver com rapidez os seus sites utilizando a tecnologia do Gatsby. Ela está disponível como um pacote publicado no _npm_.
 
 A CLI do Gatsby está disponível via npm e deve ser instalada globalmente executando `npm install -g gatsby-cli`.
 
-_**Nota**: ao instalar o Gatsby e executá-lo pela primeira vez, você verá uma pequena mensagem notificando sobre dados de uso anônimos que estão sendo coletados para comandos do Gatsby, você pode ler mais sobre como esses dados são extraídos e usado no [doc de telemetria](/docs/telemetry)._
+_**Nota**: ao instalar o Gatsby e executá-lo pela primeira vez, você verá uma pequena mensagem notificando sobre dados de uso anônimo que estão sendo coletados para comandos do Gatsby, você pode ler mais sobre como esses dados são extraídos e utilizados no [doc de telemetria](/docs/telemetry)._
 
-Para ver os comandos disponíveis, execute `gatsby --help`.
+Para listar os comandos disponíveis, execute `gatsby --help`.
 
 ![Confira os comandos do Gatsby no terminal](05-gatsby-help.png)
 
-> 💡 Se você não conseguir executar a CLI do Gatsby com êxito devido a problemas de permissão, consulte os [documentos do npm sobre como corrigir permissões](https://docs.npmjs.com/getting-started/fixing-npm-permissions), ou [este guia](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
+> 💡 Caso você não consiga executar a CLI do Gatsby devido a problemas de permissão, consulte os [documentos do npm sobre como corrigir permissões](https://docs.npmjs.com/getting-started/fixing-npm-permissions), ou [este guia](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
 
 ## Crie um site do Gatsby
 
-Agora você está pronto para usar a ferramenta CLI do Gatsby para criar seu primeiro site do Gatsby. Usando a ferramenta, você pode fazer o download de “starters” (sites parcialmente construídos com alguma configuração padrão) para ajudá-lo a acelerar a criação de um determinado tipo de site. O starter do "Hello World" que você usará aqui é um starter com o essencial necessário para um site de Gatsby.
+Agora você está pronto para usar a ferramenta CLI para criar seu primeiro site do Gatsby. Usando a CLI, você pode fazer o download de _starters_ (sites parcialmente construídos e que trazem algumas configurações por padrão) para ajudá-lo a acelerar a criação de um determinado tipo de projeto. O _starter_ do "Hello World" que você usará aqui é um _starter_ que contém os recursos básicos de um site Gatsby.
 
 1. Abra seu terminal.
-2. Execute `gatsby new hello-world https: // github.com / gatsbyjs / gatsby-starter-hello-world`. (_Nota: Dependendo da velocidade do seu download, a quantidade de tempo necessária varia. Por uma questão de brevidade, o gif abaixo foi pausado durante parte da instalação_).
+2. Execute `gatsby new hello-world https: // github.com / gatsbyjs / gatsby-starter-hello-world`. (_Nota: Dependendo da sua velocidade de download, a quantidade de tempo necessária pode variar. Por uma questão de brevidade, o gif abaixo foi pausado durante parte da instalação_).
 3. Execute `cd hello-world`.
 4. Execute `gatsby develop`.
 
@@ -98,19 +98,19 @@ gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
 
 - `new` é um comando gatsby para criar um novo projeto Gatsby.
 - Aqui, `hello-world` é um título arbitrário - você pode escolher qualquer coisa. A ferramenta CLI colocará o código do seu novo site em uma nova pasta chamada “hello-world”.
-- Por fim, o URL do GitHub especificado aponta para um repositório de códigos que contém o código inicial que você deseja usar.
+- Por fim, o URL do GitHub especificado aponta para um repositório que contém o código inicial que você deseja usar.
 
 ```shell
 cd hello-world
 ```
 
-- Isto diz "Eu quero mudar de diretório para a subpasta 'hello world'". Sempre que você quiser executar algum comando para o seu site, você precisa estar no contexto desse site (ou seja, seu terminal precisa ser apontado para o diretório em que o código do site reside).
+- Esse comando significa "Eu quero mudar de diretório para a subpasta 'hello world'". Sempre que você quiser executar algum comando para o seu site, você precisa estar no contexto desse site (ou seja, seu terminal precisa ser apontado para o diretório que contém o código do site).
 
 ```shell
 gatsby develop
 ```
 
-- Este comando inicia um servidor de desenvolvimento. Você poderá ver e interagir com seu novo site em um ambiente de desenvolvimento - local (no seu computador, não publicado na Internet).
+- Este comando inicia um servidor de desenvolvimento. Você poderá ver e interagir com seu novo site em um ambiente de desenvolvimento local (ou seja, rodando no seu computador, não hospedado na Internet).
 
 ### Visualize seu site localmente
 

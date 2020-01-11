@@ -1,34 +1,34 @@
 ---
-title: How to Make a Minimal Reproduction
+title: Como criar um caso de teste minimamente reproduzível
 ---
 
-## What is a reproducible test case?
+## O que é um caso de teste reproduzível?
 
-A reproducible test case is a small Gatsby site built to demonstrate a problem - often this problem is caused by a bug in Gatsby or a Gatsby plugin. Your reproducible test case should contain the bare minimum features needed to clearly demonstrate the bug.
+Um caso de teste reproduzível é um pequeno website construído com Gatsby que demonstre um problema - frequentemente esse problema é causado por um bug no Gatsby ou em um plugin do Gatsby. O seu teste de caso reproduzível deve conter o conjunto mínimo de funcionalidades necessárias para demonstrar o bug claramente.
 
-## Why should you create a reproducible test case?
+## Por que você deveria criar um caso de teste reproduzível?
 
-A reproducible test case lets you isolate the cause of a problem, which is the first step towards fixing it!
+Um caso de teste reproduzível permite que você isole a causa de um problema, o que é o primeiro passo na direção de corrigi-lo!
 
-The [most important part of any bug report](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines#Writing_precise_steps_to_reproduce) is to describe the exact steps needed to reproduce the bug.
+A [parte mais importante de se reportar um bug](https://developer.mozilla.org/en-US/docs/Mozilla/QA/Bug_writing_guidelines#Writing_precise_steps_to_reproduce) é descrever exatamante os passos necessários para reproduzi-lo.
 
-A reproducible test case is a great way to share a specific environment that causes a bug. Your reproducible test case is the best way to help people that want to help _you_.
+Um caso de teste reproduzível é uma excelente maneira de compartilhar as condições específicas que causam o bug. Seu caso de teste reproduzível é a melhor maneira de ajudar as pessoas que querem ajudar _você_.
 
-## Steps to create a reproducible test case
+## Passos para criar um caso de teste reproduzível
 
-- Create a new Gatsby site with a starter, the official `hello-world` starter is a great 'barebones' starting point here: `gatsby new bug-repro https://github.com/gatsbyjs/gatsby-starter-hello-world`
-- Add any Gatsby plugins that relate to the issue. For example, if you're having problems with Gatsby MDX you should install and configure [`gatsby-plugin-mdx`](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/). Only add plugins that are needed to demonstrate the problem.
-- Add the code needed to recreate the error you've seen.
-- Publish the code (your GitHub account is a good place to do this) and then link to it when [creating an issue](/contributing/how-to-file-an-issue/).
+- Crie um novo website com Gatbsy a partir de um _starter_, o _starter_ oficial `hello-world`  é um excelente exemplo de caso base ou ponto de partida: `gatsby new bug-repro https://github.com/gatsbyjs/gatsby-starter-hello-world`
+- Adicione os plugins do Gatsby que estejam relacionados com o problema. Por exemplo, se você estiver tendo problemas com o Gatsby MDX você deve instalar e configurar o [`gatsby-plugin-mdx`](https://www.gatsbyjs.org/packages/gatsby-plugin-mdx/). Apenas adicione os plugins que são necessários para a demonstração do problema.
+- Adicione o código necessário para recriar o erro que você observou.
+- Publique o código (a sua conta do GitHub é um bom lugar para fazer isso) e então adicione o link para ele quando estiver [_criando uma issue_](/contributing/how-to-file-an-issue/).
 
-## Places to develop a reproducible test case
+## Locais para desenvolver um caso de teste reproduzível
 
-- Locally with a starter: You can start with a [Starter](/docs/starters) locally and then build it on your own machine. Gatsby's official [`hello-world`](https://github.com/gatsbyjs/gatsby/tree/master/starters/hello-world) or [`default`](https://github.com/gatsbyjs/gatsby-starter-default) starter are both good foundations for a reproducible test case.
-- Host on CodeSandbox: You can develop a Gatsby site straight from your browser with CodeSandbox using their [Gatsby template](https://codesandbox.io/s/github/gatsbyjs/gatsby-starter-default). CodeSandbox also hosts your site automatically, which can be useful to demonstrate the behavior of your site.
+- Localmente com um _starter_: Você pode começar com um [_starter_](/docs/starters) localmente para então fazer um build na sua própria máquina. Os _starters_ oficiais do Gatsby [`hello-world`](https://github.com/gatsbyjs/gatsby/tree/master/starters/hello-world) ou [`default`](https://github.com/gatsbyjs/gatsby-starter-default) ambos são boas bases para um caso de teste reproduzível.
+- Hospede no CodeSandbox: Você pode desenvolver um website com Gatsby diretamente do seu navegador com o CodeSandbox usando o [template Gatsby](https://codesandbox.io/s/github/gatsbyjs/gatsby-starter-default) deles. CodeSandbox também hospeda o seu website automaticamente, o que pode ser útil para demonstrar o comportamento do seu site.
 
-## Benefits of reproducible test cases
+## Benefícios de um caso de teste reproduzível
 
-- Smaller surface area: By removing everything but the error, you don't have to dig to find the bug.
-- No need to publish secret code: You might not be able to publish your main site (for many reasons). Remaking a small part of it as a reproducible test case allows you to publicly demonstrate a problem without exposing any secret code.
-- Proof of the bug: Sometimes a bug is caused by some combination of settings on your machine. A reproducible test case allows contributors to pull down your build and test it on their machines as well. This helps verify and narrow down the cause of a problem.
-- Get help with fixing your bug: If someone else can reproduce your problem, they often have a good chance of fixing the problem. It's almost impossible to fix a bug without first being able to reproduce it.
+- Menor superfície de contato: Ao remover tudo, menos o erro, faz com que você não tenha que cavar para encontrar o bug.
+- Não há necessidade de publicar código privado: Talvez você não consiga publicar o seu website principal (por diversas razões). Recriar uma pequena parte dele como um caso de teste reproduzível permite que você demonstre publicamente o problema sem expor qualquer código privado.
+- Prova da existência do bug: Algumas vezes um bug é causado por alguma combinação de configurações na sua máquina. Um caso de teste reproduzível permite que os contribuidores baixem o seu build e testem ele em suas máquinas também. Isso ajuda a verificar e restringir a causa do problema.
+- Receba ajuda para corrigir o seu bug: Se outra pessoa consegue reproduzir o problema, normalmente ela tem uma boa chance de corrigi-lo. É quase impossível corrigir um bug sem primeiro conseguir reproduzi-lo.

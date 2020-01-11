@@ -2,25 +2,25 @@
 title: Emotion
 ---
 
-In this guide, you will learn how to set up a site with the CSS-in-JS library [Emotion](https://emotion.sh).
+Neste tutorial, você irá aprender como configurar um site com a biblioteca CSS-in-JS [Emotion](https://emotion.sh).
 
-Emotion is a performant and flexible CSS-in-JS library. Building on many other CSS-in-JS libraries, it allows you to style apps quickly with string or object styles. It has predictable composition to avoid specificity issues with CSS. With source maps and labels, Emotion has a great developer experience and great performance with heavy caching in production.
+Emotion é uma performática e flexível biblioteca CSS-in-JS. Com base em muitas outras bibliotecas CSS-in-JS, ele permite que você crie estilize suas aplicações rapidamente utilizando objetos ou strings de estilo. Tem uma composição previsível para evitar problemas de especificidade com o CSS. Com source maps e rótulos, Emotion tem uma grande experiência de desenvolvimento e grande desempenho com caching pesado na produção.
 
-[Server side rendering](https://emotion.sh/docs/ssr) works out of the box in Emotion. You can use React’s `renderToString` or `renderToNodeStream` methods directly without any extra configuration. `extractCritical` feature removes unused rules that were created with emotion and helps loading pages faster.
+[Renderização do lado do servidor](https://emotion.sh/docs/ssr) funciona por padrão no Emotion. Você pode usar o método `renderToString` ou `renderToNodeStream` do React sem qualquer configuração adicional. A função `extractCritical` remove regras não usadas que foram criadas com emotion e ajuda a carregar as páginas rapidamente.
 
-First, open a new terminal window and run the following to create a new site:
+Primeiro, abra uma nova janela de terminal e execute o seguinte comando para criar um novo site:
 
 ```shell
 gatsby new emotion-tutorial https://github.com/gatsbyjs/gatsby-starter-hello-world
 ```
 
-Second, install the necessary dependencies for Emotion and Gatsby.
+Em seguida, instale as dependências necessária para o Emotion e Gatsby.
 
 ```shell
 npm install --save gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
 
-And then add the plugin to your site's `gatsby-config.js`:
+Depois, adicione o plugin `gatsby-config.js` ao seu site:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -28,9 +28,9 @@ module.exports = {
 }
 ```
 
-Then in your terminal run `npm start` to start the Gatsby development server.
+Por fim, em seu terminal execute `npm start` para iniciar o servidor de desenvolvimento do Gatsby.
 
-Now let's create a sample Emotion page at `src/pages/index.js`:
+Agora vamos criar uma simples página Emotion em `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -81,7 +81,7 @@ const Username = styled.h2`
 const Excerpt = styled.p`
   margin: 0;
 `
-// Using css prop provides a concise and flexible API to style the components. //
+// Usar o css prop fornece uma API concisa e flexível para estilizar os componentes. //
 const underline = css`
   text-decoration: underline;
 `
@@ -114,9 +114,9 @@ export default () => (
 )
 ```
 
-## Adding global styles in Gatsby with Emotion
+## Adicionando estilos globais no Gatsby com Emotion
 
-To start, create a new Gatsby site with the [hello world starter](https://github.com/gatsbyjs/gatsby-starter-hello-world) and install [`gatsby-plugin-emotion`](/packages/gatsby-plugin-emotion/) and its dependencies:
+Para iniciar, crie um novo site Gatsby com o [starter _hello world_](https://github.com/gatsbyjs/gatsby-starter-hello-world) e instale o [`gatsby-plugin-emotion`](/packages/gatsby-plugin-emotion/) e suas dependências:
 
 ```shell
 gatsby new global-styles https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -124,7 +124,7 @@ cd global-styles
 npm install --save gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
 
-Create `gatsby-config.js` and add the Emotion plugin:
+Crie o `gatsby-config.js` e adicione o plugin Emotion:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -132,7 +132,7 @@ module.exports = {
 }
 ```
 
-Next, add a layout component at `src/components/layout.js`:
+Em seguida, adicione o componente _layout_ ao `src/components/layout.js`:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -158,8 +158,7 @@ export default ({ children }) => (
   </Wrapper>
 )
 ```
-
-Then, update `src/pages/index.js` to use the layout:
+Depois, atualize o `src/pages/index.js` para usar o _layout_:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -168,4 +167,4 @@ import Layout from "../components/layout"
 export default () => <Layout>Hello world!</Layout>
 ```
 
-Run `npm run build`, and you can see in `public/index.html` that the styles have been inlined globally.
+Execute `npm run build` e você poderá ver no arquivo `public/index.html` que os estilos foram alinhados globalmente.

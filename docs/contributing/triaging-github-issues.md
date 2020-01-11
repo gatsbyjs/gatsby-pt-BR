@@ -1,110 +1,110 @@
 ---
-title: Triaging GitHub Issues
+title: Triagem de Issues do GitHub
 ---
 
-## What is the aim of this document?
+## Qual o objetivo desse documento?
 
-On the Gatsby core team, we've found patterns that help us effectively triage incoming GitHub issues, provide answers to the community's questions, identify bugs, and provide contribution opportunities. Triaging issues is a great way to contribute to the Gatsby community and share your knowledge, without necessarily requiring a lot of deep context about the way the Gatsby codebase works.
+No time principal do Gatsby, nós encontramos padrões que nos ajudam efetivamente a realizar triagem das _issues_ recebidas no GitHub, responder aos questionamentos da comunidade, identificar _bugs_, e proporcionar oportunidades de contribuição. A triagem de _issues_ é uma ótima forma de contribuir com a comunidade Gatsby e compartilhar seu conhecimento, sem necessariamente conhecer a fundo como a base de código do Gatsby funciona.
 
-We want to share these patterns with the broader community, so that if you're interested in helping us triage, you're able to do so more effectively!
+Queremos compartilhar esse padrões com toda a comunidade, de modo que, se você tem interesse em nos ajudar na triagem, que possa fazê-la da forma mais eficiente possível!
 
-In this document we’ll answer common questions, list guidelines and illustrate a decision tree.
+Nesse documento, iremos responder perguntas frequentes, listar orientações e ilustrar uma árvore de decisão.
 
-## First touch maintenance
+## Suporte ao primeiro contato
 
-For Gatsby the first line of communication between a user and the team is the issue tracker on GitHub. Typically, every day 20-30 issues are opened -- that's one every hour!
+Para o Gatsby, a primeira linha de comunicação entre um usuário e o time são as _issues_ no GitHub. Tipicamente, todo dia são abertas 20-30 _issues_ -- isso significa que recebemos uma a cada hora!
 
-An opened issue could be:
+Uma _issue_ aberta poderia ser:
 
-- a question that can be answered immediately
-- a bug report
-- a request for a feature
-- or a discussion on a complicated use case
+- uma questão que pode ser respondida imediatamente
+- um relatório de um _bug_
+- uma solicitação de uma _feature_
+- ou uma discussão sobre um caso de uso complicado
 
-On the core team, we regularly designate someone to be a first touch maintainer. That person might sift through, triage, communicate and manage this first line of communication.
+No time principal, nós regularmente designamos alguém para ser um mantenedor de primeiro contato. Essa pessoa pode filtrar, triar, comunicar e gerenciar essa primeira linha de comunicação.
 
-First touch maintainers will typically:
+Mantenedores de primeiro contato tipicamente irão:
 
-- answer questions that can be answered immediately
-- test and reproduce possible bug reports and label them appropriately
-- communicate feature requests to the rest of the team and ensure a valid response
-- enable discussions on complicated use cases, whether themselves or via the rest of team
+- lidar com perguntas que podem ser respondidas imediatamente
+- testar e reproduzir relatórios de possíveis _bugs_ e rotulá-los apropriadamente
+- comunicar solicitações de _features_ para o restante do time e garantir uma resposta válida
+- possibilitar discussões sobre casos de uso complicados, seja entre os usuários ou através do time
 
-## Why do we do first touch maintenance?
+## Por que damos suporte ao primeiro contato?
 
-We do first touch maintenance so that:
+Fazemos isto porque:
 
-- Questions are answered swiftly and correctly, therefore making users happy
-- Bug reports are reproducible and the most relevant data is collected before someone jumps in with a fix
-- Unrelated issues are resolved promptly so we don't spend too much time on them
+- As perguntas são respondidas rápida e corretamente, deixando os usuários felizes
+- Os relatórios de _bug_ são reproduzidos e os dados mais relevantes são coletados antes que alguém apresente uma solução
+- _Issues_ não relacionadas são resolvidas imediatamente, de modo que não gastamos muito tempo com elas
 
-## What is unique to Gatsby?
+## O que o Gatsby tem de único?
 
-Gatsby is unique among most open source projects because:
+Gatsby é único entre a maioria do projetos _open source_ porque:
 
-- Gatsby integrates with many third party tools (WordPress, Drupal, Contentful etc) via source plugins and hence the typical scope of issues is widened significantly
-- Gatsby aims to be really beginner friendly (we want to be the new way someone gets started with web development) and this means that we need to accommodate a wide range of skill levels
-- At Gatsby, we've defined a couple of metrics that we measure to ensure we're responsive and helpful to our open source community
+- Gatsby se integra a muitas ferramentas de terceiros (WordPress, Drupal, Contentful etc) através de _plugins_ e, consequentemente, o escopo típico das _issues_ aumenta de modo significativo
+- Gatsby visa ser realmente amigável para os iniciantes (queremos ser a nova forma de iniciar no desenvolvimento web) e isso significa que precisamos acomodar uma ampla gama de níveis de habilidades
+- No Gatsby, nós definimos um conjunto de métricas que usamos para garantir que estamos sendo responsivos e úteis à nossa comunidade _open source_
 
-## How do we do first touch maintenance?
+## Como fazemos o suporte ao primeiro contato?
 
-### General guidelines
+### Orientações gerais
 
-- **Be empathetic.** The author of an issue might be asking something that’s obvious to you but that doesn’t mean it’s obvious to them - it's important to consider the issue from the author’s viewpoint. People often remember how you make them feel, not what you told them.
-- **Add context.** When answering an issue, it can be useful to link to existing documentation, issues, PRs, or provide related context. This means the issue can serve as a reference to future readers.
-- **Encourage community contributions.** Getting people involved makes a huge impact. It’s often worth spending the time to write up a task as a `good first issue` instead of fixing the issue yourself. This can provide a low friction way for someone to get more involved in open source!
-- **Give issue authors time to close their own issues.** Sometimes, it might feel like an issue is resolved but the author could have follow up questions. It's usually best to give them a day or two to close the issue themselves.
+- **Seja empático.** O autor de uma _issue_ pode estar perguntando algo que é óbvio para você, mas isso não significa que seja óbvio para ele - é importante enxergar a _issue_ sob o ponto de vista do autor. As pessoas frequentemente lembram-se de como você as fez sentir, e não do que você as disse.
+- **Contextualize.** Ao responder uma _issue_, pode ser útil anexar _links_ para documentação, _issues_ ou PR's existentes, ou fornecer um contexto relacionado. Assim, a _issue_ pode servir como referência para leitores futuros.
+- **Incentive contribuições da comunidade.** Envolver as pessoas causa um impacto enorme. Muitas vezes, vale mais a pena dedicar seu tempo para escrever uma _task_ `good first issue` do que propriamente resolvê-la. Isso pode proporcionar uma maneira menos desgastante de alguém se envolver mais no _open source_!
+- **Dê tempo para os autores fecharem suas _issues_.** Às vezes, pode parecer que uma _issue_ está resolvida, no entanto, o autor pode ter questionamentos a serem feitos. Geralmente, é melhor dar a ele um ou dois dias para fechar a _issue_.
 
-### Labeling
+### Etiquetas
 
-Labeling helps group issues into manageable sets and also improves searchability and scannability. We have a set of labels that we use to group issues based on their type and status. While we want to limit adding too many labels, feel free to add one if it seems relevant and helps with this grouping!
+As etiquetas além de ajudarem a agrupar _issues_ em conjuntos gerenciáveis, melhoram as capacidades de pesquisa e identificação. Nós temos um conjunto de etiquetas que usamos para agrupar as _issues_ de acordo com seus tipos e _status_. Embora queiramos limitar o número de etiquetas, sinta-se à vontade para adicionar alguma se parecer relevante e for ajudar no agrupamento!
 
-It's nice to update labels as the state of an issue changes or if the type of an issue changes, for example if a question becomes a feature request. This means labels are transient in nature and subject to being updated as progress is made on addressing issues.
+É legal atualizar as etiquetas à medida que o estado ou tipo da _issue_ é alterado, por exemplo, se uma pergunta se torna uma solicitação de _feature_. Isso significa que as etiquetas são de natureza transitória e são sujeitas a serem atualizadas de acordo com o progresso da _issue_.
 
-Check out [the docs on issue labeling for more info](/contributing/how-to-label-an-issue/)
+Confira os [documentos sobre rotulagem](/contributing/how-to-label-an-issue/) para mais informações.
 
-### Resolution flowchart
+### Fluxograma de resolução
 
-The [resolution flowchart](https://whimsical.co/QvuMgo31T2C3xcWbou8xhy) provides a decision tree for how issues should be categorized into one of five types: question or discussion, bug report, feature request, documentation, or maintenance.
+O [fluxograma de resolução](https://whimsical.co/QvuMgo31T2C3xcWbou8xhy) fornece uma árvore de decisão a respeito de como as _issues_ devem ser categorizadas em um dos cinco tipos: _question ou discussion_, _bug report_, _feature request_, _documentation_, ou _maintenance_.
 
-### Saved replies
+### Respostas salvas
 
-Gatsby team members have saved certain [common form responses](https://github.com/orgs/gatsbyjs/teams/admin/discussions/3) to help accelerate issue triage.
+Os membros do time Gatsby salvaram certas [respostas comuns de formulário](https://github.com/orgs/gatsbyjs/teams/admin/discussions/3) para acelerar a triagem das _issues_.
 
-## Bot
+## _Bot_
 
-We have a bot that helps us automate some aspects:
+Temos um _bot_ que nos ajuda a automatizar algumas coisas:
 
-- Issues with a question mark in their title or starting with "how" are automatically labeled as questions
-- Issues with an empty body are closed
-- Issues with no activity are marked stale after 20 days. They are then closed after another 10 days unless there are additional comments or the "not stale" label is applied
+- _Issues_ com interrogação em seus títulos ou que começam com _"how"_ ("como") são automaticamente etiquetadas como perguntas (`question`)
+- _Issues_ com um corpo vazio são fechadas
+- _Issues_ inativas são marcadas como obsoletas depois de 20 dias. Após mais 10 dias elas são então fechadas, a menos que existam comentários adicionais ou estejam com a etiqueta `not stale` ("não obsoleta").
 
-## Frequently asked questions
+## Perguntas frequentes
 
-> When do I do a demo for an issue?
+> Quando devo fazer uma demo para uma _issue_?
 
-When a feature or pattern is not documented, it may be nice to make a demo to add clarity for the author and help future readers as well.
+Quando uma _feature_ ou padrão não está documentado, pode ser legal criar uma demo para dar mais clareza ao autor bem como ajudar leitores futuros.
 
-> How do I reproduce a bug?
+> Como reproduzo um _bug_?
 
-Every bug report should provide details on how to reproduce the bug. This is so important that there's [dedicated documentation on how to create good bug reproductions](/contributing/how-to-make-a-reproducible-test-case/). Encourage issue authors to describe exactly how to reproduce a bug.
+Todo relatório de _bug_ deve fornecer detalhes sobre como reproduzí-lo. Isso é tão importante que há uma [documentação dedicada sobre como criar um bom guia de reprodução de um _bug_](/contributing/how-to-make-a-reproducible-test-case/). Incentive os autores das _issues_ a descreverem exatamente como reproduzir um _bug_.
 
-> How much time do I spend on an issue?
+> Quanto tempo devo gastar em uma _issue_?
 
-Some issues might need more time than others and there isn’t any hard and fast rule. However, it's best to spend time on an issue after the relevant info and reproduction is available.
+Algumas _issues_ demandam mais tempo que outras e não há nenhuma regra rígida sobre isso. Entretanto, é melhor dedicar tempo para _issues_ depois que informações relevantes e o guia para reprodução são disponibilizados.
 
-> Do I have to look at Discord?
+> Eu tenho que olhar o Discord?
 
-You don’t have to. Some of us are active on Discord and you can be too if you like.
+Você não precisa. Alguns de nós são ativos no Discord, e você pode ser também, se desejar.
 
-> Do I use the same issue to track documentation additions or open a new one?
+> Uso a mesma _issue_ para rastrear adições na documentação ou abro uma nova?
 
-If the issue describes the context well enough, then it is okay to update its title and use the same issue to track the addition of relevant documentation.
+Se a _issue_ descreve o contexto bem o suficiente, então não há problema em atualizar seu título e utilizá-la para rastrear adições na documentação.
 
-> When do I follow up on an issue?
+> Quando devo acompanhar uma _issue_?
 
-If an author hasn’t responded to a comment for a week or two, it might be nice to follow up and ask if there’s anything else we can do to help. If the issue goes stale after that, our bot should be able to clean it up.
+Se o autor não responder a um comentário por uma ou duas semanas, pode ser legal acompanhá-la e perguntar se há algo em que possamos ajudar. Se a _issue_ se tornar obsoleta após isso, nosso _bot_ poderá limpá-la.
 
-> What do I do if an issue relates to something upstream?
+> O que faço se uma _issue_ é relacionada a algo no _upstream_?
 
-It’s a good practice to open an issue in the upstream repository in cases like this but isn’t strictly necessary. Upstream in this case refers to repositories that house dependencies for Gatsby.
+É uma boa prática abrir uma _issue_ no repositório _upstream_ em casos como esse, mas não é estritamente necessário. _Upstream_ nesse caso refere-se a repositórios que hospedam dependências para o Gatsby.
