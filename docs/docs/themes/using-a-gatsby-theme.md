@@ -18,7 +18,7 @@ gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 
 ## O que um tema starter faz?
 
-O starter oficial para o tema do blog segue o seguinte:
+O starter oficial para o tema do blog faz o seguinte:
 
 ### 1. O starter instala o tema e o configura.
 
