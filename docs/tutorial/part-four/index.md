@@ -61,14 +61,12 @@ Veja o guia [Usando Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/) par
 
 Se você está construindo um pequeno site, uma forma eficiente de construi-lo é usar dados desestruturados conforme apresentado nesse guia, usando a API `createPages`, e caso o site se tornar mais complexo no futuro, você parte para a construção de sites mais complexos, ou caso você gostaria de transformar seus dados, siga esses passos:
 
-1.  Confira a [Biblioteca de Plugins](/plugins/) para ver se os plugins de extração e/ou plugins de transformação que você gostaria de utilizar já existem.
-2.  Se eles não existirem, leia o guia de [Autoria de Plugins](/docs/creating-plugins/) e considere construir você mesmo! 
+1. Confira a [Biblioteca de Plugins](/plugins/) para ver se os plugins de extração e/ou plugins de transformação que você gostaria de utilizar já existem.
+2. Se eles não existirem, leia o guia de [Autoria de Plugins](/docs/creating-plugins/) e considere construir você mesmo!
 
 ### Como a camada de dados do Gatsby usa GraphQL para injetar dados nos componentes
 
-Há muitas opções para injetar dados nos componentes React. Uma das mais 
-populares e poderosas é a tecnologia chamada 
-[GraphQL](http://graphql.org/).
+Há muitas opções para injetar dados nos componentes React. Uma das mais populares e poderosas é a tecnologia chamada [GraphQL](http://graphql.org/).
 
 GraphQL foi criado pelo Facebook para ajudar engenheiros de produto a _injetar_ os dados necessários nos
 componentes.
@@ -125,7 +123,7 @@ export default ({ children }) => (
           font-style: normal;
         `}
       >
-        Pandas Eating Lots
+        Pandas Comendo Bastante
       </h3>
     </Link>
     <Link
@@ -147,11 +145,11 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>Amazing Pandas Eating Things</h1>
+    <h1>Pandas incríveis comendo coisas</h1>
     <div>
       <img
         src="https://2.bp.blogspot.com/-BMP2l6Hwvp4/TiAxeGx4CTI/AAAAAAAAD_M/XlC_mY3SoEw/s1600/panda-group-eating-bamboo.jpg"
-        alt="Group of pandas eating bamboo"
+        alt="Grupo de pandas comendo bambu"
       />
     </div>
   </Layout>
@@ -164,10 +162,10 @@ import Layout from "../components/layout"
 
 export default () => (
   <Layout>
-    <h1>About Pandas Eating Lots</h1>
+    <h1>Sobre Pandas Comendo Bastante</h1>
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      Nós somos o único site rodando no seu computador dedicado a mostrar as melhores
+      fotos e vídeos de pandas comendo muita comida.
     </p>
   </Layout>
 )
@@ -249,10 +247,10 @@ import Layout from "../components/layout"
 // highlight-next-line
 export default ({ data }) => (
   <Layout>
-    <h1>About {data.site.siteMetadata.title}</h1> {/* highlight-line */}
+    <h1>Sobre {data.site.siteMetadata.title}</h1> {/* highlight-line */}
     <p>
-      We're the only site running on your computer dedicated to showing the best
-      photos and videos of pandas eating lots of food.
+      Nós somos o único site rodando no seu computador dedicado a mostrar as melhores
+      fotos e vídeos de pandas comendo muita comida.
     </p>
   </Layout>
 )
@@ -349,7 +347,7 @@ export default ({ children }) => {
           float: right;
         `}
       >
-        About
+        Sobre
       </Link>
       {children}
     </div>
