@@ -1,65 +1,66 @@
 ---
-title: Deploying to Render
+title: Publicando no Render
 ---
 
-[Render](https://render.com) is a fully-managed cloud platform where you can host static sites, backend APIs, databases, cron jobs, and all your other apps in one place.
+[Render](https://render.com) é uma plataforma em nuvem totalmente gerenciável onde você pode hospedar seus sites, APIs, banco de dados, agendadores de tarefas e todos os outros aplicativos em um unico lugar.
 
-Static sites are **completely free** on Render and include the following features:
+Sites estáticos são **totalmente grátis** no Render e é incluído as seguintes funcionalidades:
 
-- Continuous, automatic builds & deploys from GitHub.
-- Automatic SSL certificates through [Let's Encrypt](https://letsencrypt.org).
-- Instant cache invalidation with a lightning fast, global CDN.
-- Unlimited collaborators.
-- Unlimited [custom domains](https://render.com/docs/custom-domains).
-- Automatic [Brotli compression](https://en.wikipedia.org/wiki/Brotli) for faster sites.
-- Native HTTP/2 support.
-- [Pull Request Previews](https://render.com/docs/pull-request-previews).
-- Automatic HTTP → HTTPS redirects.
-- Custom URL redirects and rewrites.
+- Builds e publicações do Github de forma automática e continua.
+- Certificados SSL automáticos através da [Let's Encrypt](https://letsencrypt.org).
+- Validação de cache instantanea com um CDN veloz e global. 
+- Colaboradores ilimitados.
+- [Dominios personalizados](https://render.com/docs/custom-domains) ilimitados.
+- [Brotli compression](https://en.wikipedia.org/wiki/Brotli) automático para sites rápidos.
+- Suporte nativo ao HTTP/2.
+- [Visualização de pull requests](https://render.com/docs/pull-request-previews).
+- Redirecionamento automático HTTP → HTTPS. 
+- Redirecionamento personalizado de URL e reescrita
 
-## Prerequisites
+## Pré-requisitos
 
-This guide assumes you already have a Gatsby project to deploy. If you need a project, use the [Quick Start](/docs/quick-start) or fork Render's [Gatsby Starter](https://github.com/render-examples/gatsby-starter-default) before continuing.
+Esse guia assume que você já possui um projeto Gatsby para publicar. Se voce precisa de um projeto poderá usar o [Projeto de Introdução](/docs/quick-start) ou crie um fork do [Gatsby Starter usando Render ](https://github.com/render-examples/gatsby-starter-default)  antes de continuar.
 
-## Setup
+## Configuração
 
-You can set up a Gatsby site on Render in two quick steps:
+Você pode configurar um site Gatsby no Render em dois passos rápidos:
 
-1. Create a new **Web Service** on Render, and give Render permission to access your GitHub repo.
-2. Use the following values during creation:
+1. Crie um novo **Web Service** no Render e conceda permissão para acessar o seu repositório no GitHub.
+
+2. Use os seguintes valores durante a criação:
 
    |                       |                                            |
    | --------------------- | ------------------------------------------ |
-   | **Environment**       | `Static Site`                              |
-   | **Build Command**     | `gatsby build` (or your own build command) |
-   | **Publish Directory** | `public` (or your own output directory)    |
+   | **Ambiente**       | `Static Site`                              |
+   | **Comando de build**     | `gatsby build` (ou o seu próprio comando de build) |
+   | **Diretório de publicação** | `public` (ou o seu próprio diretório de publicação)    |
 
-That's it! Your site will be live on your Render URL (which looks like `yoursite.onrender.com`) as soon as the build is done.
+Pronto! Seu site vai estar disponível na sua URL do Render (Que vai parecer com `yoursite.onrender.com`) assim que a build finalizar.
 
-## Continuous deploys
+## Publicação Continua
 
-Now that Render is connected to your repo, it will **automatically build and publish your site** any time you push to GitHub.
+Agora que o Render está conectado com o seu repositório, ele vai **automaticamente fazer a build e publicar o seu site** quando você enviar alterações para o Github.
 
-You can choose to disable auto deploys under the **Settings** section for your site and deploy it manually from the Render dashboard.
+Você pode escolher desabilitar publicações automáticas na seção de **Settings** para o seu site e fazer a publicação manualmente no painel de controle do Render.
 
-## Render CDN and cache invalidation
+## CDN do Render e Invalidação de Cache
 
-Render hosts your site on a global, lightning fast CDN which ensures the fastest possible download times for all your users across the globe.
+O Render hospeda o seu site em um CDN global e veloz que garante os tempos de download mais rápidos possíveis para todos os usuários ao redor do mundo.
 
-Every deploy automatically and instantly invalidates the CDN cache, so your users can always access the latest content on your site.
+Cada publicação automática e instantanea invalida o cache do CDN, então seus usuários podem sempre acessar os últimos conteúdos do seu site.
 
-## Custom domains
+## Dominios Personalizados
 
-Add your own domains to your site easily using Render's [custom domains](https://render.com/docs/custom-domains) guide.
+Adicione seu próprio dominio para o seu site facilmente usando o guia de [dominios personalizados](https://render.com/docs/custom-domains) do Render.
 
-## Pull Request Previews
+## Visualização de Pull Requests
 
-With Pull Request (PR) previews, you can visualize changes introduced in a pull request instead of simply relying on code reviews.
+Com a visualização de pull request você pode visualizar as alterações introduzidas em uma pull request ao invés de simplesmentet confiar em code reviews.
 
-Once enabled, every PR for your site will automatically generate a new static site based on the code in the PR. It will have its own URL, and it will be deleted automatically when the PR is closed.
+Uma vez abilitado toda PR para o seu site vai gerar automáticamente um novo site estático base no código da PR. Esse site vai ter sua própria URL e vai ser deletado automáticamente quando a PR for fechada.
 
-Read more about [Pull Request Previews](https://render.com/docs/pull-request-previews) on Render.
+Leia mais sobre [Visualização de Pull Request](https://render.com/docs/pull-request-previews) nas docs do Render.
 
-## Support
+## Suporte
 
-Chat with Render developers at https://render.com/chat or email `support@render.com` if you need help.
+Converse com desenvolvedores do Render em https://render.com/chat ou no email `support@render.com` se você precisar de alguma ajuda.
