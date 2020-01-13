@@ -2,15 +2,15 @@
 title: Publicando no Render
 ---
 
-[Render](https://render.com) é uma plataforma em nuvem totalmente gerenciável onde você pode hospedar seus sites, APIs, banco de dados, agendadores de tarefas e todos os outros aplicativos em um unico lugar.
+[Render](https://render.com) é uma plataforma em nuvem totalmente gerenciável onde você pode hospedar seus sites estáticos, APIs, banco de dados, agendadores de tarefas e todos os outros aplicativos em um unico lugar.
 
-Sites estáticos são **totalmente grátis** no Render e é incluído as seguintes funcionalidades:
+Sites estáticos são **totalmente gratuitos** no Render e incluem as seguintes funcionalidades:
 
 - Builds e publicações do Github de forma automática e continua.
 - Certificados SSL automáticos através da [Let's Encrypt](https://letsencrypt.org).
-- Validação de cache instantanea com um CDN veloz e global. 
+- Invalidação instantânea de cache com um CDN veloz e global. 
 - Colaboradores ilimitados.
-- [Dominios personalizados](https://render.com/docs/custom-domains) ilimitados.
+- [Domínios personalizados](https://render.com/docs/custom-domains) ilimitados.
 - [Brotli compression](https://en.wikipedia.org/wiki/Brotli) automático para sites rápidos.
 - Suporte nativo ao HTTP/2.
 - [Visualização de pull requests](https://render.com/docs/pull-request-previews).
@@ -26,7 +26,6 @@ Esse guia assume que você já possui um projeto Gatsby para publicar. Se voce p
 Você pode configurar um site Gatsby no Render em dois passos rápidos:
 
 1. Crie um novo **Web Service** no Render e conceda permissão para acessar o seu repositório no GitHub.
-
 2. Use os seguintes valores durante a criação:
 
    |                       |                                            |
@@ -37,9 +36,9 @@ Você pode configurar um site Gatsby no Render em dois passos rápidos:
 
 Pronto! Seu site vai estar disponível na sua URL do Render (Que vai parecer com `yoursite.onrender.com`) assim que a build finalizar.
 
-## Publicação Continua
+## Publicação Contínua
 
-Agora que o Render está conectado com o seu repositório, ele vai **automaticamente fazer a build e publicar o seu site** quando você enviar alterações para o Github.
+Agora que o Render está conectado com o seu repositório, ele vai **automaticamente fazer a build e publicar o seu site** sempre que você enviar alterações para o Github.
 
 Você pode escolher desabilitar publicações automáticas na seção de **Settings** para o seu site e fazer a publicação manualmente no painel de controle do Render.
 
@@ -51,13 +50,13 @@ Cada publicação automática e instantanea invalida o cache do CDN, então seus
 
 ## Dominios Personalizados
 
-Adicione seu próprio dominio para o seu site facilmente usando o guia de [dominios personalizados](https://render.com/docs/custom-domains) do Render.
+Adicione seu próprio dominio ao seu site facilmente usando o guia de [domínios personalizados](https://render.com/docs/custom-domains) do Render.
 
 ## Visualização de Pull Requests
 
 Com a visualização de pull request você pode visualizar as alterações introduzidas em uma pull request ao invés de simplesmentet confiar em code reviews.
 
-Uma vez abilitado toda PR para o seu site vai gerar automáticamente um novo site estático base no código da PR. Esse site vai ter sua própria URL e vai ser deletado automáticamente quando a PR for fechada.
+Uma vez habilitado toda PR para o seu site vai gerar automaticamente um novo site estático baseado no código da PR. O mesmo vai possuir sua própria URL, e vai ser deletado automaticamente quando a PR for fechada.
 
 Leia mais sobre [Visualização de Pull Request](https://render.com/docs/pull-request-previews) nas docs do Render.
 
