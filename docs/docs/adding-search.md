@@ -8,13 +8,13 @@ Veja abaixo uma lista de guias nessa sessão, ou continue lendo para uma visão 
 
 ## Visão geral de busca no _site_
 
-Antes de seguirmos com as etapas para adicionar pesquisa no seu _website_ Gatsby, vamos examinar os componenetes necessários para adicionar pesquisa a um _website_.
+Antes de seguirmos com as etapas para adicionar pesquisa no seu _website_ Gatsby, vamos examinar os componentes necessários para adicionar pesquisa a um _website_.
 
 São necessários três componentes para adicionar pesquisa ao seu _website_ Gatsby:
 
-1.  índice
-2.  motor
-3.  UI
+1. Índice
+2. Motor
+3. UI
 
 ## Componentes de pesquisa do _site_
 
@@ -36,23 +36,23 @@ Agora que você sabe sobre os três componentes requisitados, existem algumas ma
 
 ### Use um motor de busca _open source_
 
-Usar um mecanismo de busca _open source_ é sempre grátis e permite que você ative pesquisa _offline_ para o seu _site_. Observe que você precisa ser cuidado com a pesquisa _offline_, porque todo o índice de pesquisa precisa ser trazido para o cliente, o que pode afetar significativamente o tamanho do pacote.
+Usar um mecanismo de busca _open source_ é sempre grátis e permite que você ative pesquisa _offline_ para o seu _site_. Observe que você precisa ter cuidado com a pesquisa _offline_, porque todo o índice de pesquisa precisa ser trazido para o cliente, o que pode afetar significativamente o tamanho do pacote.
 
-Bibliotecas _open source_ como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) ou [`js-search`](https://github.com/bvaughn/js-search) podem ser utilizadas para ativar pesquisa para o seu _site_.
+Bibliotecas _open source_ como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) ou [`js-search`](https://github.com/bvaughn/js-search) podem ser utilizadas para possibilitar pesquisa para o seu _site_.
 
 Isso exigirá que você crie um índice de busca quando o seu _site_ for construído. Para [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), existe um _plugin_ chamado [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) que cria um índice de pesquisa automaticamente.
 
-Para outras bibliotecas, você pode utilizar a combinação de [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) e [`sourceNodes`](/docs/node-apis/#sourceNodes)  da API do Gatsby node para criar o índice de pesquisa e disponibilizá-lo no GraphQL. Para mais informação em como fazer isso, confira [`gatsby-plugin-elasticlunr-search`'s source code](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
+Para outras bibliotecas, você pode utilizar a combinação de [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) e [`sourceNodes`](/docs/node-apis/#sourceNodes)  da API do Gatsby node para criar o índice de pesquisa e disponibilizá-lo no GraphQL. Para mais informação em como fazer isso, confira [o código fonte do `gatsby-plugin-elasticlunr-search`'s](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
 
-Outra opção é gerar o índice de pesquisa no final da construção, utilizando o [`onPostBuild`](/docs/node-apis/#onPostBuild) da API node. Essa abordagem é utilizada pelo [`gatsby-plugin-lunr`](https://github.com/humanseelabs/gatsby-plugin-lunr) para construir índices multi idiomas.
+Outra opção é gerar o índice de pesquisa no final da construção, utilizando o [`onPostBuild`](/docs/node-apis/#onPostBuild) da API node. Essa abordagem é utilizada pelo [`gatsby-plugin-lunr`](https://github.com/humanseelabs/gatsby-plugin-lunr) para construir índices multi-idiomas.
 
 Depois de construír o índice de busca e inclui-lo na camada de dados do Gatsby, você vai precisar permitir o usuário a pesquisar o seu _website_. Isso geralmente é feito utilizando uma entrada de texto para capturar a consulta de busca e, em seguida, usando uma das bibliotecas mencionadas acima para recuperar o(s) documento(s) desejado(s).
 
 ### Use um motor de busca baseado em API
 
-Outra opção é utilizar um motor de busca externo. Essa solução é muito mais escalável, pois visitantes do seu _site_ não precisam baixar todo o seu índice de pesquisa (no qual se torna enorme a medida que o _site_ cresce) para pesquisar no seu _site_. A desvantagem é que você precisará pagar para hospedar o mecanismo de busca ou pagar por um serviço de pesquisa comercial.
+Outra opção é utilizar um motor de busca externo. Essa solução é muito mais escalável, pois visitantes do seu _site_ não precisam baixar todo o seu índice de pesquisa (que poderá se tornar enorme a medida que o _site_ cresce) para pesquisar no seu _site_. A desvantagem é que você precisará pagar para hospedar o mecanismo de busca ou pagar por um serviço de pesquisa comercial.
 
-Existem vários disponíveis em ambos os casos, seja de código aberto, que você mesmo pode hospedar e opções de hospedagem comerciais.
+Existem várias opções disponíveis, sejam as de código aberto onde você mesmo pode hospedar ou então opções de hospedagem comercial.
 
 - [ElasticSearch](https://www.elastic.co/products/elasticsearch) — OSS e tem hospedagem comercial disponível
 - [Solr](http://lucene.apache.org/solr/) — OSS e tem hospedagem comercial disponível
