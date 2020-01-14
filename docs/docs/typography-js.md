@@ -38,7 +38,6 @@ module.exports = {
 
 Agora que você adicionou o plugin, crie o diretório `src/utils/` se ele ainda não existir no seu projeto e adicione um novo arquivo chamado `typography.js`. Você usará esse arquivo para especificar a configuração do Typography e definir esse arquivo como o caminho para a opção `pathToConfigModule`.
 
-Inside the `typography.js` file you created, you define your website's typography configuration. A basic typography.js configuration looks like this:
 
 Dentro do arquivo `typography.js` que você criou, você define a configuração de tipografia do seu site. Uma configuração básica do typography.js é semelhante a esta:
 
