@@ -1,26 +1,26 @@
 ---
-title: Working with Images in Gatsby
+title: Trabalhando com imagens no Gatsby
 ---
 
-Optimizing images is a challenge on any website. To utilize best practices for performance across devices, you need multiple sizes and resolutions of each image. Luckily, Gatsby has several useful [plugins](/docs/plugins/) that work together to do that for images on [page components](/docs/building-with-components/#page-components).
+Otimizar imagens é um desafio em qualquer site. Para utilizar as melhores práticas de desempenho em todos os dispositivos, você precisa de vários tamanhos e resoluções de cada imagem. Felizmente, o Gatsby possui vários [plugins](/docs/plugins/) úteis que trabalham juntos para te ajudar nessas tarefas, como pode ser visto em [page components](/docs/building-with-components/#page-components).
 
-The recommended approach is to use [GraphQL queries](/docs/querying-with-graphql/) to get images of the optimal size or resolution, then, display them with the [`gatsby-image`](/packages/gatsby-image/) component.
+Recomenda-se usar [GraphQL queries](/docs/querying-with-graphql/) para obter imagens com o tamanho ou resolução ideais, exiba-as com o componente [`gatsby-image`](/packages/gatsby-image/).
 
-## Query images with GraphQL
+## Tratando imagens com o GraphQL
 
-Querying images with GraphQL allows you to access the image's data as well as perform transformations with [Sharp](https://github.com/lovell/sharp), a high-performance image processing library.
+O tratamento de imagens com o GraphQL permite acesso aos dados da imagem e a realização de transformações com o [Sharp](https://github.com/lovell/sharp), uma biblioteca de processamento de imagem de alto desempenho.
 
-You'll need a few plugins for this:
+Você precisará de alguns plugins para isso:
 
-- [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) plugin allows you to [query files with GraphQL](/docs/querying-with-graphql/#images)
-- [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) powers the connections between Sharp and Gatsby Plugins
-- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) allows you to create multiples images of the right sizes and resolutions with a query
+- O plugin [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) permite que você trate arquivos com o GraphQL. Veja como em [query files with GraphQL](/docs/querying-with-graphql/#images)
+- [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) alimenta as conexões entre os plugins Sharp e Gatsby
+- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) permite o tratamento de várias imagens para que tenham tamanhos e resoluções corretos
 
-If the final image is of a fixed size, optimization relies on having multiple resolutions of the image. If it is responsive, that is it stretches to fill a container or page, optimization relies on having different sizes of the same image. See the [Gatsby Image documentation for more information](/packages/gatsby-image/#two-types-of-responsive-images).
+Se a imagem final tiver um tamanho fixo, a otimização dependerá de várias resoluções da imagem. Se for responsivo, ou seja, se estende para preencher um contêiner ou página, a otimização depende de ter tamanhos diferentes da mesma imagem. Veja mais em [Gatsby Image documentation for more information](/packages/gatsby-image/#two-types-of-responsive-images).
 
-You can also use arguments in your query to specify exact, minimum, and maximum dimensions. See the [Gatsby Image documentation for complete options](/packages/gatsby-image/#two-types-of-responsive-images).
+Você também pode usar argumentos no tratamento para especificar dimensões exatas, mínimas e máximas. Veja como em [Gatsby Image documentation for complete options](/packages/gatsby-image/#two-types-of-responsive-images).
 
-This example is for an image gallery where images stretch when the page is resized. It uses the `fluid` method and the fluid fragment to grab the right data to use in `gatsby-image` component and arguments to set the maximum width as 400px and maximum height as 250px.
+Este exemplo é para uma galeria de imagens onde as imagens se estendem quando a página é redimensionada. Ele usa o método `fluid` e o fragmento fluido para obter os dados corretos para usar no componente ` gatsby-image` e os argumentos para definir a largura máxima como 400px e a altura máxima como 250px.
 
 ```js
 export const query = graphql`
@@ -36,28 +36,29 @@ export const query = graphql`
 `
 ```
 
-## Optimizing images with gatsby-image
+## Otimizando imagens com o gatsby-image
 
-[`gatsby-image`](/packages/gatsby-image/) is a plugin that automatically creates React components for optimized images that:
+[`gatsby-image`](/packages/gatsby-image/) é um plug-in que cria automaticamente componentes React para imagens otimizadas que:
 
-> - Loads the optimal size of image for each device size and screen resolution
-> - Holds the image position while loading so your page doesn't jump around as images load
-> - Uses the "blur-up" effect i.e. it loads a tiny version of the image to show while the full image is loading
-> - Alternatively provides a "traced placeholder" SVG of the image
-> - Lazy loads images, which reduces bandwidth and speeds the initial load time
-> - Uses [WebP](https://developers.google.com/speed/webp/) images, if browser supports the format
+> - Carrega o tamanho ideal da imagem para cada dispositivo e resolução de tela
+> - Mantém a posição da imagem durante o carregamento para que sua página não se mova à medida que as imagens são carregadas
+> - Usa o efeito "desfoque", ou seja, carrega uma versão minúscula da imagem para mostrar enquanto a imagem completa está sendo carregada
+> - Como alternativa, fornece um SVG de "espaço reservado rastreado" da imagem
+> - Reduz a largura de banda e acelera o tempo de carregamento inicial com carregamento lento de imagens 
+> - Usa [WebP](https://developers.google.com/speed/webp/) se o navegador suportar o formato
 
-Here is an image component that uses the query from the previous example:
+
+Aqui está um componente de imagem que usa o tratamento do exemplo anterior:
 
 ```jsx
 <Img fluid={data.fileName.childImageSharp.fluid} alt="" />
 ```
 
-## Using fragments to standardize formatting
+## Usando fragmentos para padronizar a formatação
 
-What if you have a bunch of images and you want them all to use the same formatting?
+E se você tiver um monte de imagens e quiser que todas tenham a mesma formatação?
 
-A custom fragment is an easy way to standardize formatting and re-use it on multiple images:
+Um fragmento personalizado é uma maneira fácil de padronizar a formatação e reutilizá-la em várias imagens:
 
 ```js
 export const squareImage = graphql`
@@ -71,7 +72,7 @@ export const squareImage = graphql`
 `
 ```
 
-The fragment can then be referenced in the image query:
+O fragmento pode ser referenciado no tratamento da imagem:
 
 ```js
 export const query = graphql`
@@ -91,10 +92,10 @@ export const query = graphql`
 `
 ```
 
-### Additional resources
+### Recursos adicionais
 
 - [Gatsby Image API docs](/docs/gatsby-image/)
-- [Using gatsby-image with Gatsby](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e), free egghead.io playlist
+- [Using gatsby-image with Gatsby](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e), playlist gratuita egghead.io 
 - [gatsby-image plugin README file](/packages/gatsby-image/)
 - [gatsby-plugin-sharp README file](/packages/gatsby-plugin-sharp/)
 - [gatsby-transformer-sharp README file](/packages/gatsby-transformer-sharp/)
