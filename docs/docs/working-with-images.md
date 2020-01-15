@@ -8,7 +8,7 @@ Recomenda-se usar [GraphQL queries](/docs/querying-with-graphql/) para obter ima
 
 ## Tratando imagens com o GraphQL
 
-O tratamento de imagens com o GraphQL permite acesso aos dados da imagem e a realização de transformações com o [Sharp](https://github.com/lovell/sharp), uma biblioteca de processamento de imagem de alto desempenho.
+Realizar a busca de imagens com GraphQL permite acesso aos dados da imagem além de permitir a realização de transformações com o [Sharp](https://github.com/lovell/sharp), uma biblioteca de processamento de imagem de alto desempenho.
 
 Você precisará de alguns plugins para isso:
 
