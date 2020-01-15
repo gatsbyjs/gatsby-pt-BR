@@ -14,7 +14,7 @@ Você precisará de alguns plugins para isso:
 
 - O plugin [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) permite que você trate arquivos com o GraphQL. Veja como em [query files with GraphQL](/docs/querying-with-graphql/#images)
 - [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) alimenta as conexões entre os plugins Sharp e Gatsby
-- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) permite o tratamento de várias imagens para que tenham tamanhos e resoluções corretos
+- [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) permite a criação várias imagens para que tenham tamanhos e resoluções corretos com uma única busca
 
 Se a imagem final tiver um tamanho fixo, a otimização dependerá de várias resoluções da imagem. Se for responsivo, ou seja, se estende para preencher um contêiner ou página, a otimização depende de ter tamanhos diferentes da mesma imagem. Veja mais em [Gatsby Image documentation for more information](/packages/gatsby-image/#two-types-of-responsive-images).
 
