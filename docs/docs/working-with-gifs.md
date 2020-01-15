@@ -14,12 +14,12 @@ Aqui está um exemplo:
 import React from 'react'
 
 import Layout from '../components/layout'
-import otterGIF from '../gifs/otter.gif'
+import lontraGIF from '../gifs/otter.gif'
 
 const AboutPage = () => (
     return (
         <Layout>
-            <img src={otterGIF} alt="Otter dancing with a fish" />
+            <img src={lontraGIF} alt="Lontra dançando com um peixe" />
         </Layout>
     )
 )
@@ -32,7 +32,7 @@ export default AboutPage;
 Em posts e páginas Markdown, incluir um GIF animado é o mesmo que incluir uma imagem estática:
 
 ```markdown
-![otter dancing with a fish](./images/dancing-ofter.gif)
+![Lontra dançando com um peixe](./images/dancing-ofter.gif)
 ```
 
 ![Lontra dançando com um peixe](./images/dancing-otter.gif)
