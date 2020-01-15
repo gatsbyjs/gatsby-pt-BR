@@ -44,7 +44,7 @@ export const query = graphql`
 > - Mantém a posição da imagem durante o carregamento para que sua página não se mova à medida que as imagens são carregadas
 > - Usa o efeito "desfoque", ou seja, carrega uma versão minúscula da imagem para mostrar enquanto a imagem completa está sendo carregada
 > - Como alternativa, fornece um SVG de "espaço reservado rastreado" da imagem
-> - Reduz a largura de banda e acelera o tempo de carregamento inicial com carregamento lento de imagens 
+> - Reduz a largura de banda e acelera o tempo de carregamento inicial utilizando carregamento _lazy_ de imagens, isto é, carrega elas somente quando necessário 
 > - Usa [WebP](https://developers.google.com/speed/webp/) se o navegador suportar o formato
 
 
