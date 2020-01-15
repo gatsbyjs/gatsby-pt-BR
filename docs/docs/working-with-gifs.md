@@ -41,7 +41,7 @@ Os GIFs animados podem ser bastante grandes em tamanho, no entanto, tenha cuidad
 
 ## Preocupações de acessibilidade com GIFs animados
 
-Tenha cuidado com os GIFs que piscam e se reproduzem automaticamente pois podem causar problemas para os usuários sensíveis ao movimento. Os GIFs não devem ser reproduzidos automaticamente sempre que possível por razões de segurança. Uma técnica seria adicionar controles, como o uso de pacotes como [react-gif-player](https://www.npmjs.com/package/react-gif-player) com [pacotes exclusivos para client](/docs/using-client-side-only-packages/).
+Tenha cuidado com os GIFs que piscam e se reproduzem automaticamente pois podem causar problemas para os usuários sensíveis ao movimento. Os GIFs não devem ser reproduzidos automaticamente sempre que possível por razões de segurança. Uma técnica seria adicionar controles,utilizando-se de pacotes como [react-gif-player](https://www.npmjs.com/package/react-gif-player) como um [pacote exclusivo para o _client-side_](/docs/using-client-side-only-packages/).
 
 Para mais informações sobre o movimento acessível:
 
