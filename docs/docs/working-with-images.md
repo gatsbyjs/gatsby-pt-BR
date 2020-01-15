@@ -38,7 +38,7 @@ export const query = graphql`
 
 ## Otimizando imagens com o gatsby-image
 
-[`gatsby-image`](/packages/gatsby-image/) é um plug-in que cria automaticamente componentes React para imagens otimizadas que:
+[`gatsby-image`](/packages/gatsby-image/) é um plugin que cria automaticamente componentes React para imagens otimizadas que:
 
 > - Carrega o tamanho ideal da imagem para cada dispositivo e resolução de tela
 > - Mantém a posição da imagem durante o carregamento para que sua página não se mova à medida que as imagens são carregadas
