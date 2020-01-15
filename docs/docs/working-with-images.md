@@ -12,7 +12,7 @@ Realizar a busca de imagens com GraphQL permite acesso aos dados da imagem além
 
 Você precisará de alguns plugins para isso:
 
-- O plugin [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) permite que você trate arquivos com o GraphQL. Veja como em [query files with GraphQL](/docs/querying-with-graphql/#images)
+- O plugin [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) permite que você busque arquivos com o GraphQL. Veja como em [buscando arquivos com GraphQL](/docs/querying-with-graphql/#images)
 - [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) alimenta as conexões entre os plugins Sharp e Gatsby
 - [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) permite a criação várias imagens para que tenham tamanhos e resoluções corretos com uma única busca
 
