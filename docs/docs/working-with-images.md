@@ -16,7 +16,7 @@ Você precisará de alguns plugins para isso:
 - [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp) alimenta as conexões entre os plugins Sharp e Gatsby
 - [`gatsby-transformer-sharp`](/packages/gatsby-transformer-sharp/) permite a criação várias imagens para que tenham tamanhos e resoluções corretos com uma única busca
 
-Se a imagem final tiver um tamanho fixo, a otimização dependerá de várias resoluções da imagem. Se for responsivo, ou seja, se estende para preencher um contêiner ou página, a otimização depende de ter tamanhos diferentes da mesma imagem. Veja mais em [Gatsby Image documentation for more information](/packages/gatsby-image/#two-types-of-responsive-images).
+Se a imagem final tiver um tamanho fixo, a otimização dependerá de termos várias resoluções para a imagem. Se for responsivo, ou seja, se estende para preencher um contêiner ou página, a otimização depende de ter tamanhos diferentes da mesma imagem. Veja mais na [documentação do Gatsby Image](/packages/gatsby-image/#two-types-of-responsive-images).
 
 Você também pode usar argumentos no tratamento para especificar dimensões exatas, mínimas e máximas. Veja como em [Gatsby Image documentation for complete options](/packages/gatsby-image/#two-types-of-responsive-images).
 
