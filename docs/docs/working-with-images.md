@@ -6,7 +6,7 @@ Otimizar imagens é um desafio em qualquer site. Para utilizar as melhores prát
 
 Recomenda-se usar [GraphQL queries](/docs/querying-with-graphql/) para obter imagens com o tamanho ou resolução ideais, e então, exibí-las com o componente [`gatsby-image`](/packages/gatsby-image/).
 
-## Tratando imagens com o GraphQL
+## Query de imagens com o GraphQL
 
 Realizar a busca de imagens com GraphQL permite acesso aos dados da imagem além de permitir a realização de transformações com o [Sharp](https://github.com/lovell/sharp), uma biblioteca de processamento de imagem de alto desempenho.
 
