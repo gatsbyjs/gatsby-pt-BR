@@ -37,7 +37,7 @@ Em posts e páginas Markdown, incluir um GIF animado é o mesmo que incluir uma 
 
 ![Lontra dançando com um peixe](./images/dancing-otter.gif)
 
-Os GIFs animados podem ser bastante grandes em tamanho, no entanto, tenha cuidado para não sabotar a performance das suas páginas web com arquivos extremamente grande. Você pode reduzir o tamanho do arquivo [otimizando os quadros](https://skylilies.livejournal.com/244378.html) ou convertendo-os em vídeo.
+Os GIFs animados podem ser bastante grandes em tamanho, então tenha cuidado para não sabotar a performance das suas páginas web com arquivos extremamente grande. Você pode reduzir o tamanho do arquivo [otimizando os quadros](https://skylilies.livejournal.com/244378.html) ou convertendo-os em vídeo.
 
 ## Preocupações de acessibilidade com GIFs animados
 
