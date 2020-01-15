@@ -18,7 +18,7 @@ Você precisará de alguns plugins para isso:
 
 Se a imagem final tiver um tamanho fixo, a otimização dependerá de termos várias resoluções para a imagem. Se for responsivo, ou seja, se estende para preencher um contêiner ou página, a otimização depende de ter tamanhos diferentes da mesma imagem. Veja mais na [documentação do Gatsby Image](/packages/gatsby-image/#two-types-of-responsive-images).
 
-Você também pode usar argumentos no tratamento para especificar dimensões exatas, mínimas e máximas. Veja como em [Gatsby Image documentation for complete options](/packages/gatsby-image/#two-types-of-responsive-images).
+Você também pode usar argumentos na _query_ para especificar dimensões exatas, mínimas e máximas. Veja como em [documentação das opções completas do Gatsby Image](/packages/gatsby-image/#two-types-of-responsive-images).
 
 Este exemplo é para uma galeria de imagens onde as imagens se estendem quando a página é redimensionada. Ele usa o método `fluid` e o fragmento fluido para obter os dados corretos para usar no componente ` gatsby-image` e os argumentos para definir a largura máxima como 400px e a altura máxima como 250px.
 
