@@ -98,4 +98,4 @@ export const query = graphql`
 - [Usando gatsby-image com Gatsby](https://egghead.io/playlists/using-gatsby-image-with-gatsby-ea85129e), playlist gratuita no egghead.io (em inglês) 
 - [Arquivo README do plugin gatsby-image](/packages/gatsby-image/)
 - [gatsby-plugin-sharp README file](/packages/gatsby-plugin-sharp/)
-- [gatsby-transformer-sharp README file](/packages/gatsby-transformer-sharp/)
+- [Arquivo README do plugin gatsby-transformer-sharp](/packages/gatsby-transformer-sharp/)
