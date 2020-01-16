@@ -1,24 +1,24 @@
 ---
-title: Testing CSS-in-JS
+title: Testando CSS-in-JS
 ---
 
-Popular CSS-in-JS libraries like [styled-components](https://github.com/styled-components/styled-components) or [emotion](https://github.com/emotion-js/emotion) can also be tested with the help of [jest-styled-components](https://github.com/styled-components/jest-styled-components) or [jest-emotion](https://github.com/emotion-js/emotion/tree/master/packages/jest-emotion) respectively. These packages improve Jest's built-in snapshot testing experience and are a great way to help avoid unintended changes to your website's UI. Please refer to your package's documentation to see if it also offers testing capabilities.
+Bibliotecas populares de CSS-in-JS como [styled-components](https://github.com/styled-components/styled-components) ou [emotion](https://github.com/emotion-js/emotion) também podem ser testadas com a ajuda de [jest-styled-components](https://github.com/styled-components/jest-styled-components) ou [jest-emotion](https://github.com/emotion-js/emotion/tree/master/packages/jest-emotion) respectivamente. Esses pacotes melhoram a experiência de testes de _snapshot_ com Jest e são uma ótima maneira de ajudar a evitar alterações indesejadas na UI do seu _site_. Consulte a documentação do seu pacote para ver se ele também oferece recursos de teste.
 
-_Snapshot serializers_ like `jest-styled-components` or `jest-emotion` modify the standard output to a more meaningful and readable snapshot, e.g. by removing unnecessary information or displaying data in another format. Which ultimately leads to more comparable and effective snapshot tests.
+Serializadores de _snapshot_ como `jest-styled-components` ou `jest-emotion` modificam a saída padrão para um _snapshot_ mais significativo e legível, por exemplo removendo informações desnecessárias ou exibindo dados em outro formato. O que leva a testes de _snapshot_ mais comparáveis ​​e eficazes.
 
-By default snapshots of your styled components show the generated class names (which you didn't set) and no styling information. When changing the styles you'll only see the diff of some cryptic class names (hashes). That's why you should use the above mentioned _snapshot serializers_. They remove the hashes and format the CSS in style elements.
+Por padrão, os _snapshots_ de seus styled components mostram os nomes de classe gerados (que você não definiu) e nenhuma informação de estilização. Ao alterar os estilos, você verá apenas a diferença de alguns nomes de classe criptografados (_hashes_). É por isso que você deve usar os serializadores de _snapshot_ mencionados acima. Eles removem os _hashes_ e formatam o CSS em elementos de estilo.
 
-For this example you'll use emotion. The testing utilities of emotion and glamor are largely based on [jest-styled-components](https://github.com/styled-components/jest-styled-components) so they have a similar usage. Please have a look at the testing section of your library to follow along.
+Para esse exemplo você vai usar o emotion. Os utilitários de teste do emotion e glamor são amplamente baseados em [jest-styled-components](https://github.com/styled-components/jest-styled-components) então eles tem usos parecidos. Por favor dê uma olhada na seção de testes da sua biblioteca para seguir em frente.
 
-## Installation
+## Instalação
 
 ```shell
 npm install --save-dev jest-emotion babel-plugin-emotion
 ```
 
-As [Gatsby's emotion plugin](/packages/gatsby-plugin-emotion/) is using `babel-plugin-emotion` under the hood you'll also need to install it so that Jest can use it.
+Como o [plugin emotion do Gatsby](/packages/gatsby-plugin-emotion/) está usando `babel-plugin-emotion` por baixo dos panos, você também precisará instalá-lo para que o Jest possa usá-lo.
 
-If you followed along with the [Unit testing guide](/docs/unit-testing) you'll have the file `jest-preprocess.js` at the root of your project. Open that file and add the plugin:
+Se você seguiu o [guia de Testes Unitários](/docs/unit-testing) terá o arquivo `jest-preprocess.js` na raiz do seu projeto. Abra esse arquivo e adicione o plugin:
 
 ```diff:title=jest-preprocess.js
 const babelOptions = {
@@ -30,8 +30,7 @@ const babelOptions = {
 
 module.exports = require("babel-jest").createTransformer(babelOptions)
 ```
-
-In order to tell Jest to use the serializer you'll need to create the file `setup-test-env.js` which will be run automatically before every test. Create the file `setup-test-env.js` at the root of your project. Insert this code into it:
+Para que o Jest use o serializador, você precisará criar o arquivo `setup-test-env.js`, que será executado automaticamente antes de cada teste. Crie o arquivo `setup-test-env.js` na raiz do seu projeto. Insira este código nele:
 
 ```js:title=setup-test-env.js
 import { createSerializer } from "jest-emotion"
@@ -40,7 +39,7 @@ import * as emotion from "@emotion/core"
 expect.addSnapshotSerializer(createSerializer(emotion))
 ```
 
-Lastly you need to tell Jest where to find this file. Open your `package.json` and add this entry to your `"jest"` section:
+Por fim, você precisa informar ao Jest onde encontrar esse arquivo. Abra seu `package.json` e adicione esta entrada à sua seção `"jest"`:
 
 ```json:title=package.json
 "jest": {
@@ -48,9 +47,9 @@ Lastly you need to tell Jest where to find this file. Open your `package.json` a
 }
 ```
 
-## Usage
+## Utilização
 
-In this example you'll use `react-test-renderer` but you can also use [@testing-library/react](/docs/testing-react-components) or any other appropriate library. Because you created the `setup-test-env.js` file you can write your unit tests like you used to do. But now you'll also get the styling information!
+Neste exemplo, você usará o `react-test-renderer`, mas também poderá usar [@testing-library/react](/docs/testing-react-components) ou qualquer outra biblioteca apropriada. Como você criou o arquivo `setup-test-env.js`, você pode escrever seus testes unitários como costumava fazer. Mas agora você também receberá as informações de estilização!
 
 ```js:title=src/components/Button.test.js
 import React from "react"
@@ -68,7 +67,7 @@ test("Button renders correctly", () => {
 })
 ```
 
-The resulting snapshot will look like this:
+O _snapshot_ resultante vai ser parecido com isso:
 
 ```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
@@ -86,14 +85,14 @@ exports[`Button renders correctly 1`] = `
 `
 ```
 
-If your styled component depends on `theme` via `ThemeProvider` you'll have two options:
+Se o seu styled component depende do `theme` via `ThemeProvider`, você terá duas opções:
 
-- Wrap all your components with the `ThemeProvider`
-- Use API helpers (have a look at the library's documentation, e.g. [styled-components](https://github.com/styled-components/jest-styled-components#theming) or [emotion](https://github.com/emotion-js/emotion/tree/master/packages/emotion-theming#createbroadcast-function))
+- Encapsular todos os seus componentes com o `ThemeProvider`
+- Usar auxiliares de API (consulte a documentação da biblioteca, por exemplo, [styled-components](https://github.com/styled-components/jest-styled-components#theming) ou [emotion](https://github.com/emotion-js/emotion/tree/master/packages/emotion-theming#createbroadcast-function))
 
-And this is where snapshots tests really shine. If you change, e.g. the primary color in your theme file you'll see which components get affected by this change. This way you can catch unintended changes to the style of your components.
+E é aqui que os testes de _snapshots_ realmente brilham. Se você mudar, por exemplo a cor principal no seu arquivo de tema, você verá quais componentes são afetados por essa alteração. Dessa forma, você pode capturar alterações indesejadas na estilização de seus componentes.
 
-This example uses the first option:
+Este exemplo usa a primeira opção:
 
 ```js:title=src/components/Wrapper.test.js
 import React from "react"
@@ -121,7 +120,7 @@ test("Wrapper renders correctly", () => {
 })
 ```
 
-The resulting snapshot will look like this:
+O _snapshot_ resultante vai ser parecido com isso:
 
 ```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
