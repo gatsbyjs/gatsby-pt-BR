@@ -69,7 +69,7 @@ Para encontrar ou criar um novo tema de tipografia, você pode visitar [Typograp
 
 ## Instalando temas Typography
 
-O Typography.js possui temas incorporados que podem economizar tempo ao definir o estilo da fonte do seu site. O tema Funston, mantido pelo Typography, é um dos temas incorporados. Para instalar o tema Funston a partir do npm, execute o comando: `npm install typography-theme-funston —save`
+O Typography.js possui temas incorporados que podem economizar tempo ao definir o estilo da fonte do seu site. O tema Funston, mantido pelo Typography, é um dos temas incorporados. Para instalar o tema Funston a partir do npm, execute o comando: `npm install typography-theme-funston --save`
 
 Para usar o tema, edite o arquivo `typography.js` que você criou antes e informe a Typography sobre a nova configuração:
 
