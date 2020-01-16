@@ -2,11 +2,11 @@
 title: Publicando no Render
 ---
 
-[Render](https://render.com) é uma plataforma em nuvem totalmente gerenciável onde você pode hospedar seus sites estáticos, APIs, banco de dados, agendadores de tarefas e todos os outros aplicativos em um unico lugar.
+[Render](https://render.com) é uma plataforma em nuvem totalmente gerenciável onde você pode hospedar seus sites estáticos, APIs, banco de dados, agendadores de tarefas e todos os outros aplicativos em um único lugar.
 
 Sites estáticos são **totalmente gratuitos** no Render e incluem as seguintes funcionalidades:
 
-- Builds e publicações do Github de forma automática e continua.
+- Builds e publicações do Github de forma automática e contínua.
 - Certificados SSL automáticos através da [Let's Encrypt](https://letsencrypt.org).
 - Invalidação instantânea de cache com um CDN veloz e global. 
 - Colaboradores ilimitados.
@@ -46,15 +46,15 @@ Você pode escolher desabilitar publicações automáticas na seção de **Setti
 
 O Render hospeda o seu site em um CDN global e veloz que garante os tempos de download mais rápidos possíveis para todos os usuários ao redor do mundo.
 
-Cada publicação automática e instantanea invalida o cache do CDN, então seus usuários podem sempre acessar os últimos conteúdos do seu site.
+Cada publicação automática e instantânea invalida o cache do CDN, então seus usuários podem sempre acessar os últimos conteúdos do seu site.
 
-## Dominios Personalizados
+## Domínios Personalizados
 
-Adicione seu próprio dominio ao seu site facilmente usando o guia de [domínios personalizados](https://render.com/docs/custom-domains) do Render.
+Adicione seu próprio domínio ao seu site facilmente usando o guia de [domínios personalizados](https://render.com/docs/custom-domains) do Render.
 
 ## Visualização de Pull Requests
 
-Com a visualização de pull request você pode visualizar as alterações introduzidas em uma pull request ao invés de simplesmentet confiar em code reviews.
+Com a visualização de pull request você pode visualizar as alterações introduzidas em uma pull request ao invés de simplesmente confiar em code reviews.
 
 Uma vez habilitado toda PR para o seu site vai gerar automaticamente um novo site estático baseado no código da PR. O mesmo vai possuir sua própria URL, e vai ser deletado automaticamente quando a PR for fechada.
 
