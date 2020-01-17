@@ -43,6 +43,6 @@ O acesso aos dados brutos é altamente controlado e não podemos identificar usu
 
 ## E os dados sensíveis? (ex. segredos)
 
-Realizamos etapas adicionais para garantir que dados sigilosos (por exemplo, variáveis de ambiente usadas para armazenar segredos para o processo de build) **não** cheguem ás nossas análises. [Retiramos logs, mensagens de erro etc.](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-telemetry/src/error-helpers.js) desses dados confidenciais para garantir que nunca obtenhamos acesso a esses dados confidenciais.
+Realizamos etapas adicionais para garantir que dados sigilosos (por exemplo, variáveis de ambiente usadas para armazenar segredos para o processo de build) **não** cheguem as nossas análises. [Retiramos logs, mensagens de erro etc.](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-telemetry/src/error-helpers.js) desses dados confidenciais para garantir que nunca obtenhamos acesso a esses dados confidenciais.
 
 Você pode visualizar todas as informações enviadas pela telemetria do Gatsby, definindo a variável de ambiente `GATSBY_TELEMETRY_DEBUG` como `1` para imprimir os dados de telemetria em vez de enviá-los.
