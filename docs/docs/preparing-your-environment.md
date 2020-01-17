@@ -1,18 +1,16 @@
 ---
-title: Preparing your Environment
+title: Preparando seu Ambiente
 overview: true
 ---
 
-To get started with Gatsby, you'll need to make sure you have the following software tools installed:
+Para começar com o Gatsby, você precisa se certificar de que você tenha as seguintes ferramentas de software instaladas: 
 
 1.  [Node.js](/tutorial/part-zero/#-install-nodejs-and-npm)
 2.  [npm CLI](/tutorial/part-zero/#check-your-nodejs-installation)
 3.  [Gatsby CLI](/tutorial/part-zero/#using-the-gatsby-cli)
 
-For step-by-step installation instructions and detailed explanations of the required software, head on over to the [Gatsby tutorial](/tutorial/part-zero/).
+Para obter instruções de instalação passo a passo e explicações detalhadas do software necessário, vá para o [tutorial do Gatsby](/tutorial/part-zero/).
 
-The [Quick Start](/docs/quick-start/) is also available for intermediate to advanced developers.
+O [Quick Start](/docs/quick-start/) também está disponível para desenvolvedores intermediários a avançados.
 
-> **Note:** If you work for an Enterprise-level company where you are unable to pull from public GitHub repositories, you can [still set up Gatsby](/docs/setting-up-gatsby-without-gatsby-new/).
-
-<GuideList slug={props.slug} />
+> **Nota: ** Se você trabalha para uma empresa de nível corporativo na qual não consegue extrair repositórios públicos do GitHub, você [ainda pode configurar o Gatsby](/docs/setting-up-gatsby-without-gatsby-new/).
