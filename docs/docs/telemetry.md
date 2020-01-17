@@ -20,7 +20,7 @@ Isso levanta uma questão: como usaremos esses dados de telemetria para melhorar
 
 - Poderemos entender quais plugins normalmente são usados juntos. Isso nos permitirá exibir essas informações em nossa biblioteca pública de plug-ins e criar starters e tutoriais mais relevantes com base nesses dados.
 - Poderemos mostrar a popularidade de diferentes starters na página do showcase.
-- Poderemos obter mais detalhes sobre os tipos de erros que os usuários estão enfrentando em _cada_ estágio do processo de build(por exemplo, desenvolvimento, build etc.). Isso nos permitirá melhorar a qualidade de nossa ferramenta e focar melhor nosso tempo na solução de problemas mais comuns e frustrantes.
+- Poderemos obter mais detalhes sobre os tipos de erros que os usuários estão enfrentando em _cada_ estágio do processo de build (por exemplo, desenvolvimento, build etc.). Isso nos permitirá melhorar a qualidade de nossa ferramenta e focar melhor nosso tempo na solução de problemas mais comuns e frustrantes.
 - Poderemos demonstrar a confiabilidade de diferentes plugins e starters e detectar quais deles tendem a errar com mais frequência. Podemos usar esses dados para exibir métricas de qualidade e melhorar a qualidade de nossos plugins e starters.
 - Poderemos ver o momento para os diferentes estágios do processo de build para nos guiar onde devemos focar no trabalho de otimização.
 
