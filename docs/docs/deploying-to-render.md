@@ -34,7 +34,7 @@ Você pode configurar um site Gatsby no Render em dois passos rápidos:
    | **Comando de build**     | `gatsby build` (ou o seu próprio comando de build) |
    | **Diretório de publicação** | `public` (ou o seu próprio diretório de publicação)    |
 
-Pronto! Seu site vai estar disponível na sua URL do Render (Que vai parecer com `yoursite.onrender.com`) assim que a build finalizar.
+Pronto! Seu site vai estar disponível na sua URL do Render (algo parecido com `yoursite.onrender.com`) assim que a build finalizar.
 
 ## Publicação Contínua
 
@@ -54,11 +54,11 @@ Adicione seu próprio domínio ao seu site facilmente usando o guia de [domínio
 
 ## Visualização de Pull Requests
 
-Com a visualização de pull request você pode visualizar as alterações introduzidas em uma pull request ao invés de simplesmente confiar em code reviews.
+Com a visualização de pull request você pode visualizar as alterações introduzidas em um pull request ao invés de simplesmente confiar em code reviews.
 
-Uma vez habilitado toda PR para o seu site vai gerar automaticamente um novo site estático baseado no código da PR. O mesmo vai possuir sua própria URL, e vai ser deletado automaticamente quando a PR for fechada.
+Uma vez habilitado todo PR para o seu site vai gerar automaticamente um novo site estático baseado no código da PR. O mesmo vai possuir sua própria URL, e vai ser deletado automaticamente quando a PR for fechada.
 
-Leia mais sobre [Visualização de Pull Request](https://render.com/docs/pull-request-previews) nas docs do Render.
+Leia mais sobre [Visualização de Pull Request](https://render.com/docs/pull-request-previews) na documentação do Render.
 
 ## Suporte
 
