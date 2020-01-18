@@ -9,7 +9,7 @@ Para começar com o Gatsby, você precisa se certificar de que você tenha as se
 2.  [npm CLI](/tutorial/part-zero/#check-your-nodejs-installation)
 3.  [Gatsby CLI](/tutorial/part-zero/#using-the-gatsby-cli)
 
-Para obter instruções de instalação passo a passo e explicações detalhadas do software necessário, vá para o [tutorial do Gatsby](/tutorial/part-zero/).
+Para obter instruções de instalação passo a passo e explicações detalhadas de softwares necessários, vá para o [tutorial do Gatsby](/tutorial/part-zero/).
 
 O [Quick Start](/docs/quick-start/) também está disponível para desenvolvedores intermediários a avançados.
 
