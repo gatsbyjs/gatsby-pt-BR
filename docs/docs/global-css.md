@@ -1,5 +1,5 @@
 ---
-title: Standard Styling with Global CSS Files
+title: Estilo padrão com arquivos CSS globais
 ---
 
 Tradicionalmente, os sites são estilizados utilizando arquivos CSS globais.
@@ -21,7 +21,7 @@ gatsby new estilos-globais https://github.com/gatsbyjs/gatsby-starter-hello-worl
 Abra seu novo site em seu editor e crie um novo diretório em `/src/components`. Dentro, crie dois novos arquivos:
 
 ```diff
-  global-styles/
+  estilos-globais/
   └───src/
       └───components/
 +     │   │─  layout.js
@@ -60,23 +60,23 @@ export default () => <Layout>Hello world!</Layout>
 
 Execute o comando `npm run develop` e você irá ver o novo estilo global aplicado.
 
-![Global styles](./images/global-styles.png)
+![Estilos globais](./images/global-styles.png)
 
-## Adding global styles without a layout component
+## Adicionando estilos globais sem um componente de layout
 
-In some cases, using a shared layout component is not desirable. In these cases, you can include a global stylesheet using `gatsby-browser.js`.
+Em alguns casos, usar um componente de layout compartilhado não é o ideal. Nesses casos, você pode incluir uma folha de estilos global usando o `gatsby-browser.js`.
 
-> **NOTE:** This approach does _not_ work with CSS-in-JS. Use shared components to share styles in CSS-in-JS.
+> **NOTA:** Esse método _não_ funciona com CSS-in-JS. Use componentes de estilos compartilhados para utilizar com CSS-in-JS.
 
-First, open a new terminal window and run the following commands to create a new default Gatsby site and start the development server:
+Primeiro, abra uma nova janela do terminal e execute os seguintes comandos para criar um novo site padrão em Gatsby e iniciar um servidor de desenvolvimento:
 
 ```shell
-gatsby new global-style-tutorial https://github.com/gatsbyjs/gatsby-starter-default
-cd global-style-tutorial
+gatsby new estilos-globais-tutorial https://github.com/gatsbyjs/gatsby-starter-default
+cd estilos-globais-tutorial
 npm run develop
 ```
 
-Second, create a CSS file and define any styles you wish. An example:
+Em seguida, crie um arquivo CSS e defina os estilos como desejar. Por exemplo:
 
 ```css:title=src/styles/global.css
 html {
@@ -88,27 +88,27 @@ a {
 }
 ```
 
-Then, include the stylesheet in your site's `gatsby-browser.js` file.
+E então, inclua a sua folha de estilos no arquivo `gatsby-browser.js` do seu site.
 
-> **NOTE:** This solution works when including css as those styles are extracted when building the JavaScript but not for css-in-js.
-> Including styles in a layout component or a global-styles.js is your best bet for that.
+> **NOTA:** Essa solução somente funciona ao incluir o css, pois esses estilos são extraídos ao criar o JavaScript, mas não para o css-in-js.
+> Incluir estilos em um componente de layout ou um global-styles.js é a melhor forma de fazer isso.
 
 ```javascript:title=gatsby-browser.js
 import "./src/styles/global.css"
 
-// or:
+// ou:
 // require('./src/styles/global.css')
 ```
 
-> _Note: You can use Node.js require or import syntax. Additionally, the placement of the example css file in a `src/styles` folder is arbitrary._
+> _Nota: Você pode usar o require do Node.js ou o import. Além disso, o local do arquivo css na pasta `src/styles` é de sua escolha._
 
-You should see your global styles taking effect across your site:
+Você verá seus estilos globais dando efeito em seu site:
 
-![Global styles example site](./images/global-styles-example.png)
+![Exemplo estilos globais no site](./images/global-styles-example.png)
 
-### Importing CSS files into components
+### Importando arquivos CSS dentro de componentes
 
-It is also possible to break up your CSS styles into separate files so that team members can work independently while still using traditional CSS. You can then [import files directly](/docs/importing-assets-into-files/) into pages, templates, or components:
+Também é possivel dividir seus estilos CSS em arquivos separados, para que membros da sua equipe possam trabalhar enquanto ainda usam o CSS tradicional. Você pode [importar arquivos diretamente](/docs/importing-assets-into-files/) dentro de páginas, templates ou componentes:
 
 ```css:title=menu.css
 .menu {
@@ -122,14 +122,14 @@ It is also possible to break up your CSS styles into separate files so that team
 import "css/menu.css"
 ```
 
-This approach can simplify integration of CSS or [Sass](/packages/gatsby-plugin-sass/) styles into your Gatsby site by allowing team members to write and consume more traditional, class-based CSS. However, there are [trade-offs](#limitations) that must be considered with regards to web performance and the lack of dead code elimination.
+Essa abordagem pode simplificar a integração dos estilos CSS ou [Sass](/packages/gatsby-plugin-sass/) no seu site em Gatsby, permitindo que os membro da equipe consumam e escrevam um CSS mais tradicional baseado em classes. No entando, existem [contrapartidas](#limitations) que devem ser consideradas com relação ao desempenho web e à falta de exclusão em códigos não utilizados.
 
-### Adding classes to components
+### Adicionando classes nos componentes
 
-Since `class` is a reserved word in JavaScript, you'll have to use the `className` prop instead, which will render as the browser-supported `class` attribute in your HTML output.
+Como `class` é uma palavra reservada em JavaScript, você irá precisar usar o prop `className`, que será renderizado como um atributo `class` em seu HTML e é suportado pelo seu navegador.
 
 ```jsx
-<button className="primary">Click me</button>
+<button className="primary">Clique aqui</button>
 ```
 
 ```css
@@ -138,8 +138,8 @@ Since `class` is a reserved word in JavaScript, you'll have to use the `classNam
 }
 ```
 
-### Limitations
+### Limitações
 
-The biggest problem with global CSS files is the risk of name conflicts and side effects like unintended inheritance.
+O maior problema com arquivos de CSS globais é o risco de conflitos no nome e outros efeitos colaterais como herança não intencional.
 
-CSS methodologies like BEM can help solve this, but a more modern solution is to write locally-scoped CSS using [CSS Modules](/docs/css-modules/) or [CSS-in-JS](/docs/css-in-js/).
+Metodologias CSS como o BEM podem ajudar a resolver isso, porém uma solução mais moderna seria escrever o CSS com um escopo local utilziando [Módulos CSS](/docs/css-modules/) ou [CSS-in-JS](/docs/css-in-js/).
