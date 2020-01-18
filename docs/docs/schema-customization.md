@@ -67,7 +67,7 @@ carregados no armazenamento de dados interno do Gatsby. É isso que os plugins d
 fazem - neste caso `gatsby-source-filesystem` e
 `gatsby-transformer-remark` mais `gatsby-transformer-json`. Cada arquivo markdown de post
 é transformado em um objeto "node" no armazenamento de dados interno com
-um único `id` e com o tipo `MarkdownRemark`. Da mesma forma, um autor será
+um `id` único e com o tipo `MarkdownRemark`. Da mesma forma, um autor será
 representado por um objeto node do tipo `AuthorJson`, e as informações do colaborador serão
 transformadas em objetos node do tipo `ContributorJson`.
 
@@ -77,7 +77,7 @@ Essa estrutura de dados é representada no schema GraphQL do Gatsby com a interf
 , que descreve o conjunto de campos comuns aos objetos node criados por
 plugins de fonte e transformadores (`id`, `parent`, `children`, bem como alguns
 campos `internal` como `type`). Em GraphQL Schema Definition Language (SDL),
-se parece com isso:
+é algo parecido com isso:
 
 ```graphql
 interface Node {
@@ -117,7 +117,7 @@ type AuthorJson implements Node {
 ### Inferência automática de tipo
 
 É importante observar que os dados em `author.json` não fornecem informações de tipo
-dos campos Autor por si só. Para converter o formato dos dados
+dos campos _Author_ por si só. Para converter o formato dos dados
 em definições de tipo GraphQL, o Gatsby precisa inspecionar o conteúdo de
 todos os campos e verificar seu tipo. Em muitos casos, isso funciona muito bem e isso ainda é
 o mecanismo padrão para criar um schema GraphQL.
@@ -253,7 +253,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 ```
 
 É útil pensar nos seus dados e no schema GraphQL correspondente, 
-sempre iniciando nos tipos de Node criados pelos plugins de fonte e de transformador.
+sempre iniciando nos tipos de Node criados pelos plugins de fonte e de transformação.
 
 > Observe que o tipo `Frontmatter` não deve implementar a interface Node já que
 > não é um tipo de alto nível criado por plugins de fonte ou transformador: não tem
@@ -289,7 +289,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 }
 ```
 
-Os Construtores de Tipo do Gatsby permitem referênciar tipos como strings simples, e aceita configurações
+Os Construtores de Tipo do Gatsby permitem referênciar tipos como strings simples, e aceitam configurações
 de campo completas (`type`, `args`, `resolve`). Ao definir tipos de alto nível, não esqueça
 de passar `interfaces: ['Node']`, que faz o mesmo para os Construtores de Tipo assim como adicionar
 `implements Node` faz para tipos definidos por SDL. Também é possível optar por não usar inferência
@@ -331,7 +331,7 @@ ou seja, sem depender da inferência de tipo e da convenção de nomenclatura de
 `___NODE`, requer um pouco de configuração manual.
 
 No projeto de exemplo, o campo `frontmatter.author` nos nodes
-`MarkdownRemark` para expandir o valor do campo fornecido para um node completo `AuthorJson`.
+`MarkdownRemark` expande o valor do campo fornecido para um node completo `AuthorJson`.
 Para que isso funcione, é necessário fornecer um _resolver_ de campo personalizado. (veja abaixo para
 mais informações sobre `context.nodeModel`)
 
@@ -353,7 +353,7 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
             //   type: "AuthorJson",
             // })
             // Mas como o exemplo está usando o email do autor como chave estrangeira,
-            // você pode usar `runQuery`, ou obter todos nodes de autores
+            // você pode usar `runQuery`, ou obter todos os nodes de autores
             // com `getAllNodes` e procurar manualmente pelo node do autor
             // linkado:
             return context.nodeModel
@@ -374,7 +374,7 @@ ao armazenamento de dados interno do Gatsby sobre o objeto completo de _node_ co
 
 Porque criar relações de chave estrangeira é um caso de uso tão comum, Gatsby
 felizmente, também fornece uma maneira muito mais fácil de fazer isso -- com a ajuda de
-extensões ou diretivas. Se parece com isso:
+extensões ou diretivas. Seria algo semelhante a isso:
 
 ```graphql
 type MarkdownRemark implements Node {
@@ -389,7 +389,7 @@ type AuthorJson implements Node {
 }
 ```
 
-Você fornece uma diretiva `@link` em um campo e o Gatsby internamente irá
+Você fornece uma diretiva `@link` em um campo o Gatsby internamente irá
 adicionar um _resolver_ que é bastante semelhante ao escrito manualmente acima. Se nenhum
 argumento for fornecido, o Gatsby usará o campo `id` como chave estrangeira,
 caso contrário, a chave estrangeira deve ser fornecida com o argumento `by`. O
@@ -412,7 +412,7 @@ e `proxy` é útil ao lidar com dados que contêm nomes de campos com
 caracteres que são inválidos em GraphQL.
 
 Para adicionar uma extensão a um campo, você pode usar uma diretiva no SDL ou a
-propriedade `extensions` quando usando os Construtores de Tipo do Gatsby:
+propriedade `extensions` ao usar Construtores de Tipo do Gatsby:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ action, schema }) => {
@@ -679,16 +679,16 @@ Observe que `createResolvers` permite adicionar novos campos aos tipos, modifica
 e `resolver` -- mas não substituindo o tipo do campo. Isto é porque
 `createResolvers` é executado por último na geração de schema, e modificar um tipo de campo
 significaria ter que regenerar os tipos de entrada correspondentes (`filter`, `sort`),
-o que você quer evitar. Se possível, a especificação dos tipos de campo deve ser feita com
+algo que vocẽ quer evitar. Se possível, a especificação dos tipos de campo deve ser feita com
 a action `createTypes`.
 
 ### Acessando o armazenamento de dados do Gatsby a partir de resolvers de campo
 
 Como mencionado acima, os recursos internos de consulta e armazenamento de dados de Gatsby estão
 disponíveis para _resolvers_ de campo customizados no argumento `context.nodeModel` passado
-para todos _resolvers_. Acessando node(s) por `id` (e opcionalmente `type`) é possível
+para todos os _resolvers_. Acessar node(s) pelo `id` (e opcionalmente `type`) é possível
 com [`getNodeById`](/docs/node-model/#getNodeById) e
-[`getNodesByIds`](/docs/node-model/#getNodesByIds). Para obter todos os nodes ou todos
+[`getNodesByIds`](/docs/node-model/#getNodesByIds). Para obter todos os nodes ou todos os
 nodes de um certo tipo, use [`getAllNodes`](/docs/node-model/#getAllNodes).
 E executar uma consulta de dentro das funções do _resolver_ pode ser realizada
 com [`runQuery`](/docs/node-model/#runQuery), que aceita os argumentos de consulta
@@ -871,7 +871,7 @@ context.nodeModel.getAllNodes(
 
 ## Interfaces e Uniões Personalizadas
 
-Por fim, digamos que você queira ter uma página no blog de exemplo que lista todos
+Por fim, digamos que você queira ter uma página no blog de exemplo que lista todos os
 membros do time (autores e colaboradores). O que você pode fazer é ter duas consultas,
 uma para `allAuthorJson` e uma para `allContributorJson` e mesclá-las
 manualmente. No entanto, o GraphQL fornece uma solução mais elegante para esses tipos de
