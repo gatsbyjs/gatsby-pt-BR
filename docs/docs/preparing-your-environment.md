@@ -13,4 +13,6 @@ Para obter instruções de instalação passo a passo e explicações detalhadas
 
 O [Quick Start](/docs/quick-start/) também está disponível para desenvolvedores intermediários a avançados.
 
-> **Nota: ** Se você trabalha para uma empresa de nível corporativo na qual não consegue extrair repositórios públicos do GitHub, você [ainda pode configurar o Gatsby](/docs/setting-up-gatsby-without-gatsby-new/).
+> **Nota:** Se você trabalha para uma empresa de nível corporativo na qual não consegue extrair repositórios públicos do GitHub, você [ainda pode configurar o Gatsby](/docs/setting-up-gatsby-without-gatsby-new/).
+
+<GuideList slug={props.slug} />
