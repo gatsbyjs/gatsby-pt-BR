@@ -50,7 +50,7 @@ Os estudos de caso são uma ótima maneira de ajudar os executivos a ver o poten
 - [Youfit usa o Gatsby para aumentar a geração de leads em 60%](/blog/2018-11-16-youfit-case-study/)
 - [IBM usa o Gatsby para gerenciar conteúdo de nível corporativo](/blog/2018-12-17-ibm-case-study/#big-company-big-website)
 - [Gatsby impulsiona conteúdo e vendas na reconstrução de design + código](/blog/2019-03-15-design-code-blog-post/)
-- [Growing Housecall Pro by 973% with Gatsby](/blog/2019-05-02-growing-housecall-pro-by-973-percent/)
+- [Crescendo a Housecall Pro em 973% com o Gatsby](/blog/2019-05-02-growing-housecall-pro-by-973-percent/)
 
 Para mais exemplos de sites do Gatsby, [confira o Showcase](/showcase/)
 
