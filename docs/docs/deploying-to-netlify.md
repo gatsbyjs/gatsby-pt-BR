@@ -24,7 +24,7 @@ Agora, entre no netlify e você vai ver um botão `New site from git` (Novo site
 
 - _Branch to Deploy_ (Branch para publicação): Você pode especificar uma _branch_ para ser monitorada. Quando você fizer o envio para aquela _branch_ específica, somente então o Netlify irá construir e publicar o _site_. A _branch_ padrão é a `master`.
 - _Build Command_ (Comando para construção): Você pode especificar o comando que você quer que o Netlify rode quando você enviar para a _branch_ acima. O comando padrão é `npm run build`.
-- _Publish directory_ (Diretório de publicação): Você pode especificar qual pasta o Netlify deve usar para hospedar seu _website_, exemplo, _public_, _dist_, _build_. O diretório padrão é o `public`.
+- _Publish directory_ (Diretório de publicação): Você pode especificar qual pasta o Netlify deve usar para hospedar seu _site_, exemplo, _public_, _dist_, _build_. O diretório padrão é o `public`.
 - Configurações avançadas de construção: Se o _site_ necessita de variáveis de ambiente para construção, você especificá-las clicando em _Show advanced_ (Mostrar avançado) e então no botão _New variable_ (Nova variável). 
 
 Clique no botão _Deploy site_ (Publicar site) e o Netlify vai começar o processo de construção e publicação que foi especificado por você. Você pode ir na aba _Deploys_ (Publicados) e ver o processo se desenrolar no _Deploy log_ (Log de publicação). Após alguns momentos, você vai receber o URL em que seu _site_ foi publicado, exemplo `nome-aleatorio.netlify.com`
