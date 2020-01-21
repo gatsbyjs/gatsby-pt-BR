@@ -42,8 +42,10 @@ gatsby build
 Quando a construção estiver completa, você estará pronto para enviar seu site ao Netlify. Vá em [Netlify](https://app.netlify.com/) e faça o _login_ ou se cadastre usando qualquer método. Após realizar o _login_ com sucesso, você verá a mensagem mostrada abaixo:
 
 ```text
-    Você quer publicar um novo site sem conectar ao Git?
-          Arraste e solte a pasta do seu site aqui
+    Want to deploy a new site without connecting to Git?
+          Drag and drop your site folder here
+    (Você quer publicar um novo site sem conectar ao Git?
+          Arraste e solte a pasta do seu site aqui)
 ```
 
 Para iniciar o processo de publicação, você precisa apenas arrastar e soltar a pasta `public` sobre a área acima no _site_ do Netlify. Netlify vai criar um novo _site_ com um nome aleatório, e então começar a enviar e hospedar os arquivos da aplicação. Após alguns momentos, ele vai lhe disponibilizar um URL para o _site_, exemplo `nome-aleatorio.netlify.com`
