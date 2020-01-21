@@ -4,15 +4,15 @@ title: Estilo padrão com arquivos CSS globais
 
 Tradicionalmente, os sites são estilizados utilizando arquivos CSS globais.
 
-As regras de escopo global são declaradas em arquivos `.css` externos, [Especificidade CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity) e o [Cascade](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Cascade) determinam como os estilos são aplicados.
+As regras de escopo global são declaradas em arquivos `.css` externos, e a [Especificação CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Specificity) e [Cascade](https://developer.mozilla.org/pt-BR/docs/Web/CSS/Cascade) determinam como os estilos são aplicados.
 
 ## Adicionando estilos globais com um componente de layout
 
 A melhor maneira de adicionar estilos globais é com um [componente de layout compartilhado](/tutorial/part-three/#your-first-layout-component). Esse componente é utilizado para itens que são compartilhados em todo o site, incluindo estilos, componentes do cabeçalho e outros itens comuns.
 
-> **NOTA:** Esse padrão é implementado em [o padrão inicial](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
+> **NOTA:** Esse padrão é implementado [no _starter_ padrão](https://github.com/gatsbyjs/gatsby-starter-default/blob/02324e5b04ea0a66d91c7fe7408b46d0a7eac868/src/layouts/index.js#L6).
 
-Para criar um layout compartilhado com estilos globais, comece criando um novo site Gatsby com o [hello world inicial](https://github.com/gatsbyjs/gatsby-starter-hello-world).
+Para criar um layout compartilhado com estilos globais, comece criando um novo _site_ Gatsby com o [_starter_ hello world](https://github.com/gatsbyjs/gatsby-starter-hello-world).
 
 ```shell
 gatsby new estilos-globais https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -102,7 +102,7 @@ import "./src/styles/global.css"
 
 > _Nota: Você pode usar o require do Node.js ou o import. Além disso, o local do arquivo css na pasta `src/styles` é de sua escolha._
 
-Você verá seus estilos globais dando efeito em seu site:
+Você verá que seus estilos globais estão tendo efeito em seu site:
 
 ![Exemplo estilos globais no site](./images/global-styles-example.png)
 
@@ -122,11 +122,11 @@ Também é possivel dividir seus estilos CSS em arquivos separados, para que mem
 import "css/menu.css"
 ```
 
-Essa abordagem pode simplificar a integração dos estilos CSS ou [Sass](/packages/gatsby-plugin-sass/) no seu site em Gatsby, permitindo que os membro da equipe consumam e escrevam um CSS mais tradicional baseado em classes. No entando, existem [contrapartidas](#limitations) que devem ser consideradas com relação ao desempenho web e à falta de exclusão em códigos não utilizados.
+Essa abordagem pode simplificar a integração dos estilos CSS ou [Sass](/packages/gatsby-plugin-sass/) no seu _site_ Gatsby, permitindo que os membro da equipe consumam e escrevam um CSS mais tradicional baseado em classes. No entando, existem [contrapartidas](#limitations) que devem ser consideradas com relação ao desempenho web e à falta de exclusão em códigos não utilizados.
 
 ### Adicionando classes nos componentes
 
-Como `class` é uma palavra reservada em JavaScript, você irá precisar usar o prop `className`, que será renderizado como um atributo `class` em seu HTML e é suportado pelo seu navegador.
+Como `class` é uma palavra reservada em JavaScript, você irá precisar utilizar o prop `className`, que será renderizado como um atributo, suportado pelo navegador, `class` em seu HTML.
 
 ```jsx
 <button className="primary">Clique aqui</button>
