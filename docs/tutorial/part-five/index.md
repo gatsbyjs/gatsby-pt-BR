@@ -1,5 +1,5 @@
 ---
-title: Plugins Nativos
+title: Plugins de Origem
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -8,7 +8,7 @@ disableTableOfContents: true
 
 ## O que tem nesse tutorial?
 
-Neste tutorial, você aprenderá como puxar dados para seu site Gatsby usando GraphQL e plugins nativos. Porém, antes de você aprender sobre esses plugins, você precisará saber como usar algo chamado GraphiQL, uma ferramenta que lhe ajudará a estruturar suas _queries_ corretamente.
+Neste tutorial, você aprenderá como puxar dados para seu site Gatsby usando GraphQL e plugins de origem. Porém, antes de você aprender sobre esses plugins, você precisará saber como usar algo chamado GraphiQL, uma ferramenta que lhe ajudará a estruturar suas _queries_ corretamente.
 
 ## Introduzindo GraphiQL
 
@@ -33,11 +33,11 @@ O Explorador do GraphiQL permite que você construa interativamente _queries_ co
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## Plugins nativos
+## Plugins de origem
 
 Dados em sites Gatsby podem vir de qualquer lugar: APIs, banco de dados, CMSs, arquivos locais, etc.
 
-Plugins nativos buscam por dados através de sua origem. Por exemplo: o plugin nativo dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
+Plugins de origem buscam por dados através de sua origem. Por exemplo: o plugin de origem dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
 
 Adicione o [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) e explore como ele funciona.
 
@@ -214,4 +214,4 @@ E agora visite [http://localhost:8000/my-files](http://localhost:8000/my-files)�
 
 ## O que vem na sequência?
 
-Agora você aprendeu como os plugins nativos trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins nativos. A combinaçào de plugins nativos com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).
+Agora você aprendeu como os plugins de origem trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins de origem. A combinaçào de plugins de origem com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).
