@@ -47,7 +47,7 @@ Com o Gatsby, podemos melhorar a experiência de trabalhar com imagens.
   npm install --save gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
 ```
 
-2. Adicionar os plugins e transformadores recém-instalados ao seu `gatsby-config.js`
+2. Adicionar os plugins e os plugins transformadores recém-instalados ao seu `gatsby-config.js`
 
 ```js:title=gatsby-config.js
 module.exports = {
