@@ -20,7 +20,7 @@ _Para obter informações mais completas sobre a API, consulte a documentação 
 
 Imagens grandes e não otimizadas diminuem drasticamente a velocidade do seu site.
 
-Mas criar imagens otimizadas para sites há muito tempo é um problema difícil. Idealmentev você deve:
+Mas criar imagens otimizadas para sites há muito tempo é um problema difícil. Idealmente você deve:
 
 - Redimensionar imagens grandes para o tamanho necessário ao seu design
 - Gerar várias imagens menores para que smartphones e tablets não baixem imagens em tamanho de desktop
