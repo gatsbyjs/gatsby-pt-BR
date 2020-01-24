@@ -105,6 +105,32 @@ const Button = tw.button`
 `
 ```
 
+### Opção #3: SCSS
+
+1. Instale o plugin Gatsby SCSS [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass) e `node-sass`.
+
+```shell
+npm install --save node-sass gatsby-plugin-sass
+```
+
+2. Para poder usar as classes Tailwind nos seus arquivos SCSS, adicione o pacote `tailwindcss` no parâmetro `postCSSPlugins` no seu `gatsby-config.js`.
+
+```javascript:title=gatsby-config.js
+plugins: [
+  {
+    resolve: `gatsby-plugin-sass`,
+    options: {
+      postCssPlugins: [
+        require("tailwindcss"),
+        require("./tailwind.config.js"), // Opcional: Carregar configuração CSS personalizada do Tailwind
+      ],
+    },
+  },
+],
+```
+
+**Nota:** Opcionalmente, você pode adicionar um arquivo de configuração correspondente (por padrão, será `tailwind.config.js`). Se você estiver adicionando uma configuração personalizada, precisará carregá-la após o `tailwindcss`.
+
 ## Outros recursos
 
 - [Introdução ao PostCSS](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)
