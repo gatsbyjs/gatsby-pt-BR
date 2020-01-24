@@ -18,7 +18,7 @@ _Para obter informações mais completas sobre a API, consulte a documentação 
 
 ## Problema
 
-Imagens grandes e não otimizadas diminuem drasticamente o seu site.
+Imagens grandes e não otimizadas diminuem drasticamente a velocidade do seu site.
 
 Mas criar imagens otimizadas para sites há muito tempo é um problema difícil. Idealmentev você deve:
 
