@@ -12,7 +12,7 @@ title: Usando o _Gatsby Image_ para impedir _Image Bloat_
 
 - usa a nova [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) para carregar imagens usando a técnica _lazy load_
 - mantém a posição de uma imagem para que sua página não pule à medida que as imagens são carregadas
-- facilita a adição de um 'placeholder' - um plano de fundo cinza ou uma versão borrada da imagem.
+- facilita a adição de um _placeholder_ - um plano de fundo cinza ou uma versão borrada da imagem.
 
 _Para obter informações mais completas sobre a API, consulte a documentação do [Gatsby Image API](/docs/gatsby-image/)._
 
