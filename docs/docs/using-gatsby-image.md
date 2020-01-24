@@ -55,7 +55,7 @@ module.exports = {
 }
 ```
 
-3. Configurar o `gatsby-source-filesystem` para carregar imagens de uma pasta. Para usar o GraphQL para consultar os arquivos de imagem, os arquivos precisam estar em um local conhecido por Gatsby. Isso requer uma atualização no `gatsby-config.js` para configurar o plugin. Sinta-se livre para substituir a opção `path` para referenciar onde quer que suas imagens estejam localizadas no seu projeto.
+3. Configurar o `gatsby-source-filesystem` para carregar imagens de uma pasta. Para usar o GraphQL na consulta dos arquivos de imagem, os mesmos precisam estar em um local conhecido pelo Gatsby. Isso requer uma atualização no `gatsby-config.js` para configurar o plugin. Sinta-se livre para substituir a opção `path` para referenciar onde quer que suas imagens estejam localizadas no seu projeto.
 
 ```js:title=gatsby-config.js
 module.exports = {
