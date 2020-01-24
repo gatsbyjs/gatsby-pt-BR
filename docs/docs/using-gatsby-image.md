@@ -26,7 +26,7 @@ Mas criar imagens otimizadas para sites há muito tempo é um problema difícil.
 - Gerar várias imagens menores para que smartphones e tablets não baixem imagens em tamanho de desktop
 - Remover todos os metadados desnecessários e otimizar a compactação JPEG e PNG
 - Carregar imagens em modo _lazy load_ (assícrona) para acelerar o carregamento inicial da página e economizar largura de banda
-- Usar a técnica de "desfoque" ou um "'placeholder' rastreado" no SVG para mostrar uma pré-visualização da imagem enquanto ela carrega
+- Usar a técnica de "desfoque" ou um "'_placeholder_ rastreado" no SVG para mostrar uma pré-visualização da imagem enquanto ela carrega
 - Manter a posição da imagem para que sua página não pule enquanto as imagens são carregadas
 
 Fazer isso de forma consistente em um site parece um trabalho complicado. Você otimiza suas imagens manualmente e então... várias imagens são alteradas no último minuto ou um aprimoramento de design reduz 100px na largura das imagens.
