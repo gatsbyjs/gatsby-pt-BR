@@ -29,7 +29,7 @@ Mas criar imagens otimizadas para sites há muito tempo é um problema difícil.
 - Usar a técnica de "desfoque" ou um "'placeholder' rastreado" no SVG para mostrar uma pré-visualização da imagem enquanto ela carrega
 - Manter a posição da imagem para que sua página não pule enquanto as imagens são carregadas
 
-Fazer isso de forma consistente em um site parece um trabalho complicado. Você otimiza suas imagens manualmente e então... várias imagens são alteradas no último minuto ou um aprimoramento de design reduz 100px de largura as imagens.
+Fazer isso de forma consistente em um site parece um trabalho complicado. Você otimiza suas imagens manualmente e então... várias imagens são alteradas no último minuto ou um aprimoramento de design reduz 100px na largura das imagens.
 
 A maioria das soluções envolve muito trabalho manual e contabilidade para garantir que todas as imagens sejam otimizadas.
 
