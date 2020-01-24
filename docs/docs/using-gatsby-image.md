@@ -120,7 +120,7 @@ export default ({ data }) => (
 
 Essa consulta do GraphQL cria vários tamanhos da imagem e, quando a página é renderizada, é usada a imagem apropriada para a resolução de tela atual (computador, dispositivo móvel, etc.). O componente `gatsby-image` ativa automaticamente um efeito de desfoque, bem como imagens 'lazy loading' que não estão atualmente na tela.
 
-Portanto, tudo isso é muito bom e é muito melhor poder usar isso do npm do que implementá-lo você mesmo ou juntar várias bibliotecas independentes.
+Portanto, tudo isso é muito bom e é muito melhor poder usar isso pelo npm do que implementá-lo você mesmo ou juntar várias bibliotecas independentes.
 
 ### Recursos adicionais
 
