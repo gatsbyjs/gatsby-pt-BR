@@ -1,5 +1,5 @@
 ---
-title: Referência API do Gatsby
+title: Referência da API do Gatsby
 overview: true
 ---
 
