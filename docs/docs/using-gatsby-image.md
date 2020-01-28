@@ -2,7 +2,7 @@
 title: Utilizando o _Gatsby Image_ para Otimizar a Performance de Imagens.
 ---
 
-`gatsby-image` é um componente do React projetado para funcionar perfeitamente com as consultas GraphQL do Gatsby ([`gatsby-image` plugin README](/packages/gatsby-image/)). Ele combina os recursos de [processamento nativo de imagens do Gatsby](https://image-processing.gatsbyjs.org/) com técnicas avançadas de carregamento de imagens para otimizar fácil e completamente o carregamento de imagens para seus sites. O `gatsby-image` usa o [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) para tranformações de imagens.
+`gatsby-image` é um componente do React projetado para funcionar de forma integrada com as consultas GraphQL do Gatsby ([`gatsby-image` plugin README](/packages/gatsby-image/)). Ele combina os recursos de [processamento nativo de imagens do Gatsby](https://image-processing.gatsbyjs.org/) com técnicas avançadas de carregamento de imagens para otimizar de forma fácil e completa o carregamento de imagens no seu site. O `gatsby-image` usa o [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) para transformação de imagens.
 
 > _Aviso: gatsby-image **não** é um substituto para `<img />`. É otimizado para imagens de largura/altura fixas e imagens que ampliam a largura total de um contêiner. Algumas maneiras de usar o <img /> `não funcionarão com o gatsby-image._
 
