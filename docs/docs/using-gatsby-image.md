@@ -41,7 +41,7 @@ Com o Gatsby, podemos melhorar a experiência de trabalhar com imagens.
 
 `gatsby-image` foi projetado para funcionar perfeitamente com os recursos nativos de processamento de imagens do Gatsby, equipados com GraphQL e Sharp. Para produzir imagens perfeitas com o mínimo esforço, você pode:
 
-1. Instalar `gatsby-image` e outras dependências necessárias como `gatsby-plugin-sharp` e `gatsby-transformer-sharp`
+1. Instale `gatsby-image` e outras dependências necessárias como `gatsby-plugin-sharp` e `gatsby-transformer-sharp`
 
 ```shell
   npm install --save gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
