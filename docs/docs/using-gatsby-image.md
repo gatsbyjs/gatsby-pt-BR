@@ -79,7 +79,7 @@ module.exports = {
   lessonTitle="Install gatsby-image and source local images from the filesystem"
 />
 
-4. Escrever uma consulta GraphQL usando um dos ["fragmentos" do GraphQL](/packages/gatsby-image/#fragments) que especificam os campos necessários para o `gatsby-image` criar uma imagem responsiva e otimizada. Este exemplo consulta uma imagem em um caminho relativo ao local especificado nas opções `gatsby-source-filesystem` usando o fragmento `GatsbyImageSharpFluid`.
+4. Defina uma consulta GraphQL usando um dos ["fragmentos" do GraphQL](/packages/gatsby-image/#fragments) que especificam os campos necessários para o `gatsby-image` criar uma imagem responsiva e otimizada. Este exemplo consulta uma imagem em um caminho relativo ao local especificado nas opções `gatsby-source-filesystem` usando o fragmento `GatsbyImageSharpFluid`.
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
