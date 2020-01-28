@@ -107,7 +107,7 @@ const Button = tw.button`
 
 ### Opção #3: SCSS
 
-1. Instale o plugin Gatsby SCSS [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass) e `node-sass`.
+1. Instale o plugin Gatsby SCSS [**gatsby-plugin-sass**](/packages/gatsby-plugin-sass) e o pacote `node-sass`.
 
 ```shell
 npm install --save node-sass gatsby-plugin-sass
