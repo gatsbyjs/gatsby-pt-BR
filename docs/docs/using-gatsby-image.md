@@ -97,7 +97,7 @@ file(relativePath: { eq: "images/default.jpg" }) {
   lessonTitle="Use gatsby-image with an image from a relative path"
 />
 
-5. Importar o `Img` para exibir o fragmento em JSX. Existem recursos adicionais disponíveis com a tag `Img`, como o atributo `alt` para acessibilidade.
+5. Importe o `Img` para exibir o fragmento em JSX. Existem recursos adicionais disponíveis com a tag `Img`, como o atributo `alt` para acessibilidade.
 
 ```jsx
 import Img from "gatsby-image"
