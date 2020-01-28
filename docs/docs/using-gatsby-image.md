@@ -129,5 +129,5 @@ Portanto, tudo isso é muito bom e é muito melhor poder usar isso pelo npm do q
 - [Código-fonte de um exemplo de um site usando o gatsby-image](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-gatsby-image)
 - [Artigos sobre o gatsby-image](/blog/tags/gatsby-image/)
 - [Starters que usam o gatsby-image](/starters/?d=gatsby-image&v=2)
-- [Outros plugins de imagem image](/plugins/?=image)
+- [Outros plugins de imagem](/plugins/?=image)
 - ["Otimização de imagem ridiculamente fácil com o gatsby-image" by Kyle Gill](https://medium.com/@kyle.robert.gill/ridiculously-easy-image-optimization-with-gatsby-js-59d48e15db6e)
