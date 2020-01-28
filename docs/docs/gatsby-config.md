@@ -1,14 +1,14 @@
 ---
-title: Gatsby Config API
+title: API de configuração do Gatsby
 ---
 
-Site configuration options for a Gatsby site are placed in a file at the root of the project folder called `gatsby-config.js`.
+As opções de configuração para um site Gatsby são colocados em um arquivo na raiz do projeto chamado `gatsby-config.js`.
+Anotações: Existe muitos exemplos de configurações qual pode ser útil referenciar em diferentes Exemplos de Websites gatsby.
+_Anotações: Existe muitos exemplos de configurações qual pode ser útil referenciar em diferentes [Exemplos de Websites Gatsby ](https://github.com/gatsbyjs/gatsby/tree/master/examples)._
 
-_Note: There are many sample configs which may be helpful to reference in the different [Gatsby Example Websites](https://github.com/gatsbyjs/gatsby/tree/master/examples)._
+## Opções de Configuração
 
-## Configuration options
-
-Options available to set within `gatsby-config.js` include:
+Opções disponiveis para configurar dentro do `gatsby-config.js` incluí:
 
 1.  [siteMetadata](#sitemetadata) (object)
 2.  [plugins](#plugins) (array)
@@ -20,25 +20,28 @@ Options available to set within `gatsby-config.js` include:
 
 ## siteMetadata
 
-When you want to reuse common pieces of data across the site (for example, your site title), you can store that data in `siteMetadata`:
+Quando você quer reusar alguns pedaços comum através do site( por exemplo, seu título do site), você pode armazenar estes dados em `siteMetadata`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
     title: `Gatsby`,
     siteUrl: `https://www.gatsbyjs.org`,
-    description: `Blazing fast modern site generator for React`,
+    description: `Gerador de site moderno e veloz para React`,
   },
 }
 ```
 
-This way you can store it in one place, and pull it whenever you need it. If you ever need to update the info, you only have to change it here.
+Desta forma você pode armazenar em um único local e puxar isto sempre que precisar, se você sempre precisar atualizar as informações, você somente tem que mudar aqui.
+Veja a descrição completa e exemplo de uso em Gatsby.js Tutorial Parte 4
 
-See a full description and sample usage in [Gatsby.js Tutorial Part Four](/tutorial/part-four/#data-in-gatsby).
+Desta forma você pode armazenar em um único local e puxar isto sempre que precisar, se você sempre precisar atualizar as informações, você somente tem que mudar aqui.
+
+Veja a descrição completa e exemplo de uso em [Tutorial Gatsby.js Parte Quatro](/tutorial/part-four/#data-in-gatsby).
 
 ## Plugins
 
-Plugins are Node.js packages that implement Gatsby APIs. The config file accepts an array of plugins. Some plugins may need only to be listed by name, while others may take options (see the docs for individual plugins).
+Plugins são pacotes Node.js que implementam APIs do Gatsby. As Arquivos de configurações aceitos em um array de plugins. Alguns plugins pode ser listados somente pelo nome, enquanto outros pode precisar de opções(veja a documentação para plugins individuais).
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -55,11 +58,11 @@ module.exports = {
 }
 ```
 
-See more about [Plugins](/docs/plugins/) for more on utilizing plugins, and to see available official and community plugins.
+Veja mais sobre [Plugins](/docs/plugins/) para saber mais como utilizar plugins, e ver plugins oficiais disponíveis e plugins da comunidade.
 
 ## pathPrefix
 
-It's common for sites to be hosted somewhere other than the root of their domain. Say we have a Gatsby site at `example.com/blog/`. In this case, we would need a prefix (`/blog`) added to all paths on the site.
+É comum sites ser hospedado em algum outro local que não seja dominio raiz.Quando dizemos que temos um Gatsby site em `example.com/blog/`. Nesse caso, precisamos de um prefixo (`/blog`) adicionado a todas caminhos no site.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -67,13 +70,13 @@ module.exports = {
 }
 ```
 
-See more about [Adding a Path Prefix](/docs/path-prefix/).
+Veja mais sobre [Adicionar um Prefixo de Caminho](/docs/path-prefix/).
 
 ## Polyfill
 
-Gatsby uses the ES6 Promise API. Because some browsers don't support this, Gatsby includes a Promise polyfill by default.
+Gatsby usa a API do ES6 Promise. Pelo fato de alguns navegadores não suportam isso, o Gatsby inclui um polyfill Promise por padrão.
 
-If you'd like to provide your own Promise polyfill, you can set `polyfill` to false.
+Se você desejar fornecer seu próprio polyfill Promise, você pode configurar o `polyfill` como false.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -81,7 +84,7 @@ module.exports = {
 }
 ```
 
-See more about [Browser Support](/docs/browser-support/#polyfills) in Gatsby.
+Veja mais sobre [Suporte de Navegadores](/docs/browser-support/#polyfills) em Gatsby.
 
 ## Mapping node types
 
@@ -253,9 +256,9 @@ Setting the proxy config option will tell the develop server to proxy any unknow
 module.exports = {
   proxy: {
     prefix: "/api",
-    url: "http://examplesite.com/api/",
-  },
-}
+    url: "http://examplesite.com/api/"
+  }
+};
 ```
 
 See more about [Proxying API Requests in Develop](/docs/api-proxy/).
