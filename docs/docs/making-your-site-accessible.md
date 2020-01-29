@@ -19,7 +19,7 @@ A acessibilidade apoia a [inclusão social para todos](https://www.w3.org/standa
 
 ## Gatsby ajuda a aumentar a acessibilidade
 
-Embora, em última análise, você decida desenvolver seu site com a acessibilidade em mente, o Gatsby tem como objetivo fornecer o máximo de suporte pronto para uso.
+Embora em última análise caiba a você decidir desenvolver seu site com a acessibilidade em mente, o Gatsby tem como objetivo fornecer o máximo de suporte pronto para uso.
 
 ### Roteamento acessível
 
