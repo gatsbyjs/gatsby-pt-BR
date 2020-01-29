@@ -63,7 +63,7 @@ A acessibilidade por padrão é uma vitória para todos. Aqui está um ponto de 
 - Crie formulários inclusivos e [acessíveis](/docs/building-a-contact-form#creating-an-accessible-form)
 - Empregue [títulos acessíveis, pontos de referência e estrutura semântica](https://webaim.org/techniques/semanticstructure/)
 - Inclua [alternativas de imagem, vídeo e texto em áudio](https://a11y-style-guide.com/style-guide/section-media.html)
-- Teste de [ampliação e zoom da tela](https://axesslab.com/make-site-accessible-screen-magnifiers/)
+- Teste a [ampliação e zoom da tela](https://axesslab.com/make-site-accessible-screen-magnifiers/)
 - Garanta a acessibilidade de [menus interativos, modais e widgets personalizados](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
 - Crie [animações e movimentos](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/) seguros
 - Escreva [testes de acessibilidade Cypress](/docs/end-to-end-testing/#writing-tests) para o seu site ou aplicativo
