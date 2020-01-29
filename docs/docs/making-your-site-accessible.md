@@ -77,7 +77,7 @@ A acessibilidade por padrão é uma vitória para todos. Aqui está um ponto de 
 - [A importância do teste de acessibilidade manual](https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing/) da Smashing Magazine
 - [Escrevendo testes automatizados para acessibilidade](https://www.24a11y.com/2017/writing-automated-tests-accessibility/)
 - [Curso gratuito de acessibilidade na web](https://www.udacity.com/course/web-accessibility--ud891) pelo Google e Udacity
-- [Introdução ao WebAIM](https://webaim.org/intro/) à acessibilidade da Web
+- [Introdução ao WebAIM](https://webaim.org/intro/) para acessibilidade da Web
 - [Universidade Deque](https://dequeuniversity.com), com treinamento on-line gratuito de acessibilidade para pessoas com deficiência
 - [Documentação de Acessibilidade do Web.dev](https://web.dev/accessible)
 - [Todas as postagens de acessibilidade no blog do Gatsby](/blog/tags/accessibility/)
