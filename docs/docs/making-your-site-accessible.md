@@ -2,7 +2,7 @@
 title: Tornando Seu Site Acessível
 ---
 
-A equipe do Gatsby é apaixonada por ajudá-lo a criar sites que funcionem para todos, com padrões úteis que envolvem acessibilidade na Web, além de otimizações de desempenho. Ao tornar seu site acessível a pessoas com deficiência, você pode criar sites mais inclusivos que alcancem e removam barreiras para mais pessoas na Internet.
+A equipe do Gatsby é apaixonada por ajudá-lo a criar sites que funcionem para todos implementando por _default_  recursos para criação de sites acessíveis e otimização de desempenho. Ao tornar seu site acessível a pessoas com deficiência, você pode criar sites mais inclusivos que alcancem e removam barreiras para um maior número de pessoas na Internet.
 
 ## O que é acessibilidade?
 
