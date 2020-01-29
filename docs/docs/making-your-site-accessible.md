@@ -2,7 +2,7 @@
 title: Tornando Seu Site Acessível
 ---
 
-A equipe do Gatsby é apaixonada por ajudá-lo a criar sites que funcionem para todos implementando por _default_  recursos para criação de sites acessíveis e otimização de desempenho. Ao tornar seu site acessível a pessoas com deficiência, você pode criar sites mais inclusivos que alcancem e removam barreiras para um maior número de pessoas na Internet.
+A equipe do Gatsby é apaixonada por ajudá-lo a criar sites que funcionem para todos implementando por _default_ recursos para criação de sites acessíveis e otimização de desempenho. Ao tornar seu site acessível a pessoas com deficiência, você pode criar sites mais inclusivos que alcancem e removam barreiras para um maior número de pessoas na Internet.
 
 ## O que é acessibilidade?
 
@@ -30,8 +30,6 @@ Um dos recursos mais comuns de todos os sites é a navegação. As pessoas devem
 Desde o [lançamento da segunda versão](/blog/2018-09-17-gatsby-v2/), seus sites do Gatsby usam `@reach/router` internamente. Embora o teste de acessibilidade adicional seja sempre uma boa idéia, o [Componente Link do Gatsby](/docs/gatsby-link/) envolve o [componente link do @reach/router](https://reach.tech/router/api/Link) para melhorar a acessibilidade sem que você precise pensar nisso.
 
 ### Gatsby cria páginas HTML por padrão
-
-For websites, rendering [static HTML](/docs/glossary#static) pages means that JavaScript isn't required to access and navigate through content. Gatsby [compiles](/docs/glossary#compiler) HTML pages by default from React components using [Node.js](/docs/glossary#nodejs), meaning you don't have to worry about setting up server-rendering yourself to support [progressive enhancement](/docs/glossary#progressive-enhancement). With Gatsby's static support out of the box, you can build dynamic sites that still enable user access without requiring [client-side](/docs/glossary#client-side) scripting.
 
 Para sites, renderizar páginas [HTML estáticas](/docs/glossary#static) significa que o JavaScript não é necessário para acessar e navegar pelo conteúdo. O Gatsby [compila](/docs/glossary#compiler) páginas HTML por padrão a partir dos componentes React usando o [Node.js](/docs/glossary#nodejs). Isso significa que você não precisa se preocupar em configurar a renderização do servidor para dar suporte ao [aprimoramento progressivo](/docs/glossary#progressive-enhancement). Com o suporte estático do Gatsby pronto para o uso, você pode criar sites dinâmicos que ainda permitem o acesso do usuário sem exigir scripts no [lado do cliente](/docs/glossary#client-side).
 
