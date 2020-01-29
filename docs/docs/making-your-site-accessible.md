@@ -27,7 +27,7 @@ Um dos recursos mais comuns de todos os sites é a navegação. As pessoas devem
 
 É por isso que todo site do Gatsby pretende ter uma experiência de navegação acessível por padrão. Graças ao [@reach/router](https://reach.tech/router), uma biblioteca de roteamento para o React, o Gatsby lida com anúncios de página para leitores de tela na alteração de página. Estamos ativamente aprimorando essa experiência e [agradecemos seus comentários](/accessibility-statement/).
 
-Desde o[ segundo grande lançamento](/blog/2018-09-17-gatsby-v2/), seus sites do Gatsby usam `@reach/router` sob o capô. Embora o teste de acessibilidade adicional seja sempre uma boa idéia, o [Componente Link do Gatsby](/docs/gatsby-link/) envolve o [componente link do @reach/router](https://reach.tech/router/api/Link) para melhorar a acessibilidade sem que você precise pensar nisso.
+Desde o [lançamento da segunda versão](/blog/2018-09-17-gatsby-v2/), seus sites do Gatsby usam `@reach/router` internamente. Embora o teste de acessibilidade adicional seja sempre uma boa idéia, o [Componente Link do Gatsby](/docs/gatsby-link/) envolve o [componente link do @reach/router](https://reach.tech/router/api/Link) para melhorar a acessibilidade sem que você precise pensar nisso.
 
 ### Gatsby cria páginas HTML por padrão
 
