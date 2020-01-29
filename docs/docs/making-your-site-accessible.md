@@ -17,7 +17,7 @@ A web de hoje é um recurso importante em muitos aspectos da vida, como assistê
 
 A acessibilidade apoia a [inclusão social para todos](https://www.w3.org/standards/webdesign/accessibility#case) e tem um forte [argumento de negócios](https://www.w3.org/WAI/business-case/).
 
-## Gatsby ajuda a aumentar a acessibilidade
+## Gatsby ajuda a implementar acessibilidade
 
 Embora em última análise caiba a você decidir desenvolver seu site com a acessibilidade em mente, o Gatsby tem como objetivo fornecer o máximo de suporte pronto para uso.
 
