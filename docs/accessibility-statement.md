@@ -4,15 +4,17 @@ title: Accessibility Statement
 
 _Last updated: April 8, 2019_
 
-We want everyone who uses Gatsby to feel welcome and find the experience rewarding: this includes developers with disabilities and users with disabilities for Gatsby sites, docs, and resources.
+Nos queremos que todo usuario de Gatsby sinta-se bemvindo e sinta a experiencia de recompensa: isso inclui desenvolvedores e usuarios com dificuldades em sites, documentações e recursos do Gatsby.
 
-This page was created to collect accessibility information about the Gatsby ecosystem in one place and provide communication channels for people with disabilities to get help with Gatsby.
+Essa pagina foi criada para coletar de forma simples informação sobre todo o ecosistema Gatsby em um unico lugar, melhorando os canais de comunicação entre as pessoas com dificuldade para obter ajuda sobre o Gatsby.
 
-## Gatsby products and services
+## Produtos e serviços Getsby
 
-Gatsbyjs.org is the online home of the open source Gatsby website framework; it includes documentation, tutorials, and guides on how and why to build with Gatsby, as well as a blog, site showcase, and information on how to contribute to the project.
+Gatsbyjs.org é o site oficial do framework de codigo aberto Gatsby; que inclui documentação, tutoriais e guias de como e porque desenvolver com Gatsby, bem como um blog, uma galeria de projetos, e inforções sobre como contribuir com o projeto.   
 
 Gatsbyjs.com is the business website for Gatsby, Inc. the startup building Gatsby, including our first product, Gatsby Preview: a cloud service allowing team members to collaborate on a Gatsby site in development.
+
+Gatsbyjs.com é a pagina de negocios da Gatsby, Inc. a startup que desenvolve o Gatsby, incluindo nosso primeiro produto, Gatsby Preview: um serviço em nuvem que permite que membros de um time colaborem no desenvolvimento de um site Gatsby.
 
 ## Providing feedback and getting accessibility help
 
