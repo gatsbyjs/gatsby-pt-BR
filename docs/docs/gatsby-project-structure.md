@@ -30,11 +30,11 @@ Dentro de um projeto Gatsby, você pode ver algumas ou todas as seguintes pastas
 
 - **`/src`** Esse diretório irá conter todo o código relacionado ao que você verá no _front-end_ do seu site (o que você vê no navegador), como o cabeçalho do site ou um _template_ de página. "Src" é uma convenção para "_source code_".
 
-  - **`/pages`** Componentes no diretório src/pages se tornam páginas automaticamente com caminhos baseados no nome do arquivo. Confira a [documentação de páginas](/docs/recipes.md#criando-páginas-automaticamente) para mais detalhes.
+  - **`/pages`** Componentes no diretório src/pages se tornam páginas automaticamente com caminhos baseados no nome do arquivo. Confira a [documentação de páginas](/docs/recipes/#criando-páginas-automaticamente) para mais detalhes.
   - **`/templates`** Contém modelos de programação para automatizar a criação de páginas. Confira a [documentação de _templates_](/docs/building-with-components/#page-template-components) para mais detalhes.
   - **`html.js`** Para customizar a configuração diferente do padrão de .cache/default_html.js. Confira a documentação, [customizando o html](/docs/custom-html/) para mais detalhes.
 
-- **`/static`** Caso você coloque um arquivo na pasta _static_, ele não será processado pelo Webpack. Em vez disso, ele será copiado para a pasta _public_ sem ser modificado. Confira a documentação sobre [_assets_ estáticos](/docs/static-folder.md#adicionando-assets-fora-do-sistema-de-módulos) para mais detalhes.
+- **`/static`** Caso você coloque um arquivo na pasta _static_, ele não será processado pelo Webpack. Em vez disso, ele será copiado para a pasta _public_ sem ser modificado. Confira a documentação sobre [_assets_ estáticos](/docs/static-folder/#adicionando-assets-fora-do-sistema-de-módulos) para mais detalhes.
 
 ### Arquivos
 
@@ -48,4 +48,4 @@ Dentro de um projeto Gatsby, você pode ver algumas ou todas as seguintes pastas
 
 ### Diversos
 
-A estrutura de arquivos/pastas descrita acima reflete em arquivos e pastas específicos do Gatsby. Como os _sites_ Gatsby também são aplicações em React, é comum usar padrões de organização semelhantes como pastas de `/components` e `/utils` dentro do diretório `/src`. A [documentação do React](https://reactjs.org/docs/faq-structure.html) tem mais informações sobre uma estrutura típica de pastas de uma aplicação em React.
+A estrutura de arquivos/pastas descrita acima reflete em arquivos e pastas específicos do Gatsby. Como os _sites_ Gatsby também são aplicações em React, é comum usar padrões de organização semelhantes como pastas de `/components` e `/utils` dentro do diretório `/src`. A [documentação do React](https://pt-br.reactjs.org/docs/faq-structure.html) tem mais informações sobre uma estrutura típica de pastas de uma aplicação em React.
