@@ -9,7 +9,7 @@ A equipe do Gatsby é apaixonada por ajudá-lo a criar sites que funcionem para 
 Nos primórdios da Web, Tim Berners-Lee, inventor da World Wide Web, [disse](https://www.w3.org/Press/IPO-announce):
 
 > "O poder da Web está em sua universalidade.
-> O acesso de todos, independentemente da deficiência, é um aspecto essencial ".
+> O acesso de todos, independentemente da deficiência, é um aspecto essencial."
 
 A web de hoje é um recurso importante em muitos aspectos da vida, como assistência médica, educação ou comércio. A acessibilidade é uma consideração importante ao criar para a web.
 
