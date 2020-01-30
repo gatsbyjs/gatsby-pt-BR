@@ -23,7 +23,7 @@ Embora em última análise caiba a você decidir desenvolver seu site com a aces
 
 ### Roteamento acessível
 
-Um dos recursos mais comuns de todos os sites é a navegação. As pessoas devem poder navegar pelas suas páginas e conteúdo de maneira intuitiva e acessível.
+Um dos recursos mais comuns de todos os sites é a navegação. As pessoas devem poder navegar pelas suas páginas e conteúdos de maneira intuitiva e acessível.
 
 É por isso que todo site do Gatsby pretende ter uma experiência de navegação acessível por padrão. Graças ao [@reach/router](https://reach.tech/router), uma biblioteca de roteamento para o React, o Gatsby lida com anúncios de página para leitores de tela  em eventos de mudança de página. Estamos ativamente aprimorando essa experiência e [seus comentários são bem-vindos](/accessibility-statement/).
 
