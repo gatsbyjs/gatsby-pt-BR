@@ -2,7 +2,7 @@
 title: Criando e modificando páginas
 ---
 
-O Gatsby facilita a manipulação pragramática das suas páginas.
+O Gatsby facilita a manipulação programática das suas páginas.
 
 As páginas podem ser criadas de três maneiras:
 
