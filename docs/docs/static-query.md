@@ -1,21 +1,21 @@
 ---
-title: Querying Data in Components using StaticQuery
+title: Consultando dados em componentes usando StaticQuery
 ---
 
-Gatsby v2 introduces `StaticQuery`, a new API that allows components to retrieve data via a GraphQL query.
+A v2 do Gatsby introduziu a `StaticQuery`, uma nova API que permite componentes receberem dados através de uma query GraphQL.
 
-In this guide, you'll see an example using `StaticQuery`, and learn about [the difference between a StaticQuery and a page query](#how-staticquery-differs-from-page-query).
+Neste guia, você verá um exemplo da utilização da `StaticQuery`, e aprender sobre [a diferença entre uma StaticQuery e uma page query](#como-o-staticquery-se-difere-de-uma-page-query).
 
-## How to use `StaticQuery` in components
+## Como usar `StaticQuery` nos componentes
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-load-data-using-graphql-queries-directly-in-a-gatsby-v2-component-with-staticquery"
-  lessonTitle="Load Data using GraphQL Queries Directly in a Gatsby v2 Component with StaticQuery"
+  lessonTitle="Carregar dados utilizando queries GraphQL diretamente num componente Gatsby v2 com a StaticQuery"
 />
 
-### Basic example
+### Exemplo Básico
 
-Here is an example of a `Header` component using `StaticQuery`:
+Aqui está um exemplo de um componente `Header` usando` StaticQuery`
 
 ```jsx:title=src/components/header.js
 import React from "react"
@@ -41,15 +41,15 @@ export default () => (
 )
 ```
 
-By using `StaticQuery`, you can colocate a component with its data. It is no longer required to, say, pass data down from `Layout` to `Header`.
+Usando o `StaticQuery`, você pode linkar um componente com seus dados. Não é mais necessário, por exemplo, passar dados do `Layout` para o `Header`.
 
 ### useStaticQuery
 
-There's also a React hooks version of StaticQuery: check out the documentation on [`useStaticQuery`](/docs/use-static-query/)
+Há também uma versão React hooks do StaticQuery: confira a documentação em [`useStaticQuery`](/docs/use-static-query/)
 
 ### Typechecking
 
-With the above pattern, you lose the ability to typecheck with PropTypes. To regain typechecking while achieving the same result, you can change the component to:
+Com o padrão acima, você perde a capacidade de typecheck utilizando PropTypes. Para recuperar o typechecking enquanto obtém o mesmo resultado, você pode alterar o componente para:
 
 ```jsx:title=src/components/header.js
 import React from "react"
@@ -88,10 +88,11 @@ Header.propTypes = {
 }
 ```
 
-## How StaticQuery differs from page query
+## Como o StaticQuery se difere de uma page query
 
-StaticQuery can do most of the things that page query can, including fragments. The main differences are:
 
-- page queries can accept variables (via `pageContext`) but can only be added to _page_ components
-- StaticQuery does not accept variables (hence the name "static"), but can be used in _any_ component, including pages
-- StaticQuery does not work with raw React.createElement calls; please use JSX, e.g. `<StaticQuery />`
+Uma StaticQuery pode fazer a maioria das coisas que uma page query pode fazer, incluindo fragmentos. As principais diferenças são:
+
+- page queries podem aceitar variáveis (via `pageContext`), mas só podem ser adicionadas aos componentes _page_
+- StaticQuery não aceita variáveis (daí o nome "estático"), mas pode ser usado em _qualquer_ componente, incluindo page
+- StaticQuery não funciona com chamadas puras do React.createElement; para isso use JSX, por exemplo `<StaticQuery />`
