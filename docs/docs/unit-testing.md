@@ -2,7 +2,7 @@
 title: Testes Unitários
 ---
 Testes unitários são uma ótima forma de se proteger contra erros no seu código antes de você implantá-lo. Embora o Gatsby não tenha suporte nativo aos testes unitários, basta apenas alguns passos
-para utilizá-los. Entretanto alguns recursos do processo de construção do Gatsby, como a configuração padrão do Jest, podem não funcionar corretamente. Esse guia mostra como configurar.
+para utilizá-los. Entretanto alguns recursos do processo de construção do Gatsby, como a configuração padrão do Jest, podem não funcionar corretamente. Esse guia mostra como configurar isso.
  
 ## Configurando seu ambiente
  
