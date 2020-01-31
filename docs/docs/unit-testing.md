@@ -27,7 +27,7 @@ npm install --save-dev jest babel-jest react-test-renderer babel-preset-gatsby i
  
 Como o Gatsby tem a sua própria configuração do Babel, você precisará informar
 manualmente para o Jest usar o `babel-jest`. A forma mais fácil de fazer isso é
-criando um arquivo `jest.config.js`. Você pode configurar alguns padrões ao mesmo tempo:
+criando um arquivo `jest.config.js`. Você pode aproveitar para configurar alguns padrões também:
  
 ```js:title=jest.config.js
 module.exports = {
