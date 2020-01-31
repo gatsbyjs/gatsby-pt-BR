@@ -7,17 +7,17 @@ A principal prioridade da maioria dos clientes é que o _site_ seja enviado com 
 
 Além disso, eles geralmente desejam usar fluxos de trabalho familiares baseados em CMS para criar, editar e publicar conteúdo.
 
-Alguns benefícios que você pode oferecer ao recomendar Gatsby para os clientes incluem:
+Alguns benefícios que você pode oferecer ao recomendar o Gatsby para os clientes incluem:
 
 - Trabalhar com o CMS deles
 - Rápido desenvolvimento que garante que o projeto esteja no prazo
 - A facilidade de fazer alterações no desenvolvimento ajuda a manter o projeto abaixo do orçamento
-- Baixo custo de hospedatem ajuda a manter o projeto abaixo do orçamento
+- Baixo custo de hospedagem ajuda a manter o projeto abaixo do orçamento
 
-[Esse pager](/gatsby-one-pager.pdf) também pode ser útil para clientes -- ele explica Gatsby no idioma deles.
+[Esse pager](/gatsby-one-pager.pdf) também pode ser útil para clientes -- ele explica o Gatsby no idioma deles.
 
 --
 
 Este é um esboço. Ajude nossa comunidade a expandi-lo.
 
-Por favor use o [guia de estilos Gatsby](/contributing/gatsby-style-guide/) para garantir que sua _pull request_ seja aceita.
+Por favor use o [guia de estilos Gatsby](/contributing/gatsby-style-guide/) para garantir que seu _pull request_ seja aceito.
