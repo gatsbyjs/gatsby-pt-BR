@@ -4,15 +4,15 @@ title: Utilizando o _Gatsby Image_ para Otimizar a Performance de Imagens.
 
 `gatsby-image` é um componente do React projetado para funcionar de forma integrada com as consultas GraphQL do Gatsby ([`gatsby-image` plugin README](/packages/gatsby-image/)). Ele combina os recursos de [processamento nativo de imagens do Gatsby](https://image-processing.gatsbyjs.org/) com técnicas avançadas de carregamento de imagens para otimizar de forma fácil e completa o carregamento de imagens no seu site. O `gatsby-image` usa o [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) para transformação de imagens.
 
-> _Aviso: gatsby-image **não** é um substituto para `<img />`. É otimizado para imagens de largura/altura fixas e imagens que ampliam a largura total de um contêiner. Algumas maneiras de usar o <img /> `não funcionarão com o gatsby-image._
+> _Aviso: gatsby-image **não** é um substituto para `<img />`. É otimizado para imagens de largura/altura fixas e imagens que ampliam a largura total de um contêiner. Algumas maneiras de usar o <img />` não funcionarão com o gatsby-image._
 
 [Demonstração](https://using-gatsby-image.gatsbyjs.org/)
 
 `gatsby-image` inclui os truques que você espera de um componente de imagem moderno. Como:
 
-- usa a nova [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) para carregar imagens usando a técnica _lazy load_
-- mantém a posição de uma imagem para que sua página não pule à medida que as imagens são carregadas
-- facilita a adição de um _placeholder_ - um plano de fundo cinza ou uma versão borrada da imagem.
+- usar a nova [IntersectionObserver API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API) para carregar imagens usando a técnica _lazy load_
+- manter a posição de uma imagem para que sua página não pule à medida que as imagens são carregadas
+- facilitar a adição de um _placeholder_ - um plano de fundo cinza ou uma versão borrada da imagem.
 
 _Para obter informações mais completas sobre a API, consulte a documentação do [Gatsby Image API](/docs/gatsby-image/)._
 
