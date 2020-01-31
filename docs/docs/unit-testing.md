@@ -119,7 +119,7 @@ global.___loader = {
  
 #### Simulando `gatsby`
  
-Finalmente, é uma boa ideia simular o próprio módulo `gatsby` . Isto pode
+Finalmente, é uma boa ideia simular o próprio módulo `gatsby`. Isto pode
 não ser necessário no início, mas facilitará muitas coisas se você quiser
 testar componentes que usam `Link` ou GraphQL.
  
@@ -153,7 +153,7 @@ module.exports = {
 }
 ```
  
-Isso simula a função `graphql()`, o componente `Link` , e o componente `StaticQuery`.
+Isso simula a função `graphql()`, o componente `Link`, e o componente `StaticQuery`.
  
 ## Escrevendo testes
  
