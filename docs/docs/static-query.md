@@ -1,5 +1,5 @@
 ---
-title: Consultando dados em componentes usando StaticQuery
+title: Consultando Dados em Componentes Usando StaticQuery
 ---
 
 A v2 do Gatsby introduziu a `StaticQuery`, uma nova API que permite componentes receberem dados através de uma query GraphQL.
