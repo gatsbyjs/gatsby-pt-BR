@@ -253,7 +253,7 @@ module.exports = {
     prefix: "/api",
     url: "http://examplesite.com/api/"
   }
-};
+}
 ```
 
 Veja mais sobre [Proxying API Requests em desenvolvimento](/docs/api-proxy/).
