@@ -28,7 +28,7 @@ São basicamente 3 passos:
 
   # opcional: um parágrafo curto descrevendo o conteúdo e/ou propósito do site que irá aparecer no modal de visualização de detalhes e permalink para seu site
   description: >
-    {titleofthesite} is a shiny new website built with Gatsby v2 that makes important contributions towards a faster web for everyone.
+    This blog is a shiny new website built with Gatsby v2 that makes important contributions towards a faster web for everyone.
 
   # Você pode listar quantas categorias você quiser. Verifique a lista de categorias abaixo nessa documentação!
   # Caso queira criar uma nova categoria, fique a vontade para adicioná-la na lista abaixo.
@@ -135,7 +135,7 @@ Se seu site for escolhido como destaque, você precisará fazer isso:
 
 2.  Adicione `featured` como categoria.
 
-```shell
+```yaml
 categories:
   - featured
 ```

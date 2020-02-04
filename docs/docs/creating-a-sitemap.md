@@ -17,7 +17,11 @@ Instale o pacote executando o seguinte comando:
 
 ### Como configurar
 
+<<<<<<< HEAD
 Depois que a instalação estiver concluída, podemos adicionar este plugin ao nosso `gatsby-config.js`, da seguinte forma:
+=======
+Once installation is complete, you can now add this plugin to your `gatsby-config.js`, like so:
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ```javascript:title=gatsby-config.js
 module.exports = {

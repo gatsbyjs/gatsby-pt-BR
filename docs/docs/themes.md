@@ -10,6 +10,7 @@ Isto significa que a configuração e funcionalidade não são diretamente grava
 
 <GuideList slug={props.slug} />
 
+<<<<<<< HEAD
 ## Procurando temas
 
 - [Temas na biblioteca de plugins](/plugins/?=gatsby-theme)
@@ -20,3 +21,15 @@ Isto significa que a configuração e funcionalidade não são diretamente grava
 - [Tema Gatsby tutoriais](/tutorial/theme-tutorials/)
 - [Postagens de blog sobre temas Gatsby](/blog/tags/themes)
 - [Plugins, Temas, e Starters](/docs/plugins-themes-and-starters/)
+=======
+## Browse themes
+
+- [Themes in Plugin Library](/plugins/?=gatsby-theme)
+- [Theme Jam Showcase](https://themejam.gatsbyjs.org/showcase)
+
+## Other resources
+
+- [Gatsby theme tutorials](/tutorial/theme-tutorials/)
+- [Gatsby blog posts on themes](/blog/tags/themes)
+- [Plugins, Themes, and Starters](/docs/plugins-themes-and-starters/)
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f

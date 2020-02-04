@@ -12,7 +12,11 @@ O _CSS-in-JS_ preenche a lacuna entre o CSS e o JavaScript:
 3. **Dinâmico**: estilize seu site dinamicamente baseado no estado do componente integrando variáveis JavaScript.
 4. **Bônus**: muitas bibliotecas _CSS-in-JS_ geram nomes únicos para classes o que pode ajudar no armazenamento de cache, na inserção automática de prefixos para os navegadores, no carregamento oportuno de CSS crítico, além de implementar diversas outras funcionalidades, dependendo da biblioteca que você escolher.
 
+<<<<<<< HEAD
 Enquanto o _CSS-in-JS_ não é necessário no Gatsby, ele é muito popular entre os desenvolvedores JavaScript pelas razões citadas acima. Para uma melhor contextualização, leia o artigo do Max Stoiber (criador da biblioteca de _CSS-in-JS_ [styled-components](/docs/styled-components/)) [_Porquê eu escrevo CSS no JavaScript_](https://mxstbr.com/thoughts/css-in-js/). Entretanto, você deve considerar se o _CSS-in-JS_ é necessário, pois não depender dele pode encorajar habilidades de front-end mais inclusivas. Também é mais difícil migrar estilos do JSX para o CSS e vice-versa.
+=======
+CSS-in-JS, while not required in Gatsby, is very popular among JavaScript developers for the reasons listed above. For more context, read Max Stoiber's (creator of CSS-in-JS library [styled-components](/docs/styled-components/)) article [_Why I write CSS in JavaScript_](https://mxstbr.com/thoughts/css-in-js/). However, you should also consider whether CSS-in-JS is necessary, as not relying on it can encourage more inclusive frontend skill-sets. It is also more difficult to port styles from JSX to and from CSS.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 _Note que esta funcionalidade não é parte do React ou do Gatsby, e requer o uso de alguma das muitas [bibliotecas CSS-in-JS_ de terceiros](https://github.com/MicheleBertoli/css-in-js#css-in-js)._
 

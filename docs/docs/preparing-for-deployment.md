@@ -33,9 +33,15 @@ gatsby build
 
 Então, no diretório `public` haverá arquivos para copiar para o servidor.
 
+<<<<<<< HEAD
 ## Adicionando um prefixo de rota
 
 Se você quer ir para um prefixo de rota específico, por exemplo `exemplo.com/blog/` ao invés de `exemplo.com/` leia [Adicionando um prefixo de rota](/docs/path-prefix)
+=======
+## Adding a path prefix
+
+If you want a specific Path Prefix, for example `example.com/blog/` instead of `example.com/` read [adding a path prefix](/docs/path-prefix)
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ## Publicação específica
 
@@ -52,5 +58,8 @@ Se você possui um servidor de um dos provedores a seguir, leia as subpáginas i
 - [Render](/docs/deploying-to-render)
 - [Surge](/docs/deploying-to-surge)
 - [GitHub Pages](/docs/how-gatsby-works-with-github-pages)
+- [Microsoft Internet Information Server (IIS)](/docs/deploying-to-iis)
+- [Firebase Hosting](/docs/deploying-to-firebase)
+- [KintoHub](/docs/deploying-to-kintohub)
 
 Se você não vê a hospedagem que você está interessado, é possível adicionar outros provedores de hospedagem através de [contribuições a documentação](/contributing/docs-contributions).

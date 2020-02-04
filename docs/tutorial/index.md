@@ -28,7 +28,11 @@ Nos tutoriais intermediários, você aprenderá como extrair dados de qualquer l
 
 Os temas do Gatsby abstraem toda a configuração inicial (funcionalidade compartilhada, origem de dados, design) para fora de seu site e as reunem em um pacote instalável.
 
+<<<<<<< HEAD
 Isso significa que a configuração e a funcionalidade não estão diretamente ligadas ao seu projeto, mas versionadas, gerenciadas centralmente e instaladas como uma dependência. Você pode atualizar um tema perfeitamente, mesclar temas, e até trocar um tema compatível por outro.
+=======
+This means that the configuration and functionality aren’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Aprenda como usar e construir temas com os [tutorias sobre temas Gatsby](/tutorial/theme-tutorials/).
 

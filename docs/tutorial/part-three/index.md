@@ -269,11 +269,15 @@ export default ({ children }) => (
 )
 ```
 
-![with-navigation2](with-navigation2.png)
+![with-navigation2](with-navigation.png)
 
 E aí está! Um site com três páginas e navegação global básica.
 
+<<<<<<< HEAD
 _Desafio:_ Com os poderes do seu novo "componente de layout", tente adicionar cabeçalho, rodapé, navegação global, sidebar, etc. nos seus sites Gatsby.
+=======
+_Challenge:_ With your new "layout component" powers, try adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ## O que vem a seguir?
 

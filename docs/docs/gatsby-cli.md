@@ -48,10 +48,14 @@ Você também pode utilizar o `gatsby-cli`  através de _scripts_ disponíveis n
 
 ### `new`
 
+<<<<<<< HEAD
   
 
 ```
 
+=======
+```shell
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 gatsby new [<site-name> [<starter-url>]]
 
 ```
@@ -149,6 +153,13 @@ Após a instalação do site Gatsby, acesse o diretório raiz do seu projeto e u
 | Opção | Descrição |
 
 | :-------------: | ----------------------------------------------- |
+<<<<<<< HEAD
+=======
+| `-H`, `--host`  | Set host. Defaults to localhost                 |
+| `-p`, `--port`  | Set port. Defaults to env.PORT or 8000          |
+| `-o`, `--open`  | Open the site in your (default) browser for you |
+| `-S`, `--https` | Use HTTPS                                       |
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 | `-H`, `--host` | Especifica o host. Default: localhost |
 
@@ -180,8 +191,12 @@ O terminal exibirá o log de informações normalmente mas incluirá também uma
 
   
 
+<<<<<<< HEAD
 ```
 
+=======
+```shell
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 You can now view gatsbyjs.org in the browser.
 
 ⠀
@@ -192,11 +207,15 @@ On Your Network: http://192.168.0.212:8000/ // highlight-line
 
 ```
 
+<<<<<<< HEAD
   
 
 **Note**: O  endereço 0.0.0.0:8000 não pode ser acessado se você está utilizando  Windows (mas você poderá acessar digitando localhost:8000 ou através do atalho "Minha Rede Local" no Windows)
 
   
+=======
+**Note**: To access Gatsby on your local machine, use either localhost:8000 or the "On Your Network" URL.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ### `build`
 
@@ -395,4 +414,35 @@ Para mais informações, consulte a [documentação do REPL Gatsby](/docs/gatsby
 
   
 
+<<<<<<< HEAD
 Além da opção `--no-color` , a ILC  reconhece também a variável de ambiente  `NO_COLOR`  (mais informações em [no-color.org](https://no-color.org/)).
+=======
+In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
+
+## How to change your default package manager for your next project?
+
+When you use `gatsby new` for the first time to create a new project, you are asked to choose your default package manager between yarn and npm.
+
+```shell
+Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
+❯  yarn
+   npm
+```
+
+Once you’ve made your choice, the CLI won’t ask for your preference again for any subsequent project.
+
+If you want to change this for your next project you have to edit the config file created automatically by the CLI.
+This file is available on your system at: `~/.config/gatsby/config.json`
+
+In it you’re going to see something like this.
+
+```json:title=config.json
+{
+  "cli": {
+    "packageManager": "yarn"
+  }
+}
+```
+
+Edit your `packageManager` value, save and you’re good to go for your next project using `gatsby new`.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f

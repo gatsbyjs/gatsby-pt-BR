@@ -8,7 +8,11 @@ O Sass compilará arquivos `.sass` e `.scss` em arquivos `.css`, para que você 
 
 > **Nota**: a diferença entre usar um arquivo `.sass` ou `.scss` é a sintaxe em que você escreve seus estilos. Todo CSS válido é SCSS válido, além de ser o mais fácil de usar e o mais popular. Você pode ler mais sobre as diferenças na [documentação do Sass](https://sass-lang.com/documentation/syntax).
 
+<<<<<<< HEAD
 ## Instalando e configurando o Sass
+=======
+## Installing and configuring Sass
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você precisar configurar um projeto, vá para o [**Guia de início rápido**](/docs/quick-start/), e volte depois.
 
@@ -26,7 +30,7 @@ plugins: [`gatsby-plugin-sass`],
 
 3.  Escreva suas folhas de estilo como arquivos `.sass` ou `.scss` e declare ou importe-as normalmente.
 
-```css:styles.scss
+```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
 $primary-color: #333;
 
@@ -36,7 +40,7 @@ body {
 }
 ```
 
-```css:styles.sass
+```css:title=styles.sass
 $font-stack:    Helvetica, sans-serif
 $primary-color: #333
 
@@ -52,6 +56,12 @@ import "./styles.sass"
 
 ## Outros recursos
 
+<<<<<<< HEAD
 - [Introdução ao Sass](https://designmodo.com/introduction-sass/)
 - [Documentação do Sass](https://sass-lang.com/documentation)
 - [Starters Gatsby que usam Sass](/starters/?c=Styling%3ASCSS)
+=======
+- [Introduction to Sass](https://designmodo.com/introduction-sass/)
+- [Sass documentation](https://sass-lang.com/documentation)
+- [Gatsby starters that use Sass](/starters/?c=Styling%3ASCSS)
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f

@@ -28,7 +28,14 @@ starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele p
 
 ## Adicionando arquivos MDX a um site Gatsby já existente
 
+<<<<<<< HEAD
 Se você já tem um site em Gatsby e quer adicionar arquivos MDX, você pode seguir os passos de configuração do plugin [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/):
+=======
+If you already have a Gatsby site that you'd like to add MDX to, you
+can follow these steps for configuring the [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/) plugin.
+
+Alternatively, you may be looking to configure an existing blog site to use MDX. [This blog post](/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/) walks you through those steps in detail.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 1. **Adicione o `gatsby-plugin-mdx`** e as dependências do MDX
 

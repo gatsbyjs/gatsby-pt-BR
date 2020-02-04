@@ -13,7 +13,11 @@ de busca como o Google a entender seu conteúdo, e decidir quando mostrá-lo nos
 O [plugin react helmet](/packages/gatsby-plugin-react-helmet/) do Gatsby fornece suporte drop-in 
 para dados de renderização de servidor adicionados ao React Helmet. Usando o plugin, os atributos que você adicionar ao React Helmet serão adicionados às páginas HTML estáticas que o Gatsby cria.
 
+<<<<<<< HEAD
 ### Usando `React Helmet` e `gatsby-plugin-react-helmet`
+=======
+## Using `React Helmet` and `gatsby-plugin-react-helmet`
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 1. Instale os dois pacotes:
 

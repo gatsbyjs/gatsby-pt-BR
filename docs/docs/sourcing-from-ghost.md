@@ -4,7 +4,11 @@ title: Integrando a partir do Ghost
 
 [Ghost](https://ghost.org) é uma plataforma de publicação profissional, _open source_, construída em cima de uma moderna tecnologia Node.js - projetada para times que precisam de poder, flexibilidade e performance - utilizada pela Apple, NASA, Sky News, OpenAI e muitas outras.
 
+<<<<<<< HEAD
 Ela vem com todos os benefícios de uma plataforma _Headless CMS_ moderna e centralizada, com o benefício adicional de ser totalmente gratuita sob a licença do MIT, para que você tenha o total controle, sem precisar depender de um _back-end_ de terceiros.
+=======
+It comes with all the benefits of modern, centralized Headless CMS platforms, with the added benefit of being released completely for free under an MIT license, so you have total ownership and control of it without needing to depend on a third party backend.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Esse guia irá orientar você sobre o uso de [Gatsby](/) com a [API de Conteúdo do Ghost](https://docs.ghost.org/api/content/).
 
@@ -26,7 +30,11 @@ O jeito mais rápido de começar é com o repositório oficial **Gatsby Starter 
 
 ---
 
+<<<<<<< HEAD
 ## Instalação e Configuração
+=======
+## Install and setup
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Se você prefere iniciar do zero ou integrar o conteúdo da API do Ghost em um _site_ existente, você pode configurar o plugin **Gatsby Source Ghost**.
 
@@ -58,7 +66,11 @@ module.exports = {
 
 ## Gerando páginas
 
+<<<<<<< HEAD
 Uma vez que o plugin nativo é configurado, você pode usar a API `createPages` em `gatsby-node.js` para criar consultas nos seus dados do Ghost com GraphQL. Nesse exemplo, Gatsby itera sobre cada postagem retornada pela API do Ghost e gera uma nova página com esses dados, usando o arquivo de modelo `post.js`.
+=======
+Once the source plugin is set up, you can use the [`createPages` API](/docs/node-apis/#createPages) in `gatsby-node.js` to run queries against your Ghost data with GraphQL. In this example, Gatsby iterates over each post returned by the Ghost API and generates a new page with that data, using the `post.js` template file.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Existem vários modos de estruturar as consultas dependendo de como você prefere trabalhar, mas aqui está um pequeno exemplo:
 
@@ -66,7 +78,6 @@ Existem vários modos de estruturar as consultas dependendo de como você prefer
 const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
   const postTemplate = path.resolve(`./src/templates/post.js`)
 
   // Consultar dados do Ghost
@@ -97,9 +108,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   items.forEach(({ node }) => {
     node.url = `/${node.slug}/`
 
-    createPage({
+    actions.createPage({
       path: node.url,
-      component: path.resolve(postTemplate),
+      component: postTemplate,
       context: {
         slug: node.slug,
       },
@@ -114,9 +125,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 ## Saída de dados
 
+<<<<<<< HEAD
 Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria algo como:
+=======
+The code above will create pages in the root of the site at `/`, with the path being the slug of the post.
 
-```javascript:title=templates/post.js
+Then, within the `post.js` template, you can determine exactly how and where you want to output data on each page. Again, you'll use GraphQL to query individual fields, so a simple example looks something like this:
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+
+```jsx:title=templates/post.js
 import React from "react"
 import { graphql } from "gatsby"
 
@@ -140,10 +157,10 @@ export default Post
 export const postQuery = graphql`
   query($slug: String!) {
     ghostPost(slug: { eq: $slug }) {
-      id
       title
       slug
       feature_image
+      html
     }
   }
 `

@@ -123,7 +123,7 @@ exports.onCreateNode = onCreateNode
 
 Conteúdo do arquivo:
 
-```text
+```yaml
 - id: Jane Doe
   bio: Desenvolvedor residente de  Somewhere, USA
 - id: John Smith

@@ -20,7 +20,11 @@ Ao criar um novo site com Gatsby, você pode usar a seguinte estrutura de comand
 gatsby new [NOME_DO_DIRETORIO_DO_SITE] [URL_DO_STARTER_NO_GITHUB]
 ```
 
+<<<<<<< HEAD
 Se você não colocar a URL no final do comando, o Gatsby vai automaticamente criar um site com base no [starter default](https://github.com/gatsbyjs/gatsby-starter-default). Mas, para essa seção do tutorial, fique com o site “Hello World” que você já criou na parte zero.
+=======
+If you omit a URL from the end, Gatsby will automatically generate a site for you based on the [**default starter**](https://github.com/gatsbyjs/gatsby-starter-default). For this section of the tutorial, stick with the “Hello World” site you already created in tutorial part zero. You can learn more about [modifying starters](/docs/modifying-a-starter) in the docs.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ### ✋ Abra o código
 
@@ -230,7 +234,11 @@ Agora você deve ver o header “About Gatsby” novamente!
 
 ### O que são “props”?
 
+<<<<<<< HEAD
 Anteriormente, você definiu os componentes React como trechos de código reutilizáveis que descrevem uma interface do usuário. Para deixar esses trechos dinâmicos, você precisa ser capaz de fornecer dados diferentes. Você faz isso com a entrada chamada "props". Props são (adequadamente) propriedades fornecidas aos componentes do React.
+=======
+Earlier, you defined React components as reusable pieces of code describing a UI. To make these reusable pieces dynamic you need to be able to supply them with different data. You do that with input called "props". Props are (appropriately enough) properties supplied to React components.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Na página `about.js` você passou uma propriedade `headerText` com o valor `"About Gatsby"` para o subcomponente importado `Header` :
 
@@ -324,20 +332,30 @@ export default () => (
 )
 ```
 
+<<<<<<< HEAD
 Depois que você salvar o arquivo, você deve ver um página de contato e deve poder navegar entre essas páginas.
+=======
+After you save the file, you should see the contact page and be able to follow the link to the homepage.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
-  <p>Sorry! You browser doesn't support this video.</p>
+  <p>Sorry! Your browser doesn't support this video.</p>
 </video>
 
 O componente `<Link />` do Gatsby é utilizado para navegar entre páginas do seu site. Para links externos para páginas não tratadas pelo seu site Gatsby, use a tag padrão do HTML `<a>`.
 
 ## Fazendo deploy do seu site Gatsby
 
+<<<<<<< HEAD
 O Gatsby.js é um _gerador de site moderno_, o que significa que não há servidores para configurar ou banco de dados complicados para fazer deploy. Em vez disso, o comando `build` do Gatsby produz um diretório de arquivos HTML e JavaScript estáticos que você pode implantar em um serviço de hospedagem de site estático.
 
 Tente usar o [Surge](http://surge.sh/) para fazer o deploy do seu primeiro site Gatsby. O Surge é um dos muitos "hosts de sites estáticos" que possibilitam o deploy de sites Gatsby.
+=======
+Gatsby.js is a _modern site generator_, which means there are no servers to set up or complicated databases to deploy. Instead, the Gatsby `build` command produces a directory of static HTML and JavaScript files which you can deploy to a static site hosting service.
+
+Try using [Surge](http://surge.sh/) for deploying your first Gatsby website. Surge is one of many "static site hosts" which makes it possible to deploy Gatsby sites.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Se você não instalou o Surge anteriormente, abra uma nova janela do terminal e instale a partir dessa linha de comando:
 
@@ -368,7 +386,13 @@ Por fim, faça o deploy do seu site publicando os arquivos gerados em surge.sh.
 surge public/
 ```
 
+<<<<<<< HEAD
 Quando o processo de deploy terminar, você verá no seu terminal algo como:
+=======
+> Note that you will have to press the `enter` key after you see the `domain: some-name.surge.sh` information on your command-line interface.
+
+Once this finishes running, you should see in your terminal something like:
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ![Captura de tela do processo de deploy de site Gatsby com Surge](surge-deployment.png)
 

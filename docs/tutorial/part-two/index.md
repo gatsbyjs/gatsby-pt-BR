@@ -114,7 +114,11 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
+<<<<<<< HEAD
 > Nota: As sintaxes CommonJS (`require`) e ES Module (`import`) funcionam aqui. Se você não tiver certeza sobre qual escolher, usamos `import` na maioria das vezes.
+=======
+> Note: Both CommonJS (`require`) and ES Module (`import`) syntax work here. If you’re not sure which to choose, `import` is usually a good default. When working with files that are only run in a Node.js environment however (like `gatsby-node.js`), `require` will need to be used.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 3. Inicie o servidor de desenvolvimento:
 
@@ -152,7 +156,7 @@ Primeiro, crie um novo componente chamado `Container`.
 
 1. Cria uma nova pasta em `src/components` e então, dentro deste diretório, crie um arquivo chamado `container.js` e cole o seguinte código:
 
-```javascript:title=src/components/container.js
+```jsx:title=src/components/container.js
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -177,7 +181,7 @@ Você notara que o arquivo tem `.module.css` no final do seu nome em vez do usua
 3. Crie uma nova página criando um arquivo em:
    `src/pages/about-css-modules.js`:
 
-```javascript:title=src/pages/about-css-modules.js
+```jsx:title=src/pages/about-css-modules.js
 import React from "react"
 
 import Container from "../components/container"
@@ -248,15 +252,24 @@ import Container from "../components/container"
 console.log(styles)
 ```
 
+<<<<<<< HEAD
 O código `console.log(styles)` mostrará a importação resultante para que você possa ver o resultado do seu arquivo `. /about-css-modules.module.css` processado. Se você abrir o console do desenvolvedor (usando por exemplo, Firefox ou Chrome developer tools) em seu navegador, você vai ver:
+=======
+The `console.log(styles)` code will log the resulting import so you can see the result of your processed `./about-css-modules.module.css` file. If you open the developer console (using e.g. Firefox or Chrome's developer tools, often by the F12 key) in your browser, you'll see:
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ![Import result of CSS module in console](css-modules-console.png)
 
 Se você comparar isso com seu arquivo CSS, você vai ver que cada classe agora é uma chave no objeto importado apontando para uma longa string, por exemplo, `avatar` aponta para `src-pages----about-css-modules-module---avatar---2lRF7`. Essas são os nomes das classes geradas pelo CSS Modules. Elas são únicas em todo seu site. E como você precisa importá-los para usar as classes, nunca há dúvidas sobre onde algum CSS está sendo usado.
 
+<<<<<<< HEAD
 4. Crie um componente `User`.
 
 Crie um novo componente `<User />` inline na página `about-css-modules.js`. Modifique `about-css-modules.js` para ficar parecido com o seguinte código:
+=======
+4. Create a new `<User />` component inline in the `about-css-modules.js` page
+   component. Modify `about-css-modules.js` so it looks like the following:
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"

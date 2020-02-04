@@ -8,7 +8,11 @@ Veja abaixo uma lista de guias nessa sessão, ou continue lendo para uma visão 
 
 ## Visão geral de busca no _site_
 
+<<<<<<< HEAD
 Antes de seguirmos com as etapas para adicionar pesquisa no seu _website_ Gatsby, vamos examinar os componentes necessários para adicionar pesquisa a um _website_.
+=======
+Before going through the steps for adding search to your Gatsby website, examine the components needed for adding search to a website.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 São necessários três componentes para adicionar pesquisa ao seu _website_ Gatsby:
 
@@ -38,9 +42,15 @@ Agora que você sabe sobre os três componentes requisitados, existem algumas ma
 
 Usar um mecanismo de busca _open source_ é sempre grátis e permite que você ative pesquisa _offline_ para o seu _site_. Observe que você precisa ter cuidado com a pesquisa _offline_, porque todo o índice de pesquisa precisa ser trazido para o cliente, o que pode afetar significativamente o tamanho do pacote.
 
+<<<<<<< HEAD
 Bibliotecas _open source_ como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) ou [`js-search`](https://github.com/bvaughn/js-search) podem ser utilizadas para possibilitar pesquisa para o seu _site_.
 
 Isso exigirá que você crie um índice de busca quando o seu _site_ for construído. Para [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), existe um _plugin_ chamado [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) que cria um índice de pesquisa automaticamente.
+=======
+Open source libraries like [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), [`flexsearch`](https://github.com/nextapps-de/flexsearch) or [`js-search`](https://github.com/bvaughn/js-search) can be used to enable search for your site.
+
+Doing so will require you to create a search index when your site is built. For [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), there is a plugin called [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) that creates a search index automatically. For [`flexsearch`](https://github.com/nextapps-de/flexsearch) there is a plugin called [`gatsby-plugin-flexsearch`](https://github.com/tmsss/gatsby-plugin-flexsearch).
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 Para outras bibliotecas, você pode utilizar a combinação de [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) e [`sourceNodes`](/docs/node-apis/#sourceNodes)  da API do Gatsby node para criar o índice de pesquisa e disponibilizá-lo no GraphQL. Para mais informação em como fazer isso, confira [o código fonte do `gatsby-plugin-elasticlunr-search`'s](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
 

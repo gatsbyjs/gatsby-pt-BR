@@ -4,7 +4,11 @@ title: Adicionando Formulários
 
 Gatsby é construído utilizando o React. Portanto, tudo o que é possível fazer com um formulário React é possível fazer também no Gatsby. Detalhes adicionais sobre como criar formulários do React podem ser encontrados na [Documentação de Formulários do React](https://pt-br.reactjs.org/docs/forms.html) (e esta página da documentação de formulários do React foi criada usando Gatsby!)
 
+<<<<<<< HEAD
 Vamos começar com a seguinte página.
+=======
+Start with the following page.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 ```jsx:title=src/pages/index.js
 import React from "react"

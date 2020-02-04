@@ -163,6 +163,10 @@ Algumas coisas que fazemos para criar uma comunidade inclusiva e acolhedora incl
 - Gratidão ativa
 - [Mentoria ativa](/contributing/pair-programming/)
 
+<<<<<<< HEAD
 Criamos uma comunidade ativa com centenas de colaboradores e queremos viver o exemplo do que pode ser uma grande comunidade de open source.
+=======
+We’ve built an active community with thousands of contributors, and we want to live the example of what a great open source community can be.
+>>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 
 [Veja mais aqui](https://www.youtube.com/watch?v=8ARA7AD4yPs&feature=youtu.be&list=PLz8Iz-Fnk_eQGt4-VFFCXYuYcuKaw4F07)
