@@ -23,7 +23,7 @@ você quiser torna-lo mais dinâmico atualiza a sua ´<head>´, nos recomendamos
 Se você quiser inserir html personalizado no 'footer/rodapé', o caminho preferido para se fazer isso é pelo 'html.js'. Se você está escrevendo um plugin, considere o uso do  `setPostBodyComponents` suporte no [Gatsby SSR API](/docs/ssr-apis/).
 
 ***###Target container 
-Se você ver o erro: `Uncaught Error: _registerComponent(...):Target container is not a DOM element.` isso significa que o seu ´<html.js>´ está coma ausência da solicitação "target container". Dentro do seu ´<body>´ você deve ter um div com uma IDE `___gatsby` como:
+Se você ver o erro: `Uncaught Error: _registerComponent(...):Target container is not a DOM element.` isso significa que o seu ´<html.js>´ está com a ausência da solicitação "target container". Dentro do seu ´<body>´ você deve ter um div com uma IDE `___gatsby` como:
 ```jsx:title=src/html.js
 <div
   key={`body`}
