@@ -15,7 +15,7 @@ Note: Os vários acessórios que são renderizados na página são necessários,
 `headComponents`, `preBodyComponents`, `body`, e `postBodyComponents`. 
 
 ### Inserir o HTML no ´<head>´
-Qualquer coisa que você renderizar no `html.js`, o componente não será "ativo" em o cliente como outros componentes. Se
+Qualquer coisa que você renderizar no `html.js`, o componente não será "ativo" no cliente como outros componentes. Se
 você quiser torná-lo mais dinâmico atualiza a sua ´<head>´, nós recomendamos o uso de: 
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
 
