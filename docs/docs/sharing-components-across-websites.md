@@ -1,20 +1,20 @@
 ---
-title: Sharing Components Across Websites
+title: Compartilhando Componentes Entre Sites
 issue: https://github.com/gatsbyjs/gatsby/issues/14042
 ---
 
-One of the benefits of multiple teams using Gatsby within your organization is the ability to share React components across different websites.
+Um dos benefícios de várias equipes usarem o Gatsby em sua organização é a capacidade de compartilhar componentes do React em sites diferentes.
 
-There are several strategies here.
+Existem várias estratégias aqui.
 
-**Component libraries** are a cleaner and purer approach, but often requiring additional tooling or causing some changes to require pull requests to multiple.
+**Bibliotecas de componentes** são uma abordagem mais limpa e pura, mas geralmente precisam de ferramentas adicionais ou fazem com que algumas mudanças exijam vários _pull requests_.
 
-Alternately, teams can implement **systems for component discoverability**, such as [Storybook](https://github.com/storybookjs/storybook) or [Styleguidist](https://github.com/styleguidist/react-styleguidist), on a per-site basis and simply copy-paste desired code across repositories.
+Como alternativa, as equipes podem implementar **sistemas para descoberta de componentes**, como o [Storybook](https://github.com/storybookjs/storybook) ou [Styleguidist](https://github.com/styleguidist/react-styleguidist ), por site e simplesmente copie e cole o código desejado nos repositórios.
 
-To avoid copy-pasting and reuse components instead you can use **component-sharing tools** such as [Bit](https://github.com/teambit/bit) to reuse and sync components between websites.
+Para evitar copiar e colar e reutilizar componentes, você pode usar as **ferramentas de compartilhamento de componentes** como [Bit](https://github.com/teambit/bit) para reutilizar e sincronizar componentes entre sites.
 
 <GuideList slug={props.slug} />
 
 --
 
-**Note:** do you have additional ideas on sharing components across websites? We welcome contributions to the Gatsby docs. Find out [how to contribute](/contributing/docs-contributions/).
+**Nota:** você tem alguma ideia adicional sobre o compartilhamento de componentes entre sites? Agradecemos com sua contribuição para os documentos de Gatsby. Descubra [como contribuir](/contributing/docs-contributions/).
