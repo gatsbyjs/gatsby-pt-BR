@@ -31,18 +31,12 @@ module.exports = {
 
 `gatsby-plugin-typography` tem duas opções para que você especifique:
 
-<<<<<<< HEAD
 - **pathToConfigModule** (string): O caminho para o arquivo para o qual você exporta sua configuração do Typography.
-- **omitGoogleFont** (boolean, `default: false`): Por padrão, o Typography inclui um auxiliar que solicita à CDN do Google Font as fontes necessárias. Você pode usar suas próprias fontes, injetando fontes ou usando um CDN de sua escolha. Ao definir `omitGoogleFont: true`, o `gatsby-plugin-typography` ignorará a adição do auxiliar de fonte. Em vez disso, você deverá incluir as fontes apropriadas - veja [Adicionando uma fonte local](https://www.gatsbyjs.org/docs/recipes/#adding-a-local-font)
-=======
-- **pathToConfigModule** (string): The path to the file where you export your Typography configuration.
-- **omitGoogleFont** (boolean, `default: false`): By default, Typography includes a helper that makes a request to Google Font's CDN for fonts you need. You may want to use your own fonts, either by injecting fonts or using a CDN of your choosing. By setting `omitGoogleFont: true`, `gatsby-plugin-typography` will skip adding the font helper. Instead, you will have to include the appropriate fonts yourself - see [Adding a Local Font](/docs/recipes/styling-css#adding-a-local-font)
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+- **omitGoogleFont** (boolean, `default: false`): Por padrão, o Typography inclui um auxiliar que solicita à CDN do Google Font as fontes necessárias. Você pode usar suas próprias fontes, injetando fontes ou usando um CDN de sua escolha. Ao definir `omitGoogleFont: true`, o `gatsby-plugin-typography` ignorará a adição do auxiliar de fonte. Em vez disso, você deverá incluir as fontes apropriadas - veja [Adicionando uma fonte local](/docs/recipes/styling-css#adding-a-local-font)
 
 ## Criando a configuração do Typography
 
 Agora que você adicionou o plugin, crie o diretório `src/utils/` se ele ainda não existir no seu projeto e adicione um novo arquivo chamado `typography.js`. Você usará esse arquivo para especificar a configuração do Typography e definir esse arquivo como o caminho para a opção `pathToConfigModule`.
-
 
 Dentro do arquivo `typography.js` que você criou, você define a configuração de tipografia do seu site. Uma configuração básica do typography.js é semelhante a esta:
 

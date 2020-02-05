@@ -13,41 +13,25 @@ Esse guia de início rápido é direcionado para desenvolvedores com conheciment
 
 **Nota**: este vídeo usa o `npx`, que é uma ferramenta para executar um pacote npm sem primeiro instalá-lo. Executar o comando `npx gatsby new` é o mesmo que executar `gatsby new` após instalar o gatsby-cli no seu computador.
 
-<<<<<<< HEAD
-### Instalando o Gatsby CLI.
-=======
-### Install the Gatsby CLI
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+### Instalando o Gatsby CLI
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-<<<<<<< HEAD
-### Criando um novo site.
-=======
-### Create a new site
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+### Criando um novo site
 
 ```shell
 gatsby new gatsby-site
 ```
 
-<<<<<<< HEAD
-### Mudando o diretório para a pasta do site.
-=======
-### Change directories into site folder
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+### Mudando o diretório para a pasta do site
 
 ```shell
 cd gatsby-site
 ```
 
-<<<<<<< HEAD
-### Iniciando o servidor de desenvolvimento.
-=======
-### Start development server
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+### Iniciando o servidor de desenvolvimento
 
 ```shell
 gatsby develop
@@ -57,11 +41,7 @@ O Gatsby iniciará um ambiente de desenvolvimento com _hot-reloading_, que pode 
 
 Tente editar as páginas JavaScript em `src/pages`. As alterações salvas serão atualizadas automaticamente no navegador.
 
-<<<<<<< HEAD
-### Criando um pacote de produção.
-=======
-### Create a production build
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+### Criando um pacote de produção
 
 ```shell
 gatsby build
@@ -69,11 +49,7 @@ gatsby build
 
 O Gatsby criará um pacote de produção otimizado para seu site, gerando HTML estático e pacotes JavaScript para cada rota.
 
-<<<<<<< HEAD
-### Servindo o pacote de produção localmente.
-=======
-### Serve the production build locally
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+### Servindo o pacote de produção localmente
 
 ```shell
 gatsby serve

@@ -10,14 +10,10 @@ de busca como o Google a entender seu conteúdo, e decidir quando mostrá-lo nos
 
 [React Helmet](https://github.com/nfl/react-helmet) é um pacote que fornece uma interface de componente React para você gerenciar seu [cabeçalho do documento](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head).
 
-O [plugin react helmet](/packages/gatsby-plugin-react-helmet/) do Gatsby fornece suporte drop-in 
+O [plugin react helmet](/packages/gatsby-plugin-react-helmet/) do Gatsby fornece suporte drop-in
 para dados de renderização de servidor adicionados ao React Helmet. Usando o plugin, os atributos que você adicionar ao React Helmet serão adicionados às páginas HTML estáticas que o Gatsby cria.
 
-<<<<<<< HEAD
-### Usando `React Helmet` e `gatsby-plugin-react-helmet`
-=======
-## Using `React Helmet` and `gatsby-plugin-react-helmet`
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
+## Usando `React Helmet` e `gatsby-plugin-react-helmet`
 
 1. Instale os dois pacotes:
 
@@ -58,5 +54,5 @@ class Application extends React.Component {
 
 > 💡 O exemplo acima é dos [documentos do React Helmet](https://github.com/nfl/react-helmet#example). Confira-os para mais informação!
 
-Você também pode estar interessado em consultar o documento sobre 
+Você também pode estar interessado em consultar o documento sobre
 [como adicionar um componente de SEO](/docs/add-seo-component/).

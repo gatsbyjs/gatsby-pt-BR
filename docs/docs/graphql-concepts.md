@@ -2,15 +2,8 @@
 title: Conceitos de GraphQL
 ---
 
-<<<<<<< HEAD
-import LayerModel from "../../www/src/components/layer-model"
-
 Existem muitas opções para carregar dados nos componentes do React. Uma das mais
 populares e poderosas é uma tecnologia chamada
-=======
-There are many options for loading data into React components. One of the most
-popular and powerful of these is a technology called
->>>>>>> 39369653d2071db17c5edacfda90effe6cd5e96f
 [GraphQL](http://graphql.org/).
 
 O GraphQL foi inventado no Facebook para ajudar os engenheiros de produto a _puxar_ os dados necessários para os
@@ -21,7 +14,7 @@ familiarizado com o SQL, ele funciona de maneira muito semelhante. Usando uma si
 os dados que você deseja no seu componente e, em seguida, esses dados são fornecidos
 para você.
 
-Gatsby usa GraphQL para habilitar [componentes de página e 
+Gatsby usa GraphQL para habilitar [componentes de página e
 StaticQuery](/docs/building-with-components/) para declarar quais dados eles e seus
 subcomponentes precisam. Em seguida, Gatsby disponibiliza esses dados no
 navegador quando necessário pelos seus componentes.
