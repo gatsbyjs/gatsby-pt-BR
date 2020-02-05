@@ -1,65 +1,65 @@
 ---
-title: Debugging HTML Builds
+title: Depurando Compilações HTML
 ---
 
-Errors while building static HTML files generally happen for one of the following reasons:
+Os erros mais comuns ao compilar arquivos HTML estáticos são:
 
-1.  Some of your code references "browser globals" like `window` or `document`. If
-    this is your problem you should see an error above like "window is not
-    defined". To fix this, find the offending code and either a) check before
-    calling the code if window is defined so the code doesn't run while Gatsby is
-    building (see code sample below) or b) if the code is in the render function
-    of a React.js component, move that code into a [`componentDidMount` lifecycle](https://reactjs.org/docs/react-component.html#componentdidmount) or into a [`useEffect` hook](https://reactjs.org/docs/hooks-reference.html#useeffect), which
-    ensures the code doesn't run unless it's in the browser.
+1.  Parte do seu código referencia "variáveis globais do navegador", como `window` ou `document`.
+    Se este for o caso, você deve ver uma mensagem de erro como "window is not defined". Para
+    corrigir, encontre o código problemático e a) confira se a jalena está definida antes de chamar o
+    código, para que o código não   seja executado enquanto o Gatsby está compilando (veja exemplos
+    de código abaixo) ou b) se o código está na função render de um componente React.js, mova o
+    código para dentro da [vida útil de um `componentDidMount`](https://pt-br.reactjs.org/docs/react-component.html#componentdidmount) ou de um [gancho `useEffect`](https://pt-br.reactjs.org/docs/hooks-reference.html#useeffect),    o que garante que o código não seja executado, a menos que esteja
+    no navegador.
 
-1.  Check that each of your JS files listed in your `pages` directory (and any
-    sub-directories) are exporting either a React component or string. Gatsby
-    treats any JS file listed under the `pages` dir as a page component, so it must
-    have a default export that's a component or string.
+1.  Confira se todo arquivo JS listado no diretório `pages` (e qualquer sub-diretório)
+    está exportando um componente React ou uma string. O Gatsby trata qualquer arquivo
+    dentro do diretório `pages`como um componente de página, então deve uma exportação
+    padrão que é um componente ou string.
 
-1.  You mix up `import` and `require` calls in the same file. This might lead to
-    "WebpackError: Invariant Violation: Minified React error #130" [since Webpack 4
-    is stricter than v3](/docs/migrating-from-v1-to-v2/#convert-to-either-pure-commonjs-or-pure-es6).
-    The solution is to only use `import`.
+1.  Você misturou chamadas `import` e `require` no mesmo arquivo. Isso pode levar a
+    "WebpackError: Invariant Violation: Minified React error #130" [já que o Webpack 4
+    é mais restrito que a v3](/docs/migrating-from-v1-to-v2/#convert-to-either-pure-commonjs-or-pure-es6).
+    A solução é utilizar somente `import`.
 
-1.  Your app is not correctly [hydrated](https://reactjs.org/docs/react-dom.html), which results in gatsby develop and gatsby
-    build being inconsistent. It's possible that a change in a file like `gatsby-ssr` or `gatsby-browser` has a structure that is
-    not reflected in the other file, meaning that there is a mismatch between client and server output.
+1.  Sua aplicação não está corretamente [hidratada](https://pt-br.reactjs.org/docs/react-dom.html),
+    o que resulta em inconsistência entre gatsby develop e gatsby build. É possível que uma mudança em
+    um arquivo como `gatsby-ssr` ou `gatsby-browser` possua uma estrutura que não foi replicada no outro
+    arquivo, o que significa existir uma divergência entre o cliente e a saída do servidor.
 
-1.  Some other reason :-) #1 is the most common reason building static files
-    fail. If it's another reason, you have to be a bit more creative in figuring
-    out the problem.
+1.  Alguma outra razão :-) #1 é o motivo mais comum de falhas ao compilar arquivos estáticos.
+    Se for alguma outra razão, você terá que ser um pouco mais criativo para encontrar o problema.
 
-## How to check if `window` is defined
+## Como verificar se `window` está definido
 
 ```javascript
-// Requiring function causes error during builds
-// as the code tries to reference window
+// Funções requerentes causam erros durante a compilação
+// pois o código tenta referenciar a janela do navegador
 const module = require("module") // Error
 
-// Wrap the require in check for window
+// Envolva a requisição em uma conferência pela janela
 if (typeof window !== `undefined`) {
   const module = require("module")
 }
 ```
 
-In case the module needs to be defined for the code to run, you can use a ternary operator
+Caso o módulo precise ser definido para que o código funcione, é possível utilizar um operador ternário
 
 ```javascript
 const module = typeof window !== `undefined` ? require("module") : null
 ```
 
-## Fixing third-party modules
+## Consertando módulos de terceiros
 
-So, the worst has happened and you're using an NPM module that expects `window`
-to be defined. You may be able to file an issue and get the module patched, but
-what to do in the mean time?
+Então, o pior aconteceu e você está utilizando um módulo NPM que espera que `window`
+seja definido. Você pode reportar o problema para que o módulo seja corrigido, mas
+o que fazer nesse meio tempo?
 
-One solution is to [customize](/docs/add-custom-webpack-config) your webpack
-configuration to replace the offending module with a dummy module during server
-rendering.
+Uma solução é [customizar](/docs/add-custom-webpack-config) a sua configuração do
+webpack para substituir o módulo problemático com um módulo postiço durante a
+renderização do servidor.
 
-`gatsby-node.js` in the project root:
+`gatsby-node.js` na raíz do projeto:
 
 ```js:title=gatsby-node.js
 exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
@@ -78,4 +78,4 @@ exports.onCreateWebpackConfig = ({ stage, loaders, actions }) => {
 }
 ```
 
-Another solution is to use a package like [react-loadable](https://github.com/jamiebuilds/react-loadable). The module that tries to use `window` will be dynamically loaded only on the client side (and not during SSR).
+Outra solução é utilizar um pacote como [react-loadable](https://github.com/jamiebuilds/react-loadable). O módulo que tenta utilizar `window` será carregado dinamicamente apenas no lado do cliente (e não durante a renderização do lado do servidor).
