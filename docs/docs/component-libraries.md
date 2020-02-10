@@ -1,34 +1,34 @@
 ---
-title: Creating Component Libraries
+title: Criando Bibliotecas de Componentes
 ---
 
-Component libraries are often used in component-based UI systems like React and Vue. They are typically versioned repositories of components.
+Bibliotecas de componentes são frequentementes usadas em sistemas de interface baseados em componentes como React e Vue. Eles são normalmente versionados em repositórios de componentes.
 
-IBM's [Carbon Design System](http://carbondesignsystem.com/) and Palantir's [Blueprint](https://blueprintjs.com/) are both good examples.
+IBM's [Carbon Design System](https://www.carbondesignsystem.com/) e Palantir's [Blueprint](https://blueprintjs.com/) são ambos bons exemplos.
 
-## Why component libraries
+## Por que bibliotecas de componentes
 
-There are several rationales for creating component libraries.
+Existem vários fundamentos para a criação de bibliotecas de componentes.
 
-- **Create unified design**. In large web properties and web apps, the look and feel can diverge across different sections maintained by different teams. Component libraries are often used to implement a [design system](https://www.designsystems.com/).
-- **Avoid reinventing the wheel**. Component libraries include common elements like carousels or dropdowns to avoid the need for individual teams to reimplement these components.
+- **Criando um design unificado**. Em grandes propriedades da web e aplicativos web, a aparência e sentimento podem divergir através de diferentes seções mantidas por diferentes times. Bibliotecas de componentes são frequentemente usadas para inplementar um [sistema de design](https://www.designsystems.com/).
+- **Evite reinventar a roda**. Bibliotecas de componentes incluem elementos comuns, como carousels ou dropdowns, para evitar a necessidade de equipes individuais reimplementarem estes componentes.
 
-## Tooling & team setups
+## Ferramentas e configurações de equipe
 
-Component libraries are typically maintained by one individual or a design team that acts as a curator; when a website team or feature team needs a component, it is typically available ready for them to use, so they can move faster.
+Bibliotecas de componentes são geralmente mantidos por um indivíduo ou uma equipe de design que atua como curador; quando uma equipe de website ou um time de recursos precisa de um componente, ele normalmente está disponivel para uso, para que eles possam avançar rapidamente.
 
-Component libraries are typically stored in a separate repository. Individual apps or websites then specify in their dependencies (in `package.json`) which version of each component they are using.
+Bibliotecas de componentes são geralmente armazenadas em um repositório separado. Aplicativos individuais ou websites estão especificados em suas dependências (dentro do `package.json`) qual versão de cada componente eles estão usando.
 
-One drawback of using component libraries is the additional complexity of cross-repository dependencies.
+Uma desvantagem de usar bibliotecas de componentes é a complexidade adicional das dependências entre repositórios.
 
-For example, if a feature developer need to change a library component, that developer's workflow typically involves two pull requests; one to the component repository repo to make the changes, and one to the website repository to bump the component version.
+Por exemplo, se um desenvolvedor de recursos precisar alterar uma biblioteca de componentes, o fluxo de trabalho do desenvolvedor normalmente envolve dois pull requests; um para o repositório do compenente que foi feito alterações, e um para o repositório do site para aumentar a versão do componente.
 
-## Different versioning approaches
+## Diferentes abordagens de versionamento
 
-There are two different approaches for versioning component libraries.
+Existem duas diferentes abordagens para o versionamento de bibliotecas de componentes.
 
-The first is to version on globally across the component library. At any given commit, the library has one version number (e.g. `30.3.1`). Any commit updating a component will then bump the version number accordingly. Both Carbon Design System and Blueprint take this approach.
+A primeira é para a versão global na biblioteca de componentes. Para cada commit dado, a biblioteca tem um número de versão (e.g. `30.3.1`). Qualquer commit atualizando o componente irá então adicionar o numero de versão de acordo. Ambos, Carbon Design System e Blueprint, adotam essa abordagem.
 
-The second approach is to version each component in the component library. This was used, for example, [by Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) -- they built their component library as React components, and created every component as a separate, versioned npm package.
+A segunda abordagem é para a versão de cada componente na biblioteca de componentes. Isto era usado, por exemplo, [por Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) -- eles construiram sua biblioteca de componentes como React componentes, e criando cada componente separado, versionado por pacotes npm.
 
-This approach allows more granularity -- _what if you want an older version of one component, but a newer version of another one?_ -- but requires additional tooling to make developer workflows pleasant.
+Esta abordagem permite mais granularidade -- _e se você desejar de uma versão mais antiga de um componente, mas uma versão mais recente de outro?_ -- mas requer ferramentas adicionais para fazer os fluxos de trabalho mais agradáveis.
