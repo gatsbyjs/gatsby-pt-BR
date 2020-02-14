@@ -1,30 +1,30 @@
 ---
-title: Customizing the GraphQL Schema
+title: Customizando o Schema GraphQL
 ---
 
-One of Gatsby's main strengths is the ability to query data from a variety of
-sources in a uniform way with GraphQL. For this to work, a GraphQL Schema must
-be generated that defines the shape of the data.
+Um dos principais pontos fortes de Gatsby é a capacidade de consultar dados de uma variedade de
+fontes de maneira uniforme com o GraphQL. Para que isso funcione, um Schema GraphQL
+que define a forma dos dados deve ser gerado.
 
-Gatsby is able to automatically infer a GraphQL Schema from your data, and in
-many cases, this is really all you need. There are however situations when you
-either want to explicitly define the data shape, or add custom functionality to
-the query layer - this is what Gatsby's Schema Customization API provides.
+Gatsby é capaz de inferir automaticamente um Schema GraphQL a partir de seus dados, e em
+muitos casos, isso é realmente tudo que você precisa. No entanto, existem situações em que você
+quer definir explicitamente a forma dos dados, ou adicionar funcionalidade personalizada
+à camada de consulta - é isso que a API de Customização de Schema do Gatsby fornece.
 
-The following guide walks through some examples to showcase the API.
+O guia a seguir mostra alguns exemplos para demonstrar a API.
 
-> This guide is aimed at plugin authors, users trying to fix GraphQL schemas
-> created by automatic type inference, developers optimizing builds for larger
-> sites, and anyone interested in customizing Gatsby's schema generation.
-> As such, the guide assumes that you're somewhat familiar with GraphQL types
-> and with using Gatsby's Node APIs. For a higher level approach to using
-> Gatsby with GraphQL, refer to the [API reference](/docs/graphql-api/).
+> Este guia é destinado a autores de plugins, usuários tentando corrigir Schemas do GraphQL
+> criado por inferência automática de tipo, desenvolvedores que otimizam construções para sites
+> maiores, e qualquer pessoa interessada em personalizar a geração de schemas do Gatsby.
+> Como tal, o guia pressupõe que você esteja familiarizado com os tipos do GraphQL
+> e com o uso de Node APIs do Gatsby. Para uma abordagem de alto nível sobre o uso de
+> Gatsby com GraphQL, consulte a [referência da API](/docs/graphql-api/).
 
-## Explicitly defining data types
+## Definindo tipos de dados explicitamente
 
-The example project is a blog that gets its data from local Markdown files which
-provide the post contents, as well as author information in JSON format. There are also
-occasional guest contributors whose info is kept in a separate JSON file.
+O projeto de exemplo é um blog que obtém seus dados de arquivos Markdown locais que
+fornece o conteúdo da postagem, bem como informações do autor no formato JSON. Há também
+colaboradores convidados ocasionais cujas informações são mantidas em um arquivo JSON separado.
 
 ```markdown:title=src/data/post1.md
 ---
@@ -62,22 +62,22 @@ Text
 ]
 ```
 
-To be able to query the contents of these files with GraphQL, they need to first be
-loaded into Gatsby's internal data store. This is what source and transformer
-plugin accomplish - in this case `gatsby-source-filesystem` and
-`gatsby-transformer-remark` plus `gatsby-transformer-json`. Every markdown post
-file is hereby transformed into a "node" object in the internal data store with
-a unique `id` and a type `MarkdownRemark`. Similarly, an author will be
-represented by a node object of type `AuthorJson`, and contributor info will be
-transformed into node objects of type `ContributorJson`.
+Para poder consultar o conteúdo desses arquivos com o GraphQL, eles precisam primeiro ser
+carregados no armazenamento de dados interno do Gatsby. É isso que os plugins de fonte e transformadores
+fazem - neste caso `gatsby-source-filesystem` e
+`gatsby-transformer-remark` mais `gatsby-transformer-json`. Cada arquivo markdown de post
+é transformado em um objeto "node" no armazenamento de dados interno com
+um `id` único e com o tipo `MarkdownRemark`. Da mesma forma, um autor será
+representado por um objeto node do tipo `AuthorJson`, e as informações do colaborador serão
+transformadas em objetos node do tipo `ContributorJson`.
 
-### The Node interface
+### A interface Node
 
-This data structure is represented in Gatsby's GraphQL schema with the `Node`
-interface, which describes the set of fields common to node objects created by
-source and transformer plugins (`id`, `parent`, `children`, as well as a couple
-of `internal` fields like `type`). In GraphQL Schema Definition Language (SDL),
-it looks like this:
+Essa estrutura de dados é representada no schema GraphQL do Gatsby com a interface `Node`
+, que descreve o conjunto de campos comuns aos objetos node criados por
+plugins de fonte e transformadores (`id`, `parent`, `children`, bem como alguns
+campos `internal` como `type`). Em GraphQL Schema Definition Language (SDL),
+é algo parecido com isso:
 
 ```graphql
 interface Node {
@@ -92,9 +92,9 @@ type Internal {
 }
 ```
 
-Types created by source and transformer plugins implement this interface. For
-example, the node type created by `gatsby-transformer-json` for `authors.json`
-will be represented in the GraphQL schema as:
+Os tipos criados pelos plugins de fonte e transformadores implementam essa interface. Por
+exemplo, o tipo node criado por `gatsby-transformer-json` para `authors.json`
+será representado no schema GraphQL como:
 
 ```graphql
 type AuthorJson implements Node {
@@ -109,33 +109,33 @@ type AuthorJson implements Node {
 }
 ```
 
-> A quick way to inspect the schema generated by Gatsby is the GraphQL Playground.
-> Start your project with `GATSBY_GRAPHQL_IDE=playground gatsby develop`, open the
-> playground at `http://localhost:8000/___graphql` and inspect the `Schema` tab on
-> the right.
+> Uma maneira rápida de inspecionar o schema gerado pelo Gatsby é o GraphQL Playground.
+> Inicie seu projeto com `GATSBY_GRAPHQL_IDE=playground gatsby develop`, abra o
+> playground em `http://localhost:8000/___graphql` e inspecione a aba `Schema` à
+> direita.
 
-### Automatic type inference
+### Inferência automática de tipo
 
-It's important to note that the data in `author.json` does not provide type
-information of the Author fields by itself. In order to translate the data
-shape into GraphQL type definitions, Gatsby has to inspect the contents of
-every field and check its type. In many cases this works very well and it is
-still the default mechanism for creating a GraphQL schema.
+É importante observar que os dados em `author.json` não fornecem informações de tipo
+dos campos _Author_ por si só. Para converter o formato dos dados
+em definições de tipo GraphQL, o Gatsby precisa inspecionar o conteúdo de
+todos os campos e verificar seu tipo. Em muitos casos, isso funciona muito bem e isso ainda é
+o mecanismo padrão para criar um schema GraphQL.
 
-There are however two problems with this approach: (1) it is quite
-time-consuming and therefore does not scale very well and (2) if the values on a
-field are of different types Gatsby cannot decide which one is the correct one.
-A consequence of this is that if your data sources change, type inference could
-suddenly fail.
+No entanto, existem dois problemas com essa abordagem: (1) é bastante
+demorado e, portanto, não escala muito bem e (2) se os valores em um
+campo são de tipos diferentes, o Gatsby não pode decidir qual é o correto.
+Uma conseqüência disso é que, se suas fontes de dados mudarem, a inferência de tipo pode
+de repente falhar.
 
-Both problems can be solved by providing explicit type definitions for Gatsby's
-GraphQL schema.
+Ambos os problemas podem ser resolvidos fornecendo definições explícitas de tipos para o schema GraphQL
+do Gatsby.
 
-### Creating type definitions
+### Criando definições de tipo
 
-Look at the latter case first. Assume a new author joins the team, but in the
-new author entry there is a typo on the `joinedAt` field: "201-04-02" which is
-not a valid Date.
+Olhe primeiro para o último caso. Suponha que um novo autor entre na equipe, mas na
+entrada do novo autor, há um erro de digitação no campo `joinAt`: "201-04-02" a qual
+não é uma Data válida.
 
 ```diff:title=src/data/author.json
 +  {
@@ -147,14 +147,14 @@ not a valid Date.
 ]
 ```
 
-This will confuse Gatsby's type inference since the `joinedAt`
-field will now have both Date and String values.
+Isso confundirá a inferência de tipo de Gatsby, já que o campo `joinAt`
+agora terá os valores Date e String.
 
-#### Fixing field types
+#### Consertando tipos de campos
 
-To ensure that the field will always be of Date type, you can provide explicit
-type definitions to Gatsby with the [`createTypes`](/docs/actions/#createTypes) action.
-It accepts type definitions in GraphQL Schema Definition Language:
+Para garantir que o campo sempre seja do tipo Date, você pode fornecer definições
+explícitas de tipo para Gatsby com a action [`createTypes`](/docs/actions/#createTypes).
+Ele aceita definições de tipo em GraphQL Schema Definition Language:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -168,24 +168,24 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-Note that the rest of the fields (`name`, `firstName` etc.) don't have to be
-provided, they will still be handled by Gatsby's type inference.
+Observe que o restante dos campos (`name`, `firstName` etc.) não tem que ser
+fornecidos, eles ainda serão tratados pela inferência de tipo do Gatsby.
 
-> Actions to customize Gatsby's schema generation are made available in the
+> As actions para personalizar a geração de schemas do Gatsby são disponibilizadas nas APIs
 > [`createSchemaCustomization`](/docs/node-apis/#createSchemaCustomization)
 > (available in Gatsby v2.12 and above),
-> and [`sourcesNodes`](/docs/node-apis/#sourceNodes) APIs.
+> e [`sourcesNodes`](/docs/node-apis/#sourceNodes).
 
-#### Opting out of type inference
+#### Não optando pela inferência de tipo
 
-There are however advantages to providing full definitions for a node type, and
-bypassing the type inference mechanism altogether. With smaller scale projects
-inference is usually not a performance problem, but as projects grow the
-performance penalty of having to check each field type will become noticeable.
+No entanto, existem vantagens em fornecer definições completas para um tipo de node, e
+ignorar completamente o mecanismo de inferência de tipo. Em projetos de menor escala,
+a inferência geralmente não é um problema de desempenho, mas à medida que os projetos crescem,
+a penalidade de desempenho de ter que verificar cada tipo de campo será perceptível.
 
-Gatsby allows to opt out of inference with the `@dontInfer` type directive - which
-in turn requires that you explicitly provide type definitions for all fields
-that should be available for querying:
+Gatsby permite desativar a inferência com a diretiva de tipo `@dontInfer` - a qual
+por sua vez, exige que você forneça explicitamente definições de tipo para todos os campos
+que devem estar disponíveis para consulta:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -202,22 +202,22 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-Note that you don't need to explicitly provide the Node interface fields (`id`,
-`parent`, etc.), Gatsby will automatically add them for you.
+Observe que você não precisa fornecer explicitamente os campos da interface do Node (`id`,
+`parent`, etc.), Gatsby irá adicioná-los automaticamente para você.
 
-> If you wonder about the exclamation marks - those allow
-> [specifying nullability](https://graphql.org/learn/schema/#lists-and-non-null)
-> in GraphQL, i.e. if a field value is allowed to be `null` or not.
+> Se você está se perguntando sobre os pontos de exclamação - eles permitem
+> [especificar anulabilidade](https://graphql.org/learn/schema/#lists-and-non-null)
+> em GraphQL, ou seja, se é permitido que um valor de campo seja `null` ou não.
 
-#### Nested types
+#### Tipos aninhados
 
-So far, the example project has only been dealing with scalar values (`String` and `Date`;
-GraphQL also knows `ID`, `Int`, `Float`, `Boolean` and `JSON`). Fields can
-however also contain complex object values. To target those fields in GraphQL SDL, you
-can provide a full type definition for the nested type, which can be arbitrarily
-named (as long as the name is unique in the schema). In the example project, the
-`frontmatter` field on the `MarkdownRemark` node type is a good example. Say you
-want to ensure that `frontmatter.tags` will always be an array of strings.
+Até o momento, o projeto de exemplo trata apenas de valores escalares (`String` e `Date`;
+O GraphQL também conhece `ID`, `Int`, `Float`, `Boolean` e `JSON`). No entanto,
+os campos podem também conter valores complexos de objetos. Para selecionar esses campos no GraphQL SDL, você
+pode fornecer uma definição de tipo completa para o tipo aninhado, que pode ser arbitrariamente
+nomeado (desde que o nome seja exclusivo no schema). No projeto de exemplo, o
+campo `frontmatter` no tipo de node `MarkdownRemark` é um bom exemplo. Digamos que você
+quer garantir que o `frontmatter.tags` sempre seja um array de strings.
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -234,16 +234,16 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-Note that with `createTypes` you cannot directly target a `Frontmatter` type
-without also specifying that this is the type of the `frontmatter` field on the
-`MarkdownRemark` type, The following would fail because Gatsby would have no way
-of knowing which field the `Frontmatter` type should be applied to:
+Observe que, com `createTypes`, você não pode direcionar diretamente para um tipo de`Frontmatter`
+sem especificar também que este é o tipo do campo `frontmatter` no
+tipo `MarkdownRemark`, O seguinte falharia porque Gatsby não teria como
+saber em qual campo o tipo `Frontmatter` deve ser aplicado:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions
   const typeDefs = `
-    # This will fail!!!
+    # Isso vai falhar !!!
     type Frontmatter {
       tags: [String]!
     }
@@ -252,20 +252,20 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-It is useful to think about your data, and the corresponding GraphQL schema, by
-always starting from the Node types created by source and transformer plugins.
+É útil pensar nos seus dados e no schema GraphQL correspondente, 
+sempre iniciando nos tipos de Node criados pelos plugins de fonte e de transformação.
 
-> Note that the `Frontmatter` type must not implement the Node interface since
-> it is not a top-level type created by source or transformer plugins: it has no
-> `id` field, and is just there to describe the data shape on a nested field.
+> Observe que o tipo `Frontmatter` não deve implementar a interface Node já que
+> não é um tipo de alto nível criado por plugins de fonte ou transformador: não tem
+> o campo `id`, e existe apenas para descrever a forma dos dados em um campo aninhado.
 
-#### Gatsby Type Builders
+#### Construtores de Tipo Gatsby
 
-In many cases, GraphQL SDL provides a succinct way to provide type definitions
-for your schema. If however you need more flexibility, `createTypes` also
-accepts type definitions provided with the help of Gatsby Type Builders, which
-are more flexible than SDL syntax but less verbose than `graphql-js`. They are
-accessible on the `schema` argument passed to Node APIs.
+Em muitos casos, o GraphQL SDL fornece uma maneira sucinta de fornecer definições de tipo
+para o seu schema. Se, no entanto, você precisar de mais flexibilidade, `createTypes` também
+aceita definições de tipo fornecidas com a ajuda de Construtores de Tipo Gatsby, os quais
+são mais flexíveis que a sintaxe SDL, mas menos detalhados que `graphql-js`. Eles são
+acessíveis no argumento `schema` passado para as APIs do Node.
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions, schema }) => {
@@ -289,11 +289,11 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 }
 ```
 
-Gatsby Type Builders allow referencing types as simple strings, and accept full
-field configs (`type`, `args`, `resolve`). When defining top-level types, don't forget
-to pass `interfaces: ['Node']`, which does the same for Type Builders as adding
-`implements Node` does for SDL-defined types. It is also possible to opt out of type
-inference with Type Builders by setting the `infer` type extension to `false`:
+Os Construtores de Tipo do Gatsby permitem referênciar tipos como strings simples, e aceitam configurações
+de campo completas (`type`, `args`, `resolve`). Ao definir tipos de alto nível, não esqueça
+de passar `interfaces: ['Node']`, que faz o mesmo para os Construtores de Tipo assim como adicionar
+`implements Node` faz para tipos definidos por SDL. Também é possível optar por não usar inferência
+de tipo com Construtores de Tipo configurando a extensão de tipo `infer` como `false`:
 
 ```diff
 schema.buildObjectType({
@@ -303,37 +303,37 @@ schema.buildObjectType({
   },
   interfaces: ["Node"],
 + extensions: {
-+   // While in SDL you have two different directives, @infer and @dontInfer to
-+   // control inference behavior, Gatsby Type Builders take a single `infer`
-+   // extension which accepts a Boolean
++   // Enquanto em SDL, você tem duas diretivas diferentes, @infer e @dontInfer para
++   // controlar comportamento de inferência, Construtores de Tipo do Gatsby recebem um única extensão 
++   // `infer` que aceita um Boolean
 +   infer: false
 + },
 }),
 ```
 
-> Type Builders also exist for Input, Interface and Union types:
-> `buildInputType`, `buildInterfaceType`, and `buildUnionType`.
-> Note that the `createTypes` action also accepts `graphql-js` types directly,
-> but usually either SDL or Type Builders are the better alternatives.
+> Os Construtores de Tipo também existem para os tipos Input, Interface e Union:
+> `buildInputType`, `buildInterfaceType`, e `buildUnionType`.
+> Note que a action `createTypes` também aceita tipos `graphql-js` diretamente,
+> mas geralmente SDL ou Construtores de Tipo são as melhores alternativas.
 
-#### Foreign-key fields
+#### Campos de chave estrangeira
 
-Gatsby's automatic type inference has one trick up its sleeve: for every field
-that ends in `___NODE` it will interpret the field value as an `id` and create a
-foreign-key relation.
+A inferência automática de tipo do Gatsby tem um truque na manga: para cada campo
+que termina em `___NODE` ele interpretará o valor do campo como um `id` e cria uma
+relação de chave estrangeira.
 
-> Note: Before the introduction of the Schema Customization APIs in Gatsby v2.2,
-> there were two mechanisms to create links between node types: a plugin author would use the `___NODE`
-> fieldname convention (for plugins), and a user would define [mappings](/docs/gatsby-config/#mapping-node-types) between fields in their `gatsby-config.js`. Both users and plugin authors can now use the `@link` extension described below.
+> Nota: Antes da introdução das APIs de personalização de Schema no Gatsby v2.2,
+> havia dois mecanismos para criar links entre tipos de node: um autor de plugin usaria a convenção de
+> nome de campo `___NODE` (para plugins), e um usuário definiria [mapeamentos](/docs/gatsby-config/#mapping-node-types) entre campos em `gatsby-config.js`. Ambos, usuários e autores de plugins agora podem usar a extensão `@link` descrita abaixo.
 
-Creating foreign-key relations with the `createTypes` action,
-i.e. without relying on type inference and the `___NODE` field naming
-convention, requires a bit of manual setup.
+Criar relações de chaves estrangeiras com a action `createTypes`,
+ou seja, sem depender da inferência de tipo e da convenção de nomenclatura de campo
+`___NODE`, requer um pouco de configuração manual.
 
-In the example project, the `frontmatter.author` field on
-`MarkdownRemark` nodes to expand the provided field value to a full `AuthorJson` node.
-For this to work, there has to be provided a custom field resolver. (see below for
-more info on `context.nodeModel`)
+No projeto de exemplo, o campo `frontmatter.author` nos nodes
+`MarkdownRemark` expande o valor do campo fornecido para um node completo `AuthorJson`.
+Para que isso funcione, é necessário fornecer um _resolver_ de campo personalizado. (veja abaixo para
+mais informações sobre `context.nodeModel`)
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions, schema }) => {
@@ -346,16 +346,16 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
         author: {
           type: "AuthorJson",
           resolve: (source, args, context, info) => {
-            // If you were linking by ID, you could use `getNodeById` to
-            // find the correct author:
+            // Se você estivesse linkando por ID, poderia usar `getNodeById` para
+            // encontrar o autor correto:
             // return context.nodeModel.getNodeById({
             //   id: source.author,
             //   type: "AuthorJson",
             // })
-            // But since the example is using the author email as foreign key,
-            // you can use `runQuery`, or get all author nodes
-            // with `getAllNodes` and manually find the linked author
-            // node:
+            // Mas como o exemplo está usando o email do autor como chave estrangeira,
+            // você pode usar `runQuery`, ou obter todos os nodes de autores
+            // com `getAllNodes` e procurar manualmente pelo node do autor
+            // linkado:
             return context.nodeModel
               .getAllNodes({ type: "AuthorJson" })
               .find(author => author.email === source.author)
@@ -368,51 +368,51 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 }
 ```
 
-What is happening here is that you provide a custom field resolver that asks
-Gatsby's internal data store for the full node object with the specified
-`id` and `type`.
+O que está acontecendo aqui é que você fornece um _resolver_ de campo personalizado que pergunta
+ao armazenamento de dados interno do Gatsby sobre o objeto completo de _node_ com o
+`id` e `type` especificados.
 
-Because creating foreign-key relations is such a common use case, Gatsby
-luckily also provides a much easier way to do this -- with the help of
-extensions or directives. It looks like this:
+Porque criar relações de chave estrangeira é um caso de uso tão comum, Gatsby
+felizmente, também fornece uma maneira muito mais fácil de fazer isso -- com a ajuda de
+extensões ou diretivas. Seria algo semelhante a isso:
 
 ```graphql
 type MarkdownRemark implements Node {
   frontmatter: Frontmatter
 }
 type Frontmatter {
-  author: AuthorJson @link # default foreign-key relation by `id`
-  reviewers: [AuthorJson] @link(by: "email") # foreign-key relation by custom field
+  author: AuthorJson @link # relação de chave estrangeira padrão por `id`
+  reviewers: [AuthorJson] @link(by: "email") # relação de chave estrangeira por campo personalizado
 }
 type AuthorJson implements Node {
-  posts: [MarkdownRemark] @link(by: "frontmatter.author.email", from: "email") # easy back-ref
+  posts: [MarkdownRemark] @link(by: "frontmatter.author.email", from: "email") # referência fácil
 }
 ```
 
-You provide a `@link` directive on a field and Gatsby will internally
-add a resolver that is quite similar to the one written manually above. If no
-argument is provided, Gatsby will use the `id` field as the foreign-key,
-otherwise the foreign-key has to be provided with the `by` argument. The
-optional `from` argument allows getting the field on the current type which acts as the foreign-key to the field specified in `by`.
-In other words, you `link` **on** `from` **to** `by`. This makes `from` especially helpful when adding a field for back-linking.
+Você fornece uma diretiva `@link` em um campo o Gatsby internamente irá
+adicionar um _resolver_ que é bastante semelhante ao escrito manualmente acima. Se nenhum
+argumento for fornecido, o Gatsby usará o campo `id` como chave estrangeira,
+caso contrário, a chave estrangeira deve ser fornecida com o argumento `by`. O
+argumento opcional `from` permite obter o campo no tipo atual que atua como chave estrangeira no campo especificado em `by`.
+em outras palavras, você cria um `link` **em** `from` **para** `by`. Isso torna o `from` especialmente útil ao adicionar um campo para linkar de volta.
 
-> Note that when using `createTypes` to fix type inference for a foreign-key field
-> created by a plugin, the underlying data will probably live on a field with
-> a `___NODE` suffix. Use the `from` argument to point the `link` extension to
-> the correct field name. For example: `author: [AuthorJson] @link(from: "author___NODE")`.
+> Observe que ao usar `createTypes` para corrigir inferência de tipo para um campo de chave estrangeira
+> criado por um plugin, os dados subjacentes provavelmente existirão em um campo com
+> um sufixo `___NODE`. Use o argumento `from` para apontar a extensão `link` para
+> o nome do campo correto. Por exemplo: `author: [AuthorJson] @link(from: "author___NODE")`.
 
-#### Extensions and directives
+#### Extensões e diretivas
 
-Out of the box, Gatsby provides [four extensions](/docs/actions/#createTypes)
-that allow adding custom functionality to fields without having to manually
-write field resolvers: the `link` extension has already been discussed above,
-`dateformat` allows adding date formatting options, `fileByRelativePath` is
-similar to `link` but will resolve relative paths when linking to `File` nodes,
-and `proxy` is helpful when dealing with data that contains field names with
-characters that are invalid in GraphQL.
+Por padrão, Gatsby fornece [quatro extensões](/docs/actions/#createTypes)
+que permitem adicionar funcionalidade personalizada aos campos sem precisar escrever
+_resolvers_ de campo manualmente: a extensão `link` já foi discutida acima,
+`dateformat` permite adicionar opções de formatação de data, `fileByRelativePath` é
+similar a `link` mas resolverá os caminhos relativos quando linkada a nodes `File`,
+e `proxy` é útil ao lidar com dados que contêm nomes de campos com
+caracteres que são inválidos em GraphQL.
 
-To add an extension to a field you can either use a directive in SDL, or the
-`extensions` property when using Gatsby Type Builders:
+Para adicionar uma extensão a um campo, você pode usar uma diretiva no SDL ou a
+propriedade `extensions` ao usar Construtores de Tipo do Gatsby:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ action, schema }) => {
@@ -438,9 +438,9 @@ exports.createSchemaCustomization = ({ action, schema }) => {
 }
 ```
 
-The above example adds [date formatting options](/docs/graphql-reference/#dates)
-to the `AuthorJson.joinedAt` and the `MarkdownRemark.frontmatter.publishedAt`
-fields. Those options are available as field arguments when querying those fields:
+O exemplo acima adiciona [opções de formatação de data](/docs/graphql-reference/#dates)
+para os campos `AuthorJson.joinedAt` e `MarkdownRemark.frontmatter.publishedAt`.
+Essas opções estão disponíveis como argumentos de campo ao consultar esses campos:
 
 ```graphql
 query {
@@ -450,15 +450,15 @@ query {
 }
 ```
 
-`publishedAt` is also provided a default `formatString` which will be used
-when no explicit formatting options are provided in the query.
+`publishedAt` também recebe uma `formatString` padrão, a qual será usada
+quando nenhuma opção de formatação explícita é fornecida na consulta.
 
-#### Setting default field values
+#### Definindo valores de campo padrão
 
-For setting default field values, Gatsby currently does not (yet) provide an
-out-of-the-box extension, so resolving a field to a default value (instead of
-`null`) requires manually adding a field resolver. For example, to add a default
-tag to every blog post:
+Para definir valores de campo padrão, o Gatsby atualmente (ainda) não fornece uma
+extensão pronta para uso, então resolver um campo para um valor padrão (ao invés de
+`null`) requer a adição manual de um _resolver_ de campo. Por exemplo, para adicionar uma tag
+padrão para todos posts do blog:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ action, schema }) => {
@@ -471,7 +471,7 @@ exports.createSchemaCustomization = ({ action, schema }) => {
         tags: {
           type: "[String!]",
           resolve(source, args, context, info) {
-            // For a more generic solution, you could pick the field value from
+            // Para uma solução mais genérica, você pode escolher o valor do campo em
             // `source[info.fieldName]`
             const { tags } = source
             if (source.tags == null || (Array.isArray(tags) && !tags.length)) {
@@ -487,14 +487,14 @@ exports.createSchemaCustomization = ({ action, schema }) => {
 }
 ```
 
-#### Creating custom extensions
+#### Criando extensões personalizadas
 
-With the [`createFieldExtension`](/docs/actions/#createFieldExtension) action
-it is possible to define custom extensions as a way to add reusable functionality
-to fields. Say you want to add a `fullName` field to `AuthorJson`
-and `ContributorJson`.
+Com a action [`createFieldExtension`](/docs/actions/#createFieldExtension)
+é possível definir extensões personalizadas como uma maneira de adicionar funcionalidade reutilizável
+para campos. Digamos que você queira adicionar um campo `fullName` ao `AuthorJson`
+e ao `ContributorJson`.
 
-You could of course write a `fullNameResolver`, and use it in two places:
+É claro que você poderia escrever um `fullNameResolver` e usá-lo em dois lugares:
 
 ```js:title=gatsby-node.js
 const fullNameResolver = source => `${source.firstName} ${source.name}`
@@ -525,12 +525,12 @@ exports.createSchemaCustomization = ({ actions, schema }) => {
 }
 ```
 
-However, to make this functionality available to other plugins as well, and make
-it usable in SDL, you can register it as a field extension.
+No entanto, para disponibilizar essa funcionalidade para outros plugins também, e fazê-la ser
+usável em SDL, você pode registrá-la como uma extensão de campo.
 
-A field extension definition requires a name, and an `extend` function, which
-should return a (partial) field config (an object, with `type`, `args`, `resolve`)
-which will be merged into the existing field config.
+Uma definição de extensão de campo requer um nome e uma função `extend`, a qual
+deve retornar uma configuração de campo (parcial) (um objeto com `type`, `args`, `resolve`)
+que será mesclado na configuração existente do campo.
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -558,9 +558,9 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-This approach becomes a lot more powerful when plugins provide custom field
-extensions. A _very_ basic markdown transformer plugin could for example provide
-an extension to convert markdown strings into html:
+Essa abordagem se torna muito mais poderosa quando os plugins fornecem extensões de campo
+personalizadas. Um plugin transformador de markdown _muito_ básico poderia por exemplo fornecer
+uma extensão para converter strings de markdown para html:
 
 ```js:title=gatsby-transformer-basic-md/src/gatsby-node.js
 const remark = require(`remark`)
@@ -575,8 +575,8 @@ exports.createSchemaCustomization = ({ actions }) => {
         defaultValue: true,
       },
     },
-    // The extension `args` (above) are passed to `extend` as
-    // the first argument (`options` below)
+    // A extensão `args` (acima) é passada a `extend` como
+    // o primeiro argumento (`options` abaixo)
     extend(options, prevFieldConfig) {
       return {
         args: {
@@ -600,8 +600,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-It can then be used in any `createTypes` call by simply adding the directive/extension
-to the field:
+Ela pode ser usada em qualquer chamada `createTypes` simplesmente adicionando a diretiva/extensão
+ao campo:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -613,8 +613,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-Note that in the above example, there have been additional provided configuration options
-with `args`. This is e.g. useful to provide default field arguments:
+Observe que no exemplo acima, houve opções adicionais de configuração fornecidas
+com `args`. Este exemplo é útil para fornecer argumentos de campo padrão:
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -626,10 +626,10 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-Also note that field extensions can decide themselves if an existing field resolver
-should be wrapped or overwritten. The above examples have all decided to simply return
-a new `resolve` function. Because the `extend` function receives the current field
-config as its second argument, an extension can also decide to wrap an existing resolver:
+Observe também que as extensões de campo podem decidir se um _resolver_ de campo existente
+deve ser quebrado ou substituído. Os exemplos acima decidiram simplesmente retornar
+uma nova função `resolve`. Porque a função `extend` recebe a configuração atual
+de campo como seu segundo argumento, uma extensão também pode decidir envolver um _resolver_ existente:
 
 ```diff
 extend(options, prevFieldConfig) {
@@ -644,18 +644,18 @@ extend(options, prevFieldConfig) {
 }
 ```
 
-If multiple field extensions are added to a field, resolvers are processed in this order:
-first a custom resolver added with `createTypes` (or `createResolvers`) runs, then field
-extension resolvers execute from left to right.
+Se várias extensões de campo forem adicionadas a um campo, os _resolvers_ serão processados ​​nesta ordem:
+primeiro um _resolver_ personalizado adicionado com `createTypes` (ou `createResolvers`) executa, então os
+ _resolvers_ de extensão de campo são executados da esquerda para a direita.
 
-Finally, note that in order to get the current fieldValue, you use `context.defaultFieldResolver`.
+Por fim, observe que, para obter o fieldValue atual, você usa `context.defaultFieldResolver`.
 
-## createResolvers API
+## API createResolvers
 
-While it is possible to directly pass `args` and `resolvers` along the type
-definitions using Gatsby Type Builders, an alternative approach specifically
-tailored towards adding custom resolvers to fields is the `createResolvers` Node
-API.
+Embora seja possível passar diretamente `args` e `resolvers` pelas definições
+de tipo usando Construtores de Tipo do Gatsby, uma abordagem alternativa, especificamente
+adaptada para adicionar _resolvers_ personalizados aos campos, é a API de Node
+`createResolvers`
 
 ```js:title=gatsby-node.js
 exports.createResolvers = ({ createResolvers }) => {
@@ -675,27 +675,27 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-Note that `createResolvers` allows adding new fields to types, modifying `args`
-and `resolver` -- but not overriding the field type. This is because
-`createResolvers` is run last in schema generation, and modifying a field type
-would mean having to regenerate corresponding input types (`filter`, `sort`),
-which you want to avoid. If possible, specifying field types should be done with
-the `createTypes` action.
+Observe que `createResolvers` permite adicionar novos campos aos tipos, modificar `args`
+e `resolver` -- mas não substituindo o tipo do campo. Isto é porque
+`createResolvers` é executado por último na geração de schema, e modificar um tipo de campo
+significaria ter que regenerar os tipos de entrada correspondentes (`filter`, `sort`),
+algo que vocẽ quer evitar. Se possível, a especificação dos tipos de campo deve ser feita com
+a action `createTypes`.
 
-### Accessing Gatsby's data store from field resolvers
+### Acessando o armazenamento de dados do Gatsby a partir de resolvers de campo
 
-As mentioned above, Gatsby's internal data store and query capabilities are
-available to custom field resolvers on the `context.nodeModel` argument passed
-to every resolver. Accessing node(s) by `id` (and optional `type`) is possible
-with [`getNodeById`](/docs/node-model/#getNodeById) and
-[`getNodesByIds`](/docs/node-model/#getNodesByIds). To get all nodes, or all
-nodes of a certain type, use [`getAllNodes`](/docs/node-model/#getAllNodes).
-And running a query from inside your resolver functions can be accomplished
-with [`runQuery`](/docs/node-model/#runQuery), which accepts `filter` and `sort`
-query arguments.
+Como mencionado acima, os recursos internos de consulta e armazenamento de dados de Gatsby estão
+disponíveis para _resolvers_ de campo customizados no argumento `context.nodeModel` passado
+para todos os _resolvers_. Acessar node(s) pelo `id` (e opcionalmente `type`) é possível
+com [`getNodeById`](/docs/node-model/#getNodeById) e
+[`getNodesByIds`](/docs/node-model/#getNodesByIds). Para obter todos os nodes ou todos os
+nodes de um certo tipo, use [`getAllNodes`](/docs/node-model/#getAllNodes).
+E executar uma consulta de dentro das funções do _resolver_ pode ser realizada
+com [`runQuery`](/docs/node-model/#runQuery), que aceita os argumentos de consulta
+`filter` e `sort`.
 
-You could for example add a field to the `AuthorJson` type that lists all recent
-posts by an author:
+Você pode, por exemplo, adicionar um campo ao tipo `AuthorJson` que lista todas as
+postagens recentes de um autor:
 
 ```js:title=gatsby-node.js
 exports.createResolvers = ({ createResolvers }) => {
@@ -724,10 +724,10 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-When using `runQuery` to sort query results, be aware that both `sort.fields`
-and `sort.order` are `GraphQLList` fields. Also, nested fields on `sort.fields`
-have to be provided in dot-notation (not separated by triple underscores).
-For example:
+Ao usar o `runQuery` para classificar os resultados da consulta, esteja ciente de que ambos `sort.fields`
+e `sort.order` são campos `GraphQLList`. Além disso, campos aninhados em `sort.fields`
+tem que ser fornecidos em notação de ponto (não separado por sublinhado triplo).
+Por exemplo:
 
 ```js
 context.nodeModel.runQuery({
@@ -741,14 +741,14 @@ context.nodeModel.runQuery({
 })
 ```
 
-### Custom query fields
+### Campos de consulta personalizados
 
-One powerful approach enabled by `createResolvers` is adding custom root query
-fields. While the default root query fields added by Gatsby (e.g.
-`markdownRemark` and `allMarkdownRemark`) provide the whole range of query
-options, query fields designed specifically for your project can be useful. For
-example, you can add a query field for all external contributors to the example blog
-who have received their swag:
+Uma abordagem poderosa habilitada pelo `createResolvers` é adicionar campos de consulta raiz
+personalizados. Enquanto os campos de consulta raiz padrão adicionados por Gatsby (por exemplo
+`markdownRemark` e `allMarkdownRemark`) fornecem toda a gama de opções
+de consultas, campos de consulta criados especificamente para o seu projeto podem ser úteis. Por
+exemplo, você pode adicionar um campo de consulta para todos os colaboradores externos ao blog de exemplo
+que receberam seus presentes:
 
 ```js:title=gatsby-node.js
 exports.createResolvers = ({ createResolvers }) => {
@@ -774,8 +774,8 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-Because you might also be interested in the reverse - which contributors haven't
-received their swag yet - why not add a (required) custom query arg?
+Porque você também pode estar interessado no reverso - quais colaboradores não
+receberam seus presentes ainda - por que não adicionar um argumento de consulta personalizado (obrigatório)?
 
 ```js:title=gatsby-node.js
 exports.createResolvers = ({ createResolvers }) => {
@@ -804,11 +804,11 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-It is also possible to provide more complex custom input types which can be defined
-directly inline in SDL. You could for example add a field to the `ContributorJson`
-type that counts the number of posts by a contributor, and then add a custom root
-query field `contributors` which accepts `min` or `max` arguments to only return
-contributors who have written at least `min`, or at most `max` number of posts:
+Também é possível fornecer tipos de entrada personalizados mais complexos que podem ser definidos
+diretamente no SDL. Você poderia, por exemplo, adicionar um campo ao tipo `ContributorJson`
+que conta o número de postagens de um colaborador e então adiciona um campo de consulta
+raiz personalizado `contributors` que aceita argumentos `min` ou `max` para retornar apenas
+colaboradores que escreveram pelo menos `min` ou no máximo `max` postagens:
 
 ```js:title=gatsby-node.js
 exports.createResolvers = ({ createResolvers }) => {
@@ -849,18 +849,18 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-### Taking care of hot reloading
+### Cuidando do hot reloading
 
-When creating custom field resolvers, it is important to ensure that Gatsby
-knows about the data a page depends on for hot reloading to work properly. When
-you retrieve nodes from the store with [`context.nodeModel`](/docs/node-model/) methods,
-it is usually not necessary to do anything manually, because Gatsby will register
-dependencies for the query results automatically. The exception is `getAllNodes`
-which will _not_ register data dependencies by default. This is because
-requesting re-running of queries when any node of a certain type changes is
-potentially a very expensive operation. If you are sure you really need this,
-you can add a page data dependency either programmatically with
-[`context.nodeModel.trackPageDependencies`](/docs/node-model/#trackPageDependencies), or with:
+Ao criar _resolvers_ de campos personalizados, é importante garantir que o Gatsby
+conheça os dados de que uma página depende para que o hot reloading funcione corretamente. Quando
+você recebe nodes do armazenamento com métodos [`context.nodeModel`](/docs/node-model/),
+geralmente não é necessário fazer nada manualmente, porque o Gatsby registrará
+dependências para os resultados da consulta automaticamente. A exceção é `getAllNodes`
+que _não_ registrará dependências de dados por padrão. Isso ocorre porque
+solicitar a repetição de consultas quando qualquer node de um determinado tipo é alterado é
+potencialmente uma operação muito cara. Se você tem certeza de que realmente precisa disso,
+você pode adicionar uma dependência de dados da página programaticamente com
+[`context.nodeModel.trackPageDependencies`](/docs/node-model/#trackPageDependencies), ou com:
 
 ```js
 context.nodeModel.getAllNodes(
@@ -869,16 +869,16 @@ context.nodeModel.getAllNodes(
 )
 ```
 
-## Custom Interfaces and Unions
+## Interfaces e Uniões Personalizadas
 
-Finally, say you want to have a page on the example blog that lists all
-team members (authors and contributors). What you could do is have two queries,
-one for `allAuthorJson` and one for `allContributorJson` and manually merge
-those. GraphQL however provides a more elegant solution to these kinds of
-problems with "abstract types" (Interfaces and Unions). Since authors and
-contributors actually share most of the fields, you can abstract those up into
-a `TeamMember` interface and add a custom query field for all team members
-(as well as a custom resolver for full names):
+Por fim, digamos que você queira ter uma página no blog de exemplo que lista todos os
+membros do time (autores e colaboradores). O que você pode fazer é ter duas consultas,
+uma para `allAuthorJson` e uma para `allContributorJson` e mesclá-las
+manualmente. No entanto, o GraphQL fornece uma solução mais elegante para esses tipos de
+problemas com "tipos abstratos" (interfaces e uniões). Como autores e
+colaboradores na verdade, compartilham a maioria dos campos, você pode abstraí-los em
+uma interface `TeamMember` e adicionar um campo de consulta personalizado para todos os membros da equipe
+(bem como um _resolver_ personalizado para nomes completos):
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -934,8 +934,8 @@ exports.createResolvers = ({ createResolvers }) => {
 }
 ```
 
-To use the newly added root query field in a page query to get the full names of
-all team members, you could write:
+Para usar o campo de consulta raiz recém adicionado em uma consulta de página para obter
+os nomes completos de todos os membros da equipe, você pode escrever:
 
 ```js
 export const query = graphql`
@@ -952,12 +952,12 @@ export const query = graphql`
 `
 ```
 
-### Queryable interfaces with the `@nodeInterface` extension
+### Interfaces consultáveis ​​com a extensão `@nodeInterface`
 
-Since Gatsby 2.13.22, you can achieve the same thing as above by adding the `@nodeInterface`
-extension to the `TeamMember` interface. This will treat the interface like a normal
-top-level type that implements the `Node` interface, and thus automatically add root
-query fields for the interface.
+Desde o Gatsby 2.13.22, você pode obter o mesmo que foi mencionado acima adicionando a extensão
+`@nodeInterface` à interface `TeamMember`. Isso tratará a interface como um tipo de
+alto nível normal que implementa a interface `Node`, e, assim, adiciona automaticamente
+campos de consulta raiz à interface.
 
 ```js:title=gatsby-node.js
 exports.createSchemaCustomization = ({ actions }) => {
@@ -988,8 +988,8 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-When querying, use inline fragments for the fields that are specific to the types
-implementing the interface (i.e. fields that are not shared):
+Ao consultar, use fragmentos embutidos para os campos específicos dos tipos
+que implementam a interface (ou seja, campos que não são compartilhados):
 
 ```js
 export const query = graphql`
@@ -1017,8 +1017,8 @@ export const query = graphql`
 `
 ```
 
-Including the `__typeName` introspection field allows to check the node type when iterating
-over the query results in your component:
+A inclusão do campo de introspecção `__typeName` permite verificar o tipo de node ao
+iterar nos resultados da consulta em seu componente:
 
 ```js
 data.allTeamMember.nodes.map(node => {
@@ -1031,22 +1031,22 @@ data.allTeamMember.nodes.map(node => {
 })
 ```
 
-> Note: All types implementing an interface with the `@nodeInterface` extension
-> must also implement the `Node` interface.
+> Nota: Todos os tipos que implementam uma interface com a extensão `@nodeInterface`
+> também devem implementar a interface `Node`.
 
-## Extending third-party types
+## Estendendo tipos de terceiros
 
-So far, the examples have been dealing with types created from locally available data.
-However, Gatsby also allows to integrate and modify third-party GraphQL schemas.
+Até agora, os exemplos têm lidado com tipos criados a partir de dados disponíveis localmente.
+No entanto, o Gatsby também permite integrar e modificar schemas GraphQL de terceiros.
 
-Usually, those third-party schemas are retrieved from remote sources via introspection
-query with Gatsby's `gatsby-source-graphql` plugin. To customize types integrated from
-a third-party schema, you can use the [`createResolvers`](/docs/node-apis/#createResolvers) API.
+Geralmente, esses schemas de terceiros são recuperados de fontes remotas via consulta de
+introspecção com o plugin do Gatsby `gatsby-source-graphql`. Para personalizar tipos integrados de
+um schema de terceiros, você pode usar a API [`createResolvers`](/docs/node-apis/#createResolvers).
 
-### Feeding remote images into `gatsby-image`
+### Alimentando imagens remotas no `gatsby-image`
 
-As an example, you could look at [using-gatsby-source-graphql](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-gatsby-source-graphql/gatsby-node.js) to see how you could use `createResolvers` to feed images from a CMS into `gatsby-image` (the assumption is that `gatsby-source-graphql` was configured
-to prefix all types from the third-party schema with `CMS`):
+Como exemplo, você pode olhar para [using-gatsby-source-graphql](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-gatsby-source-graphql/gatsby-node.js) para ver como você poderia usar `createResolvers` para alimentar imagens de um CMS no `gatsby-image` (a suposição é que `gatsby-source-graphql` foi configurado
+para prefixar todos os tipos do schema de terceiros com `CMS`):
 
 ```js:title=gatsby-node.js
 exports.createResolvers = ({
@@ -1078,21 +1078,21 @@ exports.createResolvers = ({
 }
 ```
 
-You create a new `imageFile` field on the `CMS_Asset` type, which will create `File`
-nodes from every value on the `url` field. Since `File` nodes automatically have
-`childImageSharp` convenience fields available, you can then feed the images from the CMS
-into `gatsby-image` by simply querying:
+Você cria um novo campo `imageFile` no tipo `CMS_Asset`, o que criará nodes `File`
+de todos os valores no campo `url`. Como os nodes `File` têm automaticamente
+campos de conveniência `childImageSharp` disponíveis, você pode alimentar as imagens do CMS
+no `gatsby-image` simplesmente consultando:
 
 ```graphql
 query {
   cms {
     post {
-      # In this example, the `post.image` field is of type `CMS_Asset`
+      # Neste exemplo, o campo `post.image` é do tipo `CMS_Asset`
       image {
-        # It is important to include all fields in the query which you want to
-        # access in the resolver. In this example make sure to include
-        # the `url` field. In the future, Gatsby might provide a `@projection`
-        # extension to automatically include those fields.
+        # É importante incluir todos os campos na consulta que você deseja
+        # acessar no resolver. Neste exemplo, certifique-se de incluir
+        # o campo `url`. No futuro, Gatsby poderá fornecer uma extensão `@projection`
+        # para incluir automaticamente esses campos.
         url
         imageFile {
           childImageSharp {
