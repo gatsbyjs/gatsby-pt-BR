@@ -34,7 +34,7 @@ module.exports = {
 
 Na configuração padrão, um blog será rodado no caminho raiz (`/`), e o conteúdo das notas estarão no caminho `/notes`.
 
-Rode `gatsby develop` para iniciar seu servidor de desenvolvimento e visualizar seu site:
+Rode `gatsby develop` para iniciar o seu servidor de desenvolvimento e visualizar o seu site:
 
 ![A página inicial criada pelo gatsby-theme-starter](../images/gatsby-theme-starter-home.png)
 
