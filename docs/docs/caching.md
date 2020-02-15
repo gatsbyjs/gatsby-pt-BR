@@ -1,5 +1,5 @@
 ---
-title: Cache de sites estáticos
+title: Cacheamento de sites estáticos
 ---
 
 Uma parte importante da criação de um site muito rápido é configurar o cache HTTP adequado. O cache HTTP permite que os navegadores armazenem recursos de um site em cache, para que quando o usuário retorne a ele, poucas partes tenham que ser baixadas novamente.
