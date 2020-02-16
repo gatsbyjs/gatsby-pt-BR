@@ -1,5 +1,5 @@
 ---
-Título: Usando Múltiplos Temas Gatsby
+title: Usando Múltiplos Temas Gatsby
 ---
 
 Os temas Gatsby podem ser combinados. Isso significa que você pode instalar múltiplos temas juntos.
@@ -38,7 +38,7 @@ Rode `gatsby develop` para iniciar um servidor de desenvolvimento e visualizar o
 
 ![A página inicial criada pelo gatsby-theme-starter](../images/gatsby-theme-starter-home.png)
 
-![A rota de 'notas' criada pelo gatsby-theme-starter](../images/gatsby-theme-starter-notes.png)
+![A rota de `notas` criada pelo gatsby-theme-starter](../images/gatsby-theme-starter-notes.png)
 
 ## Tutorial
 
