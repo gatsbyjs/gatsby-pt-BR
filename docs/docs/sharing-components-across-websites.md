@@ -9,9 +9,9 @@ Existem várias estratégias aqui.
 
 **Bibliotecas de componentes** são uma abordagem mais limpa e pura, mas geralmente precisam de ferramentas adicionais ou fazem com que algumas mudanças exijam vários _pull requests_.
 
-Como alternativa, as equipes podem implementar **sistemas para descoberta de componentes**, como o [Storybook](https://github.com/storybookjs/storybook) ou [Styleguidist](https://github.com/styleguidist/react-styleguidist ), por site e simplesmente copie e cole o código desejado nos repositórios.
+Como alternativa, as equipes podem implementar **sistemas para descoberta de componentes**, como o [Storybook](https://github.com/storybookjs/storybook) ou [Styleguidist](https://github.com/styleguidist/react-styleguidist), por site e simplesmente copiar e colar o código desejado nos repositórios.
 
-Para evitar copiar e colar e reutilizar componentes, você pode usar as **ferramentas de compartilhamento de componentes** como [Bit](https://github.com/teambit/bit) para reutilizar e sincronizar componentes entre sites.
+Para evitar copiar e colar e começar a reutilizar componentes, você pode usar as **ferramentas de compartilhamento de componentes** como [Bit](https://github.com/teambit/bit) para reutilizar e sincronizar componentes entre sites.
 
 <GuideList slug={props.slug} />
 
