@@ -1,5 +1,5 @@
 ---
-title: Adquirindo do Prose
+title: Integrando a partir do Prose
 ---
 
 Esta página é um esboço. Ajude a nossa comunidade a expandi-lo.
