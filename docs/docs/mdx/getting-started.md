@@ -20,7 +20,11 @@ starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele p
    gatsby develop
    ```
 
+<<<<<<< HEAD
 1. **Abra o site** que está rodando em `http://localhost:8000`
+=======
+1. **Open the site** running at `http://localhost:8000`
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 1. **Atualize o conteúdo do arquivo MDX** abrindo a pasta `my-mdx-starter` 
    no seu editor de código e edite o arquivo `src/pages/index.mdx`.
@@ -28,7 +32,14 @@ starter](https://github.com/ChristopherBiscardi/gatsby-starter-mdx-basic). Ele p
 
 ## Adicionando arquivos MDX a um site Gatsby já existente
 
+<<<<<<< HEAD
 Se você já tem um site em Gatsby e quer adicionar arquivos MDX, você pode seguir os passos de configuração do plugin [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/):
+=======
+If you already have a Gatsby site that you'd like to add MDX to, you
+can follow these steps for configuring the [gatsby-plugin-mdx](/packages/gatsby-plugin-mdx/) plugin.
+
+Alternatively, you may be looking to configure an existing blog site to use MDX. [This blog post](/blog/2019-11-21-how-to-convert-an-existing-gatsby-blog-to-use-mdx/) walks you through those steps in detail.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 1. **Adicione o `gatsby-plugin-mdx`** e as dependências do MDX
 

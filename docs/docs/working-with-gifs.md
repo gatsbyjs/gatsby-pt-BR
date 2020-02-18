@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: Trabalhando com GIFs
+=======
+title: Working with GIFs
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 ---
 
 Se você está construindo um blog com Gatsby, é provável que você queira incluir alguns GIFs animados: quem não gostaria de incluir um GIF de uma lontra ou de um gato dançando?
@@ -32,12 +36,20 @@ export default AboutPage;
 Em posts e páginas Markdown, incluir um GIF animado é o mesmo que incluir uma imagem estática:
 
 ```markdown
+<<<<<<< HEAD
 ![Lontra dançando com um peixe](./images/dancing-ofter.gif)
+=======
+![otter dancing with a fish](./images/dancing-otter.gif)
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 ```
 
 ![Lontra dançando com um peixe](./images/dancing-otter.gif)
 
+<<<<<<< HEAD
 Os GIFs animados podem ser bastante grandes em tamanho, então tenha cuidado para não sabotar a performance das suas páginas web com arquivos extremamente grandes. Você pode reduzir o tamanho do arquivo [otimizando os quadros](https://skylilies.livejournal.com/244378.html) ou convertendo-os em vídeo.
+=======
+Animated GIFs can be quite large in size, so be careful not to sabotage your webpages' performance with extremely large files. You could reduce file size by [optimizing the frames](https://skylilies.livejournal.com/244378.html) or converting them to video.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ## Preocupações de acessibilidade com GIFs animados
 

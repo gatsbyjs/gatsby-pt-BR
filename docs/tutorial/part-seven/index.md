@@ -43,7 +43,12 @@ Esta função `onCreateNode` será chamada pelo Gatsby sempre que um novo nó é
 
 Pare e reinicie o servidor de desenvolvimento. Ao fazer isto, verá vários nós recém-criados sendo registrados no console do terminal.
 
+<<<<<<< HEAD
 Use esta API para adicionar os slugs das suas páginas de markdown para os nós `MarkdownRemark`.
+=======
+In the next section, you will use this API to add slugs for your Markdown pages to `MarkdownRemark`
+nodes.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Modifique sua função para que agora apenas registre nós `MarkdownRemark`.
 
@@ -271,10 +276,17 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
+<<<<<<< HEAD
 Reinicie o servidor de desenvolvimento e suas páginas serão criadas! Uma maneira fácil 
 de encontrar novas páginas criadas durante o desenvolvimento é ir para uma rota aleatória 
 onde o Gatsby mostrará uma lista de páginas no site. Se você for para <http://localhost:8000/sdf>, 
 verá as novas páginas que criou.
+=======
+Restart the development server and your pages will be created! An easy way to
+find new pages you create while developing is to go to a random path where
+Gatsby will helpfully show you a list of pages on the site. If you go to
+`http://localhost:8000/sdf`, you'll see the new pages you created.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ![new-pages](new-pages.png)
 
@@ -369,7 +381,7 @@ export default ({ data }) => {
                 {node.frontmatter.title}{" "}
                 <span
                   css={css`
-                    color: #bbb;
+                    color: #555;
                   `}
                 >
                   — {node.frontmatter.date}
@@ -412,9 +424,15 @@ E aí está! Um blog funcionando, mesmo que pequeno.
 
 ## Desafio
 
+<<<<<<< HEAD
 Tente brincar mais com o site. Tente adicionar mais alguns arquivos markdown. 
 Explore consultando outros dados dos nós `MarkdownRemark` e adicione-os à 
 primeira página ou às páginas de postagens do blog.
+=======
+Try playing more with the site. Try adding some more markdown files. Explore
+querying other data from the `MarkdownRemark` nodes and adding them to the
+front page or blog posts pages.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Nesta parte do tutorial, você aprendeu os conceitos básicos de construção 
 com a camada de dados Gatsby. Você aprendeu como _originar_ e _transformar_ dados 

@@ -2,11 +2,17 @@
 title: Conceitos de GraphQL
 ---
 
+<<<<<<< HEAD
 import LayerModel from "../../www/src/components/layer-model"
 
 Existem muitas opções para carregar dados nos componentes do React. Uma das mais
 populares e poderosas é uma tecnologia chamada
 [GraphQL](http://graphql.org/).
+=======
+There are many options for loading data into React components. One of the most
+popular and powerful of these is a technology called
+[GraphQL](https://graphql.org/).
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 O GraphQL foi inventado no Facebook para ajudar os engenheiros de produto a _puxar_ os dados necessários para os
 componentes React
@@ -353,6 +359,7 @@ export const query = graphql`
       totalCount
       edges {
         node {
+          id
           ...IndexPostFragment
         }
       }

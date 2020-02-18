@@ -14,7 +14,11 @@ title: Importando Conteúdo de Mídia
 
 ## Assets de vídeo
 
+<<<<<<< HEAD
 Como imagens, assets de vídeo apresentam muitas opções e requisitos para suporte a cross-browsers. Saiba mais sobre os vídeos incorporados na página de documentos Gatsby em [trabalhando com vídeo](/docs/working-with-video/).
+=======
+Like images, video assets present many options and requirements for cross-browser support. Learn about video embeds on the Gatsby docs page on [working with video](/docs/working-with-video/) section.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ## Canvas e WebGL
 

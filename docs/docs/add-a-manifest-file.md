@@ -16,7 +16,11 @@ Citando o [Google](https://developers.google.com/web/fundamentals/web-app-manife
 
 [Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configura o Gatsby para criar um arquivo `manifest.webmanifest` em cada compilação do site.
 
+<<<<<<< HEAD
 ### Usando `gatsby-plugin-manifest`
+=======
+## Using `gatsby-plugin-manifest`
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 1.  Instale o plugin:
 

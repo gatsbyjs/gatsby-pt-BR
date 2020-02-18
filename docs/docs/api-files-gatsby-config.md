@@ -100,7 +100,11 @@ module.exports = {
 }
 ```
 
+<<<<<<< HEAD
 ### _Plugins_ mistos
+=======
+#### Mixed plugins
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Você pode adicionar _plugins_ com ou sem opções no mesmo array. O arquivo de configuração do seu website poderia ficar assim:
 

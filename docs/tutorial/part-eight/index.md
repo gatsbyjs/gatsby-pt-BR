@@ -47,8 +47,12 @@ build de produção do seu site, gerando arquivos estáticos na pasta `public`
 gatsby serve
 ```
 
+<<<<<<< HEAD
 Uma vez iniciado, você pode ver o seu site em [`localhost:9000`](http://localhost:9000).
 
+=======
+Once this starts, you can view your site at `http://localhost:9000`.
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ### Executando uma auditoria do Lighthouse
 
@@ -371,6 +375,12 @@ A lista completa de todos os plugins oficiais mantidos pelo Gatsby.
 
 Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso
 
+<<<<<<< HEAD
+=======
+1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](https://gatsbyjs.github.io/gatsby-starter-default/)_
+2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](https://gatsbyjs.github.io/gatsby-starter-blog/)_
+3.  [Gatsby's Hello-World Starter](https://github.com/gatsbyjs/gatsby-starter-hello-world): Gatsby Starter with the bare essentials needed for a Gatsby site. _[working example](https://gatsby-starter-hello-world-demo.netlify.com/)_
+>>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Esse é só o começo. Continue indo!
 
