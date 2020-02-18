@@ -14,7 +14,7 @@ Os erros mais comuns ao compilar arquivos HTML estáticos são:
 
 1.  Confira se todo arquivo JS listado no diretório `pages` (e qualquer sub-diretório)
     está exportando um componente React ou uma string. O Gatsby trata qualquer arquivo
-    dentro do diretório `pages`como um componente de página, então deve uma exportação
+    dentro do diretório `pages`como um componente de página, necessitando que tenha uma exportação
     padrão que é um componente ou string.
 
 1.  Você misturou chamadas `import` e `require` no mesmo arquivo. Isso pode levar a
