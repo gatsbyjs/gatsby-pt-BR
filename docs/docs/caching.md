@@ -4,7 +4,7 @@ title: Cacheamento de sites estáticos
 
 Uma parte importante da criação de um site muito rápido é configurar o cache HTTP adequado. O cache HTTP permite que os navegadores armazenem recursos de um site em cache, para que quando o usuário retorne a ele, poucas partes tenham que ser baixadas novamente.
 
-Diferentes tipos de recursos são armazenados em cache de maneira diferente. Vamos analisar como os diferentes tipos de arquivos criados em `public/` devem ser armazenados em cache.
+Diferentes tipos de recursos são armazenados em cache de maneiras diferentes. Vamos analisar como os diferentes tipos de arquivos criados em `public/` devem ser armazenados em cache.
 
 ## HTML
 
@@ -30,7 +30,7 @@ Os arquivos JavaScript e CSS _gerados pelo webpack_ também devem ser armazenado
 
 O cabeçalho `cache-control` deve ser `cache-control: public, max-age=31536000, immutable`
 
-A única exceção é o arquivo `/sw.js`, que precisa ser revalidado a cada carregamento para verificar se uma nova versão do site está disponível. Este arquivo é gerado pelo `gatsby-plugin-offline` e por outros plugins de profissionais para veicular o conteúdo offline. Seu cabeçalho `cache-control` deve ser `cache-control: public, max-age = 0, must-revalidate`<sup>1</sup>
+A única exceção é o arquivo `/sw.js`, que precisa ser revalidado a cada carregamento para verificar se uma nova versão do site está disponível. Este arquivo é gerado pelo `gatsby-plugin-offline` e por outros plugins de _service worker_ para veicular o conteúdo offline. Seu cabeçalho `cache-control` deve ser `cache-control: public, max-age = 0, must-revalidate`<sup>1</sup>
 
 ## Configurando o armazenamento em cache em diferentes hospedagens
 
