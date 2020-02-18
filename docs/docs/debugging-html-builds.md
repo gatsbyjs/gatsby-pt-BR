@@ -9,7 +9,7 @@ Os erros mais comuns ao compilar arquivos HTML estáticos são:
     corrigir, encontre o código problemático e a) confira se a janela está definida antes de chamar o
     código, para que o código não   seja executado enquanto o Gatsby está compilando (veja exemplos
     de código abaixo) ou b) se o código está na função render de um componente React.js, mova o
-    código para dentro da [vida útil de um `componentDidMount`](https://pt-br.reactjs.org/docs/react-component.html#componentdidmount) ou de um [gancho `useEffect`](https://pt-br.reactjs.org/docs/hooks-reference.html#useeffect),    o que garante que o código não seja executado, a menos que esteja
+    código para dentro do [método `componentDidMount`](https://pt-br.reactjs.org/docs/react-component.html#componentdidmount) ou de um [_hook_ `useEffect`](https://pt-br.reactjs.org/docs/hooks-reference.html#useeffect), o que garante que o código não seja executado, a menos que esteja
     no navegador.
 
 1.  Confira se todo arquivo JS listado no diretório `pages` (e qualquer sub-diretório)
