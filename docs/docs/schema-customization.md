@@ -415,24 +415,24 @@ Para adicionar uma extensão a um campo, você pode usar uma diretiva no SDL ou 
 propriedade `extensions` ao usar Construtores de Tipo do Gatsby:
 
 ```js:title=gatsby-node.js
-exports.createSchemaCustomization = ({ action, schema }) => {
+exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
   const typeDefs = [
     "type MarkdownRemark implements Node { frontmatter: Frontmatter }",
     `type Frontmatter {
       publishedAt: Date @dateformat(formatString: "DD-MM-YYYY")
-    }`
+    }`,
     schema.buildObjectType({
-      name: 'AuthorJson',
+      name: "AuthorJson",
       fields: {
         joinedAt: {
-          type: 'Date',
+          type: "Date",
           extensions: {
-            dateformat: {}
-          }
-        }
-      }
-    })
+            dateformat: {},
+          },
+        },
+      },
+    }),
   ]
   createTypes(typeDefs)
 }
@@ -461,7 +461,7 @@ extensão pronta para uso, então resolver um campo para um valor padrão (ao in
 padrão para todos posts do blog:
 
 ```js:title=gatsby-node.js
-exports.createSchemaCustomization = ({ action, schema }) => {
+exports.createSchemaCustomization = ({ actions, schema }) => {
   const { createTypes } = actions
   const typeDefs = [
     "type MarkdownRemark implements Node { frontmatter: Frontmatter }",
