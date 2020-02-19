@@ -19,7 +19,7 @@ Você consegue criar uma pasta chamada `static` na raiz de seu projeto. Cada arq
 
 Você pode referenciar _assets_ da pasta `static` no seu código sem precisar de nada especial:
 
-```js
+```jsx
 render() {
   // Nota: essa é uma saída que deve ser usada com moderação!
   // Normalmente nós recomendamos usar `import` para pegar URLs de assets

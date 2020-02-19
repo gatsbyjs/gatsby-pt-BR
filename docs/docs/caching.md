@@ -14,7 +14,7 @@ O cabeçalho `cache-control` deve ser `cache-control: public, max-age=0, must-re
 
 ## Dados da página
 
-Assim como os arquivos HTML, os arquivos JSON no diretório `public/page-data/` nunca devem ser armazenados em cache pelo navegador. De fato, é possível que esses arquivos sejam atualizados mesmo sem a reimplantação do seu site. Por esse motivo, os navegadores devem ser instruídos a verificar todas as solicitações se os dados em seu aplicativo foram alterados.
+O novo arquivo `app-data.json`, que contém o hash de construção para a implementaão atual do site, também deve possuir o mesmo cabeçalho `cache-control` em `page-data.json`. Isso garante que o site no navegador esteja sempre sincronizado com a versão mais atual implementada. 
 
 O cabeçalho `cache-control` deve ser `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
 
@@ -45,4 +45,7 @@ Ao implantar com o Now, siga as instruções na [documentação do Now](https://
 
 ---
 
-<sup>1</sup> É importante que você use a combinação de `max-age=0` e `must-revalidate` em vez de usar `no-cache`. Isso permite que o CDN armazene cópias dos arquivos nos servidores mais próximos dos usuários, e só faça o download apenas de uma nova versão do servidor de origem caso os arquivos tenham sido alterados. O uso de 'no-cache`, por outro lado, diminui o desempenho porque força o CDN a baixar uma nova cópia do arquivo do servidor de origem em cada solicitação.
+<sup>1</sup> Você pode usar 'no-cache' em vez de 'max-age=0, must-revalidate'. Apesar deste nome, 'no-cache' permite que um cache atenda ao conteúdo cacheado, desde que primeiramente ele valide sua atualizaão. <sup>[2][3]</sup> Em ambos os casos, os clientes precisam fazer uma requisião ao servidor de origem em cada solicitação. No entanto, se você estiver utilizando corretamente a validação _ETags_ ou _Last-Modified_, poderá evitar o download de assets enquanto a cópia em cache ainda estiver válida (em casos em que, por exemplo, o arquivo não foi alterado no servidor de origem desde que foi armazenado em cache).
+
+[2]: https://tools.ietf.org/html/rfc7234#section-5.2.2.1
+[3]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#no-cache_and_no-store
