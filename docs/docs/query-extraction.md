@@ -1,28 +1,28 @@
 ---
-title: Query Extraction
+title: Extração de consulta
 ---
 
-> This documentation isn't up to date with the latest version of Gatsby.
+> Esta documentação não está atualizada conforme a última versão do Gatsby.
 >
-> Outdated areas are:
+> Áreas desatualizadas:
 >
-> - queries in dependencies (node_modules) and themes are now extracted as well
-> - add meta key for hook in JSON in diagram
+> - consultas em dependências (node_modules) e temas agora também são extraidos
+> - adicionar meta chave para _hook_ no diagrama JSON
 >
-> You can help by making a PR to [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
+> Você pode ajudar fazendo um PR para [atualizar esta documentação](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-### Extracting Queries from Files
+### Extraindo Queries de Arquivos
 
-Up until now, we have [sourced all nodes](/docs/node-creation/) into redux, [inferred a schema](/docs/schema-generation/) from them, and [created all pages](/docs/page-creation/). The next step is to extract and compile all graphql queries from our source files. The entrypoint to this phase is [query-watcher extractQueries()](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/query-watcher.js), which immediately compiles all graphql queries by calling into [query-compiler.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/query-compiler.js).
+Até o momento, nós [geramos os nós](/docs/node-creation/) no redux, [inferimos um esquema](/docs/schema-generation/) a partir deles e [criamos todas as páginas](/docs/page-creation/). O próximo passo é extrair e compilar todas as consultas graphql de nossos arquivos fonte. O ponto de entrada para esta fase é o [query-watcher extractQueries()](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/query-watcher.js), que compila todas as consultas graphql chamando o [query-compiler.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/query-compiler.js)
 
-#### Query Compilation
+#### Compilação de consulta
 
-The first thing it does is use [babylon-traverse](https://babeljs.io/docs/en/next/babel-traverse.html) to load all JavaScript files in the site that have graphql queries in them. This produces AST results that are passed to the [relay-compiler](https://facebook.github.io/relay/docs/en/compiler-architecture.html). This accomplishes a couple of things:
+A primeira coisa que ela faz é usar o [babylon-traverse](https://babeljs.io/docs/en/next/babel-traverse.html) para carregar todos os arquivos JavaScript do site que possuem consultas graphql. Produzindo AST que são passados para o [relay-compiler](https://facebook.github.io/relay/docs/en/compiler-architecture.html). Isso produz os seguintes resultados:
 
-1. It informs us of any malformed queries, which are promptly reported back to the user.
-1. It builds a tree of queries and fragments they depend on. And outputs a single optimized query string with the fragments.
+1. Informa sobre quaisquer consultas malformadas, que são prontamente relatadas ao usuário.
+1. Cria uma árvore de consulta e fragmentos dos quais eles dependem. E gera uma única string de consulta otimizada com os fragmentos.
 
-After this step, we will have a map of file paths (of site files with queries in them) to Query Objects, which contain the raw optimized query text, as well as other metadata such as the component path and page `jsonName`. The following diagram shows the flow involved during query compilation
+Após esta etapa, teremos um mapa dos caminhos de arquivos (arquivos do site com consultas) para os Objetos de Consulta, que contêm o texto otimizado bruto da consulta, além de outros metadados, como o caminho do componente e o `jsonName` da página. O diagrama a seguir mostra o fluxo envolvido durante a compilação de consultas
 
 ```dot
 digraph {
@@ -57,13 +57,13 @@ digraph {
 }
 ```
 
-#### Store Queries in Redux
+#### Armazenando Consultas no Redux
 
-We're now in the [handleQuery](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/query-watcher.js#L68) function.
+Agora estamos na função [handleQuery](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/query-watcher.js#L68).
 
-If the query is a `StaticQuery`, we call the `replaceStaticQuery` action to save it to to the `staticQueryComponents` namespace which is a mapping from a component's path to an object that contains the raw GraphQL Query amongst other things. More details in [Static Queries](/docs/static-vs-normal-queries/). We also remove component's `jsonName` from the `components` Redux namespace. See [Page -> Node Dependencies](/docs/page-node-dependencies/).
+Se a consulta for uma `StaticQuery`, chamamos a _action_ `replaceStaticQuery` para salvá-la no _namespace_ `staticQueryComponents`, que é um mapeamento do caminho do componente para um objeto que contém a Consulta GraphQL bruta, entre outras coisas. Mais detalhes em [Consultas Estáticas](/docs/static-vs-normal-queries/). Também removemos o `jsonName` do componente do _namespace_ `components` do redux. Consulte [Página -> Dependências dos nós](/docs/page-node-dependencies/).
 
-If the query is just a normal every day query (not StaticQuery), then we update its component's `query` in the redux `components` namespace via the [replaceComponentQuery](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/actions.js#L827) action.
+Se a consulta é apenas uma consulta normal (não uma StaticQuery), atualizamos a `query` do componente no _namespace_ `components` do redux através da _action_ [replaceComponentQuery](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/actions.js#L827).
 
 ```dot
 digraph {
@@ -89,9 +89,9 @@ digraph {
 }
 ```
 
-#### Queue for execution
+#### Fila para execução
 
-Now that we've saved our query, we're ready to queue it for execution. Query execution is mainly handled by [page-query-runner.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/page-query-runner.js), so we accomplish this by passing the component's path to `queueQueryForPathname` function.
+Agora que salvamos nossa consulta, estamos prontos para colocá-la em fila de execução. A execução da consulta é tratada principalmente pelo [page-query-runner.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/page-query-runner.js), portanto, precisamos passar o caminho do componente para a função `queueQueryForPathname`.
 
 ```dot
 digraph {
@@ -114,4 +114,4 @@ digraph {
 }
 ```
 
-Now let's learn about [Query Execution](/docs/query-execution/).
+Agora vamos aprender sobre [Execução de Consulta](/docs/query-execution/).
