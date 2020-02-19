@@ -33,13 +33,23 @@ O Gatsby têm muitos benefícios que dão aos desenvolvedores a liberdade de con
 
 > Quase todos os recursos que você poderia desejar para construir um website ou aplicação web de última geração estão disponíveis através do Gatsby. Se o recurso ainda não estiver embutido, há uma extensa biblioteca de plugins disponível. Há uma lista de recursos, sua disponibilidade e comparações com outras opções de construção disponíveis na [página de Recursos](/features/). A lista completa de plugins atualmente disponíveis pode ser encontrada na [página de Plugins](/plugins/).
 
+<<<<<<< HEAD
 ### Comunidade e documentação
+||||||| 89d5d79
+### Community and documentation
+=======
+### Data integration
+
+> Gatsby supports data integration from sources like CMSs, SaaS services, APIs, databases, and other data sources of all flavors. Gatsby can also pull unstructured data directly into pages using API calls specifically crafted for this purpose, this works great with smaller websites which can later be scaled up effortlessly if necessary. This makes Gatsby stand out from most other static site generators.
+
+### Community and documentation
+>>>>>>> c7c429d2c73d20cd89dfdb45aea26e2bfda72ccc
 
 > Seria difícil você encontrar uma comunidade open source mais ativa e acolhedora do que a do Gatsby. A documentação é completa, detalhada e não faz nenhuma suposição sobre o seu nível de experiência atual. O time do Gatsby é compremetido com a transparência e com trabalho aberto para que a comunidade possa acompanhar e participar do direcionamento e do desenvolvimento do Gatsby. Todos são estimulados a contribuir para o Gatsby e toda contribuição é valorizada.
 
-### Traz o foco para o front-end
+### Traz o foco para o frontend
 
-> Um benefício que surge com frequẽncia nas discussões sobre o Gatsby é como ele ajuda a trazer mais foco para o desenvolvimento front-end e uma divisão mais clara entre tarefas de front-end e de back-end. Ferramentas e configuração complicadas podem consumir muito do tempo de desenvolvimento e podem desviar os desenvolvedores front-end do que eles fazem de melhor. Como o Gatsby requer configuração e ferramenta mínimas, desenvolvedores front-end podem usar mais tempo construindo excelentes UI's e desenvolvedores back-end podem focar em adicionar funcionalidades e integrações que tornam seu produto melhor.
+> Um benefício que surge com frequẽncia nas discussões sobre o Gatsby é como ele ajuda a trazer mais foco para o desenvolvimento front-end e uma divisão mais clara entre tarefas de frontend e de backend. Ferramentas e configuração complicadas podem consumir muito do tempo de desenvolvimento e podem desviar os desenvolvedores frontend do que eles fazem de melhor. Como o Gatsby requer configuração e ferramenta mínimas, desenvolvedores frontend podem usar mais tempo construindo excelentes UI's e desenvolvedores backend podem focar em adicionar funcionalidades e integrações que tornam seu produto melhor.
 
 ## Preocupações comuns
 
