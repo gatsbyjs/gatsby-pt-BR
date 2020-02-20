@@ -2,13 +2,13 @@
 title: Como apresentar o Gatsby
 ---
 
-Se você ama o Gatsby.js tanto quanto nós, você pode querer apresentar sobre o seu valor aos seus colegas, gerentes ou qualquer pessoa. Dessa forma, reunimos alguns pontos de discussão que podem ajudar a você a defender o uso do Gatsby:
+Se você ama o Gatsby.js tanto quanto nós, você pode querer apresentar sobre o seu valor aos seus colegas, gerentes ou qualquer pessoa. Dessa forma, reunimos alguns pontos de discussão que podem ajudar você a defender o uso do Gatsby:
 
-Construir websites incrivelmente rápidos sem os problemas de hospedagem ao gerenciar uma ferramenta complexa, com infraestrutura cara ou com o medo que o seu website fique fora do ar. **Gatsby é uma ferramente de desenvolvimento de website para React, a maneira mais moderna de se criar websites confiáveis e super rápidos.**
+Construa websites incrivelmente rápidos sem os problemas de hospedagem ao gerenciar uma ferramenta complexa, com infraestrutura cara ou com o medo que o seu website fique fora do ar. **Gatsby é uma ferramenta de desenvolvimento de website para React, a maneira mais moderna de se criar websites confiáveis e super rápidos.**
 
 ## Um website construído com Gatsby é:
 
-- **Rápido:** Imagine em um foguete vs. uma van. Gatsby leva o rápido para um nível completamente novo com websites que são de última geração onde os seus clientes estão. Páginas carregam em milisegundos ao invés de em segundos. Gatbsy possibilita que times criem websites super rápidos, com conteúdo dinâmico sem a necessidade de se tornarem especialistas em performance.
+- **Rápido:** Imagine um foguete vs. uma van. Gatsby leva o "rápido" para um nível completamente novo com websites que são de última geração - exatamente o que seus clientes querem. Páginas carregam em milisegundos ao invés de em segundos. Gatbsy possibilita que times criem websites super rápidos, com conteúdo dinâmico sem a necessidade de se tornarem especialistas em performance.
 
 - **Simples:** Sem servidores. Sem banco de dados. Hospedagem tradicional é cara, consome tempo, complexa e ainda coloca seu site em risco de falha caso o seu conteúdo viralize. Evite as armadilhas de hospedagem com uma arquitetura _serverless_. Um website que nunca fica fora do ar porque é construído no limite, escalando instantaneamente para picos de tráfego.
 
