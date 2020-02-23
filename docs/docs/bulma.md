@@ -39,7 +39,7 @@ O último passo é importar o estilo e usá-lo.
 
 Vamos substituir o conteúdo padrão do arquivo index.js.
 
-```javascript:title=index.js
+```jsx:title=index.js
 import React from "react"
 import "./mystyles.scss"
 

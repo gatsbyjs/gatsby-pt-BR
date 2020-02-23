@@ -1,19 +1,18 @@
 ---
-title: Making Components Discoverable
+title: Tornando os Componentes Detectáveis
 issue: https://github.com/gatsbyjs/gatsby/issues/14042
 ---
 
-Code reuse is a useful advantage of the modularity provided by components. Discoverability is a key factor for sharing reusable components between developers and websites.
+A reutilização de código é uma vantagem útil da modularidade fornecida pelos componentes. A capacidade de descoberta é um fator essencial para o compartilhamento de componentes reutilizáveis entre desenvolvedores e sites.
 
-In larger organizations using Gatsby, it becomes more important for different teams to be able to browse components used by other teams, in order to avoid reinventing the wheel. Making components discoverable also helps in creating a component design system that helps keep your UX/UI consistent across websites and applications.
+Em grandes organizações que usam o Gatsby, isso acaba se tornando mais importante para que equipes diferentes possam procurar componentes usados por outras equipes, para evitar a reinvenção da roda. Tornar os componentes detectáveis também ajuda na criação de um sistema de design de componentes que ajuda a manter sua UX/UI consistente em sites e aplicativos.
 
-Shared components can be organized and made discoverable in a [shared component hub like bit.dev](https://bit.dev/components) to search, visualize, interact with and consume. Teams can share and discover components, use them in different projects, suggest updates and stay in sync.
+Os componentes compartilhados podem ser organizados e descobertos em um [hub de componentes compartilhados como o bit.dev](https://bit.dev/components) para pesquisar, visualizar, interagir e consumir. As equipes podem compartilhar e descobrir componentes, usá-los em diferentes projetos, sugerir atualizações e permanecer sincronizados.
 
-If using additional repositories and libraries to share components, tools like [StoryBook](/docs/visual-testing-with-storybook/) and [StyleGuidist](https://github.com/styleguidist/react-styleguidist) can help develop and visualize components in isolation, creating a visual documentation portal for shared components.
+Se estiver usando repositórios e bibliotecas adicionais para compartilhar componentes, ferramentas como [StoryBook](/docs/visual-testing-with-storybook/) e [StyleGuidist](https://github.com/styleguidist/react-styleguidist) podem ajudar a desenvolver e visualizar componentes isoladamente, criando um portal de documentação visual para componentes compartilhados.
 
 --
 
-This is a stub. Help our community expand it.
+Este é um esboço. Ajude nossa comunidade a expandi-lo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, use o [Guia de estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que seu pull request seja aceito.
