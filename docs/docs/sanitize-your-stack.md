@@ -1,15 +1,15 @@
 ---
-title: Sanitize Your Stack
+title: Limpe seu stack
 ---
 
-Websites come in a thousand different flavors. Timeframes, budgets, interactivity requirements, and content systems can vary wildly from one project to the next.
+_Sites_ vêm em milhares de sabores diferentes. Prazos, orçamentos, requisitos de interatividade e sistemas de conteúdo podem variar bastante de um projeto para o outro.
 
-This variety puts agency website teams between a rock and a hard place. They often have to maintain frontends built in multiple development systems, stretching their developers’ skill sets. Implementing the same dropdown in five different frameworks can be a huge headache. But what’s the alternative — turn down good client projects?
+Essa variedade coloca as equipes dos _sites_ das agências em uma posição difícil. Geralmente, eles precisam manter as interfaces integradas em vários sistemas de desenvolvimento, ampliando o conjunto de habilidades de seus desenvolvedores. Implementar o mesmo _dropdown_ em cinco _frameworks_ diferentes pode ser uma enorme dor de cabeça. Mas qual é a alternativa - recusar bons projetos de clientes?
 
-To add to the difficulty, when your UI development framework is coupled to your client’s CMS backend, it doesn’t just cause technical problems; it causes people problems. It makes your team’s staffing plans dependent on specific projects. It hamstrings your ability to respond to changing client requirements by shifting resources around.
+Para aumentar a dificuldade, quando o _framework_ de desenvolvimento da interface (UI) do usuário é acoplada ao _backend_ do CMS do cliente, isso não causa apenas problemas técnicos; causa problemas às pessoas. Isso torna os planos de sua equipe dependentes de projetos específicos. O que prejudica sua capacidade de responder às mudanças nos requisitos dos clientes ao alterar os recursos.
 
-Gatsby solves this -- because Gatsby pulls your data from wherever it lives and exposes it in a uniform GraphQL interface, agency teams can build all their UIs in React — no matter where their content is coming from.
+Gatsby resolve isso -- porque Gatsby puxa seus dados de onde quer que estejam e os expõe em uma interface GraphQL uniforme, os times das agências podem criar todas as suas interfaces de usuário no React - não importando a origem do conteúdo.
 
-Gatsby lets agencies stop reinventing the wheel and makes agency developers more productive. Teams can use the best tool for the job, without creating a hodgepodge of technologies to maintain.
+Gatsby deixa as agências pararem de reinventar a roda e torna os desenvolvedores das mesmas mais produtivos. Times podem usar a melhor ferramenta para o trabalho, sem criar uma mistura de tecnologias para manter.
 
-Sanitize your stack, with Gatsby.
+Limpe seu stack, com Gatsby.
