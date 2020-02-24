@@ -66,7 +66,6 @@ Existem vários modos de estruturar as consultas dependendo de como você prefer
 const path = require(`path`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
   const postTemplate = path.resolve(`./src/templates/post.js`)
 
   // Consultar dados do Ghost
@@ -97,9 +96,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   items.forEach(({ node }) => {
     node.url = `/${node.slug}/`
 
-    createPage({
+    actions.createPage({
       path: node.url,
-      component: path.resolve(postTemplate),
+      component: postTemplate,
       context: {
         slug: node.slug,
       },
@@ -116,7 +115,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria algo como:
 
-```javascript:title=templates/post.js
+```jsx:title=templates/post.js
 import React from "react"
 import { graphql } from "gatsby"
 
@@ -140,10 +139,10 @@ export default Post
 export const postQuery = graphql`
   query($slug: String!) {
     ghostPost(slug: { eq: $slug }) {
-      id
       title
       slug
       feature_image
+      html
     }
   }
 `
