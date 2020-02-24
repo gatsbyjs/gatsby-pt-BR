@@ -1,25 +1,37 @@
 ---
-title: Utilizando o GraphQL Playground
+title: Using the GraphQL Playground
 ---
 
-## Introdução
+## Intro
 
-Nessa página nós queremos lhe apresentar uma alternativa ao IDE atual para as suas consultas com GraphQL: [GraphQL Playground](https://github.com/prisma/graphql-playground).
+This page will introduce you to an alternative to the current IDE for your GraphQL queries: [GraphQL Playground](https://github.com/prisma/graphql-playground).
 
-## O que é GraphQL Playground?
+## What is Prisma's GraphQL Playground?
 
-O GraphQL Playground é uma maneira de você interagir com os dados que as suas fontes e plugins adicionam como esquemas. Você irá interagir muito com esses dados e o Playground o ajudará muito na exploração deles.
+GraphQL Playground is a way for you to interact with the data your sources and plugins add as schemas. You will be interacting with this data a lot and the Playground will help you greatly with exploring this data.
 
-## Acessando o playground
+## Accessing the playground
 
-Para acessar essa funcionalidade experimental utilizando o GraphQL Playground com Gatsby, adicione `GATSBY_GRAPHQL_IDE` no script `develop`  em seu `package.json`, desta forma:
+To access this experimental feature utilizing GraphQL Playground with Gatsby, add `GATSBY_GRAPHQL_IDE` to your `develop` script in your `package.json`, like this:
 
 ```json
 "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
 ```
 
-Use `npm run develop` ao invés de `gatsby develop` e acesse-o quando o servidor de desenvolvimento estiver rodando em `https://localhost:8000/___graphql`
+If you are on **Windows** then you should use:
 
-Para ainda conseguir usar o `gatsby develop` você precisaria do pacote dotenv no seu arquivo gatsby-config.js e adicionar um [arquivo de variáveis](/docs/environment-variables/), normalmente chamado de `.env.development`. E por fim, adicionar `GATSBY_GRAPHQL_IDE=playground` ao arquivo `.env.development`.
+```
+"develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
+```
 
-![Uma imagem que indica onde encontrar o esquema GraphQl](images/playground-schema.png)
+If you haven't installed **cross-env**, you can do it with:
+
+```
+npm install --save-dev cross-env
+```
+
+Use `npm run develop` instead of `gatsby develop` and access it when the development server is running on `http://localhost:8000/___graphql`
+
+To still be able to use `gatsby develop` you would require the dotenv package to your gatsby-config.js file and add an [environment variable](/docs/environment-variables/) file, typically called `.env.development`. Finally, add `GATSBY_GRAPHQL_IDE=playground` to the `.env.development` file.
+
+![An image pointing out where to find the GraphQl schema](./images/playground-schema.png)
