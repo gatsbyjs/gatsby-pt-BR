@@ -1,5 +1,5 @@
 ---
-title: Thinking in Gatsby
+title: Pensando em Gatsby
 ---
 
-Coming soon.
+Em breve.

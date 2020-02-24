@@ -1,91 +1,75 @@
 ---
-title: Community
+title: Comunidade
 ---
 
-As of September 2019, the Gatsby community is comprised of over 2,400 contributors and tens of thousands of developers building both personal and commercial websites on Gatsby.
+Desde Setembro de 2019, a comunidade Gatsby é composta por mais de 2.400 colaboradores e dezenas de milhares de desenvolvedores construindo sites pessoais e comerciais usando Gatsby.
 
-Open source doesn’t always have the best reputation for being friendly and welcoming, and that makes us sad. **Everyone belongs in open source, and Gatsby is dedicated to making you feel welcome.**
+_Open source_ nem sempre tem a melhor reputação de ser amigável e acolhedor, e isso nos deixa tristes. **Todos que pertencem ao _open source_, e todos do Gatsby estão dedicados a fazer você se sentir acolhido.**
 
-We will never judge, condescend, or exclude anyone. Instead, we will go above and beyond to support the community, through helping you contribute to the Gatsby ecosystem, offering [free swag for contributors](https://gatsby.dev/swag), giving control to the community by [auto-inviting all contributors to the Gatsby GitHub org](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), an open and inclusive [code of conduct](/contributing/code-of-conduct/), and other means that empower and embrace the incredible community that makes Gatsby possible.
+Nós nunca julgaremos, seremos condescendentes ou excluiremos alguém. Ao invés disso, nós iremos além para dar suporte à comunidade, ajudando você a contribuir com o ecossistema do Gatsby, oferecendo [brindes para os colaboradores](https://gatsby.dev/swag), dando controle para a comunidade [ao convidar automaticamente todos os colaboradores da organização Gatsby no GitHub](https://github.com/gatsbyjs/gatsby/pull/7699#issuecomment-416665803), um [código de conduta](/contributing/code-of-conduct/) aberto e inclusivo, e outros meios que capacitam e abraçam a incrível comunidade que faz o Gatsby ser possível.
 
-One of our community's values is that ["you belong here"](/blog/2018-09-07-gatsby-values/#you-belong-here).
+Um dos valores da nossa comunidade é que ["seu lugar é aqui"](/blog/2018-09-07-gatsby-values/#you-belong-here).
 
-## Gatsby Contributor Covenant Code of Conduct
+## Código de Conduta do Colaborador Gatsby
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to making participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, gender identity and expression, level of
-experience, nationality, personal appearance, race, religion, or sexual identity
-and orientation.
+No intuito de promover um ambiente aberto e acolhedor, nós, como contribuidores e mantenedores, nos comprometemos em tornar a participação em nossos projetos e em nossa comunidade livre de assédio para todos, independentemente da idade, corpo, deficiência, etnia, identidade ou expressão de gênero, nível de experiência, nacionalidade, aparência, raça, religião ou identidade e orientação sexual.
 
-[Read the full code of conduct](/contributing/code-of-conduct/)
+[Leia todo o código de conduta](/contributing/code-of-conduct/)
 
-## Ways to Contribute
+## Formas de Contribuir
 
-The Gatsby community welcomes contributions. Please refer to the guides below on how to make sure your contributions get accepted:
+A comunidade Gatsby está aberta a contribuições. Por favor, consulte os guias abaixo sobre como garantir que suas contribuições sejam aceitas:
 
-- [How to Contribute](/contributing/how-to-contribute/)
-- [How to File an Issue](/contributing/how-to-file-an-issue/)
-- [Make feature requests with an RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
-- [Gatsby Style Guide](/contributing/gatsby-style-guide/)
+- [Como contribuir](/contributing/how-to-contribute/)
+- [Como reportar um problema](/contributing/how-to-file-an-issue/)
+- [Criar requisições de novas funcionalidades com um RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
+- [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/)
 
-## Gatsby news
+## Notícias do Gatsby
 
 ### Newsletter
 
-Sign up for the Gatsby newsletter to keep up with the latest from the Gatsby community! Hear about new features, tips & tricks, and what people are building.
+Inscreva-se na newsletter do Gatsby para acompanhar as novidades da comunidade Gatsby! Ouça sobre novas funções, dicas e truques, e o que as pessoas estão construindo.
 
-[Sign up here](/newsletter/)
+[Inscreva-se aqui](/newsletter/)
 
 ### Twitter
 
-For the latest news about Gatsby,
-[follow **@gatsbyjs** on Twitter](https://twitter.com/gatsbyjs).
+Para últimas notícias sobre Gatsby,
+[siga **@gatsbyjs** no Twitter](https://twitter.com/gatsbyjs).
 
-### Community Maintainers Meeting
+### Encontro da Comunidade de Mantenedores
 
-The Gatsby Core team (official Gatsby employees who are working on Gatsby open-source) holds a weekly meeting where we encourage community members to share their projects, struggles, and successes directly with the Gatsby Core team. Additionally the Core team shares pertinent info and plans that are applicable to the community!
+O Gatsby Core Team (funcionários oficiais que estão trabalhando no _open-source_ do Gatsby) realiza uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dificuldades e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações e planos pertinentes à comunidade!
 
-This event is held on a recurring basis, every Wednesday at 8:30 AM Pacific Standard Time (PST).
+Esse evento é realizado de forma recorrente, toda Quarta-Feira às 08:30 (Horário padrão do Pacífico).
 
-[Add the recurring calendar invite here](https://gatsby.dev/core-maintainers)
+[Adicione aqui o convite recorrente à agenda](https://gatsby.dev/core-maintainers)
 
-## Where to get support
+## Onde Conseguir Ajuda
 
 ### Stack Overflow
 
-Many members of the community use Stack Overflow to ask questions. Read through
-the [existing questions](http://stackoverflow.com/questions/tagged/gatsby)
-tagged with `gatsby` or
-[ask your own](http://stackoverflow.com/questions/ask?tags=gatsby)!
+Muitos membros da comunidade usam o Stack Overflow para tirar dúvidas. Leia as [dúvidas existentes](http://stackoverflow.com/questions/tagged/gatsby) marcadas com `gatsby` ou [faça a sua própria pergunta](http://stackoverflow.com/questions/ask?tags=gatsby)!
 
 ### Discord
 
-If you need an answer right away, check out the
-[Gatsby Discord](https://gatsby.dev/discord). Community & team members are happy to help you out or point you to
-useful resources.
+Se você precisar de uma resposta imediatamente, confira o [Discord do Gatsby](https://gatsby.dev/discord). Membros da comunidade e da equipe terão prazer em ajudá-lo ou indicar recursos úteis à você.
 
 ### Hashnode
 
-Many members of the community also use Hashnode to ask questions and share their tips. Read through
-the [existing questions and posts](https://hashnode.com/n/gatsby)
-tagged with `gatsby` or
-[ask your own question](https://hashnode.com/create/question) or [share your story](https://hashnode.com/create/story) and add the `gatsby` tag.
+Muitos membros da comunidade também usam Hashnode para fazer perguntas e compartilhar suas dicas. Leia as [perguntas e postagens existentes](https://hashnode.com/n/gatsby) marcadas com `gatsby`, [faça sua própria pergunta](https://hashnode.com/create/question) ou [compartilhe sua história](https://hashnode.com/create/story) e adicione a _tag_ `gatsby`.
 
 ### DEV Community
 
-DEV Community is another informative platform to ask questions and share tips as well. Read through
-the [existing questions and posts](https://dev.to/t/gatsby)
-tagged with `gatsby` or
-[ask for help](https://dev.to/new/help). You could also [write your post](https://dev.to/new/gatsby) with the `gatsby` tag.
+A DEV Community também é outra plataforma para fazer perguntas e compartilhar dicas. Leia as [perguntas e postagens existentes](https://dev.to/t/gatsby) marcadas como ´gatsby´ ou [peça ajuda](https://dev.to/new/help). Você também pode [escrever sua postagem](https://dev.to/new/gatsby) com a tag ´gatsby´.
 
-## Learn More About Gatsby:
+## Leia Mais Sobre Gatsby:
 
-- [Why Contribute to Gatsby?](/contributing/why-contribute-to-gatsby/)
-- [Gatsby Community Events](/contributing/events/)
-- [Where to Participate in the Community?](/contributing/where-to-participate/)
-- [Organize a Gatsby Event](/contributing/organize-a-gatsby-event/)
-- [How to Run a Gatsby Workshop](/contributing/how-to-run-a-gatsby-workshop/)
-- [How to Pitch Gatsby](/contributing/how-to-pitch-gatsby/)
-- [Blog posts on the Gatsby community](/blog/tags/community/)
+- [Por Que Contribuir para o Gatsby?](/contributing/why-contribute-to-gatsby/)
+- [Eventos da Comunidade Gatsby](/contributing/events/)
+- [Onde participar da Comunidade?](/contributing/where-to-participate/)
+- [Organize um Evento Gatsby](/contributing/organize-a-gatsby-event/)
+- [Como Organizar um Workshop Gatsby](/contributing/how-to-run-a-gatsby-workshop/)
+- [Como Apresentar o Gatsby](/contributing/how-to-pitch-gatsby/)
+- [Postagens no Blog da Comunidade Gatsby](/blog/tags/community/)

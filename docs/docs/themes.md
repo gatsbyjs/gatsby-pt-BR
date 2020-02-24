@@ -1,16 +1,22 @@
 ---
-title: Themes
+title: Temas
 overview: true
+disableTableOfContents: true
 ---
 
-Using a Gatsby theme, all of your default configuration (shared functionality, data sourcing, design) is abstracted out of your site, and into an installable package.
+Usando um tema Gatsby, toda a sua configuração padrão (funcionalidades compartilhadas, fonte de dados, design) é abstraída do seu site e jogada para dentro de um pacote instalável.
 
-This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
+Isto significa que a configuração e funcionalidade não são diretamente gravadas dentro de seu projeto, mas sim versionadas, gerenciadas centralmente, e instaladas como uma dependência. Você pode perfeitamente atualizar um tema, compor temas juntos e até trocar um tema compatível por outro.
 
 <GuideList slug={props.slug} />
 
-### Other resources
+## Procurando temas
 
-- [Gatsby blog posts on themes](/blog/tags/themes)
-- [Jason Lengstorf and Brent Jackson livestream building a theme](https://www.youtube.com/watch?v=6Z4p-qjnKCQ)
-- [Jason Lengstorf and Emma Wedekind livestream building a theme](https://www.youtube.com/watch?v=W2uTfay3doo)
+- [Temas na biblioteca de plugins](/plugins/?=gatsby-theme)
+- [Theme Jam Showcase](https://themejam.gatsbyjs.org/showcase)
+
+## Outros recursos
+
+- [Tema Gatsby tutoriais](/tutorial/theme-tutorials/)
+- [Postagens de blog sobre temas Gatsby](/blog/tags/themes)
+- [Plugins, Temas, e Starters](/docs/plugins-themes-and-starters/)

@@ -1,17 +1,17 @@
 ---
-title: Why Contribute to Gatsby.js?
+title: Por que contribuir com Gatsby.js?
 ---
 
-There are many reasons to contribute to Gatsby.js and open source software in general. Here are some of the benefits of participating:
+Existem muitas razões para contribuir com o Gatsby.js e softwares open source em geral. Aqui estão alguns benefícios em participar:
 
-- **Growing your community.** Working with Gatsby.js in open source can connect you with people working on similar things. You can get help or give help, and you might even make an IRL acquaintance! It has happened.
+- **Crescer sua comunidade.** Trabalhar no open source do Gatsby.js pode conectar você com pessoas trabalhando em coisas similares. Você pode ajudar ou ser ajudado, talvez você até conheça alguém pessoalmente! Isso já aconteceu.
 
-- **Improving your skills.** When you work on a Gatsby issue or pull request, inevitably you'll learn more about how something works in the project; either by asking questions and gathering info, or by digging deeper into the code yourself. Gatsby.js also offers free [pair programming sessions](/contributing/pair-programming/) to the community, if there's something you'd like to work on together. There's definitely a skill-building benefit to contributing in OSS!
+- **Melhorar suas habilidades.** Quando você trabalha em alguma issue ou _pull request_ do Gatsby, inevitavelmente você aprenderá mais sobre como algo funciona no projeto, tanto fazendo perguntas e adquirindo informações, quanto explorando o código mais a fundo. Se existir algo em que você gostaria de trabalhar junto com alguém, o Gatsby.js também oferece [sessões de programação em par](/contributing/pair-programming/) de graça para a comunidade. Definitivamente existe um benefício no aumento das suas habilidades ao contribuir em projetos _open source_!
 
-- **Getting free swag!** By participating in the repo on GitHub, you can become eligible for free swag that the Gatsby team offers as a way to say thank you. With 5 contributions, you can advance to a second level with even more swag options! Learn more about this [sweet swag deal](/contributing/contributor-swag/).
+- **Ganhe brindes!** Participando do repositório no GitHub você pode se tornar elegível para ganhar brindes que o time do Gatsby oferece como agradecimento. Com 5 contribuições você pode avançar para o segundo nível com ainda mais opções de brindes! Saiba mais sobre o [sistema de brindes](/contributing/contributor-swag/).
 
-- **Becoming an expert.** You might start off totally new to a project like Gatsby or React.js, and by building things and [opening issues](/contributing/how-to-file-an-issue/) when you encounter a new challenge or a bug, you'll learn a ton over time. Staying current with your favorite framework through its open source repo can also give you a leading edge on forthcoming changes. Eventually, you could find your knowledge of said project has grown so much that you've become an expert. Celebrate by updating your resumé!
+- **Tornar-se um especialista.** Você talvez comece sem nenhum conhecimento em projetos como Gatsby.js ou React.js, e ao construir algo e [abrir issues](/contributing/how-to-file-an-issue/) quando encontrar algum desafio ou bug, você irá aprender muito com o tempo. Manter-se atualizado com o seu framework favorito através do repositório _open source_ também pode te trazer uma vantagem nas próximas atualizações do framework. Eventualmente, você pode descobrir que o seu conhecimento cresceu tanto no projeto, que você se tornou um especialista. Celebre atualizando seu currículo!
 
-- **Speaking at conferences.** With those skills you've earned yourself working in open source, why not share that knowledge with the world? Web platform conferences the world over are continually looking for speakers and fresh takes on popular topics. Did you build something with Gatsby.js that you're excited about? The [industry would love to hear from you](http://weareallaweso.me/)!
+- **Palestrar em conferências.** Por que não compartilhar as habilidades que você adiquiriu trabalhando com projetos open source? No mundo inteiro, Conferências de plataformas Web estão continuamente buscando por palestrantes e novos pontos de vistas em tópicos populares. Você construiu algo com Gatsby.js que você se orgulha? A [indústria adoraria escutar sobre](http://weareallaweso.me/)!
 
-There are undoubtedly more benefits than those listed here. Has Gatsby.js and open source software made your life better somehow? We'd love to hear about it. Reach out to us [on Twitter](https://twitter.com/gatsbyjs)!
+Sem dúvidas existem mais benefícios que os listados aqui. O Gatsby.js e projetos open source fizeram a sua vida melhor de alguma forma? Nós adoraríamos saber. Entre em contato com a gente [no Twitter](https://twitter.com/gatsbyjs)!

@@ -1,14 +1,14 @@
 ---
-title: Styling
+title: Estilizando
 overview: true
 ---
 
-There are many ways to style your website. They can roughly be grouped into three styling approaches:
+Há várias formas de estilizar o seu _website_. Elas podem ser agrupadas em três abordagens de estilização:
 
-- [**Global CSS Files**](/docs/global-css/): the traditional way to style a website. CSS rules are declared globally and styles are applied depending on specificity and inheritance.
-- [**Modular Stylesheets**](/docs/css-modules): CSS rules are written traditionally but consumed with JavaScript and scoped locally to avoid unintended side-effects elsewhere. Works out-of-the-box with Gatsby.
-- [**CSS-in-JS**](/docs/css-in-js/): locally-scoped CSS written and consumed in JavaScript, enabling the easier use of dynamic styling and other features. Requires the use of third-party libraries.
+- [**Arquivos CSS Globais**](/docs/global-css/): forma tradicional de estilizar um _website_. Regras CSS são declaradas globalmente e os estilos são aplicados dependendo da especificidade e herança entre os elementos.
+- [**Folhas de Estilo Modulares**](/docs/css-modules): regras CSS são escritas tradicionalmente (através de arquivos CSS), mas são consumidas por JavaScript e possuem escopo definido localmente para evitar efeitos colaterais indesejados em outros lugares. Funciona imediatamente com Gatsby.
+- [**CSS-in-JS**](/docs/css-in-js/): CSS consumido e escrito com escopo local em JavaScript, possibilitando um uso mais fácil de estilização dinâmica e outras funcionalidades. Requer o uso de bibliotecas de terceiros.
 
-Gatsby doesn't have an opinion about which styling approach you choose. Almost every possible option is supported through official and community plugins. _(If there isn’t a plugin yet for your favorite option, consider [contributing](/docs/creating-plugins) one!)_
+O Gatsby não possui uma opinião sobre qual abordagem de estilização você deve escolher. Quase todas as opções possíveis são suportadas pelos _plugins_ da comunidade e os oficiais. _(Se ainda não há um plugin para a sua opção favorita, considere [contribuir](/docs/creating-plugins) com um!)_
 
 <GuideList slug={props.slug} />
