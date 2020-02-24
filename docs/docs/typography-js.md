@@ -2,17 +2,17 @@
 title: Typography.js
 ---
 
-## Using Typography.js in Gatsby
+## Usando Typography.js no Gatsby
 
-Typography.js is a JavaScript library that allows you to explore the typographic design of your website and define beautiful custom and pre-existing typographic themes. It enables you to change the font on your website with ease. Typography.js currently maintains over 30 themes for you to use. You can also create your own custom font themes if no available themes fit your requirements. To use Typography in your project, you will be installing a [Gatsby plugin](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/) and specifying a configuration object for Typography.
+Typography.js é uma biblioteca JavaScript que permite explorar o design tipográfico do seu site e definir belos temas tipográficos personalizados e pré-existentes. Ele permite que você altere a fonte do seu site com facilidade. Atualmente, o Typography.js mantém mais de 30 temas para você usar. Você também pode criar seus próprios temas de fonte personalizados, se nenhum tema disponível atender aos seus requisitos. Para usar Typography em seu projeto, você instalará um [plugin Gatsby](https://www.gatsbyjs.org/packages/gatsby-plugin-typography/) e especificará um objeto de configuração para Typography.
 
-## Installing the Typography plugin
+## Instalando o plugin Typography
 
-Gatsby has the plugin `gatsby-plugin-typography` to integrate Typography.js into your project.
+O Gatsby possui o plugin `gatsby-plugin-typography` para integrar o Typography.js ao seu projeto.
 
-You can install the plugin and its peer dependencies into your project by running the command `npm install gatsby-plugin-typography react-typography typography --save`
+Você pode instalar o plugin e suas dependências no seu projeto executando o comando `npm install gatsby-plugin-typography react-typography typography --save`
 
-After the installation of the plugin is complete, navigate to your `gatsby-config.js` file located in the root of your project's directory and add the plugin to the configuration:
+Após a instalação do plugin, navegue até o arquivo `gatsby-config.js` localizado na raiz do diretório do seu projeto e adicione o plugin à configuração:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -29,16 +29,17 @@ module.exports = {
 }
 ```
 
-`gatsby-plugin-typography` takes two options for you to specify:
+`gatsby-plugin-typography` tem duas opções para que você especifique:
 
-- **pathToConfigModule** (string): The path to the file where you export your Typography configuration.
-- **omitGoogleFont** (boolean, `default: false`): By default, Typography includes a helper that makes a request to Google Font's CDN for fonts you need. You may want to use your own fonts, either by injecting fonts or using a CDN of your choosing. By setting `omitGoogleFont: true`, `gatsby-plugin-typography` will skip adding the font helper. Instead, you will have to include the appropriate fonts yourself - see [Adding a Local Font](https://www.gatsbyjs.org/docs/recipes/#adding-a-local-font)
+- **pathToConfigModule** (string): O caminho para o arquivo para o qual você exporta sua configuração do Typography.
+- **omitGoogleFont** (boolean, `default: false`): Por padrão, o Typography inclui um auxiliar que solicita à CDN do Google Font as fontes necessárias. Você pode usar suas próprias fontes, injetando fontes ou usando um CDN de sua escolha. Ao definir `omitGoogleFont: true`, o `gatsby-plugin-typography` ignorará a adição do auxiliar de fonte. Em vez disso, você deverá incluir as fontes apropriadas - veja [Adicionando uma fonte local](https://www.gatsbyjs.org/docs/recipes/#adding-a-local-font)
 
-## Creating the Typography configuration
+## Criando a configuração do Typography
 
-Now that you have added the plugin, create the directory `src/utils/` if it does not already exist in your project and add a new file named `typography.js`. You will use this file to specify the Typography configuration and set this file to be the path for the `pathToConfigModule` option.
+Agora que você adicionou o plugin, crie o diretório `src/utils/` se ele ainda não existir no seu projeto e adicione um novo arquivo chamado `typography.js`. Você usará esse arquivo para especificar a configuração do Typography e definir esse arquivo como o caminho para a opção `pathToConfigModule`.
 
-Inside the `typography.js` file you created, you define your website's typography configuration. A basic typography.js configuration looks like this:
+
+Dentro do arquivo `typography.js` que você criou, você define a configuração de tipografia do seu site. Uma configuração básica do typography.js é semelhante a esta:
 
 ```js:title=src/utils/typography.js
 import Typography from "typography"
@@ -60,17 +61,17 @@ const typography = new Typography({
 export default typography
 ```
 
-If you're installing Typography.js into an existing Gatsby project you've started, you will need to delete all conflicting CSS font styles from your codebase in favor of your new Typography.js settings.
+Se você estiver instalando o Typography.js em um projeto existente do Gatsby que iniciou, precisará excluir todos os estilos de fonte CSS conflitantes da sua base de código em favor das novas configurações do Typography.js.
 
-Font sizes of all elements in Typography.js grow and shrink in relation to the `baseFontSize` defined above. Try playing around with this value and see the visual difference it can make to your website.
+Os tamanhos das fontes de todos os elementos no Typography.js aumentam e diminuem em relação ao `baseFontSize` definido acima. Tente brincar com esse valor e veja a diferença visual que ele pode fazer no seu site.
 
-To find or create a new typography theme, you can visit [Typography.js](https://kyleamathews.github.io/typography.js/) to see a list of options.
+Para encontrar ou criar um novo tema de tipografia, você pode visitar [Typography.js](https://kyleamathews.github.io/typography.js/) para ver uma lista de opções.
 
-## Installing Typography themes
+## Instalando temas Typography
 
-Typography.js has built in themes that can save time when defining your website's font styling. The Funston theme, maintained by Typography, is one of the built in themes. To install the Funston theme from npm, run the command: `npm install typography-theme-funston --save`
+O Typography.js possui temas incorporados que podem economizar tempo ao definir o estilo da fonte do seu site. O tema Funston, mantido pelo Typography, é um dos temas incorporados. Para instalar o tema Funston a partir do npm, execute o comando: `npm install typography-theme-funston --save`
 
-To use the theme, edit the `typography.js` file that you created before and inform Typography of the new configuration:
+Para usar o tema, edite o arquivo `typography.js` que você criou antes e informe a Typography sobre a nova configuração:
 
 ```diff:title=src/utils/typography.js
 import Typography from "typography";
@@ -92,8 +93,8 @@ const typography = new Typography(
 export default typography;
 ```
 
-After completing the above steps, you can start the development server using the command `gatsby develop` and navigate to the local website `http://localhost:8000`. If all went well you should see the text on your website using the Funston typographic theme.
+Após concluir os passos acima, você pode iniciar o servidor de desenvolvimento usando o comando `gatsby develop` e navegar para o site local `http://localhost:8000`. Se tudo der certo, você deverá ver o texto em seu site usando o tema tipográfico da Funston.
 
-**Note**: If your fonts remains unchanged, remove all `font-family` calls in your CSS and check again.
+**Nota**: Se suas fontes permanecerem inalteradas, remova todas as chamadas `font-family` no seu CSS e verifique novamente.
 
-To find more themes to install, check out the official [Typography.js](https://kyleamathews.github.io/typography.js/) website.
+Para encontrar mais temas para instalar, consulte o site oficial do [Typography.js](https://kyleamathews.github.io/typography.js/).

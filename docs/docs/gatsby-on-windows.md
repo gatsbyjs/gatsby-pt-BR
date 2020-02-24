@@ -1,44 +1,39 @@
 ---
-title: Gatsby on Windows
+title: Gatsby no Windows
 ---
 
-## Setting up your environment for building native Node.js modules.
+## Configurando seu ambiente para criar módulos nativos do Node.js.
 
-Many Gatsby plugins and themes require building native Node.js modules, e.g.
-[Sharp (a common Gatsby dependency used for image processing)](/packages/gatsby-plugin-sharp/).
-To do so, you need a functional build environment (Python and Visual C++ Build
-Tools).
+Muitos plugins e temas do Gatsby exigem a criação de módulos nativos do Node.js, e.g.
+[Sharp (uma dependência comum de Gatsby usada para processamento de imagem)](/packages/gatsby-plugin-sharp/).
+Para fazer isso, você precisa de um ambiente de construção funcional (Python e Visual C ++ Build Tools).
 
-The easy way to setup your build environment on Windows is to install the
+A maneira mais fácil de configurar seu ambiente de compilação no Windows é instalar o pacote
 [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
-package by running `npm install windows-build-tools -g` on an admin PowerShell
-console. Upon installing this package, it downloads and installs Visual C++
-Build Tools 2015, provided free of charge by Microsoft. These tools are required
-to compile popular native modules. It will also install Python 2.7, configuring
-your machine and npm appropriately.
+rodando `npm install windows-build-tools -g` no console PowerShell como administrador.
 
-If your `windows-build-tools` installation stalls after Visual Studio Build Tools finishes, [this remedy](https://github.com/felixrieseberg/windows-build-tools/issues/47#issuecomment-296881488) might help.
 
-### If `npm install` still fails...
+Ao instalar este pacote, ele baixa e instala o Visual C++ Build Tools 2015, fornecido gratuitamente pela Microsoft. Essas ferramentas são necessárias para compilar módulos nativos populares. Ele também instalará o Python 2.7, configurando sua máquina e npm adequadamente.
 
-Sometimes the `windows-build-tools` won't properly install the required
-libraries. This is true if you already have a regular .NET development
-environment setup. This has been reported on Windows 10 x64 (and possibly other
-architectures or Windows versions).
+Se sua instalação do `windows-build-tools` trava após a conclusão do Visual Studio Build Tools, [esta solução](https://github.com/felixrieseberg/windows-build-tools/issues/47#issuecomment-296881488) pode ajudar.
 
-This might be your problem if, after running `npm install` on a Gatsby site, you
-see compilation errors such as `node-gyp` or `sharp` or `binding.gyp not found`.
+### Se `npm install` continua falhando...
 
-If you suspect this is your problem, download the
-[Visual Studio Community 2015 Package](https://www.visualstudio.com/vs/older-downloads/) (also available from this [direct download link](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409))
-and install only the part of the package that interests us : `Programming languages > Visual C++ > Common tools for Visual Studio 2015`. Be sure to
-download the 2015 version of VS Community. For Visual Studio 2017, see instructions below. You can uncheck everything else. You don't need to install the full
-VS2015 Express on your system and this won't mess up your existing VS201x
-installs.
+Às vezes, o `windows-build-tools` não instala corretamente as
+bibliotecas. Isso é verdade se você já possui um ambiente de desenvolvimento .NET
+apropriado. Isso foi relatado no Windows 10 x64 (e possivelmente em outras
+arquiteturas ou versões do Windows).
 
-![Common tools for Visual Studio 2015 inside the VS 2015 Community Package](https://i.stack.imgur.com/J1aet.png)
+Esse pode ser o seu problema se, depois de executar o `npm install` em um site do Gatsby, você tenha visto erros de compilação como `node-gyp` ou` sharp` ou `binding.gyp not found`.
 
-Then run the commands on Gatsby:
+Se você suspeitar que este é seu problema, baixe o
+[Pacote da Comunidade do Visual Studio 2015](https://www.visualstudio.com/vs/older-downloads/) (também disponível neste [link de download direto](https://go.microsoft.com/fwlink/?LinkId=532606&clcid=0x409))
+e instale apenas a parte do pacote que nos interessa: `Linguagens de programação> Visual C ++ > Ferramentas comuns para o Visual Studio 2015`. Tenha certeza de
+fazer o download da versão 2015 da Comunidade VS. Para o Visual Studio 2017, consulte as instruções abaixo. Você pode desmarcar todo o resto. Você não precisa instalar o pacote completo VS2015 Express no seu sistema e isso não atrapalhará a instalação existente do VS201x.
+
+![Ferramentas comuns para o Visual Studio 2015 dentro do pacote da comunidade VS 2015](https://i.stack.imgur.com/J1aet.png)
+
+Em seguida, execute os comandos no Gatsby:
 
 ```powershell
 npm uninstall node-gyp -g
@@ -48,19 +43,19 @@ npm cache clean -f
 npm install
 ```
 
-For Visual Studio 2017, download [Visual Studio Community 2017](https://visualstudio.microsoft.com/vs/community/) and install the Desktop development with C++ workflow. You can uncheck everything else.
+Para o Visual Studio 2017, baixe [Visual Studio Community 2017](https://visualstudio.microsoft.com/vs/community/) e instale o _Desktop Development with C++ workflow_. Você pode desmarcar todo o resto.
 
-![Desktop development with C++ workflow](https://i.imgur.com/dPknorD.png)
+![Desktop Development with C++ workflow.](https://i.imgur.com/dPknorD.png)
 
-In case you've already installed Visual Studio 2017, run the Visual Studio Installer.
+Caso você já tenha instalado o Visual Studio 2017, execute o Instalador do Visual Studio.
 
-![Visual Studio Installer](https://i.imgur.com/H5PVEbu.png)
+![Instalador do Visual Studio](https://i.imgur.com/H5PVEbu.png)
 
-In the products list, select the "More" dropdown beside Visual Studio 2017 and select Modify option. On the next screen select the Desktop Development with C++ workflow.
+Na lista de produtos, selecione o menu suspenso "Mais" ao lado do Visual Studio 2017 e selecione a opção Modificar. Na próxima tela, selecione o _Desktop Development with C++ workflow_.
 
-![Visual Studio Installer](https://i.imgur.com/7SFsS99.png)
+![Instalador do Visual Studio](https://i.imgur.com/7SFsS99.png)
 
-Then run the commands on Gatsby:
+Em seguida, execute os comandos no Gatsby:
 
 ```powershell
 npm uninstall node-gyp -g
@@ -70,23 +65,23 @@ npm cache clean -f
 npm install
 ```
 
-You should then be all set.
+Você deve estar com tudo pronto.
 
-If that still doesn't work, refer to the
-[`node-gyp` npm package homepage](https://www.npmjs.com/package/node-gyp) for
-further instructions and contact the `node-gyp`team on
+Se isso ainda não funcionar, consulte a
+[página inicial do pacote`node-gyp` npm](https://www.npmjs.com/package/node-gyp) para
+instruções adicionais e entre em contato com a equipe `node-gyp` em
 [GitHub](https://github.com/nodejs/node-gyp/issues).
 
-## gatsby-plugin-sharp requires Node x64
+## gatsby-plugin-sharp precisa do Node x64
 
-Some plugins which depend on native NPM dependencies require the Node x64 build of Node.js. If you're struggling to install gatsby-plugin-sharp, try installing Node x64 and removing `node_modules` and running `npm install`.
+Alguns plugins que dependem de dependências nativas do NPM requerem a compilação Node x64 do Node.js. Se você estiver com dificuldades para instalar o gatsby-plugin-sharp, tente instalar o Node x64 e remover o `node_modules` e executar o` npm install`.
 
-## gatsby-plugin-sharp requires libvips
+## gatsby-plugin-sharp requer libvips
 
-Sharp uses a C library, libvips. If you are having issues while installing Sharp, try removing `C:\Users\[user]\AppData\Roaming\npm-cache\_libvips`.
+Sharp usa uma biblioteca C, libvips. Se você estiver tendo problemas ao instalar o Sharp, tente remover `C:\Users\[usuário]\AppData\Roaming\npm-cache\_libvips`.
 
-## Windows Subsystem for Linux
+## Subsistema do Windows para Linux
 
-If the installation of dependencies or developing on Windows in general gives you headaches, Windows 10 provides a great alternative: [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/about). It lets you run most command-line tools, utilities, and applications in a GNU/Linux environment directly on Windows, unmodified, without the overhead of a virtual machine. In the above scenario you would download e.g. Ubuntu, open the terminal, [install Node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions), and run `sudo apt-get install build-essential` in the terminal — and the compilation works way more reliable. Please note that you have to delete any existing `node_modules` folder in your project and re-install the dependencies in your WSL environment.
+Se a instalação de dependências ou o desenvolvimento no Windows em geral causar dores de cabeça, o Windows 10 oferece uma ótima alternativa: [Subsistema do Windows para Linux](https://docs.microsoft.com/en-us/windows/wsl/about). Permite executar a maioria das ferramentas, utilitários e aplicativos de linha de comando em um ambiente GNU/Linux diretamente no Windows, sem modificação, sem a sobrecarga de uma máquina virtual. No cenário acima, você faria o download, por exemplo. Ubuntu, abra o terminal, [instale o Node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) e execute `sudo apt-get install build -essencial` no terminal - e a compilação funciona de forma muito mais confiável. Observe que você deve excluir qualquer pasta `node_modules` existente no seu projeto e reinstalar as dependências no seu ambiente WSL.
 
-You can also visit [Gatsby on Linux](/docs/gatsby-on-linux/) to learn more.
+Você também pode visitar o [Gatsby no Linux](/docs/gatsby-on-linux/) para saber mais.

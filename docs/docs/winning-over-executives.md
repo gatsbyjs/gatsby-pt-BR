@@ -1,58 +1,59 @@
 ---
-title: Winning Over Executives
+title: Conquistando Executivos
 ---
 
-Before you speak to executives about Gatsby, make sure you understand their strategic goals, and align your argument for Gatsby with those specific goals. Focus on the results of Gatsby's features rather than the specifics of how they work. If some of the big ideas behind Gatsby fit in with the executive's strategic goals, don't be afraid to include them in your conversation.
+Antes de falar com executivos sobre o Gatsby, certifique-se de entender seus objetivos estratégicos e alinhe seu argumento para o Gatsby com esses objetivos específicos. Concentre-se nos resultados dos recursos do Gatsby e não nas especificidades de como eles funcionam. Se algumas das grandes idéias por trás do Gatsby se encaixam nos objetivos estratégicos do executivo, não tenha medo de incluí-los em sua conversa.
 
-Some things executives care about include:
+Algumas coisas que os executivos se preocupam incluem:
 
-- **Brand visibility** Making sure people are learning about your company by showing up in all the right places. This can be accomplished through things like SEO (search engine optimization), buying ad space, and gaining influence through content creation and/or event participation.
-- **Customer experience** Do your customers like using your site and products? Can they find what they need? Do they have a positive impression of your company?
-- **Innovation** Creating and adopting new technology and business models, preferably ones that will have long-term success.
-- **Competitive edge** Distinguishing yourself from your competitors by delivering unique value that helps you claim a greater share of the market.
-- **Growing the business** For most executives, success means gaining clients, leads, users, purchases and awareness - getting more orders moving through that sales funnel.
+- **Visibilidade da marca** Garantir que as pessoas estejam aprendendo sobre sua empresa, aparecendo nos lugares certos. Isso pode ser conseguido através de coisas como SEO (otimização de mecanismos de pesquisa), compra de espaço para anúncios e ganho de influência através da criação de conteúdo e/ou participação em eventos.
 
-## Basic explanation
+- **Experiência do cliente** Seus clientes gostam de usar seu site e produtos? Eles podem encontrar o que precisam? Eles têm uma impressão positiva da sua empresa?
+- **Inovação** Criando e adotando novas tecnologias e modelos de negócios, preferencialmente modelos que terão sucesso a longo prazo.
+- **Vantagem competitiva** Distinguindo-se dos seus concorrentes, oferecendo um valor único que ajuda você a reivindicar uma participação maior no mercado.
+- **Crescendo os negócios** Para a maioria dos executivos, sucesso significa conquistar clientes, leads, usuários, compras e conhecimento - obtendo mais pedidos em movimento nesse funil de vendas.
 
-Here's an example of a basic explanation of Gatsby for executives:
+## Explicação básica
 
-> Gatsby is a new way to build websites and applications with exceptional performance, reduced risk of downtime, fewer security vulnerabilities, and the flexibility to work with the best tools for your business. Companies that have moved their sites to Gatsby have seen significant improvements in their lead conversion, organic search traffic, and team productivity.
+Aqui está um exemplo de uma explicação básica do Gatsby para executivos:
 
-## Specific benefits
+> O Gatsby é uma nova maneira de criar sites e aplicativos com desempenho excepcional, risco reduzido de tempo de inatividade, menos vulnerabilidades de segurança e flexibilidade para trabalhar com as melhores ferramentas para seus negócios. As empresas que mudaram seus sites para o Gatsby obtiveram melhorias significativas na conversão de leads, no tráfego de pesquisa orgânica e na produtividade da equipe.
 
-Sites built with Gatsby have experienced major sales and engagement benefits as a direct result of Gatsby's built-in features and optimizations. Here are some examples.
+## Benefícios específicos
 
-### Better lead generation and customer engagement
+Os sites criados com o Gatsby obtiveram grandes benefícios de vendas e engajamento como resultado direto dos recursos e otimizações integrados do Gatsby. Aqui estão alguns exemplos.
 
-> Site speed and performance has a huge impact on sales and customer engagement. A [recent Akamai study](https://www.akamai.com/uk/en/about/news/press/2017-press/akamai-releases-spring-2017-state-of-online-retail-performance-report.jsp) showed that a 100 millisecond delay in a site's load time hurt conversion rates by 7%, and 53% of mobile users will leave pages that take more than 3 seconds to load. Gatsby sites are consistently 2-3x faster than similar sites built with different tools, and site owners have seen their [lead generation increase by up to 60% after transitioning to Gatsby](/blog/2018-11-16-youfit-case-study/).
+### Melhor geração de leads e envolvimento do cliente
 
-### Improved search traffic
+> A velocidade e o desempenho do site têm um enorme impacto nas vendas e no envolvimento do cliente. Um [estudo recente da Akamai](https://www.akamai.com/uk/en/about/news/press/2017-press/akamai-releases-spring-2017-state-of-online-retail-performance-report.jsp) mostrou que um atraso de 100 milissegundos no tempo de carregamento de um site prejudica as taxas de conversão em 7%, e 53% dos usuários móveis deixam páginas que demoram mais de 3 segundos para carregar. Sites do Gatsby são consistentemente 2-3 vezes mais rápidos que sites semelhantes criados com ferramentas diferentes, e os proprietários do site viram sua [geração de leads aumentar em até 60% após a transição para o Gatsby](/blog/2018-11-16-youfit-case-estude/).
 
-> Site speed is one of the factors Google uses in its search ranking algorithm, and slow site speeds can have a negative snowball effect on your SEO. Slower sites take longer to be crawled and indexed by search engines, they have higher bounce rates, and lower conversion rates, all of which will hurt your rankings. Gatsby sites have [built-in web and mobile performance optimizations](/blog/2018-11-07-gatsby-for-apps/#why-gatsby-for-apps). It actually takes _more_ effort to make a Gatsby site perform badly. Learn more about [the impact of page speed on SEO](https://moz.com/learn/seo/page-speed) on Moz.
+### Tráfego de pesquisa aprimorado
 
-### Increase productivity
+> A velocidade do site é um dos fatores que o Google usa em seu algoritmo de classificação de pesquisa, e velocidades lentas do site podem ter um efeito negativo em cascata no seu SEO. Os sites mais lentos demoram mais tempo para serem rastreados e indexados pelos mecanismos de pesquisa, possuem taxas de rejeição mais altas e taxas de conversão mais baixas, o que prejudicará sua classificação. Os sites do Gatsby têm [otimizações de desempenho da Web e móveis integradas](/blog/2018-11-07-gatsby-for-apps/#why-gatsby-for-apps). Na verdade, é preciso mais esforço para fazer com que um site do Gatsby tenha um desempenho ruim. Saiba mais sobre [o impacto da velocidade da página no SEO](https://moz.com/learn/seo/page-speed) na Moz.
 
-> According to [Gatsby user survey results](/blog/2019-03-05-dot-org-messaging-survey/#productive-from-the-start), "Gatsby makes you productive right from the start — it takes away the overhead of time-consuming dev and build tooling setup and configuration which leads to faster iterations." Without the burden of complicated tooling, your development team is more focused, more productive, and more satisfied with their work.
+### Aumenta a produtividade
 
-### Lower costs
+> De acordo com [resultados da pesquisa de usuário do Gatsby](/blog/2019-03-05-dot-org-messaging-survey/#productive-from-the-start), "Gatsby torna você produtivo desde o início - ele tira a sobrecarga da instalação e configuração demorada de ferramentas de desenvolvimento e compilaçao que leva a iterações mais rápidas ". Sem o ônus de ferramentas complicadas, sua equipe de desenvolvimento fica mais focada, mais produtiva e mais satisfeita com o trabalho deles.
 
-> Gatsby sites can be entirely deployed to a CDN which is much less expensive than traditional hosting costs. Plus, CDN hosting basically eliminates your risk of downtime during traffic spikes so you don't miss out on those lead-conversion opportunities. Finally, Gatsby is open source, so you're also saving on software licensing costs.
+### Custos mais baixos
 
-### Keep your applications ahead of the curve
+> Os sites do Gatsby podem ser totalmente implantados em uma CDN, muito mais barata que os custos de hospedagem tradicionais. Além disso, a hospedagem CDN basicamente elimina o risco de tempo de inatividade durante picos de tráfego, para que você não perca essas oportunidades de conversão de leads. Por fim, o Gatsby é de código aberto, assim você também economiza nos custos de licenciamento de software.
 
-> Gatsby is one of the technologies at the forefront of a new approach to web and application development known as the [JAMStack](https://jamstack.org/). The JAMStack represents a shift away from the limitations of CMS-centered sites and failure points of server-side code towards faster, light-weight, modular site construction. The JAMStack approach and Gatsby have been rapidly gaining popularity in the last few years with no sign of slowing down. (Check out [Gatsby and JAMStack on Google Trends](https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=jamstack,gatsby%20js).) For companies that want to be leaders in technology trends and that want to differentiate themselves on important factors like site performance, this is a prime window of opportunity. Learn how you can [partner with Gatsby](/docs/partnering-with-gatsby/).
+### Mantenha seus aplicativos à frente da curva
 
-## Case studies
+> Gatsby é uma das tecnologias na vanguarda de uma nova abordagem para o desenvolvimento da Web e aplicativos conhecida como [JAMStack](https://jamstack.org/). O JAMStack representa uma mudança das limitações dos sites centralizados em CMS e dos pontos de falha do código do servidor para uma construção modular mais rápida e leve. A abordagem JAMStack e o Gatsby vêm ganhando popularidade rapidamente nos últimos anos, sem sinais de desaceleração. (Confira [Gatsby e JAMStack no Google Trends](https://trends.google.com/trends/explore?date=today%205-y&geo=US&q=jamstack,gatsby%20js).) Para empresas que desejam ser líderes em tendências de tecnologia e que desejam se diferenciar em fatores importantes como o desempenho do site, essa é uma janela de oportunidade privilegiada. Saiba como você pode [fazer parceria com o Gatsby](/docs/partnering-with-gatsby/).
 
-Case studies are a great way to help executives see Gatsby's potential and gain more practical insight into its benefits. Here are some case studies you might want to share:
+## Estudos de caso
 
-- [Youfit uses Gatsby to increase lead generation by 60%](/blog/2018-11-16-youfit-case-study/)
-- [IBM Uses Gatsby to Manage Enterprise-Level Content](/blog/2018-12-17-ibm-case-study/#big-company-big-website)
-- [Gatsby Fuels Content and Sales in Design+Code Rebuild](/blog/2019-03-15-design-code-blog-post/)
-- [Growing Housecall Pro by 973% with Gatsby](/blog/2019-05-02-growing-housecall-pro-by-973-percent/)
+Os estudos de caso são uma ótima maneira de ajudar os executivos a ver o potencial do Gatsby e obter uma visão mais prática de seus benefícios. Aqui estão alguns estudos de caso que você pode querer compartilhar:
 
-For even more examples of Gatsby sites, [check out the Showcase](/showcase/)
+- [Youfit usa o Gatsby para aumentar a geração de leads em 60%](/blog/2018-11-16-youfit-case-study/)
+- [IBM usa o Gatsby para gerenciar conteúdo de nível corporativo](/blog/2018-12-17-ibm-case-study/#big-company-big-website)
+- [Gatsby impulsiona conteúdo e vendas na reconstrução de design + código](/blog/2019-03-15-design-code-blog-post/)
+- [Crescendo a Housecall Pro em 973% com o Gatsby](/blog/2019-05-02-growing-housecall-pro-by-973-percent/)
 
-## Conclusion
+Para mais exemplos de sites do Gatsby, [confira o Showcase](/showcase/)
 
-Executives are always looking for ways to improve their business's efficiency, profits, and to grow their organization. Pointing out the financial benefits of Gatsby will help your case, but be sure to go into the many other ways Gatsby will help move your business forward. If you can show your executive(s) how the benefits of Gatsby significantly outweigh the risks and costs involved in adopting it, odds are good that they'll be very receptive to the idea.
+## Conclusão
+
+Os executivos estão sempre procurando maneiras de melhorar a eficiência, os lucros e o crescimento de sua empresa. Apontar os benefícios financeiros do Gatsby ajudará o seu caso, mas não deixe de abordar muitas outras maneiras pelas quais o Gatsby ajudará a impulsionar seus negócios. Se você puder mostrar ao(s) seu(s) executivo(s) como os benefícios do Gatsby superam significativamente os riscos e custos envolvidos na sua adoção, é muito provável que eles sejam muito receptivos à idéia.

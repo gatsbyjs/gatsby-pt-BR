@@ -1,26 +1,25 @@
 ---
-title: First Professional Project
+title: Primeiro Projeto Profissional
 ---
 
-The most important professional Gatsby project you or your organization will ever ship is your first project.
+O projeto Gatsby profissional mais importante de todos que você ou sua empresa lançará é o primeiro projeto.
 
-Why is that?
+Por quê?
 
-## Shipping Gatsby websites changes the conversation
+## Lançar sites Gatsby muda a história
 
-- **Shipped means more real.** It's common to talk about exciting new technologies, but much less common to actually see them used in production. Shipping a Gatsby website will make others see Gatsby as an actual choice to consider.
-- **Seeing is believing.** Gatsby sites shock people by how fast they are. When someone ships a Gatsby site, other people start asking how they can get sites that fast.
+- **Lançado significa mais real.** É comum conversar sobre tecnologias extremamente novas, mas é bem menos comum vê-las sendo realmente utilizadas em produção.
+- **Ver é acreditar.** Sites Gatsby chocam as pessoas devido a sua rapidez. Quando alguém lança um site Gatsby, outras pessoas começam a perguntar como fazer sites tão rápidos.
 
 https://twitter.com/Netlify/status/1011344285529182211
 
-- **Discover allies.** Once you ship a Gatsby website, other Gatsby enthusiasts may come out of the woodwork. It's common to want change, but believe it's impossible. When the first Gatsby site ships, others may join you in trying to push for increased Gatsby usage.
+- **Encontre aliados.** Uma vez que você lançar o seu site, outros entusiastas do Gatsby podem sair da toca. É comum querer mudar, mas, ao mesmo tempo, acreditar que é impossível. Quando o primeiro site Gatsby for lançado, outras pessoas podem se juntar a você na tentativa de impulsionar a utilização da ferramenta.
+- **Criando um estudo de caso.** Uma vez que as métricas de negócio, tais como tempos de carregamento de página reduzidos, taxas de conversão melhoradas ou taxas de rejeição reduzidas, estiverem disponíveis a partir do lançamento do novo projeto, você pode utilizar essas métricas como evidência de que vale a pena considerar a utilização do Gatsby.
 
-- **Creating a case study.** Once business metrics, such as decreased page load times, increased conversion rates, or decreased bounce rates, are available from the new project launch, you can use these metrics as evidence that Gatsby is worth considering.
+## Como lançar o seu primeiro site
 
-## How to ship your first website
+A adoção do Gatsby dentro das empresas tende a seguir uma abordagem "bottom-up" (ascendente) ao invés de "top-down" (descendente).
 
-Gatsby adoption within organizations tends to follow a "bottoms-up" rather than "top-down" approach.
+Significa que a primeira vez em que é utilizado geralmente não acontece em um projeto que os gestores da empresa consideram importante. Ao invés disso, normalmente, os primeiros sites são geralmente menores ou têm poucos interessados.
 
-What that means is that the first usage is typically not driven by executive mandate for a high-profile project. Instead, typically, initial websites are often smaller or have fewer stakeholders.
-
-This could be one-off campaigns, landing pages, brochure sites, as well as documentation pages or other internal resources.
+Poderiam ser campanhas pontuais, _landing pages_, sites de propaganda, assim como páginas de documentação ou outros projetos internos.
