@@ -8,7 +8,7 @@ _Anotações: Existem muitas amostras de configurações que podem ser úteis pa
 
 ## Opções de Configurações
 
-Opções disponíveis para configurar dentro do `gatsby-config.js` inclui:
+Opções disponíveis para configurar dentro do `gatsby-config.js` incluem:
 
 1.  [siteMetadata](#sitemetadata) (object)
 2.  [plugins](#plugins) (array)
