@@ -8,7 +8,7 @@ Os erros mais comuns ao compilar arquivos HTML estáticos são:
     Se este for o caso, você deve ver uma mensagem de erro como "window is not defined". Para
     corrigir, encontre o código problemático e a) confira se a janela está definida antes de chamar o
     código, para que o mesmo não seja executado enquanto o Gatsby está compilando (veja exemplos
-    de código abaixo) ou b) se o código está na função render de um componente React.js, mova o
+    de código abaixo) ou b) se o código está na função _render_ de um componente React.js, mova o
     código para dentro do [método `componentDidMount`](https://pt-br.reactjs.org/docs/react-component.html#componentdidmount) ou de um [_hook_ `useEffect`](https://pt-br.reactjs.org/docs/hooks-reference.html#useeffect), o que garante que o código não seja executado, a menos que esteja
     no navegador.
 
