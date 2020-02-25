@@ -1969,7 +1969,7 @@ export const pageQuery = graphql`
 - [Exemplo de repositório usando esta receita](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
 - [Imagens em destaque com frontmatter](/docs/working-with-images-in-markdown/#featured-images-with-frontmatter-metadata)
 - [API Gatsby Image](/docs/gatsby-image/)
-- [UsandoGatsby Image](/docs/using-gatsby-image)
+- [Usando Gatsby Image](/docs/using-gatsby-image)
 - [Mais sobre como trabalhar com imagens em Gatsby](/docs/working-with-images/)
 
 ## 8. Transformando dados
