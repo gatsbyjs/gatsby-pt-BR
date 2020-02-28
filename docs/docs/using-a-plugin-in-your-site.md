@@ -53,4 +53,4 @@ module.exports = {
 }
 ```
 
-Note que as opções do plugin serão convertidas em string pelo Gatsby, então elas não podem ser funções.
+Observe que as opções do plugin serão convertidas em string pelo Gatsby, então elas não podem ser funções.
