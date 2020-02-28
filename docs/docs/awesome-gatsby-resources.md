@@ -16,6 +16,9 @@ Veja a [biblioteca oficial e da comunidade de starters](/starters/)
 
 Veja a [biblioteca oficial e da comunidade de plugins](/plugins/)
 
+## Temas
+Veja a [lista não oficial de temas](https://gatsbytemplates.io/)
+
 ## Ferramentas
 
 - [Desenvolva e crie sites estáticos do GatsbyJS no Docker](https://github.com/aripalo/gatsby-docker/)
