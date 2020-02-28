@@ -1,8 +1,8 @@
 ---
-title: Releases & Migration
+title: Versões e Migração
 overview: true
 ---
 
-Find release notes and guides for migration between major versions.
+Encontre notas de versão e guias sobre migração entre as principais versões.
 
 <GuideList slug={props.slug} />

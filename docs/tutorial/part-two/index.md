@@ -152,7 +152,7 @@ Primeiro, crie um novo componente chamado `Container`.
 
 1. Cria uma nova pasta em `src/components` e então, dentro deste diretório, crie um arquivo chamado `container.js` e cole o seguinte código:
 
-```javascript:title=src/components/container.js
+```jsx:title=src/components/container.js
 import React from "react"
 import containerStyles from "./container.module.css"
 
@@ -177,7 +177,7 @@ Você notara que o arquivo tem `.module.css` no final do seu nome em vez do usua
 3. Crie uma nova página criando um arquivo em:
    `src/pages/about-css-modules.js`:
 
-```javascript:title=src/pages/about-css-modules.js
+```jsx:title=src/pages/about-css-modules.js
 import React from "react"
 
 import Container from "../components/container"
