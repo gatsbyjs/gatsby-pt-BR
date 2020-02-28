@@ -1,18 +1,18 @@
 ---
-title: Using a Plugin in Your Site
+title: Usando um Plugin em Seu Site
 ---
 
-Gatsby plugins are Node.js packages, so you can install them like other packages in node using NPM.
+Plugins do Gatsby são pacotes do Node.js, assim você pode instalar eles como qualquer outro pacote do Node usando NPM.
 
-For example, `gatsby-transformer-json` is a package that adds support for JSON files to the Gatsby data layer.
+Por exemplo, `gatsby-transformer-json` é um pacote que adiciona suporte para arquivos JSON na camada de dados do Gatsby.
 
-To install it, in the root of your site you run:
+Para instalar ele, execute na raiz do seu site:
 
 ```shell
 npm install --save gatsby-transformer-json
 ```
 
-Then in your site's `gatsby-config.js` you add `gatsby-transformer-json` to the plugins array like:
+Então, no `gatsby-config.js` do seu site, você adiciona `gatsby-transformer-json` ao array de plugins desta forma:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -20,15 +20,15 @@ module.exports = {
 }
 ```
 
-Plugins can take options. For example:
+Plugins podem ter opções. Por exemplo:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   plugins: [
-    // Shortcut for adding plugins without options.
+    // Atalho para adicionar plugins sem opções.
     "gatsby-plugin-react-helmet",
     {
-      // Standard plugin with options example
+      // Exemplo padrão de plugin com opções.
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/data/`,
@@ -37,7 +37,7 @@ module.exports = {
     },
     {
       resolve: "gatsby-plugin-offline",
-      // Blank options, equivalent to string-only plugin
+      // Opções em branco, equivalentes ao plugin somente string.
       options: {
         plugins: [],
       },
@@ -45,7 +45,7 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        // plugins inside plugins
+        // Plugins dentro de plugins.
         plugins: [`gatsby-remark-smartypants`],
       },
     },
@@ -53,4 +53,4 @@ module.exports = {
 }
 ```
 
-Note that plugin options will be stringified by Gatsby, so they cannot be functions.
+Note que as opções do plugin serão convertidas em string pelo Gatsby, então elas não podem ser funções.
