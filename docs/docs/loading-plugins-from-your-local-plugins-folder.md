@@ -1,10 +1,10 @@
 ---
-title: Loading Plugins from Your Local Plugins Folder
+title: Carregando plugins da sua pasta local de plugins
 ---
 
-Gatsby can load plugins from your website's local plugins folder, which is a folder named `plugins` in the website's root directory.
+O Gatsby também pode carregar plugins da pasta local de plugins do seu site, que é uma pasta chamada `plugins` no diretório raiz do site.
 
-Consider this example project structure which includes a local plugin called `gatsby-local-plugin`:
+Considere este exemplo da estrutura do projeto que inclui um plugin local chamado `gatsby-local-plugin`:
 
 ```
 /my-gatsby-site
@@ -22,9 +22,9 @@ Consider this example project structure which includes a local plugin called `ga
 └── package.json
 ```
 
-Like the name of the plugins folder implies, you can include multiple plugins in your local plugin folder.
+Como o nome da pasta de plugins implica, você pode incluir vários plugins na pasta de plugins local.
 
-Including a local plugin in your plugins folder also requires a configuration step (similar to a third-party plugin you've installed in your `node_modules` folder by running `npm install`); just as plugins installed from npm need to be included in your `gatsby-config`, you need to add the name of your local plugin to the plugins array as well:
+A inclusão de um plugin local na pasta de plugins também requer uma etapa de configuração (semelhante a um plugin de terceiros que você instalou na pasta `node_modules` executando o `npm install`); Assim como os plugins instalados a partir do npm precisam ser incluídos no seu `gatsby-config`, você também precisa adicionar o nome do seu plugin local ao array de plugins:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -35,9 +35,11 @@ module.exports = {
 }
 ```
 
-## Verifying your plugin is loading
+## Verificando se seu plugin está carregando
 
 To verify that your plugin is available for use in your Gatsby site, you can add a small snippet of code to a `gatsby-node.js` file (you may need to add the `gatsby-node.js` file if there isn't one already) in the root of your plugin:
+
+Para verificar se seu plugin está disponível para uso em seu site Gatsby, você pode adicionar um pequeno trecho de código a um arquivo `gatsby-node.js` (pode ser necessário adicionar o arquivo `gatsby-node.js`, se ainda não houver) na raiz do seu plugin:
 
 ```javascript:title=plugins/gatsby-local-plugin/gatsby-node.js
 exports.onPreInit = () => {
@@ -45,9 +47,9 @@ exports.onPreInit = () => {
 }
 ```
 
-_The [`onPreInit` API](/docs/node-apis/#onPreInit) is the first Node API called by Gatsby right after plugins are loaded._
+_O [`onPreInit` API](/docs/node-apis/#onPreInit) é a primeira API do Node chamada pelo Gatsby logo após o carregamento dos plugins._
 
-Then, when running your site in develop or build mode, you should see "Testing..." logged in your terminal:
+Então, ao executar seu site no modo de desenvolvimento ou construção, você deverá ver "Testing..." registrado no seu terminal:
 
 ```sh
 success open and validate gatsby-configs - 0.051s
@@ -57,6 +59,6 @@ success onPreInit - 0.023s
 ...
 ```
 
-## Loading local plugins from _outside_ the plugins folder
+## Carregando plugins locais de _fora_ da pasta plugins
 
-If you want to reference a plugin that is not in the plugins folder, there are several options that are described in more detail in the [Creating a Local Plugin guide](/docs/creating-a-local-plugin/).
+Se você deseja fazer referência a um plugin que não está na pasta de plugins, há várias opções descritas em mais detalhes no [Guia Criando um plugin local](/docs/creating-a-local-plugin/).
