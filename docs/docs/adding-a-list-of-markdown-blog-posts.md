@@ -8,7 +8,7 @@ Depois de adicionar as páginas de marcações ao seu site, você fica a apenas 
 
 Conforme descrito [aqui](/docs/adding-markdown-pages), você terá que criar suas postagens nos arquivos do Markdown, que irá se parecer com isto:
 
-```md
+```markdown
 ---
 path: "/blog/my-first-post"
 date: "2017-11-07"
