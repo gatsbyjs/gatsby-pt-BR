@@ -1,15 +1,16 @@
 ---
-title: Webpack and SSR
+title: Webpack e SSR
 ---
 
-Bootstrap is finished! And we've [written the resulting pages](/docs/write-pages/) to disk. The next step is to render each page to HTML. And, we must build a JavaScript runtime that takes over once the HTML has loaded so that future page navigations load instantly.
+O bootstrap está concluído! E nós [salvamos as páginas resultantes](/docs/write-pages/) em disco. O próximo passo é renderizar cada página em HTML. Além disso, precisamos criar um tempo de execução JavaScript que assuma o controle assim que o HTML for carregado, para que as futuras navegações da página sejam carregadas instantaneamente.
 
-The next stages of the build lean heavily on webpack for code optimization and code splitting. If you haven't already, it's worth diving into [webpack's docs](https://webpack.js.org/guides/) to learn how it works.
+Os próximos estágios da construção dependem fortemente do webpack para otimização e divisão de código. Se você ainda não o fez, vale a pena mergulhar nos [documentos do webpack](https://webpack.js.org/guides/) para saber como funciona.
 
 ## /.cache/
 
-All the files required by webpack are in your site's `.cache` directory. This is empty when you initialize a new project and can be safely deleted. Gatsby creates and fills it over the course of a build.
+Todos os arquivos exigidos pelo webpack estão no diretório `.cache` do seu site. Isso fica vazio quando você inicializa um novo projeto e pode ser excluído com segurança. Gatsby cria e preenche ao longo de uma compilação.
 
-At the start of the build, Gatsby [copies all files](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/bootstrap/index.js#L191) in [gatsby/cache-dir](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby/cache-dir) into your `.cache` directory. This includes things like [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) and [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) that you'll read about in the next sections. Essentially, all files that are needed by Gatsby to run in the browser, or to generate HTML, are included in `cache-dir`.
+No início da compilação, o Gatsby [copia todos os arquivos](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/bootstrap/index.js#L191) em [gatsby/cache-dir](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby/cache-dir) no diretório `.cache`. Isso inclui coisas como [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) e [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) sobre o qual você lerá nas próximas seções. Essencialmente, todos os arquivos necessários ao Gatsby para serem executados no navegador ou para gerar HTML estão incluídos no `cache-dir`.
 
-Since Webpack doesn't know about Redux, we also need to create files that contain all the page data that was built up during bootstrap. And these all need to be placed in `.cache` as well. This is what the previous [Write Out Pages](/docs/write-pages/) section dealt with.
+Como o Webpack não conhece o Redux, também precisamos criar arquivos que contenham todos os dados da página, criados durante a inicialização. E todos esses itens também precisam ser colocados no `.cache`. É com isso que a seção anterior [Salvar Páginas](/docs/write-pages/) tratou.
+

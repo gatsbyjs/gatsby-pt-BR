@@ -10,7 +10,11 @@ O `gatsby-starter-theme` é composto por dois temas Gatsby: `gatsby-theme-blog` 
 gatsby new my-notes-blog https://github.com/gatsbyjs/gatsby-starter-theme
 ```
 
+
 O tema starter inclui ambos pacotes de temas (`gatsby-theme-blog` e `gatsby-theme-notes`) no arquivo `gatsby-config.js` do tema starter.
+
+Vocẽ pode incluir múltiplos pacote de temas em seu `gatsby-config.js`. `gatsby-starter-theme` inclui ambos os pacotes de temas: `gatsby-theme-blog` e `gatsby-theme-notes`.
+
 
 ```javascript:title=gatsby-config.js
 module.exports = {
