@@ -2,7 +2,7 @@
 title: Carregando Plugins Da Sua Pasta Local De Plugins
 ---
 
-O Gatsby também pode carregar plugins da pasta local de plugins do seu site, que é uma pasta chamada `plugins` no diretório raiz do site.
+O Gatsby também pode carregar plugins da pasta local de plugins do seu site, que no caso é a pasta chamada `plugins` no diretório raiz do site.
 
 Considere este exemplo da estrutura do projeto que inclui um plugin local chamado `gatsby-local-plugin`:
 
