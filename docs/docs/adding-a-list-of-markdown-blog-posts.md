@@ -6,7 +6,7 @@ Depois de adicionar as páginas de marcações ao seu site, você fica a apenas 
 
 ### Criando postagens
 
-Conforme descrito [aqui](/docs/adding-markdown-pages), você terá que criar suas postagens nos arquivos do Markdown, que irá se parecer com isto:
+Conforme descrito [aqui](/docs/adding-markdown-pages), você terá que criar suas postagens nos arquivos Markdown, que irão se parecer com isto:
 
 ```markdown
 ---
@@ -18,7 +18,7 @@ title: "My first blog post"
 Alguém já ouviu falar sobre o GatsbyJS?
 ```
 
-### Criando a página
+## Criando a página
 
 O primeiro passo será criar a página que exibirá suas postagens, em `src/pages/`. Você pode, por exemplo, usar o `index.js`.
 
@@ -43,7 +43,7 @@ export default IndexPage
 
 ## Criando a consulta GraphQL
 
-Segundo, você precisa fornecer os dados para o seu componente com uma consulta GraphQL. Vamos adicioná-lo, para que o `index.js` se pareça com isto:
+Segundo, você precisa fornecer os dados para o seu componente com uma consulta GraphQL. Vamos adicioná-la, para que o `index.js` se pareça com isto:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -83,7 +83,7 @@ export const pageQuery = graphql`
 `
 ```
 
-### Criando o componente `PostLink`
+## Criando o componente `PostLink`
 
 A única coisa que resta a fazer é adicionar o componente `PostLink`. Crie um novo arquivo `post-link.js` em `src/components/` e adicione o seguinte:
 
