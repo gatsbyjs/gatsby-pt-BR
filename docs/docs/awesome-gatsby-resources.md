@@ -23,6 +23,7 @@ Veja a [lista não oficial de temas](https://gatsbytemplates.io/)
 
 - [Desenvolva e crie sites estáticos do GatsbyJS no Docker](https://github.com/aripalo/gatsby-docker/)
 - Is Gatsby? - Extensão do navegador para [Chrome](https://chrome.google.com/webstore/detail/is-gatsby/jgaejkhmgkpagdmapahohjennkhbpgfj) e [Firefox](https://addons.mozilla.org/en-US/firefox/addon/is-gatsby/) para verificar se um site / página está usando o Gatsby.
+- [Gatsby Docs Kit](https://github.com/brainhubeu/gatsby-docs-kit): É um conjunto de ferramentas, estendendo o Gatsby, que serve para gerar um site estático deslumbrante de documentações.
 
 ## Podcasts
 
@@ -84,6 +85,11 @@ Veja a [lista não oficial de temas](https://gatsbytemplates.io/)
 - [Entendendo o ciclo de vida do Gatsby](https://medium.com/narative/understanding-gatsbys-lifecycle-31c473ba2f2d)
 - [Série GatsbyGuides.com sobre como criar aplicativos da Web com Gatsby e Drupal](https://gatsbyguides.com/)
 - [Mergulhe profundamente no Gatsby - Construindo um blog estático usando Gatsby, React e GraphQL](https://zocada.com/deep-dive-gatsby-building-a-simple-static-blog-using-gatsby-react-and-graphql/)
+- [Gatsby - Tutorial completo para iniciantes](https://www.youtube.com/watch?v=mHFAM0CXviE)
+- [Construindo um vlog com o Gatsby e Markdown (MDX)](https://scotch.io/tutorials/building-a-video-blog-with-gatsby-and-markdown-mdx)
+- [Implantando seu primeiro site Gatsby no Netlify](https://scotch.io/tutorials/deploying-your-first-gatsby-site-to-netlify)
+- [Adicione um widget de chat em seu blog feito com Gatsby](https://pusher.com/tutorials/chat-gatsby/)
+- [Headless WordPress: Por que o Gatsby deve ser o próximo na sua lista de coisas para aprender](https://deliciousbrains.com/gatsby-headless-wordpress/)
 
 ### Alemão
 

@@ -10,7 +10,9 @@ Este guia supõe que você já tenha o Gatsby configurado em seu projeto. Caso v
 
 1.  Instale o plugin do Gatsby [**gatsby-plugin-postcss**](/packages/gatsby-plugin-postcss/).
 
-`npm install --save gatsby-plugin-postcss`
+```shell
+npm install --save gatsby-plugin-postcss
+```
 
 2.  Adicione o plugin em seu arquivo `gatsby-config.js`.
 
@@ -22,7 +24,7 @@ plugins: [`gatsby-plugin-postcss`],
 
 3.  Escreva suas folhas de estilos usando o PostCSS (arquivos .css) e importe ou faça `require` normalmente.
 
-```css:styles.css
+```css:title=styles.css
 @custom-media --med (width <= 50rem);
 
 @media (--med) {
