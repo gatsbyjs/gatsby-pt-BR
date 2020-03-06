@@ -37,7 +37,6 @@ module.exports = {
 
 ## Verificando se seu plugin está carregando
 
-
 Para verificar se seu plugin está disponível para uso em seu site Gatsby, você pode adicionar um pequeno trecho de código a um arquivo `gatsby-node.js` (pode ser necessário adicionar o arquivo `gatsby-node.js`, se ainda não houver) na raiz do seu plugin:
 
 ```javascript:title=plugins/gatsby-local-plugin/gatsby-node.js
