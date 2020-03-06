@@ -1,5 +1,5 @@
 ---
-title: Carregando plugins da sua pasta local de plugins
+title: Carregando Plugins Da Sua Pasta Local De Plugins
 ---
 
 O Gatsby também pode carregar plugins da pasta local de plugins do seu site, que é uma pasta chamada `plugins` no diretório raiz do site.
