@@ -4,7 +4,7 @@ title: Adicionando uma Lista de Marcações de Posts no Blog
 
 Depois de adicionar as páginas de marcações ao seu site, você fica a apenas um passo de poder listar suas postagens em uma página de índice dedicada.
 
-### Criando postagens
+## Criando postagens
 
 Conforme descrito [aqui](/docs/adding-markdown-pages), você terá que criar suas postagens nos arquivos Markdown, que irão se parecer com isto:
 
