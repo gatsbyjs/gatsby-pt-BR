@@ -85,7 +85,7 @@ export const pageQuery = graphql`
 
 ### Criando o componente `PostLink`
 
-A única coisa que resta a fazer é adicionar o componente `PostLink`. Crie um novo arquivo `post-link.js` em` src/components/` e adicione o seguinte:
+A única coisa que resta a fazer é adicionar o componente `PostLink`. Crie um novo arquivo `post-link.js` em `src/components/` e adicione o seguinte:
 
 ```jsx:title=src/components/post-link.js
 import React from "react"
