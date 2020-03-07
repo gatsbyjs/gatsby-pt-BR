@@ -15,7 +15,7 @@ Algumas coisas com as quais desenvolvedores se importam incluem:
 
 Aqui está um exemplo de uma explicação básica para desenvolvedores do que é o Gatsby:
 
-> Gatsby é um framework gratuito, open source, baseado em React para construção de websites e aplicações velozes. Gatsby simplifica o processo de configuração do seu build, pode extrair dados a partir de quaisquer fontes para sua UI, e excelente desempenho e melhores práticas estão embutidas nos sites Gatsby.
+> Gatsby é um framework gratuito, open source, baseado em React para construção de websites e aplicações velozes. Gatsby simplifica o processo de configuração do seu build, permitindo a extração de dados a partir de quaisquer fontes para sua UI, além do excelente desempenho e das melhores práticas já embutidas nos sites Gatsby.
 
 ## Benefícios específicos
 
@@ -23,15 +23,15 @@ O Gatsby têm muitos benefícios que dão aos desenvolvedores a liberdade de con
 
 ### Velocidade do site
 
-> O Gatsby foi desenvolvido pensando em desempenho desde o princípio, e sites Gatsby são consistentemente 2-3x mais rápidos do que sites similares construídos com outras ferramentas - páginas carregam em milissegundos ao invés de segundos. As otimizações de desempenho automatizadas do Gatsby incluem recursos de pré-fetching, code splitting, geração estática de HTML e [padrão PRPL](/docs/prpl-pattern/) da Google. Se quiser se aprofundar quanto aos recursos de desempenho do Gatsby, veja [Web Performance 101 – also, why is Gatsby so fast?](/blog/2017-09-13-why-is-gatsby-so-fast/).
+> O Gatsby foi desenvolvido pensando em desempenho desde o princípio, e sites Gatsby são consistentemente 2-3x mais rápidos do que sites similares construídos com outras ferramentas - páginas carregam em milissegundos ao invés de segundos. As otimizações de desempenho automatizadas do Gatsby incluem recursos de pré-fetching, code splitting, geração estática de HTML e [padrão PRPL](/docs/prpl-pattern/) da Google. Se quiser se aprofundar quanto aos recursos de desempenho do Gatsby, veja [Web Performance 101 – Além disso, por quê o Gatsby é tão rápido?](/blog/2017-09-13-why-is-gatsby-so-fast/).
 
 ### Ferramentas web modernas
 
-> Sites Gatsby são construídos com React - atualmente o framework mais popular para desenvolvimento de aplicações web, e dados podem ser extraídos para os componentes React usando GraphQL. Gatsby também foi construído para extrair dados a partir de qualquer fonte para que você possa escolher a melhor ferramenta para cada tarefa e função que o seu site precisa realizar. Extraia dados a partir das melhores ferramentas de gestão de conteúdo, das melhores ferramentas de e-commerce, de quaisquer bases de dados que estiver utilizando e mais.
+> Sites Gatsby são construídos com React - atualmente o framework mais popular para desenvolvimento de aplicações web, e dados que podem ser extraídos para os componentes React usando GraphQL. Gatsby também foi construído para extrair dados a partir de qualquer fonte para que você possa escolher a melhor ferramenta para cada tarefa e função que o seu site precisa realizar. Extraia dados a partir das melhores ferramentas de gestão de conteúdo, das melhores ferramentas de e-commerce, de quaisquer bases de dados que estiver utilizando, e muito mais.
 
 ### Recursos e plugins
 
-> Quase todos os recursos que você poderia desejar para construir um website ou aplicação web de última geração estão disponíveis através do Gatsby. Se o recurso ainda não estiver embutido, há uma extensa biblioteca de plugins disponível. Há uma lista de recursos, sua disponibilidade e comparações com outras opções de construção disponíveis na [página de Recursos](/features/). A lista completa de plugins atualmente disponíveis pode ser encontrada na [página de Plugins](/plugins/).
+> Quase todos os recursos que você poderia desejar para construir um website ou aplicação web de última geração estão disponíveis através do Gatsby. Se o recurso ainda não estiver embutido, há uma extensa biblioteca de plugins disponível. Há uma lista de recursos, suas disponibilidades e comparações com outras opções de construção disponíveis na [página de Recursos](/features/). A lista completa de plugins atualmente disponíveis pode ser encontrada na [página de Plugins](/plugins/).
 
 ### Integração de dados
 
@@ -55,7 +55,7 @@ Talvez você ache que muitos dos seus amigos e colegas desenvolvedores tenham d�
 
 ### Tenho de aprender GraphQL para usar o Gatsby?
 
-> GraphQL é usado para extrair conteúdo de diferentes fontes para dentro do Gatsby de uma maneira consistente e unificada. Você não tem de usar GraphQL para fazer isso, mas aprender a usá-lo te deixará preparado para criar novas integrações mais facilmente (e pode não ser tão desafiador quanto você pensa). Amberly Romo analisa alguns dos prós e contras no seu post em [Using Gatsby without GraphQL](/blog/2018-10-25-using-gatsby-without-graphql/).
+> GraphQL é usado para extrair conteúdo de diferentes fontes para dentro do Gatsby de uma maneira consistente e unificada. Você não tem de usar GraphQL para fazer isso, mas aprender a usá-lo te deixará preparado para criar novas integrações mais facilmente (e pode não ser tão desafiador quanto você pensa). Amberly Romo analisa alguns dos prós e contras no seu post em [Usando Gatsby sem GraphQL](/blog/2018-10-25-using-gatsby-without-graphql/).
 
 ### Nossa equipe de conteúdo precisa se capaz de fazer atualizações no site, mas eles não são super técnicos. Eles conseguirão trabalhar com o site Gatsby?
 
