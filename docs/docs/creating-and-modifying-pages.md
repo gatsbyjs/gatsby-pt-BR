@@ -161,7 +161,7 @@ const Page = ({ pageContext }) => {
 
 export default Page
 ```
-O contexto da página é serializado antes de ser passada para as páginas: Isso significa que ela não pode ser usada para transformar funções em componentes
+O contexto da página é serializado antes de ser passado para as páginas: Isso significa que ele não pode ser usado para transformar funções em componentes
 
 
 ## Criando rotas somente para clientes
