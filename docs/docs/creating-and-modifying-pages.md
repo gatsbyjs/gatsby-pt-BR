@@ -166,4 +166,4 @@ O contexto da página é serializado antes de ser passada para as páginas: Isso
 
 ## Criando rotas somente para clientes
 
-Em casos específicos, talvez você queira criar sites com porções apenas para clientes que são bloqueadas por autenticação. Para saber como faze-lo, recorra ao [Rotas apenas-para-clientes & autenticação de usuário](https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/).
+Em casos específicos, talvez você queira criar sites com porções apenas para clientes que são bloqueadas por autenticação. Para saber como fazê-lo, recorra ao [Rotas apenas-para-clientes & autenticação de usuário](https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/).
