@@ -41,7 +41,7 @@ A propriedade `context` aceita objetos, então podemos passar quaisquer dados qu
 
 Você também pode consultar quaisquer dados `context` adicionadas por você ou pelos plugins utilizados.
 
-> **NOTE:** Existem algumas palavras reservadas que _não_ podem ser utilizadas no `context`. As palavras são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
+> **NOTA:** Existem algumas palavras reservadas que _não_ podem ser utilizadas no `context`. As palavras são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
 
 ## Criando páginas no gatsby-node.js
 
