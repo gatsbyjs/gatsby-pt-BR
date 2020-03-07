@@ -133,7 +133,7 @@ exports.onCreatePage = ({ page, actions }) => {
 
 ### Adicionar contexto à páginas
 
-As páginas criadas automaticamente podem receber contextos e usa-lo como variáveis nas consultas da GraphQL. Para substituir o padrão e usar o seu próprio contexto, abra o arquivo `gatsby-node.js` do seu site e adicione um código similar ao seguinte:
+As páginas criadas automaticamente podem receber contextos e usá-lo como variáveis nas consultas da GraphQL. Para substituir o padrão e usar o seu próprio contexto, abra o arquivo `gatsby-node.js` do seu site e adicione um código similar ao seguinte:
 
 ```javascript:title=gatsby-node.js
 exports.onCreatePage = ({ page, actions }) => {
