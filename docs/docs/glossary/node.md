@@ -3,32 +3,32 @@ title: Node.js
 disableTableOfContents: true
 ---
 
-Learn more about Node.js, one of the software packages that makes Gatsby possible.
+Aprenda mais sobre Node.js, um dos pacotes de software que torna Gatsby possível.
 
-## What is Node.js?
+## O que é Node.js?
 
-Node.js is a JavaScript runtime that uses the same engine as Google Chrome. With Node.js, you can run JavaScript applications on your computer, without the need for a web browser.
+Node.js é um interpretador (_runtime_) JavaScript que usa o mesmo motor (_engine_) do Google Chrome. Com Node.js, você pode rodar aplicações JavaScript no seu computador, sem a necessidade de um navegador web.
 
-In the early 2000s, services such as Gmail and Flickr showed us that JavaScript could be used to build robust applications, available to anyone with a web browser and internet connection.
+No início dos anos 2000s, serviços como Gmail e Flickr nos mostraram que JavaScript poderia ser usado para construir aplicações robustas, disponíveis para qualquer um com navegador web e conexão com a internet.
 
-However, those JavaScript applications had a big limitation: they could only perform as well as the runtime allowed. Before 2009, the runtime was almost always a web browser. So Google formed the Chromium Project, in part, to create a faster browser. The result was Google Chrome, released in 2008, and its new JavaScript engine: [V8](https://v8.dev/).
+No entanto, essas aplicações JavaScript possuiam uma grande limitação: elas poderiam somente executar tão bem quanto o interpretador permitisse. Antes de 2009, o interpretador era quase que sempre um navegador web. Então Google formou o projeto Chromium, em partes, para criar um navegador mais rápido. O resultado foi o Google Chrome, lançado em 2008, e seu novo motor JavaScript: [V8](https://v8.dev/).
 
-A year later, Node.js made its debut as a standalone JavaScript runtime using the V8 engine.
+Um ano depois, Node.js fez sua estreia como um interpretador JavaScript independente utilizando o motor V8.
 
-Once you've installed Node.js, you can use it to run JavaScript from the [command line](/docs/glossary#command-line). Type `node` at a prompt to launch the Node.js interactive shell. Include the path to a JavaScript file to execute that script: e.g. `node /Users/gatsbyfan/hello-world.js`.
+Depois de instalar o Node.js, você pode usá-lo para rodar JavaScript pela [linha de comando](/docs/glossary#command-line). Digite `node` em um _prompt_ para abrir o _shell_ interativo do Node.js. Inclua o caminho de um arquivo JavaScript para executar aquele _script_, exemplo: `node /Users/gatsbyfan/hello-world.js`
 
-You will need to [install Node.js](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) before using Gatsby. Gatsby is built using JavaScript, and requires the Node.js runtime.
+Você vai precisar [instalar o Node.js](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system) antes de usar Gatsby. Gatsby é construído usando JavaScript, e requer um interpretador Node.js. 
 
-Installing Node.js also installs [npm](/docs/glossary#npm), the Node.js _package manager_. A package manager is specialized software that lets you install and update modules and packages used in your project.
+Instalar Node.js também instala [npm](/docs/glossary#npm), o gerenciador de pacote do Node.js. Um gerenciador de pacote é um software especializado que permite você instalar e atualizar modulos e pacotes utilizados em seu projeto.
 
-You'll use npm to install Gatsby and its dependencies. Type `npm install -g gatsby-cli` at a command line prompt to install the Gatsby command line interface or CLI. The `-g` flag installs Gatsby globally, which means that you can use it by typing `gatsby` at a prompt. For example, you can use `gatsby new` to create a new Gatsby site.
+Você vai usar npm para instalar Gatsby e suas dependências. Digite `npm install -g gatsby-cli` no _prompt_ da linha de comando para instalar a interface de linha de comando do Gatsby ou CLI. A opção (_flag_) `-g` instala Gatsby globalmente, o que significa que você pode usá-lo digitando `gatsby` em um _prompt_. Por exemplo, você pode usar o comando `gatsby new` para criar um novo site Gatsby.
 
-## Learn more about Node.js
+## Aprenda mais sobre Node.js
 
-- [Node.js](https://nodejs.org/en/) official web site
+- [Node.js](https://nodejs.org/en/) website oficial
 
-- [Introduction to Node.js](https://nodejs.dev)
+- [Introdução ao Node.js](https://nodejs.dev)
 
-- [NodeSchool](https://nodeschool.io/) offers online and in-person Node.js workshops
+- [NodeSchool](https://nodeschool.io/) oferece workshops online e presenciais sobre Node.js
 
-- [V8](https://v8.dev/) developer blog web site
+- [V8](https://v8.dev/) blog do desenvolvedor
