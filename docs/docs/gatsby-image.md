@@ -359,7 +359,7 @@ Apos ter feito a sua consulta, você pode passar opções adicionais para o comp
 | `className`            | `string` / `object` | Passado para o elemento de empacotador. Um objeto é necessário para ter suporte a propriedade css Glamor's                                                  |
 | `style`                | `object`            | Se espalha para o estilo padrão do elemento empacotador                                                                         |
 | `imgStyle`             | `object`            | Se espalha para o estilo padrão do elemento `img`                                                                    |
-| `placeholderStyle`     | `object`            | Se espalha para o estilo padrão do elemento de reserva de espaço  do elemento `img`                                                                |
+| `placeholderStyle`     | `object`            | Se espalha para o estilo padrão do elemento de reserva de espaço do elemento `img`                                                                |
 | `placeholderClassName` | `string`            | Uma classe que é passada para o elemento de reserva de espaço do elemento `img`|
 | `backgroundColor`      | `string` / `bool`   | Configura um elemento de reserva de espaço colorido. Caso seja verdadeiro, utiliza "lightgray" ( cinza claro ) como a cor. Você pode ainda passar qualquer string de cor válida.   |
 | `onLoad`               | `func`              | Uma função callback que é chamada quando a imagem tiver carregado em tamanho completo.                                                                |
