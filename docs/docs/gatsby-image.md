@@ -12,7 +12,7 @@ Demonstração: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-
 
 - [Configurando o Gatsby Image](#configurando-o-gatsby-image)
 - [Tipos de imagens com o gatsby-image](#tipos-de-imagens-com-o-gatsby-image)
-  - [Imagens fixas e parâmetros](#images-with-a-fixed-width-and-height)
+  - [Imagens fixas e parâmetros](#imagens-com-largura-e-altura-fixas)
   - [Imagens fluidas e parâmetros](#images-that-stretch-across-a-fluid-container)
   - [Imagens redimensionadas](#resized-images)
   - [Parametros de consulta compartilhados](#shared-query-parameters)
