@@ -17,7 +17,7 @@ Demonstração: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-
   - [Imagens redimensionadas](#resized-images)
   - [Parametros de consulta compartilhados](#shared-query-parameters)
 - [Fragmentos de consulta do Image](#fragmentos-de-consulta-do-image)
-- [props do Gatsby-image](#gatsby-image-props)
+- [props do Gatsby-image](#props-do-gatsby-image)
 
 ## Configurando o Gatsby Image
 
