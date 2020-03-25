@@ -2,7 +2,7 @@
 title: Gatsby Image API
 ---
 
-Parte do que faz com que sites feitos em Gatsby sejam tão rápidos, é o método recomendado para lidar com imagens no mesmo. O `gatsby-image` é um componente do React projetado para funcionar de forma integrada com as ferramentas do Gatsby de [processamento nativo de imagens](https://image-processing.gatsbyjs.org/) do alimentado pelo GraphQL e o plugin [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), para completamente e facilmente otimizar o carregamento de imagens para os seus sites.
+Parte do que faz com que sites feitos em Gatsby sejam tão rápidos, é o método recomendado para lidar com imagens no mesmo. O `gatsby-image` é um componente do React projetado para funcionar de forma integrada com as ferramentas do Gatsby de [processamento nativo de imagens](https://image-processing.gatsbyjs.org/) alimentado pelo GraphQL e o plugin [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), para otimizar de forma fácil e completa o carregamento de imagens para os seus sites.
 
 > _Nota: O gatsby-image **não** é um substituto para `<img />`. O mesmo é otimizado para imagens responsivas de largura/altura fixa e imagens que expandem para ocupar toda a largura de um contêiner. Existem ainda outros modos de [trabalhar com imagens](/docs/images-and-files/) no Gatsby que não exigem GraphQL.
 
