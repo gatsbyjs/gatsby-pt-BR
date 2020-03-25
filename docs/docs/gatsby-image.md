@@ -15,7 +15,7 @@ Demonstração: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-
   - [Imagens fixas e parâmetros](#imagens-com-largura-e-altura-fixas)
   - [Imagens fluidas e parâmetros](#imagens-que-expandem-por-todo-o-contêiner-fluido)
   - [Imagens redimensionadas](#imagens-redimensionadas)
-  - [Parametros de consulta compartilhados](#shared-query-parameters)
+  - [Parametros de consulta compartilhados](#parâmetros-de-consulta-compartilhados)
 - [Fragmentos de consulta do Image](#fragmentos-de-consulta-do-image)
 - [props do Gatsby-image](#props-do-gatsby-image)
 
