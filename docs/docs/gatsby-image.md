@@ -44,7 +44,7 @@ module.exports = {
 }
 ```
 
-_Para instruções de instalação aprofundadas, configura a documentação na página sobre [Usando o Gatsby Image](/docs/using-gatsby-image/)._
+_Para instruções de instalação aprofundadas, acesse a documentação de [Usando o Gatsby Image](/docs/using-gatsby-image/)._
 
 ### O Gatsby image começa com uma consulta
 
