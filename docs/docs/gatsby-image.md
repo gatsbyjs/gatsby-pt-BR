@@ -10,7 +10,7 @@ Demonstração: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-
 
 ## Nesse documento
 
-- [Configurando o Gatsby Image](#setting-up-gatsby-image)
+- [Configurando o Gatsby Image](#configurando-o-gatsby-image)
 - [Tipos de imagens com o gatsby-image](#tipos-de-imagens-com-o-gatsby-image)
   - [Imagens fixas e parâmetros](#images-with-a-fixed-width-and-height)
   - [Imagens fluidas e parâmetros](#images-that-stretch-across-a-fluid-container)
