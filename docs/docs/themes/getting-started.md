@@ -1,28 +1,28 @@
 ---
-title: Getting Started with Gatsby Themes
+title: Iniciando com os Temas do Gatsby
 ---
 
-The quickest way to get started using a Gatsby theme is to use a starter that's configured to use the theme.
+A maneira mais rápida de começar a usar um tema do Gatsby é usar um iniciador configurado para usar o tema.
 
-For example, `gatsby-starter-blog-theme` is a theme starter for the `gatsby-theme-blog` package.
+Por exemplo, `gatsby-starter-blog-theme` é um iniciador de temas para o pacote `gatsby-theme-blog`.
 
-A **regular Gatsby starter** creates a new Gatsby site that is preconfigured for a particular use case. The resulting site effectively forks off the starter — after it’s created, the site maintains no connection to the starter.
+Um **iniciador regular do Gatsby** cria um novo site do Gatsby pré-configurado para um caso de uso específico. O site resultante efetivamente se separa do iniciador - depois de criado, o site não mantém nenhuma conexão com o iniciador.
 
-A **Gatsby theme starter** creates a new Gatsby site that installs and configures one or more Gatsby themes. When a starter installs a theme, it maintains the connection to that theme as a standalone npm package.
+Um **iniciador de temas do Gatsby** cria um novo site do Gatsby que instala e configura um ou mais temas do Gatsby. Quando um iniciador instala um tema, ele mantém a conexão com esse tema como um pacote npm independente.
 
-Installing the Gatsby blog theme starter is the same process as a regular Gatsby starter:
+A instalação do iniciador de temas do blog Gatsby é o mesmo processo que um iniciador regular do Gatsby:
 
 ```shell
 gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 ```
 
-## What does a theme starter do?
+## O que um iniciador de temas faz?
 
-The starter for the official Gatsby blog theme does the following:
+O iniciador do tema oficial do blog Gatsby faz o seguinte:
 
-### 1. The starter installs the theme and configures it
+### 1. O iniciador instala o tema e o configura
 
-When you use a starter that's built with a theme, you will often see that you're initially presented with a lighter weight `gatsby-config.js`. Themes start doing their magic when installed via the `plugins` array:
+Quando você usa um iniciador construído com um tema, frequentemente verá que é apresentado inicialmente com um menor `gatsby-config.js`. Os temas começam a funcionar quando instalados através de um array `plugins`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -52,7 +52,7 @@ module.exports = {
 }
 ```
 
-### 2. The starter scaffolds out example blog posts.
+### 2. O iniciador cria exemplos de postagens de blog.
 
 ```mdx:title=/content/posts/hello-world.mdx
 ---
@@ -63,10 +63,10 @@ path: /hello-world
 I'm an example post!
 ```
 
-Once you've made some edits, run `gatsby develop` to start a development server and view your changes in a browser.
+Depois de fazer algumas modificações, execute o `gatsby develop` para iniciar um servidor de desenvolvimento e visualizar suas alterações no navegador.
 
-## Updating a theme
+## Atualizando um tema
 
-To pull in the latest updates of your theme you can update the `gatsby-theme-blog` version in your site's `package.json`.
+Para obter as atualizações mais recentes do seu tema, você pode atualizar a versão `gatsby-theme-blog` no` package.json` do seu site.
 
-You can do this by running the install of the theme package again: `npm install --save gatsby-theme-blog`.
+Você pode fazer isso executando a instalação do pacote de temas novamente: `npm install --save gatsby-theme-blog`.
