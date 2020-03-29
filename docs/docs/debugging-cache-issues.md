@@ -1,13 +1,13 @@
 ---
-title: Debugging Cache Issues
+title: Depurando Problemas de Cache
 ---
 
-There can be certain scenarios in which the Gatsby caching mechanism appears to fail, which can lead to issues like:
+Pode haver certas situações nas quais o mecanismo de cache do Gatsby parece falhar, o que pode levar a problemas como:
 
-- Content not appearing when it should
-- Changes to plugin source code not appearing to be invoked appropriately
+- Conteúdo não aparecendo quando deveria
+- Alterações no código do plugin nativo que não parecem ser chamadas adequadamente
 
-and more! If you've found yourself writing a script like:
+e mais! Se você se perceber escrevendo um script da seguinte forma:
 
 ```json:title=package.json
 {
@@ -17,9 +17,9 @@ and more! If you've found yourself writing a script like:
 }
 ```
 
-consider utilizing the `gatsby clean` command which can help resolve caching issues for you.
+considere usar o comando `gatsby clean` que pode ajudar a resolver os seus problemas de cache.
 
-First make sure the version of `gatsby` specified in your `package.json` dependencies is _at least_ `2.1.1`, and then make the following change to `package.json`:
+Primeiro certifique-se que a versão do `gatsby` especificada nas dependências do seu `package.json` é _no mínimo_ a `2.1.1`, e então faça a seguinte alteração no `package.json`:
 
 ```json:title=package.json
 {
@@ -29,8 +29,8 @@ First make sure the version of `gatsby` specified in your `package.json` depende
 }
 ```
 
-Now when issues arise that seem to be related to caching, you can use `npm run clean` to wipe out the cache and start from a fresh slate.
+Agora, quando surgirem problemas relacionados a cache, você pode usar `npm run clean` para limpar o cache e começar do zero.
 
-_Note: If you find yourself using this command regularly, consider helping us out and [responding to our GitHub Issue][github-issue] with clear reproduction steps._
+_Observação: Se você perceber que está usando o comando constantemente, considere nos ajudar [respondendo nosso Github Issue][github-issue] com uma descrição clara de como reproduzir o problema._
 
 [github-issue]: https://github.com/gatsbyjs/gatsby/issues/11747

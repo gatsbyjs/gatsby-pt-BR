@@ -21,12 +21,9 @@ Este artigo é uma boa introdução à crescente comunidade de ferramentas em to
 
 Por padrão, o Gatsby emula a seguinte configuração:
 
-```javascript:title=package.json
+```json:title=package.json
 {
- "browserslist": [
-   ">0.25%",
-   "not dead"
- ]
+  "browserslist": [">0.25%", "not dead"]
 }
 ```
 
