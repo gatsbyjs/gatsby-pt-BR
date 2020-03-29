@@ -1,8 +1,8 @@
 ---
-title: Sourcing from Prose
+title: Integrando a partir do Prose
 ---
 
-This is a stub. Help our community expand it.
+Esta página é um esboço. Ajude a nossa comunidade a expandi-lo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, use o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir
+que seu pull request seja aceito.

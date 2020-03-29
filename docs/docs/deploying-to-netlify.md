@@ -1,71 +1,68 @@
 ---
-title: Deploying to Netlify
+title: Publicando no Netlify
 ---
 
-This guide walks through how to deploy and host your next Gatsby site on [Netlify](https://www.netlify.com/).
+Esse guia explica como publicar e hospedar seu próximo _site_ Gatsby no [Netlify](https://www.netlify.com/).
 
-Netlify is an excellent option for deploying Gatsby sites. Netlify is a unified
-platform that automates your code to create performant, easily maintainable
-sites and web apps. They provide continuous deployment (Git-triggered builds);
-an intelligent, global CDN; full DNS (including custom domains); automated
-HTTPS; asset acceleration; and a lot more.
+Netlify é uma opção excelente para publicar _sites_ Gatsby. Netlify é uma plataforma unificada que automatiza seu código para criar _sites_ e aplicativos _web_ de fácil manutenção e alta performance. Eles fornecem publicação contínua (a partir de _builds_ acionados através do Git); um  CDN global inteligente; DNS completo (incluindo domínios customizados); HTTPS automatizado; Aceleração de _assets_; e muito mais.
 
-Their free tier includes unlimited personal and commercial projects, HTTPS,
-continuous deployment from public or private repos, and more.
+Eles fornecem um nível gratuito que inclui projetos pessoais e comerciais ilimitados, HTTPS, publicação contínua de repositórios públicos ou privados e mais.
 
-## Hosting setup
+## Configuração de hospedagem
 
-There are two ways you can host your site:
+Existem dois meios de hospedar o seu _site_:
 
-1.) [Git repository setup](#git-repository-setup)
+1. [Configuração de repositório do Git](#configuração-de-repositório-do-git)
 
-2.) [Upload site folder](#upload-site-folder)
+2. [Enviando a pasta do _site_](#enviando-a-pasta-do-site)
 
-### Git repository setup
+### Configuração de repositório do Git
 
-Netlify currently has built in support for [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) and [Bitbucket](https://bitbucket.org/). This approach allows you to roll back to past versions of the website whenever you want. You also gain the ability to redeploy the site simply by pushing the code to the respective repository, with no need to manually rebuild and upload every time you make changes. Your repository can be private or public.
+Netlify tem suporte embutido para [Github](https://github.com/), [GitLab](https://about.gitlab.com/) e [Bitbucket](https://bitbucket.org/). Essa abordagem permite reverter para versões antigas do _site_ sempre que você desejar. Você ainda ganha a habilidade de publicar novamente o _site_ enviando o código ao respectivo repositório, sem a necessidade de fazer a construção e o envio de forma manual toda vez que você realizar alterações, sendo seu repositório público ou privado.
 
-Now, login to Netlify and you will see a `New site from git` button at the top right corner of the screen. Click on it and connect with the same git provider that you used to host your website and authorize Netlify to use your account. Choose your website repository and it will take you to deploy settings with the below options.
+Agora, entre no netlify e você vai ver um botão `New site from git` (Novo site a partir do git) no canto superior direito da sua tela. Clique nele e conecte com o mesmo provedor git que você usa para hospedar o seu _site_ e permita ao Netlify usar sua conta. Escolha o repositório do seu _site_ e você será levado as configurações de publicação com as opções abaixo.
 
-- Branch to deploy: You can specify a branch to monitor. When you push to that particular branch, only then will Netlify build and deploy the site. The default is `master`.
-- Build Command: You can specify the command you want Netlify to run when you push to the above branch. The default is `npm run build`.
-- Publish directory: You can specify which folder Netlify should use to host the website, e.g., public, dist, build. The default is `public`.
-- Advanced build settings: If the site needs environment variables to build, you can specify them by clicking on `Show advanced` and then the `New Variable` button.
+- _Branch to Deploy_ (Branch para publicação): Você pode especificar uma _branch_ para ser monitorada. Quando você fizer o envio para aquela _branch_ específica, só então o Netlify irá construir e publicar o _site_. A _branch_ padrão é a `master`.
+- _Build Command_ (Comando para construção): Você pode especificar o comando que você quer que o Netlify rode quando você enviar para a _branch_ acima. O comando padrão é `npm run build`.
+- _Publish directory_ (Diretório de publicação): Você pode especificar qual pasta o Netlify deve usar para hospedar seu _site_, exemplo, _public_, _dist_, _build_. O diretório padrão é o `public`.
+- Configurações avançadas de construção: Se o _site_ necessita de variáveis de ambiente para construção, você especificá-las clicando em _Show advanced_ (Mostrar avançado) e então no botão _New variable_ (Nova variável). 
 
-Click on the `Deploy site` button and Netlify will start the build and deploy process you have specified. You can go to the `Deploys` tab and see the process unfold in the `Deploy log`. After a few moments, it will give you the live site URL, e.g., `random-name.netlify.com`.
+Clique no botão _Deploy site_ (Publicar site) e o Netlify vai começar o processo de construção e publicação que foi especificado por você. Você pode ir na aba _Deploys_ (Publicados) e acompanhar o progresso do processo no _Deploy log_ (Log de publicação). Após alguns momentos, você vai receber o URL em que seu _site_ foi publicado, exemplo `nome-aleatorio.netlify.com`
 
-### Upload site folder
+### Enviando a pasta do site
 
-There is also the option to upload your site to Netlify without using git.
+Existe também a opção de enviar o seu _site_ para o Netlify sem utilizar git.
 
-For the [production build](/docs/glossary#build), you will need to run the `gatsby build` command; Gatsby will generate the production site in the `public` folder. During the build process CSS, JavaScript, HTML, and images will be optimized and placed into this folder.
+Para a [_build_ de produção](/docs/glossary#build), você vai precisar rodar o comando `gatsby build`; Gatsby vai gerar o _site_ de produção na pasta `public`. Durante o processo de construção, o CSS, JavaScript, HTML e as imagens vão ser otimizados e incluídos nessa pasta.
 
 ```shell
 gatsby build
 ```
 
-Once the build is complete, you are ready to upload your site to Netlify. Go to [Netlify](https://app.netlify.com/) and login or sign up using any method. After a successful login, you will see the message shown below:
+Quando a build estiver completa, você estará pronto para enviar seu site ao Netlify. Acesse [Netlify](https://app.netlify.com/) e faça o _login_ ou se cadastre usando qualquer método. Após realizar o _login_ com sucesso, você verá a mensagem abaixo:
 
 ```text
     Want to deploy a new site without connecting to Git?
           Drag and drop your site folder here
+    (Você quer publicar um novo site sem conectar ao Git?
+          Arraste e solte a pasta do seu site aqui)
 ```
 
-To start the deploy process, you need only drag and drop the `public` folder over the above area on the Netlify website. Netlify will create a new site with a random name, then start uploading and hosting the application files. After a few moments, it will give you a live site URL e.g. `random-name.netlify.com`.
+Para iniciar o processo de publicação, você precisa apenas arrastar e soltar a pasta `public` sobre a área acima no _site_ do Netlify. Netlify vai criar um novo _site_ com um nome aleatório, e então começar a enviar e hospedar os arquivos da aplicação. Após alguns momentos será gerado um URL para o _site_, exemplo `nome-aleatorio.netlify.com`
 
-![alt text](./images/gatsby-default-starter.png "Gatsby Default Starter")
+![alt text](./images/gatsby-default-starter.png "Starter padrão do Gatsby")
 
-## Continuous deployment
+## Publicação contínua
 
-Now that your site is connected to your repository, Netlify will deploy the site and publish it whenever you push to your Git repo.
+Agora que o seu _site_ está conectado ao seu repositório, o Netlify vai fazer a publicação sempre que você enviar alterações para o seu repositório Git.
 
-## Domain setup
+## Configuração de domínio
 
-From the site `Overview`, you can go to `Domain Settings`. By adding a custom domain and setting the `CNAME` record as the Netlify project URL in your DNS provider settings, you should be able to see the Netlify project at your domain URL.
+Na aba _Overview_ (Visão geral) do seu _site_, você pode acessar a opção _Domain Settings_ (Configurações de domínio). Ao adicionar um domínio personalizado e definir o registro `CNAME` como o URL do projeto Netlify nas configurações do seu provedor de DNS, você deve ser capaz de ver o projeto do Netlify na URL de seu domínio.
 
-## Other resources
+## Outros recursos
 
-- [A Step-by-Step Guide: Gatsby on Netlify](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/)
-- More [blog posts on Gatsby + Netlify](/blog/tags/netlify)
+- [Um guia passo a passo: Gatbsy no Netlify](https://www.netlify.com/blog/2016/02/24/a-step-by-step-guide-gatsby-on-netlify/)
+- Mais [postagens de blog no Gatsby + Netlify](/blog/tags/netlify)
 - [Gatsby Netlify CMS](/packages/gatsby-plugin-netlify-cms)
-- [Gatsby + Netlify CMS Starter](https://github.com/netlify-templates/gatsby-starter-netlify-cms)
+- [Starter CMS do Gatsby + Netlify](https://github.com/netlify-templates/gatsby-starter-netlify-cms)

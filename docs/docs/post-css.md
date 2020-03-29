@@ -2,27 +2,29 @@
 title: PostCSS
 ---
 
-PostCSS transforms extended syntaxes and features into modern, browser-friendly CSS. This guide will show you how to get started with Gatsby and PostCSS.
+PostCSS transforma sintaxes e funcionalidades extensas em um CSS moderno e compatível com o browser. Este guia vai lhe mostrar como começar a usar o Gatsby e PostCSS juntos.
 
-## Installing and Configuring PostCSS
+## Instalando e Configurando o PostCSS
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [**Quick Start guide**](/docs/quick-start/), then come back.
+Este guia supõe que você já tenha o Gatsby configurado em seu projeto. Caso você precise configurá-lo, leia o [**Guia de Início Rápido**](/docs/quick-start/) antes de seguir.
 
-1.  Install the Gatsby plugin [**gatsby-plugin-postcss**](/packages/gatsby-plugin-postcss/).
+1.  Instale o plugin do Gatsby [**gatsby-plugin-postcss**](/packages/gatsby-plugin-postcss/).
 
-`npm install --save gatsby-plugin-postcss`
+```shell
+npm install --save gatsby-plugin-postcss
+```
 
-2.  Include the plugin in your `gatsby-config.js` file.
+2.  Adicione o plugin em seu arquivo `gatsby-config.js`.
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-postcss`],
 ```
 
-> **Note**: If you need to pass options to PostCSS use the plugins options; see [postcss-loader](https://github.com/postcss/postcss-loader) for all available options.
+> **Nota**: Se você precisar passar opções para o PostCSS, use as opções do plugin; Veja todas as opções disponíveis em [postcss-loader](https://github.com/postcss/postcss-loader).
 
-3.  Write your stylesheets using PostCSS (.css files) and require or import them as normal.
+3.  Escreva suas folhas de estilos usando o PostCSS (arquivos .css) e importe ou faça `require` normalmente.
 
-```css:styles.css
+```css:title=styles.css
 @custom-media --med (width <= 50rem);
 
 @media (--med) {
@@ -38,13 +40,13 @@ plugins: [`gatsby-plugin-postcss`],
 import "./styles.css"
 ```
 
-### With CSS Modules
+### Com Módulos CSS
 
-Using CSS modules requires no additional configuration. Simply prepend `.module` to the extension. For example: `App.css -> App.module.css`. Any file with the module extension will use CSS modules.
+Não é necessário configuração inicial para utilizar módulos CSS. Apenas adicione `.module` a extensão. Por exemplo: `App.css -> App.module.css`. Qualquer arquivo com a extensão `.module` irá usar os módulos CSS.
 
-### PostCSS plugins
+### Plugins PostCSS
 
-If you would prefer to add additional postprocessing to your PostCSS output you can specify plugins in the plugin options:
+Se você preferir adicionar um pós-processamento adicional a sua saída PostCSS, você pode especificar os plugins nas opções:
 
 ```javascript:title=gatsby-config.js
 plugins: [
@@ -57,7 +59,7 @@ plugins: [
 ],
 ```
 
-Alternatively, you can use `postcss.config.js` to specify your particular PostCSS configuration:
+Outra alternativa, você pode usar `postcss.config.js` para especificar sua própria configuração do PostCSS:
 
 ```javascript:title=postcss.config.js
 const postcssPresetEnv = require(`postcss-preset-env`)
@@ -71,6 +73,6 @@ module.exports = () => ({
 })
 ```
 
-## Other resources
+## Outros Recursos
 
-- [Introduction to postcss](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)
+- [Introdução ao postcss](https://www.smashingmagazine.com/2015/12/introduction-to-postcss/)

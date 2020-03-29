@@ -2,79 +2,80 @@
 title: Gatsby Starters
 ---
 
-The Gatsby CLI tool lets you install **starters**, which are boilerplate Gatsby sites maintained by the community and intended for jump-starting development quickly.
+A CLI do Gatsby permite instalar **starters**, que são bases para sites Gatsby mantidos pela comunidade e projetados para partir ao desenvolvimento rapidamente.
 
-## Installing starters
+## Instalando starters
 
-Execute the `gatsby new` command to clone a boilerplate starter, install its dependencies, and clear Git history.
+Execute o comando `gatsby new` para clonar a base de um starter, instalar suas dependências, e limpar o histórico Git.
 
-### Using Git repo URLs
+### Usando URLs de repositório Git
 
-When creating a new Gatsby site, you can optionally specify a starter to base your new site on; they can come from any publicly available Git repo, such as GitHub, GitLab, or Bitbucket. You can supply the `[URL_OF_STARTER_GIT_REPO]` directly:
+Ao criar um novo site Gatsby, você pode opcionalmente especificar um starter para basear seu novo site; eles podem vir de qualquer repositório Git disponível publicamente, como GitHub, GitLab ou Bitbucket. Você pode fornecer a `[URL_DO_REPOSITORIO_GIT_DO_STARTER]` diretamente:
 
 ```shell
-gatsby new [SITE_DIRECTORY] [URL_OF_STARTER_GIT_REPO]
+gatsby new [DIRETORIO_DO_SITE] [URL_DO_REPOSITORIO_GIT_DO_STARTER]
 ```
 
-For example, to create a site in a `blog` directory with Gatsby Starter Blog from its GitHub URL:
+Por exemplo, para criar um site em uma pasta `blog` com o Gatsby Starter Blog da sua URL do GitHub:
 
 ```shell
 gatsby new blog https://github.com/gatsbyjs/gatsby-starter-blog
 ```
 
-This downloads the files and initializes the site by running `npm install`.
+Isso baixa os arquivos e inicializa o site executando `npm install`. 
 
-### Using GitHub usernames and repos instead of URLs
+### Usando nomes de usuário e repositórios GitHub em vez de URLs
 
-Alternatively, you can also supply a GitHub user name and repository:
+Como alternativa, você pode também pode fornecer um nome de usuário e repositório GitHub:
 
 ```shell
-gatsby new [SITE_DIRECTORY] [GITHUB_USER_NAME/REPO]
+gatsby new [DIRETORIO_DO_SITE] [NOME_DE_USUARIO_NO_GITHUB/REPOSITORIO]
 ```
 
-Here is an example with the `[GITHUB_USER_NAME/REPO]` format:
+Aqui temos um exemplo utilizando esse formato `[NOME_DE_USUARIO_NO_GITHUB/REPOSITORIO]`:
 
 ```shell
 gatsby new blog gatsbyjs/gatsby-starter-blog
 ```
 
-This also downloads the files and initializes the site by running `npm install`.
+Isso também baixa os arquivos e inicializa o site executando `npm install`.
 
-If you don't specify a custom starter, your site will be created from the [default starter](https://github.com/gatsbyjs/gatsby-starter-default).
+Se você não especificar um starter, seu site será criado a partir do [starter padrão](https://github.com/gatsbyjs/gatsby-starter-default).
 
-> **Note:** If you work for an Enterprise-level company where you are unable to pull from public GitHub repositories, you can still set up Gatsby. Check out the [docs to learn more](/docs/setting-up-gatsby-without-gatsby-new/).
 
-### Using a local starter
+> **Observação:** Se você trabalha para um empresa de nível corporativo onde não tem permissão para fazer pull de repositórios públicos, você ainda pode configurar o Gatsby. Confira a [documentação para saber mais](/docs/setting-up-gatsby-without-gatsby-new/).
 
-Another option is to supply a path (relative or absolute) to a local folder containing a starter:
+### Usando um starter local
+
+Outra opção é fornecer um caminho (relativo ou absoluto) para uma pasta local que contém um starter:
 
 ```shell
-gatsby new [SITE_DIRECTORY] [LOCAL_PATH_TO_STARTER]
+gatsby new [DIRETORIO_DO_SITE] [CAMINHO_LOCAL_PARA_O_STARTER]
 ```
 
-Here is an example assuming a starter exists on the path `./Code/my-local-starter`:
+Aqui está um exemplo, assumindo que existe um starter no caminho `./Code/my-local-starter`:
 
 ```shell
 gatsby new blog ./Code/my-local-starter
 ```
 
-## Official starters
+## Starters oficiais
 
-Official starters are maintained by Gatsby.
+Starters oficiais são mantidos pelo Gatsby.
 
-| Starter                                                                              | Demo                                                         | Use case                       | Features                     |
-| ------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------ | ---------------------------- |
-| [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default)         | [Demo](https://gatsby-starter-default-demo.netlify.com/)     | Appropriate for most use cases | General Gatsby site          |
-| [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)               | [Demo](https://gatsby-starter-blog-demo.netlify.com/)        | Create a basic blog            | Blog post pages and listings |
-| [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world) | [Demo](https://gatsby-starter-hello-world-demo.netlify.com/) | Learn Gatsby                   | Gatsby bare essentials       |
+| Starter                                                                              | Demo                                                         | Caso de uso                                | Contém                           |
+| ------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | -------------------------------- |
+| [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default)         | [Demo](https://gatsby-starter-default-demo.netlify.com/)     | Apropriado para a maioria dos casos de uso | Site padrão em Gatsby            |
+| [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)               | [Demo](https://gatsby-starter-blog-demo.netlify.com/)        | Criar um blog simples                      | Postagens e listagens de um blog |
+| [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world) | [Demo](https://gatsby-starter-hello-world-demo.netlify.com/) | Aprender Gatsby                            | O essencial e básico do Gatsby   |
 
-## Making starters
+## Criando starters
 
-Learn [how to make a starter](/docs/creating-a-starter/) in the Gatsby docs. Starters can be created for your team(s) only or distributed to the broader community. It's up to you!
+Aprenda [como fazer um starter](/docs/creating-a-starter/) na documentação do Gatsby. Starters podem ser criados apenas para seu time ou distribuídos para a comunidade em geral. Só depende de você!
 
-## Community starters
+## Starters da comunidade
 
-Community starters are created and maintained by Gatsby community members.
+Starters da comunidade são criados e mantidos por membros da comunidade Gatsby.
 
-- Looking for a starter for a particular use case? Browse starters that have been submitted to the [Starter Library](/starters/).
-- Created a starter you'd like to share? Follow [these steps to submit your starter](/contributing/submit-to-starter-library/) to the Starter Library.
+- Buscando por um starter para um caso de uso específico? Procure nos starters que foram enviados a [Biblioteca Starter](/starters/).
+- Criou um starter que gostaria de compartilhar? Siga [estes passos para enviar seu starter](/contributing/submit-to-starter-library/) a Biblioteca Starter.

@@ -1,52 +1,52 @@
 ---
-title: Using Gitpod, an Online Dev Environment
+title: Utilizando Gitpod, Ambiente de Desenvolvimento Online
 ---
 
-This page outlines how to use Gitpod, a free online dev environment, to contribute to Gatsby core and its ecosystem. For instructions on setting up a dev environment locally, visit the [local set-up](/contributing/setting-up-your-local-dev-environment/) page.
+Esta página nos dá um esboço de como utilizar o Gitpod, um ambiente de desenvolvimento online gratuito, para contribuir com o core do Gatsby e seu ecossistema. Para obter instruções sobre a configuração de um ambiente de desenvolvimento local, visite a página de [configuração local](/contributing/setting-up-your-local-dev-environment/).
 
-## About Gitpod
+## Sobre o Gitpod
 
-Gitpod makes contributions on GitHub easier, by allowing automated development environment setups. Instead of writing lengthy
-documentation of what to install and configure and letting every contributor go through this adventure, the setup is automated and reproducible.
+Gitpod deixa as contribuições no Github mais fáceis, pois permite a configuração automatizada de um ambiente de desenvolvimento. Ao invés de escrever uma longa
+documentação de como instalar e configurar, deixando todo contribuidor passar por essa aventura, a configuração é automatizada e reproduzível.
 
-Furthermore, Gitpod prebuilds any branch of a repository so that you don't need to wait for installation, cloning and building.
+Além disso, o Gitpod pré-builda qualquer branch de um repositório para que você não precise aguardar pela instalação, clone e build.
 
-## Get Started
+## Iniciando
 
-To start a fresh dev environment you can prefix the any GitHub URL with `gitpod.io/#`.
+Para iniciar um ambiente de desenvolvimento do zero, você pode prefixar qualquer URL do Github com `gitpod.io/#`.
 
-> Example: https://gitpod.io/#https://github.com/gatsbyjs/gatsby
+> Exemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby
 
-The started dev environment will open with a ready-built gatsby core project as well as one built example (gatsbygram).
-Three terminals are started side-by-side running the following processes:
+O ambiente de desenvolvimento irá abrir um projeto core do gatsby já buildado, bem como um exemplo de build (gatsbygram).
+Três terminais serão iniciados lado a lado executando os seguintes processos:
 
 - `yarn run watch --scope={gatsby,gatsby-image,gatsby-link}`
-  Watches and rebuilds the gatsby core code on any changes
+  Observa e rebuilda o código core do gatsby quando houver alguma alteração.
 - `gatsby-dev`
-  Copies over the changes from core to the example
+  Copia as alterações do core para o exemplo.
 - `gatsby develop`
-  Serves the example in development mode
+  Disponibiliza o exemplo em modo de desenvolvimento.
 
-The running example app is shown on the right in a preview window.
+A aplicação exemplo será exibida no lado direito, em uma janela de pré-visualização.
 
-## Working on an Issue
+## Trabalhando em uma Issue
 
-To start working on an issue, you can prefix the issue URL with `gitpod.io/#`.
+Para começar a trabalhar em uma issue, você pode prefixar a URL da issue com `gitpod.io/#`.
 
-> Example: https://gitpod.io/#https://github.com/gatsbyjs/gatsby/issues/1199
+> Exemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby/issues/1199
 
-This will open a fresh environment with a local branch named after the issue.
-You can now code, test, commit, push and create a PR from within the workspace.
+Isso irá abrir um ambiente de desenvolvimento local zerado, com uma branch local nomeada seguindo o nome da issue.
+Agora você pode codar, testar, comitar, fazer pushs e criar um PR de dentro do seu ambiente de trabalho.
 
-## Code Reviews
+## Revisão de Código
 
-Some code changes need a deeper review than what is possible on GitHub. Prefixing a PR with `gitpod.io/#` will open that branch in code review mode.
+Algumas das mudanças feitas precisam de uma revisão de código mais detalhada do que é possível se fazer no Github. Prefixar um _PR_ com `gitpod.io/#` irá abrir este branch em modo de revisão de código.
 
-In this mode you see the list of file changes on the left and can navigate through them. You can run the app and use the editing features to explore the changed code base. You can see existing comments or add new comments in the editor and submit your review result as well.
+Neste modo você verá a lista de arquivos modificados na esquerda, pelos quais se pode navegar. Ainda, pode-se rodar o app e utilizar as funcionalidades modificadas para explorar mais o código alterado. Você pode ver comentários existentes ou adicionar novos comentários no editor e submeter o resultado da sua revisão também.
 
-## How to Run Another Example
+## Como executar outro exemplo
 
-If you want to run another example you can open a terminal or use an existing one and run the following commands:
+Se quiser executar outro exemplo você pode abrir um novo ou um já existente terminal e rodar os seguintes comandos:
 
 ```shell
 yarn install

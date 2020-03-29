@@ -1,55 +1,55 @@
 ---
-title: Submit to Starter Library
+title: Enviar uma contribuição para a Biblioteca Starter
 ---
 
-Have you created a Gatsby starter you'd like to add to the [Starter Library](/starters/)? Follow these instructions.
+Você criou um Gatsby _starter_ e gostaria de adicioná-lo na [Biblioteca _Starter_](/starters/)? Siga estas instruções.
 
-## Steps
+## Etapas
 
-To get your site added to the starter library, follow the two steps below.
+Para adicionar seu site à biblioteca _starter_, siga as duas etapas abaixo.
 
-1.  If this is your first contribution to the Gatsby open source repo, follow the [Contribution guidelines](/contributing/code-contributions/).
+1. Se esta é sua primeira contribuição ao repositório _open source_ do Gatsby, siga as [orientações de contribuição](/contributing/code-contributions/).
 
-2.  Edit the [`starters.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/starters.yml) file by adding your starter information to the bottom of the list in the following format:
+2. Edite o arquivo [`starters.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/starters.yml) adicionando as informações do seu _starter_ no final da lista no seguinte formato:
 
 ```yaml:title=docs/starters.yml
-- url: Link to a demo of your starter
-  repo: Link to GitHub repo
-  description: Your starter description
+- url: Link para uma demonstração de seu starter
+  repo: Link para o repositório do GitHub
+  description: Sua descrição do starter
 
-  # These correspond to the category filters in the library
-  # See docs/categories.yml for valid tags.
+  # Estes correspondem aos filtros de categoria na biblioteca
+  # Veja docs/categories.yml para conhecer as tags válidas.
   tags:
     - Redux
 
-  # Add your site features
-  # These will be included on your starter's detail page.
+  # Adicione as funcionalidades do seu site
+  # Elas serão incluídas na página de detalhes do seu starter.
   features:
-    - Blog post listing with previews (image + summary) for each blog post
+    - Lista de postagens com visualizações (imagem + resumo) de cada postagem do blog
 ```
 
-Use the following template to ensure required fields are filled:
+Use o seguinte modelo para garantir que os campos obrigatórios sejam preenchidos:
 
 ```yaml:title=docs/starters.yml
-- url: (required)
-  repo: (required - https://github.com/{username}/{titleofthesite})
-  description: (optional)
+- url: (obrigatório)
+  repo: (obrigatório - https://github.com/{usuario}/{titulodosite})
+  description: (opcional)
   tags:
-    - (required)
+    - (obrigatório)
   features:
-    - (required)
+    - (obrigatório)
 ```
 
-Check out the [`starters.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/starters.yml) file for examples.
+Confira o arquivo [`starters.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/starters.yml) para exemplos.
 
-We prefer pull requests with the title in the following format:
-`chore(starters): add my-starter-name-here`
-If there are linting issues with your PR, you can fix them by running `npm run format`.
+Preferimos pull requests com o título no seguinte formato:
+`chore(starters): adicionar nome-do-meu-starter-aqui`
+Se houver problemas de _linting_ com o seu PR, você poderá corrigi-los executando o `npm run format`.
 
-### Need to change details?
+### Precisa alterar algum detalhe?
 
-If you want to edit anything in your site submission later, simply edit the .yml file by submitting another PR. GitHub data (like stars) will be automatically pulled and updated, but your starter description, tags, and feature list are up to you!
+Se você deseja editar qualquer coisa no envio do seu site posteriormente, submeta uma nova PR atualizando o arquivo `.yml`. Os dados do GitHub (como estrelas) serão automaticamente puxados e atualizados, mas sua descrição, tags e lista de funcionalidades são de sua responsabilidade!
 
-### Adding new tag
+### Adicionando nova tag
 
-If you think that there is something missing in the tag list, you can update [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) and add a new one. However, we encourage you to use existing tags.
+Se você acha que algo está faltando na lista de tags, atualize o arquivo [`categories.yml`](https://github.com/gatsbyjs/gatsby/blob/master/docs/categories.yml) e adicione uma nova tag. No entanto, recomendamos que você use tags existentes.

@@ -1,43 +1,43 @@
 ---
-title: Build Caching
+title: Build Cache
 ---
 
-Plugins can cache data as JSON objects and retrieve them on consecutive builds.
+Plugins podem armazenar dados em cache como objetos JSON e recuperá-los em builds consecutivas.
 
-Caching is already used by Gatsby and plugins for example:
+Armazenamento em Cache já é usado pelo Gatsby e plugins, por exemplo:
 
-- any nodes created by source/transformer plugins are cached
-- `gatsby-plugin-sharp` caches built thumbnails
+- qualquer nó criado por plugin nativo/transformador é armazenado em cache.
+- o `gatsby-plugin-sharp` armazena em cache as miniaturas construidas.
 
-Data is stored in the `.cache` directory relative to your project root.
+Os dados são armazenados no diretório `.cache` na raíz do seu projeto.
 
-## The cache API
+## A API de cache
 
-The cache API is passed to [Gatsby's Node APIs](/docs/node-apis/) which is typically implemented by plugins.
+A API de cache é passada para [APIs de Nó do Gatsby](/docs/node-apis/) que é tipicamente implementada por plugins.
 
 ```js
 exports.onPostBootstrap = async function({ cache, store, graphql }) {}
 ```
 
-The two functions you would want to use are:
+As duas funções que você pode utilizar são:
 
 ### `set`
 
-Cache value
+Armazena Valor no cache
 
 `cache.set(key: string, value: any) => Promise<any>`
 
 ### `get`
 
-Retrieve cached value
+Devolve o valor do cache
 
 `cache.get(key: string) => Promise<any>`
 
-The [Node API helpers](/docs/node-api-helpers/#cache) documentation offers more detailed information on the API.
+A documentação [Node API helpers](/docs/node-api-helpers/#cache) oferece informações mais detalhadas sobre a API.
 
-## Plugin Example
+## Exemplo de plugin
 
-In your plugin's `gatsby-node.js` file, you can access the `cache` argument like so:
+No seu arquivo de plugin `gatsby-node.js`, você pode acessar o argumento `cache` dessa maneira:
 
 ```js:title=gatsby-node.js
 exports.onPostBuild = async function({ cache, store, graphql }, { query }) {
@@ -49,7 +49,7 @@ exports.onPostBuild = async function({ cache, store, graphql }, { query }) {
     const data = await graphql(query)
     obj.data = data
   } else if (Date.now() > obj.lastChecked + 3600000) {
-    /* Reload after a day */
+    /* Recarrega depois de um dia */
     const data = await graphql(query)
     obj.data = data
   }
@@ -58,19 +58,20 @@ exports.onPostBuild = async function({ cache, store, graphql }, { query }) {
 
   await cache.set(cacheKey, obj)
 
-  /* Do something with data ... */
+  /* Faz algo com os dados ... */
 }
 ```
 
-## Clearing cache
+## Limpando o cache
 
-Since cache files are stored within the `.cache` directory, simply deleting it will clear all cache. You can also use [`gatsby clean`](/docs/gatsby-cli/#clean) to delete the `.cache` and `public` folders.
-The cache is also invalidated by Gatsby in a few cases, specifically:
+Assumindo que os arquivos de cache são armazenados no diretório `.cache`, simplesmente deletando essa pasta irá limpar toda a cache. Você também pode usar o [`gatsby clean`](/docs/gatsby-cli/#clean) para deletar os diretórios `.cache` e `public`.
 
-- If `package.json` changes, for example a dependency is updated or added
-- If `gatsby-config.js` changes, for example a plugin is added or modified
-- If `gatsby-node.js` changes, for example if you invoke a new Node API, or change a `createPage` call
+O cache também é invalidado pelo Gatsby em alguns casos, especificamente:
 
-## Conclusion
+- Se há mudanças no arquivo `package.json`, no caso de adicionar ou atualizar uma dependência 
+- Se há mudanças no arquivo `gatsby-config.js`, por exemplo se um plugin foi adicionado ou modificado
+- Se há mudanças no arquivo `gatsby-node.js`, no caso se você invocar uma nova API de nó, ou alterar uma chamada `createPage`
 
-With the cache API you're able to persist data between builds, which is really helpful while developing a site with Gatsby (as you re-run `gatsby develop` really often). Performance-heavy operations (like image transformations) or downloading data can slow down the bootstrap of Gatsby significantly and adding this optimization to your plugin can be a huge improvement to your end users. You can also have a look at the following examples who implemented the cache API: [gatsby-source-contentful](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-contentful/src/download-contentful-assets.js), [gatsby-source-shopify](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-shopify/src/nodes.js#L23-L54), [gatsby-source-wordpress](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-wordpress/src/normalize.js#L471-L537), [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-transformer-remark/src/extend-node-type.js), [gatsby-source-tmdb](https://github.com/LekoArts/gatsby-source-tmdb/blob/e12c19af5e7053bfb7737e072db9e24acfa77f49/src/add-local-image.js).
+## Conclusão
+
+Com a API de cache você poderá manter dados entre builds, o que ajuda bastante enquanto você desenvolve um site com Gatsby (a medida que você executa varias vezes `gatsby develop`). Operações pesadas de desempenho (como transformações de imagem) ou download de dados podem diminuir a velocidade de inicialização do Gatsby significativamente e adicionar essa otimização ao seu plugin pode ser uma grande melhoria para seus usuários finais. Você também pode dar uma olhada nos seguintes exemplos que implementaram a API de cache: [gatsby-source-contentful](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-contentful/src/download-contentful-assets.js), [gatsby-source-shopify](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-shopify/src/nodes.js#L23-L54), [gatsby-source-wordpress](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-source-wordpress/src/normalize.js#L471-L537), [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/7f5b262d7b5323f1a387b8b7278d9a81ee227258/packages/gatsby-transformer-remark/src/extend-node-type.js), [gatsby-source-tmdb](https://github.com/LekoArts/gatsby-source-tmdb/blob/e12c19af5e7053bfb7737e072db9e24acfa77f49/src/add-local-image.js).

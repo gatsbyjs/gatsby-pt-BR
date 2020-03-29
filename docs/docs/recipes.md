@@ -29,56 +29,42 @@ A live example may not be possible depending on the nature of the recipe, in whi
 See [docs templates](/docs/docs-templates/) in the contributing docs for more help.
 -->
 
-Craving a happy medium between [full-length tutorials](/tutorial/) and crawling the [docs](/docs/)? Here's a cookbook of guiding recipes on how to build things, Gatsby style.
+Desejando um meio termo entre ler os [tutoriais completos](/tutorial/) e rastrear os [docs](/docs/)? Aqui está um livro de receitas orientadoras sobre como construir coisas, no estilo Gatsby.
 
-## 1. Pages and Layouts
+## 1. Páginas e Layouts
 
-### Project structure
+### Estrutura do projeto
 
-Inside a Gatsby project, you may see some or all of the following folders and files:
+Dentro de um projeto Gatsby, você pode ver algumas ou todas as seguintes pastas e arquivos:
 
-```
-|-- /.cache
-|-- /plugins
-|-- /public
-|-- /src
-    |-- /pages
-    |-- /templates
-    |-- html.js
-|-- /static
-|-- gatsby-config.js
-|-- gatsby-node.js
-|-- gatsby-ssr.js
-|-- gatsby-browser.js
-```
+## [2. Styling with CSS](/docs/recipes/styling-css)
 
-Some notable files and their definitions:
+Alguns arquivos notáveis e suas definições:
 
-- `gatsby-config.js` — configure options for a Gatsby site, with metadata for project title, description, plugins, etc.
-- `gatsby-node.js` — implement Gatsby’s Node.js APIs to customize and extend default settings affecting the build process
-- `gatsby-browser.js` — customize and extend default settings affecting the browser, using Gatsby’s browser APIs
-- `gatsby-ssr.js` — use Gatsby’s server-side rendering APIs to customize default settings affecting server-side rendering
+- `gatsby-config.js` — configurar opções para um site do Gatsby, com metadados para o título do projeto, descrição, plugins, etc
+- `gatsby-node.js` — implementar APIs Node.js do Gatsby para personalizar e estender as configurações padrão que afetam o processo de criação
+- `gatsby-browser.js` — personalizar e estender as configurações padrão que afetam o navegador, usando as APIs do navegador do Gatsby
+- `gatsby-ssr.js` — use as APIs de renderização do lado servidor do Gatsby para personalizar as configurações padrão que afetam a renderização do lado servidor
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- For a tour of all the common folders and files, read the docs on [Gatsby's Project Structure](/docs/gatsby-project-structure/)
-- For common commands, check out the [Gatsby CLI docs](/docs/gatsby-cli)
-- Check out the [Gatsby Cheat Sheet](/docs/cheat-sheet/) for downloadable info at a glance
+- Para realizar um tour em todas as pastas e arquivos comuns, leia os documentos referentes a [Estrutura de um Projeto Gatsby](/docs/gatsby-project-structure/)
+- Para comandos comuns, consulte a [documentação do Gatsby CLI](/docs/gatsby-cli)
+- Confira a [folha de colas do Gatsby](/docs/cheat-sheet/) para obter informações de download
 
-### Creating pages automatically
+### Criando páginas automaticamente
 
-Gatsby core automatically turns React components in `src/pages` into pages with URLs.
-For example, components at `src/pages/index.js` and `src/pages/about.js` would automatically create pages from those filenames for the site's index page (`/`) and `/about`.
+O Gatsby _core_ transforma automaticamente os componentes React dentro de `src/pages` em páginas com URLs. Por exemplo, componentes em `src/pages/index.js` e` src/pages/about.js` criam páginas automaticamente seguindo os nomes dos arquivos para a página de índice do site (`/`) e `/about`.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Um [site Gatsby](/docs/quick-start)
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-#### Directions
+#### Instruções
 
-1. Create a directory for `src/pages` if your site doesn't already have one.
-2. Add a component file to the pages directory:
+1. Crie um diretório para `src/pages` se o seu site ainda não tiver um
+2. Adicione um novo componente ao diretório de páginas:
 
 ```jsx:title=src/pages/about.js
 import React from "react"
@@ -93,26 +79,26 @@ const AboutPage = () => (
 export default AboutPage
 ```
 
-3. Run `gatsby develop` to start the development server.
-4. Visit your new page in the browser: `http://localhost:8000/about`
+3. Execute `gatsby develop` para iniciar o servidor de desenvolvimento
+4. Visite sua nova página no navegador: `http://localhost:8000/about`
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Creating and modifying pages](/docs/creating-and-modifying-pages/)
+- [Criando e modificando páginas](/docs/creating-and-modifying-pages/)
 
-### Linking between pages
+### Vinculando páginas
 
-Routing in Gatsby relies on the `<Link />` component.
+O roteamento no Gatsby depende do componente `<Link />`.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A Gatsby site with two page components: `index.js` and `contact.js`
-- The Gatsby `<Link />` component
-- The [Gatsby CLI](/docs/gatsby-cli/) to run `gatsby develop`
+- Um site do Gatsby com dois componentes de página: `index.js` e` contact.js`
+- O componente `<Link />` do Gatsby
+- O [Gatsby CLI](/docs/gatsby-cli/) para executar o comando `gatsby develop`
 
-#### Directions
+#### Instruções
 
-1. Open the index page component (`src/pages/index.js`), import the `<Link />` component from Gatsby, add a `<Link />` component above the header, and give it a `to` property with the value of `"/contact/"` for the pathname:
+1. Abra o componente da página de índice (`src/pages/index.js`), importe o componente `<Link />` do Gatsby, adicione um componente `<Link />` e insira uma propriedade `to` com o valor de `"/contact/"` para o nome do caminho:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -126,21 +112,21 @@ export default () => (
 )
 ```
 
-2. Run `gatsby develop` and navigate to the index page. You should have a link that takes you to the contact page when clicked!
+2. Execute `gatsby develop` e navegue até a página de índice. Você deve ter um link que o leve à página de contato quando clicado!
 
-> **Note**: Gatsby's `<Link />` component is a wrapper around [`@reach/router`'s Link component](https://reach.tech/router/api/Link). For more information about Gatsby's `<Link />` component, consult the [API reference for `<Link />`](/docs/gatsby-link/).
+> **Nota**: O componente `<Link />` do Gatsby é um invólucro em torno do componente Link do [`@reach/router`](https://reach.tech/router/api/Link). Para obter mais informações sobre o componente `<Link />` de Gatsby, consulte a [Referência da API](/docs/gatsby-link/).
 
-### Creating a layout component
+### Criando um componente de layout
 
-It's common to wrap pages with a React layout component, which makes it possible to share markup, styles, and functionality across multiple pages.
+É comum agrupar páginas com um componente de layout React, o que possibilita o compartilhamento de marcação, estilos e funcionalidade em várias páginas
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A Gatsby Site
+- Um [site Gatsby](/docs/quick-start)
 
-#### Directions
+#### Instruções
 
-1. Create a layout component in `src/components`, where child components will be passed in as props:
+1. Crie um componente de layout em `src/components`, onde os componentes filhos serão transmitidos como props:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -152,7 +138,7 @@ export default ({ children }) => (
 )
 ```
 
-2. Import and use the layout component in a page:
+2. Importe e use o componente de layout em uma página:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -166,23 +152,23 @@ export default () => (
 )
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Create a layout component in [tutorial part three](/tutorial/part-three/#your-first-layout-component)
-- Styling with [Layout Components](/docs/layout-components/)
+- Crie um componente de layout no [tutorial parte três](/tutorial/part-three/#your-first-layout-component)
+- Estilizando com [componentes de layout](/docs/layout-components/)
 
-### Creating pages programmatically with createPage
+### Criando páginas programaticamente com createPage
 
-You can create pages programmatically in the `gatsby-node.js` file with helper methods Gatsby provides.
+Você pode criar páginas programaticamente no arquivo `gatsby-node.js` com os métodos auxiliares que o Gatsby fornece.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- A `gatsby-node.js` file
+- Um [site Gatsby](/docs/quick-start)
+- Um arquivo `gatsby-node.js`
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-node.js`, add an export for `createPages`
+1. Em `gatsby-node.js`, adicione uma exportação para `createPages`
 
 ```javascript:title=gatsby-node.js
 // highlight-start
@@ -192,13 +178,13 @@ exports.createPages = ({ actions }) => {
 // highlight-end
 ```
 
-2. Destructure the `createPage` action from the available actions so it can be called by itself, and add or get data
+2. Faça uma desestruturação da ação `createPage`, para que possa ser chamada sozinha e permitir que você adicione ou obtenha dados
 
 ```javascript:title=gatsby-node.js
 exports.createPages = ({ actions }) => {
   // highlight-start
   const { createPage } = actions
-  // pull in or use whatever data
+  // puxe ou use quaisquer dados
   const dogData = [
     {
       name: "Fido",
@@ -213,7 +199,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-3. Loop through the data in `gatsby-node.js` and provide the path, template, and context (data that will be passed in the props' pageContext) to `createPage` for each invocation
+3. Faça um loop pelos dados em `gatsby-node.js` e forneça o caminho, o modelo e o contexto (dados que serão passados no _pageContext_ dos objetos) para `createPage` em cada chamada
 
 ```javascript:title=gatsby-node.js
 exports.createPages = ({ actions }) => {
@@ -241,7 +227,7 @@ exports.createPages = ({ actions }) => {
 }
 ```
 
-4. Create a React component to serve as the template for your page that was used in `createPage`
+4. Crie um componente React para servir como modelo para sua página que foi usada em `createPage`
 
 ```jsx:title=src/templates/dog-template.js
 import React from "react"
@@ -253,28 +239,28 @@ export default ({ pageContext: { dog } }) => (
 )
 ```
 
-5. Run `gatsby develop` and navigate to the path of one of the pages you created (like at `http://localhost:8000/Fido`) to see the data you passed it displayed on the page
+5. Execute `gatsby develop` e navegue até o caminho de uma das páginas que você criou (como em `http://localhost:8000/Fido`) para ver os dados que você passou exibidos na página
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Tutorial section on [programmatically creating pages from data](/tutorial/part-seven/)
-- Reference guide on [using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/)
-- [Example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) for this recipe
+- Seção do tutorial sobre [criar páginas programaticamente a partir de dados](/tutorial/part-seven/)
+- Guia de referência para [usar o Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/)
+- [Repositório exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) para esta receita
 
-## 2. Styling with CSS
+## 2. Estilizando com CSS
 
-There are so many ways to add styles to your website; Gatsby supports almost every possible option, through official and community plugins.
+Existem muitas maneiras de adicionar estilos ao seu site; O Gatsby suporta quase todas as opções possíveis, através de plugins oficiais e da comunidade.
 
-### Using global CSS files without a Layout component
+### Usando arquivos CSS globais sem um componente de Layout
 
-#### Prerequisites
+#### Pré-requisitos
 
-- An existing [Gatsby site](/docs/quick-start/) with an index page component
-- A `gatsby-browser.js` file
+- Um [site Gatsby](/docs/quick-start/) com um componente de página de índice
+- Um arquivo `gatsby-browser.js`
 
-#### Directions
+#### Instruções
 
-1. Create a global CSS file as `src/styles/global.css` and paste the following into the file:
+1. Crie um arquivo CSS global com o nome `src/styles/global.css` e cole o seguinte trecho de código no arquivo:
 
 ```css:title=src/styles/styles/global.css
 html {
@@ -286,37 +272,37 @@ p {
 }
 ```
 
-2. Import the global CSS file in the `gatsby-browser.js` file such as the following:
+2. Importe o arquivo CSS global no arquivo `gatsby-browser.js`, da seguinte maneira:
 
 ```javascript:gatsby-browser.js
 import "./src/styles/global.css"
 ```
 
-> **Note:** You can also make use of `require('./src/styles/global.css')` to import the global CSS file in your `gatsby-config.js` file.
+> **Nota:** Você também pode usar `require('./src/styles/global.css')` para importar o arquivo CSS global no seu arquivo `gatsby-config.js`.
 
-3. Run `gatsby-develop` to observe the global styling being applied across your site.
+3. Execute `gatsby-develop` para observar o estilo global sendo aplicado em seu site.
 
-> **Note:** This approach is not the best fit if you are using CSS-in-JS for styling your site, in which case a layout page with all the shared components should be used. This is covered in the next recipe.
+> **Nota:** Essa abordagem não é a melhor opção se você estiver usando CSS-in-JS para estilizar seu site. Nesse caso, uma página de layout com todos os componentes compartilhados deve ser usada. Isso é abordado na próxima receita.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- More on [adding global styles without a layout component](/docs/global-css/#adding-global-styles-without-a-layout-component)
+- Mais sobre [adicionando estilos globais sem um componente de layout](/docs/global-css/#adding-global-styles-without-a-layout-component)
 
-### Using global styles in a layout component
+### Usando estilos globais em um componente de layout
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/) with an index page component
+- Um [site Gatsby](/docs/quick-start/) com um componente da página de índice
 
-#### Directions
+#### Instruções
 
-You can add global styles to a [shared layout component](/tutorial/part-three/#your-first-layout-component). This component is used for things that are common throughout the site, like a header or footer.
+Você pode adicionar estilos globais a um [componente de layout compartilhado](/tutorial/part-three/#your-first-layout-component). Esse componente é usado para coisas comuns em todo o site, como um cabeçalho ou rodapé.
 
-1. If you don't already have one, create a new directory in your site at `/src/components`.
+1. Se você ainda não possui um, crie um novo diretório em seu site em `/src/components`
 
-2. Inside the components directory, create two files: `layout.css` and `layout.js`.
+2. Dentro do diretório de componentes, crie dois arquivos: `layout.css` e `layout.js`
 
-3. Add the following to `layout.css`:
+3. Adicione o seguinte trecho de código ao arquivo `layout.css`:
 
 ```css:title=/src/components/layout.css
 body {
@@ -324,7 +310,7 @@ body {
 }
 ```
 
-4. Edit `layout.js` to import the CSS file and output layout markup:
+4. Edite `layout.js` para importar o arquivo CSS e estilizar o layout:
 
 ```jsx:title=/src/components/layout.js
 import React from "react"
@@ -333,7 +319,7 @@ import "./layout.css"
 export default ({ children }) => <div>{children}</div>
 ```
 
-5. Now edit your site's homepage at `/src/pages/index.js` and use the new layout component:
+5. Agora edite a página inicial do seu site em `/src/pages/.js` e use o novo componente de layout:
 
 ```jsx:title=/src/pages/index.js
 import React from "react"
@@ -342,21 +328,21 @@ import Layout from "../components/layout"
 export default () => <Layout>Hello world!</Layout>
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Standard Styling with Global CSS Files](/docs/global-css/)
-- [More about layout components](/tutorial/part-three)
+- [Estilização padrão com arquivos CSS globais](/docs/global-css/)
+- [Mais sobre componentes de layout](/tutorial/part-three)
 
-### Using Styled Components
+### Usando Styled Components
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/) with an index page component
-- [gatsby-plugin-styled-components, styled-components, and babel-plugin-styled-components](/packages/gatsby-plugin-styled-components/) installed in `package.json`
+- Um [site Gatsby](/docs/quick-start/) com um componente da página de índice
+- [gatsby-plugin-styled-components, styled-components, e babel-plugin-styled-components](/packages/gatsby-plugin-styled-components/) instalados no seu `package.json`
 
-#### Directions
+#### Instruções
 
-1. Inside your `gatsby-config.js` file add `gatsby-plugin-styled-components`
+1. Dentro do seu arquivo `gatsby-config.js`, adicione `gatsby-plugin-styled-components`
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -364,11 +350,11 @@ module.exports = {
 }
 ```
 
-2. Open the index page component (`src/pages/index.js`) and import the `styled-components` package
+2. Abra o componente da página de índice (`src/pages/index.js`) e importe o pacote `styled-components`
 
-3. Style components by creating style blocks for each element type
+3. Estilize os componentes criando blocos de estilo para cada tipo de elemento
 
-4. Apply to the page by including styled components in the JSX
+4. Aplique à página incluindo componentes estilizados no JSX
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -418,22 +404,22 @@ export default () => (
 )
 ```
 
-4. Run `gatsby develop` to see the changes
+4. Execute `gatsby develop` para ver as alterações
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [More on Using Styled Components](/docs/styled-components/)
-- [Egghead lesson](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
+- [Mais sobre o uso de Styled Components](/docs/styled-components/)
+- [Lições Egghead](https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components)
 
-### Using CSS Modules
+### Usando CSS Modules
 
-#### Prerequisites
+#### Pré-requisitos
 
-- An existing [Gatsby site](/docs/quick-start/) with an index page component
+- Um [site Gatsby](/docs/quick-start/) com um componente da página de índice
 
-#### Directions
+#### Instruções
 
-1. Create a CSS module as `src/pages/index.module.css` and paste the following into the module:
+1. Crie um módulo CSS como `src/pages/index.module.css` e cole o seguinte trecho de código no módulo:
 
 ```css:title=src/components/index.module.css
 .feature {
@@ -442,7 +428,7 @@ export default () => (
 }
 ```
 
-2. Import the CSS module as a JSX object `style` in the `index.js` file by modifying the page so it looks like the following:
+2. Importe o módulo CSS como um objeto JSX `style` no arquivo `index.js` modificando a página para que ela se pareça com o seguinte:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -458,41 +444,41 @@ export default () => (
 // highlight-end
 ```
 
-3. Run `gatsby develop` to see the changes.
+3. Execute `gatsby develop` para ver as alterações
 
-**Note:**
-Notice that the file extension is `.module.css` instead of `.css`, which tells Gatsby that this is a CSS module.
+**Nota:**
+Observe que a extensão do arquivo é `.module.css` em vez de `.css`, o que informa ao Gatsby que este é um CSS module.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- More on [Using CSS Modules](/tutorial/part-two/#css-modules)
-- [Live example on Using CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
+- Mais sobre como [usar CSS Modules](/tutorial/part-two/#css-modules)
+- [Exemplo usando CSS modules](https://github.com/gatsbyjs/gatsby/blob/master/examples/using-css-modules)
 
-### Using Sass/SCSS
+### Usando Sass/SCSS
 
-Sass is an extension of CSS that gives you more advanced features like nested rules, variables, mixins, and more.
+Sass é uma extensão do CSS que oferece recursos mais avançados, como regras aninhadas, variáveis, mixins e muito mais.
 
-Sass has 2 syntaxes. The most commonly used syntax is "SCSS", and is a superset of CSS. That means all valid CSS syntax, is valid SCSS syntax. SCSS files use the extension .scss
+O Sass possui 2 sintaxes. A sintaxe mais usada é "SCSS", que é um superconjunto de CSS. Isso significa que toda sintaxe CSS válida é uma sintaxe SCSS válida. Os arquivos SCSS usam a extensão .scss
 
-Sass will compile .scss and .sass files to .css files for you, so you can write your stylesheets with more advanced features.
+O Sass compilará arquivos .scss e .sass em arquivos .css para você, para que você possa escrever suas folhas de estilo com recursos mais avançados.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/).
+- Um [site Gatsby](/docs/quick-start/).
 
-#### Directions
+#### Instruções
 
-1. Install the Gatsby plugin [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) and `node-sass`.
+1. Instale o plugin Gatsby [gatsby-plugin-sass](https://www.gatsbyjs.org/packages/gatsby-plugin-sass/) e o `node-sass`
 
 `npm install --save node-sass gatsby-plugin-sass`
 
-2. Include the plugin in your `gatsby-config.js` file.
+2. Inclua o plugin no seu arquivo `gatsby-config.js`
 
 ```javascript:title=gatsby-config.js
 plugins: [`gatsby-plugin-sass`],
 ```
 
-3.  Write your stylesheets as `.sass` or `.scss` files and import them. If you don't know how to import styles, take a look at [Styling with CSS](/docs/recipes/#2-styling-with-css)
+3.  Escreva suas folhas de estilo como arquivos `.sass` ou `.scss` e importe-as. Se você não sabe importar estilos, dê uma olhada em [Estilizando com CSS](/docs/recipes/#2-styling-with-css)
 
 ```css:title=styles.scss
 $font-stack: Helvetica, sans-serif;
@@ -518,30 +504,30 @@ import "./styles.scss"
 import "./styles.sass"
 ```
 
-_Note: You can use Sass/SCSS files as modules too, like mentioned in the previous recipe about CSS modules, with the difference that instead of .css the extensions have to be .scss or .sass_
+>_Nota: Você também pode usar arquivos Sass/SCSS como módulos, como mencionado na receita anterior sobre módulos CSS, com a diferença de que, em vez de .css, as extensões devem ser .scss ou .sass_
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Difference between .sass and .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
-- [Sass guide from the official Sass website](https://sass-lang.com/guide)
-- [A more complete installation tutorial on Sass with some more explanations and more resources](https://www.gatsbyjs.org/docs/sass/)
+- [Diferença entre .sass e .scss](https://responsivedesign.is/articles/difference-between-sass-and-scss/)
+- [Guia no site oficial do Sass](https://sass-lang.com/guide)
+- [Um tutorial de instalação mais completo sobre o Sass, com mais explicações e mais recursos](https://www.gatsbyjs.org/docs/sass/)
 
-### Adding a Local Font
+### Adicionando uma fonte local
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/)
-- A font file: `.woff2`, `.ttf`, etc.
+- Um [site Gatsby](/docs/quick-start/)
+- Um arquivo de fonte: `.woff2`, `.ttf`, etc.
 
-#### Directions
+#### Instruções
 
-1. Copy a font file into your Gatsby project, such as `src/fonts/fontname.woff2`.
+1. Copie um arquivo de fonte no seu projeto Gatsby, como `src/fonts/fontname.woff2`
 
 ```
 src/fonts/fontname.woff2
 ```
 
-2. Import the font asset into a CSS file to bundle it into your Gatsby site:
+2. Importe o recurso de fonte em um arquivo CSS para agrupá-lo no site do Gatsby:
 
 ```css:title=src/css/typography.css
 @font-face {
@@ -550,39 +536,39 @@ src/fonts/fontname.woff2
 }
 ```
 
-**Note:** Make sure the font name is referenced from the relevant CSS, e.g.:
+**Nota:** Verifique se o nome da fonte é referenciado no CSS, por exemplo:
 
 ```css:title=src/components/layout.css
 body {
-  font-family: "Font Name", sans-serif;
+  font-family: "Nome da Fonte", sans-serif;
 }
 ```
 
-By targeting the HTML `body` element, your font will apply to most text on the page. Additional CSS can target other elements, such as `button` or `textarea`.
+Ao direcionar o elemento HTML `body`, sua fonte será aplicada à maioria dos textos da página. CSS adicionais podem direcionar outros elementos, como `button` ou `textarea`.
 
-If fonts are not updating following steps above, make sure to replace the existing font-family in relevant CSS.
+Se ao seguir as etapas acima, as fontes não estiverem atualizando, certifique-se de substituir a família de fontes existente no CSS relevante.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- More on [importing assets into files](/docs/importing-assets-into-files/)
+- Mais sobre [importar assets dentro de arquivos](/docs/importing-assets-into-files/)
 
-### Using Emotion
+### Usando Emotion
 
-[Emotion](https://emotion.sh) is a powerful CSS-in-JS library that supports both inline CSS styles and styled components. You can use each styling feature individually or together in the same file.
+[Emotion](https://emotion.sh) é uma poderosa biblioteca CSS-in-JS que suporta estilos CSS inline e _styled components_. Você pode usar cada recurso de estilo individualmente ou juntos no mesmo arquivo
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
+- Um [site Gatsby](/docs/quick-start/)
 
-#### Directions
+#### Instruções
 
-1. Install the [Gatsby Emotion plugin](/packages/gatsby-plugin-emotion/) and Emotion packages.
+1. Instale o [plugin Gatsby Emotion](/packages/gatsby-plugin-emotion/) e os pacotes Emotion.
 
 ```shell
 npm install --save gatsby-plugin-emotion @emotion/core @emotion/styled
 ```
 
-2. Add the `gatsby-plugin-emotion` plugin to your `gatsby-config.js` file:
+2. Adicione o plugin `gatsby-plugin-emotion` ao seu arquivo `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -590,9 +576,9 @@ module.exports = {
 }
 ```
 
-3. If you don't already have one, create a page in your Gatsby site at `src/pages/emotion-sample.js`.
+3. Se você ainda não possui uma, crie uma página no seu site do Gatsby em `src/pages/emotion-sample.js`.
 
-Import Emotion's `css` core package. You can then use the `css` prop to add [Emotion object styles](https://emotion.sh/docs/object-styles) to any element inside a component:
+Importe o pacote principal de `css` do Emotion. Você pode usar o prop `css` para adicionar [estilos de objetos do Emotion](https://emotion.sh/docs/object-styles) a qualquer elemento dentro de um componente:
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -612,7 +598,7 @@ export default () => (
 )
 ```
 
-4. To use Emotion's [styled components](https://emotion.sh/docs/styled), import the package and define them using the `styled` function.
+4. Para usar os [styled components do Emotion](https://emotion.sh/docs/styled), importe o pacote e defina-os usando a função `styled`.
 
 ```jsx:title=src/pages/emotion-sample.js
 import React from "react"
@@ -633,35 +619,35 @@ export default () => (
 )
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Using Emotion in Gatsby](/docs/emotion/)
+- [Usando Emotion no Gatsby](/docs/emotion/)
 - [Emotion website](https://emotion.sh)
-- [Getting started with Emotion and Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
+- [Introdução ao Emotion e Gatsby](https://egghead.io/lessons/gatsby-getting-started-with-emotion-and-gatsby)
 
-### Using Google Fonts
+### Usando Google Fonts
 
-Hosting your own [Google Fonts](https://fonts.google.com/) locally within a project means they won't have to be fetched over the network when your site loads, increasing your site's speed index by up to ~300 milliseconds on desktop and 1+ seconds on 3G. It's also recommended to limit custom font usage to only the essential for performance.
+Hospedar suas próprias fontes (possivelmente provenientes do [Google Fonts](https://fonts.google.com/)) localmente em um projeto significa que eles não terão que ser buscados pela rede quando o site carregar, aumentando o índice de velocidade do site em até ~300 milissegundos no desktop e mais de 1 segundo no 3G. Também é recomendável limitar o uso de fontes personalizadas apenas ao essencial para o desempenho.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli/) installed
-- Choosing a font package from [the typefaces project](https://github.com/KyleAMathews/typefaces)
+- Um [site Gatsby](/docs/quick-start)
+- O [Gatsby CLI](/docs/gatsby-cli/) instalado
+- Escolher um pacote de fonte de [the typefaces project](https://github.com/KyleAMathews/typefaces)
 
-#### Directions
+#### Instruções
 
-1. Run `npm install --save typeface-your-chosen-font`, replacing `your-chosen-font` with the name of the font you want to install from [the typefaces project](https://github.com/KyleAMathews/typefaces).
+1. Execute `npm install --save typeface-sua-fonte-escolhida`, substituindo `sua-fonte-escolhida` pelo nome da fonte que você deseja instalar a partir do [projeto _typefaces_](https://github.com/KyleAMathews/typefaces).
 
-An example to load the popular 'Source Sans Pro' font would be: `npm install --save typeface-source-sans-pro`.
+Um bom exemplo para carregar uma fonte seria 'Source Sans Pro': `npm install --save typeface-source-sans-pro`.
 
-2. Add `import "typeface-your-chosen-font"` to a layout template, page component, or `gatsby-browser.js`.
+2. Adicione `import "typeface-sua-fonte-escolhida"` a um modelo de layout, componente de página ou `gatsby-browser.js`.
 
 ```jsx:title=src/components/layout.js
 import "typeface-your-chosen-font"
 ```
 
-3. Once it's imported, you can reference the font name in a CSS stylesheet, CSS Module, or CSS-in-JS.
+3. Depois de importado, você pode fazer referência ao nome da fonte em uma folha de estilo CSS, CSS module ou CSS-in-JS.
 
 ```css:title=src/components/layout.css
 body {
@@ -669,128 +655,128 @@ body {
 }
 ```
 
-_NOTE: So for the above example, the relevant CSS declaration would be `font-family: 'Source Sans Pro';`_
+_NOTA: Portanto, para o exemplo acima, a declaração CSS relevante seria `font-family: 'Source Sans Pro';`_
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Typography.js](/docs/typography-js/) - Another option for using Google fonts on a Gatsby site
-- [The Typefaces Project Docs](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
-- [Live example on Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
+- [Typography.js](/docs/typography-js/) - Outra opção para usar fontes do Google em um site do Gatsby
+- [Documentação do The Typefaces Project](https://github.com/KyleAMathews/typefaces/blob/master/README.md)
+- [Exemplo de Kyle Mathews' blog](https://www.bricolage.io/typefaces-easiest-way-to-self-host-fonts/)
 
-## 3. Working with starters
+## 3. Trabalhando com Starters
 
-[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
+[Starters](/docs/starters/) são sites padronizados do Gatsby mantidos oficialmente ou pela comunidade.
 
-### Using a starter
+### Usando um starter
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-#### Directions
+#### Instruções
 
-1. Find the starter you'd like to use. (_The [Starter Library](/starters/?v=2) is a good place to look!_)
+1. Encontre o starter que você gostaria de usar. (_O [Starter Library](/starters/?v=2) é um bom lugar para procurar!_)
 
-2. Generate a new site based on the starter. In the terminal, run:
-
-```shell
-gatsby new {your-project-name} {link-to-starter}
-```
-
-> _Don't run the above command as-is -- remember to replace {your-project-name} and {link-to-starter}!_
-
-3. Run your new site:
+2.Gere um novo site com base no starter. No terminal, execute:
 
 ```shell
-cd {your-project-name}
-gatsby develop
+gatsby new {nome-do-seu-projeto} {link-do-starter}
 ```
 
-#### Additional resources
+> _Não execute o comando acima como está - lembre-se de substituir {nome-do-seu-projeto} {link-do-starter}!_
 
-- Follow a [more detailed guide](/docs/starters/) on using Gatsby starters.
-- Learn how to use the [Gatsby CLI](/docs/gatsby-cli) tool to use starters in [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Browse the [Starter Library](/starters/?v=2)
-- Check out Gatsby's [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
-
-## 4. Working with themes
-
-A Gatsby theme abstracts Gatsby configuration (shared functionality, data sourcing, design) into an installable package. This means that the configuration and functionality isn’t directly written into your project, but rather versioned, centrally managed, and installed as a dependency. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
-
-- Read more on [What is a Gatsby Theme?](/docs/themes/what-are-gatsby-themes)
-
-### Creating a new site using a theme starter
-
-Creating a site based on a starter that configures a theme follows the same process as creating a site based on a starter that **doesn't** configure a theme. In this example you can use the [starter for creating a new site that uses the official Gatsby blog theme](https://github.com/gatsbyjs/gatsby-starter-blog-theme).
-
-#### Prerequisites
-
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-
-#### Directions
-
-1. Generate a new site based on the blog theme starter:
-
-```shell
-gatsby new {your-project-name} https://github.com/gatsbyjs/gatsby-starter-blog-theme
-```
-
-2. Run your new site:
+3. Execute seu novo site:
 
 ```shell
 cd {your-project-name}
 gatsby develop
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Learn how to use an existing Gatsby theme in the [shorter conceptual guide](/docs/themes/using-a-gatsby-theme) or the more detailed [step-by-step tutorial](/tutorial/using-a-theme).
+- Siga um [guia mais detalhado](/docs/starters/) sobre o uso de starters Gatsby.
+- Aprenda a usar a ferramenta [Gatsby CLI](/docs/gatsby-cli) para usar os starters no [tutorial parte um](/tutorial/part-one/#using-gatsby-starters)
+- Navegue pela [biblioteca dos Starters](/starters/?v=2)
+- Confira o [starter padrão oficial do Gatsby](https://github.com/gatsbyjs/gatsby-starter-default)
 
-### Building a new theme
+## 4. Trabalhando com Temas
+
+Um tema do Gatsby abstrai a configuração do Gatsby (funcionalidade compartilhada, fonte de dados, design) em um pacote instalável. Isso significa que a configuração e a funcionalidade não são gravadas diretamente no seu projeto, mas sim versionadas, gerenciadas centralmente e instaladas como uma dependência. Você pode atualizar perfeitamente um tema, compor temas juntos e até trocar um tema compatível por outro.
+
+- Leia mais sobre [O que é um tema Gatsby?](/docs/themes/what-are-gatsby-themes)
+
+### Criando um novo site usando um starter de temas
+
+A criação de um site baseado em um starter que configura um tema segue o mesmo processo que a criação de um site baseado em um starter que **não** configura um tema. Neste exemplo, você pode usar o [starter para criar um novo site que use o tema oficial do blog Gatsby](https://github.com/gatsbyjs/gatsby-starter-blog-theme).
+
+#### Pré-requisitos
+
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
+
+#### Instruções
+
+1. Gere um novo site com base no starter de temas do blog:
+
+```shell
+gatsby new {nome-do-seu-projeto} https://github.com/gatsbyjs/gatsby-starter-blog-theme
+```
+
+2. Execute seu novo site:
+
+```shell
+cd {nome-do-seu-projeto}
+gatsby develop
+```
+
+#### Conteúdos adicionais
+
+- Aprenda a usar um tema Gatsby existente no [guia conceitual mais curto](/docs/themes/using-a-gatsby-theme) ou no mais detalhado [tutorial passo a passo](/tutorial/using-a-theme)
+
+### Criando um novo tema
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-use-the-gatsby-theme-workspace-starter-to-begin-building-a-new-theme"
   lessonTitle="Use the Gatsby Theme Workspace Starter to Begin Building a New Theme"
 />
 
-#### Prerequisites
+#### Pré-requisitos
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
 
-* [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) installed
+* [Yarn](https://yarnpkg.com/lang/en/docs/install/#mac-stable) instalado
 
-#### Directions
+#### Instruções
 
-1. Generate a new theme workspace using the [Gatsby theme workspace starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace):
+1. Gere um novo _workspace_ com tema usando o [Gatsby theme workspace starter](https://github.com/gatsbyjs/gatsby-starter-theme-workspace):
 
 ```shell
-gatsby new {your-project-name} https://github.com/gatsbyjs/gatsby-starter-theme-workspace
+gatsby new {nome-do-seu-projeto} https://github.com/gatsbyjs/gatsby-starter-theme-workspace
 ```
 
-2. Run the example site in the workspace:
+2. Execute o site de exemplo em seu _workspace_:
 
 ```shell
 yarn workspace example develop
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Follow a [more detailed guide](/docs/themes/building-themes/) on using the Gatsby theme workspace starter.
-- Learn how to build your own theme in the [Gatsby Theme Authoring video course on Egghead](https://egghead.io/courses/gatsby-theme-authoring), or in the [video course's complementary written tutorial companion](/tutorial/building-a-theme).
+- Siga um [guia mais detalhado](/docs/themes/building-themes/) sobre o uso do starter do _Gatsby theme workspace_.
+- Aprenda como criar seu próprio tema no [curso em vídeo aula Gatsby Theme Authoring do Egghead](https://egghead.io/courses/gatsby-theme-authoring), ou nos cursos em [vídeo complementares do tutorial](/tutorial/building-a-theme).
 
-## 5. Sourcing data
+## 5. Fonte de dados
 
-Data sourcing in Gatsby is plugin-driven; Source plugins fetch data from their source (e.g. the `gatsby-source-filesystem` plugin fetches data from the file system, the `gatsby-source-wordpress` plugin fetches data from the WordPress API, etc). You can also source the data yourself.
+A fonte de dados no Gatsby é orientada por plugins; Os plugins buscam dados de sua origem (por exemplo, o plugin `gatsby-source-filesystem` busca dados do sistema de arquivos, o plugin `gatsby-source-wordpress` busca dados da API do WordPress, etc).Você também pode fornecer os dados por conta própria.
 
-### Adding data to GraphQL
+### Adicionando dados ao GraphQL
 
-Gatsby's [GraphQL data layer](/docs/querying-with-graphql/) uses nodes to model chunks of data. Gatsby source plugins add source nodes that you can query for, but you can also create source nodes yourself. To add custom data to the GraphQL data layer yourself, Gatsby provides methods you can leverage.
+A [camada de dados GraphQL](/docs/querying-with-graphql/) do Gatsby usa _nodes_ para modelar blocos de dados. Os plugins de origem do Gatsby adicionam _nodes_ de origem que você pode consultar, mas você também pode criar _nodes_ de origem. Para adicionar dados personalizados à camada de dados do GraphQL, o Gatsby fornece métodos que você pode aproveitar.
 
-This recipe shows you how to add custom data using `createNode()`.
+Esta receita mostra como adicionar dados personalizados usando `createNode()`.
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-node.js` use `sourceNodes()` and `actions.createNode()` to create and export nodes to be able to query the data.
+1. Em `gatsby-node.js`, use `sourceNodes()` e `actions.createNode()` para criar e exportar _nodes_ para poder consultar os dados.
 
 ```javascript:title=gatsby-node.js
 exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
@@ -814,11 +800,11 @@ exports.sourceNodes = ({ actions, createNodeId, createContentDigest }) => {
 }
 ```
 
-2. Run `gatsby develop`.
+2. Execute `gatsby develop`.
 
-   > _Note: After making changes in `gatsby-node.js` you need to re-run `gatsby develop` for the changes to take effect._
+   > _Nota: Depois de fazer alterações no `gatsby-node.js`, você precisa executar novamente `gatsby develop` para que as alterações entrem em vigor._
 
-3. Query the data (in GraphiQL or in your components).
+3. Consultar os dados (no GraphiQL ou em seus componentes).
 
 ```graphql
 query MyPokemonQuery {
@@ -832,30 +818,30 @@ query MyPokemonQuery {
 }
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Walk through an example using the `gatsby-source-filesystem` plugin in [tutorial part five](/tutorial/part-five/#source-plugins)
-- Search available source plugins in the [Gatsby library](/plugins/?=source)
-- Understand source plugins by building one in the [Pixabay source plugin tutorial](/docs/pixabay-source-plugin-tutorial/)
-- The createNode function [documentation](/docs/actions/#createNode)
+- Veja um exemplo usando o plugin `gatsby-source-filesystem` no [tutorial parte cinco](/tutorial/part-five/#source-plugins)
+- Pesquise plugins de origem disponíveis na [biblioteca Gatsby](/plugins/?=source)
+- Entenda os plugins de origem criando um no [tutorial do plugin de fonte Pixabay](/docs/pixabay-source-plugin-tutorial/)
+- A função createNode [documentação](/docs/actions/#createNode)
 
-### Sourcing Markdown data for blog posts and pages with GraphQL
+### Fornecendo dados de Markdown para postagens e páginas de blog com GraphQL
 
-You can source Markdown data and use Gatsby's [`createPages` API](/docs/actions/#createPage) to create pages dynamically.
+Você pode obter dados do Markdown e usar a API do Gatsby [`createPages`](/docs/actions/#createPage) para criar páginas dinamicamente.
 
-This recipe shows how to create pages from Markdown files on your local filesystem using Gatsby's GraphQL data layer.
+Esta receita mostra como criar páginas a partir de arquivos Markdown no seu sistema de arquivos local usando a camada de dados GraphQL do Gatsby.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start) with a `gatsby-config.js` file
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-- The [gatsby-source-filesystem plugin](/packages/gatsby-source-filesystem) installed
-- The [gatsby-transformer-remark plugin](/packages/gatsby-transformer-remark) installed
-- A `gatsby-node.js` file
+- Um [site Gatsby](/docs/quick-start) com um arquivo `gatsby-config.js`
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
+- O [gatsby-source-filesystem plugin](/packages/gatsby-source-filesystem) instalado
+- O [gatsby-transformer-remark plugin](/packages/gatsby-transformer-remark) instalado
+- Um arquivo `gatsby-node.js`
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-config.js`, configure `gatsby-transformer-remark` along with `gatsby-source-filesystem` to pull in Markdown files from a source folder. This would be in addition to any previous `gatsby-source-filesystem` entries, such as for images:
+1. No `gatsby-config.js`, configure `gatsby-transformer-remark` junto com o `gatsby-source-filesystem` para extrair os arquivos Markdown de uma pasta de origem. Isso seria um acréscimo a quaisquer entradas anteriores do `gatsby-source-filesystem`, como para imagens:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -871,7 +857,7 @@ module.exports = {
   ]
 ```
 
-2. Add a Markdown post to `src/content`, including frontmatter for the title, date, and path, with some initial content for the body of the post:
+2. Adicione uma postagem do Markdown ao `src/content`, incluindo _frontmatter_ para o título, data e caminho, com algum conteúdo inicial para o corpo da postagem:
 
 ```markdown:title=src/content/my-first-post.md
 ---
@@ -880,10 +866,10 @@ date: 2019-07-10
 path: /my-first-post
 ---
 
-This is my first Gatsby post written in Markdown!
+Este é o meu primeiro post do Gatsby escrito em Markdown!
 ```
 
-3. Start up the development server with `gatsby develop`, navigate to the GraphiQL explorer at `http://localhost:8000/___graphql`, and write a query to get all markdown data:
+3. Inicie o servidor de desenvolvimento com `gatsby develop`, navegue até o GraphiQL explorer em `http://localhost:8000/___graphql` e escreva uma consulta para obter todos os dados do markdown:
 
 ```graphql
 {
@@ -906,7 +892,7 @@ This is my first Gatsby post written in Markdown!
   height="300"
 />
 
-4. Add the JavaScript code to generate pages from Markdown posts at build time by copying the GraphQL query into `gatsby-node.js` and looping through the results:
+4. Adicione o código JavaScript para gerar páginas das postagens do Markdown no momento da construção, copiando a consulta GraphQL para `gatsby-node.js` e fazendo um loop pelos resultados:
 
 ```js:title=gatsby-node.js
 const path = require(`path`)
@@ -940,14 +926,14 @@ exports.createPages = async ({ actions, graphql }) => {
 }
 ```
 
-5. Add a post template in `src/templates`, including a GraphQL query for generating pages dynamically from Markdown content at build time:
+5. Adicione um modelo de postagem no `src/templates`, incluindo uma consulta GraphQL para gerar páginas dinamicamente a partir do conteúdo do Markdown no momento da criação:
 
 ```jsx:title=src/templates/post.js
 import React from "react"
 import { graphql } from "gatsby"
 
 export default function Template({ data }) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+  const { markdownRemark } = data // data.markdownRemark mantém seus dados da postagem
   const { frontmatter, html } = markdownRemark
   return (
     <div className="blog-post">
@@ -975,31 +961,31 @@ export const pageQuery = graphql`
 `
 ```
 
-6. Run `gatsby develop` to restart the development server. View your post in the browser: `http://localhost:8000/my-first-post`
+6. Execute `gatsby develop` para reiniciar o servidor de desenvolvimento. Veja sua postagem no navegador: `http://localhost:8000/my-first-post`
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Tutorial: Programmatically create pages from data](/tutorial/part-seven/)
-- [Creating and modifying pages](/docs/creating-and-modifying-pages/)
-- [Adding Markdown pages](/docs/adding-markdown-pages/)
-- [Guide to creating pages from data programmatically](/docs/programmatically-create-pages-from-data/)
-- [Example repo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) for this recipe
+- [Tutorial: Crie programaticamente páginas a partir de dados](/tutorial/part-seven/)
+- [Criando e modificando páginas](/docs/creating-and-modifying-pages/)
+- [Adicionando páginas Markdown](/docs/adding-markdown-pages/)
+- [Guia para criar páginas de dados programaticamente](/docs/programmatically-create-pages-from-data/)
+- [Repositório de exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-sourcing-markdown) para esta receita
 
-### Pulling data from an external source and creating pages without GraphQL
+### Pegando dados de uma fonte externa e criando páginas sem o GraphQL
 
-You don't have to use the GraphQL data layer to include data in pages, [though there are reasons why you should consider GraphQL](/docs/why-gatsby-uses-graphql/). You can use the node `createPages` API to pull unstructured data directly into Gatsby sites rather than through GraphQL and source plugins.
+Você não precisa usar a camada de dados GraphQL para incluir dados nas páginas, [embora haja razões pelas quais você deve considerar o GraphQL](/docs/why-gatsby-uses-graphql/). Você pode usar o _node API_ `createPages` para extrair dados não estruturados diretamente para sites do Gatsby, e não através do GraphQL e plugins de origem.
 
-In this recipe, you'll create dynamic pages from data fetched from the [PokéAPI’s REST endpoints](https://www.pokeapi.co/). The [full example](https://github.com/jlengstorf/gatsby-with-unstructured-data/) can be found on GitHub.
+Nesta receita, você criará páginas dinâmicas a partir de dados buscados no [PokéAPI’s REST endpoints](https://www.pokeapi.co/). O [exemplo completo](https://github.com/jlengstorf/gatsby-with-unstructured-data/) pode ser encontrado no GitHub.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A Gatsby Site with a `gatsby-node.js` file
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-- The [axios](https://www.npmjs.com/package/axios) package installed through npm
+- Um site Gatsby com um arquivo `gatsby-node.js`
+- O [Gatsby CLI](/docs/gatsby-cli) instalado
+- O pacote [axios](https://www.npmjs.com/package/axios) instalado através do _npm_
 
-#### Directions
+#### Instruções
 
-1. In `gatsby-node.js`, add the JavaScript code to fetch data from the PokéAPI and programmatically create an index page:
+1. No arquivo `gatsby-node.js`, adicione o código JavaScript para buscar dados da PokéAPI e crie programaticamente uma página de índice:
 
 ```js:title=gatsby-node.js
 const axios = require("axios")
@@ -1016,7 +1002,7 @@ const getPokemonData = names =>
 exports.createPages = async ({ actions: { createPage } }) => {
   const allPokemon = await getPokemonData(["pikachu", "charizard", "squirtle"])
 
-  // Create a page that lists Pokémon.
+  // Crie uma página que lista os Pokémon.
   createPage({
     path: `/`,
     component: require.resolve("./src/templates/all-pokemon.js"),
@@ -1025,7 +1011,7 @@ exports.createPages = async ({ actions: { createPage } }) => {
 }
 ```
 
-2. Create a template to display Pokémon on the homepage:
+2. Crie um modelo para exibir Pokémon na página inicial:
 
 ```js:title=src/templates/all-pokemon.js
 import React from "react"
@@ -1045,32 +1031,32 @@ export default ({ pageContext: { allPokemon } }) => (
 )
 ```
 
-3. Run `gatsby develop` to fetch the data, build pages, and start the development server.
-4. View your homepage in a browser: `http://localhost:8000`
+3. Execute `gatsby develop` para buscar os dados, criar páginas e iniciar o servidor de desenvolvimento.
+4. Veja sua página inicial em um navegador: `http://localhost:8000`
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Full Pokemon data repo](https://github.com/jlengstorf/gatsby-with-unstructured-data/)
-- More on using unstructured data in [Using Gatsby without GraphQL](/docs/using-gatsby-without-graphql/)
-- When and how to [query data with GraphQL](/docs/querying-with-graphql/) for more complex Gatsby sites
+- [Repositório Pokemon com dados completos](https://github.com/jlengstorf/gatsby-with-unstructured-data/)
+- Mais sobre o uso de dados não estruturados em [Usando o Gatsby sem GraphQL](/docs/using-gatsby-without-graphql/)
+- Quando e como [consultar dados com o GraphQL](/docs/querying-with-graphql/) para sites mais complexos usando Gatsby
 
-### Sourcing content from Drupal
+### Fornecendo conteúdo do Drupal
 
-#### Prerequisites
+#### Pré-requisitos
 
 - A [Gatsby site](/docs/quick-start)
 - A [Drupal](http://drupal.org) site
 - The [JSON:API module](https://www.drupal.org/project/jsonapi) installed and enabled on the Drupal site
 
-#### Directions
+#### Instruções
 
-1. Install the `gatsby-source-drupal` plugin.
+1. Instale o plugin `gatsby-source-drupal`.
 
 ```
 npm install --save gatsby-source-drupal
 ```
 
-2. Edit your `gatsby-config.js` file to enable the plugin and configure it.
+2. Edite seu arquivo `gatsby-config.js` para ativar o plugin e configurá-lo.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -1079,14 +1065,14 @@ module.exports = {
       resolve: `gatsby-source-drupal`,
       options: {
         baseUrl: `https://your-website/`,
-        apiBase: `api`, // optional, defaults to `jsonapi`
+        apiBase: `api`, // opcional, o padrão é `jsonapi`
       },
     },
   ],
 }
 ```
 
-3. Start the development server with `gatsby develop`, and open the GraphiQL explorer at `http://localhost:8000/___graphql`. Under the Explorer tab, you should see new node types, such as `allBlockBlock` for Drupal blocks, and one for every content type in your Drupal site. For example, if you have a "Page" content type, it will be available as `allNodePage`. To query all "Page" nodes for their title and body, use a query like:
+3. Inicie o servidor de desenvolvimento com `gatsby develop` e abra o explorador GraphiQL em `http://localhost:8000/___ graphql`. Na guia Explorer, você verá novos tipos de _node_, como `allBlockBlock` para blocos Drupal, e um para cada tipo de conteúdo no site Drupal. Por exemplo, se você tiver um tipo de conteúdo "Página", ele estará disponível como `allNodePage`. Para consultar todos os _nodes_ "Página" por seu título e conteúdo, use uma consulta como:
 
 ```graphql
 {
@@ -1103,9 +1089,9 @@ module.exports = {
 }
 ```
 
-4. To use your Drupal data, create a new page in your Gatsby site at `src/pages/drupal.js`. This page will list all Drupal "Page" nodes.
+4. Para usar seus dados do Drupal, crie uma nova página no seu site do Gatsby em `src/pages/drupal.js`. Esta página listará todos os _nodes_ da "Página" do Drupal.
 
-_**Note:** the exact GraphQL schema will depend on your how Drupal instance is structured._
+_**Nota:** o esquema exato do GraphQL dependerá de como a instância do Drupal está estruturada._
 
 ```jsx:title=src/pages/drupal.js
 import React from "react"
@@ -1144,29 +1130,29 @@ export const query = graphql`
 }
 ```
 
-5. With the development server running, you can view the new page by visiting `http://localhost:8000/drupal`.
+5. Com o servidor de desenvolvimento em execução, você pode visualizar a nova página visitando `http://localhost:8000/drupal`.
 
-#### Additional Resources
+#### Conteúdos adicionais
 
-- [Using Decoupled Drupal with Gatsby](/blog/2018-08-13-using-decoupled-drupal-with-gatsby/)
-- [More on sourcing from Drupal](/docs/sourcing-from-drupal)
-- [Tutorial: Programmatically create pages from data](/tutorial/part-seven/)
+- [Usando Drupal desacoplado com Gatsby](/blog/2018-08-13-using-decoupled-drupal-with-gatsby/)
+- [Mais informações sobre o Drupal](/docs/sourcing-from-drupal)
+- [Tutorial: criar programaticamente páginas a partir de dados](/tutorial/part-seven/)
 
-## 6. Querying data
+## 6. Consultando dados
 
-### Querying data with a Page Query
+### Consultando dados com uma Consulta de Página
 
-You can use the `graphql` tag to query data in the pages of your Gatsby site. This gives you access to anything included in Gatsby's data layer, such as site metadata, source plugins, images, and more.
+Você pode usar a tag `graphql` para consultar dados nas páginas do seu site do Gatsby. Isso fornece acesso a qualquer coisa incluída na camada de dados do Gatsby, como metadados do site, plugins de origem, imagens e muito mais.
 
-#### Directions
+#### Instruções
 
-1. Import `graphql` from `gatsby`.
+1. Importe `graphql` de `gatsby`.
 
-2. Export a constant named `query` and set its value to be a `graphql` template with the query between two backticks.
+2. Exporte uma constante chamada `query` e defina seu valor como um modelo `graphql` com a consulta entre dois _backticks_.
 
-3. Pass in `data` as a prop to the component.
+3. Passe `data` como _prop_ para o componente.
 
-4. The `data` variable holds the queried data and can be referenced in JSX to output HTML.
+4. A variável `data` contém os dados consultados e pode ser referenciada no JSX para gerar um HTML.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -1198,19 +1184,19 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [GraphQL and Gatsby](/docs/graphql/): understanding the expected shape of your data
-- [More on querying data in pages with GraphQL](/docs/page-query/)
-- [MDN on Tagged Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like the ones used in GraphQL
+- [GraphQL e Gatsby](/docs/graphql/): Entendendo a forma esperada dos seus dados
+- [Mais sobre como consultar dados em páginas com o GraphQL](/docs/page-query/)
+- [MDN em Tagged Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) como os usados no GraphQL
 
-### Querying data with the StaticQuery Component
+### Consultando dados com o StaticQuery Component
 
-`StaticQuery` is a component for retrieving data from Gatsby's data layer in [non-page components](/docs/static-query/), such as a header, navigation, or any other child component.
+`StaticQuery` é um componente para recuperar dados da camada de dados do Gatsby em [componentes que não são de página](/docs/static-query/), como um _header_, _navigation_ ou qualquer outro componente filho.
 
-#### Directions
+#### Instruções
 
-1. The `StaticQuery` Component requires two render props: `query` and `render`.
+1. O componente `StaticQuery` requer dois objetos de renderização: `query` e `render`
 
 ```jsx:title=src/components/NonPageComponent.js
 import React from "react"
@@ -1241,26 +1227,26 @@ const NonPageComponent = () => (
 export default NonPageComponent
 ```
 
-2. You can now use this component as you would [any other component](/docs/building-with-components#non-page-components) by importing it into a larger page of JSX components and HTML markup.
+2. Agora você pode usar esse componente como faria com [qualquer outro componente](/docs/building-with-components#non-page-components) importando-o para uma página maior de componentes JSX e marcação HTML.
 
-### Querying data with the useStaticQuery hook
+### Consultando dados com _hook_ de useStaticQuery
 
-Since Gatsby v2.1.0, you can use the `useStaticQuery` hook to query data with a JavaScript function instead of a component. The syntax removes the need for a `<StaticQuery>` component to wrap everything, which some people find simpler to write.
+Desde o Gatsby v2.1.0, você pode usar o _hook_ `useStaticQuery` para consultar dados com uma função JavaScript em vez de um componente. A sintaxe elimina a necessidade de um componente `<StaticQuery>` para agrupar tudo, o que algumas pessoas acham mais simples de escrever.
 
-The `useStaticQuery` hook takes a GraphQL query and returns the requested data. It can be stored in a variable and used later in your JSX templates.
+O _hook_ `useStaticQuery` pega uma consulta GraphQL e retorna os dados solicitados. Ele pode ser armazenado em uma variável e usada posteriormente em seus modelos JSX.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- You'll need React and ReactDOM 16.8.0 or later (keeping Gatsby updated handles this)
-- Recommended reading: the [Rules of React Hooks](https://reactjs.org/docs/hooks-rules.html)
+- Você precisará do React e ReactDOM 16.8.0 ou posterior (manter o Gatsby atualizado)
+- Leitura recomendada: as [regras de React Hooks](https://pt-br.reactjs.org/docs/hooks-rules.html)
 
-#### Directions
+#### Instruções
 
-1. Import `useStaticQuery` and `graphql` from `gatsby` in order to use the hook query the data.
+1. Importe `useStaticQuery` e `graphql` de `gatsby` para usar o _hook_ para consultar os dados.
 
-2. In the start of a stateless functional component, assign a variable to the value of `useStaticQuery` with your `graphql` query passed as an argument.
+2. No início de um componente funcional sem estado, atribua uma variável ao valor de `useStaticQuery` com sua consulta `graphql` passada como argumento.
 
-3. In the JSX code returned from your component, you can reference that variable to handle the returned data.
+3. No código JSX retornado do seu componente, é possível referenciar essa variável para manipular os dados retornados.
 
 ```jsx:title=src/components/NonPageComponent.js
 import React from "react"
@@ -1289,28 +1275,28 @@ const NonPageComponent = () => {
 export default NonPageComponent
 ```
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [More on Static Query for querying data in components](/docs/static-query/)
-- [The difference between a static query and a page query](/docs/static-query/#how-staticquery-differs-from-page-query)
-- [More on the useStaticQuery hook](/docs/use-static-query/)
-- [Visualize your data with GraphiQL](/docs/introducing-graphiql/)
+- [Mais sobre consulta estática para consultar dados em componentes](/docs/static-query/)
+- [A diferença entre uma consulta estática e uma consulta de página](/docs/static-query/#how-staticquery-differs-from-page-query)
+- [Mais sobre o hook de useStaticQuery](/docs/use-static-query/)
+- [Visualize seus dados com o GraphiQL](/docs/introducing-graphiql/)
 
-### Limiting with GraphQL
+### Limitando com GraphQL
 
-When querying for data with GraphQL, you can limit the number of results returned with a specific number. This is helpful if you only need a few pieces of data or need to [paginate data](/docs/adding-pagination/).
+Ao consultar dados com o GraphQL, você pode limitar o número de resultados retornados com um número específico. Isso é útil se você precisar apenas de alguns dados ou [paginar dados](/docs/adding-pagination/).
 
-To limit data, you'll need a Gatsby site with some nodes in the GraphQL data layer. All sites have some nodes like `allSitePage` and `sitePage` created automatically: more can be added by installing source plugins like `gatsby-source-filesystem` in `gatsby-config.js`.
+Para limitar os dados, você precisará de um site Gatsby com alguns nodes na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como `allSitePage` e `sitePage` criados automaticamente: mais _nodes_ podem ser adicionados instalando plugins de origem como `gatsby-source-filesystem` em `gatsby-config.js`.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/)
+- Um [site Gatsby](/docs/quick-start/)
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open a tab in your browser at: `http://localhost:8000/___graphql`.
-3. Add a query in the editor with the following fields on `allSitePage` to start off:
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra uma guia no seu navegador em: `http://localhost:8000/___graphql`.
+3. Adicione uma consulta no editor com os seguintes campos em `allSitePage` para começar:
 
 ```graphql
 {
@@ -1325,7 +1311,7 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
 }
 ```
 
-4. Add a `limit` argument to the `allSitePage` field and give it an integer value `3`.
+4. Adicione um argumento `limit` ao campo `allSitePage` e atribua um valor inteiro `3`.
 
 ```graphql
 {
@@ -1340,13 +1326,13 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
 }
 ```
 
-5. Click the play button in the GraphiQL page and the data in the `edges` field will be limited to the number specified.
+5. Clique no botão play na página GraphiQL e os dados no campo `edge` serão limitados ao número especificado.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- [Gatsby GraphQL reference for limiting](/docs/graphql-reference/#limit)
-- Live example:
+- Aprenda sobre [_nodes_ na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- [Referência do Gatsby GraphQL para limitar](/docs/graphql-reference/#limit)
+- Exemplo:
 
 <iframe
   title="Limiting returned data"
@@ -1355,22 +1341,22 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
   height="300"
 />
 
-### Sorting with GraphQL
+### Classificando com GraphQL
 
-The ordering of your results can be specified with the GraphQL `sort` argument. You can specify which fields to sort by and the order to sort in.
+A ordem dos seus resultados pode ser especificada com o argumento do GraphQL  `sort`. Você pode especificar em quais campos classificar e a ordem em que serão classificados.
 
-For this recipe, you'll need a Gatsby site with a collection of nodes to sort in the GraphQL data layer. All sites have some nodes like `allSitePage` created automatically: more can be added by installing source plugins.
+Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para classificar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais _nodes_ podem ser adicionados instalando plugins de origem.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- Queryable fields prefixed with `all`, e.g. `allSitePage`
+- Um [site Gatsby](/docs/quick-start)
+- Campos consultáveis prefixados com `all`, por exemplo `allSitePage`
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor with the following fields on `allSitePage` to start off:
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL Explorer em uma nova guia do navegador em: `http://localhost:8000/___ graphql`
+3. Adicione uma consulta no editor com os seguintes campos em `allSitePage` para começar:
 
 ```graphql
 {
@@ -1385,7 +1371,7 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
 }
 ```
 
-4. Add a `sort` argument to the `allSitePage` field and give it an object with the `fields` and `order` attributes. The value for `fields` can be a field or an array of fields to sort by (this example uses the `path` field), the `order` can be either `ASC` or `DESC` for ascending and descending respectively.
+4. Adicione um argumento `sort` ao campo `allSitePage` e atribua a ele um objeto com os atributos `fields` e `order`. O valor para `fields` pode ser um campo ou uma matriz de campos para classificar (este exemplo usa o campo` path`); o `order` pode ser` ASC` ou `DESC` para crescente  e decrescente, respectivamente.
 
 ```graphql
 {
@@ -1401,13 +1387,13 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
 
 ```
 
-5. Click the play button in the GraphiQL page and the data returned will be sorted ascending by the `path` field.
+5. Clique no botão play na página GraphiQL e os dados retornados serão classificados em ordem crescente pelo campo `path`.
 
-#### Additional resources
+#### Conteúdo adicional
 
-- [Gatsby GraphQL reference for sorting](/docs/graphql-reference/#sort)
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- Live example:
+- [Referência do Gatsby GraphQL para classificação](/docs/graphql-reference/#sort)
+- Aprenda sobre [_nodes_ na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- Exemplo:
 
 <iframe
   title="Sorting data"
@@ -1416,22 +1402,22 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
   height="300"
 />
 
-### Filtering with GraphQL
+### Filtrando com GraphQL
 
-Queried results can be filtered down with operators like `eq` (equals), `ne` (not equals), `in`, and `regex` on specified fields.
+Os resultados consultados podem ser filtrados com operadores como `eq` (igual), `ne` (não igual), `in` e `regex` em campos especificados.
 
-For this recipe, you'll need a Gatsby site with a collection of nodes to filter in the GraphQL data layer. All sites have some nodes like `allSitePage` created automatically: more can be added by installing source and transformer plugins like `gatsby-source-filesystem` and `gatsby-transformer-remark` in `gatsby-config.js` to produce `allMarkdownRemark`.
+Para esta receita, você precisará de um site Gatsby com uma coleção de _nodes_ para filtrar na camada de dados GraphQL. Todos os sites têm alguns _nodes_ como o `allSitePage` criado automaticamente: mais _nodes_  podem ser adicionados instalando plugins de fonte e transformadores, como `gatsby-source-filesystem` e `gatsby-transformer-comment` em `gatsby-config.js` para produzir `allMarkdownRemark `.
 
-#### Prerequisites
+#### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- Queryable fields prefixed with `all`, e.g. `allSitePage` or `allMarkdownRemark`
+- Um [site Gatsby](/docs/quick-start)
+- Campos consultáveis prefixados com `all`, por exemplo `allSitePage` ou `allMarkdownRemark`
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor using a field prefixed by 'all', like `allMarkdownRemark` (meaning that it will return a list of nodes)
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL Explorer em uma nova guia do navegador em: `http://localhost:8000/___ graphql`
+3. Adicione uma consulta no editor usando um campo prefixado por 'all', como `allMarkdownRemark`(o que significa que ele retornará uma lista de _nodes_)
 
 ```graphql
 {
@@ -1448,7 +1434,7 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
 }
 ```
 
-4. Add a `filter` argument to the `allMarkdownRemark` field and give it an object with the fields you'd like to filter by. In this example, Markdown content is filtered by the `categories` attribute in frontmatter metadata. The next value is the operator: in this case `eq`, or equals, with a value of 'magical creatures'.
+4. Adicione um argumento `filter` ao campo `allMarkdownRemark` e atribua a ele um objeto com os campos pelos quais você deseja filtrar. Neste exemplo, o conteúdo do Markdown é filtrado pelo atributo `categories` nos metadados do frontmatter. O próximo valor é o operador: neste caso, `eq`, ou igual a um valor de 'criaturas mágicas'.
 
 ```graphql
 {
@@ -1465,14 +1451,14 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
 }
 ```
 
-5. Click the play button in the GraphiQL page. The data that matches the filter parameters should be returned, in this case only sourced Markdown files tagged with a category of 'magical creatures'.
+5. Clique no botão play na página GraphiQL. Os dados que correspondem aos parâmetros do filtro devem ser retornados; nesse caso, apenas os arquivos Markdown de origem marcados com uma categoria de 'criaturas mágicas'.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Gatsby GraphQL reference for filtering](/docs/graphql-reference/#filter)
-- [Complete list of possible operators](/docs/graphql-reference/#complete-list-of-possible-operators)
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- Live example:
+- [Referência do Gatsby GraphQL para filtragem](/docs/graphql-reference/#filter)
+- [Lista completa de possíveis operadores](/docs/graphql-reference/#complete-list-of-possible-operators)
+- Aprenda sobre [_nodes_ na API de dados GraphQL do Gatsby](/docs/node-interface/)
+- Exemplo:
 
 <iframe
   title="Filtering data"
@@ -1481,17 +1467,17 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
   height="300"
 />
 
-### GraphQL Query Aliases
+### GraphQL Query Alias 
 
-You can rename any field in a GraphQL query with an alias.
+Você pode renomear qualquer campo em uma consulta GraphQL com um _alias_.
 
-If you would like to run two queries on the same datasource, you can use an alias to avoid a naming collision with two queries of the same name.
+Se você deseja executar duas consultas na mesma fonte de dados, pode usar um _alias_ para evitar uma colisão de nomes com duas consultas com o mesmo nome.
 
-#### Directions
+#### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor using two fields of the same name like `allFile`
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL Explorer em uma nova guia do navegador em: `http://localhost:8000/___ graphql`
+3. Adicione uma consulta no editor usando dois campos com o mesmo nome como `allFile`
 
 ```graphql
 {
@@ -1506,7 +1492,7 @@ If you would like to run two queries on the same datasource, you can use an alia
 }
 ```
 
-4. Add the name you would like to use for any field before the name of the field in your GraphQL schema, separated by a colon. (E.g. `[alias-name]: [original-name]`)
+4. Adicione o nome que você gostaria de usar para qualquer campo antes do nome do campo no esquema do GraphQL, separado por dois pontos. (Por exemplo, `[nome-do-alias]: [nome-original]`)
 
 ```graphql
 {
@@ -1521,12 +1507,12 @@ If you would like to run two queries on the same datasource, you can use an alia
 }
 ```
 
-5. Click the play button in the GraphiQL page and 2 objects with alias names you provided should be output.
+5. Clique no botão play na página GraphiQL e 2 objetos com nomes alternativos que você forneceu devem ser exibidos.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Gatsby GraphQL reference for aliasing](/docs/graphql-reference/#aliasing)
-- Live example:
+- [Referência do Gatsby GraphQL para _alias_](/docs/graphql-reference/#aliasing)
+- Exemplo:
 
 <iframe
   title="Using aliases"
@@ -1535,15 +1521,15 @@ If you would like to run two queries on the same datasource, you can use an alia
   height="300"
 />
 
-### GraphQL Query Fragments
+### Fragmentos de Consulta GraphQL
 
-GraphQL fragments are shareable chunks of a query that can be reused.
+Os fragmentos do GraphQL são pedaços compartilháveis de uma consulta que pode ser reutilizada.
 
-You might want to use them to share multiple fields between queries or to colocate a component with the data it uses.
+Você pode usá-los para compartilhar vários campos entre as consultas ou para colocar um componente nos dados que ele usa.
 
-#### Directions
+#### Instruções
 
-1. Declare a `graphql` template string with a Fragment in it. The fragment should be made up of the keyword `fragment`, a name, the GraphQL type it is associated with (in this case of type `Site`, as demonstrated by `on Site`), and the fields that make up the fragment:
+1. Declare uma string de modelo `graphql` com um fragmento nela. O fragmento deve ser composto da palavra-chave `fragment`, um nome, o tipo GraphQL ao qual está associado (neste caso, do tipo `Site`, conforme demonstrado em `on Site`), e os campos que compõem o fragmento:
 
 ```jsx
 export const query = graphql`
@@ -1556,7 +1542,7 @@ export const query = graphql`
 `
 ```
 
-2. Now, include the fragment in a query for a field of the type specified by the fragment. This includes those fields without having to declare them all independently:
+2. Agora, inclua o fragmento em uma consulta para um campo do tipo especificado pelo fragmento. Isso inclui esses campos sem precisar declará-los todos de forma independente:
 
 ```diff
 export const pageQuery = graphql`
@@ -1570,16 +1556,16 @@ export const pageQuery = graphql`
 `
 ```
 
-**Note**: Fragments don't need to be imported in Gatsby. Exporting a query with a Fragment makes that Fragment available in _all_ queries in your project.
+**Nota**: Fragmentos não precisam ser importados no Gatsby. A exportação de uma consulta com um fragmento torna esse fragmento disponível em _todas_ consultas no seu projeto.
 
-Fragments can be nested inside other fragments, and multiple fragments can be used in the same query.
+Fragmentos podem ser aninhados dentro de outros fragmentos e vários fragmentos podem ser usados na mesma consulta.
 
-#### Additional resources
+#### Conteúdos adicionais
 
-- [Simple example repo using fragments](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-fragments)
-- [Gatsby GraphQL reference for fragments](/docs/graphql-reference/#fragments)
-- [Gatsby image fragments](/docs/gatsby-image/#image-query-fragments)
-- [Example repo with co-located data](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
+- [Exemplo simples de repositório usando fragmentos](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-fragments)
+- [Referência do Gatsby GraphQL para fragmentos](/docs/graphql-reference/#fragments)
+- [Fragmentos de imagem do Gatsby](/docs/gatsby-image/#image-query-fragments)
+- [Exemplo de repositório com dados co-localizados](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
 
 ## 7. Working with images
 
@@ -1603,7 +1589,7 @@ Images can be imported right into a JavaScript module with webpack. This process
 
 ```jsx:title=src/pages/index.js
 import React from "react"
-// Tell webpack this JS file uses this image
+// Informe ao webpack que este arquivo JS usa esta imagem
 import FiestaImg from "../assets/fiesta.jpg" // highlight-line
 ```
 
@@ -1614,7 +1600,7 @@ import React from "react"
 import FiestaImg from "../assets/fiesta.jpg"
 
 export default () => (
-  // The import result is the URL of your image
+  // O resultado da importação é o URL da sua imagem
   <img src={FiestaImg} alt="A dog smiling in a party hat" /> // highlight-line
 )
 ```
@@ -1776,7 +1762,7 @@ return (
     {data.allFile.edges.map(image => (
       <Img
         fluid={image.node.childImageSharp.fluid}
-        alt={image.node.base.split(".")[0]} // only use section of the file extension with the filename
+        alt={image.node.base.split(".")[0]} // use somente a seção da extensão do arquivo com o nome do arquivo
       />
     ))}
     // highlight-end
@@ -1884,104 +1870,69 @@ To inline images in markdown (using the `![]()` syntax), consider using a plugin
 
 #### Prerequisites
 
-- The `gatsby-image`, `gatsby-transformer-sharp`, and `gatsby-plugin-sharp` packages installed and added to the plugins array in `gatsby-config`
-- [Images sourced](/packages/gatsby-image/#install) in your `gatsby-config` using a plugin like `gatsby-source-filesystem`
-- Markdown files sourced in your `gatsby-config` with image URLs in frontmatter
-- [Pages created](/docs/creating-and-modifying-pages/) from Markdown using [`createPages`](https://www.gatsbyjs.org/docs/node-apis/#createPages)
+- [Using global CSS files without a Layout component](/docs/recipes/styling-css#using-global-css-files-without-a-layout-component)
+- [Using global styles in a layout component](/docs/recipes/styling-css#using-global-styles-in-a-layout-component)
+- [Using Styled Components](/docs/recipes/styling-css#using-styled-components)
+- [Using CSS Modules](/docs/recipes/styling-css#using-css-modules)
+- [Using Sass/SCSS](/docs/recipes/styling-css#using-sassscss)
+- [Adding a Local Font](/docs/recipes/styling-css#adding-a-local-font)
+- [Using Emotion](/docs/recipes/styling-css#using-emotion)
+- [Using Google Fonts](/docs/recipes/styling-css#using-google-fonts)
 
-#### Directions
+## [3. Working with starters](/docs/recipes/working-with-starters)
 
-1. Verify that the Markdown file has an image URL with a valid path to an image file in your project
+[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
 
-```mdx:title=post.mdx
----
-title: My First Post
-featuredImage: ./corgi.png // highlight-line
----
+- [Using a starter](/docs/recipes/working-with-starters#using-a-starter)
 
-Post content...
-```
+## [4. Working with themes](/docs/recipes/working-with-themes)
 
-2. Verify that a unique identifier (a slug in this example) is passed in context when `createPages` is called in `gatsby-node.js`, which will later be passed into a GraphQL query in the Layout component
+A Gatsby theme lets you centralize the look-and-feel of your site. You can seamlessly update a theme, compose themes together, and even swap out one compatible theme for another.
 
-```js:title=gatsby-node.js
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
+- [Creating a new site using a theme](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme)
+- [Creating a new site using a theme starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
+- [Building a new theme](/docs/recipes/working-with-themes#building-a-new-theme)
 
-  // query for all markdown
+  // consulta para todas as remarcações
 
-  result.data.allMdx.edges.forEach(({ node }) => {
-    createPage({
-      path: node.fields.slug,
-      component: path.resolve(`./src/components/markdown-layout.js`),
-      // highlight-start
-      context: {
-        slug: node.fields.slug,
-      },
-      // highlight-end
-    })
-  })
-}
-```
+Pull data from multiple locations, like the filesystem or database, into your Gatsby site.
 
-3. Now, import `Img` from `gatsby-image`, and `graphql` from `gatsby` into the template component, write a [pageQuery](/docs/page-query/) to get image data based on the passed in `slug` and pass that data to the `<Img />` component:
+- [Adding data to GraphQL](/docs/recipes/sourcing-data#adding-data-to-graphql)
+- [Sourcing Markdown data for blog posts and pages with GraphQL](/docs/recipes/sourcing-data#sourcing-markdown-data-for-blog-posts-and-pages-with-graphql)
+- [Sourcing from WordPress](/docs/recipes/sourcing-data#sourcing-from-wordpress)
+- [Sourcing data from Contentful](/docs/recipes/sourcing-data#sourcing-data-from-contentful)
+- [Pulling data from an external source and creating pages without GraphQL](/docs/recipes/sourcing-data#pulling-data-from-an-external-source-and-creating-pages-without-graphql)
+- [Sourcing content from Drupal](/docs/recipes/sourcing-data#sourcing-content-from-drupal)
 
-```jsx:title=markdown-layout.jsx
-import React from "react"
-import { graphql } from "gatsby" // highlight-line
-import Img from "gatsby-image" // highlight-line
+## [6. Querying data](/docs/recipes/querying-data)
 
-export default ({ children, data }) => (
-  <main>
-    // highlight-start
-    <Img
-      fluid={data.markdown.frontmatter.image.childImageSharp.fluid}
-      alt="A corgi smiling happily"
-    />
-    // highlight-end
-    {children}
-  </main>
-)
+Gatsby lets you access your data across all sources using a single GraphQL interface.
 
-// highlight-start
-export const pageQuery = graphql`
-  query PostQuery($slug: String) {
-    markdown: mdx(fields: { slug: { eq: $slug } }) {
-      id
-      frontmatter {
-        image {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`
-// highlight-end
-```
+- [Querying data with a Page Query](/docs/recipes/querying-data#querying-data-with-a-page-query)
+- [Querying data with the StaticQuery Component](/docs/recipes/querying-data#querying-data-with-the-staticquery-component)
+- [Querying data with the useStaticQuery hook](/docs/recipes/querying-data/#querying-data-with-the-usestaticquery-hook)
+- [Limiting with GraphQL](/docs/recipes/querying-data#limiting-with-graphql)
+- [Sorting with GraphQL](/docs/recipes/querying-data#sorting-with-graphql)
+- [Filtering with GraphQL](/docs/recipes/querying-data#filtering-with-graphql)
+- [GraphQL Query Aliases](/docs/recipes/querying-data#graphql-query-aliases)
+- [GraphQL Query Fragments](/docs/recipes/querying-data#graphql-query-fragments)
+- [Querying data client-side with fetch](/docs/recipes/querying-data#querying-data-client-side-with-fetch)
 
-4. Run `gatsby develop`, which will generate images for files sourced in the filesystem
+## [7. Working with images](/docs/recipes/working-with-images)
 
-#### Additional resources
+Access images as static resources, or automate the process of optimizing them through powerful plugins.
 
-- [Example repository using this recipe](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipes-gatsby-image)
-- [Featured images with frontmatter](/docs/working-with-images-in-markdown/#featured-images-with-frontmatter-metadata)
-- [Gatsby Image API](/docs/gatsby-image/)
-- [Using Gatsby Image](/docs/using-gatsby-image)
-- [More on working with images in Gatsby](/docs/working-with-images/)
+- [Import an image into a component with webpack](/docs/recipes/working-with-images#import-an-image-into-a-component-with-webpack)
+- [Reference an image from the static folder](/docs/recipes/working-with-images#reference-an-image-from-the-static-folder)
+- [Optimizing and querying local images with gatsby-image](/docs/recipes/working-with-images#optimizing-and-querying-local-images-with-gatsby-image)
+- [Optimizing and querying images in post frontmatter with gatsby-image](/docs/recipes/working-with-images#optimizing-and-querying-images-in-post-frontmatter-with-gatsby-image)
 
-## 8. Transforming data
+## [8. Transforming data](/docs/recipes/transforming-data)
 
 Transforming data in Gatsby is plugin-driven. Transformer plugins take data fetched using source plugins, and process it into something more usable (e.g. JSON into JavaScript objects, and more).
 
-### Transforming Markdown into HTML
-
-The `gatsby-transformer-remark` plugin can transform Markdown files to HTML.
-
-#### Prerequisites
+- [Transforming Markdown into HTML](/docs/recipes/transforming-data#transforming-markdown-into-html)
+- [Transforming images into grayscale using GraphQL](/docs/recipes/transforming-data#transforming-images-into-grayscale-using-graphql)
 
 - A Gatsby site with `gatsby-config.js` and an `index.js` page
 - A Markdown file saved in your Gatsby site `src` directory
@@ -1994,7 +1945,7 @@ The `gatsby-transformer-remark` plugin can transform Markdown files to HTML.
 
 ```js:title=gatsby-config.js
 plugins: [
-  // not shown: gatsby-source-filesystem for creating nodes to transform
+  // não mostrado: gatsby-source-filesystem para criar _nodes_ para transformar
   `gatsby-transformer-remark`
 ],
 ```
@@ -2032,102 +1983,6 @@ export const query = graphql`
 
 Showtime. Once you are happy with your site, you are ready to go live with it!
 
-### Preparing for deployment
-
-#### Prerequisites
-
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-
-#### Directions
-
-1. Stop your development server if it is running (`Ctrl + C` on your command line in most cases)
-
-2. For the standard site path at the root directory (`/`), run `gatsby build` using the Gatsby CLI on the command line. The built files will now be in the `public` folder.
-
-```shell
-gatsby build
-```
-
-3. To include a site path other than `/` (such as `/site-name/`), set a path prefix by adding the following to your `gatsby-config.js` and replacing `yourpathprefix` with your desired path prefix:
-
-```js:title=gatsby-config.js
-module.exports = {
-  pathPrefix: `/yourpathprefix`,
-}
-```
-
-There are a few reasons to do this -- for instance, hosting a blog built with Gatsby on a domain with another site not built on Gatsby. The main site would direct to `example.com`, and the Gatsby site with a path prefix could live at `example.com/blog`.
-
-4. With a path prefix set in `gatsby-config.js`, run `gatsby build` with the `--prefix-paths` flag to automatically add the prefix to the beginning of all Gatsby site URLs and `<Link>` tags.
-
-```shell
-gatsby build --prefix-paths
-```
-
-5. Make sure that your site looks the same when running `gatsby build` as with `gatsby develop`. By running `gatsby serve` when you build your site, you can test out (and debug if necessary) the finished product before deploying it live.
-
-```shell
-gatsby build && gatsby serve
-```
-
-#### Additional resources
-
-- Walk through building and deploying an example site in [tutorial part one](/tutorial/part-one/#deploying-a-gatsby-site)
-- Learn about [performance optimization](/docs/performance/)
-- Read about [other deployment related topics](/docs/preparing-for-deployment/)
-- Check out the [deployment docs](/docs/deploying-and-hosting/) for specific hosting platforms and how to deploy to them
-
-### Deploying to Netlify
-
-Use [`netlify-cli`](https://www.netlify.com/docs/cli/) to deploy your Gatsby application without leaving the command-line interface.
-
-#### Prerequisites
-
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- The [netlify-cli](https://www.npmjs.com/package/netlify-cli) package installed
-- The [Gatsby CLI](/docs/gatsby-cli) installed
-
-#### Directions
-
-1. Build your gatsby application using `gatsby build`
-
-2. Login into Netlify using `netlify login`
-
-3. Run the command `netlify init`. Select the "Create & configure a new site" option.
-
-4. Choose a custom website name if you want or press enter to receive a random one.
-
-5. Choose your [Team](https://www.netlify.com/docs/teams/).
-
-6. Change the deploy path to `public/`
-
-7. Make sure that everything looks fine before deploying to production using `netlify deploy --prod`
-
-#### Additional resources
-
-- [Hosting on Netlify](/docs/hosting-on-netlify)
-- [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
-
-### Deploying to ZEIT Now
-
-Use [Now CLI](https://zeit.co/download) to deploy your Gatsby application without leaving the command-line interface.
-
-#### Prerequisites
-
-- A [ZEIT Now](https://zeit.co/signup) account
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- [Now CLI](https://zeit.co/download) package installed
-- [Gatsby CLI](/docs/gatsby-cli) installed
-
-#### Directions
-
-1. Login into Now CLI using `now login`
-
-2. Change to the directory of your Gatsby.js application in the Terminal if you aren't already there
-
-3. Run `now` to deploy it
-
-#### Additional resources
-
-- [Deploying to ZEIT Now](/docs/deploying-to-zeit-now/)
+- [Preparing for deployment](/docs/recipes/deploying-your-site#preparing-for-deployment)
+- [Deploying to Netlify](/docs/recipes/deploying-your-site#deploying-to-netlify)
+- [Deploying to ZEIT Now](/docs/recipes/deploying-your-site#deploying-to-zeit-now)

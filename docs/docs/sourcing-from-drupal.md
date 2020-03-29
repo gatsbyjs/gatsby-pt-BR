@@ -1,33 +1,33 @@
 ---
-title: Sourcing from Drupal
+title: Extraindo dados do Drupal
 ---
 
-## Why use Drupal + Gatsby together?
+## Por que utilizar Drupal + Gatsby juntos?
 
-Using Drupal as a headless CMS with Gatsby is a great way to get an enterprise-quality CMS for free, paired with a great modern development experience and all the benefits of the JAMstack, like performance, scalability, and security.
+Utilizar Drupal como um _headless CMS_ com Gatsby é uma ótima maneira de conseguir um CMS de qualidade empresarial gratuitamente, pareando com uma maneira moderna de desenvolvimento, além de todos benefícios da JAMstack, como performance, escalabilidade, e segurança.
 
-It only takes a few steps to use Gatsby with Drupal as a headless CMS (also known as decoupled Drupal).
+Só são necessários alguns passos para utilizar Gatsby com o Drupal como um _headless CMS_ .
 
-[An example Gatsby + Drupal site](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-drupal)
+[Um exemplo de _site_ Gatsby + Drupal](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-drupal)
 
-## How to implement Drupal + Gatsby
+## Como implementar Drupal + Gatsby
 
-### Quick start
+### Início Rápido
 
-This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [Quick Start guide](/docs/quick-start/), then come back.
+Esse guia assume que você já possui um projeto Gatsby configurado. Se você precisa configurar um projeto, dê uma olhada no [guia de Início Rápido](/docs/quick-start/), e então volte.
 
 ### gatsby-config.js
 
-Hooking up Gatsby to a new or existing Drupal site takes only a few steps.
+Conectar Gatsby a um novo ou já existente _site_ Drupal leva apenas alguns poucos passos.
 
-- Follow the `gatsby-source-drupal` [installation instructions](/packages/gatsby-source-drupal/?=drupal) to add the plugin to your Gatsby site
+- Siga as [instruções de instalações](/packages/gatsby-source-drupal/?=drupal) do plugin `gatsby-source-drupal` para adicioná-lo ao seu _site_ Gatsby.
 
-An example of how to include the `gatsby-source-drupal` plugin in your `gatsby-config.js` file:
+Um exemplo de como incluir o plugin `gatsby-source-drupal` ao seu arquivo `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Gatsby with Drupal`,
+    title: `Gatsby com Drupal`,
   },
   plugins: [
     {
@@ -57,32 +57,32 @@ module.exports = {
 }
 ```
 
-## Why use Gatsby and Drupal together?
+## Por que utilizar Gatsby e Drupal juntos?
 
-[“Decoupled Drupal”](https://www.acquia.com/drupal/decoupled-drupal) has become an increasingly popular approach to building enterprise-grade websites, and has the [full-throated support](https://dri.es/how-to-decouple-drupal-in-2018) of Drupal community leaders. Using Gatsby in a decoupled Drupal setup allows your team to access the powerful content modeling and access workflow capabilities of Drupal 8, as well as the powerful UI creation & performance toolset of Gatsby.
+["Drupal Desacoplado”](https://www.acquia.com/drupal/decoupled-drupal) tem se tornado uma abordagem cada vez mais popular para construir sites de nivel empresarial, e tem [suporte completo](https://dri.es/how-to-decouple-drupal-in-2018) dos líderes da comunidade Drupal. Usar Gatsby em uma configuração de Drupal desacoplado permite ao seu time acessar as poderosas modelagens de conteúdo e capacidades de acesso de fluxo de trabalho do Drupal 8, além da poderosa e performática criação de UI do Gatsby.
 
-## When is Drupal a great choice?
+## Quando o Drupal é uma boa opção?
 
-Many development teams, content teams, and client decision-makers are familiar with Drupal. Here are some scenarios in which Drupal is a great choice (and a few scenarios for which it’s not-so-great):
+Muitos times de desenvolvedores, times de conteúdo e clientes "tomadores de decisão" estão familiarizados com o Drupal. Aqui temos alguns cenários nos quais o Drupal é uma boa escolha (e alguns cenários no qual ele não é uma escolha tão boa):
 
-### Drupal is great for:
+### Drupal é bom para:
 
-- Complex page layouts or content modeling with multiple sections per page
-- Teams with multi-stage content creation and review processes
-- Development teams who value using popular, open-source technologies
+- Complexos layouts de páginas ou modelagens de conteúdo com múltiplas seções por página
+- Times com vários estágios de criação de conteúdo e de processos de revisão
+- Times de desenvolvimento que valorizam utilizar tecnologias populares e de código aberto
 
-### Drupal is not-so-great for:
+### Drupal não é tão bom para:
 
-- Content teams who require a slick content editing experience as it gets complex because of the multiple sections present
-- Teams requiring the use of Drupal UI Kit as this is constantly under development and sometimes doesn't work as expected
+- Times de conteúdo que requerem uma experiência de edição de conteúdo fluida mesmo quando as múltiplas seções presentes se tornarem complexas
+- Times que requerem utilizar o Drupal UI Kit já que este está constantemente em desenvolvimento e as vezes não funciona como o esperado
 
-## Interested in learning more?
+## Interessado em aprender mais?
 
-Using Gatsby together with Drupal offers a powerful, full-featured, open-source, and free alternative to expensive enterprise content management systems. To learn more:
+Usar Gatsby junto com Drupal oferece uma poderosa, cheia de funcionalidades, de código aberto, e gratuita alternativa para caros CMS's de nível empresarial. Para aprender mais:
 
-- Read a [Drupal agency’s introduction to Gatsby](https://www.mediacurrent.com/what-is-gatsby.js/)
-- Watch [Kyle Mathews’ presentation on Gatsby + Drupal](https://2017.badcamp.net/session/coding-development/beginner/headless-drupal-building-blazing-fast-websites-reactgatsbyjs)
-- Get started with Robert Ngo’s [Decoupling Drupal with Gatsby tutorial](https://evolvingweb.ca/blog/decoupling-drupal-gatsby) and watch his [Evolving Web 2018 Drupal conference presentation](https://www.youtube.com/watch?v=s5kUJRGDz6I)
-- Example site that demonstrates [how to build Gatsby sites that pull data from the Drupal CMS](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-drupal).
-- Take a [free course on building a Gatsby site with Drupal](https://gatsbyguides.com/).
-- Read [Gatsby blog posts on Gatsby + Drupal](/blog/tags/drupal/).
+- Leia uma [Introdução ao Gatsby da agência do Drupal](https://www.mediacurrent.com/what-is-gatsby.js/)
+- Assista a [Apresentação de Kyle Mathews sobre Gatsby + Drupal](https://2017.badcamp.net/session/coding-development/beginner/headless-drupal-building-blazing-fast-websites-reactgatsbyjs)
+- Comece com o [Tutorial sobre Drupal Desacoplado com Gatsby](https://evolvingweb.ca/blog/decoupling-drupal-gatsby) de Robert Ngo e assista sua [apresentação sobre Drupal na conferência Evolving Web 2018](https://www.youtube.com/watch?v=s5kUJRGDz6I)
+- Site de exemplo que demonstra [como construir _sites_ Gatsby que utilizam dados do CMS Drupal](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-drupal).
+- Participe de um [curso gratuito sobre como construir um _site_ Gatsby com Drupal](https://gatsbyguides.com/).
+- Leia os [posts do blog do Gatsby sobre Gatsby + Drupal](/blog/tags/drupal/).

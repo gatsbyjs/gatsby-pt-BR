@@ -12,13 +12,10 @@ As páginas podem ser criadas de três maneiras:
 
 Você também pode implementar a API [`onCreatePage`](/docs/node-apis/#onCreatePage) caso queira modificar páginas criadas no Gatsby core, por plugins ou também criar [rotas apenas-para-clientes](/docs/building-apps-with-gatsby/).
 
-
-
 ## Ajuda na depuração
 
 Para ver quais páginas estão sendo criadas pelo seu código ou plugins, você pode consultar as informações da página enquanto desenvolve no Graph*i*QL. Cole a seguinte consulta na IDE do Graph*i*QL para o seu site. A IDE do Graph*i*QL fica disponível ao executar o servidor de desenvolvimento do seu site na `HOST:PORT/___graphql` e.g.
 `localhost:8000/___graphql`.
-
 
 ```graphql
 {
