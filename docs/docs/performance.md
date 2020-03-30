@@ -1,12 +1,12 @@
 ---
-title: Performance
+title: Desempenho
 overview: true
 ---
 
-While performance is already at the heart of Gatsby, it's important to ensure you are doing all you can to make your content available to your users as fast as possible. Not all users are enjoying high speed connections, or browsing from a desktop. It's important to make no assumptions, and serve the smallest and fastest site possible, to provide an optimal experience for wherever your users might be coming from. Since Gatsby is already doing a lot of the heavy lifting for you there isn't a lot required to make your site blazing fast, but by following these guides you can ensure the best possible performance and delivery of your content to your users.
+Embora o desempenho já esteja no coração do Gatsby, é importante garantir que você esteja fazendo de tudo para disponibilizar seu conteúdo aos usuários o mais rápido possível. Nem todos os usuários desfrutam de conexões de alta velocidade ou navegam a partir de um desktop. É importante não fazer suposições e servir o site menor e mais rápido possível, para fornecer uma experiência ideal, não importando de onde seus usuários possam vir. Como o Gatsby já está fazendo muito do trabalho pesado para você, não é necessário muito para tornar seu site muito rápido, mas seguindo estes guias, você poderá garantir o melhor desempenho possível e a entrega do seu conteúdo aos seus usuários.
 
-In this section we'll cover some ways you can optimize caching, set up `https` on `localhost` for easier testing of performance features, as well as how to measure the performance of your websites, giving you all the tools you need to max out your website's performance. If you would like a more in-depth explanation of why performance matters so much, check out [this article](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4) by Addy Osmani on the Cost of JavaScript.
+Nesta seção, abordaremos algumas maneiras pelas quais você pode otimizar o armazenamento em cache, configurar `https` no `localhost` para facilitar testes de desempenho, bem como medir o desempenho dos seus sites, fornecendo todas as ferramentas necessárias para maximizar o desempenho do seu site. Se você quiser uma explicação mais aprofundada sobre por que o desempenho é tão importante, confira [este artigo] (https://v8.dev/blog/cost-of-javascript-2019) por Addy Osmani sobre o Custo do JavaScript.
 
-May your Lighthouse scores all be in the green. 😀
+Que todas suas pontuações no Lighthouse estejam no verde. 😀
 
 <GuideList slug={props.slug} />
