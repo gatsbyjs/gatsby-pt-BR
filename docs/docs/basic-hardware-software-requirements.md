@@ -1,5 +1,5 @@
 ---
-title: Requerimentos básicos de Software e Hardware
+title: Requisitos Básicos de Hardware e Software
 ---
 
 Este é um esboço. Ajude a nossa comunidade a expandi-lo.
