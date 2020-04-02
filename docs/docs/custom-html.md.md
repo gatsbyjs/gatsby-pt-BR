@@ -16,7 +16,7 @@ Note: Os vários acessórios que são renderizados na página são necessários,
 
 ## Inserindo HTML no ´<head>´
 Qualquer coisa que você renderizar no `html.js`, o componente não será "ativo" no cliente como outros componentes. Se
-você quiser torná-lo mais dinâmico atualiza a sua ´<head>´, nós recomendamos o uso de: 
+você quiser tornar mais dinâmica a atualização de sua ´<head>´, nós recomendamos o uso de: 
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
 
 ### Inserir HTML no `<footer>`
