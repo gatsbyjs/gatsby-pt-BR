@@ -31,7 +31,7 @@ Se você ver o erro: `Uncaught Error: _registerComponent(...):Target container i
   dangerouslySetInnerHTML={{ __html: this.props.body }}
 />
 ```
-### Adicionado o JavaScript personalizado
+## Adicionado o JavaScript personalizado
 Você pode adicionar JavaScript personalizado ao seu documento HTML usando o atributo [dangerouslySetInnerHTML] (https://reactjs.org/docs/dom-elements.html#dangerouslysetinnerhtml) do React.
 
 ```jsx:title=src/html.js
