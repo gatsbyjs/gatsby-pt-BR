@@ -10,7 +10,7 @@ cp .cache/default-html.js src/html.js
 ```
 E depois faça as modificações que você necessita.
 
-### Acessórios Necessários
+## Props Necessárias
 Note: Os vários acessórios que são renderizados na página são necessários, por exemplo: 
 `headComponents`, `preBodyComponents`, `body`, e `postBodyComponents`. 
 
