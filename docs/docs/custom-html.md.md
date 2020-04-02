@@ -19,7 +19,7 @@ Qualquer coisa que você renderizar no `html.js`, o componente não será "ativo
 você quiser tornar mais dinâmica a atualização de sua ´<head>´, nós recomendamos o uso de: 
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
 
-### Inserir HTML no `<footer>`
+## Inserir HTML no `<footer>`
 Se você quiser inserir html personalizado no 'footer/rodapé', o caminho preferido para se fazer isso é pelo 'html.js'. Se você está escrevendo um plugin, considere o uso do  `setPostBodyComponents` suporte no [Gatsby SSR API](/docs/ssr-apis/).
 
 ### Target container 
