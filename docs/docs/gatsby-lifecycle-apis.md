@@ -3,13 +3,10 @@ title: APIs de ciclo de vida do Gatsby
 ---
 
 
-import LayerModel from "../../www/src/components/layer-model"
 
 Gatsby fornece um conjunto rico de APIs de ciclo de vida para se conectar ao bootstrap
 e operações de compilação e tempo de execução.
 
-Gatsby provides a rich set of lifecycle APIs to hook into its bootstrap,
-build, and client runtime operations.
 
 
 Os princípios de design do Gatsby incluem:
@@ -23,7 +20,6 @@ Os princípios de design do Gatsby incluem:
 
 # Visão geral de alto nível
 
-## High level Overview
 
 
 O modelo a seguir fornece uma visão geral conceitual de como os dados são originados e transformados no processo de construção de um site Gatsby:
@@ -45,7 +41,6 @@ Durante o "bootstrap" o Gatsby:
 - extrai, executa e substitui consultas graphql para páginas e `StaticQuery`s
 - grava as páginas para armazenar em cache
 
-During the main bootstrap sequence, Gatsby (in this order):
 
 - reads and validates `gatsby-config.js` to load in your list of plugins (it doesn't run them yet).
 - deletes HTML and CSS files from previous builds (public folder)
@@ -92,7 +87,6 @@ A sequência dos ciclos de vida da API do nó bootstrap **main** é:
 
 ## Sequência de compilação
 
-## Build sequence
 
 
 (para ser escrito)
