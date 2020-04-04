@@ -1,8 +1,8 @@
 ---
-title: Como Gatsby Gatsby Trabalha com GitHub Pages
+title: Como Gatsby Trabalha com GitHub Pages
 ---
 
-GitHub pages é um serviço oferecido pelo GitHub que permite a hospedagem de sites configurados diretamente do repositório. Um site feito em Gatsby pode ser hospedado no GitHub Pages com apenas algumas configurações na base de código e nas configurações do repositório.
+GitHub Pages é um serviço oferecido pelo GitHub que permite a hospedagem de sites configurados diretamente do repositório. Um site feito em Gatsby pode ser hospedado no GitHub Pages com apenas algumas configurações na base de código e nas configurações do repositório.
 
 Você pode publicar seu site no GitHub Pages de várias maneiras diferentes:
 
@@ -16,7 +16,7 @@ Você deve selecionar nas configurações do seu repositório qual branch será 
 
 1. Navegue até o repositório do seu site.
 
-2. Abaixo do nome do repositório, clique Configurações.
+2. Abaixo do nome do repositório, clique em Configurações.
 
 3. Na seção GitHub Pages, use o drop-down de Origem para selecionar master (para publicar no subdomínio raiz) ou gh-pages (para publicar em um caminho como `/docs`) como sua origem de publicação para o GitHub Pages.
 
@@ -75,7 +75,7 @@ Depois de executar `npm run deploy` você deve ver seu site em `username.github.
 
 ### Fazer deploy para o subdomínio raiz e utilizar um domínio personalizado
 
-Se você usa um [domínio personalizado](https://help.github.com/articles/using-a-custom-domain-with-github-pages/), não adicione o `pathPrefix` senão vai quebrar a navegação do seu site. Prefixo de caminho somente é necessário quando o site _não_ está na raiz do domínio, como nos sites de repositórios.
+Se você usa um [domínio personalizado](https://help.github.com/articles/using-a-custom-domain-with-github-pages/), não adicione o `pathPrefix` pois isso vai quebrar a navegação do seu site. Prefixo de caminho somente é necessário quando o site _não_ está na raiz do domínio, como nos sites de repositórios.
 
 **Nota**: Não esqueça de adicionar seu arquivo [CNAME](https://help.github.com/articles/troubleshooting-custom-domains/#github-repository-setup-errors) ao diretório `static`.
 
@@ -85,15 +85,15 @@ Também é possível publicar seu site para `gh-pages` através de um servidor C
 
 Você pode usar o [módulo npm gh-pages](https://www.npmjs.com/package/gh-pages) para publicar. Mas primeiro, você precisa configurá-lo com as credenciais apropriadas para que `gh-pages` possa enviar uma nova branch.
 
-### Obter um tocken GitHub para autenticação no CI
+#### Obter um token GitHub para autenticação no CI
 
-Para fazer o push de mudanças a partir do sistema CI para o GitHub, você precisará autenticar. É recomendado usar [tokens do GitHub para desenvedores](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
+Para fazer o push de mudanças a partir do sistema CI para o GitHub, você precisará autenticar. É recomendado usar [tokens do GitHub para desenvolvedores](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
 
 No GitHub vá para as configurações de sua conta -> configurações de desenvolvedor -> tokens de acesso pessoal, e crie um novo token que forneça permissões de acesso ao `repo`.
 
 Na [configuração do Travis para o repositório](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings), adicione uma nova variável secreta de ambiente de nome `GH_TOKEN` com o valor do token copiado do GitHub. Certifique-se de **NÃO alterar a configuração "exibir nos logs de build" para ativada** pois o token deve permanecer secreto. Caso contrário, estranhos poderão fazer push para o seu repositório (um grande problema de segurança).
 
-### Adicionar um script de deploy ao GitHub Pages via CI
+#### Adicionar um script de deploy ao GitHub Pages via CI
 
 Atualizar o `package.json` do projeto Gatsby para incluir um script de execução `deploy` que chama `gh-pages` com dois argumentos importantes na linha de comando:
 
@@ -108,7 +108,7 @@ Aqui está um exemplo (não esqueça de atualizar o nome de usuário e repositó
   }
 ```
 
-### Atualizar a configuração do .travis.yml
+#### Atualizar a configuração do .travis.yml
 
 A seguinte configuração `.travis.yml` fornece uma referência:
 
