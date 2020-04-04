@@ -10,4 +10,4 @@ O ecossistema Gatsby inclui conectores internos para vários sistemas de banco d
 - [MongoDB](/packages/gatsby-source-mongodb/)
 - [Firebase](/packages/gatsby-source-firebase/)/[Firestore](/packages/gatsby-source-firestore/)
 
-Esses plugins ingerirão dados do seu DB e os disponibilizarão para consulta dos componentes da página.
+Esses plugins irão consumir dados de seu DB e os disponibilizarão para consulta nos componentes da página.
