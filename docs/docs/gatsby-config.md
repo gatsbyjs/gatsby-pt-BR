@@ -4,7 +4,7 @@ title: API de configuração do Gatsby
 
 As opções de configurações para um site Gatsby são colocadas em um arquivo na raiz do projeto chamado `gatsby-config.js`.
 
-_Anotações: Existem muitas amostras de configurações que podem ser úteis para referenciar em diferentes [Exemplos de Websites Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples).
+_Anotações: Existem muitas amostras de configurações que podem ser úteis para referenciar em diferentes [Exemplos de Websites Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples)._
 
 ## Opções de Configurações
 
