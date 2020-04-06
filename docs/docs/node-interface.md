@@ -30,29 +30,29 @@ Uma chave reservada para plugins que desejam estender outros `nodes`.
 
 ### `contentDigest`
 
-Um digest (Hash), ou um breve resumo digital, do conteúdo desse `node`(por exemplo, `md5sum`).
+Campo onde é armazenado um Hash (breve resumo digital) referente ao conteúdo deste `node`, pode ser por exemplo um `md5sum`.
 
-Esse `digest` deve ser único dentro do conteúdo desse `node` pois é usado para armazenamento em cache. O `digest` mudará conforme o conteúdo desse `node` for alterado. Há um função auxiliar chamado [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) para criar um Hash `md5`.
+Esse campo deve ser único de acordo com o conteúdo deste `node` pois é usado no armazenamento em cache. O Hash mudará conforme o conteúdo desse `node` for alterado. Há um função auxiliar chamada [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) para criar um Hash `md5`.
 
 ### `mediaType`
 
-[Tipo de mídia](https://pt.wikipedia.org/wiki/Tipo_de_m%C3%ADdia_da_Internet) Opcional que indica aos plugins transformadores que este  `node` contém dados que podem ser processados posteriormente.
+[Tipo de mídia](https://pt.wikipedia.org/wiki/Tipo_de_m%C3%ADdia_da_Internet) opcional que indica aos plugins transformadores que este `node` contém dados que podem ser processados posteriormente.
 
 ### `type`
 
-Um tipo de `node` globalmente exclusivo escolhido pelo proprietário do plugin.
+Um tipo de `node` único e global escolhido pelo proprietário do plugin.
 
 ### `owner`
 
-O plugin que criou este `node`. Esse campo é adicionado pelo próprio gatsby em si (e não pelo plugin).
+O plugin que criou este `node`. Este campo é adicionado pelo próprio gatsby (e não pelo plugin).
 
 ### `fieldOwners`
 
-Atributo que armazena a correspondência entre plugins e seus campos criados. Esse campo também é adicionado pelo próprio gatsby em si (e não pelo plugin).
+Atributo que armazena a correspondência entre plugins e seus campos criados. Este campo também é adicionado pelo próprio gatsby (e não pelo plugin).
 
 ### `content`
 
-Campo opcional que expõe o conteúdo cru desse `node` para plugins transformadores que podem obter e processar posteriormente.
+Campo opcional que expõe o conteúdo puro  desse `node` para plugins transformadores que podem obter e processar posteriormente.
 
 ## Plugins de origem (Source plugins)
 
