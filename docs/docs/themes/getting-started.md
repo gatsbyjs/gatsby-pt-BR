@@ -20,9 +20,9 @@ gatsby new my-blog https://github.com/gatsbyjs/gatsby-starter-blog-theme
 
 O iniciador do tema oficial do blog Gatsby faz o seguinte:
 
-### 1. O iniciador instala o tema e o configura
+### 1. O iniciador instala e configura o tema
 
-Quando você usa um iniciador construído com um tema, frequentemente verá que é apresentado inicialmente como um leve `gatsby-config.js`. Os temas começam a funcionar quando instalados através de um array `plugins`:
+Quando você usa um iniciador construído com um tema, frequentemente verá que você inicialmente terá um `gatsby-config.js` simplificado. Os temas começam a funcionar quando instalados através de um array `plugins`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -60,13 +60,13 @@ title: Hello, world!
 path: /hello-world
 ---
 
-I'm an example post!
+Sou um post de exemplo!
 ```
 
 Depois de fazer algumas modificações, execute o `gatsby develop` para iniciar um servidor de desenvolvimento e visualizar suas alterações no navegador.
 
 ## Atualizando um tema
 
-Para obter as atualizações mais recentes do seu tema, você pode atualizar a versão `gatsby-theme-blog` no `package.json` do seu site.
+Para obter as atualizações mais recentes do seu tema, você pode atualizar a versão do `gatsby-theme-blog` no `package.json` do seu site.
 
 Você pode fazer isso executando a instalação do pacote de temas novamente: `npm install --save gatsby-theme-blog`.
