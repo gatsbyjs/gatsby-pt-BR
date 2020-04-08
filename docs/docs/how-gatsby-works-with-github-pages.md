@@ -32,7 +32,7 @@ npm install gh-pages --save-dev
 
 ## Usando um script de deploy
 
-Um script personalizado em seu `package.json` torna mais fácil fazer o build do seu site e mover o conteúdo dos arquivos gerados para a branch apropriada para o GitHub Pages, isso ajuda a automatizar esse processo.
+Um script personalizado em seu `package.json` torna mais fácil fazer o build do seu site e mover o conteúdo dos arquivos gerados da branch apropriada para o GitHub Pages, isso ajuda a automatizar esse processo.
 
 ### Fazer deploy para um caminho no GitHub Pages
 
