@@ -2,7 +2,7 @@
 title: Gatsby no Linux
 ---
 
-# Linux
+This guide assumes you already have a native installation of Linux on your machine. The following steps walk through how to install Node.js and associated dependencies.
 
 > Isto é um TODO. Ajude a nossa comunidade a expandi-lo.
 
@@ -50,9 +50,16 @@ Existem outras alternativas para gerenciar as versões do node, como o [nvm], co
 
 A configuração do Debian é aproximadamente idêntica ao Ubuntu, com exceção da instalação adicional do `git` e do `libpng-dev`.
 
+Begin by updating and upgrading.
+
 ```shell
 sudo apt update
 sudo apt -y upgrade
+```
+
+Additional dependencies need to be installed as well. `build-essential` is a package that allows other packages to compile to a Debian package. `git` installs a package to work with version control. `linbpng-dev` installs a package that allows the project to manipulate images.
+
+```shell
 sudo apt install build-essential
 sudo apt install git
 sudo apt install libpng-dev
@@ -64,10 +71,11 @@ Ou para instalar todos ao mesmo tempo e aprovar `(y)` em todas as instalações:
 sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && sudo apt install git && sudo apt install libpng-dev
 ```
 
-<!-- links -->
+### Additional links and resources
 
-[windows store]: https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6
-[n]: https://github.com/tj/n
-[n-install]: https://github.com/mklement0/n-install
-[nvm]: https://github.com/creationix/nvm
-[bash startup]: https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578
+- [Super detailed guide to making VSCode work with ESL from VSCode's docs website](https://code.visualstudio.com/docs/remote/wsl)
+- [Microsoft Store page for downloading Ubuntu on Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
+- [n](https://github.com/tj/n)
+- [nvm](https://github.com/creationix/nvm)
+- [n-install](https://github.com/mklement0/n-install)
+- [bash startup](https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578)

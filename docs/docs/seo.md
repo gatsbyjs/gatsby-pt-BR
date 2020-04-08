@@ -11,7 +11,7 @@ Como as páginas Gatsby são renderizadas no servidor, todos os conteúdos das p
 Você pode vizualizar o código-fonte desta página com o `curl`( no seu terminal): 
 
 ```shell
-curl https://www.gatsbyjs.org/docs/seo
+Invoke-WebRequest https://www.gatsbyjs.org/docs/seo | Select -ExpandProperty Content
 ```
 `Clique-botão-direito => Exibir código-fonte` isto não exibirá o html real (mesmo que elas ainda assim sejam renderizadas no servidor) já que este site está usando service workers. [Leia estas anotações](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-offline#notes) para aprender mais.
 
@@ -39,19 +39,19 @@ Alguns exemplos usando react-helmet:
 Google utiliza dados estruturados encontrados na web para entender o conteúdo das páginas, bem como adquirir informações da web e do mundo em geral.
 Por exemplo, aqui está um trecho de dados estruturados em [formato JSON-LD](https://developers.google.com/search/docs/guides/intro-structured-data) (Notação de Objetos JavaScript para vincular os dados) que podem aparecer na página de contato de uma companhia chamada Spooky Technologies, descrevendo suas informações de contatos:
 
-```js
+```html
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Company",
-  "url": "http://www.spookytech.com",
-  "name": "Spooky technologies",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "+5-601-785-8543",
-    "contactType": "Customer Support"
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "url": "http://www.spookytech.com",
+    "name": "Spooky technologies",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+5-601-785-8543",
+      "contactType": "Customer Support"
+    }
   }
-}
 </script>
 ```
 

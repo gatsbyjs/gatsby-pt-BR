@@ -2,22 +2,20 @@
 title: O Que São Temas Gatsby?
 ---
 
-Temas Gatsby são plugins que incluem um arquivo gatsby-config.js e adicionam funcionalidades pré-configuradas, fonte de dados, e/ou código UI a sites Gatsby. Você pode pensar em temas Gatsby como sites Gatsby separados que podem ser colocados juntos, o que te permite dividir um projeto maior.
-
 ## Introdução
 
-Antes de entrar em temas, vamos percorrer a jornada que levou a criação dos temas.
+Para entender temas no Gastby, vamos percorrer a jornada que levou ao surgimento dessa funcionalidade.
 
 Se você já criou um site Gatsby do zero, você sabe que há um número de decisões a serem tomadas. Por exemplo, criando um blog você precisa decidir onde seus dados estarão alocados, como é acessado, como é exibido e estilizado, etc.
 
 ## Gatsby Starters
 
-Uma forma existente para se criar rapidamente sites Gatsby com funcionalidades similares é usar "[Gatsby starters](/docs/starters/)". Starters são essencialmente sites Gatsby com funcionalidades pré-configuradas para um propósito específico. Você faz o download de um site Gatsby inteiro, pré-construído para um propósito específico (por exemplo, blogs, sites de portfólio, etc) e pode customizá-lo a partir disso.
+Uma forma existente para se criar rapidamente sites Gatsby com funcionalidades similares é usar "[_Gatsby starters_](/docs/starters/)". _Starters_ são essencialmente sites Gatsby com funcionalidades pré-configuradas para um propósito específico. Você faz o download de um site Gatsby inteiro, pré-construído para um propósito específico (por exemplo, blogs, sites de portfólio, etc) e pode customizá-lo a partir disso.
 
-Esses starters tradicionais são um primeiro passo visando reduzir o nível de esforço envolvido na criação de um novo site Gatsby. No entanto, há dois principais problemas com starters tradicionais:
+Esses _starters_ tradicionais são um primeiro passo visando reduzir o nível de esforço envolvido na criação de um novo site Gatsby. No entanto, há dois principais problemas com _starters_ tradicionais:
 
-- Sites criados a partir de starters tradicionais são basicamente “concebidos” desse starter — Eles não mantém conexão com o starter, e começam a divergir imediatamente. Se o starter for atualizado depois, não há uma forma fácil de puxar essas mudanças em um projeto existente.
-- Se você criou vários sites usando o mesmo starter, e depois quiser realizar as mesmas atualizações em todos eles, você teria que fazê-lo individualmente, site por site. 
+- Sites criados a partir de starters tradicionais são basicamente “ejetados” desse _starter_ — Eles não mantém conexão com o _starter_ e começam a divergir imediatamente. Se o _starter_ for atualizado depois, não há uma forma fácil de puxar essas mudanças para um projeto existente.
+- Se você criou múltiplos sites usando o mesmo _starter_, e depois quiser realizar as mesmas atualizações em todos eles, você teria que fazê-lo individualmente, site por site. 
 
 ## Temas Gatsby 
 

@@ -1,26 +1,26 @@
 ---
-title: Adding a List of Markdown Blog Posts
+title: Adicionando uma Lista de Marcações de Posts no Blog
 ---
 
-Once you have added Markdown pages to your site, you are just one step away from being able to list your posts on a dedicated index page.
+Depois de adicionar as páginas de marcações ao seu site, você fica a apenas um passo de poder listar suas postagens em uma página de índice dedicada.
 
-### Creating posts
+## Criando postagens
 
-As described [here](/docs/adding-markdown-pages), you will have to create your posts in Markdown files which will look like this:
+Conforme descrito [aqui](/docs/adding-markdown-pages), você terá que criar suas postagens nos arquivos Markdown, que irão se parecer com isto:
 
-```md
+```markdown
 ---
 path: "/blog/my-first-post"
 date: "2017-11-07"
 title: "My first blog post"
 ---
 
-Has anyone heard about GatsbyJS yet?
+Alguém já ouviu falar sobre o GatsbyJS?
 ```
 
-### Creating the page
+## Criando a página
 
-The first step will be to create the page which will display your posts, in `src/pages/`. You can for example use `index.js`.
+O primeiro passo será criar a página que exibirá suas postagens, em `src/pages/`. Você pode, por exemplo, usar o `index.js`.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -41,9 +41,9 @@ const IndexPage = ({
 export default IndexPage
 ```
 
-### Creating the GraphQL query
+## Criando a consulta GraphQL
 
-Second, you need to provide the data to your component with a GraphQL query. Let's add it, so that `index.js` looks like this:
+Segundo, você precisa fornecer os dados para o seu componente com uma consulta GraphQL. Vamos adicioná-la, para que o `index.js` se pareça com isto:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -83,9 +83,9 @@ export const pageQuery = graphql`
 `
 ```
 
-### Creating the `PostLink` component
+## Criando o componente `PostLink`
 
-The only thing left to do is to add the `PostLink` component. Create a new file `post-link.js` in `src/components/` and add the following:
+A única coisa que resta a fazer é adicionar o componente `PostLink`. Crie um novo arquivo `post-link.js` em `src/components/` e adicione o seguinte:
 
 ```jsx:title=src/components/post-link.js
 import React from "react"
@@ -102,4 +102,4 @@ const PostLink = ({ post }) => (
 export default PostLink
 ```
 
-This should get you a page with your posts sorted by descending date. You can further customize the `frontmatter` and the page and `PostLink` components to get your desired effects!
+Isso deve gerar uma página com suas postagens classificadas por data decrescente. Você pode personalizar ainda mais o `frontmatter` e os componentes de página e `PostLink` para obter os efeitos desejados!
