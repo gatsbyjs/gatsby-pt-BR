@@ -24,7 +24,7 @@ Você deve selecionar nas configurações do seu repositório qual branch será 
 
 ## Instalando o pacote `gh-pages`
 
-A maneira mais fácil de publicar um site Gatsby para o GitHub Pages é usando um pacote chamado [gh-pages](https://github.com/tschaub/gh-pages).
+A maneira mais fácil de publicar um site Gatsby no GitHub Pages é usando um pacote chamado [gh-pages](https://github.com/tschaub/gh-pages).
 
 ```shell
 npm install gh-pages --save-dev
