@@ -16,19 +16,20 @@ A resposta é que ele usa a biblioteca [sift.js](https://github.com/crcn/sift.js
 
 A maior parte da lógica abaixo está no arquivo [run-sift.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js), chamado a partir da função [ProcessedNodeType `resolve()`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/schema/build-node-types.js#L191).
 
-## ProcessedNodeType Resolve Function
+## Função ProcessedNodeType Resolve 
 
-Remember, at the point this resolve function is created, we have been iterating over all the distinct `node.internal.type`s in the redux `nodes` namespace. So for instance we might be on the `MarkdownRemark` type. Therefore the `resolve()` function closes over this type name and has access to all the nodes of that type.
+Lembrando que, no momento no qual esta função de resolução é criado, iteramos por todos os `node.internal.type` distindos no namespace `nodes` do redux. Por exemplo, podemos estar no tipo `MarkdownRemark`. Portanto, a função `resolve()` fecha sobre esse tipo e tem acesso a todos os nós desse tipo.
 
-The `resolve()` function calls `run-sift.js`, and provides it with the following arguments:
+A função `resolve()`  chama `run-sift.js`, e fornece os seguintes argumentos:
 
-- GraphQLArgs (as JavaScript object). Within a filter. E.g. `wordcount: { paragraphs: { eq: 4 } }`
-- All nodes in redux of this type. E.g. where `internal.type == MmarkdownRemark'`
-- Context `path`, if being called as part of a [page query](/docs/query-execution/#query-queue-execution)
-- typeName. E.g. `markdownRemark`
-- gqlType. See [more on gqlType](/docs/schema-gql-type)
 
-For example:
+- GraphQLArgs (como um objeto JavaScript). Dentro de um filtro. Por exemplo, `wordcount: { paragraphs: { eq: 4 } }`
+- Todos os nodes em redux deste tipo. Por exemplo, onde `internal.type == MmarkdownRemark'`
+
+- Contexto `path`, se está sendo chamado como parte de uma [page query](/docs/query-execution/#query-queue-execution).  Por exemplo, `markdownRemark`
+- gqlType. Veja mais em [more on gqlType](/docs/schema-gql-type)
+
+Por exemplo:
 
 ```javascript
 runSift({
