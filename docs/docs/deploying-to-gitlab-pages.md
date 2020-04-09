@@ -2,7 +2,7 @@
 title: Publicando no GitLab Pages
 ---
 
-GitLab Pages é muito semelhante ao Github Pages. GitLab Pages dá suporte a domínios customizados, certificados SSL, como também inclui uma plataforma de integração contrínua.
+GitLab Pages é muito semelhante ao Github Pages. GitLab Pages dá suporte a domínios customizados, certificados SSL, como também inclui uma plataforma de integração contínua.
 
 Crie um novo repositório no GitLab, [crie um novo site Gatsby](/docs/) se ainda não fez e adicione o GitLab como seu remoto.
 
@@ -13,11 +13,11 @@ git add .
 git push -u origin master
 ```
 
-Você pode publicar sites no GitLab Pages com ou sem um domínio customizado. Se você escolher a configuração padrão (sem um domínio customizado), ou se você criar um site para um projeto, você irá precisar configurar um prefixo para a rota do seu site. Se você adicionar um domínio customizado, você pode pular o passo de adicionar o prefixo a rota, e remover `--prefix-paths` do arquivo gitlab-ci.yml.
+Você pode publicar sites no GitLab Pages com ou sem um domínio customizado. Se você escolher a configuração padrão (sem um domínio customizado), ou se você criar um site para um projeto, você precisará configurar um prefixo para a rota do seu site. Se você adicionar um domínio customizado, você pode pular o passo de adicionar o prefixo na rota, e remover `--prefix-paths` do arquivo `gitlab-ci.yml`
 
-## Adicionar Prefixo a Rota no Gatsby
+## Adicione Prefixo a Rota no Gatsby
 
-Como seu site irá ser hospedado em seunome.gitlab.io/repositorioexemplo/, você irá precisar configurar para o Gatsby usar o plugin Path Prefix.
+Como seu site irá ser hospedado em seunome.gitlab.io/repositorioexemplo/, você irá precisar configurar para o Gatsby para que use o plugin Path Prefix.
 
 Em `gatsby-config.js`, coloque o `pathPrefix` para ser o prefixo que será adicionado aos links das rotas do seu site. O `pathPrefix` deve ser o nome do projeto em seu repositório. (ex. `https://gitlab.com/seunome/repositorioexemplo/`) - seu `pathPrefix` deve ser `/repositorioexemplo`. Veja a [documentação de prefixação de rota para mais detalhes](/docs/path-prefix/).
 
@@ -33,14 +33,14 @@ Para usar a ferramenta de integração contínua (CI) do GitLab, você precisa a
 
 O editor online no site do [GitLab](https://gitlab.com) contém um exemplo pré-built com um template pronto para ser usado no Gatsby.
 
-Para usar este template, abra seu repositório no site do GitLab, selecione a opção 'Configuações CI/CD' no menu, após isso irá criar o arquivo `.gitlab-ci.yml` vazio automaticamente. Agora selecione o 'Apply a template' e digite 'Gatsby' no filtro. Selecione o Gatsby como opção, clique para 'Commit Change' e está feito!
+Para usar o template, abra seu repositório no site do GitLab, selecione a opção 'Setup CI/CD' no menu, após isso será criado um arquivo `.gitlab-ci.yml` vazio automaticamente. Agora selecione o 'Apply a template' e digite 'Gatsby' no filtro. Selecione o Gatsby como opção, clique para 'Commit Change' e está feito!
 
-Se for adicionar manualmente no seu projeto, o arquivo precisa conter alguns campos obrigatórios:
+Caso você opte por adicionar manualmente o template no seu projeto, o arquivo `.gitlab-ci.yml` precisa conter alguns campos obrigatórios:
 
 ```yaml:title=.gitlab-ci.yml
 image: node:latest
 
-# Essa pasta é cacheada entre as builds
+# Essa pasta é armazenada em cache entre as builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
@@ -61,8 +61,8 @@ A plataforma de CI usa Docker images/containers, então `image node:latest` info
 
 Como `./node_modules/.bin/gatsby build --prefix-paths` foi usado, você não precisa instalar gatsby-cli para fazer o build da imagem, pois já foi incluído e instalado com `npm install`. `--prefix-paths` foi usando porque _sem_ essa flag, Gatsby ignora seu pathPrefix. `artifacts:` and `paths:` são usados para informar ao GitLab Pages onde os arquivos estáticos estão localizados. `only:` and `master` diz ao CI para apenas rodar estas instruções quando a branch master é publicada.
 
-Adicione essa configução e na próximo push a sua branch master, seu site terá feito o build corretamente. Isto pode ser checado no seu repositório do GitLab, selecionando em CI/CD na barra lateral irá mostra um log de todas as atividades que tiveram sucesso ou falharam. Você pode clicar no status de falha e selecionar a atividade para obter mais inforamções do porquê sua build falhou.
+Adicione essa configução e no próximo push para a sua branch master, seu site terá feito o build corretamente. Isto pode ser checado no seu repositório do GitLab, selecionando em CI/CD na barra lateral. Será mostrado um log de todas as atividades que tiveram sucesso ou falharam. Você pode clicar no status de falha e selecionar a atividade para obter mais informações do porquê sua build falhou.
 
-Se tudo ocorreu bem, você agora poderá acessar seu site. Será hospedado em gitlab.io - por exemplo se o seu repositório está associado ao sua conta, a url será seunome.gitlab.io/repositorioexemplo.
+Se tudo ocorreu bem, você agora poderá acessar seu site. Ele será hospedado em gitlab.io - por exemplo se o seu repositório está associado a sua conta, a url será seunome.gitlab.io/repositorioexemplo.
 
 Visite o [GitLab Pages](https://gitlab.com/help/user/project/pages/getting_started_part_one.md) para aprender como configurar domínios customizados e descobrir configurações avançadas.
