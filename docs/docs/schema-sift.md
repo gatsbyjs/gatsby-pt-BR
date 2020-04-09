@@ -1,20 +1,20 @@
 ---
-title: Querying with Sift
+Título: Consultas usando Sift
 ---
 
-> This documentation isn't up to date with the latest version of Gatsby.
+> Este documento não está atualizado de acordo a última versão do Gatsby.
 >
-> The [schema customization](/docs/schema-customization) and [node materialisation](https://github.com/gatsbyjs/gatsby/pull/16091) features have both made changes to this part of Gatsby.
+> Os recursos de [personalização do esquema](/docs/schema-customization) and [materialização do node](https://github.com/gatsbyjs/gatsby/pull/16091) fizeram alterações nessa parte do Gatsby.
 >
-> You can help by making a PR to [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
+> Você pode ajudar fazendo Pull Request para [atualizar esta documentação](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-## Summary
+## Sumário
 
-Gatsby stores all data loaded during the source-nodes phase in Redux. And it allows you to write GraphQL queries to query that data. But Redux is a plain JavaScript object store. So how does Gatsby query over those nodes using the GraphQL query language?
+Gatsby armazena todos os dados carregados durante a fase dos nós de origem no Redux. E isso permite que você escreva consultas GraphQL para consultar esses dados. Mas o Redux é um simples armazenamento de objetos JavaScript. Então, como o Gatsby consulta esses nós usando a linguagem de consulta GraphQL?
 
-The answer is that it uses the [sift.js](https://github.com/crcn/sift.js/tree/master) library. It is a port of the MongoDB query language that works over plain JavaScript objects. It turns out that mongo's query language is very compatible with GraphQL.
+A resposta é que ele usa a biblioteca [sift.js](https://github.com/crcn/sift.js/tree/master). Abstraindo a linguagem de consulta do MongoDB para funcionar sobre objetos JavaScript. Pois a linguagem de consulta do MongoDB é muito compatível com o GraphQL.
 
-Most of the logic below is in the [run-sift.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js) file, which is called from the [ProcessedNodeType `resolve()`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/schema/build-node-types.js#L191) function.
+A maior parte da lógica abaixo está no arquivo [run-sift.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js), chamado a partir da função [ProcessedNodeType `resolve()`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/schema/build-node-types.js#L191).
 
 ## ProcessedNodeType Resolve Function
 
