@@ -21,7 +21,7 @@ internal: {
   fieldOwners: Object,
   content: String,
 }
-...outros campos específicos do tipo node
+...outros campos específicos para este tipo de node
 ```
 
 ### `parent`
@@ -52,7 +52,7 @@ Atributo que armazena a correspondência entre plugins e seus campos criados. Es
 
 ### `content`
 
-Campo opcional que expõe o conteúdo puro  desse `node` para plugins transformadores que podem obter e processar posteriormente.
+Campo opcional que expõe o conteúdo puro desse `node` para plugins transformadores que podem obter e processar posteriormente.
 
 ## Plugins de origem (Source plugins)
 
@@ -66,7 +66,7 @@ Outros plugins de origem extraem dados para APIs externas, como a da
 
 Plugins transformadores podem também criar `nodes` transformando `nodes` de origem em novos tipos de `nodes`. Esse comportamento é muito comum quando construímos sites usando o Gatsby para instalar ambos os plugins de origem e os plugins transformados.
 
-`Nodes` criados pelo plugins transformador são atribuídos como "`children`" de seus `nodes` pais.
+`Nodes` criados pelos plugins transformadores são atribuídos como "`children`" de seus `nodes` pais.
 
 - O 
 [plugin transformador Remark (da biblioteca Markdown)](/packages/gatsby-transformer-remark/)
@@ -81,5 +81,4 @@ Gatsby automaticamente infere a estrutura dos `nodes` do seu site e cria um esqu
 
 ## Criação de `node`
 
-Para aprender mais sobre como os `nodes` são criados e vinculados, consulte a documentação de [Criação de nós](/docs/node-creation/) na seção "
-Por trás das cenas".
+Para aprender mais sobre como os `nodes` são criados e vinculados, consulte a documentação de [Criação de nós](/docs/node-creation/) na seção "Por trás das cenas".
