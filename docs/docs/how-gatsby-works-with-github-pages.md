@@ -1,42 +1,43 @@
 ---
-title: How Gatsby Works with GitHub Pages
+title: Como Gatsby Trabalha com GitHub Pages
 ---
 
-GitHub Pages is a service offered by GitHub that allows hosting for websites configured straight from the repository. A Gatsby site can be hosted on GitHub Pages with just a few configurations to the codebase and the repository's settings.
+GitHub Pages é um serviço oferecido pelo GitHub que permite a hospedagem de sites configurados diretamente do repositório. Um site feito em Gatsby pode ser hospedado no GitHub Pages com apenas algumas configurações na base de código e nas configurações do repositório.
 
-You can publish your site on GitHub Pages several different ways:
+Você pode publicar seu site no GitHub Pages de várias maneiras diferentes:
 
-- to a path like `username.github.io/reponame/` or `/docs`
-- to a subdomain based on your username or organization name: `username.github.io` or `orgname.github.io`
-- to the root subdomain at `username.github.io`, and then configured to use a custom domain
+- para um caminho como `username.github.io/reponame/` ou `/docs`
+- para um subdomínio com base no seu nome de usuário ou nome de organização: `username.github.io` ou `orgname.github.io`
+- para o subdomínio raiz em `username.github.io`, e então configurar para usar um domínio personalizado
 
-## Configuring the GitHub Pages source branch
+## Configurando a branch de origem do GitHub Pages
 
-You must select which branch will be deployed from your repository settings in GitHub for GitHub Pages to function. On GitHub:
+Você deve selecionar nas configurações do seu repositório qual branch será publicada no GitHub para que o GitHub Pages funcione. No GitHub:
 
-1. Navigate to your site's repository.
+1. Navegue até o repositório do seu site.
 
-2. Under the repository name, click Settings.
+2. Abaixo do nome do repositório, clique em Configurações.
 
-3. In the GitHub Pages section, use the Source drop-down to select master (for publishing to the root subdomain) or gh-pages (for publishing to a path like `/docs`) as your GitHub Pages publishing source.
+3. Na seção GitHub Pages, use o drop-down de Origem para selecionar master (para publicar no subdomínio raiz) ou gh-pages (para publicar em um caminho como `/docs`) como sua origem de publicação para o GitHub Pages.
 
-4. Click Save.
+4. Clique Salvar.
 
-## Installing the `gh-pages` package
+## Instalando o pacote `gh-pages`
 
-The easiest way to push a Gatsby app to GitHub Pages is by using a package called [gh-pages](https://github.com/tschaub/gh-pages).
+A maneira mais fácil de publicar um site Gatsby no GitHub Pages é usando um pacote chamado [gh-pages](https://github.com/tschaub/gh-pages).
 
 ```shell
 npm install gh-pages --save-dev
 ```
 
-## Using a deploy script
+## Usando um script de deploy
 
-A custom script in your `package.json` makes it easier to build your site and move the contents of the built files to the proper branch for GitHub Pages, this helps automate that process.
+Um script personalizado em seu `package.json` torna mais fácil fazer o build do seu site e mover o conteúdo dos arquivos gerados da branch apropriada para o GitHub Pages, isso ajuda a automatizar esse processo.
 
-### Deploying to a path on GitHub Pages
+### Fazer deploy para um caminho no GitHub Pages
 
-For sites deployed at a path like `username.github.io/reponame/`, the `--prefix-paths` flag is used because your website will end up inside a folder like `username.github.io/reponame/`. You'll need to add your `/reponame` [path prefix](/docs/path-prefix/) as an option to `gatsby-config.js`:
+Para sites publicados em um caminho como `username.github.io/reponame`, uma flag `--prefix-paths` é usada porque seu site vai estar dentro de um diretório como `username.github.io/reponame/`. Você vai precisar adicionar seu `/reponame` [path prefix](/docs/path-prefix/) como uma opção no `gatsby-config.js`:
+
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -44,7 +45,7 @@ module.exports = {
 }
 ```
 
-Then add a `deploy` script to `package.json` in your repository's codebase:
+Então adicione um script `deploy` no `package.json` no código base do seu repositório:
 
 ```json:title=package.json
 {
@@ -54,13 +55,13 @@ Then add a `deploy` script to `package.json` in your repository's codebase:
 }
 ```
 
-When you run `npm run deploy` all contents of the `public` folder will be moved to your repository's `gh-pages` branch. Make sure that your repository's settings has the `gh-pages` branch set as the source to deploy from.
+Quando você executar `npm run deploy` todo conteúdo do diretório `public` será movido para a branch `gh-pages` do seu repositório. Certifique-se de que as configurações do seu repositório tenham a branch `gh-pages` configurada como origem de publicação.
 
-**Note**: to select master or gh-pages as your publishing source, you must have the branch present in your repository. If you don't have a master or gh-pages branch, you can create them and then return to source settings to change your publishing source.
+**Nota**: para selecionar master ou gh-pages como sua origem de publicação, você precisa ter essa branch presente em seu repositório. Se você não tem uma branch master ou gh-pages, você pode criar elas e então retornar à configuração de Origem para alterar sua origem de publicação.
 
-### Deploying to a GitHub Pages subdomain at github.io
+### Fazer deploy para um subdomínio GitHub Pages em github.io
 
-For a repository named like `username.github.io`, you don't need to specify `pathPrefix` and your website needs to be pushed to the `master` branch.
+Para um repositório com nome `username.github.io`, você não precisa especificar o `pathPrefix` e seu site precisa ser enviado para a branch `master`.
 
 ```json:title=package.json
 {
@@ -70,36 +71,36 @@ For a repository named like `username.github.io`, you don't need to specify `pat
 }
 ```
 
-After running `npm run deploy` you should see your website at `username.github.io`
+Depois de executar `npm run deploy` você deve ver seu site em `username.github.io`
 
-### Deploying to the root subdomain and using a custom domain
+### Fazer deploy para o subdomínio raiz e utilizar um domínio personalizado
 
-If you use a [custom domain](https://help.github.com/articles/using-a-custom-domain-with-github-pages/), don't add a `pathPrefix` as it will break navigation on your site. Path prefixing is only necessary when the site is _not_ at the root of the domain like with repository sites.
+Se você usa um [domínio personalizado](https://help.github.com/articles/using-a-custom-domain-with-github-pages/), não adicione o `pathPrefix` pois isso vai quebrar a navegação do seu site. Prefixo de caminho somente é necessário quando o site _não_ está na raiz do domínio, como nos sites de repositórios.
 
-**Note**: Don't forget to add your [CNAME](https://help.github.com/articles/troubleshooting-custom-domains/#github-repository-setup-errors) file to the `static` directory.
+**Nota**: Não esqueça de adicionar seu arquivo [CNAME](https://help.github.com/articles/troubleshooting-custom-domains/#github-repository-setup-errors) ao diretório `static`.
 
-### Deploying to GitHub Pages from a CI server
+### Fazer deploy para o GitHub Pages a partir de um servidor CI
 
-It's also possible to deploy your website to `gh-pages` through a CI server. This example uses Travis CI, a hosted Continuous Integration service, but other CI systems could work as well.
+Também é possível publicar seu site para `gh-pages` através de um servidor CI. Este exemplo usa Travis CI, um serviço hospedado de Integração Contínua, mas outros sistemas CI também podem funcionar.
 
-You can use the [gh-pages npm module](https://www.npmjs.com/package/gh-pages) to deploy. But first, you need to configure it with proper credentials so that `gh-pages` is able to push a new branch.
+Você pode usar o [módulo npm gh-pages](https://www.npmjs.com/package/gh-pages) para publicar. Mas primeiro, você precisa configurá-lo com as credenciais apropriadas para que `gh-pages` possa enviar uma nova branch.
 
-#### Obtain a GitHub token for authenticating with CI
+#### Obter um token GitHub para autenticação no CI
 
-To push changes from the CI system to GitHub, you'll need to authenticate. It's recommended to use [GitHub developer tokens](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
+Para fazer o push de mudanças a partir do sistema CI para o GitHub, você precisará autenticar. É recomendado usar [tokens do GitHub para desenvolvedores](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
 
-In GitHub go to your account settings -> Developer settings -> Personal access tokens, and create a new token that provides the `repo` access permissions.
+No GitHub vá para as configurações de sua conta -> configurações de desenvolvedor -> tokens de acesso pessoal, e crie um novo token que forneça permissões de acesso ao `repo`.
 
-In [Travis's settings for the repository](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings), add a new secret environment variable of the name `GH_TOKEN` with the value of the token copied from GitHub. Make sure you **DO NOT toggle the "display in build logs" setting to on** as the token should remain secret. Otherwise, strangers would be able to push to your repository (a big security issue).
+Na [configuração do Travis para o repositório](https://docs.travis-ci.com/user/environment-variables/#defining-variables-in-repository-settings), adicione uma nova variável secreta de ambiente de nome `GH_TOKEN` com o valor do token copiado do GitHub. Certifique-se de **NÃO alterar a configuração "exibir nos logs de build" para ativada** pois o token deve permanecer secreto. Caso contrário, estranhos poderão fazer push para o seu repositório (um grande problema de segurança).
 
-#### Add script to deploy to GitHub Pages via CI
+#### Adicionar um script de deploy ao GitHub Pages via CI
 
-Update the Gatsby project's `package.json` to also include a `deploy` run script which invokes `gh-pages` with two important command-line arguments:
+Atualizar o `package.json` do projeto Gatsby para incluir um script de execução `deploy` que chama `gh-pages` com dois argumentos importantes na linha de comando:
 
-1. `-d public` - specifies the directory in which the built files exist and will be pushed as a source to GitHub Pages
-2. `-r URL` - the GitHub repository URL, including the use of the secret GitHub token (as a secret environment variable) to be able to push changes to the `gh-pages` branch, in the form of `https://$GH_TOKEN@github.com/<github username>/<github repository name>.git`
+1. `-d public` - especifica o diretório no qual os arquivos gerados estão e que serão enviados como origem para o GitHub Pages
+2. `-r URL` - a URL do repositório GitHub, incluindo o uso do token secreto do GitHub (como uma variável secreta de ambiente) para ser capaz de enviar mudanças para a branch `gh-pages`, na forma de `https://$GH_TOKEN@github.com/<github username>/<github repository name>.git`
 
-Here's an example (be sure to update the user and repo names to your own):
+Aqui está um exemplo (não esqueça de atualizar o nome de usuário e repositório):
 
 ```json
   "scripts": {
@@ -107,9 +108,9 @@ Here's an example (be sure to update the user and repo names to your own):
   }
 ```
 
-#### Update .travis.yml configuration
+#### Atualizar a configuração do .travis.yml
 
-The following `.travis.yml` configuration provides a reference:
+A seguinte configuração `.travis.yml` fornece uma referência:
 
 ```yaml
 language: node_js
@@ -119,16 +120,17 @@ node_js:
   - "10"
 deploy:
   provider: script
-  # Note: change "docs" to the directory where your gatsby-site lives, if necessary
+  # Nota: altere "docs" para o diretório onde está seu site Gatsby, se necessário`
   script: cd docs/ && yarn install && yarn run deploy
   skip_cleanup: true
   on:
+  
     branch: master
 ```
 
-To break-down the important bits here for deploying the Gatsby website from Travis to GitHub Pages:
+Explicando aqui as partes importantes para publicação do site Gatsby a partir do Travis para o GitHub Pages:
 
-1. `before_script` is used to install the Gatsby CLI so it can be used in the project's run script to build the Gatsby website
-2. `deploy` will only fire when the build runs on the master branch, in which case it will fire off the deploy script. In the above example, the Gatsby site is located in a `docs/` directory. The script changes into that directory, installs all the website dependencies, and runs the deploy script as was set in the previous step.
+1. `before_script` é usado para instalar o Gatsby CLI para que esse possa ser usado na execução do script do projeto para o build do site Gatsby
+2. `deploy` somente será disparado quando o build for executado na branch master, neste caso vai disparar o script de deploy. No exemplo acima, o site Gatsby está localizado no diretório `/docs`. O script muda para esse diretório, instala todas as dependências do site, e executa o script de deploy como foi definido no passo anterior.
 
-Committing and pushing both the `.travis.yml` and `package.json` files to your base branch will be the final step in the process.
+Fazer commit e push de ambos arquivos `.travis.yml` e `package.json` para sua branch base vai ser o passo final do processo.
