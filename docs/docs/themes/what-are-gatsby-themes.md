@@ -2,6 +2,8 @@
 title: O Que São Temas Gatsby?
 ---
 
+**Temas Gatsby** são plugins que incluem um arquivo `gatsby-config.js` e adicionam funcionalidades pré-configuradas, fonte de dados, e/ou código UI a sites Gatsby. Você pode pensar em temas Gatsby como sites Gatsby separados que podem ser colocados juntos, o que te permite dividir um projeto maior.
+
 ## Introdução
 
 Para entender temas no Gastby, vamos percorrer a jornada que levou ao surgimento dessa funcionalidade.
