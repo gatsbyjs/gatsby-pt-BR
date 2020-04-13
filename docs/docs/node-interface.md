@@ -1,13 +1,12 @@
 ---
-title: Node Interface
+title: Interface Node
 ---
 
-The "node" is the center of Gatsby's data system. All data that's added to
-Gatsby is modeled using nodes.
+O "`node`" é o centro do sistema de dados do Gatsby. Todos os dados que são adicionados ao Gatsby são modelados usando `nodes`.
 
-## Node data structure
+## Estrutura de dados de um `node`
 
-The basic node data structure is as follows:
+A estrutura básica de dados de um `node` é a seguinte:
 
 ```flow
 id: String,
@@ -22,71 +21,64 @@ internal: {
   fieldOwners: Object,
   content: String,
 }
-...other fields specific to this type of node
+...outros campos específicos para este tipo de node
 ```
 
 ### `parent`
 
-A key reserved for plugins who wish to extend other nodes.
+Uma chave reservada para plugins que desejam estender outros `nodes`.
 
 ### `contentDigest`
 
-A digest "Hash", or short digital summary, of the content of this node (for example, `md5sum`).
+Campo onde é armazenado um Hash (breve resumo digital) referente ao conteúdo deste `node`, pode ser por exemplo um `md5sum`.
 
-The digest should be unique to the content of this node since it's used for caching. If the content changes, this digest should also change. There's a helper function called [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) to create an `md5` digest.
+Esse campo deve ser único de acordo com o conteúdo deste `node` pois é usado no armazenamento em cache. O Hash mudará conforme o conteúdo desse `node` for alterado. Há um função auxiliar chamada [createContentDigest](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-core-utils/src/create-content-digest.js) para criar um Hash `md5`.
 
 ### `mediaType`
 
-Optional [media type](https://en.wikipedia.org/wiki/Media_type) to indicate to transformer plugins this node has data they can further process.
+[Tipo de mídia](https://pt.wikipedia.org/wiki/Tipo_de_m%C3%ADdia_da_Internet) opcional que indica aos plugins transformadores que este `node` contém dados que podem ser processados posteriormente.
 
 ### `type`
 
-A globally unique node type chosen by the plugin owner.
+Um tipo de `node` único e global escolhido pelo proprietário do plugin.
 
 ### `owner`
 
-The plugin which created this node. This field is added by gatsby itself (and not the plugin).
+O plugin que criou este `node`. Este campo é adicionado pelo próprio gatsby (e não pelo plugin).
 
 ### `fieldOwners`
 
-Stores which plugins created which fields. This field is added by gatsby itself (and not the plugin).
+Atributo que armazena a correspondência entre plugins e seus campos criados. Este campo também é adicionado pelo próprio gatsby (e não pelo plugin).
 
 ### `content`
 
-Optional field exposing the raw content for this node that transformer plugins can take and further process.
+Campo opcional que expõe o conteúdo puro desse `node` para plugins transformadores que podem obter e processar posteriormente.
 
-## Source plugins
+## Plugins de origem (Source plugins)
 
-New nodes are added to Gatsby by "source" plugins. A common one that many Gatsby
-sites use is the [Filesystem source plugin](/packages/gatsby-source-filesystem/)
-which turns files on disk into File nodes.
+Novos `nodes` são adicionados ao Gatsby por plugins de origem. Comumente muitos sites do Gatsby usam o [plugin de origem do sistema de arquivos](/packages/gatsby-source-filesystem/) que transforma arquivos do disco em arquivos de `nodes`.
 
-Other source plugins pull data from external APIs such as the
-[Drupal](/packages/gatsby-source-drupal/) and
-[Hacker News](/packages/gatsby-source-hacker-news/)
+Outros plugins de origem extraem dados para APIs externas, como a da
+[Drupal](/packages/gatsby-source-drupal/) e da
+[Hacker News](/packages/gatsby-source-hacker-news/).
 
-## Transformer plugins
+## Plugins transformadores (Transformer plugins)
 
-Transformer plugins can also create nodes by transforming source nodes into new
-types of nodes. It is very common when building Gatsby sites to install both
-source plugin(s) and transformer plugins.
+Plugins transformadores podem também criar `nodes` transformando `nodes` de origem em novos tipos de `nodes`. Esse comportamento é muito comum quando construímos sites usando o Gatsby para instalar ambos os plugins de origem e os plugins transformados.
 
-Nodes created by transformer plugins are set as "children" of their "parent"
-nodes.
+`Nodes` criados pelos plugins transformadores são atribuídos como "`children`" de seus `nodes` pais.
 
-- The
-  [Remark (Markdown library) transformer plugin](/packages/gatsby-transformer-remark/)
-  looks for new nodes that are created with a `mediaType` of `text/markdown` and
-  then transforms these nodes into `MarkdownRemark` nodes with an `html` field.
-- The [YAML transformer plugin](/packages/gatsby-transformer-yaml/) looks for
-  new nodes with a media type of `text/yaml` (e.g. a `.yaml` file) and creates
-  new YAML child node(s) by parsing the YAML source into JavaScript objects.
+- O 
+[plugin transformador Remark (da biblioteca Markdown)](/packages/gatsby-transformer-remark/)
+procura por novos `nodes` que foram criados com `mediaType` do tipo `text/markdown`
+e depois transforma-os em `nodes` `MarkdownRemark` com um campo `html`.
+
+- O [plugin transformador YAML](/packages/gatsby-transformer-yaml/) procura por novos nodes com o tipo de media `text/yaml` (por exemplo. um arquivo `.yaml`) e cria um novo `node` filho YAML analisando a fonte YAML em objetos JavaScript.
 
 ## GraphQL
 
-Gatsby automatically infers the structure of your site's nodes and creates a
-GraphQL schema which you can then query from your site's components.
+Gatsby automaticamente infere a estrutura dos `nodes` do seu site e cria um esquema GraphQL que você pode consultar a partir dos componentes do seu site.
 
-## Node Creation
+## Criação de `node`
 
-To learn more about how nodes are created and linked together, check out the [Node Creation](/docs/node-creation/) documentation in the "Behind the Scenes" section.
+Para aprender mais sobre como os `nodes` são criados e vinculados, consulte a documentação de [Criação de nós](/docs/node-creation/) na seção "Por trás das cenas".
