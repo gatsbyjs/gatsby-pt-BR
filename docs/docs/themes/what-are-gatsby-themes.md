@@ -10,7 +10,7 @@ Para entender temas no Gastby, vamos percorrer a jornada que levou ao surgimento
 
 Se você já criou um site Gatsby do zero, você sabe que há um número de decisões a serem tomadas. Por exemplo, criando um blog você precisa decidir onde seus dados estarão alocados, como é acessado, como é exibido e estilizado, etc.
 
-## Gatsby Starters
+### Gatsby Starters
 
 Uma forma existente para se criar rapidamente sites Gatsby com funcionalidades similares é usar "[_Gatsby starters_](/docs/starters/)". _Starters_ são essencialmente sites Gatsby com funcionalidades pré-configuradas para um propósito específico. Você faz o download de um site Gatsby inteiro, pré-construído para um propósito específico (por exemplo, blogs, sites de portfólio, etc) e pode customizá-lo a partir disso.
 
@@ -19,14 +19,14 @@ Esses _starters_ tradicionais são um primeiro passo visando reduzir o nível de
 - Sites criados a partir de starters tradicionais são basicamente “ejetados” desse _starter_ — Eles não mantém conexão com o _starter_ e começam a divergir imediatamente. Se o _starter_ for atualizado depois, não há uma forma fácil de puxar essas mudanças para um projeto existente.
 - Se você criou múltiplos sites usando o mesmo _starter_, e depois quiser realizar as mesmas atualizações em todos eles, você teria que fazê-lo individualmente, site por site. 
 
-## Temas Gatsby 
+### Temas Gatsby 
 
 Temas Gatsby permitem que funcionalidades de sites Gatsby sejam “empacotados” em um produto autônomo para que outros (e você mesmo!) as reutilize facilmente. Usando um starter tradicional, todas as suas configurações padrão vivem diretamente no seu site. Usando um tema, todas as suas configurações padrão vivem em um pacote npm.
 
 Temas resolvem os problemas geralmente enfrentados com starters tradicionais:
 
 - Sites criados usando tema Gatsby podem adotar posteriores atualizações do tema — temas são pacotes versionados que podem ser atualizados como qualquer outro pacote.
-- Você pode criar diversos sites que usam o mesmo tema. Para fazer atualizações por todos eles, você pode atualizar o tema central e enviar a nova versão nesses sites por meio de arquivos em `pacotes .JSON` (o que é melhor que gastar tempo tediosamente atualizando as funcionalidades de cada um deles).
+- Você pode criar diversos sites que usam o mesmo tema. Para fazer atualizações em todos eles, você pode atualizar o tema central e enviar a nova versão para os sites por meio de arquivos em `package.json` (o que é melhor que gastar tempo tediosamente atualizando as funcionalidades de cada um deles).
 - Temas são personalizáveis. Você poderia instalar um tema de blog junto de um tema de anotações, junto de um tema de e-commerce (e por aí vai).
 
 > Um tema Gatsby é efetivamente uma configuração Gatsby customizável. O qual possibilita uma abordagem de maior nível ao lidar com Gatsby, extraindo partes complexas e repetitivas em pacotes reutilizáveis.
