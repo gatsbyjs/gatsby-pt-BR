@@ -118,7 +118,7 @@ Como novos campos no nó podem ter sido criados nesse processo, chamamos `trackI
 ### 5. Run sift query on all nodes
 Agora que percebemos todos os campos que precisam ser consultados, em todos os nós desse tipo, estamos finalmente prontos para aplicar a consulta sift. Esta etapa é tratada pelo [tempPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L214). E ele simplesmente concatena todos os objetos de nível superior na árvore de argumentos, junto com uma expressão sift `$and` e então itera por todos os nodes retornando o primeiro que satisfaz a expressão sift.
 
-No caso em que `connection === true` ( argumento passado pelo run-sift), então ao invés de apenas escolher o primeiro argumento , nós vamos selecionar TODOS os nodes que combinam com a consulta sift. Se a consulta GraphQL especificar os campos `sort`, `skip` ou `limit`, então nós usamos a biblioteca graphql-skip-limit](https://www.npmjs.com/package/graphql-skip-limit) para filtrar os resultados apropriados. Veja [Schema Connections](/docs/schema-connections) para mais informações.
+No caso em que `connection === true` (argumento passado pelo run-sift), então ao invés de apenas escolher o primeiro argumento, nós vamos selecionar TODOS os nodes que combinam com a consulta sift. Se a consulta GraphQL especificar os campos `sort`, `skip` ou `limit`, então nós usamos a biblioteca graphql-skip-limit](https://www.npmjs.com/package/graphql-skip-limit) para filtrar os resultados apropriados. Veja [Schema Connections](/docs/schema-connections) para mais informações.
 
 ### 6. Criar dependências das páginas se necessário
 
