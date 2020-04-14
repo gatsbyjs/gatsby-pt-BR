@@ -5,11 +5,11 @@ title: Geração de Esquema
 > Essa documentação não está atualizada com as últimas [mudanças de personalização do esquema](/docs/schema-customization).
 > Você pode ajudar fazendo um PR para [atualizar esse documento](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-Depois que os nós forem originados e transformados, a próxima etapa é gerar o esquema do GraphQL. Essa é uma das partes mais complexas da base de código do Gatsby. De fato, até o momento, ele representa um terço das linhas de código no núcleo de Gatsby. Envolve a dedução de um esquema GraphQL de todos os nós que foram originados e transformados até o momento. Continue lendo para descobrir como é feito.
+Depois que os nós forem originados e transformados, a próxima etapa é gerar o esquema GraphQL. Essa é uma das partes mais complexas da base de código do Gatsby. De fato, até o momento ela representa um terço das linhas de código no núcleo do Gatsby. Essa funcionalidade envolve deduzir um esquema GraphQL de todos os nós que foram originados e transformados até o momento. Continue lendo para descobrir como isso é feito.
 
 ### Agrupe todos os nós por tipo
 
-Cada nó originado ou transformado possui um `node.internal.type`, que é definido pelo plugin que o criou. Por exemplo, o plugin `source-filesystem` [define o tipo do arquivo](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-filesystem/src/create-file-node.js#L46). O plugin `transformer-json` cria um tipo dinâmico [baseado no nó pai](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-json/src/gatsby-node.js#L48). Por exemplo. `PostsJson` para um arquivo`posts.json`.
+Cada nó originado ou transformado possui um tipo (`node.internal.type`) que é definido pelo plugin que o criou. Por exemplo, o plugin `source-filesystem` [seta o tipo para File](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-filesystem/src/create-file-node.js#L46). O plugin `transformer-json` cria um tipo dinâmico [baseado no nó pai](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-json/src/gatsby-node.js#L48). Por exemplo: `PostsJson` para um arquivo chamado `posts.json`.
 
 Durante a fase de geração do esquema, devemos gerar o que é chamado de `ProcessedNodeType` no Gatsby. Essa é uma estrutura simples que se baseia em um [graphql-js GraphQLObjectType](https://graphql.org/graphql-js/type/#graphqlobjecttype). Nosso objetivo nas etapas abaixo é inferir e construir esse objeto para cada tipo de nó exclusivo no redux.
 
@@ -48,7 +48,7 @@ A maioria do código de geração de esquema é iniciada em [build-node-types.js
 
 Gatsby deduz tipos GraphQL dos campos nos nós originados e transformados. Mas antes disso, permitimos que os plugins criem seus próprios campos personalizados. Por exemplo, `source-filesystem` cria um campo [publicURL](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-filesystem/src/extend-file-node.js#L11) que, quando resolvido, copiará o arquivo no diretório `public/static` e retornará o novo caminho.
 
-Para declarar campos personalizados, os plugins implementam a API [setFieldsOnGraphQLNodeType](/docs/node-apis/#setFieldsOnGraphQLNodeType) e aplica a alteração apenas aos tipos de que eles se importam (por exemplo, sistema de arquivos de origem [somente prossegue se type.name = `Arquivo`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-filesystem/src/extend-file-node.js#L6). Durante a geração do esquema, o Gatsby chamará essa API, permitindo que o plugin declare esses campos personalizados, [que são retornados](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/schema/build-node-types.js#L151) para o processo de esquema principal.
+Para declarar campos personalizados, os plugins implementam a API [setFieldsOnGraphQLNodeType](/docs/node-apis/#setFieldsOnGraphQLNodeType) e aplicam a alteração apenas aos tipos em que estão interessados (por exemplo, sistema de arquivos de origem [somente prossegue se type.name = `Arquivo`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-filesystem/src/extend-file-node.js#L6). Durante a geração do esquema, o Gatsby chamará essa API, permitindo que o plugin declare esses campos personalizados, [que são retornados](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/schema/build-node-types.js#L151) para o processo de esquema principal.
 
 #### 2. Crie um "GQLType"
 
@@ -64,4 +64,4 @@ Finalmente, temos tudo o que precisamos para construir nosso objeto final do tip
 
 #### 5. Criar conexões para cada tipo
 
-Deduzimos todos os tipos de GraphQL e a capacidade de consultar um único nó. Mas agora precisamos ser capazes de consultar coleções desse tipo (por exemplo, `allMarkdownRemark`). [Conexões de esquema](/docs/schema-connections/) cuida disso.
+Deduzimos todos os tipos GraphQL e a capacidade de consultar um único nó. Mas agora precisamos ser capazes de consultar coleções desse tipo (por exemplo, `allMarkdownRemark`). [Conexões de esquema](/docs/schema-connections/) cuida disso.
