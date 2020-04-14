@@ -17,7 +17,7 @@ Existem vários fundamentos para a criação de bibliotecas de componentes.
 
 Bibliotecas de componentes são geralmente mantidos por um indivíduo ou uma equipe de design que atua como curador; quando uma equipe de website ou um time de recursos precisa de um componente, ele normalmente está disponivel para uso, para que eles possam avançar rapidamente.
 
-Bibliotecas de componentes são geralmente armazenadas em um repositório separado. Aplicativos individuais ou websites estão especificados em suas dependências (dentro do `package.json`) qual versão de cada componente eles estão usando.
+Bibliotecas de componentes são geralmente armazenadas em um repositório separado. Aplicativos individuais ou websites especificam em suas dependências (dentro do `package.json`) qual versão de cada componente eles estão usando.
 
 Uma desvantagem de usar bibliotecas de componentes é a complexidade adicional das dependências entre repositórios.
 
@@ -27,8 +27,8 @@ Por exemplo, se um desenvolvedor de recursos precisar alterar uma biblioteca de 
 
 Existem duas diferentes abordagens para o versionamento de bibliotecas de componentes.
 
-A primeira é para a versão global na biblioteca de componentes. Para cada commit dado, a biblioteca tem um número de versão (e.g. `30.3.1`). Qualquer commit atualizando o componente irá então adicionar o numero de versão de acordo. Ambos, Carbon Design System e Blueprint, adotam essa abordagem.
+A primeira é para a versão global na biblioteca de componentes. Para cada commit dado, a biblioteca tem um número de versão (e.g. `30.3.1`). Qualquer commit atualizando o componente irá então adicionar o numero de versão de acordo. Ambos, Carbon Design System e Blueprint adotam essa abordagem.
 
-A segunda abordagem é para a versão de cada componente na biblioteca de componentes. Isto era usado, por exemplo, [por Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) -- eles construiram sua biblioteca de componentes como React componentes, e criando cada componente separado, versionado por pacotes npm.
+A segunda abordagem é para a versão de cada componente na biblioteca de componentes. Isto era usado, por exemplo, [pelo Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) -- eles construiram sua biblioteca de componentes com React componentes, criando cada componente separado, versionado por pacotes npm.
 
 Esta abordagem permite mais granularidade -- _e se você desejar de uma versão mais antiga de um componente, mas uma versão mais recente de outro?_ -- mas requer ferramentas adicionais para fazer os fluxos de trabalho mais agradáveis.
