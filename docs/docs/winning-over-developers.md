@@ -43,7 +43,7 @@ O Gatsby têm muitos benefícios que dão aos desenvolvedores a liberdade de con
 
 ### Traz o foco para o frontend
 
-> Um benefício que surge com frequẽncia nas discussões sobre o Gatsby é como ele ajuda a trazer mais foco para o desenvolvimento frontend e uma divisão mais clara entre tarefas de frontend e de backend. Ferramentas e configuração complicadas podem consumir muito do tempo de desenvolvimento e podem desviar os desenvolvedores frontend do que eles fazem de melhor. Como o Gatsby requer configuração e ferramenta mínimas, desenvolvedores frontend podem usar mais tempo construindo excelentes UI's e desenvolvedores backend podem focar em adicionar funcionalidades e integrações que tornam seu produto melhor.
+> Um benefício que surge com frequência nas discussões sobre o Gatsby é como ele ajuda a trazer mais foco para o desenvolvimento frontend e uma divisão mais clara entre tarefas de frontend e de backend. Ferramentas e configurações complicadas podem consumir muito do tempo de desenvolvimento e podem desviar os desenvolvedores frontend do que eles fazem de melhor. Como o Gatsby requer configurações e ferramentas mínimas, desenvolvedores frontend podem usar mais tempo construindo excelentes UI's e desenvolvedores backend podem focar em adicionar funcionalidades e integrações que tornam seu produto melhor.
 
 ## Preocupações comuns
 
@@ -57,7 +57,7 @@ Talvez você ache que muitos dos seus amigos e colegas desenvolvedores tenham d�
 
 > GraphQL é usado para extrair conteúdo de diferentes fontes para dentro do Gatsby de uma maneira consistente e unificada. Você não tem de usar GraphQL para fazer isso, mas aprender a usá-lo te deixará preparado para criar novas integrações mais facilmente (e pode não ser tão desafiador quanto você pensa). Amberly Romo analisa alguns dos prós e contras no seu post em [Usando Gatsby sem GraphQL](/blog/2018-10-25-using-gatsby-without-graphql/).
 
-### Nossa equipe de conteúdo precisa se capaz de fazer atualizações no site, mas eles não são super técnicos. Eles conseguirão trabalhar com o site Gatsby?
+### Nossa equipe de conteúdo precisa ser capaz de fazer atualizações no site, mas eles não são super técnicos. Eles conseguirão trabalhar com o site Gatsby?
 
 > Gatsby pode extrair conteúdo de quaisquer fontes de dados, includindo os CMS all-in-one como WordPress e Drupal assim como os vários headless CMS disponíveis, de forma que sua equipe de conteúdo possa trabalhar com qualquer editor de conteúdo que atenda às suas necessidades e preferências, incluindo o CMS que eles já estão utilizando.
 
