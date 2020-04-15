@@ -1,10 +1,10 @@
 ---
-title: Deploying to GitLab Pages
+title: Publicando no GitLab Pages
 ---
 
-GitLab Pages are very similar to GitHub Pages. GitLab Pages also supports custom domain names and SSL certificates and includes a continuous integration platform.
+GitLab Pages é muito semelhante ao Github Pages. GitLab Pages dá suporte a domínios customizados, certificados SSL, como também inclui uma plataforma de integração contínua.
 
-Create a new GitLab repository, [create a new Gatsby site](/docs/) if you haven't already, and add the GitLab remote.
+Crie um novo repositório no GitLab, [crie um novo site Gatsby](/docs/) se ainda não fez e adicione o GitLab como seu remoto.
 
 ```shell
 git init
@@ -13,34 +13,34 @@ git add .
 git push -u origin master
 ```
 
-You can deploy sites on GitLab Pages with or without a custom domain. If you choose to use the default setup (without a custom domain), or if you create a project site, you will need to setup your site with path prefixing. If adding a custom domain, you can skip the Path Prefix step, and remove `--prefix-paths` from the gitlab-ci.yml file.
+Você pode publicar sites no GitLab Pages com ou sem um domínio customizado. Se você escolher a configuração padrão (sem um domínio customizado), ou se você criar um site para um projeto, você precisará configurar um prefixo para a rota do seu site. Se você adicionar um domínio customizado, você pode pular o passo de adicionar o prefixo na rota, e remover `--prefix-paths` do arquivo `gitlab-ci.yml`
 
-## Add Path Prefix to Gatsby
+## Adicione Prefixo a Rota no Gatsby
 
-As the site will be hosted under yourname.gitlab.io/examplerepository/, you will need to configure Gatsby to use the Path Prefix plugin.
+Como seu site irá ser hospedado em seunome.gitlab.io/repositorioexemplo/, você irá precisar configurar para o Gatsby para que use o plugin Path Prefix.
 
-In the `gatsby-config.js`, set the `pathPrefix` to be added to your site's link paths. The `pathPrefix` should be the project name in your repository. (ex. `https://gitlab.com/yourname/examplerepository/` - your `pathPrefix` should be `/examplerepository`). See [the docs page on path prefixing for more](/docs/path-prefix/).
+Em `gatsby-config.js`, coloque o `pathPrefix` para ser o prefixo que será adicionado aos links das rotas do seu site. O `pathPrefix` deve ser o nome do projeto em seu repositório. (ex. `https://gitlab.com/seunome/repositorioexemplo/`) - seu `pathPrefix` deve ser `/repositorioexemplo`. Veja a [documentação de prefixação de rota para mais detalhes](/docs/path-prefix/).
 
 ```js:title=gatsby-config.js
 module.exports = {
-  pathPrefix: `/examplerepository`,
+  pathPrefix: `/repositorioexemplo`,
 }
 ```
 
-## Build and deploy with GitLab CI
+## Faça o build e publique com GitLab CI
 
-To use GitLab's continuous integration (CI), you need to add a `.gitlab-ci.yml` configuration file. This is the file that GitLab uses to manage the CI job.
+Para usar a ferramenta de integração contínua (CI) do GitLab, você precisa adicionar o arquivo de configuração `.gitlab-ci.yml`. Este é o arquivo que o GitLab usa para gerenciar as tarefas do CI.
 
-The online editor on the [GitLab](https://gitlab.com) website contains a pre-built template for Gatsby deployment.
+O editor online no site do [GitLab](https://gitlab.com) contém um exemplo pré-built com um template pronto para ser usado no Gatsby.
 
-To use the template open your repository on their website, select the 'Setup CI/CD' option on the center menu, and it will create a new blank `.gitlab-ci.yml` for you. Now select the 'Apply a GitLab CI Yaml Template' drop-down, and type 'Gatsby' into the filter. Select the Gatsby option, click 'Commit Changes', and you are done!
+Para usar o template, abra seu repositório no site do GitLab, selecione a opção 'Setup CI/CD' no menu, após isso será criado um arquivo `.gitlab-ci.yml` vazio automaticamente. Agora selecione o 'Apply a template' e digite 'Gatsby' no filtro. Selecione o Gatsby como opção, clique para 'Commit Change' e está feito!
 
-If adding this manually to your project, the file needs to contain a few required fields:
+Caso você opte por adicionar manualmente o template no seu projeto, o arquivo `.gitlab-ci.yml` precisa conter alguns campos obrigatórios:
 
 ```yaml:title=.gitlab-ci.yml
 image: node:latest
 
-# This folder is cached between builds
+# Essa pasta é armazenada em cache entre as builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
@@ -57,13 +57,12 @@ pages:
     - master
 ```
 
-The CI platform uses Docker images/containers, so `image: node:latest` tells the CI to use the latest node image. `cache:` caches the `node_modules` folder in between builds, so subsequent builds should be a lot faster as it doesn't have to reinstall all the dependencies required. `pages:` is the name of the CI stage. You can have multiple stages, e.g. 'Test', 'Build', 'Deploy' etc. `script:` starts the next part of the CI stage, telling it to start running the below scripts inside the image selected. `npm install` and `./node_modules/.bin/gatsby build --prefix-paths` will install all dependencies, and start the static site build, respectively.
+A plataforma de CI usa Docker images/containers, então `image node:latest` informa ao CI que deve usar a última imagem do node. `cache:` irá fazer o cache do `node_modules` antigo entre as builds, assim as próximas builds devem ser muito mais rápidas já que não precisam reinstalar todas as dependências. `pages:` é o nome do estágio do CI. Você pode ter múltiplos estágios, e.g. 'Test', 'Build', 'Deploy' etc. `script:` começa a próxima parte do estágio da CI, informando que deve começar a rodar os scripts descritos abaixo dele dentro da imagem que foi selecionada. `npm install` e `./node_modules/.bin/gatsby build --prefix-paths` irão instalar todas as dependências e iniciar o build do site estático, respectivamente.
 
-`./node_modules/.bin/gatsby build --prefix-paths` was used so you don't have to install gatsby-cli to build the image, as it has already been included and installed with `npm install`. `--prefix-paths` was used because _without_ that flag, Gatsby ignores your pathPrefix. `artifacts:` and `paths:` are used to tell GitLab Pages
-where the static files are kept. `only:` and `master` tells the CI to only run the above instructions when the master branch is deployed.
+Como `./node_modules/.bin/gatsby build --prefix-paths` foi usado, você não precisa instalar gatsby-cli para fazer o build da imagem, pois já foi incluído e instalado com `npm install`. `--prefix-paths` foi usando porque _sem_ essa flag, Gatsby ignora seu pathPrefix. `artifacts:` and `paths:` são usados para informar ao GitLab Pages onde os arquivos estáticos estão localizados. `only:` and `master` diz ao CI para apenas rodar estas instruções quando a branch master é publicada.
 
-Add that configuration, and with the next master branch push, your site should have been built correctly. This can be checked by going to your repository on GitLab, and selecting CI/CD in the sidebar. This will then show you a log of all jobs that have either succeeded or failed. You can click on the failed status, and then select the job to get more information about why your build may have failed.
+Adicione essa configução e no próximo push para a sua branch master, seu site terá feito o build corretamente. Isto pode ser checado no seu repositório do GitLab, selecionando em CI/CD na barra lateral. Será mostrado um log de todas as atividades que tiveram sucesso ou falharam. Você pode clicar no status de falha e selecionar a atividade para obter mais informações do porquê sua build falhou.
 
-If all went well, you should now be able to access your site. It will be hosted under gitlab.io - for example if you have a repository under your namespace, the url will be yourname.gitlab.io/examplerepository.
+Se tudo ocorreu bem, você agora poderá acessar seu site. Ele será hospedado em gitlab.io - por exemplo se o seu repositório está associado a sua conta, a url será seunome.gitlab.io/repositorioexemplo.
 
-Visit the [GitLab Pages](https://gitlab.com/help/user/project/pages/getting_started_part_one.md) to learn how to setup custom domains and find out about advanced configurations.
+Visite o [GitLab Pages](https://gitlab.com/help/user/project/pages/getting_started_part_one.md) para aprender como configurar domínios customizados e descobrir configurações avançadas.
