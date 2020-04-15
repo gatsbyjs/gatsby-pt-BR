@@ -1,49 +1,52 @@
 ---
-title: Upgrading Your Node.js Version
+title: Atualizando sua versão do Node.js.
 ---
 
-## Gatsby's Node.js support policy
+## Política de suporte do Node.js do Gatsby
 
-Gatsby aims to support any version of Node that has a release status of _Current_, _Active_, or _Maintenance_. Once a major version of Node reaches _End of Life_ status Gatsby will stop supporting that version.
+O Gatsby tem como objetivo oferecer suporte a qualquer versão do Node que tenha um status de release de _Atual_, _Ativo_ ou _Manutenção_. Quando uma versão principal do Node atingir o status de _Fim-de-Vida_, o Gatsby deixará de oferecer suporte a essa versão.
 
-Gatsby will stop supporting the _End of Life_ Node release in a minor version.
 
-Check [Node's releases document](https://github.com/nodejs/Release#nodejs-release-working-group) for version statuses.
+Gatsby deixará de suportar releases _Fim-de-Vida_ do Node em uma versão menor.
 
-## What version of Node.js do I have?
+Verifique o [documento de releases do Node](https://github.com/nodejs/Release#nodejs-release-working-group) para status das versões.
 
-Run `node -v` in a terminal to see which version of Node.js you have.
+## Qual versão do Node.js eu tenho?
+
+Execute `node -v` em um terminal para verificar qual sua versão do node instalada.
 
 ```shell
 node -v
 v10.18.0
 ```
 
-This example shows Node.js version 10, specifically v10.18.0.
+Este exemplo mostra o Node.js. versão 10, especificamente v10.18.0.
 
-## Upgrading from Node.js version 8
+## Fazendo upgrade do Node.js versão 8
 
-Node.js version 8 reached _End-of-life_ status on December 31, 2019. Many of Gatsby's dependencies are updating to Node.js version 10 and above. Gatsby must also update in order to deliver new features and bug fixes more quickly.
+O Node.js versão 8 atingiu o status _Fim-de-Vida_ em 31 de dezembro de 2019. Muitas dependências do Gatsby estão atualizando para o Node.js versão 10 e superior. O Gatsby também deve atualizar para fornecer novos recursos e correções de erros mais rapidamente.
 
-Generally, it's recommended to use [the Node version whose status is _Active LTS_](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 at time of writing).
+Geralmente é recomendado você utilizar [a versão do node cujo o status seja o _Atual LTS_](https://github.com/nodejs/Release#nodejs-release-working-group) (Node 10 no momento da escrita). 
 
-> What about Node.js 9? Stable versions of Node.js are evenly numbered releases - Node.js 6, Node.js 8, Node.js 10 etc. Only use uneven release numbers if you'd like to try cutting-edge and experimental features.
+> E o Node.js 9? As versões estáveis do Node.js são versões com numeração par - Node.js 6, Node.js 8, Node.js 10 etc. Use apenas números de versão ímpar se desejar experimentar os recursos experimentais.
 
-There are multiple ways to update your version of Node.js depending on how you originally installed it. Read on to find the best approach for you.
 
-### Using Homebrew
+Existem várias maneiras de atualizar sua versão do Node.js, dependendo de como você a instalou originalmente. Leia para encontrar a melhor abordagem para você.
 
-This is the recommended way to install a newer version of Node.
+### Usando Homebrew
 
-You will have Homebrew installed on your computer if you [followed part zero of the Gatsby tutorial](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). Homebrew is a program that allows you to install specific versions of Node.js (and other software).
+Esta é a maneira recomendada de instalar uma versão mais recente do Node.
 
-To update from Node.js 8 to Node.js 10 using Homebrew, open a terminal and run the following commands:
+Você terá o homebrew instalado no seu computador se [seguir a parte zero do tutorial do Gatsby](/tutorial/part-zero/#install-nodejs-for-your-appropriate-operating-system). O Homebrew é um programa que permite instalar versões específicas do Node.js (e outros softwares).
+
+Para atualizar do Node.js 8 para o Node.js 10 usando o Homebrew, abra um terminal e execute os seguintes comandos:
+
 
 ```shell
 brew search node
 ```
 
-You should see output similar to this:
+Você deve ver uma tela semelhante a esta:
 
 ```shell
 brew search node
@@ -53,67 +56,67 @@ leafnode                         node ✔                           node@8      
 libbitcoin-node                  node-build                       node_exporter                    nodenv
 ```
 
-You're interested in the next stable version of Node.js after Node.js 8, which is Node.js 10. Homebrew makes this available in a package called `node@10`. Run:
+Você está interessado na próxima versão estável do Node.js após o Node.js 8, que é o Node.js 10. O Homebrew torna isso disponível em um pacote chamado `node@10`. Execute:
 
 ```shell
 brew install node@10
 ```
 
-Once that's complete, run:
+Quando completo, execute:
 
 ```shell
 node -v
 ```
 
-to confirm that you've upgraded from Node.js version 8 up to version 10.
+para confirmar que você atualizou do Node.js versão 8 para a versão 10.
 
-### Using a Node.js version management package
+### Usando um pacote de gerenciamento de versão do Node.js
 
-There are two popular packages used for managing multiple versions of Node.js on your system. Use one of these to update to a newer version of Node.js if they're already available on your computer.
+Existem dois pacotes populares usados para gerenciar várias versões do Node.js no seu sistema. Use um destes para atualizar para uma versão mais recente do Node.js, se eles já estiverem disponíveis no seu computador.
 
-These packages are very useful for people that regularly work with different versions of Node.js.
+Esses gerenciadores de pacotes são muito úteis para pessoas que trabalham regularmente com diferentes versões do Node.js.
 
 #### nvm
 
-Run
+Execute
 
 ```shell
 nvm
 ```
 
-in a terminal to see if nvm is installed on your system. If it's installed, you can run:
+em um terminal para ver se o nvm está instalado no seu sistema. Se estiver instalado, você pode executar:
 
 ```shell
 nvm install 10
 nvm alias default 10
 ```
 
-to install and use Node.js version 10.
+para instalar e usar o Node.js versão 10.
 
-[Check nvm's documentation for further instructions](https://github.com/nvm-sh/nvm).
+[Consulte a documentação da nvm para obter mais instruções](https://github.com/nvm-sh/nvm).
 
 #### n
 
-Run:
+Execute:
 
 ```shell
 n
 ```
 
-in a terminal to see if n is installed on your system. If it's installed, you can run `n 10` to install and use Node.js version 10.
+em um terminal para ver se n está instalado no seu sistema. Se estiver instalado, você pode executar o `n 10` para instalar e usar o Node.js versão 10.
 
-[Check n's documentation for further instructions](https://github.com/tj/n).
+[Consulte a documentação do n para obter mais instruções](https://github.com/tj/n).
 
-### Installing from nodejs.org
+### Instalando a partir do nodejs.org
 
-If you aren't using any of the previously listed installation methods, you can [download a Node.js installer directly from nodejs.org](https://nodejs.org/en/).
+Se você não estiver usando nenhum dos métodos de instalação listados anteriormente, poderá [baixar um instalador do Node.js. diretamente do nodejs.org](https://nodejs.org/en/).
 
-Gatsby's recommended way to install Node.js is by using Homebrew. Refer to the previous [Homebrew section of this document](#using-homebrew) for more info.
+A maneira recomendada pelo Gatsby de instalar o Node.js é usando o Homebrew. Consulte a seção anterior ["Usando Homebrew" deste documento](#usando-homebrew) para mais informações.
 
-## Conclusion
+## Conclusão
 
-Gatsby takes backwards compatibility seriously and aims to support older versions of Node.js for as long as possible. We understand that juggling different software versions is not a productive way to spend your day.
+O Gatsby leva a sério a compatibilidade com versões anteriores e visa oferecer suporte a versões mais antigas do Node.js pelo maior tempo possível. Entendemos que manipular diferentes versões de software não é uma maneira produtiva de passar o seu dia.
 
-Gatsby also relies on a huge ecosystem of JavaScript dependencies. As the ecosystem moves away from older, unsupported Node.js versions we have to keep pace to ensure that bugs can be fixed and new features can be released.
+Gatsby também conta com um enorme ecossistema de dependências de JavaScript. À medida que o ecossistema se afasta das versões mais antigas e não suportadas do Node.js, precisamos acompanhar o ritmo para garantir que os bugs possam ser corrigidos e os novos recursos possam ser lançados.
 
-In this document, you learned how you upgrade from Node.js version 8 (which has reached _End of Life_ status) to Node.js version 10.
+Neste documento, você aprendeu como atualizar do Node.js versão 8 (que atingiu o status _Fim-de-Vida_), para o Node.js versão 10 (que atingiu o status de _Manutenção_).
