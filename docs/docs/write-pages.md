@@ -10,9 +10,9 @@ title: Escrever páginas
 > - remover menções de `pages.json`
 > - descrever `match-paths.json`
 >
-> Você pode ajudar fazendo um PR para [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
+> Você pode ajudar fazendo um PR para [atualize esta documentação](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-Este é um dos últimos estágios de bootstrap antes de enviarmos para o webpack para executar a otimização e divisão do código. O Webpack cria um pacote para a web. Ele não tem conhecimento do código principal da Gatsby. Em vez disso, ele opera em arquivos no diretório `.cache`. Ele também não tem acesso a todas as informações do Redux que foram criadas durante a inicialização. Em vez disso, criamos arquivos Javascript e JSON dinâmicos que são dependentes da aplicação do webpack no diretório `.cache` (veja [Building the JavaScript App](/docs/production-app/)).
+Este é um dos últimos estágios de bootstrap antes de enviarmos para o webpack para executar a otimização e divisão do código. O Webpack cria um pacote para a web. Ele não tem conhecimento do código principal da Gatsby. Em vez disso, ele opera em arquivos no diretório `.cache`. Ele também não tem acesso a todas as informações do Redux que foram criadas durante a inicialização. Em vez disso, criamos arquivos Javascript e JSON dinâmicos que são dependentes da aplicação do webpack no diretório `.cache` (veja [Construindo o aplicativo JavaScript](/docs/production-app/)).
 
 Você pode pensar nesta etapa como pegar todos os dados gerados durante a inicialização e salvá-los em disco para ser consumido pelo webpack.
 
@@ -61,10 +61,10 @@ Os arquivos dinâmicos criados são (todos no diretório `.cache`).
 
 Esta é uma coleção de objetos de página, criados a partir do namespace redux `pages`. Para cada página, inclui o
 
-- [componentePedacoNome](/docs/behind-the-scenes-terminology/#componentchunkname)
-- [jsonNome](/docs/behind-the-scenes-terminology/#jsonname)
-- [caminho](/docs/behind-the-scenes-terminology/#path)
-- [combineCaminho](/docs/behind-the-scenes-terminology/#matchpath)
+- [componentChunkName](/docs/behind-the-scenes-terminology/#componentchunkname)
+- [jsonName](/docs/behind-the-scenes-terminology/#jsonname)
+- [path](/docs/behind-the-scenes-terminology/#path)
+- [matchPath](/docs/behind-the-scenes-terminology/#matchpath)
 
 As páginas são classificadas de forma que aquelas com `matchPath`s venham antes daquelas sem.
 Isso é para ajudar [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) na seleção de páginas via regex antes de tentar caminhos explícitos. Veja [matchPaths](/docs/behind-the-scenes-terminology/#matchpath) para mais informações.
@@ -119,7 +119,7 @@ exports.components = {
 exports.data = () => import("/home/site/.cache/data.json");
 ```
 
-Lembre-se de que, `sync-requires.js` é usado durante [Page HTML Generation](/docs/html-generation/). E o `async-requires.js` é usado por [Building the JavaScript App](/docs/production-app/).
+Lembre-se de que, `sync-requires.js` é usado durante [Geração de HTML da página](/docs/html-generation/). E o `async-requires.js` é usado por [Construindo o aplicativo JavaScript](/docs/production-app/).
 
 ## data.json
 
@@ -148,6 +148,6 @@ Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([c
 Também é usado pela [Geração de HTML da página](/docs/html-generation/) de duas maneiras:
 
 1. `static-entry.js` produz um pacote da web `page-renderer.js` agrupado pelo webpack que gera o HTML para um caminho. Isto requer `data.json` e usa as `pages` para procurar página por página.
-2. Para obter `jsonName` do objeto da página e usá-lo para construir um caminho de rescurso para o resultado real do json, procurando em `data.json.dataPaths[jsonName]`.
+2. Para obter `jsonName` do objeto da página e usá-lo para construir um caminho de recurso para o resultado real do json, procurando em `data.json.dataPaths[jsonName]`.
 
 Agora que escrevemos os dados da página, podemos começar na [Seção Webpack](/docs/webpack-and-ssr/).
