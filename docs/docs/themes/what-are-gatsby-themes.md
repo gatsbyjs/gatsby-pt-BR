@@ -1,62 +1,62 @@
 ---
-title: What Are Gatsby Themes?
+title: O Que São Temas Gatsby?
 ---
 
-**Gatsby themes** are plugins that include a `gatsby-config.js` file and add pre-configured functionality, data sourcing, and/or UI code to Gatsby sites. You can think of Gatsby themes as separate Gatsby sites that can be put together and allow you to split up a larger Gatsby project!
+**Temas Gatsby** são plugins que incluem um arquivo `gatsby-config.js` e adicionam funcionalidades pré-configuradas, fonte de dados, e/ou código UI a sites Gatsby. Você pode pensar em temas Gatsby como sites Gatsby separados que podem ser colocados juntos, o que te permite dividir um projeto maior.
 
-## Introduction
+## Introdução
 
-To introduce themes, let's walk through the journey that led to the creation of themes.
+Para entender temas no Gastby, vamos percorrer a jornada que levou ao surgimento dessa funcionalidade.
 
-If you've ever created a Gatsby site completely from scratch, you know that there are a number of decisions to be made. Take, for example, creating a blog. You need to decide where your data will live, how it's accessed, how it's displayed and styled, etc.
+Se você já criou um site Gatsby do zero, você sabe que há um número de decisões a serem tomadas. Por exemplo, criando um blog você precisa decidir onde seus dados estarão alocados, como é acessado, como é exibido e estilizado, etc.
 
-### Gatsby starters
+### Gatsby Starters
 
-One existing way to quickly create Gatsby sites with similar functionality is to use "[Gatsby starters](/docs/starters/)". Starters are essentially Gatsby sites with pre-configured functionality for a particular purpose. You download an entire Gatsby site, pre-built for a particular purpose (e.g. blogging, portfolio site, etc) and customize from there.
+Uma forma existente para se criar rapidamente sites Gatsby com funcionalidades similares é usando "[_Gatsby starters_](/docs/starters/)". _Starters_ são essencialmente sites Gatsby com funcionalidades pré-configuradas para um propósito específico. Você faz o download de um site Gatsby inteiro, pré-construído para um propósito específico (por exemplo, blogs, sites de portfólio, etc) e pode customizá-lo a partir disso.
 
-These traditional starters take a first step toward reducing the level of effort involved in creating a new Gatsby site. However, there are two main problems with traditional starters:
+Esses _starters_ tradicionais são um primeiro passo visando reduzir o nível de esforço envolvido na criação de um novo site Gatsby. No entanto, há dois principais problemas com _starters_ tradicionais:
 
-- Sites created from a traditional starter have basically been "ejected" from the starter -- They maintain no connection to the starter, and begin to diverge immediately. If the starter is updated later, there's no easy way to pull upstream changes into an existing project.
-- If you created multiple sites using the same starter, and later wanted to make the same update to all of those sites, you'd have to do them individually, site-by-site.
+- Sites criados a partir de starters tradicionais são basicamente “ejetados” desse _starter_ — Eles não mantém conexão com o _starter_ e começam a divergir imediatamente. Se o _starter_ for atualizado depois, não há uma forma fácil de puxar essas mudanças para um projeto existente.
+- Se você criou múltiplos sites usando o mesmo _starter_, e depois quiser realizar as mesmas atualizações em todos eles, você teria que fazê-lo individualmente, site por site. 
 
-### Gatsby themes
+### Temas Gatsby 
 
-Enter themes. Gatsby themes allow Gatsby site functionality to be packaged as a standalone product for others (and yourself!) to easily reuse. Using a traditional starter, all of your default configuration lives directly in your site. Using a theme, all of your default configuration lives in an npm package.
+Temas Gatsby permitem que funcionalidades de sites Gatsby sejam “empacotados” em um produto autônomo para que outros (e você mesmo!) as reutilize facilmente. Usando um starter tradicional, todas as suas configurações padrão vivem diretamente no seu site. Usando um tema, todas as suas configurações padrão vivem em um pacote npm.
 
-Themes solve the problems that traditional starters experience:
+Temas resolvem os problemas geralmente enfrentados com starters tradicionais:
 
-- Sites created using a Gatsby theme can adopt upstream changes to the theme -- themes are versioned packages that can be updated like any other package.
-- You can create multiple sites that consume the same theme. To make updates across those sites, you can update the central theme and bump the version in the sites through `package.json` files (rather than spending the time to tediously update the functionality of each individual site).
-- Themes are composable. You could install a blog theme alongside a notes theme, alongside an e-commerce theme (and so forth)
+- Sites criados usando tema Gatsby podem adotar posteriores atualizações do tema — temas são pacotes versionados que podem ser atualizados como qualquer outro pacote.
+- Você pode criar diversos sites que usam o mesmo tema. Para fazer atualizações em todos eles, você pode atualizar o tema central e enviar a nova versão para os sites por meio de arquivos em `package.json` (o que é melhor que gastar tempo tediosamente atualizando as funcionalidades de cada um deles).
+- Temas são personalizáveis. Você poderia instalar um tema de blog junto de um tema de anotações, junto de um tema de e-commerce (e por aí vai).
 
-> A Gatsby theme is effectively a composable Gatsby config. They provide a higher-level approach to working with Gatsby that abstracts away the complex or repetitive parts into a reusable package.
+> Um tema Gatsby é efetivamente uma configuração Gatsby customizável. O qual possibilita uma abordagem de maior nível ao lidar com Gatsby, extraindo partes complexas e repetitivas em pacotes reutilizáveis.
 
-## When should I use or build a theme?
+## Quando eu deveria usar ou construir um tema?
 
-**Consider using a theme if:**
+**Considere usar um tema se:**
 
-- You already have an existing Gatsby site and can't start from a starter
-- You want to be able to update to the latest version of a feature on your site
-- You want multiple features on your site, but there is no starter with all the features -- you can use multiple themes, composed in one Gatsby site
+- Você já tem um site Gatsby e não pode recomeçá-lo do zero a partir de um starter
+- Você quer ser capaz de atualizar seu site com a última versão de determinada funcionalidade
+- Você quer muitas funcionalidades em seu site, mas não há nenhum starter com todas elas — Você pode usar múltiplos temas, reunidos em um único site Gatsbsy
 
-**Consider building a theme if:**
+**Considere construir um tema se:**
 
-- You plan on re-using similar functionality across multiple Gatsby sites
-- You would like to share new Gatsby functionality to the community
+- Você planeja reutilizar alguma funcionalidade similar entre vários sites Gatsby
+- Você gostaria de compartilhar uma nova funcionalidade com a comunidade Gatsbsy 
 
-## What's next?
+## O que vem em seguida?
 
-- [Using a Gatsby Theme](/docs/themes/using-a-gatsby-theme)
-- [Using Multiple Gatsby Themes](/docs/themes/using-multiple-gatsby-themes)
-- [Shadowing](/docs/themes/shadowing/)
-- [Building Themes](/docs/themes/building-themes)
-- [Converting a Starter](/docs/themes/converting-a-starter/)
-- [Theme Composition](/docs/themes/theme-composition/)
-- [Conventions](/docs/themes/conventions/)
+- [Usando um Tema Gatsby](/docs/themes/using-a-gatsby-theme)
+- [Usando Múltiplos Temas Gatsby](/docs/themes/using-multiple-gatsby-themes)
+- [Sombreando](/docs/themes/shadowing/)
+- [Construindo Temas](/docs/themes/building-themes)
+- [Convertendo um Starter](/docs/themes/converting-a-starter/)
+- [Composição de Temas](/docs/themes/theme-composition/)
+- [Convenções](/docs/themes/conventions/)
 
-## Related blog posts
+## Artigos relacionados
 
-For additional context, check out blog posts published during the development of themes:
+Para informações adicionais, confira artigos publicados durante o desenvolvimento de temas:
 
 - [Why Themes?](/blog/2019-01-31-why-themes/)
 - [Themes Roadmap](/blog/2019-03-11-gatsby-themes-roadmap/)
