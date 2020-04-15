@@ -133,13 +133,13 @@ Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([c
         "jsonName": "blog-2-c06",
         "path": "/blog/2"
     },
-    // more pages
+    // mais componentes
  ],
 
  // jsonName -> dataPath
  dataPaths: {
    "blog-2-c06":"952/path---blog-2-c06-meTS6Okzenz0aDEeI6epU4DPJuE",
-   // more pages
+   // mais componentes
  }
 ```
 

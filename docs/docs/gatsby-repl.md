@@ -2,13 +2,13 @@
 title: Gatsby REPL
 ---
 
-The Gatsby REPL ("read-eval-print loop") is available via the Gatsby CLI by running the command `gatsby repl`. This gives you access to an interactive REPL shell within the context of your Gatsby environment. It can be used to retrieve general data and programmatically interact with it. If you have an idea for a new command, feel free to submit a PR for it!
+O REPL ("read-eval-print loop") do Gatsby está disponível através do comando `gatsby repl`. Esse comando fornece acesso a um shell REPL interativo dentro do contexto do seu ambiente Gatsby. Podemos usá-lo para extrair dados gerais e interagir programaticamente com eles. Se você tem uma sugestão para um novo comando, sinta-se livre para criar um PR para ele!
 
-This doc will give a brief description of each REPL command, expected output, and an example of what you can do with the command to digest the data. Examples are using the [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/) as a demo environment, since it is currently the highest rated starter, and provides standard output for most of these commands.
+Esse documento dará uma breve descrição de cada comando REPL, a saida esperada, e um exemplo do que podemos fazer com o comando para manipular dados. Os exemplos usam o [Gatsby Starter Blog](/starters/gatsbyjs/gatsby-starter-blog/) como ambiente de demonstração, já que atualmente é o starter mais conceituado e também por prover uma saida padrão para a maioria desses comandos.
 
-To get started, in your terminal, after running the initial site setup steps [here](/docs/quick-start), run the command `gatsby repl` to enter the interactive shell. If you are writing out a function, you can write that over multiple lines, as long as you do not use a semicolon or close a parenthesis or brace prematurely. This is helpful for running graphql queries and callback functions.
+Para iniciar, no seu terminal, após ter realizado a configuração inicial do site [aqui](/docs/quick-start), rode o comando `gatsby repl` para entrar no shell interativo. Se você estiver escrevendo uma função, você pode escreve-la em múltiplas linhas, contanto que você não use ponto e vírgula ou feche um parêntesis ou uma chave prematuramente. Isso é útil para rodar buscas no GraphQL e funções callback.
 
-## REPL Commands
+## Comandos REPL
 
 - [`babelrc`](#babelrc)
 - [`components`](#components)
@@ -22,16 +22,16 @@ To get started, in your terminal, after running the initial site setup steps [he
 
 ### `babelrc`
 
-Returns an object with the global `babelrc` settings.
+Retorna um objeto com as configurações globais do `babelrc`.
 
-Usage: `babelrc`
+Uso: `babelrc`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > babelrc
-// Returns:
+// Retorno:
 { stages:
    { develop: { plugins: [], presets: [], options: [Object] },
      'develop-html': { plugins: [], presets: [], options: [Object] },
@@ -41,16 +41,16 @@ gatsby > babelrc
 
 ### `components`
 
-Returns a Map object with all of the components in your Gatsby environment (see [Mozilla Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) docs for more information on Map objects and how to use them). Properties that get returned: `name`, `componentPath`, `query`, `pages`, and `isInBootstrap:`.
+Retorna um objeto Map com todos os componentes no seu ambiente Gatsby (consulte a documentação da MDN sobre [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) para mais informação sobre objetos Map e como usar eles). Propriedades que são retornadas: `name`, `componentPath`, `query`, `pages`, e `isInBootstrap:`.
 
-Usage: `components`
+Uso: `components`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > for( var [key, value] of components ) { console.log(key + ' = ' + value.pages); }
-// Returns: a list of components and the pages they are used on...
+// Retorno: uma lista de componentes e as páginas onde eles estão sendo usados...
 .../my-blog-starter/src/templates/blog-post.js = /hi-folks/,/my-second-post/,/hello-world/
 .../my-blog-starter/src/pages/404.js = /404/,/404.html
 .../my-blog-starter/src/pages/index.js = /
@@ -59,16 +59,16 @@ gatsby > for( var [key, value] of components ) { console.log(key + ' = ' + value
 
 ### `getNode()`
 
-Get a single node by its ID, typically a string.
+Pega um único nó pelo seu ID, normalmente uma string.
 
-Usage: `getNode(<id>)`
+Uso: `getNode(<id>)`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > getNode('SitePage /404.html')
-// Returns:
+// Retorno:
 { internalComponentName: 'Component404Html',
   path: '/404.html',
   ...
@@ -83,45 +83,45 @@ gatsby > getNode('SitePage /404.html')
 
 ### `getNodes()`
 
-Returns an array of objects (the nodes).
+Retorna um array de objetos (os nós)
 
-Usage: `getNodes()`
+Uso: `getNodes()`
 
-Examples:
+Exemplos:
 
 ```js
-// Command:
+// Comando:
 gatsby > getNodes().map(node=>node.internal.type)
-// Returns:
+// Retorno:
 [ 'SitePage',
   'SitePlugin',
   'SitePlugin',
   'SitePlugin',
-  'SitePlugin',...] // An array of each node's internal type.
+  'SitePlugin',...] // Um array dos tipos internos de cada nó.
 
-// Command:
+// Comando:
 gatsby > getNodes().filter(node=> {if('MarkdownRemark' == node.internal.type) return node}).map(node=> node.frontmatter.title)
-// Returns:
-[ 'Hello World', 'My Second Post!', 'New Beginnings' ] // First returns an array of just nodes with a MarkdownRemark type, then creates an array of titles (blog posts).
+// Retorno:
+[ 'Hello World', 'My Second Post!', 'New Beginnings' ] // Primeiro retorna um array de nós que sejam do tipo MarkdownRemark, então cria um array de títulos (postagens de blog).
 ```
 
 ### `nodes`
 
-`nodes` is like `getNodes()`, but returns an **indexed** array of objects (the nodes). You can also pass in the index of the node you want, and that will return an array with a single node object.
+`nodes` é como `getNodes()`, mas retorna um array **indexado** de objetos (os nós). Também podemos passar o índice do nó desejado, com isso teremos o retorno de um array com um único objeto de nó.
 
-Usage: `nodes` returns the array, or `nodes[<id>]` returns an array with a node object.
+Uso: `nodes` retorna o array, ou `nodes[<id>]` retorna um array com um objeto de nó.
 
-Examples:
+Exemplos:
 
 ```js
-// Command:
+// Comando:
 gatsby > nodes.length
-// Returns:
-48 // The length of the nodes array.
+// Retorno:
+48 // O tamanho do array de nós.
 
-// Command
+// Comando
 gatsby > nodes[47]
-// Returns:
+// Retorno:
 [ 47,
   { internalComponentName: 'Component404Html',
     path: '/404.html',
@@ -138,16 +138,16 @@ gatsby > nodes[47]
 
 ### `pages`
 
-Returns an indexed array of arrays. Each array contains a key which is the slug, and a value which is the page node object.
+Retorna um array indexado de arrays. Cada array contém uma chave que é o slug, e um valor que é o objeto de nó da página.
 
-Usages: `pages` or `pages[<index>]`
+Uso: `pages` ou `pages[<index>]`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > pages[0]
-// Returns:
+// Retorno:
 [ '/hi-folks/',
   { internalComponentName: 'ComponentHiFolks',
     path: '/hi-folks/',
@@ -158,16 +158,16 @@ gatsby > pages[0]
 
 ### `schema`
 
-Returns the GraphQL schema of your Gatsby environment as an object.
+Retorna o schema GraphQL do seu ambiente Gatsby como um objeto.
 
-Usages: `schema` or `schema[<property>]`
+Uso: `schema` ou `schema[<property>]`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > schema._implementations
-// Result:
+// Retorno:
 [Object: null prototype] {
   Node:
    [ File,
@@ -176,40 +176,40 @@ gatsby > schema._implementations
      SitePage,
      SitePlugin,
      Site,
-     Directory ] } // Returns the property value of implementations.
+     Directory ] } // Retorna o valor da propriedade das implementações.
 ```
 
 ### `siteConfig`
 
-Returns the settings you would find in the `gatsby-config.js` file of your site as an object.
+Retorna as configurações encontradas no arquivo `gatsby-config.js` do seu site como um objeto.
 
-Usages: `siteConfig` or `siteConfig[<property>]`
+Uso: `siteConfig` ou `siteConfig[<property>]`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > siteConfig.siteMetadata
-// Returns:
+// Retorno:
 { title: 'Gatsby Starter Blog',
   author: 'Kyle Mathews',
   description: 'A starter blog demonstrating what Gatsby can do.',
   siteUrl: 'https://gatsby-starter-blog-demo.netlify.com/',
-  social: { twitter: 'kylemathews' } } // returns just the siteMetadata value of the config.
+  social: { twitter: 'kylemathews' } } // Retorna apenas o valor da propriedade siteMetadata da config
 ```
 
 ### `staticQueries`
 
-Returns a Map object with all of the static queries in your Gatsby environment. Properties that get returned: `name`, `componentPath`, `id`, `query`, and `hash`.
+Retorna um objeto Map com todas as buscas estáticas no seu ambiente Gatsby. Propriedades que são retornadas: `name`, `componentPath`, `id`, `query`, e `hash`.
 
-Usage: `staticQueries`
+Uso: `staticQueries`
 
-Example:
+Exemplo:
 
 ```js
-// Command:
+// Comando:
 gatsby > for( var [key, value] of staticQueries ) { console.log(key + ' = ' + value.componentPath); }
-// Returns:
+// Retorno:
 sq--src-components-seo-js = .../my-blog-starter/src/components/seo.js
 sq--src-components-bio-js = .../my-blog-starter/src/components/bio.js
 ```

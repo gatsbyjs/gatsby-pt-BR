@@ -1,18 +1,19 @@
 ---
-title: Linking Between Pages
+title: Vinculação entre páginas
 ---
 
-This guide covers how to link between pages in a Gatsby site.
+Este guia aborda como vincular páginas em um site que use o Gatsby.
 
-## The Gatsby link component
+## O componente _link_ do Gatsby
 
-The Gatsby `<Link />` component is for linking between pages within your site. For external links to pages not handled by your Gatsby site, use the regular HTML `<a>` tag.
+O componente `<Link />` do Gatsby é usado para vincular as páginas do seu site. Para links externos não controlados pelo Gatsby use a tag regular `<a>` do HTML.
 
-## Using the `<Link />` component for internal links
+## Usando o componente `<Link />` para vinculações internas
 
-Here's an example of creating a link between two pages in a Gatsby site.
+Aqui está um exemplo de criação de um vínculo entre duas páginas em um site com o Gatsby.
 
-Open a page component (e.g. `src/pages/index.js`) in your Gatsby site. Import the `Link` component from Gatsby, which makes it available in the component. Add a `<Link />` component below the header, and give it a `to` property with the value of `"/contact/"` for the pathname:
+Abra o componente de página (ex. `src/pages/index.js`) no seu site. Importe o componente `Link` do Gatsby, o que permite que ele seja usado dentro do componente de página.
+Adicione o componente `<Link />` abaixo do cabeçalho, e adicione a propriedade `to` e como valor o caminho `"/contato/"`:
 
 ```jsx
 import React from "react"
@@ -20,20 +21,20 @@ import { Link } from "gatsby"
 
 export default () => (
   <div>
-    <Link to="/contact/">Contact</Link>
+    <Link to="/contato/">Contato</Link>
   </div>
 )
 ```
 
-The above code will add a link to the contact page, automatically rendered in HTML as `<a href="/contact/">` but with added performance benefits. The link's value is based off of the page's filename which in this case would be `contact.js`.
+O código acima adicionará um vínculo à página de contato, renderizado automaticamente em HTML como `<a href="/contact/">` mas com benefícios adicionais de desempenho. O valor do link é baseado no nome do arquivo da página, que nesse caso seria `contact.js`.
 
-> **Note:** the value `"/"` for the `to` property will take users to the home page.
+> **Nota:** o valor `"/"` para a propriedade `to` levará os usuários para a página inicial.
 
-## Using `<a>` for external links
+## Usando `<a>` para vínculos externos
 
-If you are linking to pages not handled by your Gatsby site (such as on a different domain), you should use the native HTML `<a>` tag instead of Gatsby Link.
+Se você estiver vinculando páginas que não são controladas pelo seu site Gatsby (como em um domínio diferente), use a tag nativa do HTML `<a>`, em vez do _Link_ do Gatsby.
 
-Additionally, if you wish to have an external link open in new window using the `target` attribute, use the `rel` attribute as seen below to avoid a vulnerability in which the [referrer page](https://developer.mozilla.org/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) can be replaced dynamically in JavaScript with a different page:
+Além disso se você deseja abrir um vínculo externo em uma nova janela usando o atributo `target`, use o atributo `rel` para evitar uma vulnerabilidade onde a [página de referência](https://developer.mozilla.org/en-US/docs/Web/Security/Referer_header:_privacy_and_security_concerns) pode ser substituída dinamicamente via JavaScript:
 
 ```jsx
 import React from "react"
@@ -41,15 +42,15 @@ import React from "react"
 export default () => (
   <div>
     <a href="https://example.com" target="_blank" rel="noopener noreferrer">
-      External link
+      Link Externo
     </a>
   </div>
 )
 ```
 
-It is also recommended to include a [visual icon](https://thenounproject.com/term/new-window/2864/) or some kind of indicator differentiating external links from internal ones.
+Também é recomendado adicionar um [ícone visual](https://thenounproject.com/term/new-window/2864/) ou algum tipo identificando que trata-se de um vínculo externo.
 
-## Other resources
+## Outros materiais
 
-- For the complete example of how to link between pages, see [Part One](/tutorial/part-one/#linking-between-pages/) in the Tutorial
-- Check out more detail on routing in Gatsby in the [API doc for Gatsby Link](/docs/gatsby-link/).
+- Para obter o exemplo completo de como vincular páginas, veja na [primeira parte](/tutorial/part-one/#linking-between-pages/) do tutorial
+- Confira mais detalhes sobre o roteamento no Gatsby na [documentação da API do Gatsby Link](/docs/gatsby-link/).

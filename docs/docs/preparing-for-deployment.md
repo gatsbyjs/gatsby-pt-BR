@@ -1,46 +1,46 @@
 ---
-title: Preparing a Site for Deployment
+title: Preparando um site para publicação
 ---
 
-## Create new Gatsby project
+## Criar um novo projeto com Gatsby
 
-First thing you need to do is generate and configure your new Gatsby project.
-If you haven't already [set up a Gatsby project](/docs/quick-start) you can do so by first installing Gatsby globally:
+Primeira coisa que você precisa fazer é criar e configurar seu novo projeto Gatsby.
+Se você ainda não [configurou um projeto Gatsby](/docs/quick-start) você pode fazer isso instalando o Gatsby globalmente:
 
 ```shell
 npm install --global gatsby-cli
 ```
 
-Then generate a project with the following command:
+Então, crie um projeto com o seguinte comando:
 
 ```shell
 gatsby new your-new-project
 ```
 
-Finally, change into the new site directory:
+Finalmente, mude para o novo diretório do site:
 
 ```shell
 cd your-new-project
 ```
 
-## Generate your site
+## Crie seu site
 
-To generate static files in the simplest way, write
+Para gerar arquivos estáticos da maneira mais simples, escreva:
 
 ```shell
 gatsby build
 ```
 
-Then in the `public` directory will be files to copy to the server.
+Então, no diretório `public` haverá arquivos para copiar para o servidor.
 
-## Adding a Path Prefix
+## Adicionando um prefixo de rota
 
-If you want to specific Path Prefix, for example `example.com/blog/` instead of `example.com/` read [Adding a Path Prefix](/docs/path-prefix)
+Se você quer ir para um prefixo de rota específico, por exemplo `exemplo.com/blog/` ao invés de `exemplo.com/` leia [Adicionando um prefixo de rota](/docs/path-prefix)
 
-## Specific deploy
+## Publicação específica
 
-Additional actions may be required depending on which server you use.
-If you have a server from one of the following providers, you should read the individual subpages:
+Ações adicionais podem ser obrigatórias, dependendo de qual servidor você usa.
+Se você possui um servidor de um dos provedores a seguir, leia as subpáginas individuais:
 
 - [AWS Amplify](/docs/deploying-to-aws-amplify)
 - [S3/Cloudfront](/docs/deploying-to-s3-cloudfront)
@@ -52,5 +52,8 @@ If you have a server from one of the following providers, you should read the in
 - [Render](/docs/deploying-to-render)
 - [Surge](/docs/deploying-to-surge)
 - [GitHub Pages](/docs/how-gatsby-works-with-github-pages)
+- [Microsoft Internet Information Server (IIS)](/docs/deploying-to-iis)
+- [Firebase Hosting](/docs/deploying-to-firebase)
+- [KintoHub](/docs/deploying-to-kintohub)
 
-If you don't see the hosting you are interested, it's possible to add other hosting providers through [contributions to the docs](/contributing/docs-contributions).
+Se você não vê a hospedagem que você está interessado, é possível adicionar outros provedores de hospedagem através de [contribuições a documentação](/contributing/docs-contributions).

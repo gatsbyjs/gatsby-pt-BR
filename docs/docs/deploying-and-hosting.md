@@ -1,12 +1,12 @@
 ---
-title: Deploying and Hosting
+title: Publicando e Hospedando
 overview: true
 ---
 
-Getting your shiny new Gatsby site deployed and accessible is probably the first thing you will want to do now that it's built! Also, give yourself a pat on the back real quick for creating something so great!
+Ter seu novo site Gatsby publicado e acessível é provavelmente a primeira coisa que você deseja fazer agora que foi criado! Dê um tapinha em suas costas por ter criado algo tão legal!
 
-When you build your Gatsby application, the output is static content: HTML, CSS, JavaScript, images, etc. This content is incredibly easy and affordable to host with any provider. We have several guides below for hosting with particular providers, but this list is by no means exhaustive. Whether you're deploying to AWS, Netlify, or something else entirely switching to static content makes deploying a trivial concern.
+Quando você cria seu aplicativo Gatsby, a saída de conteúdo é estático: HTML, CSS, JavaScript, imagens, etc. Esse conteúdo é incrivelmente fácil e acessível para hospedar com qualquer provedor. Temos vários guias abaixo para hospedagem com provedores específicos, mas essa lista não é de forma alguma exaustiva. Se você está publicando na AWS, Netlify ou em algo totalmente alternativo para o conteúdo estático, a publicação é uma preocupação trivial.
 
 <GuideList slug={props.slug} />
 
-The Gatsby blog also has posts on both [deployment](/blog/tags/deployment/) and [hosting](/blog/tags/hosting/).
+O blog do Gatsby também tem postagens sobre ambos: [publicando](/blog/tags/deployment/) e [hospedando](/blog/tags/hosting/).

@@ -1,7 +1,7 @@
 ---
-title: "Coming from React to Gatsby: What You Need to Know"
+title: "Vindo do React para o Gatsby: O que você precisa saber"
 ---
 
-This is a stub. Help our community expand it.
+Este é um esboço. Ajude nossa comunidade a expandi-lo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your pull request gets accepted.
+Por favor use o [guia de estilo Gatsby](/contributing/gatsby-style-guide/) para garantir que seu Pull Request seja aceito.

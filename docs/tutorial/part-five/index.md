@@ -1,53 +1,53 @@
 ---
-title: Source Plugins
+title: Plugins Nativos
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
 
-> This tutorial is part of a series about Gatsby’s data layer. Make sure you’ve gone through [part 4](/tutorial/part-four/) before continuing here.
+> Esse tutorial faz parte da série sobre a camada de dados do Gatsby. Tenha certeza que já passou pela [parte 4](/tutorial/part-four/) antes de continuar.
 
-## What's in this tutorial?
+## O que tem nesse tutorial?
 
-In this tutorial, you'll be learning about how to pull data into your Gatsby site using GraphQL and source plugins. Before you learn about these plugins, however, you'll want to know how to use something called GraphiQL, a tool that helps you structure your queries correctly.
+Neste tutorial, você aprenderá como puxar dados para seu site Gatsby usando GraphQL e plugins nativos. Porém, antes de você aprender sobre esses plugins, você precisará saber como usar algo chamado GraphiQL, uma ferramenta que lhe ajudará a estruturar suas _queries_ corretamente.
 
-## Introducing GraphiQL
+## Introduzindo GraphiQL
 
-GraphiQL is the GraphQL integrated development environment (IDE). It's a powerful (and all-around awesome) tool you'll use often while building Gatsby websites.
+GraphiQL é a _IDE_ (Ambiente de Desenvolvimento Integrado) do GraphQL. É uma poderosa e impressionante ferramenta que você utilizará com frequência enquanto estiver construindo websites em Gatsby.
 
-You can access it when your site's development server is running—normally at
+Você pode acessá-lo quando o servidor de desenvolvimento estiver executando em
 <http://localhost:8000/___graphql>.
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
-  <p>Your browser does not support the video element.</p>
+  <p>Seu navegador não suporta o elemento HTML video.</p>
 </video>
 
-Poke around the built-in `Site` "type" and see what fields are available on it -- including the `siteMetadata` object you queried earlier. Try opening GraphiQL and play with your data! Press <kbd>Ctrl + Space</kbd> (or use <kbd>Shift + Space</kbd> as an alternate keyboard shortcut) to bring up the autocomplete window and <kbd>Ctrl + Enter</kbd> to run the GraphQL query. You'll be using GraphiQL a lot more through the remainder of the tutorial.
+Explore o "tipo" `Site` já incluso e veja quais são os campos disponíveis nele -- incluindo o objeto `siteMetadata` que você recebeu na _query_ anteriormente. Tente abrir o GraphiQL e brinque com os seus dados! Aperte <kbd>Ctrl + Espaço</kbd> (ou use <kbd>Shift + Espaço</kbd> como um atalho alternativo do teclado) para trazer a janela de _autocomplete_ e <kbd>Ctrl + Enter</kbd> para executar a _query_ GraphQL. Você utilizará GraphiQL muito mais durante o restante desse tutorial.
 
-## Using the GraphiQL Explorer
+## Usando o explorador do GraphiQL
 
-The GraphiQL Explorer enables you to interactively construct full queries by clicking through available fields and inputs without the repetitive process of typing these queries out by hand.
+O Explorador do GraphiQL permite que você construa interativamente _queries_ completar clicando nos campos e _inputs_ disponíveis sem o processo repetitivo de escrever essas _queries_ na mão
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-build-a-graphql-query-using-gatsby-s-graphiql-explorer"
   lessonTitle="Build a GraphQL Query using Gatsby’s GraphiQL Explorer"
 />
 
-## Source plugins
+## Plugins nativos
 
-Data in Gatsby sites can come from anywhere: APIs, databases, CMSs, local files, etc.
+Dados em sites Gatsby podem vir de qualquer lugar: APIs, banco de dados, CMSs, arquivos locais, etc.
 
-Source plugins fetch data from their source. E.g. the filesystem source plugin knows how to fetch data from the file system. The WordPress plugin knows how to fetch data from the WordPress API.
+Plugins nativos buscam por dados através de sua origem. Por exemplo: o plugin nativo dos arquivos de sistema (_filesystem_) sabe como trazer os dados através de arquivos do sistema. O plugin do WordPress sabe como buscar os dados da API do WordPress.
 
-Add [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) and explore how it works.
+Adicione o [`gatsby-source-filesystem`](/packages/gatsby-source-filesystem/) e explore como ele funciona.
 
-First, install the plugin at the root of the project:
+Primeiro, instale o plugin no diretório raiz do projeto:
 
 ```shell
 npm install --save gatsby-source-filesystem
 ```
 
-Then add it to your `gatsby-config.js`:
+Então, adicione-o em `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -75,42 +75,42 @@ module.exports = {
 }
 ```
 
-Save that and restart the gatsby development server. Then open up GraphiQL again.
+Salve o arquivo e reinicie o servidor de desenvolvimento do gatsby. Então, abra o GraphiQL novamente.
 
-In the explorer pane, you'll see `allFile` and `file` available as selections:
+No painel de _Explorer_, você verá `allFile` e `file` disponíveis como opções:
 
 ![graphiql-filesystem](graphiql-filesystem.png)
 
-Click the `allFile` dropdown. Position your cursor after `allFile` in the query area, and then type <kbd>Ctrl + Enter</kbd>. This will pre-fill a query for the `id` of each file. Press "Play" to run the query:
+Clique em `allFile` no menu _dropdown_. Posicione seu cursor depois de `allFile` na área de _query_, e então pressione <kbd>Ctrl + Enter</kbd>. Isso irá preencher uma _query_ para o id de cada arquivo. Aperte o botão "_Play_" para executar a _query_:
 
 ![filesystem-query](filesystem-query.png)
 
-In the Explorer pane, the `id` field has automatically been selected. Make selections for more fields by checking the field's corresponding checkbox. Press "Play" to run the query again, with the new fields:
+No painel _Explorer_, o campo `id` foi automaticamente selecionado. Faça seleções para mais campos selecionando a caixa de seleção do respectivo campo. Pressione "_Play_" para executar a _query_ novamente, agora com os novos campos:
 
 ![filesystem-explorer-options](filesystem-explorer-options.png)
 
-Alternatively, you can add fields by using the autocomplete shortcut (<kbd>Ctrl + Space</kbd>). This will show queryable fields on the `File` nodes.
+Alternativamente, você pode adicionar campos usando o atalho de _autocomplete_ (<kbd>Ctrl + Espaço</kbd>). Isso irá mostrar os campos disponíveis na _query_ nos nós `File`.
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-Try adding a number of fields to your query, pressing <kbd>Ctrl + Enter</kbd>
-each time to re-run the query. You'll see the updated query results:
+Tente adicionar um número de campos na sua query, pressionando <kbd>Ctrl + Enter</kbd>
+toda vez para executar novamente a _query_. Você verá os resultados atualizados da _query_:
 
 ![allfile-query](allfile-query.png)
 
-The result is an array of `File` "nodes" (node is a fancy name for an object in a
-"graph"). Each `File` node object has the fields you queried for.
+O resultado é um vetor de nós do tipo `File` (nó é um nome chique para um objeto em um
+"grafo"). Cada objeto nó `File` tem os campos que você solicitou na _query_.
 
-## Build a page with a GraphQL query
+## Construa uma página com uma _query_ GraphQL
 
-Building new pages with Gatsby often starts in GraphiQL. You first sketch out
-the data query by playing in GraphiQL then copy this to a React page component
-to start building the UI.
+A construção de novas páginas com o Gatsby geralmente começa no GraphiQL. Você primeiro fará um rascunho
+da _query_ de dados explorando no GraphiQL para então fazer a cópia dele para um componente React
+para começar a construir a interface do usuário.
 
-Let's try this.
+Vamos tentar isso.
 
-Create a new file at `src/pages/my-files.js` with the `allFile` GraphQL query you just
-created:
+Crie um novo arquivo em `src/pages/my-files.js` com a _query_ GraphQL `allFile` que você acabou de
+criar:
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -142,18 +142,18 @@ export const query = graphql`
 `
 ```
 
-The `console.log(data)` line is highlighted above. It's often helpful when
-creating a new component to console out the data you're getting from the GraphQL query
-so you can explore the data in your browser console while building the UI.
+A linha `console.log(data)` é destacada acima. Ela é geralmente útil quando se está
+criando um novo componente para mostrar no console os dados que você está recebendo da _query_ GraphQL
+para que então você consiga explorar os dados no seu navegador enquanto constrói a interface do usuário.
 
-If you visit the new page at `/my-files/` and open up your browser console
-you will see something like:
+Se você visitar a nova página em `/my-files/` e abrir o console do seu navegador
+você verá algo como:
 
 ![data-in-console](data-in-console.png)
 
-The shape of the data matches the shape of the GraphQL query.
+O formato dos dados combinam com o formato da _query_ GraphQL.
 
-Add some code to your component to print out the File data.
+Adicione um pouco de código no seu componente para imprimir os dados do arquivo.
 
 ```jsx:title=src/pages/my-files.js
 import React from "react"
@@ -209,10 +209,9 @@ export const query = graphql`
 `
 ```
 
-And now visit [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
-
+E agora visite [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
 ![my-files-page](my-files-page.png)
 
-## What's coming next?
+## O que vem na sequência?
 
-Now you've learned how source plugins bring data _into_ Gatsby’s data system. In the next tutorial, you'll learn how transformer plugins _transform_ the raw content brought by source plugins. The combination of source plugins and transformer plugins can handle all data sourcing and data transformation you might need when building a Gatsby site. Learn about transformer plugins in [part six of the tutorial](/tutorial/part-six/).
+Agora você aprendeu como os plugins nativos trazem dados _para dentro_ do sistema de dados do Gatsby. No próximo tutorial, você aprenderá como plugins de transformação _transformam_ o conteúdo bruto trazido pelos plugins nativos. A combinaçào de plugins nativos com plugins de transformação pode lidar com toda origem e transformação de dados que você pode precisar quando está construindo um site Gatsby. Aprenda sobre plugins de transformação na [parte seis do tutorial](/tutorial/part-six/).

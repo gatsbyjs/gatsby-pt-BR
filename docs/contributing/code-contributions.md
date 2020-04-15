@@ -1,66 +1,67 @@
 ---
-title: Code Contributions
+title: Contribuições de Código
 ---
 
-The beauty of contributing to open source is that you can clone your favorite project, get it running locally, and test out experiments and changes in real time! Way to feel like a wizard.
+A beleza em contribuir com o _open source_ é que você pode dar _clone_ em seu projeto favorito, rodá-lo localmente e fazer experimentos e mudanças em tempo real! A sensação é como se você fosse um mago.
 
-On this page:
+Esta página contém os seguintes tópicos:
 
-- [Repo setup](#repo-setup)
-- [Creating your own plugins and loaders](#creating-your-own-plugins-and-loaders)
-- [Making changes to the starter Library](#making-changes-to-the-starter-library)
-- [Contributing example sites](#contributing-example-sites)
-- [Using Docker to set up test environments](#using-docker-to-set-up-test-environments)
-- [Development tools](#development-tools)
+- [Configurando o repositório](#configurando-o-repositório)
+- [Criando seus próprios plugins e loaders](#criando-seus-próprios-plugins-e-loaders)
+- [Fazendo mudanças na biblioteca starter](#fazendo-mudanças-na-biblioteca-starter)
+- [Contribuindo com sites exemplo](#contribuindo-com-sites-exemplo)
+- [Usando Docker para configurar um ambiente de teste](#usando-docker-para-configurar-um-ambiente-de-teste)
+- [Ferramentas de desenvolvimento](#ferramentas-de-desenvolvimento)
 
-## Repo setup
+## Configurando o repositório
 
-This page includes details specific to the Gatsby core and ecosystem codebase.
+Esta página inclui detalhes específicos de códigos base do ecossistema e do núcleo do Gatsby.
 
-To start setting up the Gatsby repo on your machine using git, Yarn and Gatsby-CLI, check out the page on [setting up your local dev environment](/contributing/setting-up-your-local-dev-environment/).
+Para começar a configurar o repositório Gatsby em sua máquina usando git, Yarn e Gabsty-CLI,  recomendamos a leitura deste documento: [configurando o seu ambiente local de desenvolvimento](/contributing/setting-up-your-local-dev-environment/).
 
-Alternatively, you can skip the local setup and [use an online dev environment](/contributing/using-an-online-dev-environment/).
 
-To contribute to the blog or Gatsbyjs.org website, check out the setup steps on the [blog and website contributions](/contributing/blog-and-website-contributions/) page. For instructions on contributing to the docs, visit the [docs contributions page](/contributing/docs-contributions/).
+Caso queira, você pode pular a configuração local e optar pelo [ambiente de desenvolvimento online](/contributing/using-an-online-dev-environment/).
 
-## Creating your own plugins and loaders
+Para contribuir com o blog ou o site do Gatsby, siga os passos descritos em [contribuições do blog e site](/contributing/blog-and-website-contributions/). Para instruções de como contribuir com a documentação, visite a [página de contribuição da documentação](/contributing/docs-contributions/).
 
-If you create a loader or plugin, we would love for you to open source it and put it on npm. For more information on creating custom plugins, please see the documentation for [plugins](/docs/plugins/) and the [API specification](/docs/api-specification/).
+## Criando seus próprios _plugins_ e _loaders_
 
-## Making changes to the starter library
+Caso você já tenha criado um _loader_ ou _plugin_, nós adoraríamos que você o compartilhasse e publicasse no npm. Para mais informações em como criar _plugins_ customizáveis, recomendamos a leitura da documentação dos [plugins](/docs/plugins/) e a da [especificação da API](/docs/api-specification/).
 
-Note: You don't need to follow these steps to submit to the starter library. This is only necessary if you'd like to contribute to the functionality of the starter library. To submit a starter, [follow these steps instead](/contributing/submit-to-starter-library/).
+## Fazendo mudanças na biblioteca _starter_
 
-To develop on the starter library, you'll need to supply a GitHub personal access token.
+Nota: Você não precisa seguir esses passos para poder submeter para a biblioteca _starter_. Isso é apenas necessário caso você quisesse contribuir com alguma funcionalidade da _starter_. Você pode submeter para a biblioteca [seguindo estes passos](/contributing/submit-to-starter-library/).
 
-1. Create a personal access token in your GitHub [Developer settings](https://github.com/settings/tokens).
-2. In the new token's settings, grant that token the "public_repo" scope.
-3. Create a file in the root of `www` called `.env.development`, and add the token to that file like so:
+Caso você queira desenvolver na biblioteca _starter_, será necessário fornecer um _token_ de acesso pessoal do Github.
+
+1. Crie um _token_ de acesso pessoal acessando as suas [Configurações de Desenvolvedor](https://github.com/settings/tokens) do Github.
+2. Ao configurar o novo _token_, certifique-se de selecionar o escopo "public_repo".
+3. Crie um arquivo na raiz de `www` chamado `.env.development`, em seguida, adicione o _token_ seguindo o modelo abaixo:
 
 ```text:title=.env.development
-GITHUB_API_TOKEN=YOUR_TOKEN_HERE
+GITHUB_API_TOKEN=SEU_TOKEN_AQUI
 ```
 
-The `.env.development` file is ignored by git. Your token should never be committed.
+O arquivo `.env.development` é ignorado pelo git. Seu _token_ nunca deve ser "comitado".
 
-## Contributing example sites
+## Contribuindo com sites exemplo
 
-Gatsby's policy is that "Using" example sites (like those in the [examples part of the repo](https://github.com/gatsbyjs/gatsby/tree/master/examples)) should only be around plugins that are maintained by the core team as it's hard to keep things up to date otherwise.
+A política do Gatsby é de que o "uso" de sites exemplo (como os presentes na [pasta de exemplos do repositório](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
 
-To contribute example sites, it is recommended to create your own GitHub repo and link to it from your source plugin, etc.
+Para contribuir com sites exemplo, é recomendado criar seu próprio repositório no Github e vinculá-lo a partir de seu _plugin_ de origem, etc.
 
-## Using Docker to set up test environments
+## Usando Docker para configurar um ambiente de teste
 
-With all of the possible Gatsby integrations, it might help to spin up a Docker container with the software application you need to test. This makes installation a breeze, so you can focus less on getting set up and more on the integration details that matter to you.
+Com todas essas possibilidades de integração com o Gatsby, talvez ajude subir um contêiner Docker com as aplicações que você precisa testar. Isso torna a instalação muito mais simples, além de permitir que você foque menos na configuração e mais nos detalhes de integração que são mais importantes para você.
 
-> Do you have a setup not listed here? Let us know by adding it to this file and opening a PR.
+> Você tem alguma configuração (_setup_) que não está listado aqui? Compartilhe conosco adicionando sua configuração neste arquivo e abrindo uma PR.
 
-### Docker, WordPress and Gatsby
+### Docker, WordPress e Gatsby
 
-To install WordPress to use with Gatsby, this `docker-compose.yml` file will come in handy:
+Para instalar o WordPress e usar junto com o Gatsby, recomendamos o uso do arquivo `docker-compose.yml`:  
 
-```
-version: '2'
+```yaml:title=docker-compose.yml
+version: "2"
 
 services:
   db:
@@ -91,34 +92,34 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
-    - ./wp-content:/var/www/html/wp-content
-    - ./wp-app:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./wp-app:/var/www/html
 
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: sessions_phpmyadmin
-      environment:
-       - PMA_ARBITRARY=1
-       - PMA_HOST=sessions_db
-       - PMA_USER=wordpress
-       - PMA_PASSWORD=wordpress
-      restart: always
-      ports:
-       - 8080:80
-      volumes:
-       - /sessions
+    image: phpmyadmin/phpmyadmin
+    container_name: sessions_phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=sessions_db
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
 ```
 
-Use the above file contents when following the Docker WordPress install instructions: https://docs.docker.com/compose/wordpress/
+Use esse arquivo acima enquanto estiver seguindo o tutorial de instalação do WordPress do Docker: https://docs.docker.com/compose/wordpress/
 
-Using Docker Compose, you can start and stop a WordPress instance and integrate it with the [Gatsby WordPress source plugin](/docs/sourcing-from-wordpress/).
+Ao usar o Docker Compose, você tem a opção de iniciar e pausar instâncias do WordPress, além de poder integrá-las com o [Gatsby WordPress source plugin](/docs/sourcing-from-wordpress/).
 
-## Development tools
+## Ferramentas de desenvolvimento
 
-### Debugging the build process
+### Depurando o processo de _build_
 
-Check [Debugging the build process](/docs/debugging-the-build-process/) page to learn how to debug Gatsby.
+Confira a página [Depurando o processo de _build_](/docs/debugging-the-build-process/) para aprender a como depurar em Gatsby.
 
-## Feedback
+## _Feedback_
 
-At any point during the contributing process, the Gatsby Core team would love to help! We hold a weekly [Core Maintainer's meeting](/contributing/community#core-maintainers-meeting) where you can share your creation(s) and receive advice and feedback directly from the team!
+A equipe principal do Gabsty adoraria lhe ajudar em qualquer momento durante o seu processo de contribuição! Nós temos semanalmente um [encontro dos _Core_ Mantenedores](/contributing/community#core-maintainers-meeting) onde qualquer um tem a oportunidade de conpartilhar sua(s) criaçõe(s) e receber conselhos diretamente da equipe do Gabsty!

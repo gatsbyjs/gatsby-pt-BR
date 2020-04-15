@@ -1,23 +1,23 @@
 ---
-title: Creating a Sitemap
+title: Criando um Sitemap
 ---
 
-## What is a sitemap?
+## O que é um sitemap?
 
-An [XML sitemap](https://support.google.com/webmasters/answer/156184?hl=en) lists a website’s important pages, making sure search engines (such as Google) can find and crawl them all. In effect, a sitemap helps a search engine understand your website structure.
+Um [XML sitemap](https://support.google.com/webmasters/answer/156184?hl=en) lista as páginas importantes de um site, assegurando que ferramentas de busca (como o Google) possam encontrar e rastrear todas elas. De maneira geral, um sitemap ajuda ferramentas de busca a entender a estrutura do seu site.
 
-Think of it as a map for your website. It shows what all of the pages are on your website.
+Pense como se fosse um mapa do seu site. Ele mostra todas as páginas que estão no seu site.
 
-## Using [gatsby-plugin-sitemap](/packages/gatsby-plugin-sitemap/)
+## Usando o [gatsby-plugin-sitemap](/packages/gatsby-plugin-sitemap/)
 
-To generate an XML sitemap, you will use the [`gatsby-plugin-sitemap`](/packages/gatsby-plugin-sitemap/) package.
+Para gerar um XML sitemap, você utilizará o pacote [`gatsby-plugin-sitemap`](/packages/gatsby-plugin-sitemap/).
 
-Install the package by running the following command:
+Instale o pacote executando o seguinte comando:
 `npm install --save gatsby-plugin-sitemap`
 
-### How to configure
+### Como configurar
 
-Once installation is complete, we can now add this plugin to our `gatsby-config.js`, like so:
+Depois que a instalação estiver concluída, podemos adicionar este plugin ao nosso `gatsby-config.js`, da seguinte forma:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -28,14 +28,14 @@ module.exports = {
 }
 ```
 
-**Note:** The siteUrl property must be defined and not left empty.
+**Nota:**  A propriedade `siteUrl` deve ser definida e não deixada em branco.
 
-Next run a build (`npm run build`) since the sitemap generation will only happen for production builds. This is all that's required to get a working sitemap with Gatsby! By default, the generated sitemap path is /sitemap.xml and will include all of your site’s pages, but of course the plugin exposes options to configure this default functionality.
+Em seguida, execute um build (`npm run build`), pois a geração do sitemap ocorrerá apenas para builds de produção. Isso é tudo o que é necessário para obter um sitemap funcional com o Gatsby! Por padrão, o caminho do sitemap gerado é `/sitemap.xml` e inclui todas as páginas do seu site, mas é claro que o plugin expõe opções para configurar essa funcionalidade padrão.
 
-### Additional modifications
+### Modificações Adicionais
 
-Additional modification steps are available in the [`gatsby-plugin-sitemap` documentation](/packages/gatsby-plugin-sitemap)
+Passos para modificações adicionais estão disponiveis na [documentação do `gatsby-plugin-sitemap`](/packages/gatsby-plugin-sitemap)
 
-## More information
+## Mais informações
 
-- Also check out a post on [gatsby-plugin-advanced-sitemap](/blog/2019-05-07-advanced-sitemap-plugin-for-seo/) from the Gatsby blog
+- Confira também esta postagem sobre [gatsby-plugin-advanced-sitemap](/blog/2019-05-07-advanced-sitemap-plugin-for-seo/) no blog do Gatsby

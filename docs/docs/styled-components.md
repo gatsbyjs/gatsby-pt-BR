@@ -2,33 +2,33 @@
 title: Styled Components
 ---
 
-In this guide, you will learn how to set up a site with the CSS-in-JS library [Styled Components](https://www.styled-components.com/).
+Neste guia, você aprenderá como configurar um site com a biblioteca CSS-in-JS [Styled Components](https://www.styled-components.com/).
 
-Styled Components lets you use actual CSS syntax inside your components. Styled Components is a variant on "CSS-in-JS"—which solves many of the problems with traditional CSS.
+Styled Components permite você usar a sintaxe CSS real dentro de seus componentes. Styled Components é uma variante do "CSS-in-JS" — que resolve muitos dos problemas do CSS tradicional.
 
-One of the most important problems they solve is selector name collisions. With traditional CSS, you have to be careful not to overwrite CSS selectors used elsewhere in a site because all CSS selectors live in the same global namespace. This unfortunate restriction can lead to elaborate (and often confusing) selector naming schemes.
+Um dos problemas mais importantes que ele resolve é a colisão de nomes de seletores. Com o CSS tradicional, você deve tomar cuidado para não sobrescrever os seletores de CSS usados em outras partes de um site, porque todos os seletores de CSS vivem no mesmo espaço de nome global. Essa infeliz restrição pode levar a elaborar (e muitas vezes confundir) esquemas de nomeação de seletores.
 
-With CSS-in-JS, you avoid all that as CSS selectors are scoped automatically to their component. Styles are tightly coupled with their components. This makes it much easier to know how to edit a component's CSS as there's never any confusion about how and where CSS is being used.
+Com CSS-in-JS, você evita tudo isso, pois os seletores de CSS têm escopo definido automaticamente para seus componentes. Os estilos são fortemente acoplados aos seus componentes. Isso torna muito mais fácil saber como editar o CSS de um componente, pois nunca há confusão sobre como e onde o CSS está sendo usado.
 
 <EggheadEmbed
   lessonLink="https://egghead.io/lessons/gatsby-style-gatsby-sites-with-styled-components"
   lessonTitle="Style Gatsby sites with styled-components"
 />
 
-First, open a new terminal window and run the following to create a new site:
+Primeiro, abra uma nova janela do terminal e execute o seguinte para criar um novo site:
 
 ```shell
 gatsby new styled-components-tutorial https://github.com/gatsbyjs/gatsby-starter-hello-world
 cd styled-components-tutorial
 ```
 
-Second, install the necessary dependencies for `styled-components`, including the Gatsby plugin.
+Segundo, instale as dependências necessárias para o `styled-components`, incluindo o plugin Gatsby.
 
 ```shell
 npm install --save gatsby-plugin-styled-components styled-components babel-plugin-styled-components
 ```
 
-And then add it to your site's `gatsby-config.js`:
+E, em seguida, adicione-o ao `gatsby-config.js` do seu site:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -36,9 +36,9 @@ module.exports = {
 }
 ```
 
-Then in your terminal run `gatsby develop` to start the Gatsby development server.
+Finalmente, no seu terminal, execute `gatsby develop` para iniciar o servidor de desenvolvimento Gatsby.
 
-Now create a sample Styled Components page at `src/pages/index.js`:
+Agora crie uma página exemplo de Styled Components em `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -112,11 +112,11 @@ export default () => (
 )
 ```
 
-### Enabling user stylesheets with a stable class name
+### Ativando folhas de estilo do usuário com um nome de classe estável
 
-Adding a persistent CSS `className` to your styled components can make it easier for end users of your website to take advantage of [user stylesheets](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) for accessibility.
+Adicionar um nome de classe CSS (className) persistente aos seus componentes de estilo pode facilitar para os usuários finais do seu site para tirar proveito das [folhas de estilos do usuário](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para acessibilidade.
 
-Here's an example where the class name `container` is added to the DOM along with the Styled Components' dynamically-created class names:
+Aqui está um exemplo onde o nome da classe `container` é adicionado ao DOM junto com os nomes de classe criados dinamicamente por Styled Components:
 
 ```jsx:title=src/components/container.js
 import React from "react"
@@ -132,7 +132,7 @@ export default ({ children }) => (
 )
 ```
 
-An end user of your site could then [write their own CSS styles](https://mediatemple.net/blog/tips/bend-websites-css-will-stylish-stylebot/) matching HTML elements using a class name of `.container`. If your CSS-in-JS style changes, it will not affect the end user's stylesheet.
+Um usuário final do seu site poderia então [escrever seus próprios estilos CSS](https://mediatemple.net/blog/tips/bend-websites-css-will-stylish-stylebot/) correspondentes aos elementos HTML usando um nome de classe `.container`. Se o seu estilo CSS-in-JS mudar, ele não afetará a folha de estilo do usuário final.
 
 ```css:title=user-stylesheet.css
 .container {
