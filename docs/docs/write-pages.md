@@ -6,9 +6,9 @@ title: Escrever páginas
 >
 > As áreas que estão desatualizadas são:
 >
-> - `data.json` should be replaced with `page-data.json`
-> - remove mentions of `pages.json`
-> - describe `match-paths.json`
+> - `data.json` deve ser substituído por `page-data.json`
+> - remover menções de `pages.json`
+> - descrever `match-paths.json`
 >
 > Você pode ajudar fazendo um PR para [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
 
@@ -50,7 +50,7 @@ digraph {
 
 A maior parte do código que acompanha esta seção está em [pages-writer.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/internal-plugins/query-runner/pages-writer.js)
 
-Os arquivos dinâmicos criados são (todos no diretório `.cache` directory).
+Os arquivos dinâmicos criados são (todos no diretório `.cache`).
 
 - [pages.json](#pagesjson)
 - [sync-requires.js](#sync-requiresjs)
@@ -78,7 +78,7 @@ ex:
     jsonName: "blog-c06",
     path: "/blog",
   },
-  // more pages
+  // mais páginas
 ];
 ```
 
@@ -91,7 +91,7 @@ Este é um arquivo JavaScript gerado dinamicamente que exporta `components`. É 
 ```javascript
 exports.components = {
   "component---src--blog-2-js": require("/home/site/src/blog/2.js"),
-  // more components
+  // mais componentes
 };
 ```
 
@@ -113,7 +113,7 @@ exports.components = {
     import(
       "/home/site/src/blog/2.js" /* webpackChunkName: "component---src-blog-2-js" */
     ),
-  // more components
+  // mais componentes
 };
 
 exports.data = () => import("/home/site/.cache/data.json");
