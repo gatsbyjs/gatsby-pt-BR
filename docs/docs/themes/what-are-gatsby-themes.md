@@ -12,7 +12,7 @@ Se você já criou um site Gatsby do zero, você sabe que há um número de deci
 
 ### Gatsby Starters
 
-Uma forma existente para se criar rapidamente sites Gatsby com funcionalidades similares é usar "[_Gatsby starters_](/docs/starters/)". _Starters_ são essencialmente sites Gatsby com funcionalidades pré-configuradas para um propósito específico. Você faz o download de um site Gatsby inteiro, pré-construído para um propósito específico (por exemplo, blogs, sites de portfólio, etc) e pode customizá-lo a partir disso.
+Uma forma existente para se criar rapidamente sites Gatsby com funcionalidades similares é usando "[_Gatsby starters_](/docs/starters/)". _Starters_ são essencialmente sites Gatsby com funcionalidades pré-configuradas para um propósito específico. Você faz o download de um site Gatsby inteiro, pré-construído para um propósito específico (por exemplo, blogs, sites de portfólio, etc) e pode customizá-lo a partir disso.
 
 Esses _starters_ tradicionais são um primeiro passo visando reduzir o nível de esforço envolvido na criação de um novo site Gatsby. No entanto, há dois principais problemas com _starters_ tradicionais:
 
