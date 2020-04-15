@@ -66,8 +66,6 @@ Esta é uma coleção de objetos de página, criados a partir do namespace redux
 - [caminho](/docs/behind-the-scenes-terminology/#path)
 - [combineCaminho](/docs/behind-the-scenes-terminology/#matchpath)
 
-As páginas são classificadas de forma que aquelas com `matchPath` venham antes daquelas sem. Isso é para ajudar.
-
 As páginas são classificadas de forma que aquelas com `matchPath`s venham antes daquelas sem.
 Isso é para ajudar [find-page.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/find-page.js) na seleção de páginas via regex antes de tentar caminhos explícitos. Veja [matchPaths](/docs/behind-the-scenes-terminology/#matchpath) para mais informações.
 
@@ -78,8 +76,8 @@ ex:
   {
     componentChunkName: "component---src-blog-2-js",
     jsonName: "blog-c06",
-    path: "/blog"
-  }
+    path: "/blog",
+  },
   // more pages
 ];
 ```
@@ -92,40 +90,40 @@ Este é um arquivo JavaScript gerado dinamicamente que exporta `components`. É 
 
 ```javascript
 exports.components = {
-  "component---src--blog-2-js": require("/home/site/src/blog/2.js")
+  "component---src--blog-2-js": require("/home/site/src/blog/2.js"),
   // more components
 };
 ```
 
-It is used during [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) so that it can map componentChunkNames to their component implementations. Whereas the [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) must use `async-requires.js` (below) since it performs [code splitting](/docs/how-code-splitting-works/).
+É usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) para que ele possa mapear componentChunkName para as implementações de componentes. Enquanto que o [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) deve usar `async-requires.js` (abaixo), pois ele executa [code splitting](/docs/how-code-splitting-works/).
 
 ## async-requires.js
 
 ---
 
-`async-requires.js` is very similar to `sync-requires.js`, in that it is a dynamically generated JavaScript file. The difference is that it is written to be used for code splitting via webpack. So, instead of using `require` with the component's path, it uses `import` and adds a `webpackChunkName` hint so that we can eventually link the componentChunkName to its resulting file (more info in [Code Splitting](/docs/how-code-splitting-works/) docs). `components` is a function, so that it can be lazily initialized.
+O `async-requires.js` é muito semelhante ao `sync-requires.js`, pois é um arquivo JavaScript gerado dinamicamente. A diferença é que ele foi escrito para ser usado na divisão de código via webpack. Portanto, ao invés de usar `require` com o caminho do componente, ele usa `import` e adiciona uma dica `webpackChunkName` para que possamos eventualmente vincular o componentChunkName ao arquivo resultante (mais informações em [Code Splitting](/docs/how-code-splitting-works/) docs). `components` é uma função, para que possa ser inicializada lentamente.
 
-`async-requires.js` also exports a `data` function that imports `data.json` ([see below](/docs/write-pages/#datajson))
+`async-requires.js` também exporta uma função `data` que importa `data.json` ([see below](/docs/write-pages/#datajson))
 
-An example of async-requires is:
+Um exemplo de requisição assíncrona é:
 
 ```javascript
 exports.components = {
   "component---src-blog-2-js": () =>
     import(
       "/home/site/src/blog/2.js" /* webpackChunkName: "component---src-blog-2-js" */
-    )
+    ),
   // more components
 };
 
 exports.data = () => import("/home/site/.cache/data.json");
 ```
 
-Remember, `sync-requires.js` is used during [Page HTML Generation](/docs/html-generation/). And `async-requires.js` is used by [Building the JavaScript App](/docs/production-app/).
+Lembre-se de que, `sync-requires.js` é usado durante [Page HTML Generation](/docs/html-generation/). E o `async-requires.js` é usado por [Building the JavaScript App](/docs/production-app/).
 
 ## data.json
 
-This is a generated json file. It contains the entire `pages.json` contents ([as above](/docs/write-pages/#pagesjson)), and the entire redux `jsonDataPaths` which was created at the end of the [Query Execution](/docs/query-execution/#save-query-results-to-redux-and-disk) stage. So, it looks like:
+Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([como acima](/docs/write-pages/#pagesjson)), e todo o redux `jsonDataPaths` que foi criado no final do [Execução de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk) estágio. Então, isso parece com:
 
 ```javascript
 {
@@ -145,11 +143,11 @@ This is a generated json file. It contains the entire `pages.json` contents ([as
  }
 ```
 
-`data.json` is used in two places. First, it's lazily imported by `async-requires.js` (above), which in turn is used by `production-app` to [load json results](/docs/production-app/#load-page-resources) for a page.
+`data.json` é usado em dois lugares. Primeiro, ele é importado lentamente por `async-requires.js` (acima), que por sua vez é usado por `production-app` para [carregar resultados do json](/docs/production-app/#load-page-resources) para uma página.
 
-It is also used by [Page HTML Generation](/docs/html-generation/) in two ways:
+Também é usado pela [Geração de HTML da página](/docs/html-generation/) de duas maneiras:
 
-1. `static-entry.js` produces a `page-renderer.js` webpack bundle that generates the HTML for a path. It requires `data.json` and uses the `pages` to lookup the page for the page.
-2. To get the `jsonName` from the page object, and uses it to construct a resource path for the actual json result by looking it up in `data.json.dataPaths[jsonName]`.
+1. `static-entry.js` produz um pacote da web `page-renderer.js` agrupado pelo webpack que gera o HTML para um caminho. Isto requer `data.json` e usa as `pages` para procurar página por página.
+2. Para obter `jsonName` do objeto da página e usá-lo para construir um caminho de rescurso para o resultado real do json, procurando em `data.json.dataPaths[jsonName]`.
 
-Now that we've written out page data, we can start on the [Webpack section](/docs/webpack-and-ssr/).
+Agora que escrevemos os dados da página, podemos começar na [Seção Webpack](/docs/webpack-and-ssr/).
