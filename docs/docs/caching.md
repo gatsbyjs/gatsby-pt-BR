@@ -1,57 +1,51 @@
 ---
-title: Caching Static Sites
+title: Cacheamento de sites estáticos
 ---
 
-An important part of creating a very fast website is setting up proper HTTP caching. HTTP caching allows browsers to cache resources from a website so that when the user returns to a site, very few parts of the website have to be downloaded.
+Uma parte importante da criação de um site muito rápido é configurar o cache HTTP adequado. O cache HTTP permite que os navegadores armazenem recursos de um site em cache, para que quando o usuário retorne a ele, poucas partes tenham que ser baixadas novamente.
 
-Different types of resources are cached differently. Let's examine how the different types of files built to `public/` should be cached.
+Diferentes tipos de recursos são armazenados em cache de maneiras diferentes. Vamos analisar como os diferentes tipos de arquivos criados em `public/` devem ser armazenados em cache.
 
 ## HTML
 
-HTML files should never be cached by the browser. When you rebuild your Gatsby site, you often update the contents of HTML files. Because of this, browsers should be instructed to check on every request if they need to download a newer version of the HTML file.
+Os arquivos HTML nunca devem ser armazenados em cache pelo navegador. Ao recriar o site do Gatsby, você geralmente atualiza o conteúdo dos arquivos HTML. Por esse motivo, os navegadores devem ser instruídos a verificar todas as solicitações, caso precisem baixar uma versão mais recente do arquivo HTML.
 
-The `cache-control` header should be `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
+O cabeçalho `cache-control` deve ser `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
 
-## Page data
+## Dados da página
 
-Similar to HTML files, the JSON files in the `public/page-data/` directory should never be cached by the browser. In fact, it's possible for these files to be updated even without doing a redeploy of your site. Because of this, browsers should be instructed to check on every request if the data in your application has changed.
+O novo arquivo `app-data.json`, que contém o hash de construção para a implementaão atual do site, também deve possuir o mesmo cabeçalho `cache-control` em `page-data.json`. Isso garante que o site no navegador esteja sempre sincronizado com a versão mais atual implementada. 
 
-The `cache-control` header should be `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
+O cabeçalho `cache-control` deve ser `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
 
-## App data
+## Arquivos estáticos
 
-The new `app-data.json` file which contains the build hash for the current deployment of the site should also share the same `cache-control` header as `page-data.json`. This is to ensure that the version of the site loaded in the browser is always synchronised with the currently deployed version.
+Todos os arquivos em `static/` devem ser armazenados em cache para sempre. Para os arquivos deste diretório, o Gatsby cria caminhos diretamente vinculados ao conteúdo do arquivo. Significando que, se o conteúdo do arquivo for alterado, o caminho do arquivo também será alterado. Esses caminhos parecem estranhos, por exemplo. `reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-0b1ba.png` mas como o mesmo arquivo sempre será retornado quando esse caminho for solicitado, o Gatsby pode armazená-lo em cache para sempre.
 
-The `cache-control` header should be `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
+O cabeçalho `cache-control` deve ser `cache-control: public, max-age=31536000, immutable`
 
-## Static files
+## JavaScript e CSS
 
-All files in `static/` should be cached forever. For files in this directory, Gatsby creates paths that are directly tied to the content of the file. Meaning that if the file content changes, then the file path changes also. These paths look weird e.g. `reactnext-gatsby-performance.001-a3e9d70183ff294e097c4319d0f8cff6-0b1ba.png` but since the same file will always be returned when that path is requested, Gatsby can cache it forever.
+Os arquivos JavaScript e CSS _gerados pelo webpack_ também devem ser armazenados em cache para sempre. Como os arquivos estáticos, o Gatsby cria nomes de arquivos JS e CSS (como um hash) Com base no conteúdo do arquivo. Se o conteúdo do arquivo for alterado, o hash do arquivo será alterado, portanto, esses arquivos _gerados pelo webpack_ são seguros para armazenar em cache.
 
-The `cache-control` header should be `cache-control: public, max-age=31536000, immutable`
+O cabeçalho `cache-control` deve ser `cache-control: public, max-age=31536000, immutable`
 
-## JavaScript and CSS
+A única exceção é o arquivo `/sw.js`, que precisa ser revalidado a cada carregamento para verificar se uma nova versão do site está disponível. Este arquivo é gerado pelo `gatsby-plugin-offline` e por outros plugins de _service worker_ para veicular o conteúdo offline. Seu cabeçalho `cache-control` deve ser `cache-control: public, max-age = 0, must-revalidate`<sup>1</sup>
 
-JavaScript and CSS files _generated by webpack_ should also be cached forever. Like static files, Gatsby creates JS & CSS file names (as a hash!) based on the file content. If the file content is changed, the file hash will change, therefore these files _generated by webpack_ are safe to cache.
+## Configurando o armazenamento em cache em diferentes hospedagens
 
-The `cache-control` header should be `cache-control: public, max-age=31536000, immutable`
+Como você configura o cache dependendo de como você hospeda seu site, nós incentivamos as pessoas a criarem plugins do Gatsby por host para automatizar a criação de cabeçalhos referentes a cache.
 
-The only exception to this is the file `/sw.js`, which needs to be revalidated upon each load to check if a new version of the site is available. This file is generated by `gatsby-plugin-offline` and other service worker plugins, in order to serve content offline. Its `cache-control` header should be `cache-control: public, max-age=0, must-revalidate`<sup>1</sup>
-
-## Setting up caching on different hosts
-
-How you setup your caching depends on how you host your site. We encourage people to create Gatsby plugins per host to automate the creation of caching headers.
-
-The following plugins have been created:
+Os seguintes plugins já foram criados:
 
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify/)
 - [gatsby-plugin-s3](https://github.com/jariz/gatsby-plugin-s3)
 
-When deploying with Now, follow the instructions in the [Now documentation](https://zeit.co/guides/deploying-gatsby-with-now#bonus:-cache-your-gatsby-assets).
+Ao implantar com o Now, siga as instruções na [documentação do Now](https://zeit.co/guides/deploying-gatsby-with-now#bonus:-cache-your-gatsby-assets).
 
 ---
 
-<sup>1</sup> You can use 'no-cache' instead of 'max-age=0, must-revalidate'. Despite what the name might imply, 'no-cache' permits a cache to serve cached content as long as it validates the cache freshness first. <sup>[2][3] </sup> In either case, clients have to make a round trip to the origin server on each request. However, if you are correctly utilizing ETags or Last-Modified validation you will avoid downloading assets when the cached copy is still valid (e.g. the file hasn't changed on the origin server since it was cached).
+<sup>1</sup> Você pode usar 'no-cache' em vez de 'max-age=0, must-revalidate'. Apesar deste nome, 'no-cache' permite que um cache atenda ao conteúdo cacheado, desde que primeiramente ele valide sua atualizaão. <sup>[2][3]</sup> Em ambos os casos, os clientes precisam fazer uma requisião ao servidor de origem em cada solicitação. No entanto, se você estiver utilizando corretamente a validação _ETags_ ou _Last-Modified_, poderá evitar o download de assets enquanto a cópia em cache ainda estiver válida (em casos em que, por exemplo, o arquivo não foi alterado no servidor de origem desde que foi armazenado em cache).
 
 [2]: https://tools.ietf.org/html/rfc7234#section-5.2.2.1
 [3]: https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching#no-cache_and_no-store
