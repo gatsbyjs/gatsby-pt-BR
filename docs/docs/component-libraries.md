@@ -2,7 +2,7 @@
 title: Criando Bibliotecas de Componentes
 ---
 
-Bibliotecas de componentes são frequentementes usadas em sistemas de interface baseados em componentes como React e Vue. Eles são normalmente versionados em repositórios de componentes.
+Bibliotecas de componentes são frequentemente utilizadas em sistemas de interface baseados em componentes como React e Vue. Elas são normalmente versionadas em repositórios de componentes.
 
 IBM's [Carbon Design System](https://www.carbondesignsystem.com/) e Palantir's [Blueprint](https://blueprintjs.com/) são ambos bons exemplos.
 
@@ -10,7 +10,7 @@ IBM's [Carbon Design System](https://www.carbondesignsystem.com/) e Palantir's 
 
 Existem vários fundamentos para a criação de bibliotecas de componentes.
 
-- **Criando um design unificado**. Em grandes propriedades da web e aplicativos web, a aparência e sentimento podem divergir através de diferentes seções mantidas por diferentes times. Bibliotecas de componentes são frequentemente usadas para inplementar um [sistema de design](https://www.designsystems.com/).
+- **Criando um design unificado**. Em grandes propriedades da web e aplicativos web, a aparência e sentimento podem divergir através de diferentes seções mantidas por diferentes times. Bibliotecas de componentes são frequentemente usadas para implementar um [sistema de design](https://www.designsystems.com/).
 - **Evite reinventar a roda**. Bibliotecas de componentes incluem elementos comuns, como carousels ou dropdowns, para evitar a necessidade de equipes individuais reimplementarem estes componentes.
 
 ## Ferramentas e configurações de equipe
@@ -27,7 +27,7 @@ Por exemplo, se um desenvolvedor de recursos precisar alterar uma biblioteca de 
 
 Existem duas diferentes abordagens para o versionamento de bibliotecas de componentes.
 
-A primeira é para a versão global na biblioteca de componentes. Para cada commit dado, a biblioteca tem um número de versão (e.g. `30.3.1`). Qualquer commit atualizando o componente irá então adicionar o numero de versão de acordo. Ambos, Carbon Design System e Blueprint adotam essa abordagem.
+A primeira é para a versão global na biblioteca de componentes. Para cada commit dado, a biblioteca tem um número de versão (e.g. `30.3.1`). Qualquer commit atualizando o componente irá então adicionar o número de versão de acordo. Ambos, Carbon Design System e Blueprint adotam essa abordagem.
 
 A segunda abordagem é para a versão de cada componente na biblioteca de componentes. Isto era usado, por exemplo, [pelo Walmart.com](https://medium.com/walmartlabs/how-to-achieve-reusability-with-react-components-81edeb7fb0e0) -- eles construiram sua biblioteca de componentes com React componentes, criando cada componente separado, versionado por pacotes npm.
 
