@@ -31,26 +31,37 @@ O modelo a seguir fornece uma visão geral conceitual de como os dados são orig
 
 Durante o "bootstrap" o Gatsby:
 
-- lê e valida o `gatsby-config.js` para carregar na sua lista de plugins (ainda não os executa).
-- exclui arquivos HTML e CSS de compilações anteriores (pasta pública)
-- inicializa seu cache (armazenado em `/ .cache`) e verifica se algum plug-in foi atualizado desde a última execução, caso contrário, ele exclui o cache
-- configura `gatsby-browser` e` gatsby-ssr` para plugins que os possuem
-- inicia o processo principal de inicialização
-  - executa [onPreBootstrap] (/docs/node-apis/#onPreBootstrap). Ex.: implementado por [`gatsby-plugin-typography`] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-typography/src/gatsby-node.js)
-- executa [sourceNodes] (/docs/node-apis/#sourceNodes) Ex.: implementado por [`gatsby-source-wikipedia`] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wikipedia/src/gatsby-node.js)
-  - dentro disso, o `createNode` pode ser chamado várias vezes, o que aciona o [onCreateNode] (/docs/node-apis/#onCreateNode)
-- cria esquema inicial do GraphQL
-- executa [resolvableExtensions] (/docs/node-apis/#resolvableExtensions) que permite que plug-ins registrem tipos ou extensões de arquivo, por exemplo [`gatsby-plugin-typescript`] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-typescript/src/gatsby-node.js)
-- executa [createPages] (/docs/node-apis/#createPages) a partir do gatsby-node.js no diretório raiz do projeto, Ex.: implementado por [`page-hot-reloader`] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/bootstrap/page-hot-reloader.js)
-  - com isso, `createPage` pode ser chamado várias vezes, o que aciona [onCreatePage] (/ docs / node-apis / # onCreatePage)
-- executa [createPagesStatefully] (/docs/node-apis/#createPagesStatefully)
-- executa nós de origem novamente e atualiza o esquema GraphQL para incluir páginas dessa vez
-- executa [onPreExtractQueries] (/docs/node-apis/#onPreExtractQueries) Ex.: implementado por [`gatsby-transformer-sharp`] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-sharp/src/gatsby-node.js) e [` gatsby-source -contentful`] (https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-contentful/src/gatsby-node.js) e extrai consultas de páginas e componentes (`StaticQuery`)
-- compila consultas GraphQL e cria a Árvore de Sintaxe Abstrata (ASA)
-- executa validação de consulta com base no esquema
-- executa consultas e armazena seus respectivos resultados
-- escreve redirecionamentos de página (se houver) para `.cache / redirects.json`
-- o ciclo de vida [onPostBootstrap] (/docs/node-apis/#onPostBootstrap) é executado
+- lê o `gatsby-config.js` para carregar a sua lista de plugins
+- inicializa seu cache (armazenado em `/.cache`)
+- extrai e pré-processa os dados (origina e transforma os nós) em um esquema GraphQL
+- cria páginas na memória
+  - da sua pasta `/pages`
+  - do seu `gatsby-config.js` se você implementar `createPages`/`createPagesStatefully` por exemplo.
+  - de qualquer plugin que implemente `createPages`/`createPagesStatefully`
+- extrai, executa e substitui consultas graphql para páginas e `StaticQuery`s
+- grava as páginas para armazenar em cache
+
+
+- reads and validates `gatsby-config.js` to load in your list of plugins (it doesn't run them yet).
+- deletes HTML and CSS files from previous builds (public folder)
+- initializes its cache (stored in `/.cache`) and checks if any plugins have been updated since the last run, if so it deletes the cache
+- sets up `gatsby-browser` and `gatsby-ssr` for plugins that have them
+- starts main bootstrap process
+  - runs [onPreBootstrap](/docs/node-apis/#onPreBootstrap). e.g. implemented by [`gatsby-plugin-typography`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-typography/src/gatsby-node.js)
+- runs [sourceNodes](/docs/node-apis/#sourceNodes) e.g. implemented by [`gatsby-source-wikipedia`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-wikipedia/src/gatsby-node.js)
+  - within this, `createNode` can be called multiple times, which then triggers [onCreateNode](/docs/node-apis/#onCreateNode)
+- creates initial GraphQL schema
+- runs [resolvableExtensions](/docs/node-apis/#resolvableExtensions) which lets plugins register file types or extensions e.g. [`gatsby-plugin-typescript`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-plugin-typescript/src/gatsby-node.js)
+- runs [createPages](/docs/node-apis/#createPages) from the gatsby-node.js in the root directory of the project e.g. implemented by [`page-hot-reloader`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/bootstrap/page-hot-reloader.js)
+  - within this, `createPage` can be called any number of times, which then triggers [onCreatePage](/docs/node-apis/#onCreatePage)
+- runs [createPagesStatefully](/docs/node-apis/#createPagesStatefully)
+- runs source nodes again and updates the GraphQL schema to include pages this time
+- runs [onPreExtractQueries](/docs/node-apis/#onPreExtractQueries) e.g. implemented by [`gatsby-transformer-sharp`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-sharp/src/gatsby-node.js) and [`gatsby-source-contentful`](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-source-contentful/src/gatsby-node.js), and extracts queries from pages and components (`StaticQuery`)
+- compiles GraphQL queries and creates the Abstract Syntax Tree (AST)
+- runs query validation based on schema
+- executes queries and stores their respective results
+- writes page redirects (if any) to `.cache/redirects.json`
+- the [onPostBootstrap](/docs/node-apis/#onPostBootstrap) lifecycle is executed
 
 
 No desenvolvimento, esse é um processo de execução desenvolvido com o [Webpack](https://github.com/gatsbyjs/gatsby/blob/dd91b8dceb3b8a20820b15acae36529799217ae4/packages/gatsby/package.json#L128) e [`react-hot-loader`](https://github.com/gatsbyjs/gatsby/blob/dd91b8dceb3b8a20820b15acae36529799217ae4/packages/gatsby/package.json#L104), para que as alterações em qualquer arquivo sejam reexecutadas pela sequência novamente, com [smart cache invalidation](https://github.com/gatsbyjs/gatsby/blob/ffd8b2d691c995c760fe380769852bcdb26a2278/packages/gatsby/src/bootstrap/index.js#L141). Por exemplo, `gatsby-source-filesystem` observa os arquivos quanto a alterações, e cada alteração aciona consultas reexecutadas. Outros plugins também podem executar esse serviço.
