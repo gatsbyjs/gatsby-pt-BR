@@ -4,13 +4,13 @@ title: Consultas com Sift
 
 > Este documento não está atualizado de acordo a última versão do Gatsby.
 >
-> Os recursos de [personalização do esquema](/docs/schema-customization) and [materialização do node](https://github.com/gatsbyjs/gatsby/pull/16091) fizeram alterações nessa parte do Gatsby.
+> Os recursos de [personalização do esquema](/docs/schema-customization) e [materialização do node](https://github.com/gatsbyjs/gatsby/pull/16091) fizeram alterações nessa parte do Gatsby.
 >
 > Você pode ajudar fazendo Pull Request para [atualizar esta documentação](https://github.com/gatsbyjs/gatsby/issues/14228).
 
 ## Sumário
 
-Gatsby armazena todos os dados carregados durante a fase dos nós de origem no Redux. E isso permite que você escreva consultas GraphQL para consultar esses dados. Mas o Redux é um simples armazenamento de objetos JavaScript. Então, como o Gatsby consulta esses nós usando a linguagem de consulta GraphQL?
+Gatsby armazena todos os dados carregados durante a fase dos nodes de origem no Redux. E isso permite que você escreva consultas GraphQL para consultar esses dados. Mas o Redux é um simples armazenamento de objetos JavaScript. Então, como o Gatsby consulta esses nodes usando a linguagem de consulta GraphQL?
 
 A resposta é que ele usa a biblioteca [sift.js](https://github.com/crcn/sift.js/tree/master). Abstraindo a linguagem de consulta do MongoDB para funcionar sobre objetos JavaScript. Pois a linguagem de consulta do MongoDB é muito compatível com o GraphQL.
 
@@ -18,7 +18,7 @@ A maior parte da lógica abaixo está no arquivo [run-sift.js](https://github.co
 
 ## Função ProcessedNodeType Resolve 
 
-Lembrando que, no momento no qual esta função de resolução é criado, iteramos por todos os `node.internal.type` distindos no namespace `nodes` do redux. Por exemplo, podemos estar no tipo `MarkdownRemark`. Portanto, a função `resolve()` fecha sobre esse tipo e tem acesso a todos os nós desse tipo.
+Lembrando que, no momento no qual esta função de resolução é criado, iteramos por todos os `node.internal.type` distindos no namespace `nodes` do redux. Por exemplo, podemos estar no tipo `MarkdownRemark`. Portanto, a função `resolve()` fecha sobre esse tipo e tem acesso a todos os nodes desse tipo.
 
 A função `resolve()` chama `run-sift.js`, e fornece os seguintes argumentos:
 
@@ -27,14 +27,14 @@ A função `resolve()` chama `run-sift.js`, e fornece os seguintes argumentos:
 - Todos os nodes em redux deste tipo. Por exemplo, onde `internal.type == MmarkdownRemark'`
 
 - Contexto `path`, se está sendo chamado como parte de uma [page query](/docs/query-execution/#query-queue-execution). Por exemplo, `markdownRemark`
-- gqlType. Veja mais em [more on gqlType](/docs/schema-gql-type)
+- gqlType. Veja mais em [gqlType](/docs/schema-gql-type)
 
 Por exemplo:
 
 ```javascript
 runSift({
   args: {
-    filter: { // Exact args from GraphQL Query
+    filter: { // Argumentos exatamente iguals aos da consulta do GraphQL
       wordcount: {
         paragraphs: {
           eq: 4
@@ -98,7 +98,7 @@ Para auxiliar na etapa 3, criamos uma versão dos argumentos siftificados chamad
 
 A etapa 4 executará a consulta sift por todos os nodes, retornando o primeiro que corresponderá a consulta. Mas nos devemos lembrar que os nodes que estão apenas no redux incluem dados que foram criados explicitamente por seus plugins de origem ou de transformação. Se ao invés de criar um campo de dados, um plugin usou `setFieldsOnGraphQLNodeType` para definir um campo personalizado, então temos que manualmente chamar os resolvedores de campo para cada node. Os argumentos na etapa 2 são um ótimo exemplo. O campo wordcount é definido pelo plugin [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/src/extend-node-type.js#L416), ao invés de ser criado durante a criação do node de observação.
 
-A função [nodesPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L168) itera para todos os nós deste tipo. Então, para cada node, [resolveRecursive](https://github.com/gatsbyjs/gatsby/blob/6dc8a14f8efc78425b1f225901dce7264001e962/packages/gatsby/src/redux/run-sift.js#L135) desce percorrendo a árvore `siftToFields`, obtendo o nome do campo, e depois achando seu gqlType, e então chamando a função `resolve` para tipos manualmente. Pegando o exemplo acima, nós podemos achar o gqlField para seu `wordcount` e então chamar seu campo de resolução.
+A função [nodesPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L168) itera para todos os nodes deste tipo. Então, para cada node, [resolveRecursive](https://github.com/gatsbyjs/gatsby/blob/6dc8a14f8efc78425b1f225901dce7264001e962/packages/gatsby/src/redux/run-sift.js#L135) desce percorrendo a árvore `siftToFields`, obtendo o nome do campo, e depois achando seu gqlType, e então chamando a função `resolve` para tipos manualmente. Pegando o exemplo acima, nós podemos achar o gqlField para seu `wordcount` e então chamar seu campo de resolução.
 
 
 ```javascript
@@ -116,7 +116,7 @@ Após a conclusão do `resolvRecursive`, teremos "realizado" todos os campos da 
 Como novos campos no nó podem ter sido criados nesse processo, chamamos `trackInlineObjectsInRootNode()` para rastrear esses novos objetos. Consulte a documentação do [Node Tracking](/docs/node-tracking/) para obter mais informações.
 
 ### 5. Executar consultas sift em todos os nodes
-Agora que percebemos todos os campos que precisam ser consultados, em todos os nós desse tipo, estamos finalmente prontos para aplicar a consulta sift. Esta etapa é tratada pelo [tempPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L214). E ele simplesmente concatena todos os objetos de nível superior na árvore de argumentos, junto com uma expressão sift `$and` e então itera por todos os nodes retornando o primeiro que satisfaz a expressão sift.
+Agora que percebemos todos os campos que precisam ser consultados, em todos os nodes desse tipo, estamos finalmente prontos para aplicar a consulta sift. Esta etapa é tratada pelo [tempPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L214). E ele simplesmente concatena todos os objetos de nível superior na árvore de argumentos, junto com uma expressão sift `$and` e então itera por todos os nodes retornando o primeiro que satisfaz a expressão sift.
 
 No caso em que `connection === true` (argumento passado pelo run-sift), então ao invés de apenas escolher o primeiro argumento, nós vamos selecionar TODOS os nodes que combinam com a consulta sift. Se a consulta GraphQL especificar os campos `sort`, `skip` ou `limit`, então nós usamos a biblioteca graphql-skip-limit](https://www.npmjs.com/package/graphql-skip-limit) para filtrar os resultados apropriados. Veja [Schema Connections](/docs/schema-connections) para mais informações.
 
@@ -126,4 +126,4 @@ Supondo que encontramos um nó (ou vários, se a `connection` === true), finaliz
 
 ## Nota sobre os efeitos colaterais do resolvedor de plugins
 
-Como [mencionado acima](#3-resolver-campos-internos-de-consulta-em-todos-os-nodes), `run-sift` deve “realizar” todos os campos de consulta antes de consultar através deles. Isto envolve chamar os resolvedores personalizados **em cada node daquele tipo**. Portanto, se um _resolver_ retornar um efeito colateral, eles serão acionados, independentemente de o resultado do campo realmente corresponder à consulta.
+Como [mencionado acima](#3-resolver-campos-internos-de-consulta-em-todos-os-nodes), `run-sift` deve "realizar" todos os campos de consulta antes de consultar através deles. Isto envolve chamar os resolvedores personalizados **em cada node daquele tipo**. Portanto, se um _resolver_ retornar um efeito colateral, eles serão acionados, independentemente de o resultado do campo realmente corresponder à consulta.
