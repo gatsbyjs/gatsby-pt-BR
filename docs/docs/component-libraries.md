@@ -4,7 +4,7 @@ title: Criando Bibliotecas de Componentes
 
 Bibliotecas de componentes são frequentemente utilizadas em sistemas de interface baseados em componentes como React e Vue. Elas são normalmente versionadas em repositórios de componentes.
 
-IBM's [Carbon Design System](https://www.carbondesignsystem.com/) e Palantir's [Blueprint](https://blueprintjs.com/) são ambos bons exemplos.
+IBM's [Carbon Design System](https://www.carbondesignsystem.com/) e [Blueprint](https://blueprintjs.com/) da Palantir são ambos bons exemplos.
 
 ## Por que bibliotecas de componentes
 
