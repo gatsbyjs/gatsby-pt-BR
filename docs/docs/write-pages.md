@@ -72,14 +72,14 @@ Isso é para ajudar [find-page.js](https://github.com/gatsbyjs/gatsby/blob/maste
 ex:
 
 ```javascript
-[
+;[
   {
     componentChunkName: "component---src-blog-2-js",
     jsonName: "blog-c06",
     path: "/blog",
   },
   // mais páginas
-];
+]
 ```
 
 `pages.json` é gerado apenas para fins `gatsby develop`. No `npm run build`, usamos [data.json](/docs/write-pages/#datajson) (abaixo) que inclui as informações das páginas e mais.
@@ -92,7 +92,7 @@ Este é um arquivo JavaScript gerado dinamicamente que exporta `components`. É 
 exports.components = {
   "component---src--blog-2-js": require("/home/site/src/blog/2.js"),
   // mais componentes
-};
+}
 ```
 
 É usado durante [static-entry.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/static-entry.js) para que ele possa mapear componentChunkName para as implementações de componentes. Enquanto que o [production-app.js](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/cache-dir/production-app.js) deve usar `async-requires.js` (abaixo), pois ele executa [code splitting](/docs/how-code-splitting-works/).
@@ -114,16 +114,16 @@ exports.components = {
       "/home/site/src/blog/2.js" /* webpackChunkName: "component---src-blog-2-js" */
     ),
   // mais componentes
-};
+}
 
-exports.data = () => import("/home/site/.cache/data.json");
+exports.data = () => import("/home/site/.cache/data.json")
 ```
 
 Lembre-se de que, `sync-requires.js` é usado durante [Geração de HTML da página](/docs/html-generation/). E o `async-requires.js` é usado por [Construindo o aplicativo JavaScript](/docs/production-app/).
 
 ## data.json
 
-Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([como acima](/docs/write-pages/#pagesjson)), e todo o redux `jsonDataPaths` que foi criado no final da [Execução de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk) estágio. Então, isso parece com:
+Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([como acima](/docs/write-pages/#pagesjson)), e todo o redux `jsonDataPaths` que foi criado no final da [Execução de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk) do estágio. Então, isso parece com:
 
 ```javascript
 {
