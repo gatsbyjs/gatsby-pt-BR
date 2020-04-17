@@ -123,7 +123,7 @@ Lembre-se de que, `sync-requires.js` é usado durante [Geração de HTML da pág
 
 ## data.json
 
-Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([como acima](/docs/write-pages/#pagesjson)), e todo o redux `jsonDataPaths` que foi criado no final do [Execução de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk) estágio. Então, isso parece com:
+Este é um arquivo json gerado. Ele contém todo o conteúdo do `pages.json` ([como acima](/docs/write-pages/#pagesjson)), e todo o redux `jsonDataPaths` que foi criado no final da [Execução de Consulta](/docs/query-execution/#save-query-results-to-redux-and-disk) estágio. Então, isso parece com:
 
 ```javascript
 {
