@@ -2,11 +2,9 @@
 title: Conceitos de GraphQL
 ---
 
-import LayerModel from "../../www/src/components/layer-model"
-
 Existem muitas opções para carregar dados nos componentes do React. Uma das mais
 populares e poderosas é uma tecnologia chamada
-[GraphQL](http://graphql.org/).
+[GraphQL](https://graphql.org/).
 
 O GraphQL foi inventado no Facebook para ajudar os engenheiros de produto a _puxar_ os dados necessários para os
 componentes React
@@ -16,7 +14,7 @@ familiarizado com o SQL, ele funciona de maneira muito semelhante. Usando uma si
 os dados que você deseja no seu componente e, em seguida, esses dados são fornecidos
 para você.
 
-Gatsby usa GraphQL para habilitar [componentes de página e 
+Gatsby usa GraphQL para habilitar [componentes de página e
 StaticQuery](/docs/building-with-components/) para declarar quais dados eles e seus
 subcomponentes precisam. Em seguida, Gatsby disponibiliza esses dados no
 navegador quando necessário pelos seus componentes.
@@ -63,15 +61,15 @@ A qual retorna isso:
 Um componente de página básico com uma consulta GraphQL pode ter a seguinte aparência:
 
 ```jsx
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 export default ({ data }) => (
   <div>
     <h1>About {data.site.siteMetadata.title}</h1>
     <p>We're a very cool website you should return to often.</p>
   </div>
-)
+);
 
 export const query = graphql`
   query {
@@ -81,7 +79,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 O resultado da consulta é inserido automaticamente no seu componente React
@@ -199,16 +197,16 @@ Combinado com um componente especial de imagem do Gatsby, [gatsby-image](/packag
 É assim que um componente usando `gatsby-image` se parece:
 
 ```jsx
-import React from "react"
-import Img from "gatsby-image"
-import { graphql } from "gatsby"
+import React from "react";
+import Img from "gatsby-image";
+import { graphql } from "gatsby";
 
 export default ({ data }) => (
   <div>
     <h1>Hello gatsby-image</h1>
     <Img fixed={data.file.childImageSharp.fixed} />
   </div>
-)
+);
 
 export const query = graphql`
   query {
@@ -222,7 +220,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 Veja também as seguintes postagens do blog:
@@ -249,7 +247,7 @@ export const markdownFrontmatterFragment = graphql`
       date(formatString: "MMMM DD, YYYY")
     }
   }
-`
+`;
 ```
 
 Eles podem ser usados ​​em qualquer consulta GraphQL depois disso!
@@ -265,8 +263,8 @@ query($path: String!) {
 É uma boa prática para os seus componentes auxiliares definir e exportar um fragmento para os dados de que precisam. Por exemplo, em sua página de índice, você pode mapear todas as suas postagens para mostrá-las em uma lista.
 
 ```jsx:title=src/pages/index.jsx
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 export default ({ data }) => {
   return (
@@ -281,8 +279,8 @@ export default ({ data }) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -299,14 +297,14 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 Se o componente index ficar muito grande, convém refatorá-lo em componentes menores.
 
 ```jsx:title=src/components/IndexPost.jsx
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
 export default ({ frontmatter: { title, date } }) => (
   <div>
@@ -314,7 +312,7 @@ export default ({ frontmatter: { title, date } }) => (
       {title} <span>— {date}</span>
     </h3>
   </div>
-)
+);
 
 export const query = graphql`
   fragment IndexPostFragment on MarkdownRemark {
@@ -323,15 +321,15 @@ export const query = graphql`
       date(formatString: "MMMM DD, YYYY")
     }
   }
-`
+`;
 ```
 
 Agora, você pode usar o componente junto com o fragmento exportado na sua página de índice.
 
 ```jsx:title=src/pages/index.jsx
-import React from "react"
-import IndexPost from "../components/IndexPost"
-import { graphql } from "gatsby"
+import React from "react";
+import IndexPost from "../components/IndexPost";
+import { graphql } from "gatsby";
 
 export default ({ data }) => {
   return (
@@ -344,8 +342,8 @@ export default ({ data }) => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query {
@@ -359,7 +357,7 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 ```
 
 ## Leitura adicional

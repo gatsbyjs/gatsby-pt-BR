@@ -16,7 +16,7 @@ Citando o [Google](https://developers.google.com/web/fundamentals/web-app-manife
 
 [Gatsby's manifest plugin](/packages/gatsby-plugin-manifest/) configura o Gatsby para criar um arquivo `manifest.webmanifest` em cada compilação do site.
 
-### Usando `gatsby-plugin-manifest`
+## Usando `gatsby-plugin-manifest`
 
 1.  Instale o plugin:
 
@@ -46,10 +46,10 @@ npm install --save gatsby-plugin-manifest
         // Um atributo opcional que fornece suporte para verificação CORS
         // Se você não fornecer a opção crossOrigin, ele pulará o CORS para manifesto
         // Qualquer palavra-chave inválida ou string vazia usará por padrão o valor "anonymous"
-        crossOrigin: `use-credentials`,
-      },
-    },
-  ]
+        crossOrigin: `use-credentials`
+      }
+    }
+  ];
 }
 ```
 

@@ -53,3 +53,4 @@ Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de 
   [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) fora do
   código empacotado.
 - Algumas bibliotecas podem ser incompatíveis com Webpack e você não tem outra opçào senão a incluir como uma tag `<script>`.
+- Você precisa importar arquivos JSON que não possuem um esquema consistente, tais como [arquivos TopoJSON](https://en.wikipedia.org/wiki/GeoJSON#TopoJSON), que são difíceis de lidar com GraphQL. Note que importar arquivos JSON diretamente para dentro de uma página, template, ou componente usando a sintaxe `import` resulta em adicionar o arquivo dentro do pacote de arquivos da aplicação, aumentando o tamanho de todas as páginas do site. Ao invés disso, o melhor lugar para colocar seus arquivos JSON é dentro do diretório `static` e usar a sintaxe de importação dinâmica (`import('/static/myjson.json')`) junto com `componentDidMount` _lifecycle_ ou o _hook_ `useEffect`.

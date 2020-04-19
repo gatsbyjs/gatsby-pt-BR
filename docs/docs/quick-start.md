@@ -19,6 +19,8 @@ Esse guia de início rápido é direcionado para desenvolvedores com conheciment
 npm install -g gatsby-cli
 ```
 
+> O comando acima instala o Gatsby CLI globalmente em sua máquina.
+
 ### Criando um novo site.
 
 ```shell

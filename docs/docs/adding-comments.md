@@ -34,7 +34,7 @@ Se essas preocupações superam os benefícios do Disqus, convém examinar algum
 
 ## Implementando o Disqus
 
-![Logo do Disqus](images/disqus-logo.svg)
+![Logo do Disqus](./images/disqus-logo.svg)
 
 Aqui estão as etapas para adicionar comentários do Disqus ao seu próprio blog:
 
@@ -47,7 +47,7 @@ npm install disqus-react
 
 3. Adicione o nome abreviado da etapa 1 como `GATSBY_DISQUS_NAME` nos seus arquivos `.env` e `.env.example` para que as pessoas que estão participando do seu repositório saibam que precisam fornecer esse valor para que os comentários funcionem. (Você precisa prefixar a variável de ambiente com `GATSBY_` para [disponibilizá-la no código do lado do cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
 
-```title=.env.example
+```text:title=.env.example
 # ativa comentários do Disqus para postagens do blog
 GATSBY_DISQUS_NAME=insertValue
 ```
@@ -89,4 +89,4 @@ return (
 
 E você terminou. Agora você deve ver o formulário de comentários do Disqus aparecer abaixo da postagem do seu blog [parecido com este](https://janosh.io/blog/disqus-comments#disqus_thread). Divirta-se com seu blog!
 
-[![Comentários Disqus](images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
+[![Comentários Disqus](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)

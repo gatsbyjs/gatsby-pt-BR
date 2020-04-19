@@ -6,7 +6,7 @@ title: Bulma
 
 Este guia pressupõe que você tenha um projeto Gatsby configurado. Se você precisar configurar um projeto, vá para o [**Guia de início rápido**](/docs/quick-start) e depois volte.
 
-### Instalação
+## Instalação
 
 Para começar, vamos instalar todos os pacotes necessários.
 
@@ -18,11 +18,11 @@ Em seguida, adicione o  `gatsby-plugin-sass` no `gatsby-config.js`.
 plugins: [`gatsby-plugin-sass`],
 ```
 
-### Arquivo para estilização
+## Arquivo para estilização
 
 Agora é a hora de criar um arquivo _scss_ que contém nossa simples customização de estilo, além da importação do Bulma.
 
-(Para simplificar, insira o arquivo junto do _index.js_ no diretório de páginas)
+(Para simplificar, insira o arquivo junto do `index.js` no diretório de páginas)
 
 ```scss:title=mystyles.scss
 @charset "utf-8";
@@ -33,11 +33,11 @@ $title-color: #ff0000;
 @import "~bulma/bulma.sass";
 ```
 
-### Usando o Bulma
+## Usando o Bulma
 
 O último passo é importar o estilo e usá-lo.
 
-Vamos substituir o conteúdo padrão do arquivo index.js.
+Vamos substituir o conteúdo padrão do arquivo `index.js`.
 
 ```jsx:title=index.js
 import React from "react"
@@ -65,6 +65,6 @@ export default IndexPage
 ```
 E é só isso! Agora você pode usar o Bulma como faria normalmente.
 
-### Recursos
+## Recursos
 
 - [Documentação do Bulma sobre como usar o sass](https://bulma.io/documentation/customize/with-node-sass/)

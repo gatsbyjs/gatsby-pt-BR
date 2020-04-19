@@ -13,7 +13,7 @@ O arquivo de configuração deve exportar um objeto JavaScript. Dentro deste obj
 ```javascript:title=gatsby-config.js
 module.exports = {
   // objeto de configuração
-}
+};
 ```
 
 Um exemplo de arquivo `gatsby-config.js` poderia ser algo do tipo:
@@ -21,7 +21,7 @@ Um exemplo de arquivo `gatsby-config.js` poderia ser algo do tipo:
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Gatsby`,
+    title: `Gatsby`
   },
   plugins: [
     `gatsby-transform-plugin`,
@@ -29,11 +29,11 @@ module.exports = {
       resolve: `gatsby-plugin-name`,
       options: {
         optionA: true,
-        optionB: `Outra opção`,
-      },
-    },
-  ],
-}
+        optionB: `Outra opção`
+      }
+    }
+  ]
+};
 ```
 
 ## Opções de configuração
@@ -47,9 +47,9 @@ O objeto `siteMetadata` pode conter qualquer dado que você queira compartilhar 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
-    title: `Gatsby`,
-  },
-}
+    title: `Gatsby`
+  }
+};
 ```
 
 Você pode então [acessar o título do website usando GraphQL](/tutorial/part-four/#your-first-graphql-query) de qualquer lugar no seu website.
@@ -64,8 +64,8 @@ Instalar um _plugin_ utilizando um gerenciador de pacotes como o `npm` **não** 
 module.exports = {
   plugins: [
     // plugins são colocados aqui
-  ],
-}
+  ]
+};
 ```
 
 Quando for adicionar múltiplos _plugins_, eles devem estar separados por vírgulas no array `_plugins_` para ser uma sintaxe válida de JavaScript.
@@ -76,8 +76,8 @@ Se um _plugin_ não requer quaisquer opções, você pode adicionar o nome dele 
 
 ```javascript:title=gatsby-config.js
 module.exports = {
-  plugins: [`gatsby-plugin-name`],
-}
+  plugins: [`gatsby-plugin-name`]
+};
 ```
 
 #### _Plugins_ com opções
@@ -93,14 +93,14 @@ module.exports = {
       resolve: `gatsby-plugin-name`,
       options: {
         optionA: true,
-        optionB: `Outra opção`,
-      },
-    },
-  ],
-}
+        optionB: `Outra opção`
+      }
+    }
+  ]
+};
 ```
 
-### _Plugins_ mistos
+#### _Plugins_ mistos
 
 Você pode adicionar _plugins_ com ou sem opções no mesmo array. O arquivo de configuração do seu website poderia ficar assim:
 
@@ -112,11 +112,11 @@ module.exports = {
       resolve: `gatsby-plugin-name`,
       options: {
         optionA: true,
-        optionB: `Outra opção`,
-      },
-    },
-  ],
-}
+        optionB: `Outra opção`
+      }
+    }
+  ]
+};
 ```
 
 ## Opções de configuração adicionais

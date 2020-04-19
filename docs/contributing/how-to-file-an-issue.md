@@ -16,8 +16,8 @@ Por favor, não use a aba de issues para solicitar suporte pessoal. [Stack Overf
 
 Se algum problema estiver lhe afetando, comece no topo desta lista e complete o maior número de tarefas da lista que você conseguir.
 
-1.  Se houver uma issue aberta, adicione alguma reação ou mais detalhes sobre ela para indicar que isto está lhe afetando.
-2.  Se houver uma issue aberta e você puder adicionar mais detalhes a ela, escreva um comentário descrevendo como o bug está lhe afetando OU se você puder, de uma solução temporária a ele.
+1.  Se houver uma issue aberta, adicione alguma reação ou mais detalhes sobre ela para indicar que isto está lhe afetando
+2.  Se houver uma issue aberta e você puder adicionar mais detalhes a ela, escreva um comentário descrevendo como o bug está lhe afetando OU se você puder, de uma solução temporária a ele
 3.  Se _não houver_ uma issue aberta, escreva a descrição mais completa que você puder sobre oque está acontecendo, preferencialmente com um link para um site do Gatsby que reproduza o problema ou [crie um caso de teste reproduzível](/contributing/how-to-make-a-reproducible-test-case/)
 4.  Peça ajuda para corrigir o bug (é totalmente esperado que você peça ajuda; mantenedores open-source estão dispostos a ajudar os contribuidores)
 5.  [Abra um PR bem trabalhado e testado](/contributing/how-to-open-a-pull-request/)

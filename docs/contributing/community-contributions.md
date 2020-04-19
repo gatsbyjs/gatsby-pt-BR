@@ -21,4 +21,4 @@ Nós encarecidamente recebemos as suas contribuições na comunidade e ficaríam
 - [Submeter para a biblioteca de starters](/contributing/submit-to-starter-library/)
 - [Submeter para a biblioteca de plugins](/contributing/submit-to-plugin-library/)
 
-Leia atentamente o restante da nossa documentação de contribuição e entre em contato conosco pelo [Twitter](https://twitter.com/gatsbyjs), [Discord](https://gatsby.dev/discord) ou abra uma [issue no Github](/contributing/how-to-file-an-issue/) caso tenha alguma dúvida sobre como contribuir!
+<!-- Peruse the rest of our contributor docs and reach out to us on [Twitter](https://twitter.com/gatsbyjs), [Discord](https://gatsby.dev/discord), or in a [GitHub issue](/contributing/how-to-file-an-issue/) if you have any questions about contributing! -->

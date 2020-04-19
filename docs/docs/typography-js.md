@@ -32,7 +32,7 @@ module.exports = {
 `gatsby-plugin-typography` tem duas opções para que você especifique:
 
 - **pathToConfigModule** (string): O caminho para o arquivo para o qual você exporta sua configuração do Typography.
-- **omitGoogleFont** (boolean, `default: false`): Por padrão, o Typography inclui um auxiliar que solicita à CDN do Google Font as fontes necessárias. Você pode usar suas próprias fontes, injetando fontes ou usando um CDN de sua escolha. Ao definir `omitGoogleFont: true`, o `gatsby-plugin-typography` ignorará a adição do auxiliar de fonte. Em vez disso, você deverá incluir as fontes apropriadas - veja [Adicionando uma fonte local](https://www.gatsbyjs.org/docs/recipes/#adding-a-local-font)
+- **omitGoogleFont** (boolean, `default: false`): Por padrão, o Typography inclui um auxiliar que solicita à CDN do Google Font as fontes necessárias. Você pode usar suas próprias fontes, injetando fontes ou usando um CDN de sua escolha. Ao definir `omitGoogleFont: true`, o `gatsby-plugin-typography` ignorará a adição do auxiliar de fonte. Em vez disso, você deverá incluir as fontes apropriadas - veja [Adicionando uma fonte local](/docs/recipes/styling-css#adding-a-local-font)
 
 ## Criando a configuração do Typography
 

@@ -6,9 +6,9 @@ PostCSS transforma sintaxes e funcionalidades extensas em um CSS moderno e compa
 
 ## Instalando e Configurando o PostCSS
 
-Este guia supõe que você já tenha o Gatsby configurado em seu projeto. Caso você precise configurá-lo, leia o [**Guia de Início Rápido**](/docs/quick-start/) antes de seguir.
+Este guia supõe que você já tenha o Gatsby configurado em seu projeto. Caso você precise configurá-lo, leia o [Guia de Início Rápido](/docs/quick-start/) antes de seguir.
 
-1.  Instale o plugin do Gatsby [**gatsby-plugin-postcss**](/packages/gatsby-plugin-postcss/).
+1.  Instale o plugin do Gatsby [gatsby-plugin-postcss](/packages/gatsby-plugin-postcss/).
 
 ```shell
 npm install --save gatsby-plugin-postcss
@@ -22,7 +22,7 @@ plugins: [`gatsby-plugin-postcss`],
 
 > **Nota**: Se você precisar passar opções para o PostCSS, use as opções do plugin; Veja todas as opções disponíveis em [postcss-loader](https://github.com/postcss/postcss-loader).
 
-3.  Escreva suas folhas de estilos usando o PostCSS (arquivos .css) e importe ou faça `require` normalmente.
+3.  Escreva suas folhas de estilos usando o PostCSS (arquivos `.css`) e importe ou faça `require` normalmente.
 
 ```css:title=styles.css
 @custom-media --med (width <= 50rem);

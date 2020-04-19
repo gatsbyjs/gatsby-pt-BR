@@ -273,8 +273,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 Reinicie o servidor de desenvolvimento e suas páginas serão criadas! Uma maneira fácil 
 de encontrar novas páginas criadas durante o desenvolvimento é ir para uma rota aleatória 
-onde o Gatsby mostrará uma lista de páginas no site. Se você for para <http://localhost:8000/sdf>, 
-verá as novas páginas que criou.
+onde o Gatsby mostrará uma lista de páginas no site. Se você for para `http://localhost:8000/sdf`, verá as novas páginas que criou.
 
 ![new-pages](new-pages.png)
 
@@ -412,8 +411,8 @@ E aí está! Um blog funcionando, mesmo que pequeno.
 
 ## Desafio
 
-Tente brincar mais com o site. Tente adicionar mais alguns arquivos markdown. 
-Explore consultando outros dados dos nós `MarkdownRemark` e adicione-os à 
+Tente brincar mais com o site. Tente adicionar mais alguns arquivos markdown.
+Explore consultando outros dados dos nós `MarkdownRemark` e adicione-os à
 primeira página ou às páginas de postagens do blog.
 
 Nesta parte do tutorial, você aprendeu os conceitos básicos de construção 

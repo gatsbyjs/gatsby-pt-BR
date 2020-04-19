@@ -38,9 +38,9 @@ Agora que você sabe sobre os três componentes requisitados, existem algumas ma
 
 Usar um mecanismo de busca _open source_ é sempre grátis e permite que você ative pesquisa _offline_ para o seu _site_. Observe que você precisa ter cuidado com a pesquisa _offline_, porque todo o índice de pesquisa precisa ser trazido para o cliente, o que pode afetar significativamente o tamanho do pacote.
 
-Bibliotecas _open source_ como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr) ou [`js-search`](https://github.com/bvaughn/js-search) podem ser utilizadas para possibilitar pesquisa para o seu _site_.
+Bibliotecas _open source_ como [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), [`flexsearch`](https://github.com/nextapps-de/flexsearch) ou [`js-search`](https://github.com/bvaughn/js-search) podem ser utilizadas para possibilitar pesquisa para o seu _site_.
 
-Isso exigirá que você crie um índice de busca quando o seu _site_ for construído. Para [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), existe um _plugin_ chamado [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) que cria um índice de pesquisa automaticamente.
+Isso exigirá que você crie um índice de busca quando o seu _site_ for construído. Para [`elasticlunr`](https://www.npmjs.com/package/elasticlunr), existe um _plugin_ chamado [`gatsby-plugin-elasticlunr-search`](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search) que cria um índice de pesquisa automaticamente. Para o [`flexsearch`](https://github.com/nextapps-de/flexsearch) existe um plugin chamado [`gatsby-plugin-flexsearch`](https://github.com/tmsss/gatsby-plugin-flexsearch)
 
 Para outras bibliotecas, você pode utilizar a combinação de [`onCreateNode`](/docs/node-apis/#onCreateNode), [`setFieldsOnGraphQLNodeType`](/docs/node-apis/#setFieldsOnGraphQLNodeType) e [`sourceNodes`](/docs/node-apis/#sourceNodes)  da API do Gatsby node para criar o índice de pesquisa e disponibilizá-lo no GraphQL. Para mais informação em como fazer isso, confira [o código fonte do `gatsby-plugin-elasticlunr-search`'s](https://github.com/gatsby-contrib/gatsby-plugin-elasticlunr-search/blob/master/src/gatsby-node.js#L96-L131).
 

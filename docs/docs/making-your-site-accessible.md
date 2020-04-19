@@ -33,11 +33,11 @@ Desde o [lançamento da segunda versão](/blog/2018-09-17-gatsby-v2/), seus site
 
 Para sites, renderizar páginas [HTML estáticas](/docs/glossary#static) significa que o JavaScript não é necessário para acessar e navegar pelo conteúdo. O Gatsby [compila](/docs/glossary#compiler) páginas HTML por padrão a partir dos componentes React usando o [Node.js](/docs/glossary#nodejs). Isso significa que você não precisa se preocupar em configurar a renderização do servidor para dar suporte ao [aprimoramento progressivo](/docs/glossary#progressive-enhancement). Com o suporte estático do Gatsby pronto para o uso, você pode criar sites dinâmicos que ainda permitem o acesso do usuário sem exigir scripts no [lado do cliente](/docs/glossary#client-side).
 
-### Linting com eslint-jsx-plugin-a11y
+<!-- ### Linting with eslint-plugin-jsx-a11y
 
-O Gatsby vem com `eslint-config-react-app` por padrão, que inclui o pacote `eslint-jsx-plugin-a11y`. [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) é uma ferramenta de linting de acessibilidade para seu código, ajudando você a desenvolver projetos Gatsby mais inclusivos. Este plugin incentiva você a incluir texto alternativo para _tags_ de imagem, valida _props_ [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) e elimina propriedades redundantes de função, entre outras coisas. É um ponto de partida para testar a acessibilidade: [mais recomendações](#como-melhorar-a-acessibilidade) podem ser encontradas abaixo.
+Gatsby ships with the `eslint-plugin-jsx-a11y` package and warnings for all of its rules enabled by default. [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) is an accessibility [linting](/docs/glossary#linting) tool for your code, helping you develop more inclusive Gatsby projects by reducing the time to find accessibility errors. This plugin encourages you to include alternative text for image tags, validates [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) props, and eliminates redundant role properties, among other things.
 
-A inclusão desse plugin e do [conjunto de regras recomendado](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app#accessibility-checks) reduz o tempo necessário para implementar a acessibilidade, lembrando você durante o desenvolvimento. As regras ativadas no `eslint-plugin-jsx-a11y` por padrão podem ser [personalizadas em `.eslintrc`](/docs/eslint/#configuring-eslint).
+For more on supported rules, check out the docs for [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y). You can customize those rules in your [`.eslintrc`](/docs/eslint/#configuring-eslint). -->
 
 ```json:title=.eslintrc
 {
@@ -49,7 +49,9 @@ A inclusão desse plugin e do [conjunto de regras recomendado](https://github.co
 }
 ```
 
-Para mais informações sobre regras suportadas, consulte a documentação para [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y).
+<!-- Note: Including a local `.eslintrc` file will [override](/docs/eslint/#configuring-eslint) all of Gatsby's default linting and disable the built-in `eslint-loader`, meaning your tweaked rules won't make it to your browser's developer console or your terminal window but will still be displayed if you have ESLint plugins enabled in your IDE. If you would like to change this behavior and make sure the `eslint-loader` pulls in your customizations, you'll need to enable the loader yourself. One way to do this is by using the Community plugin [`gatsby-plugin-eslint`](https://www.gatsbyjs.org/packages/gatsby-plugin-eslint/). Additionally, if you would still like to take advantage of some subset of the default [ESLint config Gatsby ships with](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.js), you'll need to copy them manually to your local `.eslintrc` file. -->
+
+This is a start to testing for accessibility: [further recommendations](#how-to-improve-accessibility) can be found below.
 
 ## Como melhorar a acessibilidade?
 

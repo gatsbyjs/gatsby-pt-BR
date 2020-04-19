@@ -114,7 +114,7 @@ import "./src/styles/global.css"
 // require('./src/styles/global.css')
 ```
 
-> Nota: As sintaxes CommonJS (`require`) e ES Module (`import`) funcionam aqui. Se você não tiver certeza sobre qual escolher, usamos `import` na maioria das vezes.
+> Nota: As sintaxes CommonJS (`require`) e ES Module (`import`) funcionam aqui. Se você não tiver certeza sobre qual escolher, usamos `import` na maioria das vezes. Ao trabalhar com arquivos que rodam apenas em ambientes com Node.js (como `gatsby-node.js`), será necessário usar `require`.
 
 3. Inicie o servidor de desenvolvimento:
 
@@ -254,9 +254,7 @@ O código `console.log(styles)` mostrará a importação resultante para que voc
 
 Se você comparar isso com seu arquivo CSS, você vai ver que cada classe agora é uma chave no objeto importado apontando para uma longa string, por exemplo, `avatar` aponta para `src-pages----about-css-modules-module---avatar---2lRF7`. Essas são os nomes das classes geradas pelo CSS Modules. Elas são únicas em todo seu site. E como você precisa importá-los para usar as classes, nunca há dúvidas sobre onde algum CSS está sendo usado.
 
-4. Crie um componente `User`.
-
-Crie um novo componente `<User />` inline na página `about-css-modules.js`. Modifique `about-css-modules.js` para ficar parecido com o seguinte código:
+4. Crie um novo componente `<User />` de formainline na página do componente `about-css-modules.js`. Modifique o arquivo `about-css-modules.js` para que se pareça com codigo a seguir:
 
 ```jsx:title=src/pages/about-css-modules.js
 import React from "react"

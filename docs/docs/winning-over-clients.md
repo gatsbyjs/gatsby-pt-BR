@@ -13,6 +13,9 @@ Alguns benefícios que você pode oferecer ao recomendar o Gatsby para os client
 - Rápido desenvolvimento que garante que o projeto esteja no prazo
 - A facilidade de fazer alterações no desenvolvimento ajuda a manter o projeto abaixo do orçamento
 - Baixo custo de hospedagem ajuda a manter o projeto abaixo do orçamento
+- Sites de alto desempenho que reduzem o tempo de resposta e do carregamento das páginas
+- Suporta a criação de aplicativos dinâmicos e altamente escalonáveis
+- Rico ecossistema de plugins que ajudam a lidar com códigos complexos
 
 [Esse pager](/gatsby-one-pager.pdf) também pode ser útil para clientes -- ele explica o Gatsby no idioma deles.
 

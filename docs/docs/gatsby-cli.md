@@ -48,10 +48,7 @@ Você também pode utilizar o `gatsby-cli`  através de _scripts_ disponíveis n
 
 ### `new`
 
-  
-
-```
-
+```shell
 gatsby new [<site-name> [<starter-url>]]
 
 ```
@@ -149,13 +146,9 @@ Após a instalação do site Gatsby, acesse o diretório raiz do seu projeto e u
 | Opção | Descrição |
 
 | :-------------: | ----------------------------------------------- |
-
 | `-H`, `--host` | Especifica o host. Default: localhost |
-
 | `-p`, `--port` | Especifica a porta. Default: 8000 |
-
 | `-o`, `--open` | Abre o site no navegador padrão do computador |
-
 | `-S`, `--https` | Executa o servidor em modo HTTPS |
 
   
@@ -180,8 +173,7 @@ O terminal exibirá o log de informações normalmente mas incluirá também uma
 
   
 
-```
-
+```shell
 You can now view gatsbyjs.org in the browser.
 
 ⠀
@@ -192,11 +184,7 @@ On Your Network: http://192.168.0.212:8000/ // highlight-line
 
 ```
 
-  
-
-**Note**: O  endereço 0.0.0.0:8000 não pode ser acessado se você está utilizando  Windows (mas você poderá acessar digitando localhost:8000 ou através do atalho "Minha Rede Local" no Windows)
-
-  
+**Note**: Para acessar o Gatsby em sua máquina local, acesse `http://localhost:8000` ou através da URL "Na Sua Rede".
 
 ### `build`
 
@@ -396,3 +384,30 @@ Para mais informações, consulte a [documentação do REPL Gatsby](/docs/gatsby
   
 
 Além da opção `--no-color` , a ILC  reconhece também a variável de ambiente  `NO_COLOR`  (mais informações em [no-color.org](https://no-color.org/)).
+
+## Como mudar o seu gerenciador de pacotes padrão para o seu próximo projeto?
+
+Quando você usa o `gatsby new` pela primeira vez para criar um projeto, você é requisitado a escolher dois gerenciadores de pacotes: yarn e npm.
+
+```shell
+Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
+❯  yarn
+   npm
+```
+
+Uma vez que você fez sua escolha, a CLI não irá perguntar novamente sobre suas preferências em nenhum projeto futuro.
+
+Caso você queira mudar isso para o seu próximo projeto, você precisará editar o arquivo de configuração criado automaticamente pela CLI.
+Esse arquivo está disponível no seu sistema em: `~/.config/gatsby/config.json`
+
+Dentro dele você verá algo semelhante a isso.
+
+```json:title=config.json
+{
+  "cli": {
+    "packageManager": "yarn"
+  }
+}
+```
+
+Edite o valor de `packageManager`, salve e você estará pronto para seu próximo projeto usando o `gatsby new`.

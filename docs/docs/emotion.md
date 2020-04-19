@@ -30,7 +30,7 @@ module.exports = {
 
 Por fim, em seu terminal execute `npm start` para iniciar o servidor de desenvolvimento do Gatsby.
 
-Agora vamos criar uma simples página Emotion em `src/pages/index.js`:
+Agora crie uma simples página Emotion em `src/pages/index.js`:
 
 ```jsx:title=src/pages/index.js
 import React from "react"

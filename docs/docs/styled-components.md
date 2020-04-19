@@ -112,7 +112,29 @@ export default () => (
 )
 ```
 
-### Ativando folhas de estilo do usuário com um nome de classe estável
+<!-- ## Creating Global Styles
+
+Styled-components are primarily used for a single CSS class that is isolated from other components. In some cases, you want to override global styling — for example, the default margins of your `body` element. Styled-components has your back. You can use the `createGlobalStyle` to accomplish this. It's advised to use `createGlobalStyle` in [Layout components](/docs/layout-components/), which are shared over multiple pages rather than using it on a single page.
+
+The example below shows how to create a `GlobalStyle` (which is a StyledComponent) for the color purple by importing `createGlobalStyle` from `styled-components`.
+
+```jsx:title=src/components/layout.js
+import React from "react"
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: ${props => (props.theme === "purple" ? "purple" : "white")};
+  }
+`
+export default ({ children }) => (
+  <React.Fragment>
+    <GlobalStyle theme="purple" />
+  </React.Fragment>
+)
+```
+
+## Enabling user stylesheets with a stable class name -->
 
 Adicionar um nome de classe CSS (className) persistente aos seus componentes de estilo pode facilitar para os usuários finais do seu site para tirar proveito das [folhas de estilos do usuário](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para acessibilidade.
 

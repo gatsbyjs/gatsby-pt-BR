@@ -10,4 +10,5 @@ Das muitas possibilidades, com os plugins você pode:
 - adicionar dados ou conteúdo externos (por exemplo, seu CMS, arquivos estáticos, uma API REST) aos seus dados do Gatsby GraphQL
 - transformar dados de outros formatos (por exemplo, Markdown, YAML, CSV) em objetos JSON
 - adicionar serviços de terceiros (por exemplo, Google Analytics, Instagram) ao seu site
+- adicionar pacotes pré-configurados utilizando [temas](/docs/themes/)
 - faça o que você poder imaginar!
