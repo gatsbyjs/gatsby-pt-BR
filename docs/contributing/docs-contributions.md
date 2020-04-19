@@ -25,11 +25,7 @@ Para resolver as imagens faltantes, consulte a fonte do documento ou tutorial [n
 
 Se você encontrar um link quebrado na documentação do Gatsby, fique à vontade para corrigí-lo e enviar um PR!
 
-<<<<<<< HEAD
 Lembre-se de que alguns links aqui já estão corretos porque funcionam no gatsbyjs.org. Embora seja bom ter links na documentação funcionando no GitHub, tê-los funcionando no gatsbyjs.org é prioritário!
-=======
-Keep in mind that some links in here are already correct because they work on gatsbyjs.org. While it would be nice for links in documentation to work on GitHub, having them working on gatsbyjs.org is a higher priority!
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ## Títulos
 
@@ -88,20 +84,7 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
 
 Depois de passar pelas [instruções de configuração para desenvolvimento](/contributing/setting-up-your-local-dev-environment/), existem algumas informações adicionais que você deve saber ao configurar o [site da documentação do Gatsby.js](/docs/), que está em sua maior parte nos diretórios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) e [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs). Temos alguns [exemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples) no repositório, os quais são referenciados na documentação.
 
-<<<<<<< HEAD
-- [Fork e Clone o repositório do Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
-- Para modificações apenas na documentação, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, isso irá fazer com que o CI execute apenas as tarefas de _lint_
-- Navegue até a pasta do site da documentação: `cd www`
-- Instale as dependências usando o Yarn: `yarn install`
-- Adicione a seguinte variável de ambiente no arquivo `.env.development` dentro do diretório `www` para [habilitar as imagens temporárias](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. Isso vai acelerar o processo de _build_ do site da documentação de maneira significativa!
-- Comece o build do `www` com o comando `gatsby develop`.
-- Edite os arquivos de Markdown dentro das pastas [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) e [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing), bem como [os arquivos YAML da barra lateral](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
-- Veja as modificações em `http://localhost:8000`.
-- Commit suas modificações e [abra um pull request](/contributing/how-to-open-a-pull-request/)!
-
-## Instruções para renomear documentações
-=======
-- Prerequisites: install Node.js and Yarn. See [development setup instructions](/contributing/setting-up-your-local-dev-environment/).
+<!-- - Prerequisites: install Node.js and Yarn. See [development setup instructions](/contributing/setting-up-your-local-dev-environment/).
 - [Fork and clone the Gatsby repo](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
 - For docs-only changes, consider using `git checkout -b docs/some-change` or `git checkout -b docs-some-change`, as this will short circuit the CI process and only run linting tasks.
 - Change directories into the docs site folder: `cd www`
@@ -195,33 +178,19 @@ Here's an example of a GraphQL query inline:
 More markdown content...
 ```
 
-> Note that you should set the `explorerIsOpen` parameter in the URL to `false` if it isn't already.
+> Note that you should set the `explorerIsOpen` parameter in the URL to `false` if it isn't already. -->
 
 ## Docs renaming instructions
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Às vezes faz sentido mover ou renomear um arquivo, como parte da reestruturação da documentação ou para esclarecimento de um conteúdo. Embora seja recomendável manter as URLs consistentes da melhor maneira possível, aqui estão algumas dicas para minimizar erros e manter as documentações em bom estado:
 
-<<<<<<< HEAD
-- Execute as alterações de estrutura propostas conforme o time de documentação do Gatsby em [uma issue no GitHub](/contributing/how-to-file-an-issue/) para garantir que sua mudança seja aceita.
-- Atualize todas as referências de URL antigas para a nova. O comando [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) do VS Code pode ajudar. Veja se o contexto original onde o link era usado ainda faz sentido com o novo.
-- Para questões de SEO, adicione um redirecionamento na função `createPages` em [`www/gatsby-node.js`](https://github.com/gatsbyjs/gatsby/tree/master/www/gatsby-node.js). Aqui tem um exemplo:
-
-```js:title=www/gatsby-node.js
-createRedirect({
-  fromPath: `/docs/source-plugin-tutorial/`,
-  toPath: `/docs/pixabay-source-plugin-tutorial/`,
-  isPermanent: true,
-})
-=======
-- Run proposed structure changes by the Gatsby docs team in [a GitHub issue](/contributing/how-to-file-an-issue/) to ensure your change is accepted.
+<!-- - Run proposed structure changes by the Gatsby docs team in [a GitHub issue](/contributing/how-to-file-an-issue/) to ensure your change is accepted.
 - Update all instances of the old URL to your new one. [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) in VS Code can help. Check that the context of the original link reference still makes sense with the new one.
-- For SEO purposes, add a redirect to [`www/redirects.yaml`](https://github.com/gatsbyjs/gatsby/tree/master/www/redirects.yaml). Here's an example:
+- For SEO purposes, add a redirect to [`www/redirects.yaml`](https://github.com/gatsbyjs/gatsby/tree/master/www/redirects.yaml). Here's an example: -->
 
 ```yaml:title=www/redirects.yaml
 - fromPath: /docs/source-plugin-tutorial/
   toPath: /docs/pixabay-source-plugin-tutorial/
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 ```
 
 ## Solicite seu brinde

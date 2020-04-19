@@ -10,48 +10,7 @@ Antes de começar a construir seu primeiro site Gatsby, você precisará se fami
 
 A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. Às vezes, você encontrará artigos se referindo a ela como _terminal_. Neste tutorial, usaremos os dois termos de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando permite uma interação poderosa com os recursos que o seu computador oferece.
 
-<<<<<<< HEAD
-Reserve um momento para localizar e acessar a interface da linha de comandos (Command Line Interface - CLI) do seu computador. Dependendo do sistema operacional que você estiver usando, consulte as [**instruções para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instruções para Windows**](ttps://www.quora.com/How-do-I-open-terminal-in-windows) ou [**instruções para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
-
-## Instale o Homebrew para Node.js
-
-Para instalar o Gatsby e o Node.js, é recomendável usar o [Homebrew](https://brew.sh/). Investir em uma configuração mínima nesse momento inicial pode te poupar algumas dores de cabeça mais tarde!
-
-Como instalar ou verificar o Homebrew no seu computador:
-
-1. Abra seu Terminal.
-1. Veja se o Homebrew está instalado executando `brew -v`. Você deverá ver a palavra "Homebrew" e um número de versão.
-1. Caso contrário, faça o download e instale o [Homebrew com as instruções](https://docs.brew.sh/Installation) para o seu sistema operacional (Mac, Linux ou Windows).
-1. Depois de instalar o Homebrew, repita a etapa 2 para confirmar o sucesso da instalação.
-
-### Usuário de Mac: instale as ferramentas de linha de comando do Xcode
-
-1. Abra seu Terminal.
-1. Em um Mac, instale as ferramentas de linha de comando do Xcode executando o comando `xcode-select --install`.
-   1. Se isso falhar, faça o download [diretamente do site da Apple](https://developer.apple.com/download/more/), após fazer login na conta de desenvolvedor da Apple.
-1. Ao iniciar a instalação, você será solicitado novamente a aceitar uma licença de software para o download das ferramentas.
-
-## ⌚ Instale o Node.js e o npm
-
-O Node.js é um ambiente que pode executar código JavaScript fora de um navegador da _web_. Gatsby é construído com Node.js. Para começar a trabalhar com o Gatsby, é necessário ter uma versão recente do Node.js instalada no seu computador.
-
-_Nota: a versão mínima do Node.js suportada pelo Gatsby é a 8.0, mas fique à vontade para usar uma versão mais recente._
-
-1. Abra seu terminal.
-1. Execute `brew update` para garantir que você estará usando a versão mais recente do Homebrew.
-1. Execute este comando para instalar o Node e o npm de uma só vez: `brew install node`
-
-Depois de seguir as etapas de instalação, verifique se tudo foi instalado corretamente:
-
-### Verifique sua instalação do Node.js
-
-1. Abra seu terminal.
-2. Execute `node --version`. (Se o terminal é algo novo para você, "Execute `node --version`" significa que você deve escrever o comando no terminal - nesse caso o comando é `node --version` - e em seguida pressionar a tecla _Enter_.  "Executar `comando`" terá esse significado daqui em diante).
-3. Execute `npm --version`.
-
-A saída de cada um desses comandos deve ser um número de versão. Suas versões podem não ser as mesmas mostradas abaixo! Se ao executar esses comandos não for exibido um número de versão, refaça a operação para confirmar que instalou o Node.js corretamente.
-=======
-Take a moment to locate and open up the command line interface (CLI) for your computer. Depending on which operating system you are using, see [**instructions for Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions for Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) or [**instructions for Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+<!-- Take a moment to locate and open up the command line interface (CLI) for your computer. Depending on which operating system you are using, see [**instructions for Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions for Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) or [**instructions for Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
 _Note: If you’re new to the command line, "running" a command, means "writing a given set of instructions in your command prompt, and hitting the Enter key". Commands will be shown in a highlighted box, something like `node --version`, but not every highlighted box is a command! If something is a command it will be mentioned as something you have to run/execute._
 
@@ -128,18 +87,13 @@ nvm install 10
 nvm use 10
 ```
 
-To confirm that this worked, you can run `npm --version` and `node --version`. The output should look similar to the screenshot below, showing version numbers in response to the commands.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+To confirm that this worked, you can run `npm --version` and `node --version`. The output should look similar to the screenshot below, showing version numbers in response to the commands. -->
 
 ![Verifique as versões do node e npm no terminal](01-node-npm-versions.png)
 
-<<<<<<< HEAD
-## Instale o Git
-=======
-Once you have followed the installation steps and you have checked everything is installed properly, you can continue to the next step.
+<!-- Once you have followed the installation steps and you have checked everything is installed properly, you can continue to the next step. -->
 
-## Install Git
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+## Instale o Git
 
 O Git é um sistema de controle de versão distribuído de código aberto e gratuito, projetado para lidar com tudo, desde projetos pequenos a grandes, com rapidez e eficiência. Quando você instala um site _starter_ do Gatsby, o Gatsby usa o Git nos bastidores para baixar e instalar os arquivos necessários para seu starter. Você precisará ter o Git instalado para configurar seu primeiro site Gatsby.
 
@@ -174,11 +128,7 @@ Agora você está pronto para usar a ferramenta CLI para criar seu primeiro site
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="./03-create-site.mp4" />
-<<<<<<< HEAD
   <p>Desculpe! Seu navegador não suporta este vídeo.</p>
-=======
-  <p>Sorry! Your browser doesn't support this video.</p>
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 </video>
 
 O que acabou de acontecer?
@@ -205,25 +155,15 @@ gatsby develop
 
 ### Visualize seu site localmente
 
-<<<<<<< HEAD
-Abra uma nova guia no seu navegador e navegue até [**http://localhost:8000**](http://localhost:8000/).
-=======
-Open up a new tab in your browser and navigate to `http://localhost:8000/`
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+Abra uma nova guia no seu navegador e navegue até `http://localhost:8000/`.
 
 ![Verifique a página inicial](04-home-page.png)
 
 Parabéns! Este é o começo de seu primeiro site Gatsby! 🎉
 
-<<<<<<< HEAD
-Você poderá visitar o site localmente em [**_http://localhost:8000_**](http://localhost:8000/) enquanto seu servidor de desenvolvimento estiver em execução. Esse é o processo que você iniciou executando o comando `gatsby develop`. Para parar de executar esse processo (ou “parar de executar o servidor de desenvolvimento”), volte para a janela do terminal, mantenha pressionada a tecla “control” e pressione “c” (ctrl-c). Para iniciá-lo novamente, execute o `gatsby develop` novamente!
+Você poderá visitar o site localmente em `http://localhost:8000/` enquanto seu servidor de desenvolvimento estiver em execução. Esse é o processo que você iniciou executando o comando `gatsby develop`. Para parar de executar esse processo (ou “parar de executar o servidor de desenvolvimento”), volte para a janela do terminal, mantenha pressionada a tecla “control” e pressione “c” (ctrl-c). Para iniciá-lo novamente, execute o `gatsby develop` novamente!
 
-**Nota:** Se você estiver usando uma configuração da VM como `vagrant` e/ou gostaria de escutar no seu endereço IP local, execute `gatsby develop - --host = 0.0.0.0`. Agora, o servidor de desenvolvimento escuta 'localhost' e seu IP local.
-=======
-You’ll be able to visit the site locally at `http://localhost:8000/` for as long as your development server is running. That’s the process you started by running the `gatsby develop` command. To stop running that process (or to “stop running the development server”), go back to your terminal window, hold down the “control” key, and then hit “c” (ctrl-c). To start it again, run `gatsby develop` again!
-
-**Note:** If you are using VM setup like `vagrant` and/or would like to listen on your local IP address, run `gatsby develop --host=0.0.0.0`. Now, the development server listens on both `http://localhost` and your local IP.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+**Nota:** Se você estiver usando uma configuração da VM como `vagrant` e/ou gostaria de escutar no seu endereço IP local, execute `gatsby develop - --host = 0.0.0.0`. Agora, o servidor de desenvolvimento escuta `http://localhost` e seu IP local.
 
 ## Configure um editor de código
 
@@ -239,15 +179,9 @@ Também recomendamos o uso do [Prettier](https://github.com/prettier/prettier), 
 
 Você pode usar o Prettier diretamente no seu editor usando o [plugin Prettier do VS Code](https://github.com/prettier/prettier-vscode):
 
-<<<<<<< HEAD
 1. Abra a visualização de extensões no VS Code (View => Extensions).
 2. Procure "Prettier - Code formatter".
 3. Clique em "Install". (Após a instalação, você será solicitado a reiniciar o VS Code para habilitar a extensão. As versões mais recentes do VS Code habilitarão a extensão automaticamente após o download.)
-=======
-1.  Open the extensions view on VS Code (View => Extensions).
-2.  Search for "Prettier - Code formatter".
-3.  Click "Install". (After installation, you'll be prompted to restart VS Code to enable the extension. Newer versions of VS Code will automatically enable the extension after download.)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 > 💡 Se você não estiver usando o VS Code, consulte a documentação do Prettier para [instruções de instalação](https://prettier.io/docs/en/install.html) ou [integrações para outros editores](https://prettier.io/docs/en/editors.html).
 

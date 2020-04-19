@@ -2,15 +2,11 @@
 title: Roteamento
 ---
 
-<<<<<<< HEAD
+<!-- Part of what makes Gatsby sites so fast is that a lot of the work is done at build time and the running site is using mostly [static content](/docs/adding-app-and-website-functionality/#static-pages). During that process, Gatsby creates paths to access that content, handling [routing](/docs/glossary#routing) for you. Navigating in a Gatsby app requires an understanding of what those paths are and how they're generated.
+
+Alternatively, your application may include functionality that cannot be handled at build time or through [rehydration](/docs/adding-app-and-website-functionality/#how-hydration-makes-apps-possible). This includes things like authentication or retrieving dynamic content. To handle those pages, you can make use of [client-only routes](/docs/client-only-routes-and-user-authentication) using [`@reach/router`](/docs/reach-router-and-gatsby/) which is built into Gatsby. -->
+
 ## Criando rotas
-=======
-Part of what makes Gatsby sites so fast is that a lot of the work is done at build time and the running site is using mostly [static content](/docs/adding-app-and-website-functionality/#static-pages). During that process, Gatsby creates paths to access that content, handling [routing](/docs/glossary#routing) for you. Navigating in a Gatsby app requires an understanding of what those paths are and how they're generated.
-
-Alternatively, your application may include functionality that cannot be handled at build time or through [rehydration](/docs/adding-app-and-website-functionality/#how-hydration-makes-apps-possible). This includes things like authentication or retrieving dynamic content. To handle those pages, you can make use of [client-only routes](/docs/client-only-routes-and-user-authentication) using [`@reach/router`](/docs/reach-router-and-gatsby/) which is built into Gatsby.
-
-## Creating routes
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Gatsby facilita o controle programático de suas páginas. Páginas podem ser criadas de três maneiras:
 
@@ -19,14 +15,7 @@ Gatsby facilita o controle programático de suas páginas. Páginas podem ser cr
 - Plugins também podem implementar o `createPages` e criar páginas para você
 
 Veja [Criando e Modificando Páginas](/docs/creating-and-modifying-pages) para mais detalhes.
-
-<<<<<<< HEAD
-## Vinculação entre rotas
-
-Você pode usar `gatsby-link` para vincular rotas -- isso irá disponibilizar transições de páginas quase instantâneas via _prefetching_. [Veja mais em Gatsby Link](/docs/gatsby-link/).
-
-Você também pode utilizar links normais ( _tag_ `<a>`) para vincular rotas, mas neste caso você não terá o benefício do _prefetching_.
-=======
+<!-- 
 When Gatsby creates pages it automatically generates a path to access them. This path will differ depending on how the page was defined.
 
 ### Pages defined in `src/pages`
@@ -67,19 +56,14 @@ Alternatively, if you want to create pages that will display different subcompon
 
 In order to link between pages, you can use [`gatsby-link`](/docs/gatsby-link/). Using `gatsby-link` gives you built in [performance benefits](#performance-and-prefetching).
 
-Alternatively, you can navigate between pages using standard `<a>` tags, but you won't get the benefit of prefetching in this case.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+Alternatively, you can navigate between pages using standard `<a>` tags, but you won't get the benefit of prefetching in this case. -->
 
 ## Criandos links para rotas autenticadas
 
-<<<<<<< HEAD
-Se você não deseja que todo seu conteúdo esteja disponível publicamente na web, o Gatsby permite que você crie [rotas "client-only"](/docs/client-only-routes-and-user-authentication) que ficam por trás de uma camada de autenticação.
-=======
-For pages dealing with sensitive information, or other dynamic behavior, you may want to handle that information server-side. Gatsby lets you create [client-only routes](/docs/client-only-routes-and-user-authentication) that live behind an authentication gate, ensuring that the information is only available to authorized users.
+<!-- For pages dealing with sensitive information, or other dynamic behavior, you may want to handle that information server-side. Gatsby lets you create [client-only routes](/docs/client-only-routes-and-user-authentication) that live behind an authentication gate, ensuring that the information is only available to authorized users.
 
 ## Performance and Prefetching
 
-In order to improve performance, Gatsby looks for links that appear on the current page to perform prefetching. Before a user has even clicked on a link, Gatsby has started to fetch the page it points to. [Learn more about prefetching](/docs/how-code-splitting-works/#prefetching-chunks).
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+In order to improve performance, Gatsby looks for links that appear on the current page to perform prefetching. Before a user has even clicked on a link, Gatsby has started to fetch the page it points to. [Learn more about prefetching](/docs/how-code-splitting-works/#prefetching-chunks). -->
 
 <GuideList slug={props.slug} />

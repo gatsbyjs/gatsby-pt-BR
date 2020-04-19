@@ -46,7 +46,6 @@ Tenha em mente as desvantagens dessa implementação:
 Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de fonte](/docs/importing-assets-into-files/) pelo JavaScript. A pasta
 `static` é util como um contorno para um pequeno número de casos comuns, como:
 
-<<<<<<< HEAD
 - Você precisa de um arquivo com um nome específico na saída do _build_,
   como [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 - Voce tem milhares de imagens e precisa referenciar dinamicamente seus caminhos.
@@ -54,13 +53,4 @@ Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de 
   [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) fora do
   código empacotado.
 - Algumas bibliotecas podem ser incompatíveis com Webpack e você não tem outra opçào senão a incluir como uma tag `<script>`.
-=======
-- You need a file with a specific name in the build output, such as
-  [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
-- You have thousands of images and need to dynamically reference their paths.
-- You want to include a small script like
-  [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) outside of the
-  bundled code.
-- Some libraries may be incompatible with Webpack and you have no other option but to include it as a `<script>` tag.
-- You need to import JSON file that doesn't have a consistent schema, like [TopoJSON files](https://en.wikipedia.org/wiki/GeoJSON#TopoJSON), which is difficult to handle with GraphQL. Note that importing JSON files directly inside a page, a template, or a component using `import` syntax results in adding that file to the app bundle and increasing the size of all site's pages. Instead, it's better to place your JSON file inside the `static` folder and use the dynamic import syntax (`import('/static/myjson.json')`) within the `componentDidMount` lifecycle or the `useEffect` hook.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+- Você precisa importar arquivos JSON que não possuem um esquema consistente, tais como [arquivos TopoJSON](https://en.wikipedia.org/wiki/GeoJSON#TopoJSON), que são difíceis de lidar com GraphQL. Note que importar arquivos JSON diretamente para dentro de uma página, template, ou componente usando a sintaxe `import` resulta em adicionar o arquivo dentro do pacote de arquivos da aplicação, aumentando o tamanho de todas as páginas do site. Ao invés disso, o melhor lugar para colocar seus arquivos JSON é dentro do diretório `static` e usar a sintaxe de importação dinâmica (`import('/static/myjson.json')`) junto com `componentDidMount` _lifecycle_ ou o _hook_ `useEffect`.

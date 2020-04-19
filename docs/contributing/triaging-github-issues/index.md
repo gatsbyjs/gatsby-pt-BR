@@ -16,33 +16,19 @@ Para o Gatsby, a primeira linha de comunicação entre um usuário e o time são
 
 Uma _issue_ aberta poderia ser:
 
-<<<<<<< HEAD:docs/contributing/triaging-github-issues.md
-- uma questão que pode ser respondida imediatamente
-- um relatório de um _bug_
-- uma solicitação de uma _feature_
-- ou uma discussão sobre um caso de uso complicado
-=======
-- [a question that can be answered immediately](#questions-with-immediate-answers)
+<!-- - [a question that can be answered immediately](#questions-with-immediate-answers)
 - a bug report
 - a request for a feature
-- or a discussion on a complicated use case
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/contributing/triaging-github-issues/index.md
+- or a discussion on a complicated use case -->
 
 No time principal, nós regularmente designamos alguém para ser um mantenedor de primeiro contato. Essa pessoa pode filtrar, triar, comunicar e gerenciar essa primeira linha de comunicação.
 
 Mantenedores de primeiro contato tipicamente irão:
 
-<<<<<<< HEAD:docs/contributing/triaging-github-issues.md
-- lidar com perguntas que podem ser respondidas imediatamente
-- testar e reproduzir relatórios de possíveis _bugs_ e rotulá-los apropriadamente
-- comunicar solicitações de _features_ para o restante do time e garantir uma resposta válida
-- possibilitar discussões sobre casos de uso complicados, seja entre os usuários ou através do time
-=======
 - [answer questions by pointing to documentation](#questions-with-immediate-answers)
 - test and reproduce possible bug reports and label them appropriately
 - communicate feature requests to the rest of the team and ensure a valid response
 - enable discussions on complicated use cases, whether themselves or via the rest of team
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/contributing/triaging-github-issues/index.md
 
 ## Por que damos suporte ao primeiro contato?
 
@@ -79,12 +65,9 @@ Confira os [documentos sobre rotulagem](/contributing/how-to-label-an-issue/) pa
 
 ### Fluxograma de resolução
 
-<<<<<<< HEAD:docs/contributing/triaging-github-issues.md
-O [fluxograma de resolução](https://whimsical.co/QvuMgo31T2C3xcWbou8xhy) fornece uma árvore de decisão a respeito de como as _issues_ devem ser categorizadas em um dos cinco tipos: _question ou discussion_, _bug report_, _feature request_, _documentation_, ou _maintenance_.
-=======
-Issues are categorized into one of five types: question or discussion, bug report, feature request, documentation, or maintenance.
+_Issues_ devem ser categorizadas em um dos cinco tipos: _question ou discussion_, _bug report_, _feature request_, _documentation_, ou _maintenance_.
 
-#### Questions with immediate answers
+<!-- #### Questions with immediate answers
 
 - Point to existing documentation to answer the question
 - If insufficient, do the following:
@@ -126,8 +109,7 @@ Otherwise, label the issue with `documentation` and ask the issuer filer if they
 
 #### Maintenance
 
-Maintenance issues are things like bumping a package version. These issues should be labeled with `maintenance`.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/contributing/triaging-github-issues/index.md
+Maintenance issues are things like bumping a package version. These issues should be labeled with `maintenance`. -->
 
 ### Respostas salvas
 

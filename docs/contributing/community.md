@@ -2,11 +2,7 @@
 title: Comunidade
 ---
 
-<<<<<<< HEAD
-Desde Setembro de 2019, a comunidade Gatsby é composta por mais de 2.400 colaboradores e dezenas de milhares de desenvolvedores construindo sites pessoais e comerciais usando Gatsby.
-=======
-As of December 2019, the Gatsby community is comprised of over 2,800 contributors and tens of thousands of developers building both personal and commercial websites on Gatsby.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+Desde Setembro de 2019, a comunidade Gatsby é composta por mais de 2,800 colaboradores e dezenas de milhares de desenvolvedores construindo sites pessoais e comerciais usando Gatsby.
 
 _Open source_ nem sempre tem a melhor reputação de ser amigável e acolhedor, e isso nos deixa tristes. **Todos que pertencem ao _open source_, e todos do Gatsby estão dedicados a fazer você se sentir acolhido.**
 
@@ -24,19 +20,12 @@ No intuito de promover um ambiente aberto e acolhedor, nós, como contribuidores
 
 A comunidade Gatsby está aberta a contribuições. Por favor, consulte os guias abaixo sobre como garantir que suas contribuições sejam aceitas:
 
-<<<<<<< HEAD
-- [Como contribuir](/contributing/how-to-contribute/)
-- [Como reportar um problema](/contributing/how-to-file-an-issue/)
+- [Como Contribuir](/contributing/how-to-contribute/)
+- [Como Registrar um Problema](/contributing/how-to-file-an-issue/)
+- [Como Abrir um Pull Request](/contributing/how-to-open-a-pull-request/)
 - [Criar requisições de novas funcionalidades com um RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
 - [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/)
-=======
-- [How to Contribute](/contributing/how-to-contribute/)
-- [How to File an Issue](/contributing/how-to-file-an-issue/)
-- [How to Open a Pull Request](/contributing/how-to-open-a-pull-request/)
-- [Make feature requests with an RFC](/blog/2018-04-06-introducing-gatsby-rfc-process/)
-- [Gatsby Style Guide](/contributing/gatsby-style-guide/)
-- [Gatsby Translations](/contributing/gatsby-docs-translation-guide/)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+- [Traduções do Gatsby](/contributing/gatsby-docs-translation-guide/)
 
 ## Notícias do Gatsby
 
@@ -51,19 +40,7 @@ Inscreva-se na newsletter do Gatsby para acompanhar as novidades da comunidade G
 Para últimas notícias sobre Gatsby,
 [siga **@gatsbyjs** no Twitter](https://twitter.com/gatsbyjs).
 
-<<<<<<< HEAD
-### Encontro da Comunidade de Mantenedores
-
-O Gatsby Core Team (funcionários oficiais que estão trabalhando no _open-source_ do Gatsby) realiza uma reunião semanal onde encorajamos os membros da comunidade a compartilhar os seus projetos, dificuldades e sucessos diretamente com a equipe principal. Além disso, a equipe compartilha informações e planos pertinentes à comunidade!
-
-Esse evento é realizado de forma recorrente, toda Quarta-Feira às 08:30 (Horário padrão do Pacífico).
-
-[Adicione aqui o convite recorrente à agenda](https://gatsby.dev/core-maintainers)
-
-## Onde Conseguir Ajuda
-=======
-## Where to get support
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+## Onde conseguir ajuda
 
 ### Stack Overflow
 

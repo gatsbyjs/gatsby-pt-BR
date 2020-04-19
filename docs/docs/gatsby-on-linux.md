@@ -2,17 +2,8 @@
 title: Gatsby no Linux
 ---
 
-This guide assumes you already have a native installation of Linux on your machine. The following steps walk through how to install Node.js and associated dependencies.
+<!-- This guide assumes you already have a native installation of Linux on your machine. The following steps walk through how to install Node.js and associated dependencies.
 
-<<<<<<< HEAD
-> Isto é um TODO. Ajude a nossa comunidade a expandi-lo.
-
-> Por favor utilize o [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/) para garantir que seu Pull Request seja aceito.
-
-## Windows Subsystem Linux (WSL)
-
-A partir de 17 de outubro de 2017, o Windows 10 vem com WSL e distribuições Linux estarão disponíveis através da [Windows Store], as quais podem ser configuradas através do `wslconfig` caso haja mais de uma distribuição instalada.
-=======
 ## Ubuntu, Debian, and other `apt` based distros
 
 Begin by updating and upgrading.
@@ -130,20 +121,15 @@ node -v
 This guide assumes that you already have WSL installed with a working Linux distro. If you don't, follow [this guide from Microsoft's site](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to install WSL and a Linux distro of your choice.
 
 As of October 17th 2017, Windows 10 ships with WSL and Linux distributions are available via the Microsoft Store, there are several different distributions to use which can be configured via `wslconfig` if you have more than one distribution installed.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ```shell
 # definir a distribuição padrão para o Ubuntu
 wslconfig /setdefault ubuntu
 ```
 
-<<<<<<< HEAD
-### Utilizando Windows Subsystem Linux: Ubuntu
-=======
 > Please note that if you have used the [Gatsby on Windows](/docs/gatsby-on-windows/) setup without WSL, then you have to delete any existing `node_modules` folder in your project and re-install the dependencies in your WSL environment.
 
 ### Using Windows Subsystem Linux: Ubuntu
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Se você tem uma instalação limpa do Ubuntu, atualize-o:
 
@@ -152,13 +138,7 @@ sudo apt update
 sudo apt -y upgrade
 ```
 
-<<<<<<< HEAD
-> Só utilize `-y` se você quiser atualizar para a última versão do software.
-
-**Ferramentas de build**
-=======
 **Build tools**
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Para compilar e instalar addons nativos do npm, talvez você precise instalar ferramentas nativas para `node-gyp`:
 
@@ -208,4 +188,4 @@ sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && su
 - [n](https://github.com/tj/n)
 - [nvm](https://github.com/creationix/nvm)
 - [n-install](https://github.com/mklement0/n-install)
-- [bash startup](https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578)
+- [bash startup](https://github.com/Microsoft/WSL/issues/776#issuecomment-266112578) -->

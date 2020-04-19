@@ -33,15 +33,9 @@ gatsby build
 
 Então, no diretório `public` haverá arquivos para copiar para o servidor.
 
-<<<<<<< HEAD
 ## Adicionando um prefixo de rota
 
 Se você quer ir para um prefixo de rota específico, por exemplo `exemplo.com/blog/` ao invés de `exemplo.com/` leia [Adicionando um prefixo de rota](/docs/path-prefix)
-=======
-## Adding a path prefix
-
-If you want a specific Path Prefix, for example `example.com/blog/` instead of `example.com/` read [adding a path prefix](/docs/path-prefix)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ## Publicação específica
 

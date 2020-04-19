@@ -18,11 +18,7 @@ Você também pode [desenvolver sua própria ferramenta de comentários](/blog/2
 
 ## Usando o Disqus para comentários
 
-<<<<<<< HEAD
 Neste guia, mostraremos como implementar o Disqus em seu blog, pois ele possui vários recursos interessantes.
-=======
-In this guide, you'll learn how to implement Disqus on your blog as it has a number of nice features.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 - É de baixa manutenção, o que significa menos problemas para [moderar seus comentários e manter seu fórum](https://help.disqus.com/moderation/moderating-101).
 - O [suporte ao React](https://github.com/disqus/disqus-react) é oficial.
@@ -38,11 +34,7 @@ Se essas preocupações superam os benefícios do Disqus, convém examinar algum
 
 ## Implementando o Disqus
 
-<<<<<<< HEAD
-![Logo do Disqus](images/disqus-logo.svg)
-=======
-![Disqus logo](./images/disqus-logo.svg)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+![Logo do Disqus](./images/disqus-logo.svg)
 
 Aqui estão as etapas para adicionar comentários do Disqus ao seu próprio blog:
 
@@ -55,13 +47,8 @@ npm install disqus-react
 
 3. Adicione o nome abreviado da etapa 1 como `GATSBY_DISQUS_NAME` nos seus arquivos `.env` e `.env.example` para que as pessoas que estão participando do seu repositório saibam que precisam fornecer esse valor para que os comentários funcionem. (Você precisa prefixar a variável de ambiente com `GATSBY_` para [disponibilizá-la no código do lado do cliente](https://www.gatsbyjs.org/docs/environment-variables/#client-side-javascript).)
 
-<<<<<<< HEAD
-```title=.env.example
-# ativa comentários do Disqus para postagens do blog
-=======
 ```text:title=.env.example
-# enables Disqus comments for blog posts
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+# ativa comentários do Disqus para postagens do blog
 GATSBY_DISQUS_NAME=insertValue
 ```
 
@@ -102,8 +89,4 @@ return (
 
 E você terminou. Agora você deve ver o formulário de comentários do Disqus aparecer abaixo da postagem do seu blog [parecido com este](https://janosh.io/blog/disqus-comments#disqus_thread). Divirta-se com seu blog!
 
-<<<<<<< HEAD
-[![Comentários Disqus](images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
-=======
-[![Disqus comments](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+[![Comentários Disqus](./images/disqus-comments.png)](https://janosh.io/blog/disqus-comments#disqus_thread)

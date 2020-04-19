@@ -4,11 +4,7 @@ title: Integrando a partir do Ghost
 
 [Ghost](https://ghost.org) é uma plataforma de publicação profissional, _open source_, construída em cima de uma moderna tecnologia Node.js - projetada para times que precisam de poder, flexibilidade e performance - utilizada pela Apple, NASA, Sky News, OpenAI e muitas outras.
 
-<<<<<<< HEAD
 Ela vem com todos os benefícios de uma plataforma _Headless CMS_ moderna e centralizada, com o benefício adicional de ser totalmente gratuita sob a licença do MIT, para que você tenha o total controle, sem precisar depender de um _back-end_ de terceiros.
-=======
-It comes with all the benefits of modern, centralized Headless CMS platforms, with the added benefit of being released completely for free under an MIT license, so you have total ownership and control of it without needing to depend on a third party backend.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Esse guia irá orientar você sobre o uso de [Gatsby](/) com a [API de Conteúdo do Ghost](https://docs.ghost.org/api/content/).
 
@@ -30,11 +26,7 @@ O jeito mais rápido de começar é com o repositório oficial **Gatsby Starter 
 
 ---
 
-<<<<<<< HEAD
 ## Instalação e Configuração
-=======
-## Install and setup
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Se você prefere iniciar do zero ou integrar o conteúdo da API do Ghost em um _site_ existente, você pode configurar o plugin **Gatsby Source Ghost**.
 
@@ -66,11 +58,7 @@ module.exports = {
 
 ## Gerando páginas
 
-<<<<<<< HEAD
-Uma vez que o plugin nativo é configurado, você pode usar a API `createPages` em `gatsby-node.js` para criar consultas nos seus dados do Ghost com GraphQL. Nesse exemplo, Gatsby itera sobre cada postagem retornada pela API do Ghost e gera uma nova página com esses dados, usando o arquivo de modelo `post.js`.
-=======
-Once the source plugin is set up, you can use the [`createPages` API](/docs/node-apis/#createPages) in `gatsby-node.js` to run queries against your Ghost data with GraphQL. In this example, Gatsby iterates over each post returned by the Ghost API and generates a new page with that data, using the `post.js` template file.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+Uma vez que o plugin nativo é configurado, você pode usar a [API `createPages`](/docs/node-apis/#createPages) em `gatsby-node.js` para criar consultas nos seus dados do Ghost com GraphQL. Nesse exemplo, Gatsby itera sobre cada postagem retornada pela API do Ghost e gera uma nova página com esses dados, usando o arquivo de modelo `post.js`.
 
 Existem vários modos de estruturar as consultas dependendo de como você prefere trabalhar, mas aqui está um pequeno exemplo:
 
@@ -125,13 +113,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 ## Saída de dados
 
-<<<<<<< HEAD
-Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria algo como:
-=======
-The code above will create pages in the root of the site at `/`, with the path being the slug of the post.
+O código acima criará páginas na raiz do site em `/`, com a rota sendo o _slug_ da postagem.
 
-Then, within the `post.js` template, you can determine exactly how and where you want to output data on each page. Again, you'll use GraphQL to query individual fields, so a simple example looks something like this:
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria algo como:
 
 ```jsx:title=templates/post.js
 import React from "react"

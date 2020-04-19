@@ -12,11 +12,7 @@ Além disso, links para vários recursos (JavaScript, CSS, imagens, e outros con
 
 Adicionar o prefixo na rota é um processo de dois passos, são eles:
 
-<<<<<<< HEAD
-### Adicionar em `gatsby-config.js`
-=======
-## Add to `gatsby-config.js`
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+## Adicionar em `gatsby-config.js`
 
 Primeiramente, adicione o valor do `pathPrefix` no seu `gatsby-config.js`.
 
@@ -26,11 +22,7 @@ module.exports = {
 }
 ```
 
-<<<<<<< HEAD
-### Fazer o Build
-=======
-## Build
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+## Fazer o Build
 
 O passo final é fazer o _build_ da sua aplicação com a opção `--prefix-paths`, assim:
 
@@ -40,10 +32,7 @@ gatsby build --prefix-paths
 
 Se essa opção não for passada, Gatsby ignorará seu `pathPrefix` e fará o build do website como se estivesse hospedado na raiz do domínio.
 
-<<<<<<< HEAD
-### Links dentro da aplicação
-=======
-## Serve
+<!-- ## Serve
 
 Serve your application with the `--prefix-paths` flag, like so:
 
@@ -51,10 +40,9 @@ Serve your application with the `--prefix-paths` flag, like so:
 gatsby serve --prefix-paths
 ```
 
-If this flag is not passed, Gatsby will ignore your `pathPrefix`.
+If this flag is not passed, Gatsby will ignore your `pathPrefix`. -->
 
-## In-app linking
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+## Links dentro da aplicação
 
 O Gatsby provê APIs e bibliotecas para fazer uso dessa funcionalidade sem problemas. Especificamente, o componente [`Link`](/docs/gatsby-link/) tem uma funcionalidade embutida para lidar com prefixo na rota.
 
@@ -97,19 +85,11 @@ export default function Index() {
 }
 ```
 
-<<<<<<< HEAD
-### Adicione o prefixo nas rotas usando `withPrefix`
-
-Para rotas construídas manualmente, existe essa função auxiliar, [`withPrefix`](/docs/gatsby-link/#add-the-path-prefix-to-paths-using-withprefix) que prefixa a sua rota em produção (mas não durante o desenvolvimento onde as rotas não precisam ser prefixadas).
-
-### Considerações adicionais
-=======
-## Add the path prefix to paths using `withPrefix`
+<!-- ## Add the path prefix to paths using `withPrefix`
 
 For pathnames you construct manually, there’s a helper function, [`withPrefix`](/docs/gatsby-link/#add-the-path-prefix-to-paths-using-withprefix) that prepends your path prefix in production (but doesn’t during development where paths don’t need to be prefixed).
 
-### Additional considerations
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+### Additional considerations -->
 
 A funcionalidade de [`assetPrefix`](/docs/asset-prefix/) pode ser imaginada como relacionada em parte a esta funcionalidade. Esta funcionalidade permite que seus _assets_ (arquivos não-HTML, e.g. imagens, JavaScript, etc.) sejam hospedados em um domínio separado, por exemplo, em uma _CDN_.
 

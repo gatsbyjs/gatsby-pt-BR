@@ -14,17 +14,10 @@ Gatsby usa o processo de PR para revisar e testar as alterações antes de serem
 
 Quando alguém desejar contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
 
-<<<<<<< HEAD
 - [Documentação](#documentação-de-prs)
 - [Código](#alterações-de-código)
 - [_Starters_ ou Amostras de Sites](#starters-ou-amostras-de-sites)
 - [Postagens do Blog](#postagens-do-blog)
-=======
-- [Documentation](#documentation-prs)
-- [Code](#code-changes)
-- [Starters or Site Showcase](#starters-or-site-showcase)
-- [Blog posts](#blog-posts)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Recomendações para diferentes tipos de contribuições estarão descritas neste guia e ao longo das documentações sobre contribuição.
 
@@ -98,10 +91,7 @@ Existem páginas específicas sobre como contribuir para várias partes do ecoss
 
 Para o blog do Gatsby, é necessário que sua ideia de conteúdo seja aprovada pela equipe do Gatsby antes de ser enviada. Para obter mais informações, consulte a página de [contribuições de blog e site](/contributing/blog-and-website-contributions/), incluindo como propor uma ideia e configurar o blog para ser executado localmente.
 
-<<<<<<< HEAD
-## Atualize seu fork com as alterações mais recentes do Gatsby
-=======
-## Follow up with reviews and suggestions
+<!-- ## Follow up with reviews and suggestions
 
 After a PR is sent to the Gatsby GitHub repo, the Gatsby core team and the community may suggest modifications to the changes that your PR introduces.
 
@@ -118,10 +108,9 @@ For suggestions that may not be resolved using the GitHub UI, remember that you 
 
 After all your questions have been resolved and the requested changes have been committed, you can [mark the conversation as solved](https://help.github.com/en/articles/commenting-on-a-pull-request#resolving-conversations).
 
-This process helps both the Gatsby team and the community to contribute with improvements for your changes before they are merged into the Gatsby GitHub repo.
+This process helps both the Gatsby team and the community to contribute with improvements for your changes before they are merged into the Gatsby GitHub repo. -->
 
-## Update your fork with the latest Gatsby changes
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+## Atualize seu fork com as alterações mais recentes do Gatsby
 
 O repositório do Gatsby GitHub é muito ativo, portanto, é provável que você precise atualizar seu fork com as alterações mais recentes para poder mergear no seu código. Isso requer adicionar o Gatsby como um [upstream remote](https://help.github.com/pt/articles/configuring-a-remote-for-a-fork):
 
