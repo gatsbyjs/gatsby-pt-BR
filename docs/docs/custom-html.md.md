@@ -14,7 +14,7 @@ E depois faça as modificações que você necessita.
 Note: Os vários _props_ que são renderizados na página são necessários, por exemplo: 
 `headComponents`, `preBodyComponents`, `body`, e `postBodyComponents`. 
 
-## Inserindo HTML no ´<head>´
+## Inserindo HTML no `<head>`
 Qualquer coisa que você renderizar no componente `html.js` não será "ativo" no cliente como outros componentes. Se
 você quiser tornar mais dinâmica a atualização de sua `<head>`, nós recomendamos o uso de: 
 [React Helmet](/packages/gatsby-plugin-react-helmet/)
