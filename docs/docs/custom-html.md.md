@@ -9,7 +9,10 @@ A maioria dos sites deveria utilizar o `html.js` padrão enviado com o Gatsby. C
 cp .cache/default-html.js src/html.js
 ```
 E depois faça as modificações que você necessita.
+Se você precisar adicionar html customizado no `<head>` ou `<footer>` em cada página de seu site, você pode utilizar `html.js`.
 
+> Personalizar o `html.js` é uma alternativa para quando o uso das APIs apropriadas não estiverem disponíveis no `gatsby-ssr.js`. Considere usar [`onRenderBody`](/docs/ssr-apis/#onRenderBody) or [`onPreRenderHTML`](/docs/ssr-apis/#onPreRenderHTML) ao invés do método acima.
+> Como consideração adicional, a customização do `html.js` não é suportada dentro de um Tema Gatsby. Use o método de API mencionado acima.
 ## Props Necessárias
 Note: Os vários _props_ que são renderizados na página são necessários, por exemplo: 
 `headComponents`, `preBodyComponents`, `body`, e `postBodyComponents`. 
