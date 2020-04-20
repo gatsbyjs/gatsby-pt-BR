@@ -23,7 +23,7 @@ você quiser tornar mais dinâmica a atualização de sua `<head>`, nós recomen
 Se você quiser inserir html personalizado no _footer_, o caminho preferido para se fazer isso é pelo 'html.js'. Se você está escrevendo um plugin, considere o uso da prop  `setPostBodyComponents` no [Gatsby SSR API](/docs/ssr-apis/).
 
 ## Target container 
-Se você ver o erro: `Uncaught Error: _registerComponent(...):Target container is not a DOM element.` isso significa que o seu ´<html.js>´ está com a ausência da solicitação "target container". Dentro do seu ´<body>´ você deve ter uma div com o id `___gatsby` como:
+Se você ver o erro: `Uncaught Error: _registerComponent(...):Target container is not a DOM element.` isso significa que o seu `<html.js>` está com a ausência da solicitação "target container". Dentro do seu `<body>` você deve ter uma div com o id `___gatsby` como:
 ```jsx:title=src/html.js
 <div
   key={`body`}
