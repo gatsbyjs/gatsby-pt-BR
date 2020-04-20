@@ -1,7 +1,7 @@
 ---
 title: Personalizar html.js
 ---
-Gatsby utiliza um componente React para a renderização do servidor '<head>' e outras partes do HTML fora do aplicativo principal do Gatsby. Além disso, o Gatsby define um valor padrão do ´<noscript>´ marcado aqui.
+Gatsby utiliza um componente React para a renderização do servidor `<head>` e outras partes do HTML fora do aplicativo principal do Gatsby.
 
 A maioria dos sites deveria utilizar o `html.js` padrão enviado com o Gatsby. Contudo, se você precisar customizar seu site em html.js, copie o padrão em seu código o executando:
 
