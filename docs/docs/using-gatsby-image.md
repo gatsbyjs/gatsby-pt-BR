@@ -4,11 +4,7 @@ title: Utilizando o _Gatsby Image_ para Otimizar a Performance de Imagens.
 
 `gatsby-image` é um componente do React projetado para funcionar de forma integrada com as consultas GraphQL do Gatsby ([`gatsby-image` plugin README](/packages/gatsby-image/)). Ele combina os recursos de [processamento nativo de imagens do Gatsby](https://image-processing.gatsbyjs.org/) com técnicas avançadas de carregamento de imagens para otimizar de forma fácil e completa o carregamento de imagens no seu site. O `gatsby-image` usa o [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/) para transformação de imagens.
 
-<<<<<<< HEAD
-> _Aviso: gatsby-image **não** é um substituto para `<img />`. É otimizado para imagens de largura/altura fixas e imagens que ampliam a largura total de um contêiner. Algumas maneiras de usar o <img />` não funcionarão com o gatsby-image._
-=======
-> _Warning: gatsby-image is **not** a drop-in replacement for `<img />`. It’s optimized for fixed width/height images and images that stretch the full width of a container. Some ways you can use `<img />` won’t work with gatsby-image._
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+> _Aviso: gatsby-image **não** é um substituto para `<img />`. É otimizado para imagens de largura/altura fixas e imagens que ampliam a largura total de um contêiner. Algumas maneiras de usar o `<img />` não funcionarão com o gatsby-image._
 
 [Demonstração](https://using-gatsby-image.gatsbyjs.org/)
 
@@ -24,7 +20,6 @@ _Para obter informações mais completas sobre a API, consulte a documentação 
 
 Imagens grandes e não otimizadas diminuem drasticamente a velocidade do seu site.
 
-<<<<<<< HEAD
 Mas criar imagens otimizadas para sites há muito tempo é um problema difícil. Idealmente você deve:
 
 - Redimensionar imagens grandes para o tamanho necessário ao seu design
@@ -35,18 +30,6 @@ Mas criar imagens otimizadas para sites há muito tempo é um problema difícil.
 - Manter a posição da imagem para que sua página não pule enquanto as imagens são carregadas
 
 Fazer isso de forma consistente em um site parece um trabalho complicado. Você otimiza suas imagens manualmente e então... várias imagens são alteradas no último minuto ou um aprimoramento de design reduz 100px na largura das imagens.
-=======
-But creating optimized images for websites has long been a thorny problem. Ideally, you would:
-
-- Resize large images to the size needed by your design
-- Generate multiple smaller images so smartphones and tablets don’t download desktop-sized images
-- Strip all unnecessary metadata and optimize JPEG and PNG compression
-- Efficiently lazy load images to speed initial page load and save bandwidth
-- Use the “blur-up” technique or a “traced placeholder” SVG to show a preview of the image while it loads
-- Hold the image position so your page doesn’t jump while the images load
-
-Doing this consistently across a site feels like Sisyphean labor. You manually optimize your images and then… several images are swapped in at the last minute or a design-tweak shaves 100px of width off your images.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 A maioria das soluções envolve muito trabalho manual e contabilidade para garantir que todas as imagens sejam otimizadas.
 
@@ -54,11 +37,7 @@ Isso não é o ideal. Imagens otimizadas devem ser fáceis e padrão.
 
 ## Solução
 
-<<<<<<< HEAD
 Com o Gatsby, podemos melhorar a experiência de trabalhar com imagens.
-=======
-With Gatsby, you can make the experience of working with images way, way better.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 `gatsby-image` foi projetado para funcionar perfeitamente com os recursos nativos de processamento de imagens do Gatsby, equipados com GraphQL e Sharp. Para produzir imagens perfeitas com o mínimo esforço, você pode seguir os seguintes passos:
 

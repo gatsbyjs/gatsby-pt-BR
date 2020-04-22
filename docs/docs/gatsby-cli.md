@@ -48,14 +48,7 @@ Você também pode utilizar o `gatsby-cli`  através de _scripts_ disponíveis n
 
 ### `new`
 
-<<<<<<< HEAD
-  
-
-```
-
-=======
 ```shell
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 gatsby new [<site-name> [<starter-url>]]
 
 ```
@@ -153,20 +146,9 @@ Após a instalação do site Gatsby, acesse o diretório raiz do seu projeto e u
 | Opção | Descrição |
 
 | :-------------: | ----------------------------------------------- |
-<<<<<<< HEAD
-=======
-| `-H`, `--host`  | Set host. Defaults to localhost                 |
-| `-p`, `--port`  | Set port. Defaults to env.PORT or 8000          |
-| `-o`, `--open`  | Open the site in your (default) browser for you |
-| `-S`, `--https` | Use HTTPS                                       |
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
-
 | `-H`, `--host` | Especifica o host. Default: localhost |
-
 | `-p`, `--port` | Especifica a porta. Default: 8000 |
-
 | `-o`, `--open` | Abre o site no navegador padrão do computador |
-
 | `-S`, `--https` | Executa o servidor em modo HTTPS |
 
   
@@ -191,12 +173,7 @@ O terminal exibirá o log de informações normalmente mas incluirá também uma
 
   
 
-<<<<<<< HEAD
-```
-
-=======
 ```shell
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 You can now view gatsbyjs.org in the browser.
 
 ⠀
@@ -207,15 +184,9 @@ On Your Network: http://192.168.0.212:8000/ // highlight-line
 
 ```
 
-<<<<<<< HEAD
-  
 
-**Note**: O  endereço 0.0.0.0:8000 não pode ser acessado se você está utilizando  Windows (mas você poderá acessar digitando localhost:8000 ou através do atalho "Minha Rede Local" no Windows)
+**Note**: O  endereço 0.0.0.0:8000 não pode ser acessado se você está utilizando  Windows (mas você poderá acessar digitando `http://localhost:8000` ou através do atalho "Minha Rede Local" no Windows)
 
-  
-=======
-**Note**: To access Gatsby on your local machine, use either `http://localhost:8000` or the "On Your Network" URL.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ### `build`
 
@@ -414,9 +385,6 @@ Para mais informações, consulte a [documentação do REPL Gatsby](/docs/gatsby
 
   
 
-<<<<<<< HEAD
-Além da opção `--no-color` , a ILC  reconhece também a variável de ambiente  `NO_COLOR`  (mais informações em [no-color.org](https://no-color.org/)).
-=======
 In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
 
 ## How to change your default package manager for your next project?
@@ -445,4 +413,3 @@ In it you’re going to see something like this.
 ```
 
 Edit your `packageManager` value, save and you’re good to go for your next project using `gatsby new`.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1

@@ -13,11 +13,14 @@ Este guia supõe que você já tenha o Gatsby configurado em seu projeto. Caso v
 =======
 ## Installing and configuring PostCSS
 
+<<<<<<< HEAD
 This guide assumes that you have a Gatsby project set up. If you need to set up a project, head to the [quick start guide](/docs/quick-start/), then come back.
 
 1.  Install the Gatsby plugin [gatsby-plugin-postcss](/packages/gatsby-plugin-postcss/).
 >>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
+=======
+>>>>>>> master
 ```shell
 npm install --save gatsby-plugin-postcss
 ```

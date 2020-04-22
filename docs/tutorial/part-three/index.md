@@ -273,11 +273,7 @@ export default ({ children }) => (
 
 E aí está! Um site com três páginas e navegação global básica.
 
-<<<<<<< HEAD
 _Desafio:_ Com os poderes do seu novo "componente de layout", tente adicionar cabeçalho, rodapé, navegação global, sidebar, etc. nos seus sites Gatsby.
-=======
-_Challenge:_ With your new "layout component" powers, try adding headers, footers, global navigation, sidebars, etc. to your Gatsby sites!
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ## O que vem a seguir?
 

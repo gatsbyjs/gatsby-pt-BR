@@ -1,9 +1,5 @@
 ---
-<<<<<<< HEAD:docs/docs/using-fragments.md
-title: Utilizando Fragmentos
-=======
-title: Using GraphQL Fragments
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/docs/using-graphql-fragments.md
+title: Utilizando Fragmentos GraphQL
 ---
 
 Fragmentos permitem a reutilização de consultas GraphQL. Elas também permitem a divisão de consultas complexas em componentes menores e de fácil compreensão.
@@ -27,11 +23,7 @@ Um fragmento consiste de três componentes:
 
 ## Criando e utilizando um fragmento
 
-<<<<<<< HEAD:docs/docs/using-fragments.md
 Um fragmento pode ser criado dentro de qualquer consulta GraphQL, mas é uma boa prática criar a consulta separadamente. Mais conselhos organizacionais no [Guia Conceitual](/docs/querying-with-graphql/#fragments).
-=======
-A fragment can be created inside any GraphQL query, but it's good practice to create the query separately. More organization advice in the [Conceptual Guide](/docs/graphql-concepts/#fragments).
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/docs/using-graphql-fragments.md
 
 ```jsx:title=src/components/IndexPost.jsx
 import React from "react"
@@ -82,18 +74,9 @@ export const query = graphql`
 `
 ```
 
-<<<<<<< HEAD:docs/docs/using-fragments.md
 Ao compilar o site, o Gatsby pré-processa todas as consultas GraphQL encontradas, portanto, qualquer arquivo incluso no seu projeto pode definir um trecho. No entanto, apenas Páginas podem definir consultas GraphQL que realmente retornem dados, por isso que é possível definir fragmentos no arquivo do componente - ele não retorna nenhum dado diretamente.
-=======
-When compiling your site, Gatsby preprocesses all GraphQL queries it finds. Therefore, any file that gets included in your project can define a snippet. However, only Pages can define GraphQL queries that actually return data. This is why you can define the fragment in the component file - it doesn't actually return any data directly.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/docs/using-graphql-fragments.md
 
 ## Leituras Adicionais
 
-<<<<<<< HEAD:docs/docs/using-fragments.md
 - [Consultando Dados com GraphQL - Fragmentos](/docs/querying-with-graphql/#fragments)
 - [Documentação GraphQL - Fragmentos](https://graphql.org/learn/queries/#fragments)
-=======
-- [Querying Data with GraphQL - Fragments](/docs/graphql-concepts/#fragments)
-- [GraphQL Docs - Fragments](https://graphql.org/learn/queries/#fragments)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1:docs/docs/using-graphql-fragments.md

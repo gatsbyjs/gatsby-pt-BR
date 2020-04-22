@@ -8,11 +8,7 @@ Muitos plugins e temas do Gatsby exigem a criação de módulos nativos do Node.
 [Sharp (uma dependência comum de Gatsby usada para processamento de imagem)](/packages/gatsby-plugin-sharp/).
 Para fazer isso, você precisa de um ambiente de construção funcional (Python e Visual C ++ Build Tools).
 
-<<<<<<< HEAD
 A maneira mais fácil de configurar seu ambiente de compilação no Windows é instalar o pacote
-=======
-The recommended way to setup your build environment on Windows is to install the
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 [`windows-build-tools`](https://github.com/felixrieseberg/windows-build-tools)
 rodando `npm install windows-build-tools -g` no console PowerShell como administrador.
 
@@ -86,10 +82,4 @@ Sharp usa uma biblioteca C, libvips. Se você estiver tendo problemas ao instala
 
 ## Subsistema do Windows para Linux
 
-<<<<<<< HEAD
-Se a instalação de dependências ou o desenvolvimento no Windows em geral causar dores de cabeça, o Windows 10 oferece uma ótima alternativa: [Subsistema do Windows para Linux](https://docs.microsoft.com/en-us/windows/wsl/about). Permite executar a maioria das ferramentas, utilitários e aplicativos de linha de comando em um ambiente GNU/Linux diretamente no Windows, sem modificação, sem a sobrecarga de uma máquina virtual. No cenário acima, você faria o download, por exemplo. Ubuntu, abra o terminal, [instale o Node](https://nodejs.org/en/download/package-manager/#debian-and-ubuntu-based-linux-distributions) e execute `sudo apt-get install build -essencial` no terminal - e a compilação funciona de forma muito mais confiável. Observe que você deve excluir qualquer pasta `node_modules` existente no seu projeto e reinstalar as dependências no seu ambiente WSL.
-
-Você também pode visitar o [Gatsby no Linux](/docs/gatsby-on-linux/) para saber mais.
-=======
 If the installation of dependencies or developing on Windows in general gives you headaches, Windows 10 provides a great alternative: [Windows Subsystem for Linux (WSL)](https://docs.microsoft.com/en-us/windows/wsl/about). It lets you run most command-line tools, utilities, and applications in a GNU/Linux environment directly on Windows, unmodified, without the overhead of a virtual machine. For more explicit instructions on getting set up with WSL, see the [Gatsby on Linux](/docs/gatsby-on-linux/#windows-subsystem-linux-wsl) documentation.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1

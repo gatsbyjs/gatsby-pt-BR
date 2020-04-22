@@ -63,10 +63,7 @@ Agora defina a consulta (query) e coloque-a na StaticQuery (você também pode s
 
 ```jsx:title=src/components/SEO.js
 const SEO = ({ title, description, image, pathname, article }) => (
-  <StaticQuery
-    query={query}
-    render={}
-  />
+  <StaticQuery query={query} render={} />
 )
 
 export default SEO
@@ -84,7 +81,7 @@ const query = graphql`
       }
     }
   }
-`;
+`
 ```
 
 A próxima etapa é desestruturar os dados da consulta e criar um objeto que verifique se os objetos foram usados - se não forem utilizados os valores padrão. Renomear os itens da consulta é útil aqui: evita colisões de dados.

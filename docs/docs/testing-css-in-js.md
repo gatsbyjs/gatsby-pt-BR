@@ -43,7 +43,7 @@ Por fim, você precisa informar ao Jest onde encontrar esse arquivo. Abra seu `p
 
 ```json:title=package.json
 "jest": {
-  "setupTestFrameworkScriptFile": "<rootDir>/setup-test-env.js"
+  "setupFilesAfterEnv": [`<rootDir>/setup-test-env.js`]
 }
 ```
 

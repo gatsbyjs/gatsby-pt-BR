@@ -2,11 +2,7 @@
 title: Styled Components
 ---
 
-<<<<<<< HEAD
-Neste guia, você aprenderá como configurar um site com a biblioteca CSS-in-JS [Styled Components](https://www.styled-components.com/).
-=======
-In this guide, you will learn how to set up a site with the CSS-in-JS library [Styled Components](https://styled-components.com/).
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+Neste guia, você aprenderá como configurar um site com a biblioteca CSS-in-JS [Styled Components](https://styled-components.com/).
 
 Styled Components permite você usar a sintaxe CSS real dentro de seus componentes. Styled Components é uma variante do "CSS-in-JS" — que resolve muitos dos problemas do CSS tradicional.
 
@@ -116,9 +112,6 @@ export default () => (
 )
 ```
 
-<<<<<<< HEAD
-### Ativando folhas de estilo do usuário com um nome de classe estável
-=======
 ## Creating Global Styles
 
 Styled-components are primarily used for a single CSS class that is isolated from other components. In some cases, you want to override global styling — for example, the default margins of your `body` element. Styled-components has your back. You can use the `createGlobalStyle` to accomplish this. It's advised to use `createGlobalStyle` in [Layout components](/docs/layout-components/), which are shared over multiple pages rather than using it on a single page.
@@ -142,7 +135,6 @@ export default ({ children }) => (
 ```
 
 ## Enabling user stylesheets with a stable class name
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Adicionar um nome de classe CSS (className) persistente aos seus componentes de estilo pode facilitar para os usuários finais do seu site para tirar proveito das [folhas de estilos do usuário](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para acessibilidade.
 

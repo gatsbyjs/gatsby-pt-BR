@@ -13,11 +13,7 @@ Além disso, o Gitpod pré-builda qualquer branch de um repositório para que vo
 
 ## Iniciando
 
-<<<<<<< HEAD
 Para iniciar um ambiente de desenvolvimento do zero, você pode prefixar qualquer URL do Github com `gitpod.io/#`.
-=======
-To start a fresh dev environment you can prefix any GitHub URL with `gitpod.io/#`.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 > Exemplo: https://gitpod.io/#https://github.com/gatsbyjs/gatsby
 

@@ -1,8 +1,8 @@
 ---
-title: Gatsby Project Structure
+title: Estrutura de um projeto em Gatsby
 ---
 
-Inside a Gatsby project, you may see some or all of the following folders and files:
+Dentro de um projeto Gatsby, você pode ver algumas ou todas as seguintes pastas e arquivos:
 
 ```
 /
@@ -20,32 +20,32 @@ Inside a Gatsby project, you may see some or all of the following folders and fi
 |-- gatsby-browser.js
 ```
 
-### Folders
+## Pastas
 
-- **`/.cache`** _Automatically generated._ This folder is an internal cache created automatically by Gatsby. The files inside this folder are not meant for modification. Should be added to the `.gitignore` file if not added already.
+- **`/.cache`** _Gerada automaticamente._ Essa pasta é um cache interno criado automaticamente pelo Gatsby. Os arquivos dentro desta pasta não são para ser modificados. Deve ser adicionado ao arquivo `.gitignore` se ainda não estiver adicionado.
 
-- **`/public`** _Automatically generated._ The output of the build process will be exposed inside this folder. Should be added to the `.gitignore` file if not added already.
+- **`/plugins`** Essa pasta contém qualquer plugin específico do projeto ("_local_") que não seja publicado como um pacote `npm`. Confira a documentação de [plugins](/docs/plugins) para mais detalhes.
 
-- **`/plugins`** This folder hosts any project-specific ("local") plugins that aren't published as an `npm` package. Check out the [plugin docs](/docs/plugins/) for more detail.
+- **`/public`** _Gerada automaticamente._ A saída do processo de _build_ será inserido dentro desta pasta. Deve ser adicionado ao arquivo `.gitignore` se ainda não estiver adicionado.
 
-- **`/src`** This directory will contain all of the code related to what you will see on the frontend of your site (what you see in the browser), like your site header, or a page template. “Src” is a convention for “source code”.
+- **`/src`** Esse diretório irá conter todo o código relacionado ao que você verá no _front-end_ do seu site (o que você vê no navegador), como o cabeçalho do site ou um _template_ de página. "Src" é uma convenção para "_source code_".
 
-  - **`/pages`** Components under src/pages become pages automatically with paths based on their file name. Check out the [pages docs](/docs/recipes/#creating-pages) for more detail.
-  - **`/templates`** Contains templates for programmatically creating pages. Check out the [templates docs](/docs/building-with-components/#page-template-components) for more detail.
-  - **`html.js`** For custom configuration of default .cache/default_html.js. Check out the [custom html docs](/docs/custom-html/) for more detail.
+  - **`/pages`** Componentes no diretório src/pages se tornam páginas automaticamente com caminhos baseados no nome do arquivo. Confira a [documentação de páginas](/docs/recipes/#criando-páginas-automaticamente) para mais detalhes.
+  - **`/templates`** Contém modelos de programação para automatizar a criação de páginas. Confira a [documentação de _templates_](/docs/building-with-components/#page-template-components) para mais detalhes.
+  - **`html.js`** Para customizar a configuração diferente do padrão de .cache/default_html.js. Confira a documentação, [customizando o html](/docs/custom-html/) para mais detalhes.
 
-- **`/static`** If you put a file into the static folder, it will not be processed by Webpack. Instead it will be copied into the public folder untouched. Check out the [assets docs](/docs/static-folder/#adding-assets-outside-of-the-module-system) for more detail.
+- **`/static`** Caso você coloque um arquivo na pasta _static_, ele não será processado pelo Webpack. Em vez disso, ele será copiado para a pasta _public_ sem ser modificado. Confira a documentação sobre [_assets_ estáticos](/docs/static-folder/#adicionando-assets-fora-do-sistema-de-módulos) para mais detalhes.
 
-### Files
+## Arquivos
 
-- **`gatsby-browser.js`**: This file is where Gatsby expects to find any usage of the [Gatsby browser APIs](/docs/browser-apis/) (if any). These allow customization/extension of default Gatsby settings affecting the browser.
+- **`gatsby-browser.js`**: Esse arquivo é onde o Gatsby espera encontrar qualquer uso das [APIs do navegador](/docs/browser-apis) (caso houver alguma). Isso permite a customização e modificação do padrão de configurações do Gatsby que afetam o navegador.
 
-- **`gatsby-config.js`**: This is the main configuration file for a Gatsby site. This is where you can specify information about your site (metadata) like the site title and description, which Gatsby plugins you’d like to include, etc. Check out the [config docs](/docs/gatsby-config/) for more detail.
+- **`gatsby-config.js`**: Esse é o principal arquivo de configuração de um _site_ Gatsby. É aqui que você pode especificar informações sobre seu _site_ (metadados), como o título e a descrição do site, quais plugins do Gatsby você gostaria de incluir, etc. Confira a [documentação das configurações](/docs/gatsby-config/) para mais detalhes.
 
-- **`gatsby-node.js`**: This file is where Gatsby expects to find any usage of the [Gatsby node APIs](/docs/node-apis/) (if any). These allow customization/extension of default Gatsby settings affecting pieces of the site build process.
+- **`gatsby-node.js`**: Neste arquivo é onde o Gatsby espera encontrar o uso de [node APIs](/docs/node-apis/) (caso houver). Isso permite a personalização e modificação das configurações padrões do Gatsby que afetam partes do processo de _build_ do site.
 
-- **`gatsby-ssr.js`**: This file is where Gatsby expects to find any usage of the [Gatsby server-side rendering APIs](/docs/ssr-apis/) (if any). These allow customization of default Gatsby settings affecting server-side rendering.
+- **`gatsby-ssr.js`**: Esse arquivo é o local onde o Gatsby espera encontrar qualquer uso de [APIs de renderização _server-side_](/docs/ssr-apis/) (caso houver). Isso permite a customização das configurações padrões do Gatsby que afetam a renderização _server-side_.
 
-### Miscellaneous
+## Diversos
 
-The file/folder structure described above reflects Gatsby-specific files and folders. Since Gatsby sites are also React apps, it's common to use standard React code organization patterns such as folders like `/components` and `/utils` inside `/src`. The [React docs](https://reactjs.org/docs/faq-structure.html) have more information on a typical React app folder structure.
+A estrutura de arquivos/pastas descrita acima reflete em arquivos e pastas específicos do Gatsby. Como os _sites_ Gatsby também são aplicações em React, é comum usar padrões de organização semelhantes como pastas de `/components` e `/utils` dentro do diretório `/src`. A [documentação do React](https://pt-br.reactjs.org/docs/faq-structure.html) tem mais informações sobre uma estrutura típica de pastas de uma aplicação em React.

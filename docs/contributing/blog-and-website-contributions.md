@@ -13,50 +13,6 @@ Aqui estão algumas coisas a ter em mente ao decidir para onde contribuir com o 
 ## Contribuindo para o blog
 Nota: Antes de adicionar uma postagem ao blog, certifique-se de ter a aprovação de um membro do time do Gatsby. Você pode fazer isso [abrindo uma issue](https://github.com/gatsbyjs/gatsby/issues/new/choose) ou entrando em contato com [@gatsbyjs no Twitter](https://twitter.com/gatsbyjs).
 
-<<<<<<< HEAD
-Para adicionar uma nova postagem ao blog do gatsbyjs.org:
-
-- Clone [o repositório do Gatsby](https://github.com/gatsbyjs/gatsby/) e navegue até `/www`.
-- Execute `yarn` para instalar todas as dependências do site ([Por que Yarn?](/contributing/setting-up-your-local-dev-environment#using-yarn))
-- Execute `npm run develop` para pré-visualizar o blog em `http://localhost:8000/blog`.
-- O conteúdo do blog fica na pasta `/docs/blog`. Faça modificações ou adições aqui.
-- Adicione sua imagem de avatar em `/docs/blog/avatars`.
-- Adicione seu nome no `/docs/blog/author.yaml`.
-- Adiciome uma nova pasta seguindo o padrão `/docs/blog/yyyy-mm-dd-title`. Com essa pasta recém criada adicione um arquivo `index.md`.
-- Adicione `title`, `date`, `author`, `excerpt`, e `tags` ao cabeçalho do seu `index.md`. Você pode [ver as tags existentes](/blog/tags/), ou [adicionar uma nova](https://github.com/gatsbyjs/gatsby/blob/master/www/src/data/tags-docs.js) se você acha que merece sua própria tag, no entanto recomendamos que você use as tags existentes.
-- Se você estiver publicando sua postagem em outros lugares, você pode adicionar `canonicalLink` para obter benefícios no SEO. 
-Você pode checar as outras postagens em `/docs/blog` como referência.
-- Se a sua postagem contém imagens, você deve adicionar ela na pasta da sua postagem e referênciar ela no seu `index.md`.
-- Certifique-se que todos links do gatsbyjs.org sejam relativos - `/contributing/how-to-contribute/` ao invés de `https://gatsbyjs.org/contributing/how-to-contribute`.
-- Siga o [Guia de Estilo](/contributing/gatsby-style-guide/#word-choice) para ter certeza que você está usando as palavras apropriadas.
-- Cheque novamente a gramática e adicione as letras maiúsculas corretamente.
-- Faça o Commit e envie para o seu fork.
-- Abra um pull request da sua branch.
-  - Nós recomendamos usar o prefixo `docs`, ex. `docs/your-change` ou `docs-your-change`. ([Exemplo de PR](https://github.com/gatsbyjs/gatsby/commit/9c21394add7906974dcfd22ad5dc1351a99d7ceb#diff-bf544fce773d8a5381f64c37d48d9f12))
-
-### Formato de postagem do Blog
-
-O formato a seguir pode ajudá-lo a criar seu novo conteúdo para o blog. No topo está o "frontmatter" (cabeçalho): um nome mais elegante para metadados no Markdown. O cabeçalho para seu post deve incluir um título, data, um único autor (por hora, nós estamos aceitando issues/PR para isso) e uma ou mais tags. Seu conteúdo deve estar depois do segundo grupo de traços (`---`).
-
-```md
----
-title: "Sua grande postagem no blog"
-date: YYYY-MM-DD
-author: Jamie Doe
-excerpt: "Aqui é um trecho útil ou breve descrição deste post."
-tags:
-  - awesome
-  - post
----
-
-Sua próxima grande postagem o aguarda!
-
-Inclua imagens criando uma pasta para sua postagem e adicionando
-Markdown e arquivos de imagem para facilitar a vinculação.
-
-![exemplo fantástico](./image.jpg)
-```
-=======
 If you'd like to contribute a post to the Gatsby blog, please review the process and guidelines outlined below and submit your
 idea for the post to our [Gatsby blog proposal form](https://airtable.com/shr3449954866i3iF)
 
@@ -92,7 +48,6 @@ Things we’d like to avoid on the Gatsby blog:
 - **Content that doesn’t seem to have a clear benefit for Gatsby users and/or the Gatsby community.** For example, if you’re writing about a use-case or integration that’s extremely niche or unique to specific conditions that are really uncommon outside of your organization, the Gatsby blog might not be the best place for your content. Likewise, if your blog post doesn’t seem to have any direct relationship with Gatsby (or an interesting indirect relationship with Gatsby), then it may be more appropriate for a personal blog or another community blog.
 
 **Please note** that these are guidelines, not rules. If you think your blog post belongs on the Gatsby blog, we absolutely encourage you to submit it. While we reserve the right to decide what is and isn’t appropriate for the Gatsby blog, we also value and encourage your creativity and your contributions.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ## Fazendo modificações no site
 

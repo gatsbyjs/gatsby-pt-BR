@@ -1,25 +1,20 @@
 ---
-title: Creating and Modifying Pages
+title: Criando e modificando páginas
 ---
 
-Gatsby makes it easy to programmatically control your pages.
+O Gatsby facilita a manipulação programática das suas páginas.
 
-Pages can be created in three ways:
+As páginas podem ser criadas de três maneiras:
 
-- In your site's gatsby-node.js by implementing the API
-  [`createPages`](/docs/node-apis/#createPages)
-- Gatsby core automatically turns React components in `src/pages` into pages
-- Plugins can also implement `createPages` and create pages for you
+- Através da implementação da API [`createPages`](/docs/node-apis/#createPages) no arquivo gatsby-node.js do seu site.
+- O Gatsby core automaticamente transforma os componentes React nas `src/pages` em páginas.
+- Plugins também pode implementar o `createPages` e criar páginas para você.
 
-You can also implement the API [`onCreatePage`](/docs/node-apis/#onCreatePage)
-to modify pages created in core or plugins or to create [client-only routes](/docs/building-apps-with-gatsby/).
+Você também pode implementar a API [`onCreatePage`](/docs/node-apis/#onCreatePage) caso queira modificar páginas criadas no Gatsby core, por plugins ou também criar [rotas apenas-para-clientes](/docs/building-apps-with-gatsby/).
 
-## Debugging help
+## Ajuda na depuração
 
-To see what pages are being created by your code or plugins, you can query for
-page information while developing in Graph*i*QL. Paste the following query in
-the Graph*i*QL IDE for your site. The Graph*i*QL IDE is available when running
-your sites development server at `HOST:PORT/___graphql` e.g.
+Para ver quais páginas estão sendo criadas pelo seu código ou plugins, você pode consultar as informações da página enquanto desenvolve no Graph*i*QL. Cole a seguinte consulta na IDE do Graph*i*QL para o seu site. A IDE do Graph*i*QL fica disponível ao executar o servidor de desenvolvimento do seu site na `HOST:PORT/___graphql` e.g.
 `localhost:8000/___graphql`.
 
 ```graphql
@@ -39,27 +34,26 @@ your sites development server at `HOST:PORT/___graphql` e.g.
 }
 ```
 
-The `context` property accepts an object, and we can pass in any data we want the page to be able to access.
+A propriedade `context` aceita objetos, então podemos passar quaisquer dados que nós queiramos que a página possa acessar. 
 
-You can also query for any `context` data you or plugins added to pages.
+Você também pode consultar quaisquer dados `context` adicionadas por você ou pelos plugins utilizados.
 
-> **NOTE:** There are a few reserved names that _cannot_ be used in `context`. They are: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, and `pluginCreatorId`.
+> **NOTA:** Existem algumas palavras reservadas que _não_ podem ser utilizadas no `context`. As palavras são: `path`, `matchPath`, `component`, `componentChunkName`, `pluginCreator___NODE`, e `pluginCreatorId`.
 
-## Creating pages in gatsby-node.js
+## Criando páginas no gatsby-node.js
 
-Often you will need to programmatically create pages. For example, you have
-markdown files where each should be a page.
+Frequentemente, você precisará criar páginas através de código. Por exemplo, você terá arquivos markdown, onde cada um deve ser uma página.
 
-This example assumes that each markdown page has a `path` set in the frontmatter
-of the markdown file.
+Esse exemplo assume que cada página markdown tem um `path` definido no _frontmatter_ do arquivo markdown.
 
 ```javascript:title=gatsby-node.js
-// Implement the Gatsby API “createPages”. This is called once the
-// data layer is bootstrapped to let plugins create pages from data.
+// Implemente a API do Gatsby "createPages". Isso é executado quando a camada
+// de dados é inicializada, a fim de permitir que os plugins criem as páginas
+// a partir de dados
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  // Query for markdown nodes to use in creating pages.
+  // Pesquisa nós markdown para usar na criação das páginas.
   const result = await graphql(
     `
       {
@@ -76,21 +70,21 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     `
   )
 
-  // Handle errors
+  // Manipula erros
   if (result.errors) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
 
-  // Create pages for each markdown file.
+  // Cria páginas para cada arquivo markdown.
   const blogPostTemplate = path.resolve(`src/templates/blog-post.js`)
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     const path = node.frontmatter.path
     createPage({
       path,
       component: blogPostTemplate,
-      // In your blog post template's graphql query, you can use path
-      // as a GraphQL variable to query for data from the markdown file.
+
+      // Na consulta graphql do template do seu blog, você pode usar a variável GraphQL para consultar dados dos arquivos markdown.
       context: {
         path,
       },
@@ -99,53 +93,51 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 }
 ```
 
-## Modifying pages created by core or plugins
+## Modificando páginas criadas pelo Gatsby core ou por plugins
 
-Gatsby core and plugins can automatically create pages for you. Sometimes the
-default isn't quite what you want and you need to modify the created page
-objects.
+Tanto o Gatsby core quanto plugins podem criar páginas para você de forma automática. Algumas vezes o padrão criado não é exatamente o que você quer e, por isso, você precisará modificar essas páginas criadas.
 
-### Removing trailing slashes
 
-A common reason for needing to modify automatically created pages is to remove
-trailing slashes.
+### Removendo barras à direita
 
-To do this, in your site's `gatsby-node.js` add code similar to the following:
+Uma razão comum para modificar automaticamente páginas já criadas é a remoção de barras à direita
 
-_Note: There's also a plugin that will remove all trailing slashes from pages automatically:
-[gatsby-plugin-remove-trailing-slashes](/packages/gatsby-plugin-remove-trailing-slashes/)_.
+Para isso, no arquivo `gatsby-node.js` do seu site adicione um código similar ao seguinte:
 
-_Note: If you need to perform an asynchronous action within `onCreatePage` you can return a promise or use an `async` function._
+_Nota: Existe um plugin que irá remover todos as barras à direita das páginas automaticamente:
+[plugin-gatsby-que-remove-as-barras-à-direita](/packages/gatsby-plugin-remove-trailing-slashes/)_.
+
+_Nota: Caso você precise fazer uma ação assíncrona no `onCreatePage` você pode retornar uma _promise_ ou usar uma função `async`._
 
 ```javascript:title=gatsby-node.js
-// Replacing '/' would result in empty string which is invalid
+// substituir o '/' resultaria em uma string vazia, o que é inválido.
 const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
+// Implemente a API do Gatsby “onCreatePage”. Isso é
+// executado logo que uma página é criada
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
   const oldPage = Object.assign({}, page)
-  // Remove trailing slash unless page is /
+  // Remove a barra à direita a não ser que a página seja /
   page.path = replacePath(page.path)
   if (page.path !== oldPage.path) {
-    // Replace new page with old page
+    // substitui a página antiga pela nova
     deletePage(oldPage)
     createPage(page)
   }
 }
 ```
 
-### Pass context to pages
+### Adicionar contexto à páginas
 
-The automatically created pages can receive context and use that as variables in their GraphQL queries. To override the default and pass your own context, open your site's `gatsby-node.js` and add similar to the following:
+As páginas criadas automaticamente podem receber contextos e usá-lo como variáveis nas consultas da GraphQL. Para substituir o padrão e usar o seu próprio contexto, abra o arquivo `gatsby-node.js` do seu site e adicione um código similar ao seguinte:
 
 ```javascript:title=gatsby-node.js
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
   deletePage(page)
-  // You can access the variable "house" in your page queries now
+  // Você pode acessar a variável "house" nas consultas da sua paǵina.
   createPage({
     ...page,
     context: {
@@ -155,8 +147,7 @@ exports.onCreatePage = ({ page, actions }) => {
   })
 }
 ```
-
-On your pages and templates, you can access your context via the prop `pageContext` like this:
+Nas suas páginas e templates, você pode acessar seu contexto através do suporte `pageContext` dessa maneira:
 
 ```jsx
 import React from "react"
@@ -167,9 +158,9 @@ const Page = ({ pageContext }) => {
 
 export default Page
 ```
+O contexto da página é serializado antes de ser passado para as páginas: Isso significa que ele não pode ser usado para transformar funções em componentes
 
-Page context is serialized before being passed to pages: This means it can't be used to pass functions into components.
 
-## Creating Client-only routes
+## Criando rotas somente para clientes
 
-In specific cases, you might want to create a site with client-only portions that are gated by authentication. For more on how to achieve this, refer to [client-only routes & user authentication](https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/).
+Em casos específicos, talvez você queira criar sites com porções apenas para clientes que são bloqueadas por autenticação. Para saber como fazê-lo, recorra ao [Rotas apenas-para-clientes & autenticação de usuário](https://www.gatsbyjs.org/docs/client-only-routes-and-user-authentication/).

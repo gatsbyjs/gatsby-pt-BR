@@ -14,13 +14,8 @@ Neste tutorial, você aprenderá como puxar dados para seu site Gatsby usando Gr
 
 GraphiQL é a _IDE_ (Ambiente de Desenvolvimento Integrado) do GraphQL. É uma poderosa e impressionante ferramenta que você utilizará com frequência enquanto estiver construindo websites em Gatsby.
 
-<<<<<<< HEAD
 Você pode acessá-lo quando o servidor de desenvolvimento estiver executando em
-<http://localhost:8000/___graphql>.
-=======
-You can access it when your site's development server is running—normally at
 `http://localhost:8000/___graphql`.
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="/graphiql-explore.mp4"></source>
@@ -98,13 +93,8 @@ Alternativamente, você pode adicionar campos usando o atalho de _autocomplete_ 
 
 ![filesystem-autocomplete](filesystem-autocomplete.png)
 
-<<<<<<< HEAD
 Tente adicionar um número de campos na sua query, pressionando <kbd>Ctrl + Enter</kbd>
 toda vez para executar novamente a _query_. Você verá os resultados atualizados da _query_:
-=======
-Try adding a number of fields to your query, press <kbd>Ctrl + Enter</kbd>
-each time to re-run the query. You'll see the updated query results:
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 ![allfile-query](allfile-query.png)
 
@@ -219,12 +209,7 @@ export const query = graphql`
 `
 ```
 
-<<<<<<< HEAD
-E agora visite [http://localhost:8000/my-files](http://localhost:8000/my-files)… 😲
-=======
-And now visit `http://localhost:8000/my-files`… 😲
-
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
+E agora visite `http://localhost:8000/my-files`… 😲
 ![my-files-page](my-files-page.png)
 
 ## O que vem na sequência?
