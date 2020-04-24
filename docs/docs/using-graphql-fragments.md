@@ -1,5 +1,5 @@
 ---
-title: Utilizando Fragmentos
+title: Utilizando Fragmentos GraphQL
 ---
 
 Fragmentos permitem a reutilização de consultas GraphQL. Elas também permitem a divisão de consultas complexas em componentes menores e de fácil compreensão.

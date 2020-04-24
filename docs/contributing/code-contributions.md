@@ -122,4 +122,4 @@ Confira a página [Depurando o processo de _build_](/docs/debugging-the-build-pr
 
 ## _Feedback_
 
-A equipe principal do Gabsty adoraria lhe ajudar em qualquer momento durante o seu processo de contribuição! Nós temos semanalmente um [encontro dos _Core_ Mantenedores](/contributing/community#core-maintainers-meeting) onde qualquer um tem a oportunidade de conpartilhar sua(s) criaçõe(s) e receber conselhos diretamente da equipe do Gabsty!
+At any point during the contributing process the Gatsby team would love to help! For help with a specific problem you can [open an issue on GitHub](/contributing/how-to-file-an-issue/). Or drop in to [our Discord server](https://gatsby.dev/discord) for general community discussion and support.

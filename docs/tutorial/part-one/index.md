@@ -20,7 +20,7 @@ Ao criar um novo site com Gatsby, você pode usar a seguinte estrutura de comand
 gatsby new [NOME_DO_DIRETORIO_DO_SITE] [URL_DO_STARTER_NO_GITHUB]
 ```
 
-Se você não colocar a URL no final do comando, o Gatsby vai automaticamente criar um site com base no [starter default](https://github.com/gatsbyjs/gatsby-starter-default). Mas, para essa seção do tutorial, fique com o site “Hello World” que você já criou na parte zero.
+Se você não colocar a URL no final do comando, o Gatsby vai automaticamente criar um site com base no [starter default](https://github.com/gatsbyjs/gatsby-starter-default). Mas, para essa seção do tutorial, fique com o site “Hello World” que você já criou na parte zero. Você pode aprender a como [modificar starters](/docs/modifying-a-starter) na documentação.
 
 ### ✋ Abra o código
 
@@ -165,7 +165,7 @@ export default () => (
 )
 ```
 
-2.  Abra o seguinte link no seu navegador: http://localhost:8000/about/.
+2.  Abra o seguinte link no seu navegador: `http://localhost:8000/about/`.
 
 ![Nova página "Sobre"](05-about-page.png)
 
@@ -324,7 +324,7 @@ export default () => (
 )
 ```
 
-Depois que você salvar o arquivo, você deve ver um página de contato e deve poder navegar entre essas páginas.
+Depois que você salvar o arquivo, você deve ver a página contato e conseguir acessar através do link na página inicial.
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
@@ -367,6 +367,8 @@ Por fim, faça o deploy do seu site publicando os arquivos gerados em surge.sh.
 ```shell
 surge public/
 ```
+
+> Note que precisa pressionar o botão `enter` depois que ver a mensagem `domain: some-name.surge.sh` em seu terminal.
 
 Quando o processo de deploy terminar, você verá no seu terminal algo como:
 

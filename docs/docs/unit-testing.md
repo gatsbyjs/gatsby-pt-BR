@@ -15,8 +15,7 @@ _OBS: Para esse guia, você começará com o `gatsby-starter-default`, mas os co
  
 ### 1. Instalando dependências
  
-Primeiro você precisa instalar o Jest e alguns pacotes necessários. Nós instalamos
-babel-jest and babel-preset-gatsby para garantir que os presets do babel usados correspondam aos que foram utilizados internamente no site do Gatsby.
+Primeiro você precisa instalar o Jest e alguns pacotes necessários. Nós instalamos babel-jest and babel-preset-gatsby para garantir que os presets do babel usados correspondam aos que foram utilizados internamente no site do Gatsby.
  
  
 ```shell
@@ -31,28 +30,29 @@ criando um arquivo `jest.config.js`. Você pode aproveitar para configurar algun
  
 ```js:title=jest.config.js
 module.exports = {
- transform: {
-   "^.+\\.jsx?$": `<rootDir>/jest-preprocess.js`,
- },
- moduleNameMapper: {
-   ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
-   ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/__mocks__/file-mock.js`,
- },
- testPathIgnorePatterns: [`node_modules`, `.cache`, `public`],
- transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
- globals: {
-   __PATH_PREFIX__: ``,
- },
- testURL: `http://localhost`,
- setupFiles: [`<rootDir>/loadershim.js`],
+  transform: {
+    "^.+\\.jsx?$": `<rootDir>/jest-preprocess.js`,
+  },
+  moduleNameMapper: {
+    ".+\\.(css|styl|less|sass|scss)$": `identity-obj-proxy`,
+    ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": `<rootDir>/__mocks__/file-mock.js`,
+  },
+  testPathIgnorePatterns: [`node_modules`, `\\.cache`, `<rootDir>.*/public`],
+  transformIgnorePatterns: [`node_modules/(?!(gatsby)/)`],
+  globals: {
+    __PATH_PREFIX__: ``,
+  },
+  testURL: `http://localhost`,
+  setupFiles: [`<rootDir>/loadershim.js`],
 }
 ```
- 
+
 Vamos dar uma olhada nesse arquivo de configuração:
  
 - A seção `transform` fala ao Jest que todos os arquivos `js` or `jsx` precisam ser
- transformados usando o arquivo `jest-preprocess.js` na raiz do projeto. Vá em frente e crie esse arquivo agora. É aqui que você define a sua configuração do Babel. Você pode começar seguindo a configuração mínima:
- 
+transformados usando o arquivo `jest-preprocess.js` na raiz do projeto. Vá em frente
+e crie esse arquivo agora. É aqui que você define a sua configuração do Babel. Você pode começar seguindo a configuração mínima:
+
 ```js:title=jest-preprocess.js
 const babelOptions = {
  presets: ["babel-preset-gatsby"],
@@ -84,13 +84,13 @@ module.exports = "test-file-stub"
  o Gatsby inclui código ES6 não transpilado. Por padrão o Jest tenta transformar o código
  dentro do `node_modules`, então você receberá um erro como este:
  
-
 ```text
 /my-app/node_modules/gatsby/cache-dir/gatsby-browser-entry.js:1
 ({"Object.<anonymous>":function(module,exports,require,__dirname,__filename,global,jest){import React from "react"
                                                                                            ^^^^^^
 SyntaxError: Unexpected token import
 ```
+
 Isso ocorre porque o `gatsby-browser-entry.js` não está sendo transpilado antes
 da execução no Jest. Você pode corrigir isso alterando o padrão `transformIgnorePatterns`
 para excluir o módulo `gatsby`.
@@ -198,78 +198,56 @@ executável do `jest`, que estará disponível assim:
    "test": "jest"
  }
 ```
-Isso significa que você pode executar testes digitando `npm test`. Você também pode
-executar com um flag que aciona o `watch mode` para observar e executar testes quando eles são alterados: `npm test -- --watch`.
 
-Execute novamente os testes e agora tudo irá funcionar! Você pode receber uma mensagem sobre
-o snapshot sendo gravado. Isto é, criado no próximo diretório `__snapshots__` para seus testes.
-Se você observar, verá que é um JSON do componente `<Header />`. você deve armazenar seus arquivos
-snapshot em um sistema de controle de versão (por exemplo, o repositório GitHub) para que quaisquer
-alterações sejam gravadas no histórico. Isso é particularmente importante para lembrar se está usando um sistema de integração como o Travis ou CircleCI para executar testes, pois eles irão falhar se o snapshot não estiver armazenado em um repositório.
- 
-Se você fizer alterações isso significa que você precisa atualizar o snapshot,
-você pode fazer isso executando `npm test -- -u`.
- 
- 
-## Usando TypeScript
- 
-Se você estiver usando TypeScript, você precisará fazer algumas pequenas alterações
-na sua configuração. Primeiro instale o `ts-jest`:
- 
-```shell
-npm install --save-dev ts-jest
-```
- 
-Então atualize a configuração no `jest.config.js`, da seguinte forma:
- 
+This means you can now run tests by typing `npm test`. If you want you could
+also run with a flag that triggers watch mode to watch files and run tests when they are changed: `npm test -- --watch`.
+
+Run the tests again now and it should all work! You may get a message about
+the snapshot being written. This is created in a `__snapshots__` directory next
+to your tests. If you take a look at it, you will see that it is a JSON
+representation of the `<Header />` component. You should check your snapshot files
+into a source control system (for example, a GitHub repo) so that any changes are tracked in history.
+This is particularly important to remember if you are using a continuous
+integration system such as Travis or CircleCI to run tests, as these will fail if the snapshot is not checked into source control.
+
+If you make changes that mean you need to update the snapshot, you can do this
+by running `npm test -- -u`.
+
+## Using TypeScript
+
+If you are using TypeScript, you need to make two changes to your
+config.
+
+Update the transform in `jest.config.js` to run `jest-preprocess` on files in your project's root directory.
+
+**Note:** `<rootDir>` is replaced by Jest with the root directory of the project. Don't change it.
+
 ```js:title=jest.config.js
-module.exports = {
- transform: {
-   "^.+\\.tsx?$": "ts-jest",
-   "^.+\\.jsx?$": "<rootDir>/jest-preprocess.js",
- },
- testRegex: "(/__tests__/.*|(\\.|/)(test|spec))\\.([tj]sx?)$",
- moduleNameMapper: {
-   ".+\\.(css|styl|less|sass|scss)$": "identity-obj-proxy",
-   ".+\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$":
-     "<rootDir>/__mocks__/file-mock.js",
- },
- moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
- testPathIgnorePatterns: ["node_modules", ".cache", "public"],
- transformIgnorePatterns: ["node_modules/(?!(gatsby)/)"],
- globals: {
-   __PATH_PREFIX__: "",
- },
- testURL: "http://localhost",
- setupFiles: ["<rootDir>/loadershim.js"],
+    "^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js",
+```
+
+Also update `jest.preprocess.js` with the following Babel preset to look like this:
+
+```js:title=jest-preprocess.js
+const babelOptions = {
+  presets: ["babel-preset-gatsby", "@babel/preset-typescript"],
 }
 ```
- 
-Você pode perceber que outras duas opções, `testRegex` and `moduleFileExtensions`,
-foram adicionadas. A opção `testRegex` é o padrão que informa ao Jest quais os arquivos
-contém testes. O padrão acima corresponde a qualquer arquivo `.js`, `.jsx`, `.ts` ou `.tsx`
-dentro do diretório `__tests__`, ou qualquer outro arquivo com extensão `.test.js`,
-`.test.jsx`, `.test.ts`, `.test.tsx`, or `.spec.js`, `.spec.jsx`,`.spec.ts`, `.spec.tsx`.
- 
-A opção `moduleFileExtensions` é necessária quando se está usando o TypeScript.
-A única coisa que está sendo feita é dizer ao Jest quais extensões
-você pode importar nos seus arquivos sem precisar informar a extensão do arquivo.
-Por padrão, isso funciona com extensões de arquivo `js`, `json`, `jsx`, `node`,
-portanto precisamos apenas adicionar `ts` e `tsx`. Você pode ler mais a respeito na
-[Documentação do Jest](https://jestjs.io/docs/en/configuration.html#modulefileextensions-array-string).
- 
-## Outros recursos
- 
-Se você precisar fazer mudanças na sua configuração do Babel, você pode editá-la no
-`jest-preprocess.js`. Pode ser necessário que você ative alguns plugins usados pelo Gatsby,
-mas lembre-se de que você pode precisar instalar as versões do Babel 7. Acesse [Guia para
-configuração do Babel](/docs/babel) para alguns exemplos.
- 
-Para mais informações sobre teste no Jest, visite [o site do Jest](https://jestjs.io/docs/en/getting-started).
- 
-Para exemplos englobando todas essas técnicas e um conjunto de testes unitários com
-[@testing-library/react][react-testing-library], dê uma olhada no exemplo [using-jest][using-jest].
- 
+
+Once this is changed, you can write your tests in TypeScript using the `.ts` or `.tsx` extensions.
+
+## Other resources
+
+If you need to make changes to your Babel config, you can edit the config in
+`jest-preprocess.js`. You may need to enable some of the plugins used by Gatsby,
+though remember you may need to install the Babel 7 versions. See
+[the Gatsby Babel config guide](/docs/babel) for some examples.
+
+For more information on Jest testing, visit
+[the Jest site](https://jestjs.io/docs/en/getting-started).
+
+For an example encapsulating all of these techniques--and a full unit test suite with [@testing-library/react][react-testing-library], check out the [using-jest][using-jest] example.
+
 [using-jest]: https://github.com/gatsbyjs/gatsby/tree/master/examples/using-jest
 [react-testing-library]: https://github.com/testing-library/react-testing-library
  

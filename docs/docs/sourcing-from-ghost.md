@@ -113,6 +113,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 ## Saída de dados
 
+OP código acima irá criar páginas na raiz do site em `/`, com a rota sendo o _slug_ do post.
+
 Em seguida, dentro do modelo `post.js`, você pode determinar exatamente como e onde você quer a saída de dados em cada página. Novamente, você vai utilizar GraphQL para consultar campos individuais. Um simples exemplo seria algo como:
 
 ```jsx:title=templates/post.js

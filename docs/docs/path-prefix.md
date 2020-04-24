@@ -32,7 +32,17 @@ gatsby build --prefix-paths
 
 Se essa opção não for passada, Gatsby ignorará seu `pathPrefix` e fará o build do website como se estivesse hospedado na raiz do domínio.
 
-### Links dentro da aplicação
+## Serve
+
+Serve your application with the `--prefix-paths` flag, like so:
+
+```shell
+gatsby serve --prefix-paths
+```
+
+If this flag is not passed, Gatsby will ignore your `pathPrefix`.
+
+## Links dentro da aplicação
 
 O Gatsby provê APIs e bibliotecas para fazer uso dessa funcionalidade sem problemas. Especificamente, o componente [`Link`](/docs/gatsby-link/) tem uma funcionalidade embutida para lidar com prefixo na rota.
 
@@ -75,7 +85,7 @@ export default function Index() {
 }
 ```
 
-### Adicione o prefixo nas rotas usando `withPrefix`
+## Adicione o prefixo nas rotas usando `withPrefix`
 
 Para rotas construídas manualmente, existe essa função auxiliar, [`withPrefix`](/docs/gatsby-link/#add-the-path-prefix-to-paths-using-withprefix) que prefixa a sua rota em produção (mas não durante o desenvolvimento onde as rotas não precisam ser prefixadas).
 

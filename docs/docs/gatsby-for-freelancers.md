@@ -1,5 +1,6 @@
 ---
 title: Gatsby para Freelancers
+issue: https://github.com/gatsbyjs/gatsby/issues/21069
 ---
 
 Como um freelancer, a coisa mais importante é [ajudar os clientes a entender](/docs/winning-over-clients) os benefícios do Gatsby.

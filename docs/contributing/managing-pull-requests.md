@@ -24,6 +24,8 @@ Algumas coisas gerais para serem verificadas em um pull request são:
 
 > 💡 Ao olhar para um PR pela primeira vez, pode ser de grande ajuda ler sobre problemas vinculados ou [RFCs](/contributing/rfc-process/) (se houver) para entender o contexto sobre o que o PR pretende adicionar ou corrigir.
 
+Nota para membros da equipe principal ou de aprendizado do Gatsby: se uma PR possui conflitos de merge ou precisa de alguma ajuda para ser completada, contribuir diretamnte em um fork ou uma branch é um bom jeito de resolver. Veja mais detalhes em [fazendo um push para um fork remoto no Git](#pushing-changes-to-a-remote-fork).
+
 ### Tipos Específicos de Diretrizes
 
 Cada tipo de PR também exige um conjunto diferente de verificações antes de serem mergeadas.
@@ -38,6 +40,8 @@ Normalmente, procuramos o seguinte em [PRs que adicionam documentação](/contri
 - Estilo - se a linguagem escrita segue o nosso [guia de estilo](/contributing/gatsby-style-guide/)
 - Cabeçalhos – se os níveis de cabeçalho em um documento começam com h2 (`##` no Markdown) e crescem em ordem, estabelecendo uma hierarquia de conteúdo acessível
 - Tipo e Formato - se os documentos e os materiais de aprendizagem estão alinhados com nossas recomendações e [modelos de documentos](/contributing/docs-templates/) 
+
+Se uma PR incluir exemplos de código, tutoriais, receitas ou guias de ação, o revisor deve testar o material afim de garantir a acurácia. **Nenhum PRs deve ser aprovado ou mergeado caso não esteja livre de erros ou omissão de algum conteúdo.**
 
 #### Código
 
@@ -62,10 +66,11 @@ Os sites em destaque são ocasionalmente atualizados por um membro da equipe Gat
 
 Para PRs que adicionam postagens, devemos verificar: 
 
+- Aprovado – O [post do blog foi aprovado](/contributing/blog-and-website-contributions/) pela equipe de marketing ou algum outro time interno do Gatsby?
 - Corretude — se a documentação adicionada está tecnicamente correta
 - Estilo — se a linguagem escrita segue o nosso [guia de estilo](/contributing/gatsby-style-guide/)
 - Assunto — as postagens do blog não devem ser puramente promocionais, com spam ou inapropriadas. Um autor deve verificar com um membro da equipe do Gatsby se sua postagem é apropriada para o blog antes de criar seu PR.
-- Sensibilidade ao tempo — as postagens do blog levam mais tempo do que os documentos, especialmente porque são enterradas após a publicação de mais postagens. Se algo é continuamente relevante e mais próximo de um tutorial genérico, provavelmente deve estar na seção [Guias de referência](/docs/guides/) dos documentos.
+- Sensibilidade ao tempo — as postagens do blog levam mais tempo do que os documentos, especialmente porque são enterradas após a publicação de mais postagens. Se algo é continuamente relevante e mais próximo de um tutorial genérico, provavelmente deve estar na seção [Guias de referência](/docs/guides/) ou na seção [tutorials](/tutorial/) da documentação.
 
 ## Verificações automáticas
 
@@ -141,22 +146,34 @@ Esses são títulos ruins de PR porque são genéricos, não comunicam a altera�
 - Seja objetivo e limite as remoções (alguns são bons se agregar valor ou melhorar a legibilidade do código)
 - Não sugira nem espere mudanças fora do escopo que sejam melhor tratadas em um PR separado.
 
+## Pushing changes to a remote fork
+
+Sometimes the easiest way to unblock a stalled PR is to sort out merge conflicts or apply remaining suggestions. When the GitHub UI won't cut it, you can (often) apply changes directly to someone's remote fork with Git:
+
+- Add their Gatsby fork as a remote:<br />`git remote add <forkname> git@github.com:<username>/gatsby.git`
+- Fetch the branches:<br />`git fetch <forkname>`
+- Check out their branch locally:<br />`git checkout -b <branch-name> <forkname>/<branch-name>`
+- Make your changes, add some commits
+- Push branch to the remote fork (also see [Gotchas](#gotchas) below):<br /> `git push <forkname> head:<branch-name>`
+
+Alternatively, you can manage forks and branches with [hub](https://github.com/github/hub).
+
 ## Direitos e Permisões
 
 ### Quem pode revisar um PR?
 
-Se você é um membro da organização [gatsbyjs](http://github.com/gatsbyjs) no GitHub, pode revisar um PR.
+If you're a member of the [gatsbyjs](https://github.com/gatsbyjs) organization on GitHub, you can review **most** PRs. PRs with [`topic: internal`](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+internal%22) are reserved for Core and Learning team members as they are typically part of an internal project or hiring process.
 
 > 💡 Ainda não é membro? Deseja [participar da contribuição](/contributing/how-to-contribute/) para projetos open source? Faça sua primeira contribuição e você será convidado automaticamente!
 
 ### Quem pode aprovar um PR?
 
-Todo PR aberto no repositório precisa ser aprovado antes que possa ser mergeado. Embora qualquer pessoa que seja membro da organização [gatsbyjs](http://github.com/gatsbyjs) possa aprovar um PR, para ser mergeado, ele precisa ser revisado por um membro da equipe Gatsby.
+Every PR opened in the repository needs to be approved before it can be merged. While anyone who is a member of the [gatsbyjs](https://github.com/gatsbyjs) organization can approve a PR, to be merged in, it needs to be reviewed by a member of the team that owns that part of Gatsby.
 
 Normalmente é isso:
 
 - **gatsbyjs/core** para código
-- **gatsbyjs/docs** para documentação
+- **gatsbyjs/learning** para documentação
 
 Também temos `CODEOWNERS` definidos em diferentes partes do repositório e uma aprovação por alguém do `CODEOWNERS` para o(s) arquivo(s) que o PR está mudando também pode ser suficiente.
 

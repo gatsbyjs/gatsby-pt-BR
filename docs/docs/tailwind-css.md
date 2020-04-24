@@ -6,12 +6,13 @@ Tailwind é uma estrutura [utility-first](https://tailwindcss.com/docs/utility-f
 
 ## Visão geral
 
-Existem duas maneiras de usar o Tailwind com o Gatsby:
+There are three ways you can use Tailwind with Gatsby:
 
-1. Standard: Use o PostCSS para gerar classes Tailwind, e você poderá aplicá-las usando `className`.
-2. CSS-in-JS: Integrar classes Tailwind com Styled-Components.
+1. Standard: Use PostCSS to generate Tailwind classes, then you can apply those classes using `className`.
+2. CSS-in-JS: Integrate Tailwind classes into Styled Components.
+3. SCSS: Use [gatsby-plugin-sass](/packages/gatsby-plugin-sass) to support Tailwind classes in your SCSS files.
 
-Você precisa instalar e configurar o Tailwind para ambos os métodos, portanto, este guia percorrerá essa etapa primeiro, e então você pode seguir as instruções para PostCSS ou CSS-in-JS.
+You have to install and configure Tailwind for all of these methods, so this guide will walk through that step first, then you can follow the instructions for PostCSS, CSS-in-JS or SCSS.
 
 ## Instalando e configurando o Tailwind
 
@@ -35,7 +36,7 @@ npx tailwind init
 
 ### Opção #1: PostCSS
 
-1.  Instale o plugin Gatsby PostCSS [**gatsby-plugin-postcss**](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-plugin-postcss).
+1.  Instale o plugin Gatsby PostCSS [**gatsby-plugin-postcss**](/packages/gatsby-plugin-postcss).
 
 ```shell
 npm install --save gatsby-plugin-postcss
@@ -88,7 +89,7 @@ npm install tailwindcss@0.7.4
 npm install tailwind.macro
 ```
 
-2. Use o Babel Macro (tailwind.macro) no seu styled component
+2. Use o Babel Macro (`tailwind.macro`) no seu styled component
 
 ```javascript
 import styled from "styled-components"

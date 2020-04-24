@@ -3,8 +3,6 @@ title: Glossário
 disableTableOfContents: true
 ---
 
-import HorizontalNavList from "../../www/src/components/horizontal-nav-list.js"
-
 Quando você é novo no Gatsby, pode haver muitas palavras para aprender. Este glossário tem como objetivo fornecer uma visão geral de termos comuns e o que eles significam para sites Gatsby.
 
 <HorizontalNavList
@@ -110,7 +108,19 @@ Continuous deployment (CD) automates the process of releasing changes to your pr
 
 ### Decoupled
 
-A dissociação descreve a separação de diferentes preocupações. Com o [Gatsby](#gatsby) , isso geralmente significa dissociar o [frontend](#frontend) do [backend](#backend), como no [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) ou [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+Decoupling describes the separation of different concerns. With [Gatsby](#gatsby) this most commonly means decoupling the [frontend](#frontend) from the [backend](#backend), like with [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) or [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+
+### [Decoupled Drupal](/docs/glossary/decoupled-drupal)
+
+Decoupling refers to the practice of using Drupal as a [headless CMS](#headless-cms). A decoupled Drupal instance functions as a content API that returns JSON for your [frontend](#frontend) to consume.
+
+### Deploy
+
+The process of [building](#build) your website or app and uploading onto a [hosting provider](#hosting).
+
+### Development Environment
+
+The [environment](#environment) when you're developing your code. It's accessed through the [CLI](#cli) using `gatsby develop`, and provides extra error reporting and things to help you debug before building for [production](#production-environment).
 
 ### DOM
 
@@ -156,7 +166,11 @@ Uma linguagem de marcação que todo navegador da web é capaz de entender. Sign
 
 Um [CMS](#cms) que lida apenas com o gerenciamento de conteúdo do [backend](#backend) em vez de lidar com o backend e o [frontend](#frontend). Esse tipo de configuração também é conhecido como [Desacoplado](#decoupled).
 
-### Hospedagem
+### [Headless WordPress](/docs/glossary/headless-wordpress)
+
+The practice of using JSON returned from the WordPress REST API as a [headless CMS](#headless-cms). It allows you to use WordPress to write and edit content that can be consumed by any client capable of parsing JSON.
+
+### Hosting
 
 Um provedor de hospedagem mantém uma cópia do seu site ou aplicativo e o torna acessível [ao público](#público). Os [provedores de hospedagem comuns para projetos Gatsby](/docs/deploying-and-hosting/) incluem Netlify, AWS, S3, Surge, Heroku e mais.
 
@@ -257,7 +271,7 @@ O processo de [construção](#build) do seu site ou aplicativo e envio para um [
 
 ### Programaticamente
 
-Algo que acontece automaticamente com base no seu código e configuração. Por exemplo, você pode [configurar](#configuração) seu projeto para criar uma [página](#página) para cada postagem de blog escrita ou ler e exibir o ano atual como parte de um _copyright_ no rodapé do site.
+Progressive enhancement is a strategy for the web that emphasizes core page content is loaded from a server before anything else, without [JavaScript](#javascript) as a requirement to load. This strategy then progressively adds more complex layers of presentation and features on top of the content as the end user's browser/network connection allow. Gatsby's default approach to [building](#build) pages ahead-of-time means content will load first and enhance as scripts download and execute.
 
 ### Público
 

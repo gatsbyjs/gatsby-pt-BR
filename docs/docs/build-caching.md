@@ -9,7 +9,7 @@ Armazenamento em Cache já é usado pelo Gatsby e plugins, por exemplo:
 - qualquer nó criado por plugin nativo/transformador é armazenado em cache.
 - o `gatsby-plugin-sharp` armazena em cache as miniaturas construidas.
 
-Os dados são armazenados no diretório `.cache` na raíz do seu projeto.
+Os dados são armazenados nos diretórios `.cache` e `public` na raíz do seu projeto.
 
 ## A API de cache
 
