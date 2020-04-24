@@ -34,7 +34,7 @@ Por exemplo:
 ```javascript
 runSift({
   args: {
-    filter: { // Argumentos exatamente iguals aos da consulta do GraphQL
+    filter: { // Argumentos exatamente iguais aos da consulta do GraphQL
       wordcount: {
         paragraphs: {
           eq: 4
@@ -96,7 +96,7 @@ Para auxiliar na etapa 3, criamos uma versão dos argumentos siftificados chamad
 
 ### 3. Resolver campos internos de consulta em todos os nodes
 
-A etapa 4 executará a consulta sift por todos os nodes, retornando o primeiro que corresponderá a consulta. Mas nos devemos lembrar que os nodes que estão apenas no redux incluem dados que foram criados explicitamente por seus plugins de origem ou de transformação. Se ao invés de criar um campo de dados, um plugin usou `setFieldsOnGraphQLNodeType` para definir um campo personalizado, então temos que manualmente chamar os resolvedores de campo para cada node. Os argumentos na etapa 2 são um ótimo exemplo. O campo wordcount é definido pelo plugin [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/src/extend-node-type.js#L416), ao invés de ser criado durante a criação do node de observação.
+A etapa 4 executará a consulta sift por todos os nodes, retornando o primeiro que corresponder a consulta. Mas devemos lembrar que os nodes que estão em redux apenas incluem dados que foram criados explicitamente por seus plugins de origem ou de transformação. Se ao invés de criar um campo de dados, um plugin usou `setFieldsOnGraphQLNodeType` para definir um campo personalizado, então temos que manualmente chamar os resolvedores de campo para cada node. Os argumentos na etapa 2 são um ótimo exemplo. O campo wordcount é definido pelo plugin [gatsby-transformer-remark](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-transformer-remark/src/extend-node-type.js#L416), ao invés de ser criado durante a criação do node de observação.
 
 A função [nodesPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L168) itera para todos os nodes deste tipo. Então, para cada node, [resolveRecursive](https://github.com/gatsbyjs/gatsby/blob/6dc8a14f8efc78425b1f225901dce7264001e962/packages/gatsby/src/redux/run-sift.js#L135) desce percorrendo a árvore `siftToFields`, obtendo o nome do campo, e depois achando seu gqlType, e então chamando a função `resolve` para tipos manualmente. Pegando o exemplo acima, nós podemos achar o gqlField para seu `wordcount` e então chamar seu campo de resolução.
 
@@ -108,12 +108,12 @@ Note que a biblioteca do graphql-js NÃO foi chamada ainda. Ao invés disso, nó
 
 O método de resolução neste caso irá retornar um node parágrafo, o qual também precisa ser resolvido adequadamente. Então descemos na árvore de argumento do `fieldsToSift` e realizamos a operação acima no node parágrafo(usando o parágrafo encontrado gqlType).
 
-Após a conclusão do `resolvRecursive`, teremos "realizado" todos os campos da consulta em cada nó, dando-nos a confiança de que podemos executar a consulta com todos os dados.
+Após a conclusão do `resolvRecursive`, teremos "realizado" todos os campos da consulta em cada node, dando-nos a confiança de que podemos executar a consulta com todos os dados.
 
 
 ### 4. Rastrear campos recém criados
 
-Como novos campos no nó podem ter sido criados nesse processo, chamamos `trackInlineObjectsInRootNode()` para rastrear esses novos objetos. Consulte a documentação do [Node Tracking](/docs/node-tracking/) para obter mais informações.
+Podem ter sido criados novos campos nos nodes, então chamamos `trackInlineObjectsInRootNode()` para rastrear esses novos objetos. Consulte a documentação do [Node Tracking](/docs/node-tracking/) para obter mais informações.
 
 ### 5. Executar consultas sift em todos os nodes
 Agora que percebemos todos os campos que precisam ser consultados, em todos os nodes desse tipo, estamos finalmente prontos para aplicar a consulta sift. Esta etapa é tratada pelo [tempPromise](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/redux/run-sift.js#L214). E ele simplesmente concatena todos os objetos de nível superior na árvore de argumentos, junto com uma expressão sift `$and` e então itera por todos os nodes retornando o primeiro que satisfaz a expressão sift.
@@ -122,7 +122,7 @@ No caso em que `connection === true` (argumento passado pelo run-sift), então a
 
 ### 6. Criar dependências das páginas se necessário
 
-Supondo que encontramos um nó (ou vários, se a `connection` === true), finalizamos gravando a página que iniciou a consulta (no campo `path`) dependendo do nó encontrado. Mais sobre isso em [Page -> Node Dependencies](/docs/page-node-dependencies/).
+Supondo que encontramos um node (ou vários, se a `connection` === true), finalizamos gravando a página que iniciou a consulta (no campo `path`) dependendo do node encontrado. Mais sobre isso em [Page -> Node Dependencies](/docs/page-node-dependencies/).
 
 ## Nota sobre os efeitos colaterais do resolvedor de plugins
 
