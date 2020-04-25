@@ -2,134 +2,135 @@
 title: Gatsby no Linux
 ---
 
-This guide assumes you already have a native installation of Linux on your machine. The following steps walk through how to install Node.js and associated dependencies.
+Este guia assume que você já possui uma instalação nativa do Linux em sua máquina. As etapas a seguir mostram como instalar o Node.js e dependências associadas.
 
-## Ubuntu, Debian, and other `apt` based distros
+## Ubuntu, Debian, e outras distros baseadas no `apt`
 
-Begin by updating and upgrading.
+Comece dando update e upgrade nos pacotes já existentes.
 
 ```shell
 sudo apt update
 sudo apt -y upgrade
 ```
 
-Install cURL which allows you to transfer data and download additional dependencies.
+Installe o cURL que permite transferencia de dados e o download de dependencias adicionais.
 
 ```shell
 sudo apt install curl
 ```
 
-Once `curl` is installed, you can use it to install `nvm`, which will manage `node` and all its associated versions.
+Agora você pode usar o `curl` para instalar o `nvm`, que irá gerenciar a instalação do `node` e todas suas versões associadas.
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-> Note that this is the current stable release of nvm. Full installation instructions and troubleshooting can be found at the [nvm GitHub page](https://github.com/nvm-sh/nvm)
+> Observe que esta é a versão estavel atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [pagina do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-When `nvm` is installed, it does not default to a particular `node` version. You'll need to install the version you want and give `nvm` instructions to use it. This example uses the latest release of version `10`, but more recent version numbers can be used instead.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utiliza-lo. Este exemplo usa o ultimo lançamento da versão `10`, mas novas versões podem ser usadas também.
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-To confirm this has worked, use the following command.
+Para ter certeza que a instalação foi bem sucedida, use o seguinte comando.
 
 ```shell
 node -v
 ```
 
-> Note that `npm` comes packaged with `node`
+> Observe que `npm` vem no mesmo pacote que o `node` 
 
-Finally, install `git` which will be necessary for creating your first Gatsby project based on a starter.
+Por ultimo, instale o `git` que vai ser necessario para criar seu primeiro projeto do Gatsby baseado em template `stater`
 
 ```shell
 sudo apt install git
 ```
 
-## Fedora, RedHat, and other `dnf` based distros
+## Fedora, RedHat e outras distros baseadas no `dnf`
 
-These distros come installed with `curl`, so you can use that to download `nvm`.
+Estas distros já vem com o `curl` instalado, já podemos usa-lo para baixar o `nvm`
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-> Note that this is the current stable release of nvm. Full installation instructions and troubleshooting can be found at the [nvm GitHub page](https://github.com/nvm-sh/nvm)
+> Observe que esta é a versão estavel atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [pagina do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-When `nvm` is installed, it does not default to a particular `node` version. You'll need to install the version you want and give `nvm` instructions to use it. This example uses the latest release of version `10`, but more recent version numbers can be used instead.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utiliza-lo. Este exemplo usa o ultimo lançamento da versão `10`, mas novas versões podem ser usadas também.
+
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-To confirm this has worked, use the following command.
+Para ter certeza que a instalação foi bem sucedida, use o seguinte comando.
 
 ```shell
 node -v
 ```
 
-> Note that `npm` comes packaged with `node`
+> Observe que `npm` vem no mesmo pacote que o `node` 
 
-Finally, install `git` which will be necessary for creating your first Gatsby project based on a starter.
+Por ultimo, instale o `git` que vai ser necessario para criar seu primeiro projeto do Gatsby baseado em template `stater`
 
 ```shell
 sudo dnf install git
 ```
 
-## Archlinux and other `pacman` based distros
+## Archlinux e outras distros baseadas em `pacman`
 
-Begin by updating.
+Comece dando atualizando os pacotes já existentes
 
 ```shell
 sudo pacman -Sy
 ```
 
-These distros come installed with `curl`, so you can use that to download `nvm`.
+Estas distros já vem com o `curl` instalado, já podemos usa-lo para baixar o `nvm`
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-> Note that this is the current stable release of nvm. Full installation instructions and troubleshooting can be found at the [nvm GitHub page](https://github.com/nvm-sh/nvm)
+> Observe que esta é a versão estavel atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [pagina do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-Before using `nvm`, you need to install additional dependencies.
+Antes de usar o `nvm`, você precisa instalar as dependencias adicionais.
 
 ```shell
 sudo pacman -S grep awk tar git
 ```
 
-When `nvm` is installed, it does not default to a particular `node` version. You'll need to install the version you want and give `nvm` instructions to use it. This example uses the latest release of version `10`, but more recent version numbers can be used instead.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utiliza-lo. Este exemplo usa o ultimo lançamento da versão `10`, mas novas versões podem ser usadas também.
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-To confirm this has worked, use the following command.
+Para ter certeza que a instalação foi bem sucedida, use o seguinte comando.
 
 ```shell
 node -v
 ```
 
-> Note that `npm` comes packaged with `node`
+> Observe que `npm` vem no mesmo pacote que o `node` 
 
 ## Windows Subsystem Linux (WSL)
 
-This guide assumes that you already have WSL installed with a working Linux distro. If you don't, follow [this guide from Microsoft's site](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to install WSL and a Linux distro of your choice.
+Este guia pressupõe que você já possui o WSL instalado com uma distribuição Linux em funcionamento. Caso não possua, siga as instruções [deste guia da Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10) para instalar o WSL e uma distro linux da sua escolha
 
-As of October 17th 2017, Windows 10 ships with WSL and Linux distributions are available via the Microsoft Store, there are several different distributions to use which can be configured via `wslconfig` if you have more than one distribution installed.
+A partir de 17 de outubro de 2017, o Windows 10 é fornecido com distribuições WSL e Linux disponíveis na Microsoft Store, existem várias distribuições diferentes para usar que podem ser configuradas via `wslconfig` se você tiver mais de uma distribuição instalada.
 
 ```shell
 # definir a distribuição padrão para o Ubuntu
 wslconfig /setdefault ubuntu
 ```
 
-> Please note that if you have used the [Gatsby on Windows](/docs/gatsby-on-windows/) setup without WSL, then you have to delete any existing `node_modules` folder in your project and re-install the dependencies in your WSL environment.
+> Observe que, se você usou a configuração do [Gatsby no Windows](/docs/gatsby-on-windows/) sem o WSL, etnão você tem que pagar qualquer pasta `node_modules` do seu projeto e re-instalar usando as dependencias  no seu ambiente WSL.
 
-### Using Windows Subsystem Linux: Ubuntu
+### Usando o WSL: Ubuntu
 
 Se você tem uma instalação limpa do Ubuntu, atualize-o:
 
@@ -167,7 +168,7 @@ sudo apt update
 sudo apt -y upgrade
 ```
 
-Additional dependencies need to be installed as well. `build-essential` is a package that allows other packages to compile to a Debian package. `git` installs a package to work with version control. `linbpng-dev` installs a package that allows the project to manipulate images.
+É necessario instalar dependencias adicionais, como: `build-essential`  é um pacote que permite outros pacotes compilar em pacotes Debian; `git` instala os pacotes para funcionar com o sistema de controle de versão e `linbpng-dev` instala um pacote que permite o projeto manipular imagens.
 
 ```shell
 sudo apt install build-essential
@@ -181,10 +182,10 @@ Ou para instalar todos ao mesmo tempo e aprovar `(y)` em todas as instalações:
 sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && sudo apt install git && sudo apt install libpng-dev
 ```
 
-### Additional links and resources
+### Links e recursos adicionais
 
-- [Super detailed guide to making VSCode work with ESL from VSCode's docs website](https://code.visualstudio.com/docs/remote/wsl)
-- [Microsoft Store page for downloading Ubuntu on Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
+- [Guia super detalhado para fazer o VSCode funcionar com ESL no site de documentos da VSCode](https://code.visualstudio.com/docs/remote/wsl)
+- [Página da Microsoft Store para baixar o Ubuntu no Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
 - [n](https://github.com/tj/n)
 - [nvm](https://github.com/creationix/nvm)
 - [n-install](https://github.com/mklement0/n-install)
