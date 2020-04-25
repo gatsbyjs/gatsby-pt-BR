@@ -13,7 +13,7 @@ sudo apt update
 sudo apt -y upgrade
 ```
 
-Installe o cURL que permite transferencia de dados e o download de dependencias adicionais.
+Instale o cURL que permite transferência de dados e o download de dependências adicionais.
 
 ```shell
 sudo apt install curl
@@ -25,9 +25,9 @@ Agora você pode usar o `curl` para instalar o `nvm`, que irá gerenciar a insta
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-> Observe que esta é a versão estavel atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [pagina do nvm no GitHub](https://github.com/nvm-sh/nvm)
+> Observe que esta é a versão estável atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [página do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utiliza-lo. Este exemplo usa o ultimo lançamento da versão `10`, mas novas versões podem ser usadas também.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utilizá-lo. Este exemplo usa o último lançamento da versão `10`, mas novas versões podem ser usadas também.
 
 ```shell
 nvm install 10
@@ -40,9 +40,9 @@ Para ter certeza que a instalação foi bem sucedida, use o seguinte comando.
 node -v
 ```
 
-> Observe que `npm` vem no mesmo pacote que o `node` 
+> Observe que `npm` vem no mesmo pacote que o `node`
 
-Por ultimo, instale o `git` que vai ser necessario para criar seu primeiro projeto do Gatsby baseado em template `stater`
+Por último, instale o `git` que vai ser necessário para criar seu primeiro projeto do Gatsby baseado em template `starter`
 
 ```shell
 sudo apt install git
@@ -50,15 +50,15 @@ sudo apt install git
 
 ## Fedora, RedHat e outras distros baseadas no `dnf`
 
-Estas distros já vem com o `curl` instalado, já podemos usa-lo para baixar o `nvm`
+Estas distros já vem com o `curl` instalado, já podemos usá-lo para baixar o `nvm`
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-> Observe que esta é a versão estavel atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [pagina do nvm no GitHub](https://github.com/nvm-sh/nvm)
+> Observe que esta é a versão estável atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [página do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utiliza-lo. Este exemplo usa o ultimo lançamento da versão `10`, mas novas versões podem ser usadas também.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utilizá-lo. Este exemplo usa o último lançamento da versão `10`, mas novas versões podem ser usadas também.
 
 
 ```shell
@@ -72,9 +72,9 @@ Para ter certeza que a instalação foi bem sucedida, use o seguinte comando.
 node -v
 ```
 
-> Observe que `npm` vem no mesmo pacote que o `node` 
+> Observe que `npm` vem no mesmo pacote que o `node`
 
-Por ultimo, instale o `git` que vai ser necessario para criar seu primeiro projeto do Gatsby baseado em template `stater`
+Por último, instale o `git` que vai ser necessário para criar seu primeiro projeto do Gatsby baseado em template `starter`
 
 ```shell
 sudo dnf install git
@@ -88,21 +88,21 @@ Comece dando atualizando os pacotes já existentes
 sudo pacman -Sy
 ```
 
-Estas distros já vem com o `curl` instalado, já podemos usa-lo para baixar o `nvm`
+Estas distros já vem com o `curl` instalado, já podemos usá-lo para baixar o `nvm`
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 ```
 
-> Observe que esta é a versão estavel atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [pagina do nvm no GitHub](https://github.com/nvm-sh/nvm)
+> Observe que esta é a versão estável atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [página do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-Antes de usar o `nvm`, você precisa instalar as dependencias adicionais.
+Antes de usar o `nvm`, você precisa instalar as dependências adicionais.
 
 ```shell
 sudo pacman -S grep awk tar git
 ```
 
-O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utiliza-lo. Este exemplo usa o ultimo lançamento da versão `10`, mas novas versões podem ser usadas também.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utilizá-lo. Este exemplo usa o último lançamento da versão `10`, mas novas versões podem ser usadas também.
 
 ```shell
 nvm install 10
@@ -115,7 +115,7 @@ Para ter certeza que a instalação foi bem sucedida, use o seguinte comando.
 node -v
 ```
 
-> Observe que `npm` vem no mesmo pacote que o `node` 
+> Observe que `npm` vem no mesmo pacote que o `node`
 
 ## Windows Subsystem Linux (WSL)
 
@@ -128,7 +128,7 @@ A partir de 17 de outubro de 2017, o Windows 10 é fornecido com distribuições
 wslconfig /setdefault ubuntu
 ```
 
-> Observe que, se você usou a configuração do [Gatsby no Windows](/docs/gatsby-on-windows/) sem o WSL, etnão você tem que pagar qualquer pasta `node_modules` do seu projeto e re-instalar usando as dependencias  no seu ambiente WSL.
+> Observe que, se você usou a configuração do [Gatsby no Windows](/docs/gatsby-on-windows/) sem o WSL, então você tem que pagar qualquer pasta `node_modules` do seu projeto e reinstalar usando as dependências  no seu ambiente WSL.
 
 ### Usando o WSL: Ubuntu
 
@@ -168,7 +168,7 @@ sudo apt update
 sudo apt -y upgrade
 ```
 
-É necessario instalar dependencias adicionais, como: `build-essential`  é um pacote que permite outros pacotes compilar em pacotes Debian; `git` instala os pacotes para funcionar com o sistema de controle de versão e `linbpng-dev` instala um pacote que permite o projeto manipular imagens.
+É necessário instalar dependências adicionais, como: `build-essential`  é um pacote que permite outros pacotes compilar em pacotes Debian; `git` instala os pacotes para funcionar com o sistema de controle de versão e `linbpng-dev` instala um pacote que permite o projeto manipular imagens.
 
 ```shell
 sudo apt install build-essential
