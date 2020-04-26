@@ -368,7 +368,7 @@ A lista completa de todos os plugins oficiais mantidos pelo Gatsby.
 
 ## Isso é tudo, pessoal
 
-Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso
+Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso.
 
 <!-- 1.  [Gatsby's Default Starter](https://github.com/gatsbyjs/gatsby-starter-default): Kick off your project with this default boilerplate. This barebones starter ships with the main Gatsby configuration files you might need. _[working example](https://gatsbyjs.github.io/gatsby-starter-default/)_
 2.  [Gatsby's Blog Starter](https://github.com/gatsbyjs/gatsby-starter-blog): Gatsby starter for creating an awesome and blazing-fast blog. _[working example](https://gatsbyjs.github.io/gatsby-starter-blog/)_
@@ -376,12 +376,9 @@ Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais
 
 Esse é só o começo. Continue indo!
 
-
-
 - Você criou alguma coisa legal? Compartilhe no Twitter, com a hashtag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), e [@nos mencione](https://twitter.com/gatsbyjs)!
 - Você escreveu um post legal sobre o que você aprendeu? Compartilhe conosco também!
-- Contribua!
-- Contribute! Dê uma olhada nas [issues abertas](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) No repoisitório do e [vire um contribuidor](/contributing/how-to-contribute/).
+- Contribua! Dê uma olhada nas [issues abertas](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) no repositório e [vire um contribuidor](/contributing/how-to-contribute/).
 
 Veja a documentação sobre ["como contribuir"](/contributing/how-to-contribute/) para ainda mais ideias.
 
