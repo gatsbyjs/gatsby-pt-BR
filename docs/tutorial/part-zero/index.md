@@ -1,5 +1,5 @@
 ---
-title: Set Up Your Development Environment
+title: Configure seu ambiente de desenvolvimento
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -10,90 +10,86 @@ Antes de começar a construir seu primeiro site Gatsby, você precisará se fami
 
 A linha de comando é uma interface baseada em texto usada para executar comandos no seu computador. Às vezes, você encontrará artigos se referindo a ela como _terminal_. Neste tutorial, usaremos os dois termos de forma intercambiável. É como usar o Finder em um Mac ou o Explorer no Windows. Finder e Explorer são exemplos de interfaces gráficas de usuário (GUI). A linha de comando permite uma interação poderosa com os recursos que o seu computador oferece.
 
-Take a moment to locate and open up the command line interface (CLI) for your computer. Depending on which operating system you are using, see [**instructions for Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instructions for Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) or [**instructions for Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
+Reserve um momento para localizar e abrir a interface de linha de comando (CLI) do seu computador. De acordo com o sistema operacional que você está utilizando veja, [**instruções para Mac**](http://www.macworld.co.uk/feature/mac-software/how-use-terminal-on-mac-3608274/), [**instruções para Windows**](https://www.lifewire.com/how-to-open-command-prompt-2618089) ou [**instruções para Linux**](https://www.howtogeek.com/140679/beginner-geek-how-to-start-using-the-linux-terminal/).
 
-_Note: If you’re new to the command line, "running" a command, means "writing a given set of instructions in your command prompt, and hitting the Enter key". Commands will be shown in a highlighted box, something like `node --version`, but not every highlighted box is a command! If something is a command it will be mentioned as something you have to run/execute._
+_Nota: Se você é novo com linha de comando, "executar" um comando, significa "escrever um conjunto de instruções em seu prompt de comando, e apertar a tecla Enter". Comandos serão mostrados em uma caixa destacada, algo como `node --version`, mas nem toda caixa destacada é um comando! Se algo for um comando será mencionado que é algo que você deve rodar/executar._
 
-## Install Node.js for your appropriate operating system
+## Instale o Node.js apropriado para o seu sistema operacional
+Node.js é um ambiente que pode executar código JavaScript fora de um navegador web. Gatsby é construído com Node.js. Para começar a usar o Gatsby, você precisa ter uma versão recente do Node.js instalada em seu computador. O _npm_ vem atrelado ao Node.js então caso você não o tenha, há grandes chances de você não ter o Node.js também.
 
-Node.js is an environment that can run JavaScript code outside of a web browser. Gatsby is built with Node.js. To get up and running with Gatsby, you’ll need to have a recent version installed on your computer. npm comes bundled with Node.js so if you don't have npm, chances are that you don't have Node.js either.
+### Instruções para Mac
 
-### Mac instructions
+Para instalar o Gatsby e o Node.js em um Mac é recomendada a utilização do [Homebrew](https://brew.sh/). Uma pequena configuração no começo irá livrar você de algumas dores de cabeça mais tarde.
 
-To install Gatsby and Node.js on a Mac, it is recommended to use [Homebrew](https://brew.sh/). A little set-up in the beginning can save you from some headaches later on!
+#### Como instalar ou verificar o Homebrew em seu computador:
 
-#### How to install or verify Homebrew on your computer:
+1. Abra seu Terminal.
+2. Veja se o Homebrew está instalado executando `brew -v`. Você deve ver "Homebrew" e um número de versão.
+3. Caso não, baixe e instale o [Homebrew com essas instruções](https://docs.brew.sh/Installation).
+4. Depois de instalar o Homebrew, repita o passo 2 para verificar.
 
-1. Open your Terminal.
-2. See if Homebrew is installed by running `brew -v`. You should see "Homebrew" and a version number.
-3. If not, download and install [Homebrew with the instructions](https://docs.brew.sh/Installation).
-4. Once you've installed Homebrew, repeat step 2 to verify.
+#### Instalando a ferramenta de linha de comando (CLI) do Xcode
+1. Abra seu Terminal.
+2. Instale o Xcode CLI executando o comando `xcode-select --install`.
+   - Caso isso falhe, baixe [direto do site da Apple](https://developer.apple.com/download/more/), depois de fazer login com uma conta de desenvolvedor Apple
+3. Depois do inicio da instalação, será solicitado novamente para aceitar uma licença de software para o download das ferramentas.
 
-#### Install Xcode Command Line Tools:
+#### Instalando o Node
 
-1. Open your Terminal.
-2. Install Xcode Command line tools by running `xcode-select --install`.
-   - If that fails, download it [directly from Apple's site](https://developer.apple.com/download/more/), after signing-in with an Apple developer account
-3. After being prompted to start the installation, you'll be prompted again to accept a software license for the tools to download.
+1. Abra seu Terminal
+2. Execute o comando `brew install node`
+   - Se você não quiser instalar através do Homebrew, baixe a versão mais recente do Node.js no [site oficial](https://nodejs.org/pt-br/), clique duas vezes no arquivo baixado e siga o processo de instalação.
 
-#### Install Node
+### Instruções para Windows
 
-1. Open your Terminal
-2. Run `brew install node`
-   - If you don't want to install it through Homebrew, download the latest Node.js version from [the official Node.js website](https://nodejs.org/en/), double click on the downloaded file and go through the installation process.
+- Baixe e instale a versão mais recente do Node.js no [site oficial](https://nodejs.org/pt-br/)
 
-### Windows Instructions
+### Instruções para Linux
 
-- Download and install the latest Node.js version from [the official Node.js website](https://nodejs.org/en/)
+Instale o nvm (Node Version Manager) e as dependências necessárias. O nvm é usado para gerenciar o Node.js e todas as suas versões associadas.
 
-### Linux Instructions
+_💡 Se quando estiver instalando um pacote, for solicitado uma confirmação, digite `y` e pressione enter._
 
-Install nvm (Node Version Manager) and needed dependencies. nvm is used to manage Node.js and all its associated versions.
+#### Ubuntu, Debian, e outras distros baseadas no `apt`:
 
-_💡 If when installing a package, it asks for confirmation, type `y` and press enter._
+1. Execute `sudo apt update` e depois `sudo apt -y upgrade` para garantir que sua distribuição Linux está pronta para ser usada.
+2. Execute `sudo apt-get install curl` para instalar o curl, que permite transferir dados e baixar dependências adicionais.
+3. Após terminar a instalação, execute `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash` para baixar a última versão do nvm.
+4. Para garantir que está funcionando, use o seguinte comando. `nvm --version`. A saída deve ser um número de versão.
+5. [Defina uma versão padrão do Node.js](#set-default-nodejs-version)
 
-#### Ubuntu, Debian, and other `apt` based distros:
+#### Arch, Manjaro e outras distros baseadas no `pacman`:
 
-1. Run `sudo apt update` and then `sudo apt -y upgrade` to make sure your Linux distribution is ready to go.
-2. Run `sudo apt-get install curl` to install curl which allows you to transfer data and download additional dependencies.
-3. After it finishes installing, run `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash` to download the latest nvm version.
-4. To confirm this has worked, use the following command. `nvm --version`. The output should be a version number.
-5. [Set default Node.js version](#set-default-nodejs-version)
+1. Execute `sudo pacman -Sy` para garantir que sua distribuição está preparada.
+2. Essas distros vêm instaladas com curl, então você pode executar o seguinte comando para baixar o nvm. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
+3. Antes de usar o nvm você precisa instalar as dependências adicionais executando o comando: `sudo pacman -S grep awk tar`.
+4. Para garantir que está funcionando, use o seguinte comando. `nvm --version`. A saída deve ser um número de versão.
+5. [Defina uma versão padrão do Node.js](#set-default-nodejs-version)
 
-#### Arch, Manjaro and other `pacman` based distros:
+#### Fedora, RedHat, e outras distros baseadas no `dnf`:
 
-1. Run `sudo pacman -Sy` to make sure your distribution is ready to go.
-2. These distros come installed with curl, so you can use that to download nvm.
-   `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
-3. Before using nvm, you need to install additional dependencies by running `sudo pacman -S grep awk tar`.
-4. To confirm this has worked, use the following command. `nvm --version`. The output should be a version number.
-5. [Set default Node.js version](#set-default-nodejs-version)
+1. Essas distros vêm instaladas com curl, então você pode executar o seguinte comando para baixar o nvm. `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
+2. Para garantir que está funcionando, use o seguinte comando. `nvm --version`. A saída deve ser um número de versão.
+3. [Defina uma versão padrão do Node.js](#set-default-nodejs-version)
 
-#### Fedora, RedHat, and other `dnf` based distros:
+Se a distribuição Linux que você está utilizando não está listada aqui, por favor encontre instruções na internet.
 
-1. These distros come installed with curl, so you can use that to download nvm.
-   `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash`
-2. To confirm this has worked, use the following command. `nvm --version`. The output should be a version number.
-3. [Set default Node.js version](#set-default-nodejs-version)
+#### Definindo uma versão padrão do Node.js
 
-If the Linux distribution you are using is not listed here, please find instructions on the web.
-
-#### Set default Node.js version
-
-When nvm is installed, it does not default to a particular node version. You’ll need to install the version you want and give nvm instructions to use it. This example uses the latest release of version 10, but more recent version numbers can be used instead.
+Quando o nvm é instalado, ele não é padronizado para uma versão específica do Node. Você precisará instalar a versão desejada e fornecer instruções do nvm para usá-la. Este exemplo usa a versão mais recente da versão 10, mas números de versão mais recentes podem ser usados.
 
 ```shell
 nvm install 10
 nvm use 10
 ```
 
-To confirm that this worked, you can run `npm --version` and `node --version`. The output should look similar to the screenshot below, showing version numbers in response to the commands.
+Para garantir que está funcionando, execute o comando `npm --version` e `node --version`. A saída deve ser algo similar à captura de tela abaixo, mostrando os números da versão de acordo com os comandos.
 
 ![Verifique as versões do node e npm no terminal](01-node-npm-versions.png)
 
 ## Instale o Git
 
-O Git é um sistema de controle de versão distribuído de código aberto e gratuito, projetado para lidar com tudo, desde projetos pequenos a grandes, com rapidez e eficiência. Quando você instala um site _starter_ do Gatsby, o Gatsby usa o Git nos bastidores para baixar e instalar os arquivos necessários para seu starter. Você precisará ter o Git instalado para configurar seu primeiro site Gatsby.
+O Git é um sistema de controle de versão distribuído de código aberto e gratuito, projetado para lidar com tudo, desde projetos pequenos a grandes, com rapidez e eficiência. Quando você instala um site _starter_ do Gatsby, o Gatsby usa o Git nos bastidores para baixar e instalar os arquivos necessários para seu _starter_. Você precisará ter o Git instalado para configurar seu primeiro site Gatsby.
 
 As etapas para baixar e instalar o Git dependem do seu sistema operacional. Siga o guia para o seu sistema:
 
@@ -107,7 +103,7 @@ A ferramenta CLI do Gatsby permite que você execute os comandos necessários pa
 
 A CLI do Gatsby está disponível via npm e deve ser instalada globalmente executando `npm install -g gatsby-cli`.
 
-_**Nota**: ao instalar o Gatsby e executá-lo pela primeira vez, você verá uma pequena mensagem notificando sobre dados de uso anônimo que estão sendo coletados para comandos do Gatsby, você pode ler mais sobre como esses dados são extraídos e utilizados no [doc de telemetria](/docs/telemetry)._
+_**Nota**: ao instalar o Gatsby e executá-lo pela primeira vez, você verá uma pequena mensagem notificando sobre dados de uso anônimo que estão sendo coletados para comandos do Gatsby, você pode ler mais sobre como esses dados são extraídos e utilizados na [documentação de telemetria](/docs/telemetry)._
 
 Para listar os comandos disponíveis, execute `gatsby --help`.
 
@@ -120,7 +116,7 @@ Para listar os comandos disponíveis, execute `gatsby --help`.
 Agora você está pronto para usar a ferramenta CLI para criar seu primeiro site do Gatsby. Usando a CLI, você pode fazer o download de _starters_ (sites parcialmente construídos e que trazem algumas configurações por padrão) para ajudá-lo a acelerar a criação de um determinado tipo de projeto. O _starter_ do "Hello World" que você usará aqui é um _starter_ que contém os recursos básicos de um site Gatsby.
 
 1. Abra seu terminal.
-2. Execute `gatsby new hello-world https: // github.com / gatsbyjs / gatsby-starter-hello-world`. (_Nota: Dependendo da sua velocidade de download, a quantidade de tempo necessária pode variar. Por uma questão de brevidade, o gif abaixo foi pausado durante parte da instalação_).
+2. Execute `gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world`. (_Nota: Dependendo da sua velocidade de download, a quantidade de tempo necessária pode variar. Por uma questão de brevidade, o gif abaixo foi pausado durante parte da instalação_).
 3. Execute `cd hello-world`.
 4. Execute `gatsby develop`.
 
@@ -169,7 +165,7 @@ Um editor de código é um programa desenvolvido especialmente para editar códi
 
 ### Baixe o VS Code
 
-A documentação do Gatsby às vezes inclui capturas de tela que foram tiradas no VS Code, portanto, se você ainda não possui um editor de código preferido, o uso do VS Code garantirá que sua tela se pareça com as capturas de tela no tutorial e nos documentos. Se você optar por usar o Código VS, visite o [site do VS Code](https://code.visualstudio.com/#alt-downloads) e baixe a versão apropriada para sua plataforma.
+A documentação do Gatsby às vezes inclui capturas de tela que foram tiradas no VS Code, portanto, se você ainda não possui um editor de código preferido, o uso do VS Code garantirá que sua tela se pareça com as capturas de tela no tutorial e nos documentos. Se você optar por usar o VS Code, visite o [site do VS Code](https://code.visualstudio.com/#alt-downloads) e baixe a versão apropriada para sua plataforma.
 
 ### Instale o plugin Prettier
 
@@ -210,7 +206,7 @@ Não é necessário ser um especialista nisso - se não for, não se preocupe! V
 
 ### O que é um site?
 
-Para uma introdução abrangente sobre o que é um site, incluindo uma introdução ao HTML e CSS, confira “[**Construindo sua primeira página da web**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)”. É um ótimo lugar para começar a aprender sobre a web. Para uma introdução mais prática à [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css), e [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript), cconfira os tutoriais da Codecademy. [**React**](https://reactjs.org/tutorial/tutorial.html) e [**GraphQL**](http://graphql.org/graphql-js/) também têm seus próprios tutoriais introdutórios.
+Para uma introdução abrangente sobre o que é um site, incluindo uma introdução ao HTML e CSS, confira “[**Construindo sua primeira página da web**](https://learn.shayhowe.com/html-css/building-your-first-web-page/)”. É um ótimo lugar para começar a aprender sobre a web. Para uma introdução mais prática à [**HTML**](https://www.codecademy.com/learn/learn-html), [**CSS**](https://www.codecademy.com/learn/learn-css), e [**JavaScript**](https://www.codecademy.com/learn/introduction-to-javascript), confira os tutoriais da Codecademy. [**React**](https://reactjs.org/tutorial/tutorial.html) e [**GraphQL**](http://graphql.org/graphql-js/) também têm seus próprios tutoriais introdutórios.
 
 ### Saiba mais sobre a interface de linha de comando
 
