@@ -1,5 +1,5 @@
 ---
-title: Get to Know Gatsby Building Blocks
+title: Conheça os Blocos de Construção do Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -8,7 +8,7 @@ Na [seção anterior](/tutorial/part-zero/), você preparou o seu ambiente de de
 
 ## Utilizando Gatsby starters
 
-Na [parte zero do tutorial](/tutorial/part-zero/), você criou um novo site com o “hello world” starter rodando o seguinte comando:
+Na [parte zero do tutorial](/tutorial/part-zero/), você criou um novo site com o “hello world” _starter_ rodando o seguinte comando:
 
 ```shell
 gatsby new hello-world https://github.com/gatsbyjs/gatsby-starter-hello-world
@@ -328,7 +328,7 @@ Depois que você salvar o arquivo, você deve ver a página contato e conseguir 
 
 <video controls="controls" loop="true">
   <source type="video/mp4" src="./10-linking-between-pages.mp4"></source>
-  <p>Sorry! Your browser doesn't support this video.</p>
+  <p>Desculpa, seu navegador não suporta este vídeo.</p>
 </video>
 
 O componente `<Link />` do Gatsby é utilizado para navegar entre páginas do seu site. Para links externos para páginas não tratadas pelo seu site Gatsby, use a tag padrão do HTML `<a>`.
