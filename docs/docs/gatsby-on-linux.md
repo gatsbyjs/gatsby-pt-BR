@@ -6,7 +6,7 @@ Este guia assume que você já possui uma instalação nativa do Linux em sua m�
 
 ## Ubuntu, Debian, e outras distros baseadas no `apt`
 
-Comece dando update e upgrade nos pacotes já existentes.
+Comece dando `update` e `upgrade` nos pacotes já existentes.
 
 ```shell
 sudo apt update
