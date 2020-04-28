@@ -114,7 +114,7 @@ export default () => (
 
 ## Criando estilos globais
 
-Styled-components é usado principalmente para classe do CSS únicas que são isoladas de outros componentes. Em alguns casos, você deseja sobrescrever o estilo global - por exemplo, as margens padrões do elemento `body`. Styled-components lé ajuda com isso. Você pode usar o `createGlobalStyle` para realizar isso. È aconselhado usar o  `createGlobalStyle` dentro de um [componente de layout](/docs/layout-components/), que são compartilhadas com várias páginas, em vez de serem usados em uma única página.
+Styled-components é usado principalmente para uma classe única do CSS que é isolada de outros componentes. Em alguns casos, você deseja sobrescrever o estilo global - por exemplo, as margens padrões do elemento `body`. Styled-components ler ajuda com isso. Você pode usar o `createGlobalStyle` para realizar isso. É aconselhado usar o  `createGlobalStyle` dentro de um [componente de layout](/docs/layout-components/), que são compartilhadas com várias páginas, em vez de serem usados em uma única página.
 
 O exemplo abaixo mostra com criar um estilo global(que é um StyledComponent) para a cor roxa importando `createGlobalStyle` do `styled-components`.
 
