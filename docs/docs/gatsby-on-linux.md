@@ -6,7 +6,7 @@ Este guia assume que você já possui uma instalação nativa do Linux em sua m�
 
 ## Ubuntu, Debian, e outras distros baseadas no `apt`
 
-Comece dando `update` e `upgrade` nos pacotes já existentes.
+Comece atualizando os pacotes do sistema operacional já existentes.
 
 ```shell
 sudo apt update
@@ -27,7 +27,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
 
 > Observe que esta é a versão estável atual do nvm. A instalação completa e resolução de problemas podem ser encontradas na [página do nvm no GitHub](https://github.com/nvm-sh/nvm)
 
-O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão uma versão e fornecer ao `nvm` as instruções para utilizá-lo. Este exemplo usa o último lançamento da versão `10`, mas novas versões podem ser usadas também.
+O `nvm` não instala uma versão do `node`. Então você precisa instalar a versão que você deseja e fornecer ao `nvm` as instruções para utilizá-la como padrão. Este exemplo usa o último lançamento da versão `10`, mas novas versões podem ser usadas também.
 
 ```shell
 nvm install 10
@@ -50,7 +50,7 @@ sudo apt install git
 
 ## Fedora, RedHat e outras distros baseadas no `dnf`
 
-Estas distros já vem com o `curl` instalado, já podemos usá-lo para baixar o `nvm`
+Estas distros já vem com o `curl` instalado, então já podemos usá-lo para baixar o `nvm`
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
@@ -82,13 +82,13 @@ sudo dnf install git
 
 ## Archlinux e outras distros baseadas em `pacman`
 
-Comece dando atualizando os pacotes já existentes
+Comece atualizando os pacotes já existentes
 
 ```shell
 sudo pacman -Sy
 ```
 
-Estas distros já vem com o `curl` instalado, já podemos usá-lo para baixar o `nvm`
+Estas distros já vem com o `curl` instalado, então já podemos usá-lo para baixar o `nvm`.
 
 ```shell
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
@@ -119,7 +119,7 @@ node -v
 
 ## Windows Subsystem Linux (WSL)
 
-Este guia pressupõe que você já possui o WSL instalado com uma distribuição Linux em funcionamento. Caso não possua, siga as instruções [deste guia da Microsoft](https://docs.microsoft.com/en-us/windows/wsl/install-win10) para instalar o WSL e uma distro linux da sua escolha
+Este guia pressupõe que você já possui o WSL instalado com uma distribuição Linux em funcionamento. Caso não possua, siga as instruções [deste guia da Microsoft](https://docs.microsoft.com/pt-br/windows/wsl/install-win10) para instalar o WSL e uma distro linux de sua escolha.
 
 A partir de 17 de outubro de 2017, o Windows 10 é fornecido com distribuições WSL e Linux disponíveis na Microsoft Store, existem várias distribuições diferentes para usar que podem ser configuradas via `wslconfig` se você tiver mais de uma distribuição instalada.
 
@@ -185,7 +185,7 @@ sudo apt update && sudo apt -y upgrade && sudo apt install build-essential && su
 ### Links e recursos adicionais
 
 - [Guia super detalhado para fazer o VSCode funcionar com ESL no site de documentos da VSCode](https://code.visualstudio.com/docs/remote/wsl)
-- [Página da Microsoft Store para baixar o Ubuntu no Windows](https://www.microsoft.com/en-us/store/p/ubuntu/9nblggh4msv6)
+- [Página da Microsoft Store para baixar o Ubuntu no Windows](https://www.microsoft.com/pt-br/store/p/ubuntu/9nblggh4msv6)
 - [n](https://github.com/tj/n)
 - [nvm](https://github.com/creationix/nvm)
 - [n-install](https://github.com/mklement0/n-install)
