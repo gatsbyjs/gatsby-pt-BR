@@ -29,7 +29,7 @@ Para aprender como compilar um site acessível com Gatsby, visite nosso guia [Fa
 
 ## Plataformas, produtos e serviços tercerizados.
 
-O fluxo de trabalho padrão da Gatsby envolve produtos e serviços tercerizados, tais como fornecimento de Sistemas de Gerenciamento de Conteudo, e gerenciamento e desenvolvimento de sites com plataformas de hospedagem. Algumas dessas plataformas parecem ter sido projetadas sem ter a acessibilidade em mente. Nós encorajamos esses fornecedores/desenvolvedores a melhorarem a acessibilidade de forma conjunta conosco.
+O fluxo de trabalho padrão da Gatsby envolve produtos e serviços terceirizados, tais como fornecimento de Sistemas de Gerenciamento de Conteúdo, e gerenciamento e desenvolvimento de sites com plataformas de hospedagem. Algumas dessas plataformas parecem ter sido projetadas sem ter a acessibilidade em mente. Nós encorajamos esses fornecedores/desenvolvedores a melhorarem a acessibilidade de forma conjunta conosco.
 
 Nossas atuais recomendações para acessibilidade em plataformas CMS são;
 
