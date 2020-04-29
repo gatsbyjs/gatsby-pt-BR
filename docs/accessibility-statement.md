@@ -24,7 +24,7 @@ Como outra alternativa, convidamos você para entrar em contato diretamente com 
 
 ## Compilando com Gastby
 
-Para aprender como compilar um site acessível com Gatsby, visite nosso guia [Fazendo seu site acessível](/docs/making-your-site-accessible/). Contribuições sao muito bem-vindas a medida que a página evolui.
+Para aprender como compilar um site acessível com Gatsby, visite nosso guia [Fazendo seu site acessível](/docs/making-your-site-accessible/). Contribuições são muito bem-vindas a medida que a página evolui.
 
 
 ## Plataformas, produtos e serviços tercerizados.
