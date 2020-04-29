@@ -20,7 +20,7 @@ Nós nos esforçamos para fazer esses sites e o framework Gatsby por sí mesmo o
 
 Para contatar nosso time principal com suas dicas sobre acessibilidade ou desafios, por favor [envie uma issue no GitHub](https://github.com/gatsbyjs/gatsby/issues/new/choose).
 
-Como outra alternativa, convidamos você para entrar em contato diretamente com Marcy Sutton, Chefe da divisao de aprendizado no Gatsby: [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com)
+Como outra alternativa, convidamos você para entrar em contato diretamente com Marcy Sutton, Chefe da divisão de aprendizado no Gatsby: [marcy@gatsbyjs.com](mailto:marcy@gatsbyjs.com)
 
 ## Compilando com Gastby
 
