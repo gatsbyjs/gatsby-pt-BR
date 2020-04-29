@@ -66,9 +66,9 @@ Existem muitas maneiras de adicionar estilos ao seu site; O Gatsby suporta quase
 
 Um tema Gatsby permite centralizar a aparência do seu site. Você pode atualizar perfeitamente um tema, compor temas juntos e até trocar um tema compatível por outro.
 
-- [Creating a new site using a theme](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme)
-- [Creating a new site using a theme starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
-- [Building a new theme](/docs/recipes/working-with-themes#building-a-new-theme)
+- [Criando um novo site usando um tema](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme)
+- [Criando um novo site usando o tema starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
+- [Construindo um novo tema](/docs/recipes/working-with-themes#building-a-new-theme)
 
 <<<<<<< HEAD
   // consulta para todas as remarcações
