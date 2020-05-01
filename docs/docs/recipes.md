@@ -90,9 +90,9 @@ O Gatsby permite acessar seus dados em todas as fontes usando uma única interfa
 - [Limitando com GraphQL](/docs/recipes/querying-data#limiting-with-graphql)
 - [Ordenando com GraphQL](/docs/recipes/querying-data#sorting-with-graphql)
 - [Filtrando com GraphQL](/docs/recipes/querying-data#filtering-with-graphql)
-- [GraphQL Query Aliases](/docs/recipes/querying-data#graphql-query-aliases)
-- [GraphQL Query Fragments](/docs/recipes/querying-data#graphql-query-fragments)
-- [Querying data client-side with fetch](/docs/recipes/querying-data#querying-data-client-side-with-fetch)
+- [Aliases de consulta GraphQL](/docs/recipes/querying-data#graphql-query-aliases)
+- [Fragmentos de consulta GraphQL](/docs/recipes/querying-data#graphql-query-fragments)
+- [Consultando dados na camada do cliente com fetch](/docs/recipes/querying-data#querying-data-client-side-with-fetch)
 
 ## [7. Trabalhando com imagens](/docs/recipes/working-with-images)
 
@@ -110,7 +110,7 @@ A transformação de dados no Gatsby é orientada por plug-ins. Os plug-ins de t
 - [Transformando Markdown em HTML](/docs/recipes/transforming-data#transforming-markdown-into-html)
 - [Transformando imagens em grayscale usando GraphQL](/docs/recipes/transforming-data#transforming-images-into-grayscale-using-graphql)
 
-- A Gatsby site with `gatsby-config.js` and an `index.js` page
+- Um site do Gatsby com `gatsby-config.js` e uma página `index.js`
 - Um site do Gatsby com a página `gatsby-config.js` e uma página` index.js`
 - Um arquivo Markdown salvo no diretório `src` do site Gatsby
 - Um plugin de origem instalado, como `gatsby-source-filesystem`
