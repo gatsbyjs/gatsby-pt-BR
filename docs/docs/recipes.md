@@ -41,8 +41,6 @@ Adicione páginas ao seu site do Gatsby e use layouts para gerenciar elementos c
 - [Criando um componente de layout](/docs/recipes/pages-layouts#creating-a-layout-component)
 - [Criando páginas programaticamente com o createPage](/docs/recipes/pages-layouts#creating-pages-programmatically-with-createpage)
 
-=======
->>>>>>> master
 ## [2. Estilizar com CSS](/docs/recipes/styling-css)
 
 Existem muitas maneiras de adicionar estilos ao seu site; O Gatsby suporta quase todas as opções possíveis, através de plugins oficiais e da comunidade.
@@ -58,7 +56,7 @@ Existem muitas maneiras de adicionar estilos ao seu site; O Gatsby suporta quase
 
 ## [3. Trabalhando com starters](/docs/recipes/working-with-starters)
 
-[Starter](/docs/starters/) são sites padronizados do Gatsby mantidos oficialmente ou pela comunidade.
+[Starters](/docs/starters/) são sites padronizados do Gatsby mantidos oficialmente ou pela comunidade.
 
 - [Usando um starter](/docs/recipes/working-with-starters#using-a-starter)
 
@@ -70,11 +68,8 @@ Um tema Gatsby permite centralizar a aparência do seu site. Você pode atualiza
 - [Criando um novo site usando o tema starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
 - [Construindo um novo tema](/docs/recipes/working-with-themes#building-a-new-theme)
 
-<<<<<<< HEAD
   // consulta para todas as remarcações
-=======
 ## [5. Fornecendo dados](/docs/recipes/sourcing-data)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Puxe dados de vários locais, como um sistema de arquivos ou mesmo banco de dados, para o site do Gatsby.
 
@@ -115,7 +110,6 @@ A transformação de dados no Gatsby é orientada por plug-ins. Os plug-ins de t
 - [Transformando Markdown em HTML](/docs/recipes/transforming-data#transforming-markdown-into-html)
 - [Transformando imagens em grayscale usando GraphQL](/docs/recipes/transforming-data#transforming-images-into-grayscale-using-graphql)
 
-<<<<<<< HEAD
 - A Gatsby site with `gatsby-config.js` and an `index.js` page
 - Um site do Gatsby com a página `gatsby-config.js` e uma página` index.js`
 - Um arquivo Markdown salvo no diretório `src` do site Gatsby
@@ -162,10 +156,7 @@ export const query = graphql`
 - [Tutorial sobre como transformar Markdown em HTML](/tutorial/part-six/#transformer-plugins) usando `gatsby-transformer-remark`
 - Procure plugins de transformadores disponíveis na [Gatsby plugin library](/plugins/?=transformer)
 
-## 9. Implantando seu site
-=======
 ## [9. Implantando seu site](/docs/recipes/deploying-your-site)
->>>>>>> 22a3fb4d3155774ddc223a249897020b0ee18db1
 
 Hora do Show. Quando estiver satisfeito com o seu site, você estará pronto para publicá-lo!
 
