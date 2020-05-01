@@ -6,12 +6,15 @@ A beleza em contribuir com o _open source_ é que você pode dar _clone_ em seu 
 
 Esta página contém os seguintes tópicos:
 
-- [Configurando o repositório](#configurando-o-repositório)
-- [Criando seus próprios plugins e loaders](#criando-seus-próprios-plugins-e-loaders)
-- [Fazendo mudanças na biblioteca starter](#fazendo-mudanças-na-biblioteca-starter)
+- [Configurando o repositório](#configurando-o-reposit%c3%b3rio)
+- [Criando seus próprios _plugins_ e _loaders_](#criando-seus-pr%c3%b3prios-plugins-e-loaders)
+- [Fazendo mudanças na biblioteca _starter_](#fazendo-mudan%c3%a7as-na-biblioteca-starter)
 - [Contribuindo com sites exemplo](#contribuindo-com-sites-exemplo)
 - [Usando Docker para configurar um ambiente de teste](#usando-docker-para-configurar-um-ambiente-de-teste)
+  - [Docker, WordPress e Gatsby](#docker-wordpress-e-gatsby)
 - [Ferramentas de desenvolvimento](#ferramentas-de-desenvolvimento)
+  - [Depurando o processo de _build_](#depurando-o-processo-de-build)
+- [_Feedback_](#feedback)
 
 ## Configurando o repositório
 
@@ -42,11 +45,11 @@ Caso você queira desenvolver na biblioteca _starter_, será necessário fornece
 GITHUB_API_TOKEN=SEU_TOKEN_AQUI
 ```
 
-O arquivo `.env.development` é ignorado pelo git. Seu _token_ nunca deve ser "comitado".
+O arquivo `.env.development` é ignorado pelo git. Por relações de seguranças, você nunca deve realisar um `commit` do seu _token_.
 
 ## Contribuindo com sites exemplo
 
-A política do Gatsby é de que o "uso" de sites exemplo (como os presentes na [pasta de exemplos do repositório](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
+A política do Gatsby é de que o uso de sites exemplo (como os presentes na [pasta de exemplos do repositório](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
 
 Para contribuir com sites exemplo, é recomendado criar seu próprio repositório no Github e vinculá-lo a partir de seu _plugin_ de origem, etc.
 
@@ -61,11 +64,11 @@ Com todas essas possibilidades de integração com o Gatsby, talvez ajude subir 
 Para instalar o WordPress e usar junto com o Gatsby, recomendamos o uso do arquivo `docker-compose.yml`:  
 
 ```yaml:title=docker-compose.yml
-version: "2"
+version: "3.7"
 
 services:
   db:
-    image: mysql:5.6
+    image: mysql:5.7
     container_name: sessions_db
     ports:
       - "3306:3306"
@@ -122,4 +125,4 @@ Confira a página [Depurando o processo de _build_](/docs/debugging-the-build-pr
 
 ## _Feedback_
 
-At any point during the contributing process the Gatsby team would love to help! For help with a specific problem you can [open an issue on GitHub](/contributing/how-to-file-an-issue/). Or drop in to [our Discord server](https://gatsby.dev/discord) for general community discussion and support.
+A qualquer momento durante o processo de contribuição, o time do Gatsby adoraria em ajudá-lo! Para obter ajuda em um problema específico, você pode [abrir uma _issue_ no GitHub](/contributing/how-to-file-an-issue/). Ou entre no [servidor do Discord](https://gatsby.dev/discord) para a comunidade em geral discutir e lhe dar suporte.
