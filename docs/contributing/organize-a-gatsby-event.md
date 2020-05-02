@@ -2,11 +2,12 @@
 title: Organizar um evento Gatsby
 ---
 
-Our communiy event support offerings and process are undergoing some changes. Check back soon to see our updated community event support opportunities!
+Nossos suporte a eventos da comunidade estão passando por um processo de mudança. Volte em breve para ver novas oportunidade atualizadas de suporte a eventos da comunidade!
 
 ## O que constitui um evento Gatsby?
 
-A community-organized Gatsby event can be a local meetup, a small conference, a “lunch and learn” with coworkers, or a larger event - as long as **it includes at least one Gatsby-focused presentation or discussion**. It’s up to you how many people you want to invite and how casual the environment. You can organize an event at your workplace or for the local community.
+Um evento organizado pela comunidade do Gatsby pode ser um encontro local, uma pequena conferência, um “almoce e aprenda” com colegas de trabalho ou um grande evento - contanto que **inclua pelo menos uma apresentação ou discussão focada em Gatsby**. Isto depende do quanto de pessoas você espera convidar e quão casual é o ambiente. Você pode organizar um evento no seu local de trabalho ou para a comunidade local.
 
 ## Links Relacionados
+
 - [Eventos da Comunidade Gatsby](/contributing/events)
