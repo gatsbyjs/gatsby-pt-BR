@@ -45,7 +45,7 @@ Caso você queira desenvolver na biblioteca _starter_, será necessário fornece
 GITHUB_API_TOKEN=SEU_TOKEN_AQUI
 ```
 
-O arquivo `.env.development` é ignorado pelo git. Por relações de seguranças, você nunca deve realisar um `commit` do seu _token_.
+O arquivo `.env.development` é ignorado pelo git. Por relações de seguranças, você nunca deve realizar um `commit` do seu _token_.
 
 ## Contribuindo com sites exemplo
 
