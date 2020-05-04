@@ -1,5 +1,5 @@
 ---
-title: Recipes
+title: Receitas
 tableOfContentsDepth: 2
 ---
 
@@ -68,7 +68,6 @@ Um tema Gatsby permite centralizar a aparência do seu site. Você pode atualiza
 - [Criando um novo site usando o tema starter](/docs/recipes/working-with-themes#creating-a-new-site-using-a-theme-starter)
 - [Construindo um novo tema](/docs/recipes/working-with-themes#building-a-new-theme)
 
-  // consulta para todas as remarcações
 ## [5. Fornecendo dados](/docs/recipes/sourcing-data)
 
 Puxe dados de vários locais, como um sistema de arquivos ou mesmo banco de dados, para o site do Gatsby.
