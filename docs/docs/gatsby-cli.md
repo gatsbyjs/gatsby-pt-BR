@@ -364,7 +364,7 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Uma vez que você escolhe, o ILC não ira perguntar a sua preferência nos prósimos projetos.
+Uma vez que você escolhe, o ILC não ira perguntar a sua preferência nos próximos projetos.
 
 Se você quiser trocar para essa configuração no seu próximo projeto, terá que editar o arquivo de configuração gerado automaticamente pelo ILC.
 Esse arquivo está disponível no seu computador em: `~/.config/gatsby/config.json`
