@@ -8,7 +8,7 @@ Se você quer fazer mudanças, melhorias ou adicionar alguma funcionalidade no s
 - Execute o comando `yarn` para instalar todas as dependências do site.
 - Execute o comando `npm run develop` para visualizar o site no endereço `http://localhost:8000/`.
 
-> Nota: Se você tiver problemas para executar o site em uma máquina Linux, execute o comando `sudo apt install libvips-dev`, para instalar uma dependência nativa. Você também pode consultar [o guia do Gatsby no Linux](/docs/gatsby-on-linux/), para ver outros requisitos específicos desta plataforma.
+> Nota: Se você tiver problemas para executar o site em uma máquina Linux, execute o comando `sudo apt install libvips-dev` para instalar uma dependência nativa. Você também pode consultar [o guia do Gatsby no Linux](/docs/gatsby-on-linux/), para ver outros requisitos específicos desta plataforma.
 
 Agora você pode fazer e visualizar suas mudanças antes de mandar um pull request!
 
