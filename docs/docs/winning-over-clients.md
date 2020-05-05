@@ -9,13 +9,13 @@ Além disso, eles geralmente desejam usar fluxos de trabalho familiares baseados
 
 Alguns benefícios que você pode oferecer ao recomendar o Gatsby para os clientes incluem:
 
-- Works with their CMS
-- Fast development speed ensures project will be on time
-- Ease of making development changes helps keep project under budget
-- Lower hosting cost helps keep project under budget
-- Fast performing websites which reduce page load and response time
-- Supports creation of highly scalable and dynamic apps
-- Rich plugin ecosystem which helps tackle complex code
+- Trabalha com os seus CMS
+- A rápida velocidade de desenvolvimento garante que o projeto fique no prazo.
+- A facilidade de fazer mudanças no desenvolvimento ajuda a manter o projeto dentro do orçamento.
+- O Menor custo de hospedagem ajuda a manter o projeto dentro do orçamento.
+- Sites de desempenho rápido que reduzem o carregamento da página e o tempo de resposta.
+- Suporta a criação de aplicativos dinâmicos e altamente escaláveis.
+- Um Rico ecossistema de plugins que ajudam a lidar com códigos complexos.
 
 [Esse pager](/gatsby-one-pager.pdf) também pode ser útil para clientes -- ele explica o Gatsby no idioma deles.
 
