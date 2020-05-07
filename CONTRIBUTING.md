@@ -6,12 +6,11 @@ Ficamos muito felizes em saber que você quer contribuir com a tradução, além
 
 Antes de mais nada, leia o nosso [código de conduta](https://github.com/gatsbyjs/gatsby-pt-BR/blob/master/docs/contributing/code-of-conduct.md).
 
-
 ### Primeiros Passos
 
-Primeira coisa que você deve fazer é ir em algumas das issues abertas com nome _Translation Progress_, nela estão todos os arquivos que já foram traduzidos, estão em processo de tradução e os disponíveis para serem traduzidos, basta você comentar na issue qual o arquivo disponível que deseja traduzir e um dos mantenedores irá colocar seu nome nela. Caso você não encontre nenhum arquivo disponível, basta esperar que abriremos novos arquivos a serem traduzidos em breve!
+A primeira coisa que você deve fazer é ir em algumas das issues abertas com nome _Translation Progress_, nela estão todos os arquivos que já foram traduzidos, estão em processo de tradução e os disponíveis para serem traduzidos, basta você comentar na issue qual o arquivo disponível que deseja traduzir e um dos mantenedores irá colocar seu nome nela. Caso você não encontre nenhum arquivo disponível, basta esperar que abriremos novos arquivos a serem traduzidos em breve!
 
-Obs: A fim de não sobrecarregar os revisores e permitir que um número maior de pessoas possam contribuir, cada pessoa pode pegar apenas 1 tradução por vez, ou seja, apenas após a tradução ser mergeado é que você pode pedir outra tradução.  
+Obs: A fim de não sobrecarregar os revisores e permitir que um número maior de pessoas possam contribuir, cada pessoa pode pegar apenas 1 tradução por vez, ou seja, apenas após a tradução ser mergeada é que você pode pedir outra tradução.  
 
 ### Mas e agora?
 
@@ -19,7 +18,7 @@ Agora que você está encarregado(a) de um arquivo, basta você dar fork no proj
 
 ### Finalizei a tradução
 
-Após terminar de traduzir o arquivo, basta abri uma Pull Request para a branch `master` do nosso repositório e esperar que pelo menos dois dos nossos mantenedores revisem a PR. Caso tudo esteja correto, sua contribuição será aceita!
+Após terminar de traduzir o arquivo, basta abrir uma Pull Request para a branch `master` do nosso repositório e esperar que pelo menos dois dos nossos mantenedores revisem a PR. Caso tudo esteja correto, sua contribuição será aceita!
 
 **As traduções possuem prazo de 2 semanas para serem traduzidas (exceto em casos extraordinários, onde a tradução seja muito extensa), caso você não abra uma pr dentro desse prazo, liberaremos o texto para outras pessoas poderem traduzir**
 
@@ -34,7 +33,6 @@ Abaixo estão algumas dicas quando você for fazer a sua tradução:
 - Caso você tenha qualquer dúvida em alguma tradução, ou se deve ou não traduzir um termo difundido na nossa lingua, recomendamos primeiramente procurar tal palavra em nosso [Glossário](#glossário), caso você não a encontre, fique a vontade para perguntar em nosso [Discord](#discord)
 - Caso você esteja usando o VSCODE como editor de texto, sugerimos a instalação da extensão _Markdown Preview Enhanced_ para permitir que você possa ter uma _preview_ do documento final
 - Recomendamos o uso de sites como [linguee.com](https://www.linguee.com.br/) para dar suporte a traduções
-
 
 ## Glossário
 
