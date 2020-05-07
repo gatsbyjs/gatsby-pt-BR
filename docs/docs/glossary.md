@@ -106,21 +106,23 @@ Continuous deployment (CD) automates the process of releasing changes to your pr
 
 ## D
 
-### Decoupled
+### Desacoplado
 
-Decoupling describes the separation of different concerns. With [Gatsby](#gatsby) this most commonly means decoupling the [frontend](#frontend) from the [backend](#backend), like with [Decoupled Drupal](https://dri.es/how-to-decouple-drupal-in-2019) or [Headless WordPress](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+Desacoplamento é a separação interesses de acordo com sua função. No [Gatsby](#gatsby) é mais comumente desacoplar o [frontend](#frontend) do [backend](#backend), como em [Desacoplamento Drupal](https://dri.es/how-to-decouple-drupal-in-2019) ou [WordPress Headless(Sem tema)](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
 
-### [Decoupled Drupal](/docs/glossary/decoupled-drupal)
+### [Desacoplamento Drupal](/docs/glossary/desacoplamento-drupal)
 
-Decoupling refers to the practice of using Drupal as a [headless CMS](#headless-cms). A decoupled Drupal instance functions as a content API that returns JSON for your [frontend](#frontend) to consume.
+Desacoplamento se refere a prática de usar o Drupal como um [CMS Headless](#headless-cms). Um Drupal desacoplado instância funções como um conteúdo de um JSON retornado de uma API para seu [frontend](#frontend) consumir.
+
 
 ### Deploy
 
-The process of [building](#build) your website or app and uploading onto a [hosting provider](#hosting).
+O processo de [construir](#build) seu site ou app e carregar em um [provedor de hospedagem](#hosting)
 
-### Development Environment
+### Ambiente de Desenvolvimento
 
-The [environment](#environment) when you're developing your code. It's accessed through the [CLI](#cli) using `gatsby develop`, and provides extra error reporting and things to help you debug before building for [production](#production-environment).
+O [ambiente](#environment) onde você desenvolve seu código. É acessado pelo [CLI](#cli) usando o `gatsby develop`, e fornece relatórios de erros e outras coisas para ajudar depurar seu código antes de colocar em [produção](#production-environment)
+
 
 ### DOM
 
@@ -168,7 +170,7 @@ Um [CMS](#cms) que lida apenas com o gerenciamento de conteúdo do [backend](#ba
 
 ### [Headless WordPress](/docs/glossary/headless-wordpress)
 
-The practice of using JSON returned from the WordPress REST API as a [headless CMS](#headless-cms). It allows you to use WordPress to write and edit content that can be consumed by any client capable of parsing JSON.
+A prática de usar o WordPress como um [headless CMS](#headless-cms) atravé de retornos de uma API REST no formato JSON. Permite que você use o WordPress para escrever e editar o conteúdo que será consumido por qualquer cliente capaz de entender o formato JSON.
 
 ### Hosting
 
@@ -200,7 +202,7 @@ Uma linguagem de programação que nos ajuda a tornar a web dinâmica e interati
 
 ### JSX
 
-JSX é uma extensão do JavaScript que permite que os desenvolvedores escrevam HTML e componentes personalizados no mesmo trecho de código. A [equipe do React recomenda](https://pt-br.reactjs.org/docs/introducing-jsx.html) usá-lo para descrever a aparência de uma [UI](#UI).  O JSX pode lembrá-lo de uma linguagem de template, mas vem com todo o poder do JavaScript. Alguns detalhes importantes a serem observados são que, como o JSX usa JavaScript, alguns atributos HTML da sua marcação precisam ser trocados para evitar palavras reservadas no JavaScript (coisas como `htmlFor` e `className`).
+JSX é uma extensão do JavaScript que permite que os desenvolvedores escrevam HTML e componentes personalizados no mesmo trecho de código. A [equipe do React recomenda](https://pt-br.reactjs.org/docs/introducing-jsx.html) usá-lo para descrever a aparência de uma [UI](#UI). O JSX pode lembrá-lo de uma linguagem de template, mas vem com todo o poder do JavaScript. Alguns detalhes importantes a serem observados são que, como o JSX usa JavaScript, alguns atributos HTML da sua marcação precisam ser trocados para evitar palavras reservadas no JavaScript (coisas como `htmlFor` e `className`).
 
 ## K
 
@@ -271,7 +273,7 @@ O processo de [construção](#build) do seu site ou aplicativo e envio para um [
 
 ### Programaticamente
 
-Progressive enhancement is a strategy for the web that emphasizes core page content is loaded from a server before anything else, without [JavaScript](#javascript) as a requirement to load. This strategy then progressively adds more complex layers of presentation and features on top of the content as the end user's browser/network connection allow. Gatsby's default approach to [building](#build) pages ahead-of-time means content will load first and enhance as scripts download and execute.
+Aprimoramento progressivo é uma estratégia para desenvolvimento web que enfatiza o conteúdo principal da página, que tem o carregamento priorizado do servidor antes de qualquer outra coisa, sem [JavaScript](#javascript) ser um requerimento para carregar. Esta estratégia adiciona progressivamente camadas mais complexas de apresentação e recursos por cima do conteúdo, de acordo a conexão ou navegador do usuário final permite. A abordagem padrão do Gatsby para [criar](#build) as páginas antecipadamente significa que o conteúdo irá carregar primeiro e a página melhorar de acordo com o download e a execução dos scripts.
 
 ### Público
 
