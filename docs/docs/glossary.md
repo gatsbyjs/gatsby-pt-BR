@@ -108,7 +108,7 @@ Continuous deployment (CD) automates the process of releasing changes to your pr
 
 ### Desacoplado
 
-Desacoplamento é a separação interesses de acordo com sua função. No [Gatsby](#gatsby) é mais comumente desacoplar o [frontend](#frontend) do [backend](#backend), como em [Desacoplamento Drupal](https://dri.es/how-to-decouple-drupal-in-2019) ou [WordPress Headless(Sem tema)](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
+Desacoplamento é a separação de interesses de acordo com sua função. No [Gatsby](#gatsby) é mais comumente desacoplar o [frontend](#frontend) do [backend](#backend), como em [Desacoplamento Drupal](https://dri.es/how-to-decouple-drupal-in-2019) ou [WordPress Headless(Sem tema)](https://www.smashingmagazine.com/2018/10/headless-wordpress-decoupled/).
 
 ### [Desacoplamento Drupal](/docs/glossary/desacoplamento-drupal)
 
@@ -121,7 +121,7 @@ O processo de [construir](#build) seu site ou app e carregar em um [provedor de 
 
 ### Ambiente de Desenvolvimento
 
-O [ambiente](#environment) onde você desenvolve seu código. É acessado pelo [CLI](#cli) usando o `gatsby develop`, e fornece relatórios de erros e outras coisas para ajudar depurar seu código antes de colocar em [produção](#production-environment)
+O [ambiente](#environment) onde você desenvolve seu código. É acessado pelo [CLI](#cli) usando o `gatsby develop`, e fornece relatórios de erros e outras coisas para ajudar a depurar seu código antes de colocar em [produção](#production-environment)
 
 
 ### DOM
@@ -273,7 +273,7 @@ O processo de [construção](#build) do seu site ou aplicativo e envio para um [
 
 ### Programaticamente
 
-Aprimoramento progressivo é uma estratégia para desenvolvimento web que enfatiza o conteúdo principal da página, que tem o carregamento priorizado do servidor antes de qualquer outra coisa, sem [JavaScript](#javascript) ser um requerimento para carregar. Esta estratégia adiciona progressivamente camadas mais complexas de apresentação e recursos por cima do conteúdo, de acordo a conexão ou navegador do usuário final permite. A abordagem padrão do Gatsby para [criar](#build) as páginas antecipadamente significa que o conteúdo irá carregar primeiro e a página melhorar de acordo com o download e a execução dos scripts.
+Aprimoramento progressivo é uma estratégia para desenvolvimento web que enfatiza o conteúdo principal da página, que tem o carregamento priorizado do servidor antes de qualquer outra coisa, sem [JavaScript](#javascript) ser um requerimento para carregar. Esta estratégia adiciona progressivamente camadas mais complexas de apresentação e recursos por cima do conteúdo, de acordo a conexão ou navegador do usuário final permite. A abordagem padrão do Gatsby para [criar](#build) as páginas antecipadamente significa que o conteúdo irá carregar primeiro e a página será aprimorada à medida que os scripts forem baixados e executados.
 
 ### Público
 
