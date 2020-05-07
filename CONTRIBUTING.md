@@ -10,7 +10,7 @@ Antes de mais nada, leia o nosso [código de conduta](https://github.com/gatsbyj
 
 A primeira coisa que você deve fazer é ir em algumas das issues abertas com nome _Translation Progress_, nela estão todos os arquivos que já foram traduzidos, estão em processo de tradução e os disponíveis para serem traduzidos, basta você comentar na issue qual o arquivo disponível que deseja traduzir e um dos mantenedores irá colocar seu nome nela. Caso você não encontre nenhum arquivo disponível, basta esperar que abriremos novos arquivos a serem traduzidos em breve!
 
-Obs: A fim de não sobrecarregar os revisores e permitir que um número maior de pessoas possam contribuir, cada pessoa pode pegar apenas 1 tradução por vez, ou seja, apenas após a tradução ser mergeada é que você pode pedir outra tradução.  
+Obs: A fim de não sobrecarregar os revisores e permitir que um número maior de pessoas possam contribuir, cada pessoa pode pegar apenas 1 tradução por vez, ou seja, apenas após a  realização do _merge_ da tradução é que você pode pedir outra tradução.  
 
 ### Mas e agora?
 
