@@ -2,7 +2,7 @@
 title: Organizar um evento Gatsby
 ---
 
-Nosso suporte a eventos da comunidade estão passando por um processo de mudança. Volte em breve para ver nossas atualizações sobre o suporte a eventos da comunidade!
+Nosso suporte a eventos da comunidade está passando por um processo de mudança. Volte em breve para ver nossas atualizações sobre o suporte a eventos da comunidade!
 
 ## O que constitui um evento Gatsby?
 
