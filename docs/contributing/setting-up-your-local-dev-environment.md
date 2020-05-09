@@ -9,7 +9,7 @@ Esta página descreve como se preparar para contribuir com o núcleo do Gatsby e
 
 ## Usando o Yarn
 
-Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https://www.npmjs.com/). Enquanto o NPM é usado para desenvolver sites Gatsby com a ILC, para contribuir com o repositório do Gatsby o Yarn é necessário pelo seguinte motivo: nós usamos uma função do Yarn chamada [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) que é bem útil com monorepos. Ela permite que instalemos dependências de múltiplos arquivos `package.json` em sub-diretórios, tornando o processo de instalação mais rápido e leve.
+Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https://www.npmjs.com/). Enquanto o NPM é usado para desenvolver sites Gatsby com a CLI, para contribuir com o repositório do Gatsby o Yarn é necessário pelo seguinte motivo: nós usamos uma função do Yarn chamada [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) que é bem útil com monorepos. Ela permite que instalemos dependências de múltiplos arquivos `package.json` em sub-diretórios, tornando o processo de instalação mais rápido e leve.
 
 ```json:title=package.json
 {
@@ -19,58 +19,55 @@ Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https
 
 ## Instruções de instalação do repositório do Gatsby
 
-### Install Node and Yarn
+### Instale o Node e Yarn  
 
-- Ensure you have the latest **LTS** version of Node installed (>= 10.16.0). `node --version`
-- [Install](https://yarnpkg.com/en/docs/install) the Yarn package manager.
-- Ensure you have the latest version of Yarn installed (>= 1.0.2). `yarn --version`
+- Garanta que possui a última versão estável do Node instalada **LTS** (>= 10.16.0). `node --version`
+- [Instale](https://yarnpkg.com/en/docs/install) o gerenciador de pacotes Yarn.
+- Garanta que possui a última versão do Yarn instalada (>= 1.0.2). `yarn --version`
 
-### Fork, clone, and branch the repository
+### Faça o fork, clone, e crie uma branch no seu repositório
 
-- [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) the [official `gatsbyjs/gatsby` repository](https://github.com/gatsbyjs/gatsby).
-- Clone your fork: `git clone --depth=1 https://github.com/<your-username>/gatsby.git`
-- Set up repo and install dependencies: `yarn run bootstrap`
-- Make sure tests are passing for you: `yarn test`
-- Create a topic branch: `git checkout -b topics/new-feature-name`
+- [Fork](https://help.github.com/en/github/getting-started-with-github/fork-a-repo) o [repositório oficial `gatsbyjs/gatsby` repository](https://github.com/gatsbyjs/gatsby).
+- Clone seu fork: `git clone --depth=1 https://github.com/<seu-username>/gatsby.git`
+- Configure o repositório e instale as dependências: `yarn run bootstrap`
+- Garanta que os testes estão pasasndo: `yarn test`
+- Crie uma nova branch de tópico: `git checkout -b topics/new-feature-name`
 
-### Docs only changes
+### Alterações somente em documentação
 
-- See [docs setup instructions](/contributing/docs-contributions#docs-site-setup-instructions) for docs-only changes.
-- Run `yarn run watch` from the root of the repo to watch for changes to packages' source code and compile these changes on-the-fly as you work.
+- Veja [as instruções de configuração de docs](/contributing/docs-contributions#docs-site-setup-instructions) para alterações apenas em documentações.
+- Execute `yarn run watch` na raiz do repositório para observar alterações no código do pacote e compilar em tempo real.
 
-  - Note that the watch command can be resource intensive. To limit it to the packages you're working on, add a scope flag, like `yarn run watch --scope={gatsby,gatsby-cli}`.
-  - To watch just one package, run `yarn run watch --scope=gatsby`.
+  - O comando watch pode usar recursos da máquina intensamente. Para limitar em quais pacotes está trabalhando, adicione o escopo como parâmetro, assim: `yarn run watch --scope={gatsby,gatsby-cli}`.
+  - Para observar apenas um pacote, execute `yarn run watch --scope=gatsby`.
 
-### Gatsby functional changes
+### Alterações de funcionalidades do Gatsby
 
-- Install [gatsby-cli](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli):
-  - Make sure you have the Gatsby CLI installed with `gatsby -v`,
-  - if not, install globally: `yarn global add gatsby-cli`
-- Install [gatsby-dev-cli](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-dev-cli):
-  - Make sure you have the Gatsby Dev CLI installed with `gatsby-dev -v`
-  - if not, install globally: `yarn global add gatsby-dev-cli`
-- Run `yarn install` in each of the sites you're testing.
-- For each of your Gatsby test sites, run the `gatsby-dev` command inside the test site's directory to copy
-  the built files from your cloned copy of Gatsby. It'll watch for your changes
-  to Gatsby packages and copy them into the site. For more detailed instructions
-  see the [gatsby-dev-cli README](https://www.npmjs.com/package/gatsby-dev-cli) and check out the [gatsby-dev-cli demo video](https://www.youtube.com/watch?v=D0SwX1MSuas).
+- Instale [gatsby-cli](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli):
+  - Garanta que você tem a Gatsby CLI instalada com `gatsby -v`,
+  - senão, instale globalmente: `yarn global add gatsby-cli`
+- Instale [gatsby-dev-cli](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-dev-cli):
+  - Garante que você tem a Gatsby Dev CLI instalada com `gatsby-dev -v`
+  - senão, instale globalmente: `yarn global add gatsby-dev-cli`
+- Execute `yarn install` em cada site que você está testando.
+- Para cada um dos seus sites de teste Gatsby, execute o comando `gatsby-dev` dentro do diretório do site para copiar os arquivos gerados do seu repositório Gatsby que foi clonado do Gatsby. Ele vai observar as alterações nos pacotes Gatsby e copiar para o site. Para informações mais detalhadas veja [o README do gatsby-dev-cli](https://www.npmjs.com/package/gatsby-dev-cli) e confira o [vídeo demo do gatsby-dev-cli](https://www.youtube.com/watch?v=D0SwX1MSuas).
 
-  - Note: if you plan to modify packages that are exported from `gatsby` directly, you need to either add those manually to your test sites so that they are listed in `package.json` (e.g. `yarn add gatsby-link`), or specify them explicitly with `gatsby-dev --packages gatsby-link`).
+  - Nota: se você pretende modificar pacotes que são exportados diretamente do `gatsby`, você precisa adicioná-los manualmente ao seu site de teste para que eles estjam listados no `package.json` (exemplo: `yarn add gatsby-link`), ou especificar explicitamente eles com `gatsby-dev --packages gatsby-link`).
 
-### Add tests
+### Adicione testes
 
-- Add tests and code for your changes.
-- Once you're done, make sure all tests still pass: `yarn test`.
+- Adicione os testes e o código para suas alterações.
+- Uma vez que tenha terminado, garanta que os testes continuam passando: `yarn test`.
 
-  - To run tests for a single package you can run: `yarn jest <package-name>`.
-  - To run a single test file you can run: `yarn jest <file-path>`.
+  - Para rodar testes para um pacote específico: `yarn jest <package-name>`.
+  - Para rodar um arquivo específico de teste: `yarn jest <file-path>`.
 
-### Commits and pull requests
+### Commits e pull requests
 
-- Commit and push to your fork.
-- Create a pull request from your branch.
+- Faça commit e suba as alterações para o seu fork.
+- Crie um pull request da sua branch.
 
-### Sync your fork
+### Sincronizando seu fork
 
-- GitHub Help Page [Syncing a fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
-- GitHub Help Page [Merging an upstream repository into your fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork)
+- Página de ajuda do GitHub [Sincronizando um fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/syncing-a-fork)
+- Página de ajuda do GitHub [Fazendo merge de um repositório upstream para o seu fork](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/merging-an-upstream-repository-into-your-fork)
