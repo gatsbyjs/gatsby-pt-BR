@@ -43,10 +43,10 @@ Tenha em mente as desvantagens dessa implementação:
 
 ## Quando usar a pasta `static`
 
-Normalmente, nós recomentamos importar [folhas de estilo, imagens, e assets de fonte](/docs/importing-assets-into-files/) pelo JavaScript. A pasta `static` é util como um contorno para um pequeno número de casos comuns, como:
+Normalmente, nós recomendamos importar [folhas de estilo, imagens, e assets de fonte](/docs/importing-assets-into-files/) pelo JavaScript. A pasta `static` é útil como um contorno para um pequeno número de casos comuns, como:
 
-- Você precisa um arquivo com um nome específico para saída da compilação, como [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
+- Você precisa de um arquivo com um nome específico na saída da compilação, como [`manifest.webmanifest`](https://developer.mozilla.org/en-US/docs/Web/Manifest).
 - Você tem centenas de imagens e precisa referenciar seus caminhos dinamicamente.
 - Vocẽ quer incluir um pequeno script externo como [`pace.js`](http://github.hubspot.com/pace/docs/welcome/) .
 - Algumas bibliotecas podem ser incompatíveis com o `Webpack` e você não possui outra opção que não seja incluí-la com uma tag `<script>`.
-- Você precisa importar um arquivo JSON que não possui um esquema consistente, como [TopoJSON files](https://en.wikipedia.org/wiki/GeoJSON#TopoJSON), que é trabalhoso de lidar usando GraphQL. Observe que, importar um arquivo JSON diretamente dentro de uma pagina, template ou componente usando a sintaxe `import` resultará em adicionar este arquivo ao pacote do aplicativo e aumentar o tamanho de todas as páginas do site. Para não ocorrer isso, é melhor colocar seu arquivo JSON dentro da pasta `static` e usar a sintaxe de importação dinâmica (`import('/static/myjson.json')`) dentro do ciclo de vida do `componentDidMount` ou o gancho `useEffect`.
+- Você precisa importar um arquivo JSON que não possui um esquema consistente, como [arquivos TopoJSON](https://en.wikipedia.org/wiki/GeoJSON#TopoJSON), que é trabalhoso de lidar usando GraphQL. Observe que, importar um arquivo JSON diretamente dentro de uma página, template ou componente usando a sintaxe `import` resultará em adicionar este arquivo ao pacote do aplicativo e aumentar o tamanho de todas as páginas do site. Para não ocorrer isso, é melhor colocar seu arquivo JSON dentro da pasta `static` e usar a sintaxe de importação dinâmica (`import('/static/myjson.json')`) dentro do ciclo de vida do `componentDidMount` ou o gancho `useEffect`.
