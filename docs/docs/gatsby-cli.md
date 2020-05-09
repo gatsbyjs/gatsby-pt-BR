@@ -1,6 +1,6 @@
 ---
 
-title: Comandos (ILC do Gatsby)
+title: Comandos (CLI do Gatsby)
 
 tableOfContentsDepth: 2
 
@@ -8,11 +8,11 @@ tableOfContentsDepth: 2
 
   
 
-A interface de linha de comandos (ILC) do Gatsby é o primeiro passo para iniciar sua aplicação Gatsby e executar ações como rodar um servidor de desenvolvimento e fazer o build da aplicação antes de publicá-la.
+A interface de linha de comandos (CLI) do Gatsby é o primeiro passo para iniciar sua aplicação Gatsby e executar ações como rodar um servidor de desenvolvimento e fazer o build da aplicação antes de publicá-la.
 
   
 
-_Documentação sobre esse tema também está disponível no [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md),  do gatsby-cli e a [folha de consulta rápida](/docs/cheat-sheet/) contém os principais comandos da ILC em formato para impressão._
+_Documentação sobre esse tema também está disponível no [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md),  do gatsby-cli e a [folha de consulta rápida](/docs/cheat-sheet/) contém os principais comandos da CLI em formato para impressão._
 
   
 
@@ -20,7 +20,7 @@ _Documentação sobre esse tema também está disponível no [README](https://gi
 
   
 
-A ILC do Gatsby (`gatsby-cli`) é distribuída em forma de um pacote executável disponibilizado via [npm](https://www.npmjs.com/) que deve ser instalado globalmente utilizando o comando `npm install -g gatsby-cli`.
+A CLI do Gatsby (`gatsby-cli`) é distribuída em forma de um pacote executável disponibilizado via [npm](https://www.npmjs.com/) que deve ser instalado globalmente utilizando o comando `npm install -g gatsby-cli`.
 
   
 
@@ -60,11 +60,8 @@ gatsby new [<site-name> [<starter-url>]]
   
 
 | Parâmetro | Descrição |
-
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
 | site-name | O nome do seu site Gatsby, que será utilizado para nomear o diretório do projeto.
-
 | starter-url | URL de um starter do Gatsby ou o caminho de um arquivo local. O valor default desse parâmetro é  [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default); consulte a documentação disponível na página [Starters do Gatsby](/docs/gatsby-starters/) para mais informações. |
 
   
@@ -101,7 +98,7 @@ gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 
   
 
-- Caso você não especifique ambos os parâmetros, a ILC executará em modo interativo, solicitando as informações necessárias:
+- Caso você não especifique ambos os parâmetros, a CLI executará em modo interativo, solicitando as informações necessárias:
   
 
 ```shell
@@ -144,7 +141,6 @@ Após a instalação do site Gatsby, acesse o diretório raiz do seu projeto e u
   
 
 | Opção | Descrição |
-
 | :-------------: | ----------------------------------------------- |
 | `-H`, `--host` | Especifica o host. Default: localhost |
 | `-p`, `--port` | Especifica a porta. Default: 8000 |
@@ -204,15 +200,10 @@ Executado na raiz do site, compila sua aplicação Gatsby e a prepara para distr
   
 
 | Opção | Descrição |
-
 | :--------------------------: | --------------------------------------------------------------------------------------------------------- |
-
 | `--prefix-paths` | Incluir um prefixo no _path_ dos links do site (configure a opção _pathPrefix_ no arquivo _config_ do seu projeto) |
-
 | `--no-uglify` | Faz o _build_ do seu _bundle_ Javascript sem executar etapa de _uglify_ . (útil para modo de debug) |
-
 | `--open-tracing-config-file` | arquivo de configuração para _tracer_(compatível com OpenTracing).  Consulte [Rastreamento de Performance](/docs/performance-tracing/) |
-
 | `--no-color`, `--no-colors` | Desabilita o uso de cores no _output_ do terminal|
 
   
@@ -238,15 +229,10 @@ Executado na raiz do site, serve a versão de produção do seu site para efeito
   
 
 | Opção | Descrição |
-
 | :--------------: | ---------------------------------------------------------------------------------------- |
-
 | `-H`, `--host` | Especifica o host. Default: localhost |
-
 | `-p`, `--port` | Especifica a porta. Default: 9000 |
-
 | `-o`, `--open` | Abre o site no navegador padrão do computador |
-
 | `--prefix-paths` | Caso seu gatsby-config especifique um atributo `pathPrefix`, o site será servido com esse prefixo aplicado aos links. |
 
   
@@ -267,9 +253,7 @@ Executado na raiz de um site Gatsby, esse comando disponibiliza informações im
   
 
 | Opção | Descrição |
-
-| :-----------------: | ------------------------------------------------------- |
-
+|:-----------------:|-------------------------------------------------------|
 | `-C`, `--clipboard` | Copia informações do ambiente para a área de transferência (clipboard)  |
 
   
@@ -335,41 +319,23 @@ O  REPL do Gatsby solicitará que você insira comandos para explorar os recurso
 
 Você poderá inserir comandos como:
 
-  
+`babelrc`  
 
-`babelrc`
+`components`  
 
-  
+`dataPaths`  
 
-`components`
+`getNodes()`  
 
-  
+`nodes`  
 
-`dataPaths`
+`pages`  
 
-  
+`schema`  
 
-`getNodes()`
+`siteConfig`  
 
-  
-
-`nodes`
-
-  
-
-`pages`
-
-  
-
-`schema`
-
-  
-
-`siteConfig`
-
-  
-
-`staticQueries`
+`staticQueries`  
 
   
 
@@ -385,11 +351,12 @@ Para mais informações, consulte a [documentação do REPL Gatsby](/docs/gatsby
 
   
 
-In addition to the explicit `--no-color` option, the CLI respects the presence of the `NO_COLOR` environment variable (see [no-color.org](https://no-color.org/)).
+Além da opção `--no-color`, a CLI respeita a utilização da variável de ambiente `NO_COLOR` (veja [no-color.org](https://no-color.org/)).
 
-## How to change your default package manager for your next project?
+## Como trocar o gerenciador de pacotes padrão no seu novo projeto?
 
-When you use `gatsby new` for the first time to create a new project, you are asked to choose your default package manager between yarn and npm.
+Quando você executa o comando `gatsby new` pela primeira vez para criar um novo projeto, ele pede para você escolher entre _yarn_ e _npm_ como gerenciador de pacotes padrão.
+
 
 ```shell
 Which package manager would you like to use ? › - Use arrow-keys. Return to submit.
@@ -397,12 +364,12 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Once you’ve made your choice, the CLI won’t ask for your preference again for any subsequent project.
+Uma vez que você escolhe, a CLI não ira perguntar a sua preferência nos próximos projetos.
 
-If you want to change this for your next project you have to edit the config file created automatically by the CLI.
-This file is available on your system at: `~/.config/gatsby/config.json`
+Se você quiser trocar para essa configuração no seu próximo projeto, terá que editar o arquivo de configuração gerado automaticamente pela CLI.
+Esse arquivo está disponível no seu computador em: `~/.config/gatsby/config.json`
 
-In it you’re going to see something like this.
+O arquivo será parecido com isso.
 
 ```json:title=config.json
 {
@@ -412,4 +379,4 @@ In it you’re going to see something like this.
 }
 ```
 
-Edit your `packageManager` value, save and you’re good to go for your next project using `gatsby new`.
+Edite o valor de `packageManager`, salve e pronto, ele usará a nova configuração no seu novo projeto usando `gatsby new`.
