@@ -6,7 +6,7 @@ Tailwind é uma estrutura [utility-first](https://tailwindcss.com/docs/utility-f
 
 ## Visão geral
 
-Existem três maneiras de usar o Tailwind junto com o gatsby:
+Existem três maneiras de usar o Tailwind junto com o Gatsby:
 
 1. Standard: Usando PostCSS para gerar classes Tailwind, e você pode aplicá-las usando o `className`.
 2. CSS-in-JS: integrando classes Tailwind dentro Styled Components.
