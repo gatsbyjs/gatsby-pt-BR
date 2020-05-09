@@ -168,7 +168,7 @@ Um [CMS](#cms) que lida apenas com o gerenciamento de conteúdo do [backend](#ba
 
 ### [Headless WordPress](/docs/glossary/headless-wordpress)
 
-A prática de usar o WordPress como um [headless CMS](#headless-cms) atravé de retornos de uma API REST no formato JSON permitindo que você use o WordPress para escrever e editar o conteúdo que será consumido por qualquer cliente capaz de entender o formato JSON.
+A prática de usar retornos em JSON da API REST do WordPress como um [headless CMS](#headless-cms). Isto permite que qualquer cliente que entenda o formato JSON consuma conteúdos criados e editados no WordPress.
 
 ### Hosting
 
