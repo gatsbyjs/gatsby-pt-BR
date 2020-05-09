@@ -1,6 +1,6 @@
 ---
 
-title: Comandos (ILC do Gatsby)
+title: Comandos (CLI do Gatsby)
 
 tableOfContentsDepth: 2
 
@@ -8,11 +8,11 @@ tableOfContentsDepth: 2
 
   
 
-A interface de linha de comandos (ILC) do Gatsby é o primeiro passo para iniciar sua aplicação Gatsby e executar ações como rodar um servidor de desenvolvimento e fazer o build da aplicação antes de publicá-la.
+A interface de linha de comandos (CLI) do Gatsby é o primeiro passo para iniciar sua aplicação Gatsby e executar ações como rodar um servidor de desenvolvimento e fazer o build da aplicação antes de publicá-la.
 
   
 
-_Documentação sobre esse tema também está disponível no [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md),  do gatsby-cli e a [folha de consulta rápida](/docs/cheat-sheet/) contém os principais comandos da ILC em formato para impressão._
+_Documentação sobre esse tema também está disponível no [README](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby-cli/README.md),  do gatsby-cli e a [folha de consulta rápida](/docs/cheat-sheet/) contém os principais comandos da CLI em formato para impressão._
 
   
 
@@ -20,7 +20,7 @@ _Documentação sobre esse tema também está disponível no [README](https://gi
 
   
 
-A ILC do Gatsby (`gatsby-cli`) é distribuída em forma de um pacote executável disponibilizado via [npm](https://www.npmjs.com/) que deve ser instalado globalmente utilizando o comando `npm install -g gatsby-cli`.
+A CLI do Gatsby (`gatsby-cli`) é distribuída em forma de um pacote executável disponibilizado via [npm](https://www.npmjs.com/) que deve ser instalado globalmente utilizando o comando `npm install -g gatsby-cli`.
 
   
 
@@ -98,7 +98,7 @@ gatsby new my-awesome-blog-site https://github.com/gatsbyjs/gatsby-starter-blog
 
   
 
-- Caso você não especifique ambos os parâmetros, a ILC executará em modo interativo, solicitando as informações necessárias:
+- Caso você não especifique ambos os parâmetros, a CLI executará em modo interativo, solicitando as informações necessárias:
   
 
 ```shell
@@ -364,9 +364,9 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Uma vez que você escolhe, o ILC não ira perguntar a sua preferência nos próximos projetos.
+Uma vez que você escolhe, o CLI não ira perguntar a sua preferência nos próximos projetos.
 
-Se você quiser trocar para essa configuração no seu próximo projeto, terá que editar o arquivo de configuração gerado automaticamente pelo ILC.
+Se você quiser trocar para essa configuração no seu próximo projeto, terá que editar o arquivo de configuração gerado automaticamente pelo CLI.
 Esse arquivo está disponível no seu computador em: `~/.config/gatsby/config.json`
 
 O arquivo será parecido com isso.
