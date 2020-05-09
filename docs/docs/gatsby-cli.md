@@ -351,7 +351,7 @@ Para mais informações, consulte a [documentação do REPL Gatsby](/docs/gatsby
 
   
 
-Além da opção `--no-color`, o CLI respeita a utilização da variável de ambiente `NO_COLOR` (veja [no-color.org](https://no-color.org/)).
+Além da opção `--no-color`, a CLI respeita a utilização da variável de ambiente `NO_COLOR` (veja [no-color.org](https://no-color.org/)).
 
 ## Como trocar o gerenciador de pacotes padrão no seu novo projeto?
 
@@ -364,9 +364,9 @@ Which package manager would you like to use ? › - Use arrow-keys. Return to su
    npm
 ```
 
-Uma vez que você escolhe, o CLI não ira perguntar a sua preferência nos próximos projetos.
+Uma vez que você escolhe, a CLI não ira perguntar a sua preferência nos próximos projetos.
 
-Se você quiser trocar para essa configuração no seu próximo projeto, terá que editar o arquivo de configuração gerado automaticamente pelo CLI.
+Se você quiser trocar para essa configuração no seu próximo projeto, terá que editar o arquivo de configuração gerado automaticamente pela CLI.
 Esse arquivo está disponível no seu computador em: `~/.config/gatsby/config.json`
 
 O arquivo será parecido com isso.
