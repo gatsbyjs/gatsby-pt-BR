@@ -45,7 +45,7 @@ Caso você queira desenvolver na biblioteca _starter_, será necessário fornece
 GITHUB_API_TOKEN=SEU_TOKEN_AQUI
 ```
 
-O arquivo `.env.development` é ignorado pelo git. Por razões de seguranças, você nunca deve realizar um `commit` do seu _token_.
+O arquivo `.env.development` é ignorado pelo git. Por razões de segurança, você nunca deve realizar um `commit` do seu _token_.
 
 ## Contribuindo com sites exemplo
 
@@ -125,4 +125,4 @@ Confira a página [Depurando o processo de _build_](/docs/debugging-the-build-pr
 
 ## _Feedback_
 
-A qualquer momento durante o processo de contribuição, o time do Gatsby adoraria ajudá-lo! Para obter ajuda em um problema específico, você pode [abrir uma _issue_ no GitHub](/contributing/how-to-file-an-issue/). Ou entre no [servidor do Discord](https://gatsby.dev/discord) para a comunidade em geral discutir e lhe dar suporte.
+A qualquer momento durante o processo de contribuição, o time do Gatsby adorará ajudá-lo! Para obter ajuda em um problema específico, você pode [abrir uma _issue_ no GitHub](/contributing/how-to-file-an-issue/). Ou entre no [servidor do Discord](https://gatsby.dev/discord) para a comunidade em geral discutir e lhe dar suporte.
