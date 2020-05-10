@@ -6,13 +6,13 @@ Tailwind é uma estrutura [utility-first](https://tailwindcss.com/docs/utility-f
 
 ## Visão geral
 
-There are three ways you can use Tailwind with Gatsby:
+Existem três maneiras de usar o Tailwind junto com o Gatsby:
 
-1. Standard: Use PostCSS to generate Tailwind classes, then you can apply those classes using `className`.
-2. CSS-in-JS: Integrate Tailwind classes into Styled Components.
-3. SCSS: Use [gatsby-plugin-sass](/packages/gatsby-plugin-sass) to support Tailwind classes in your SCSS files.
+1. Standard: Usando PostCSS para gerar classes Tailwind, e você pode aplicá-las usando o `className`.
+2. CSS-in-JS: integrando classes Tailwind dentro Styled Components.
+3. SCSS: Usando [gatsby-plugin-sass](/packages/gatsby-plugin-sass) para dar suporte às classes Tailwind em seus arquivos SCSS.
 
-You have to install and configure Tailwind for all of these methods, so this guide will walk through that step first, then you can follow the instructions for PostCSS, CSS-in-JS or SCSS.
+É necessário instalar e configurar o Tailwind para todos os três métodos, portanto, este guia percorrerá essa etapa primeiro e, posteriormente, você poderá seguir as instruções para PostCSS, CSS-in-JS ou SCSS.
 
 ## Instalando e configurando o Tailwind
 
