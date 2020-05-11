@@ -16,7 +16,7 @@ Gatsby facilita o controle programático de suas páginas. Páginas podem ser cr
 
 Veja [Criando e Modificando Páginas](/docs/creating-and-modifying-pages) para mais detalhes.
 
-Quando o Gatsby cria páginas, automaticamente gera os caminhos para acessá-las. Esse caminho será diferentes dependendo de como a página foi criada.
+Quando o Gatsby cria páginas, automaticamente gera os caminhos para acessá-las. Esse caminho será diferente dependendo de como a página foi criada.
 
 ### Páginas criadas em `src/pages`
 
