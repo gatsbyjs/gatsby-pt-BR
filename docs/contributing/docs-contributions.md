@@ -4,7 +4,7 @@ title: Contribuições para as Documentações
 
 Gatsby, sem surpresas, usa Gatsby para o site de sua documentação. Agradecemos antecipadamente por contribuir com a documentação do Gatsby! Em fevereiro de 2019, mais de 800 pessoas já haviam contribuído. São pessoas como você que tornam essa comunidade ótima!
 
-> _Ao decidir para onde contribuir com o Gatsby (documentações ou [blog](/contributing/blog-and-website-contributions/)?), veja a página com os [templates de documentações](/contributing/docs-templates/)._
+> _Quando decidir para onde contribuir com o Gatsby (documentações ou [blog](/contributing/blog-and-website-contributions/)?), veja a página com os [templates de documentações](/contributing/docs-templates/)._
 
 ## Principais prioridades
 
@@ -12,7 +12,7 @@ Procure no repositório do GitHub por _issues_ marcadas com ["documentation" e "
 
 ## Opções para contribuir com as documentações do Gatsby
 
-Ao trabalhar na documentação do Gatsby.js, você pode escolher entre duas, mais comuns, formas de trabalhar:
+Ao trabalhar na documentação do Gatsby.js, você pode escolher entre duas formas de trabalhar mais comuns:
 
 - [Trabalhar diretamente na UI do GitHub](#modificando-arquivos-em-markdown), usando o _"Edit this File"_ e a função de _commit_. Isso é útil para atualizações rápidas da documentação, correções de erros de digitação e pequenas alterações no Markdown.
 - Clone o repositório do Gatsby.js e configure para que o site dentro de `www` rode localmente. Isso é necessário para obter um conteúdo mais completo da documentação e de alterações na infraestrutura. Aprenda como configurar usando as [instruções para configurar a documentação do Gatsby](#instruções-para-configurar-a-documentação-do-Gatsby).
@@ -21,7 +21,7 @@ Ao trabalhar na documentação do Gatsby.js, você pode escolher entre duas, mai
 
 Se você encontrar uma URL de uma imagem corrompida na documentação do Gatsby, ela deve ser corrigida e mantida em relação à origem do site, ao invés de vinculado ao repositório remoto no GitHub. Isso garante que, quando o site for publicado, todas as imagens sejam incluídas na compilação.
 
-Para resolver as imagens faltantes, consulte a fonte do documento ou tutorial [no repositório do Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/docs) ver no histórico se foram movidas e se as imagens ainda estão no local antigo. Verifique se essas imagens também são referenciadas em mais de um documento. Se não estiverem, mova-os para o novo diretório (e atualize as referências de URL relativas ao conteúdo, se necessário). Se eles estiverem sendo referenciados em mais de um local, use caminhos relativos e não duplique imagens.
+Para resolver as imagens ausentes, consulte a fonte do documento ou do tutorial [no repositório do Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/docs) para ver, no histórico, se foram movidas e se as imagens ainda estão no local antigo. Verifique se essas imagens também são referenciadas em mais de um documento. Se não estiverem, mova-as para o novo diretório (e atualize as referências de URL relativas ao conteúdo, se necessário). Se elas estiverem sendo referenciados em mais de um local, use caminhos relativos e não duplique imagens.
 
 Se você encontrar um link quebrado na documentação do Gatsby, fique à vontade para corrigí-lo e enviar um PR!
 
@@ -37,20 +37,18 @@ Para fins de tornar o documento acessível, os títulos do conteúdo devem ir de
 
 > 💡 Primeira vez escrevendo Markdown? Veja o [guia para Markdown do Gatsby](/docs/mdx/markdown-syntax/)!
 
-1. Se você deseja adicionar/modificar qualquer documentação do Gatsby, vá para a
-   [pasta _docs_](https://github.com/gatsbyjs/gatsby/tree/master/docs) ou para a [pasta _contributing_](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) no GitHub e 
-   use o editor de arquivos para editar e visualizar suas alterações.
+1. Se você deseja adicionar ou modificar qualquer documentação do Gatsby, vá para a [pasta documentos](https://github.com/gatsbyjs/gatsby/tree/master/docs) ou para a [pasta _contributing_](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) no GitHub e use o editor de arquivos para editar e visualizar suas alterações.
 2. Antes de enviar suas modificações e abrir o PR na UI, você precisa ter certeza que seu PR está de acordo com os critérios de contribuição para as documentações:
    - Seguindo os padrões descritos no [Guia de Estilo do Gatsby](/contributing/gatsby-style-guide/).
-   - Se o seu PR não tem como origem uma issue escrita pelo _core team_, adicione um comentário no seu PR, explicando porque sua alteração deveria ser incluída na documentação, de acordo com os [quesitos para decisão da Documentação](/blog/2018-10-12-uptick-docs-contributions-hacktoberfest/#docs-decision-tree-and-examples).
-     > Nota: Se a sua _issue_ e/ou PR não atender aos critérios de contribuição acima, ele poderá receber um comentário para lembrá-lo. Se, após duas semanas, essas alterações não tiverem sido feitas, sua _issue_ e/ou PR poderá ser encerrado, o que nos ajudará a triar _issues_ e PRs com eficiência. Você pode solicitar que seja reaberto se e quando estiver pronto para fazer as atualizações necessárias.
+   - Se o seu PR não tem como origem uma _issue_ escrita pelo _core team_, adicione um comentário no seu PR, explicando porque sua alteração deveria ser incluída na documentação, de acordo com os [quesitos para decisão da Documentação](/blog/2018-10-12-uptick-docs-contributions-hacktoberfest/#docs-decision-tree-and-examples).
+     > Nota: Se a sua _issue_ e/ou PR não atender aos critérios de contribuição acima, ela poderá receber um comentário para lembrá-lo. Se, após duas semanas, essas alterações não tiverem sido feitas, sua _issue_ e/ou PR poderá ser encerrada, o que nos ajudará a triar _issues_ e PRs com eficiência. Você pode solicitar que seja reaberta se, e quando, estiver pronto para fazer as atualizações necessárias.
 3. O GitHub permite você modificar e abrir um PR na própria UI. Essa é a forma mais fácil de contribuir com o projeto!
 
 ### Convertendo um documento a partir de um esboço
 
 Se você escreveu um novo documento que era [anteriormente um esboço](/contributing/how-to-write-a-stub/), existem duas coisas que precisam ser atualizadas.
 
-1. Remova o _frontmatter_ que tem o _link_ para a issue
+1. Remova o _frontmatter_ que tem o link para a issue
 
 ```diff:title=docs/docs/example-doc.md
   ...
@@ -84,109 +82,108 @@ Se você escreveu um novo documento que era [anteriormente um esboço](/contribu
 
 Depois de passar pelas [instruções de configuração para desenvolvimento](/contributing/setting-up-your-local-dev-environment/), existem algumas informações adicionais que você deve saber ao configurar o [site da documentação do Gatsby.js](/docs/), que está em sua maior parte nos diretórios [www](https://github.com/gatsbyjs/gatsby/tree/master/www) e [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs). Temos alguns [exemplos](https://github.com/gatsbyjs/gatsby/tree/master/examples) no repositório, os quais são referenciados na documentação.
 
-- Prerequisites: install Node.js and Yarn. See [development setup instructions](/contributing/setting-up-your-local-dev-environment/).
-- [Fork and clone the Gatsby repo](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
-- For docs-only changes, consider using `git checkout -b docs/some-change` or `git checkout -b docs-some-change`, as this will short circuit the CI process and only run linting tasks.
-- Change directories into the docs site folder: `cd www`
-- Install dependencies with Yarn: `yarn install`
-- Add the following env variable to an `.env.development` file inside the `www` directory to [enable image placeholders](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder): `GATSBY_SCREENSHOT_PLACEHOLDER=true`. This will speed up building the docs site significantly!
-- Make sure you have the Gatsby CLI installed with `gatsby -v`, if not run `yarn global add gatsby-cli`
-- Start a build of `www` with `gatsby develop`.
-- Edit Markdown files in the [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) and [contributing](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing) folders, as well as the [YAML sidebar files](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
-- View the changes in your browser at `http://localhost:8000`.
-- Commit your changes and [submit a pull request](/contributing/how-to-open-a-pull-request/)!
+- Pré-requisitos: instale o Node.js e Yarn. Veja as [instruções de configuração de desenvolvimento](/contributing/setting-up-your-local-dev-environment/).
+- [Faça um fork e clone o repositório do Gatsby](/contributing/setting-up-your-local-dev-environment/#gatsby-repo-install-instructions).
+- Para mudanças únicas nos documentos, considere usar `git checkout -b docs/some-change` ou `git checkout -b docs-some-change`, isto parará o processo de CI e rodará apenas tarefas de limpeza.
+- Altere os diretórios para a pasta de documentos do site: `cd www`
+- Instale as dependências com Yarn: `yarn install`
+- Adicione a variável _env_ para um arquivo `.env.development` dentro do diretório `www` para [habilitar imagens de placeholders](https://github.com/gatsbyjs/gatsby/tree/master/www#running-slow-build-screenshots-placeholder):`GATSBY_SCREENSHOT_PLACEHOLDER=true`. Isto irá aumentar a velocidade de _build_ do documento do site significativamente!
+- Certifique-se de que você tem o Gatsby CLI instalado com `gatsby -v`, caso não, execute `yarn global add gatsby-cli`
+- Inicie uma _build_ de `www` com `gatsby develop`.
+- Edite arquivos de marcação nas pastas [docs](https://github.com/gatsbyjs/gatsby/tree/master/docs) e [contribuição](https://github.com/gatsbyjs/gatsby/tree/master/docs/contributing), assim como [arquivos YAML de _sidebar_](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars).
+- Veja as mudanças no seu navegador em `http://localhost:8000`.
+- _Commit_ suas alterações e [envie um pull request](/contributing/how-to-open-a-pull-request/)!
 
-## Changing headers
+## Alterando headers
 
-It can be necessary to change a heading within the docs. It's important to note that headers automatically generate links with a corresponding URL that can be deep-linked from elsewhere on the site. When changing a header, be sure to point all corresponding links to the new URL. Here are some workflow tips:
+Pode ser necessário alterar o _heading_ dentro dos documentos. É importante notar que os _headers_ geram automaticamente links com uma URL correspondente, que podem ser vinculados à outras partes do site, por meio de _deep-link_. Ao alterá-lo, assegure-se de redirecionar todos os links correspondentes à nova URL. Estas são algumas dicas de como realizar:
 
-- Determine the URL you're looking for. `Changing headers` is linked with a URL ending in `changing-headers`, `Docs renaming instructions` becomes `docs-renaming-instructions`, etc.
-- Update all instances of the old URL to your new one. [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) in VS Code can help. Check that the context of the original link reference still makes sense with the new one.
+- Determinar a URL que você procura. `Changing headers` está vinculada com a URL terminada em `changing-headers`, `Docs renaming instructions` se torna `docs-renaming-instructions`, etc.
+- Atualizar todas as instâncias da antiga URL para a nova. [Encontrar e substituir](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) no VS Code pode ajudar. Assegure-se que ainda há sentido quanto ao contexto de referência do link original com o novo.
 
-## Adding a description
+## Adicionando uma nova descrição
 
-The site automatically creates description tags in order to boost SEO:
+O site cria automaticamente _tags_ de descrição para otimizar o SEO:
 
 ```html
-<meta name="description" content="Documentation of Gatsby" />
-<meta property="og:description" content="Documentation of Gatsby" />
-<meta name="twitter:description" content="Documentation of Gatsby" />
+<meta name="description" content="Documentação do Gatsby" />
+<meta property="og:description" content="Documentação do Gatsby" />
+<meta name="twitter:description" content="Documentação do Gatsby" />
 ```
 
-By default, this description is generated from the `page.excerpt`. If you would like to add a custom description, you can use the `description` frontmatter tag:
+Por padrão, esta descrição é gerada a partir da `page.excerpt`. Caso queira adicionar uma descrição customizada, você pode usar a _frontmatter tag_ `decription`:
 
 ```markdown
 ---
-title: Gatsby Community Events
-description: Learn about other events happening around the globe to connect with other members of the Gatsby community
+title: Eventos da comunidade do Gatsby
+description: Aprenda sobre outros eventos acontecendo pelo mundo para conectar-se com outros membros da comunidade do Gatsby
 ---
 ```
 
-## Configuring site navigation
+## Configurando a navegação do site
 
-The docs include custom built components to aid with navigation. In order to customize the navigation experience, these components allow some configurations without changing any of the React code.
+Os documentos incluem componentes customizáveis para ajudar na navegação. Para personalizar a experiência de navegação, estes componentes permitem algumas configurações sem alterar quaisquer códigos do React.
 
-### Adjusting breadcrumb titles
+### Ajustando títulos _breadcrumb_
 
-The `<Breadcrumb />` component is used in layout files to display the hierarchy of pages a user is currently browsing on at the top of each doc.
-
-To alter the title of a doc that is displayed in the Breadcrumb component, `breadcrumbTitle` is supported as a key in the [sidebar YAML files](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars). It is commonly used to provide an abbreviated version of a doc's title when displayed next to its parent page title, e.g. shortening "Adding a Custom webpack Config" to "webpack Config".
+O componente `<Breadcrumb />` é usado em arquivos de _layout_ para exibir a hierarquia das páginas que um usuário está navegando no topo do documento.
+Para alterar o título de um documento mostrado no componente _Breadcrumb_, `breadcrumbTitle` é aceito como _key_ nos [arquivos YAML da _sidebar_](https://github.com/gatsbyjs/gatsby/tree/master/www/src/data/sidebars). Isto é comumente usado para fornecer uma versão abreviada do título de um documento quando este é mostrado ao lado do título da página pai, por exemplo, encurtando "Adicionando uma configuração personalizada do webpack" para "webpack Config".
 
 ```yaml
-- title: Adding Page Transitions
+- title: Adicionando transição de páginas
   link: /docs/adding-page-transitions/
-  breadcrumbTitle: Page Transitions # highlight-line
+  breadcrumbTitle: Transição de Páginas # linha-realçada
 ```
 
-### Disabling or shortening Table of Contents
+### Desabilitando ou abreviando Tabela de Conteúdos
 
-The `<TableOfContents />` component is used to render a list of subheaders from a docs page and automatically provide deep links to them. It can be tweaked by values set in the frontmatter of a doc's markdown.
+O componente `<TableOfContents />` é usado para renderizar uma lista de _subheaders_ de uma página documentos e, automaticamente, prover _deep links_ para estes. Pode ser ajustado por valores definidos no _frontmatter_ de um markdown do documento.
 
-In docs where the Table of Contents isn't required and should be disabled, a key in the frontmatter called `disableTableOfContents` can be set to `true` like this:
+Em documentos que a Tabela de Conteúdo não é requerida e deve ser desabilitada, uma _key_ no _frontmatter_ chamada `disableTableOfContents` pode ser definida como `true`, desta forma:
 
 ```markdown
 ---
-title: Glossary
+title: Glossário
 disableTableOfContents: true
 ---
 
-When you're new to Gatsby there can be a lot of words to learn...
+Quando você é novato no Gatsby, pode haver diversas palavras para se aprender...
 ```
 
-In other docs where the Table of Contents is extremely long it can make sense to only show headers from the doc up to a certain level, rather than all subheadings. You can set the `tableOfContentsDepth` key to a number that will limit the subheadings shown in the table of contents to that "depth". If it is set to 2, `<h2>`/`##`, and `<h3>`/`###` headers will be listed, if set to 3, `<h2>`/`##`, `<h3>`/`###`, and `<h4>`/`####` will all be shown. It is set like this:
+Em outros documentos em que a Tabela de Conteúdo é extremamente longa, pode fazer sentido mostrar apenas os _headers_ do documento até um certo nível, em vez de todos os _subheadings_. Você pode definir a _key_ `tableOfContentsDepth` como um número que irá limitar as _subheadings_ mostradas na tabela de conteúdos a esta "profundidade". Caso esta seja definida para 2, os _headers_ `<h2>`/`##`, e `<h3>`/`###` serão listados, caso seja definida para 3, `<h2>`/`##`, `<h3>`/`###`, and `<h4>`/`####` serão todos mostrados. Caso esteja definida assim:
 
 ```markdown
 ---
-title: Glossary
+title: Glossáiro
 tableOfContentsDepth: 2
 ---
 
-When you're new to Gatsby there can be a lot of words to learn...
+Quando você é novato no Gatsby, pode haver diversas palavras para se aprender...
 ```
 
-## Adding embedded GraphQL examples
+## Incluindo exemplos incorporados do GraphQL
 
-There are embedded examples in a few places in the docs (like the [GraphQL Reference guide](/docs/graphql-reference/)) that provide a working version of the code described. In the specific example of the GraphQL Query Options Reference page, these examples of the GraphiQL interface show how data can be queried from Gatsby's data layer.
+Existem exemplos incorporados em vários locais nos documentos (como o [Guia de Referência do GraphQL](/docs/graphql-reference/)) que provém uma versão funcional do código descrito. No exemplo específico da Página de Referência de Opções de Consulta do GraphQL, estes exemplos da interface do GraphiQL mostra como os dados podem ser consultados a partir da camada de dados do Gatsby.
 
-To write a new GraphQL example, a Codesandbox project with a Gatsby site can be opened at its server container link, for example: [https://711808k40x.sse.codesandbox.io/](https://711808k40x.sse.codesandbox.io/). Because Codesandbox is running a Gatsby site in [`develop` mode instead of `build` mode](/docs/overview-of-the-gatsby-build-process/) you can navigate to GraphiQL by adding `/___graphql` to the link. Write an example query, and when you have a query you are satisfied with, the query fields and names will be saved as URL parameters so you can share the link. Copy the URL and use it as the `src` of an iframe:
+Para escrever um novo exemplo do GraphQL, um projeto Codesandbox com um site Gatsby pode ser aberto no link do _container_ do servidor, por exemplo: [https://711808k40x.sse.codesandbox.io/](https://711808k40x.sse.codesandbox.io/). Como o Codesandbox está rodando um site Gatsby em [modo _`develop`_ em vez do modo _`build`_](/docs/overview-of-the-gatsby-build-process/), você pode navegar para GraphiQL adicionando `/___graphql` ao link. Escreva uma consulta de exemplo e, quando estiver satisfeito, os campos e nomes da consulta serão salvos como parâmetros da URL, assim você poderá compartilhar o link. Copie a URL e use-a no `src` de um iframe:
 
 ```mdx
-Here's an example of a GraphQL query inline:
+Aqui está um exemplo de uma consulta GraphQL no código:
 
-<iframe src="https://711808k40x.sse.codesandbox.io/___graphql?query=query%20TitleQuery%20%7B%0A%20%20site%20%7B%0A%20%20%20%20siteMetadata%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&explorerIsOpen=false&operationName=TitleQuery" /> // highlight-line
+<iframe src="https://711808k40x.sse.codesandbox.io/___graphql?query=query%20TitleQuery%20%7B%0A%20%20site%20%7B%0A%20%20%20%20siteMetadata%20%7B%0A%20%20%20%20%20%20title%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&explorerIsOpen=false&operationName=TitleQuery" /> // linha-realçada
 
-More markdown content...
+Mais conteúdo de markdown...
 ```
 
-> Note that you should set the `explorerIsOpen` parameter in the URL to `false` if it isn't already.
+>Note que você deve definir o parâmetro `explorerIsOpen` na URL para `false` caso não esteja.
 
-## Docs renaming instructions
+## Instruções de renomeação de documentos
 
 Às vezes faz sentido mover ou renomear um arquivo, como parte da reestruturação da documentação ou para esclarecimento de um conteúdo. Embora seja recomendável manter as URLs consistentes da melhor maneira possível, aqui estão algumas dicas para minimizar erros e manter as documentações em bom estado:
 
-- Run proposed structure changes by the Gatsby docs team in [a GitHub issue](/contributing/how-to-file-an-issue/) to ensure your change is accepted.
-- Update all instances of the old URL to your new one. [Find and replace](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) in VS Code can help. Check that the context of the original link reference still makes sense with the new one.
-- For SEO purposes, add a redirect to [`www/redirects.yaml`](https://github.com/gatsbyjs/gatsby/tree/master/www/redirects.yaml). Here's an example:
+- Execute as alterações de estrutura propostas pela equipe de documentação do Gatsby em [um _issue_ do GitHub](/contributing/how-to-file-an-issue/) para garantir que sua alteração será aceita.
+- Atualize todas as instâncias da antiga URL para a nova. [Encontrar e substituir](https://code.visualstudio.com/docs/editor/codebasics#_search-across-files) no VS Code pode ajudar. Assegure-se que ainda há sentido quanto ao contexto de referência do link original com o novo.
+- Para fins de SEO, adicione um redirecionamento para [`www/redirects.yaml`](https://github.com/gatsbyjs/gatsby/tree/master/www/redirects.yaml). Aqui está um exemplo:
 
 ```yaml:title=www/redirects.yaml
 - fromPath: /docs/source-plugin-tutorial/
