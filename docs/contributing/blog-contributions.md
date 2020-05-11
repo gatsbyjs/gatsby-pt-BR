@@ -23,7 +23,7 @@ O que procuramos no conteúdo do blog:
 - Informação para ajudar outras pessoas a vencer desafios que você enfrentou enquanto utilizava o Gatsby 
 - Artigos sobre como o Gatsby te ajudou a concluir diferentes desafios no trabalho e em projetos pessoais.
 - Estudos de caso do Gatsby
-- Demonstrar uma ferramenta, ajuste, ou outro conteúdo que você ou alguem contribuiu para a comunidade open-source do Gatsby
+- Demonstrar uma ferramenta, ajuste, ou outro conteúdo que você ou alguém contribuiu para a comunidade open-source do Gatsby
 - Explicações claras e aprofundadas sobre detalhes técnicos ou conceitos complexos relacionados a React, GrahpQL, web e desenvolvimento de aplicações, contribuições open-source, código fonte do Gatsby e qualquer assunto relacionado ao Gatsby.
 - Guias e recursos para aprender React, GraphQL, HTML/CSS, desenvolvimento web, melhores práticas, acessibilidade, SEO, Gatsby, diferentes ferramentas e integrações com CMS, e qualquer assunto relacionado ao Gatsby.
 - Outros tópicos que você acredita terem valor para o aprendizado de outras pessoas ao utilizar o Gatsby
