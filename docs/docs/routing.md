@@ -43,7 +43,7 @@ Para mais informações, visite a [documentação da API `createPage`](/docs/act
 
 ## Rotas conflitantes
 
-Como existem diversas maneiras de criar uma página, diferentes plugins, temas, ou trechos de código no arquivo `gatsby-node` podem acidentalmente criar múltiplas páginas com o mesmo caminho. Quando isso acontece, o Gatsby irá mostrar um aviso durante a compilação, mas o site ainda vai compilar com sucesso. Nessa situação, a página que foi compilada por último será a única acessível dentre as conflitantes. Alterar qualquer caminho conflitante para produzir URLs únicas deve solucionar o problema.
+Como existem diversas maneiras de criar uma página, diferentes plugins, temas, ou trechos de código no arquivo `gatsby-node` podem acidentalmente criar múltiplas páginas com o mesmo caminho. Quando isso acontecer, o Gatsby irá mostrar um aviso durante a compilação, mas o site ainda vai compilar com sucesso. Nessa situação, a página que foi compilada por último será a única acessível dentre as conflitantes. Alterar qualquer caminho conflitante para produzir URLs únicas deve solucionar o problema.
 
 ## Rotas aninhadas
 
