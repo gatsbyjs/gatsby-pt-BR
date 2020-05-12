@@ -2,7 +2,7 @@
 title: Usando um tema Gatsby
 ---
 
-Além de você [iniciar rapidamente um novo projeto utilizando o starter de tema do Gastby](/docs/themes/getting-started/), você também pode instalar um tema Gatsby diretamente em um site Gastby já existente. Os temas do Gatsby são plugins, então você pode [instalar e usar como qualquer outro plugin do Gatsby](/docs/using-a-plugin-in-your-site/).
+Além de você [iniciar rapidamente um novo projeto utilizando o starter de tema do Gatsby](/docs/themes/getting-started/), você também pode instalar um tema Gatsby diretamente em um site Gastby já existente. Os temas do Gatsby são plugins, então você pode [instalar e usar como qualquer outro plugin do Gatsby](/docs/using-a-plugin-in-your-site/).
 
 ## Instalando um Tema
 
