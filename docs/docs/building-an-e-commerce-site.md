@@ -1,11 +1,11 @@
 ---
-title: Building an e-commerce Site
+title: Desenvolvendo uma loja virtual
 ---
 
-The speed and performance of sites built with Gatsby make it a great tool for building e-commerce sites. There are existing plugins for connecting services like [Shopify](/packages/gatsby-source-shopify/) and [Snipcart](/packages/gatsby-plugin-snipcart/) to Gatsby, and this section contains reference guides to help get things setup.
+A velocidade e performance dos sites desenvolvidos com Gatsby o torna uma ótima ferramenta para desenvolvimento de lojas virtuais. Há plugins para conectar serviços como o [Shopify](/packages/gatsby-source-shopify/) e o [Snipcart](/packages/gatsby-plugin-snipcart/) no Gatsby. Nesta seção estão os guias de referência para ajudar a configurá-los.
 
-To see examples of e-commerce sites built with Gatsby, check out the [showcase](/showcase/?filters%5B0%5D=eCommerce).
+Para ver exemplos de lojas virtuais desenvolvidas com Gatsby, veja o [mostruário](/showcase/?filters%5B0%5D=eCommerce).
 
 <GuideList slug={props.slug} />
 
-_You can also check out the ["Making an e-commerce Site with Stripe" tutorial](/tutorial/ecommerce-tutorial/) for more information._
+_Você também pode ver o tutorial: ["Desenvolvendo uma loja virtual com Stripe"](/tutorial/ecommerce-tutorial/) para mais informações._
