@@ -2,15 +2,15 @@
 title: Usando um tema Gatsby
 ---
 
-Além de você [iniciar rapidamente um novo projeto utilizando o tema inicial do Gastby](/docs/themes/getting-started/), você também pode instalar um tema Gatsby diretamente em um site Gastby já existente. Os temas do Gatsby são plugins, então você pode [instalar e usar como qualquer outro plugin do Gatsby](/docs/using-a-plugin-in-your-site/).
+Além de você [iniciar rapidamente um novo projeto utilizando o starter de tema do Gastby](/docs/themes/getting-started/), você também pode instalar um tema Gatsby diretamente em um site Gastby já existente. Os temas do Gatsby são plugins, então você pode [instalar e usar como qualquer outro plugin do Gatsby](/docs/using-a-plugin-in-your-site/).
 
-## Instalando um tema
+## Instalando um Tema
 
 Como qualquer plugin do Gatsby, os temas do Gatsby são pacotes Node.js, então você pode instalá-los como qualquer outro pacote publicado em Node usando npm ou [yarn, incluindo workspaces locais](#using-yarn-workspaces).
 
 Por exemplo, `gatsby-theme-blog` é o tema oficial do Gatsby para criar um blog.
 
-Para instalá-lo, execute o comando na raiz do seu projeto:
+Para instalá-lo, execute o comando na raiz do seu site:
 
 ```shell
 npm install --save gatsby-theme-blog
