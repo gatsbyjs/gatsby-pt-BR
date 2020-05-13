@@ -1,10 +1,10 @@
 ---
-title: Porting to Gatsby
+title: Portabilidade para o Gatsby
 disableTableOfContents: true
 ---
 
-Many times when you want to build a Gatsby project, you'll already have a website in some form. Depending on the technology and setup of your older website, the approach for porting it to Gatsby may vary.
+Muitas vezes quando você quer construir um projeto utilizando Gatsby, já tem um site em algum formato. Dependendo da tecnologia e configuração do seu site antigo, a abordagem para efetuar a portabilidade para o Gatsby pode variar.
 
-These guides cover the various scenarios in which you may want to convert a web project to Gatsby. There are other possibilities as well: [file an issue](/contributing/how-to-file-an-issue/) to recommend a guide that the Gatsby community would find helpful.
+Esses guias abrangem vários cenários dos quais você pode escolher para converter um projeto web para Gatsby. Existem outras possibilidades também: [abra uma issue](/contributing/how-to-file-an-issue/) para recomendar um guia que a comunidade do Gatsby acharia útil.
 
 <GuideList slug={props.slug} />
