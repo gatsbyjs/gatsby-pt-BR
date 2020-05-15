@@ -52,7 +52,7 @@ Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https
 - Execute `yarn install` em cada site que você está testando.
 - Para cada um dos seus sites de teste Gatsby, execute o comando `gatsby-dev` dentro do diretório do site para copiar os arquivos gerados do seu repositório Gatsby que foi clonado do Gatsby. Ele vai observar as alterações nos pacotes Gatsby e copiar para o site. Para informações mais detalhadas veja [o README do gatsby-dev-cli](https://www.npmjs.com/package/gatsby-dev-cli) e confira o [vídeo demo do gatsby-dev-cli](https://www.youtube.com/watch?v=D0SwX1MSuas).
 
-  - Nota: se você pretende modificar pacotes que são exportados diretamente do `gatsby`, você precisa adicioná-los manualmente ao seu site de teste para que eles estjam listados no `package.json` (exemplo: `yarn add gatsby-link`), ou especificar explicitamente eles com `gatsby-dev --packages gatsby-link`).
+  - Nota: se você pretende modificar pacotes que são exportados diretamente do `gatsby`, você precisa adicioná-los manualmente ao seu site de teste para que eles estejam listados no `package.json` (exemplo: `yarn add gatsby-link`), ou especificá-los explicitamente com `gatsby-dev --packages gatsby-link`).
 
 ### Adicione testes
 
