@@ -9,7 +9,7 @@ Esta página descreve como se preparar para contribuir com o núcleo do Gatsby e
 
 ## Usando o Yarn
 
-Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https://www.npmjs.com/). Enquanto o NPM é usado para desenvolver sites Gatsby com a CLI, para contribuir com o repositório do Gatsby o Yarn é necessário pelo seguinte motivo: nós usamos uma função do Yarn chamada [workspaces](https://yarnpkg.com/lang/en/docs/workspaces/) que é bem útil com monorepos. Ela permite que instalemos dependências de múltiplos arquivos `package.json` em sub-diretórios, tornando o processo de instalação mais rápido e leve.
+Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https://www.npmjs.com/). Enquanto o NPM é usado para desenvolver sites Gatsby com a CLI, para contribuir com o repositório do Gatsby o Yarn é necessário pelo seguinte motivo: nós usamos uma função do Yarn chamada [workspaces](https://classic.yarnpkg.com/pt-BR/docs/workspaces) que é bem útil com monorepos. Ela permite que instalemos dependências de múltiplos arquivos `package.json` em sub-diretórios, tornando o processo de instalação mais rápido e leve.
 
 ```json:title=package.json
 {
