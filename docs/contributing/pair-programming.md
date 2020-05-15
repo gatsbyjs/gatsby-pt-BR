@@ -5,28 +5,27 @@ title: Sessões de programação em pares abertas à comunidade
 A melhor parte do _open source_ é a comunidade, e toda comunidade é mais forte quando trabalha em conjunto. Para ajudar a construir a comunidade mais forte possível, o Gatsby está oferecendo [sessões de programação em pares com duração de 45 minutos][cal] para todos da comunidade de código aberto.
 
 ## Como funcionam as sessões de programação em pares da comunidade
-
-1.  Select or create [an issue](https://github.com/gatsbyjs/gatsby/issues) you would like to work on and work on it yourself
-2.  [Create a pull request](https://www.gatsbyjs.org/contributing/how-to-open-a-pull-request/) when you encounter any problem
-3.  Sign up for any available slot on [the open pairing calendar][cal]
-4.  You’ll be paired with a Gatsby team member
-5.  Join the video meeting during your time slot (we use [Zoom](https://zoom.us) for meetings)
-6.  We'll help you with your pull request or issue!
+1. Selecione ou crie [uma issue](https://github.com/gatsbyjs/gatsby/issues) que você gostaria de trabalhar e resolver.
+2. [Crie um pull request](https://www.gatsbyjs.org/contributing/how-to-open-a-pull-request/) quando você encontrar qualquer problema.
+3. Cadastre-se em qualquer espaço disponível no [calendário de programação conjunta][cal]
+4. Você será pareado com um membro do time Gatsby.
+5. Junte-se a reunião de video durante o seu tempo agendado (nós usamos o [Zoom](https://zoom.us) para reuniões)
+6. Nós iremos ajudar você com seu _pull request_ ou _issue_!
 
 ### O que esperamos em sessões de programação em pares
 
-These sessions are intended for people who would like to contribute to Gatsby. We will pair program together to solve an issue or pull request related to Gatsby.
+Essas sessões são destinadas a pessoas que gostariam de contribuir para o Gatsby. Iremos programar em conjunto para resolver uma _issue_ ou _pull request_ relacionadas ao Gatsby.
 
 Se você estiver interessado em suporte para um projeto comercial que use o Gatsby, entre em contato conosco através da página (https://www.gatsbyjs.com/contact-us/).
 
 Também esperamos o seguinte dos participantes da programação em pares:
 
-- These sessions work best when you have a specific goal for the session. You should choose an issue or pull request that you'd like to work on.
-- If you're new to building with Gatsby we recommend [working through the tutorial](https://www.gatsbyjs.org/tutorial/) before your session. If you get stuck part way through that's a great time to book a pairing session.
-- If you're new to contributing to open source we recommend following the ["Setting Up Your Local Dev Environment" guide](https://www.gatsbyjs.org/contributing/setting-up-your-local-dev-environment/) before your session.
-- All participants are expected to adhere to [Gatsby’s code of conduct](/contributing/code-of-conduct/)
-- We will ask if it’s okay to record our session; you are _not_ required to let us record
-- If the session is recorded, we may post the recording on [Gatsby’s YouTube channel](https://www.youtube.com/channel/UCjnp770qk7ujOq8Q9wiC82w)
+- Essas sessões funcionam melhor quando você tem um objetivo específico para a sessão. Você deve escolher uma _issue_ ou _pull request_ em que deseja trabalhar.
+- Se você é novo com o Gatsby nós recomendamos que você [veja este tutorial](https://www.gatsbyjs.org/tutorial/) antes de sua sessão. Se você ficar meio preso, é um ótimo momento para reservar uma sessão.
+- Se você é novo na contribuição para _open source_ recomendamos que você veja o tutorial ["Configuranado seu local de desenvolvimento"](https://www.gatsbyjs.org/contributing/setting-up-your-local-dev-environment/) antes de sua sessão.
+- Todos os participantes devem concordar com o [código de conduta do Gatsby](/contributing/code-of-conduct/)
+- Vamos perguntar se não há problema em gravar nossa sessão; você _não_ é obrigado a nos deixar gravar
+- Se a sessão for gravada, podemos postar a gravação no [canal do YouTube do Gatsby](https://www.youtube.com/channel/UCjnp770qk7ujOq8Q9wiC82w)
 
 ## Como se inscrever
 

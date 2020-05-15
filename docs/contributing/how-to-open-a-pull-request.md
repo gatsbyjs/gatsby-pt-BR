@@ -12,7 +12,7 @@ Caso você não esteja familiarizado, veja como o pessoal do GitHub [define um p
 
 Gatsby usa o processo de PR para revisar e testar as alterações antes de serem adicionadas ao repositório do Gatsby no GitHub. Qualquer pessoa pode abrir um pull request. O mesmo processo é usado para todos os contribuidores, seja esta a sua primeira contribuição open source ou seja você um membro da equipe principal do Gatsby.
 
-Quando alguém desejar contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
+Quando alguém deseja contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
 
 - [Documentação](#documentação-de-prs)
 - [Código](#alterações-de-código)
@@ -91,24 +91,24 @@ Existem páginas específicas sobre como contribuir para várias partes do ecoss
 
 Para o blog do Gatsby, é necessário que sua ideia de conteúdo seja aprovada pela equipe do Gatsby antes de ser enviada. Para obter mais informações, consulte a página de [contribuições de blog e site](/contributing/blog-and-website-contributions/), incluindo como propor uma ideia e configurar o blog para ser executado localmente.
 
-## Follow up with reviews and suggestions
+## Acompanhamento com críticas e sugestões
 
-After a PR is sent to the Gatsby GitHub repo, the Gatsby core team and the community may suggest modifications to the changes that your PR introduces.
+Depois que um PR é enviado para o repositório do Gatsby no Github, o time principal do Gatsby e a comunidade podem sugerir modificações nas mudanças que seu PR introduz.
 
-The Gatsby core and learning teams review and approve every PR that the community sends to make sure that it meets the contribution guidelines of the repo, and to find opportunities for improvement to your PR changes.
+As equipes de núcleo e de aprendizado do Gatsby revisam e aprovam todos os PR que a comunidade envia para garantir que ele atenda às diretrizes de contribuição do repositório e para encontrar oportunidades de melhoria.
 
-These suggestions may also be called "request changes" by the GitHub UI. When a change request is added to your PR, this and the rest of the change requests will appear on the GitHub page for your PR. From this page you can use the suggestions UI to:
+Essas sugestões também podem ser chamadas de "_request changes_" pela interface do usuário no GitHub. Quando uma solicitação de alteração é adicionada ao seu PR, essa e as demais solicitações de alteração aparecerão na página do GitHub do seu PR. Nesta página, você pode usar a interface do usuário para:
 
-- Review the suggested changes using the "View changes" button.
-- [Commit](https://help.github.com/en/articles/incorporating-feedback-in-your-pull-request#applying-suggested-changes) the suggestions.
-- [Discuss suggestions](https://help.github.com/en/articles/about-conversations-on-github) to ask questions about the suggested changes.
-- [Add suggestions to a batch](https://help.github.com/en/articles/incorporating-feedback-in-your-pull-request#applying-suggested-changes) so they can be pushed in a single commit.
+- Analisar as alterações sugeridas usando o botão "_View changes_"
+- [Commit](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes) as sugestões.
+- [Discuss suggestions](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/about-conversations-on-github) para fazer perguntas sobre as alterações sugeridas.
+- [Add suggestions to a batch](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)(adicione sugestões em lote) para que elas possam ser enviadas em um único commit.
 
-For suggestions that may not be resolved using the GitHub UI, remember that you can keep adding related commits to your PR before it is merged and those commits will also be a part of such PR.
+Para sugestões que não podem ser resolvidas usando a interface do GitHub, lembre-se de que você pode continuar adicionando _commits_ ao seu PR antes que ele seja _merged_ e esses _commits_ também farão parte desse PR.
 
-After all your questions have been resolved and the requested changes have been committed, you can [mark the conversation as solved](https://help.github.com/en/articles/commenting-on-a-pull-request#resolving-conversations).
+Depois que todas as suas perguntas forem resolvidas e as alterações solicitadas forem confirmadas, você poderá [mark the conversation as solved](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request)(marcar a conversa como resolvida).
 
-This process helps both the Gatsby team and the community to contribute with improvements for your changes before they are merged into the Gatsby GitHub repo.
+Esse processo ajuda tanto o time do Gatsby como a comunidade á contribuir com melhorias para suas mudanças antes que elas sejam mescladas ao repositório do Gatsby no GitHub.
 
 ## Atualize seu fork com as alterações mais recentes do Gatsby
 
