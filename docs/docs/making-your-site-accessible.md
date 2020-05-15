@@ -55,7 +55,7 @@ Este é um começo para testar a acessibilidade: [Recomendações adicionais](#c
 
 ## Como melhorar a acessibilidade?
 
-Acessebilidade por padrão é uma vitória para todos. Aqui está um ponto de partida para o teste de acessibilidade ao criar um site ou tema Gatsby:
+Acessibilidade por padrão é uma vitória para todos. Aqui está um ponto de partida para o teste de acessibilidade ao criar um site ou tema Gatsby:
 
 - [Utilize o seu teclado](https://webaim.org/techniques/keyboard/) para percorrer as páginas. Você consegue alcançar e operar todos os controles alternativos (links, botões, formulários, etc.) e ver um indicador de foco na tela?
 - Utilize o [Lighthouse](https://developers.google.com/web/tools/lighthouse/), [axe](https://www.deque.com/axe/) ou [Accessibility Insights](https://accessibilityinsights.io/) para encontrar e corrigir erros comuns de acessibilidade no desenvolvimento
