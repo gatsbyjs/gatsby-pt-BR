@@ -64,8 +64,8 @@ Yarn é um gerenciador de pacotes para o seu código, parecido com o [NPM](https
 
 ### Commits e pull requests
 
-- Faça commit e suba as alterações para o seu fork.
-- Crie um pull request da sua branch.
+- Faça o *commit* e suba as alterações para o seu *fork*.
+- Crie um *pull request* da sua *branch*.
 
 ### Sincronizando seu fork
 
