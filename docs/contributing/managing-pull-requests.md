@@ -148,7 +148,7 @@ Esses são títulos ruins de PR porque são genéricos, não comunicam a altera�
 
 ## Enviando alterações para um fork remoto
 
-As vezes a forma mais fácil de movimentar um PR parado é removendo os conflitos de _merge_ ou aplicando as sugestões restantes. Quando a interface do GitHub não for suficiente, você pode (frequentemente) aplicar alterações direto em um fork remoto de alguém com o Git:
+Às vezes a forma mais fácil de movimentar um PR parado é removendo os conflitos de _merge_ ou aplicando as sugestões restantes. Quando a interface do GitHub não for suficiente, você pode (frequentemente) aplicar alterações direto em um fork remoto de alguém com o Git:
 
 - Adicione o _fork_ do Gatsby como um _remote_:<br />`git remote add <forkname> git@github.com:<username>/gatsby.git`
 - _Fetch_ as _branches_:<br />`git fetch <forkname>`
