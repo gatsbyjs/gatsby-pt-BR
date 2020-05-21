@@ -95,7 +95,7 @@ Para o blog do Gatsby, é necessário que sua ideia de conteúdo seja aprovada p
 
 Depois que um PR é enviado para o repositório do Gatsby no Github, o time principal do Gatsby e a comunidade podem sugerir modificações nas mudanças que seu PR introduz.
 
-As equipes de núcleo e de aprendizado do Gatsby revisam e aprovam todos os PR que a comunidade envia para garantir que ele atenda às diretrizes de contribuição do repositório e para encontrar oportunidades de melhoria.
+As equipes de núcleo e de aprendizado do Gatsby revisam e aprovam todos os PRs que a comunidade envia para garantir que ele atenda às diretrizes de contribuição do repositório e para encontrar oportunidades de melhoria.
 
 Essas sugestões também podem ser chamadas de "_request changes_" pela interface do usuário no GitHub. Quando uma solicitação de alteração é adicionada ao seu PR, essa e as demais solicitações de alteração aparecerão na página do GitHub do seu PR. Nesta página, você pode usar a interface do usuário para:
 
