@@ -6,7 +6,7 @@ Desenvolvedores são geralmente os principais evangelistas do Gatsby porque eles
 
 Algumas coisas com as quais desenvolvedores se importam incluem:
 
-- **Performance do site**: Construir sites que são rápidos e que permanecem rápidos à medida que novas ferramentas e tecnologias são incorporadas.
+- **Performance do site**: Construir sites que são e que permanecem rápidos à medida que novas ferramentas e tecnologias são incorporadas.
 - **Trabalhar com as melhores ferramentas e tecnologias**: Utilizar novas tecnologias e ter a flexibilidade de escolher as ferramentas certas para o trabalho.
 - **Não ficar atolado em configuração**: Essas coisas geralmente consomem tempo, são frustrantes e impedem os desenvolvedores de focarem no trabalho que realmente importa.
 - **Desenvolver da maneira mais eficiente e eficaz possível**: Quanto mais as coisas puderem ser aperfeiçoadas, automatizadas e/ou simplificadas melhor.
@@ -39,7 +39,7 @@ O Gatsby têm muitos benefícios que dão aos desenvolvedores a liberdade de con
 
 ### Comunidade e documentação
 
-> Seria difícil você encontrar uma comunidade open source mais ativa e acolhedora do que a do Gatsby. A documentação é completa, detalhada e não faz nenhuma suposição sobre o seu nível de experiência atual. O time do Gatsby é compremetido com a transparência e com trabalho aberto para que a comunidade possa acompanhar e participar do direcionamento e do desenvolvimento do Gatsby. Todos são estimulados a contribuir para o Gatsby e toda contribuição é valorizada.
+> Seria difícil você encontrar uma comunidade open source mais ativa e acolhedora do que a do Gatsby. A documentação é completa, detalhada e não faz nenhuma suposição sobre o seu nível de experiência atual. O time do Gatsby é comprometido com a transparência e com trabalho aberto para que a comunidade possa acompanhar e participar do direcionamento e do desenvolvimento do Gatsby. Todos são estimulados a contribuir para o Gatsby e toda contribuição é valorizada.
 
 ### Traz o foco para o frontend
 
