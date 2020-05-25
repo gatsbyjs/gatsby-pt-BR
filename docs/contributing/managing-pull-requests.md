@@ -146,29 +146,29 @@ Esses são títulos ruins de PR porque são genéricos, não comunicam a altera�
 - Seja objetivo e limite as remoções (alguns são bons se agregar valor ou melhorar a legibilidade do código)
 - Não sugira nem espere mudanças fora do escopo que sejam melhor tratadas em um PR separado.
 
-## Pushing changes to a remote fork
+## Enviando alterações para um fork remoto
 
-Sometimes the easiest way to unblock a stalled PR is to sort out merge conflicts or apply remaining suggestions. When the GitHub UI won't cut it, you can (often) apply changes directly to someone's remote fork with Git:
+Às vezes a forma mais fácil de movimentar um PR parado é removendo os conflitos de _merge_ ou aplicando as sugestões restantes. Quando a interface do GitHub não for suficiente, você pode (frequentemente) aplicar alterações direto em um fork remoto de alguém com o Git:
 
-- Add their Gatsby fork as a remote:<br />`git remote add <forkname> git@github.com:<username>/gatsby.git`
-- Fetch the branches:<br />`git fetch <forkname>`
-- Check out their branch locally:<br />`git checkout -b <branch-name> <forkname>/<branch-name>`
-- Make your changes, add some commits
-- Push branch to the remote fork (also see [Gotchas](#gotchas) below):<br /> `git push <forkname> head:<branch-name>`
+- Adicione o _fork_ do Gatsby como um _remote_:<br />`git remote add <forkname> git@github.com:<username>/gatsby.git`
+- _Fetch_ as _branches_:<br />`git fetch <forkname>`
+- Confira a _branch_ localmente:<br />`git checkout -b <branch-name> <forkname>/<branch-name>`
+- Faça suas alterações, adicione alguns _commits_
+- Envie a _branch_ para o _fork_ remoto (veja também [Gotchas](#gotchas) abaixo):<br /> `git push <forkname> head:<branch-name>`
 
-Alternatively, you can manage forks and branches with [hub](https://github.com/github/hub).
+Uma outra alternativa é gerenciar os _forks_ e _branches_ com o [hub](https://github.com/github/hub).
 
 ## Direitos e Permisões
 
 ### Quem pode revisar um PR?
 
-If you're a member of the [gatsbyjs](https://github.com/gatsbyjs) organization on GitHub, you can review **most** PRs. PRs with [`topic: internal`](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+internal%22) are reserved for Core and Learning team members as they are typically part of an internal project or hiring process.
+Se você é um membro da organização [gatsbyjs](https://github.com/gatsbyjs) no GitHub,você pode revisar a **maioria** dos PRs. PRs com [`topic: internal`](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aopen+is%3Aissue+label%3A%22topic%3A+internal%22) são reservados para membros da equipe Principal e de Aprendizagem, geralmente fazem parte de um projeto interno ou processo de contratação.
 
 > 💡 Ainda não é membro? Deseja [participar da contribuição](/contributing/how-to-contribute/) para projetos open source? Faça sua primeira contribuição e você será convidado automaticamente!
 
 ### Quem pode aprovar um PR?
 
-Every PR opened in the repository needs to be approved before it can be merged. While anyone who is a member of the [gatsbyjs](https://github.com/gatsbyjs) organization can approve a PR, to be merged in, it needs to be reviewed by a member of the team that owns that part of Gatsby.
+Todo PR aberto no repositório precisa ser aprovado antes que possa ser _merged_. Embora qualquer um que seja membro da organização [gatsbyjs](https://github.com/gatsbyjs) possa aprovar um PR, para ser _merged_, ele precisa ser revisado por um membro do time que gerencie a parte do Gatsby que está sendo alterada.
 
 Normalmente é isso:
 
