@@ -154,7 +154,7 @@ Em outros documentos em que a Tabela de Conteúdo é extremamente longa, pode fa
 
 ```markdown
 ---
-title: Glossáiro
+title: Glossário
 tableOfContentsDepth: 2
 ---
 
