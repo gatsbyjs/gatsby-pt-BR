@@ -6,7 +6,7 @@ Além de você [iniciar rapidamente um novo projeto utilizando o starter de tema
 
 ## Instalando um Tema
 
-Como qualquer plugin do Gatsby, os temas do Gatsby são pacotes Node.js, então você pode instalá-los como qualquer outro pacote publicado em Node usando npm ou [yarn, incluindo workspaces locais](#using-yarn-workspaces).
+Como qualquer outro plugin do Gatsby, os temas do Gatsby são pacotes do Node.js. Então você pode instalá-los utilizando algum gerenciador de pacotes do Node.js como o `npm` ou o [yarn, incluindo workspaces locais](#using-yarn-workspaces).
 
 Por exemplo, `gatsby-theme-blog` é o tema oficial do Gatsby para criar um blog.
 
