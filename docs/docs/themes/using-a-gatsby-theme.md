@@ -50,6 +50,6 @@ Para aprender como personalizar ainda mais um tema, confira as documentações e
 
 Temas públicos do Gatsby são publicados no npm para todos utilizá-lo. Você também pode publicar um tema privado para usar na sua empresa. Exemplos de hospedagem de temas privados incluem o [npm registry](https://docs.npmjs.com/about-private-packages) e o [GitHub Package Registry](https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry).
 
-## Usando Yarn Workspaces
+## Usando Workspaces Yarn
 
 Se você gostaria de trabalhar com temas não publicados, considere [configurar o Yarn Workspaces para o desenvolvimento de temas](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) e [usando yarn](/docs/gatsby-cli/#how-to-change-your-default-package-manager-for-your-next-project) ao invés do npm.
