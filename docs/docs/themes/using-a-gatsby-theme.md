@@ -52,4 +52,4 @@ Temas públicos do Gatsby são publicados no npm para todos utilizá-lo. Você t
 
 ## Usando Workspaces Yarn
 
-Se você gostaria de trabalhar com temas não publicados, considere [configurar o Yarn Workspaces para o desenvolvimento de temas](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) e [usando yarn](/docs/gatsby-cli/#how-to-change-your-default-package-manager-for-your-next-project) ao invés do npm.
+Se você gostaria de trabalhar com temas não publicados, considere [configurar o Workspaces Yarn para o desenvolvimento dos temas](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) e [usar o yarn](/docs/gatsby-cli/#how-to-change-your-default-package-manager-for-your-next-project) ao invés do npm.
