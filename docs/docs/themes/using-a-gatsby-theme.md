@@ -2,25 +2,25 @@
 title: Usando um tema Gatsby
 ---
 
-While you can [get started quickly with a Gatsby theme starter](/docs/themes/getting-started/), you can also install a Gatsby theme directly to an existing Gatsby site. Gatsby themes are plugins, so you can [install and use them like any other Gatsby plugin](/docs/using-a-plugin-in-your-site/).
+Além de você [iniciar rapidamente um novo projeto utilizando o starter de tema do Gatsby](docs/docs/themes/getting-started.md), você também pode instalar um tema Gatsby diretamente em um site Gatsby já existente. Os temas do Gatsby são plugins, então você pode [instalar e usar como qualquer outro plugin do Gatsby](docs/docs/using-a-plugin-in-your-site.md).
 
-## Installing a Theme
+## Instalando um Tema
 
-Like any Gatsby plugin, Gatsby themes are Node.js packages, so you can install them like other published packages in Node using npm or [yarn, including local workspaces](#using-yarn-workspaces).
+Como qualquer outro plugin do Gatsby, os temas do Gatsby são pacotes do Node.js. Então você pode instalá-los utilizando algum gerenciador de pacotes do Node.js como o `npm` ou o [yarn, incluindo workspaces locais](#using-yarn-workspaces).
 
-For example, `gatsby-theme-blog` is the official Gatsby theme for creating a blog.
+Por exemplo, `gatsby-theme-blog` é o tema oficial do Gatsby para criar um blog.
 
-To install it, run in the root of your site:
+Para instalá-lo, execute o comando na raiz do seu site:
 
 ```shell
 npm install --save gatsby-theme-blog
 ```
 
-## Theme options
+## Opções de temas
 
-Depending on the theme, there may be theme options that can be configured via `gatsby-config.js`.
+Dependendo do tema, pode haver opções de temas a serem configuradas no arquivo `gatsby-config.js`
 
-For example, `gatsby-theme-blog` can take in 4 potential options: `basePath`, `contentPath`, `assetPath`, and `mdx`. These options are also documented in the [theme's README](/packages/gatsby-theme-blog/) file.
+Por exemplo, `gatsby-theme-blog` pode conter 4 opções possíveis: `basePath`, `contentPath`, `assetPath`, e `mdx`. Estas opções também estão documentadas no arquivo [README do tema](/packages/gatsby-theme-blog/).
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -29,11 +29,11 @@ module.exports = {
       resolve: `gatsby-theme-blog`,
       options: {
         /*
-        - basePath defaults to `/`
-        - contentPath defaults to `content/posts`
-        - assetPath defaults to `content/assets`
-        - mdx defaults to `true`
-        */
+      - basePath defaults to `/`
+      - contentPath defaults to `content/posts`
+      - assetPath defaults to `content/assets`
+      - mdx defaults to `true`
+      */
         basePath: `/blog`,
         contentPath: `content/blogPosts`,
         assetPath: `content/blogAssets`,
@@ -44,12 +44,12 @@ module.exports = {
 }
 ```
 
-To learn how to further customize a theme, check out the docs on [Gatsby theme shadowing](/docs/themes/shadowing/).
+Para aprender como personalizar ainda mais um tema, confira as documentações em [Gatsby theme shadowing](/docs/themes/shadowing/).
 
-## Published Themes
+## Publicando temas
 
-Public Gatsby themes are published on npm for anyone to use. You can also publish private themes for use by your organization. Examples of private theme package hosting include the [npm registry](https://docs.npmjs.com/about-private-packages) and [GitHub Package Registry](https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry).
+Temas públicos do Gatsby são publicados no npm para qualquer um usar. Você também pode publicar um tema privado para usar na sua empresa. Exemplos de hospedagem de temas privados incluem o [npm registry](https://docs.npmjs.com/about-private-packages) e o [GitHub Package Registry](https://help.github.com/en/github/managing-packages-with-github-package-registry/about-github-package-registry).
 
-## Using Yarn Workspaces
+## Usando Workspaces Yarn
 
-If you would like to work with unpublished themes, consider [setting up Yarn Workspaces for theme development](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) and [using Yarn](/docs/gatsby-cli/#how-to-change-your-default-package-manager-for-your-next-project) instead of npm.
+Se você gostaria de trabalhar com temas não publicados, considere [configurar o Workspaces Yarn para o desenvolvimento dos temas](/blog/2019-05-22-setting-up-yarn-workspaces-for-theme-development/) e [usar o yarn](/docs/gatsby-cli/#how-to-change-your-default-package-manager-for-your-next-project) ao invés do npm.
