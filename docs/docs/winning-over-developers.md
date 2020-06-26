@@ -1,76 +1,76 @@
 ---
-title: Winning Over Developers
+title: Conquistando Desenvolvedores
 ---
 
-Developers are often the primary evangelists of Gatsby because they are the primary users of the framework. If you're a developer, you may find that simply talking to other developers about why _you_ like Gatsby is enough to get them interested. Here are some talking points to help support your conversations with developers.
+Desenvolvedores são geralmente os principais evangelistas do Gatsby porque eles são os principais usuários do framework. Se você é um desenvolvedor, é possível que descubra que uma simples conversa com outros desenvolvedores sobre o porquê _você_ gosta do Gatbsy é o suficiente para deixá-los interessados. Aqui estão alguns pontos de discussão para te ajudar a apoiar suas conversas com outros desenvolvedores. 
 
-Some things that developers care about include:
+Algumas coisas com as quais desenvolvedores se importam incluem:
 
-- **Site Performance** Building sites that are fast and that stay fast as new tools and technology get incorporated.
-- **Working with the best tools and technologies** Getting to use new technologies and having the flexibility to pick the right tools for the job.
-- **Not getting bogged down in configuration and setup** These things are often time consuming, frustrating, and prevent developers from getting to focus on the work they actually care about.
-- **Developing as efficiently and effectively as possible** The more things can be streamlined, automated, and/or simplified, the better.
+- **Performance do site**: Construir sites que são e que permanecem rápidos à medida que novas ferramentas e tecnologias são incorporadas.
+- **Trabalhar com as melhores ferramentas e tecnologias**: Utilizar novas tecnologias e ter a flexibilidade de escolher as ferramentas certas para o trabalho.
+- **Não ficar atolado em configuração**: Essas coisas geralmente consomem tempo, são frustrantes e impedem os desenvolvedores de focarem no trabalho que realmente importa.
+- **Desenvolver da maneira mais eficiente e eficaz possível**: Quanto mais os processos puderem ser aperfeiçoados, automatizados e/ou simplificados melhor.
 
-## Basic explanation
+## Explicação básica
 
-Here's an example of a basic explanation of Gatsby for developers:
+Aqui está um exemplo de uma explicação básica para desenvolvedores do que é o Gatsby:
 
-> Gatsby is a free, open-source, React-based framework for building fast websites and applications. Gatsby streamlines the setup and configuration of your build, it can pull data into your UI from any and all of your sources, and amazing performance and current web best practices are built into Gatsby sites.
+> Gatsby é um framework gratuito, open source, baseado em React para construção de websites e aplicações velozes. Gatsby simplifica o processo de configuração do seu build, permitindo o consumo de dados a partir de quaisquer fontes para sua UI, além do excelente desempenho e das melhores práticas já embutidas nos sites Gatsby.
 
-## Specific benefits
+## Benefícios específicos
 
-Gatsby has many benefits that give developers the freedom to build great websites and use the skills and tools they love. Some specific talking points are listed below.
+O Gatsby têm muitos benefícios que dão aos desenvolvedores a liberdade de construir excelentes websites e ainda utilizar as habilidades e ferramentas que eles amam. Alguns pontos de discussão específicos são listados a seguir.
 
-### Site speed
+### Velocidade do site
 
-> Gatsby was built with performance in mind from its inception, and Gatsby sites are consistently 2-3x faster than similar sites built with other tools – pages load in milliseconds rather than seconds. Gatsby's automated performance optimizations include pre-fetching resources, code splitting, statically generating HTML, and Google's [PRPL Pattern](/docs/prpl-pattern/). If you want to take a deeper dive into Gatsby's performance features, check out [Web Performance 101 – also, why is Gatsby so fast?](/blog/2017-09-13-why-is-gatsby-so-fast/).
+> O Gatsby foi desenvolvido pensando em desempenho desde o princípio, e sites Gatsby são consistentemente 2-3x mais rápidos do que sites similares construídos com outras ferramentas - páginas carregam em milissegundos ao invés de segundos. As otimizações de desempenho automatizadas do Gatsby incluem recursos de _pre-fetching_, _code splitting_, geração estática de HTML e [padrão PRPL](/docs/prpl-pattern/) da Google. Se quiser se aprofundar quanto aos recursos de desempenho do Gatsby, veja [Web Performance 101 – Além disso, por quê o Gatsby é tão rápido?](/blog/2017-09-13-why-is-gatsby-so-fast/).
 
-### Modern web tools
+### Ferramentas web modernas
 
-> Gatsby sites are built with React - currently the most popular framework for developing web apps, and data can be pulled into your React components via GraphQL. Gatsby is also built to pull data from any source so you can pick the best tool for each job and function your site needs to perform. Pull data from the best content management tools, the best e-commerce tools, whatever databases you're using, and more.
+> Sites Gatsby são construídos com React - atualmente o framework mais popular para desenvolvimento de aplicações web, e dados podem ser consumidos nos componentes React usando GraphQL. Gatsby também foi construído para consumir dados a partir de qualquer fonte e dá flexibilidade para que você escolha a melhor ferramenta para cada tarefa e função que o seu site precisa realizar. Consuma dados a partir das melhores ferramentas de gestão de conteúdo, das melhores ferramentas de _e-commerce_, de quaisquer bases de dados que estiver utilizando, e muito mais.
 
-### Plugins and features
+### Recursos e plugins
 
-> Just about every feature you could want for building a state-of-the-art website or web app is available through Gatsby. If the feature isn't already built in, there's an extensive library of available plugins. There's a list of features, their availability, and comparisons with other site building options available on the [Features page](/features/). The complete list of currently available plugins can be found on the [Plugins page](/plugins/).
+> Quase todos os recursos que você poderia desejar para construir um website ou aplicação web de última geração estão disponíveis através do Gatsby. Se o recurso ainda não estiver embutido, há uma extensa biblioteca de plugins disponível. Há uma lista de recursos, suas disponibilidades e comparações com outras opções de construção disponíveis na [página de Recursos](/features/). A lista completa de plugins atualmente disponíveis pode ser encontrada na [página de Plugins](/plugins/).
 
-### Data integration
+### Integração de dados
 
-> Gatsby supports data integration from sources like CMSs, SaaS services, APIs, databases, and other data sources of all flavors. Gatsby can also pull unstructured data directly into pages using API calls specifically crafted for this purpose, this works great with smaller websites which can later be scaled up effortlessly if necessary. This makes Gatsby stand out from most other static site generators.
+> O Gatsby suporta a integração de dados de fontes como CMSs, serviços SaaS, APIs, bancos de dados e outras fontes de dados de todos os tipos. O Gatsby também pode consumir dados não estruturados diretamente para páginas através de chamadas a API criadas especificamente para esse fim. Isso funciona muito bem em sites menores, que podem ser posteriormente escalados sem esforço, se necessário. Isso faz com que o Gatsby se destaque da maioria dos outros geradores de sites estáticos.
 
-### Community and documentation
+### Comunidade e documentação
 
-> You'd be hard-pressed to find a more active and welcoming open-source community than Gatsby. Documentation is thorough, detailed, and doesn't make any assumptions about your experience-level going in. The Gatsby team is committed to transparency and working in the open so the community can follow and participate in Gatsby's development and direction. Everyone is encouraged to contribute to Gatsby and every contribution is valued.
+> Seria difícil você encontrar uma comunidade open source mais ativa e acolhedora do que a do Gatsby. A documentação é completa, detalhada e não faz nenhuma suposição sobre o seu nível de experiência atual. O time do Gatsby é comprometido com a transparência e com trabalho aberto para que a comunidade possa acompanhar e participar do direcionamento e do desenvolvimento do Gatsby. Todos são estimulados a contribuir para o Gatsby e toda contribuição é valorizada.
 
-### Brings focus to the frontend
+### Traz o foco para o frontend
 
-> A benefit that frequently comes up in discussions of Gatsby is how it helps bring more focus to frontend development and a clearer division between frontend and backend tasks. Complicated tooling and configuration can consume a lot of development time and can pull frontend developers away from doing what they do best. Because Gatsby requires minimal tooling and configuration, frontend developers can spend more time making great UI's and backend developers can focus on adding the features and integrations that make your product better.
+> Um benefício que surge com frequência nas discussões sobre o Gatsby é como ele ajuda a trazer mais foco para o desenvolvimento frontend e uma divisão mais clara entre tarefas de frontend e de backend. Ferramentas e configurações complicadas podem consumir muito do tempo de desenvolvimento e podem desviar os desenvolvedores frontend do que eles fazem de melhor. Como o Gatsby requer configurações e ferramentas mínimas, desenvolvedores frontend podem usar mais tempo construindo excelentes UI's e desenvolvedores backend podem focar em adicionar funcionalidades e integrações que tornam seu produto melhor.
 
-## Common concerns
+## Preocupações comuns
 
-You may find that many of your developer friends and colleagues have some questions or concerns about Gatsby. Here are some common examples and responses you can provide to help alleviate those concerns.
+Talvez você ache que muitos dos seus amigos e colegas desenvolvedores tenham dúvidas e preocupações sobre o Gatsby. Aqui estão alguns exemplos e respostas comuns que você pode dar para ajudar a amenizar essas preocupações.
 
-### Our site uses a lot of dynamic content and components. Isn't Gatsby a static site generator?
+### Nosso site usa muito conteúdo e componentes dinâmicos. Gatsby não é um gerador de site estático?
 
-> It is, but there's more to it. Gatsby statically generates HTML content using React DOM and server-side APIs – it's an important part of how Gatsby delivers exceptional speed and better security. However, this static HTML content can then be enhanced with client-side JavaScript via React hydration. You can learn more about this in Dustin Schau's blog post [Beyond Static: Building Dynamic apps with Gatsby](/blog/2018-10-15-beyond-static-intro/).
+> É, mas ele é mais do que isso. Gatsby gera conteúdo HTML estaticamente usando React DOM e APIs server-side - é uma parte importante do como o Gatsby oferece velocidade excepcional e mais segurança. No entanto, este conteúdo estático HTML pode ser melhorado com Javascript do lado do cliente através do React hydration. Você pode aprender mais a respeito no post do blog de Dustin Schau [Beyond Static: Building Dynamic apps with Gatsby](/blog/2018-10-15-beyond-static-intro/).
 
-### Do I have to learn GraphQL to use Gatsby?
+### Tenho de aprender GraphQL para usar o Gatsby?
 
-> GraphQL is used to pull the content from all your different sources into Gatsby in a consistent, unified way. You don't have to use GraphQL to do this, but learning GraphQL will equip you to create new integrations more easily (and it may not be as challenging as you think). Amberly Romo digs into some of the pros and cons in her post on [Using Gatsby without GraphQL](/blog/2018-10-25-using-gatsby-without-graphql/).
+> GraphQL é usado para consumir conteúdo de diferentes fontes para dentro do Gatsby de uma maneira consistente e unificada. Você não tem de usar GraphQL para fazer isso, mas aprender a usá-lo te deixará preparado para criar novas integrações mais facilmente (e pode não ser tão desafiador quanto você pensa). Amberly Romo analisa alguns dos prós e contras no seu post em [Usando Gatsby sem GraphQL](/blog/2018-10-25-using-gatsby-without-graphql/).
 
-### Our content team needs to be able to make site updates, but they're not super technical. Are they going to be able to work with a Gatsby site?
+### Nossa equipe de conteúdo precisa ser capaz de fazer atualizações no site, mas eles não são super técnicos. Eles conseguirão trabalhar com o site Gatsby?
 
-> Gatsby can pull content from any different source, including all-in-one CMSs like WordPress and Drupal as well as the various headless CMSs out there, so your content team can work with whichever content editor suits their needs and preferences, including the CMS they're already using.
+> Gatsby pode consumir conteúdo de quaisquer fontes de dados, includindo os CMS all-in-one como WordPress e Drupal assim como os vários headless CMS disponíveis, de forma que sua equipe de conteúdo possa trabalhar com qualquer editor de conteúdo que atenda às suas necessidades e preferências, incluindo o CMS que eles já estão utilizando.
 
-## Case studies
+## Estudos de caso
 
-Sometimes the most effective way to get a developer's attention is to show them examples of real sites and dev teams using Gatsby. Here are some case studies you might want to share:
+Às vezes a forma mais eficiente de chamar a atenção dos desenvolvedores é mostrar-lhes exemplos de sites reais e times de desenvolvimento utilizando Gatsby. Aqui estão alguns estudos de caso que talvez você queira compartilhar:
 
 - [Delicious Simplicity <3 Gatsby: Building Happily Ever After](/blog/2019-06-08-delicious-simplicity-case-study-part-1/)
 - [Beyond Static: Haptic Media Uses Gatsby to Build a Dynamic Web App](/blog/2019-02-05-hapticmedia-case-study/)
 - [IBM Uses Gatsby to Manage Enterprise-Level Content](/blog/2018-12-17-ibm-case-study/#big-company-big-website)
 
-For even more examples of Gatsby sites, [check out the Showcase](/showcase/)
+Para mais exemplos de sites Gatsby, [veja o Showcase](/showcase/).
 
-## Conclusion
+## Conclusão
 
-Many developers like being early adopters when exciting new tools come along, but they are just as likely to be skeptical when it seems like that new tool might be just another "flavor of the month." Luckily, Gatsby stands up to scrutiny. The information provided here is a great starting point for conversations with developers about Gatsby. From there, encourage developers to check it out for themselves. That may be all the convincing they need.
+Muitos desenvolvedores gostam de ser pioneiros quando novas ferramentas interessantes surgem, mas eles também tendem a ser céticos quando a nova ferramenta parece ser apenas mais uma "modinha". Felizmente, o Gatsby resiste a essa análise. As informações fornecidas aqui são um excelente ponto de partida para conversas com desenvolvedores sobre o Gatsby. A partir daí, incentive os desenvolvedores a confirmarem as informações por conta própria. Pode ser tudo de que eles precisam.
