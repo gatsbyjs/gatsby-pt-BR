@@ -101,7 +101,7 @@ import React from "react"
 
 export default () => (
   <div>
-    <h1>Oi! Estou construindo um site Gatsby falso como parte de um tutorial!</h1>
+    <h1>Oi! Estou construindo um site Gatsby de mentirinha como parte de um tutorial!</h1>
     <p>
       O que eu gosto de fazer? Muitas coisas, claro, mas com certeza gosto de construir websites.
     </p>
@@ -122,7 +122,7 @@ import React from "react"
 export default () => (
   // highlight-next-line
   <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
-    <h1>Oi! Estou construindo um site Gatsby falso como parte de um tutorial!</h1>
+    <h1>Oi! Estou construindo um site Gatsby de mentirinha como parte de um tutorial!</h1>
     <p>
       O que eu gosto de fazer? Muitas coisas, claro, mas com certeza gosto de construir websites.
     </p>
@@ -194,7 +194,7 @@ import Layout from "../components/layout" // highlight-line
 
 export default () => (
   <Layout> {/* highlight-line */}
-    <h1>Oi! Estou construindo um site Gatsby falso como parte de um tutorial!</h1>
+    <h1>Oi! Estou construindo um site Gatsby de mentirinha como parte de um tutorial!</h1>
     <p>
       O que eu gosto de fazer? Muitas coisas, claro, mas com certeza gosto de construir websites.
     </p>
