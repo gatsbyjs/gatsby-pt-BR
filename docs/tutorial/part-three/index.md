@@ -221,7 +221,7 @@ import React from "react"
 
 export default ({ children }) => (
   <div style={{ margin: `3rem auto`, maxWidth: 650, padding: `0 1rem` }}>
-    <h3>MeuSitezinho</h3> {/* highlight-line */}
+    <h3>Meu Site Lindo</h3> {/* highlight-line */}
     {children}
   </div>
 )
@@ -252,7 +252,7 @@ export default ({ children }) => (
     {/* highlight-start */}
     <header style={{ marginBottom: `1.5rem` }}>
       <Link to="/" style={{ textShadow: `none`, backgroundImage: `none` }}>
-        <h3 style={{ display: `inline` }}>MeuSitezinho</h3>
+        <h3 style={{ display: `inline` }}>Meu Site Lindo</h3>
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
         <ListLink to="/">Home</ListLink>
