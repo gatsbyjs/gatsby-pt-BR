@@ -1,8 +1,8 @@
 ---
-title: Gatsby API Reference
+title: Referência da API do Gatsby
 overview: true
 ---
 
-Learn more about Gatsby APIs and configuration.
+Aprenda mais sobre os métodos da APIs do Gatsby, além das opções, arquivos comuns e customizações.
 
 <GuideList slug={props.slug} />

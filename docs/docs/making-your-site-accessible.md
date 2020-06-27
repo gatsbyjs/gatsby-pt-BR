@@ -1,81 +1,83 @@
 ---
-title: Making Your Site Accessible
+title: Tornando o seu site acessível
 ---
 
-The Gatsby team is passionate about helping you create websites that work for everyone, with helpful defaults that bake in web accessibility as well as performance optimizations. By making your website accessible to people with disabilities, you can make more inclusive sites that reach and remove barriers for more people on the Internet.
+A equipe do Gatsby é apaixonada em ajudá-lo a criar sites que funcionem para todos, com padrões úteis que envolvem acessibilidade na Web e otimizações de desempenho. Ao tornar seu site acessível a pessoas com deficiência, você pode criar sites mais inclusivos que removem barreiras e alcançam um maior número de pessoas na Internet.
 
-## What is accessibility?
+## O que é acessibilidade?
 
-Back in the early days of the Web, Tim Berners-Lee, inventor of the World Wide Web, [said](https://www.w3.org/Press/IPO-announce):
+Nos primórdios da Web, Tim Berners-Lee, inventor da World Wide Web, [disse](https://www.w3.org/Press/IPO-announce):
 
-> "The power of the Web is in its universality.
-> Access by everyone regardless of disability is an essential aspect."
+> "O poder da Web está em sua universalidade.
+> O acesso de todos, independentemente da sua deficiência, é um aspecto essencial."
 
-The web of today is an important resource in many aspects of life such as health care, education, or commerce. Accessibility is an important consideration when building for the web.
+A web de hoje é um recurso importante em muitos aspectos da vida, como assistência médica, educação, comércio. A acessibilidade é um ponto importante a se considerar no desenvolvimento de um site para a web.
 
-[Web accessibility](https://www.w3.org/WAI/fundamentals/accessibility-intro/#what) means that websites, tools, and technologies are designed and developed so that people with disabilities can use them. But not only people with permanent disabilities benefit from it. Accessibility also benefits people with temporary disabilities. For example, imagine being in an environment where you cannot listen to audio or you can't use a computer because of a broken arm.
+[Acessibilidade na Web](https://www.w3.org/WAI/fundamentals/accessibility-intro/#what) significa que sites, ferramentas e tecnologias são projetados e desenvolvidos para que pessoas com deficiência possam usá-los. Mas não são apenas as pessoas com deficiência permanente que se beneficiam. A acessibilidade também beneficia pessoas com deficiências temporárias. Por exemplo, imagine estar em um ambiente em que você não pode ouvir áudio ou não pode usar um computador por causa de um braço quebrado.
 
-Accessibility supports [social inclusion for everyone](https://www.w3.org/standards/webdesign/accessibility#case), and has a strong [business case](https://www.w3.org/WAI/business-case/).
+A acessibilidade apoia a [inclusão social para todos](https://www.w3.org/standards/webdesign/accessibility#case) e é um forte [caso de negócio](https://www.w3.org/WAI/business-case/).
 
-## Gatsby helps build in accessibility
+## O Gatsby te ajuda no desenvolvimento com acessibilidade
 
-While ultimately it's up to you to develop your site with accessibility in mind, Gatsby aims to provide as much out-of-the-box support as possible.
+Mesmo que no último momento você decida inserir a acessibilidade em seu site, o Gatsby visa fornecer o máximo de recurso necessário pronto para uso.
 
-### Accessible routing
+### Roteamento acessível
 
-One of the most common features of every site is navigation. People should be able to navigate across your pages and content in an intuitive and accessible way.
+Um dos recursos mais comuns de todos os sites é a navegação. As pessoas devem poder navegar pelas suas páginas e conteúdos de maneira intuitiva e acessível.
 
-That's why every Gatsby site aims to have an accessible navigation experience by default. Thanks to [@reach/router](https://reach.tech/router), a routing library for React, Gatsby handles page announcements for screen readers on page change. We're actively making improvements to this experience, and we [welcome your feedback](/accessibility-statement/).
+É por isso que todo site do Gatsby visa oferecer uma experiência de navegação acessível por padrão. Graças ao [@reach/router](https://reach.tech/router), uma biblioteca de roteamento para o React, o Gatsby lida com anúncios de página para leitores de tela em eventos de mudança de página. Estamos ativamente aprimorando essa experiência e [nós agradecemos o seu feedback](/accessibility-statement/).
 
-Since the [second major release](/blog/2018-09-17-gatsby-v2/), your Gatsby sites use `@reach/router` under the hood. While additional accessibility testing is always a good idea, the [Gatsby Link Component](/docs/gatsby-link/) wraps [@reach/router's Link component](https://reach.tech/router/api/Link) to improve accessibility without you having to think about it.
+Desde o [lançamento da segunda versão](/blog/2018-09-17-gatsby-v2/), seus sites Gatsby usam `@reach/router` internamente. Embora testes de acessibilidade adicionais sejam sempre uma boa idéia, o [componente Link do Gatsby](/docs/gatsby-link/) envolve o [componente Link do @reach/router](https://reach.tech/router/api/Link) para melhorar a acessibilidade sem que você precise pensar nisso.
 
-### Gatsby builds HTML pages by default
+### Gatsby cria páginas HTML por padrão
 
-For websites, rendering [static HTML](/docs/glossary#static) pages means that JavaScript isn't required to access and navigate through content. Gatsby [compiles](/docs/glossary#compiler) HTML pages by default from React components using [Node.js](/docs/glossary#nodejs), meaning you don't have to worry about setting up server-rendering yourself to support [progressive enhancement](/docs/glossary#progressive-enhancement). With Gatsby's static support out of the box, you can build dynamic sites that still enable user access without requiring [client-side](/docs/glossary#client-side) scripting.
+Para sites, renderizar páginas [HTML estáticas](/docs/glossary#static) significa que o JavaScript não é necessário para acessar e navegar pelo conteúdo. O Gatsby [compila](/docs/glossary#compiler) páginas HTML por padrão a partir dos componentes React usando o [Node.js](/docs/glossary#nodejs). Isso significa que você não precisa se preocupar em configurar a renderização do servidor para dar suporte ao [aprimoramento progressivo](/docs/glossary#progressive-enhancement). Com o suporte estático do Gatsby pronto para o uso, você pode criar sites dinâmicos que ainda permitem o acesso do usuário sem exigir scripts no [lado do cliente](/docs/glossary#client-side).
 
-### Linting with eslint-jsx-plugin-a11y
+### Linting com eslint-plugin-jsx-a11y
 
-Gatsby ships with `eslint-config-react-app` by default, which includes the `eslint-jsx-plugin-a11y` package. [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) is an accessibility [linting](/docs/glossary#linting) tool for your code, helping you develop more inclusive Gatsby projects. This plugin encourages you to include alternative text for image tags, validates [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA) props, and eliminates redundant role properties, among other things. It's a start to testing for accessibility: [further recommendations](#how-to-improve-accessibility) can be found below.
+Com o `eslint-plugin-jsx-a11y` o Gatsby envia pacotes e avisos para todas as suas regras habilitadas por padrão. [eslint-plugin-jsx-a11y](https://github.com/evcohen/eslint-plugin-jsx-a11y) é uma ferramenta de acessibilidade do tipo [linting](/docs/glossary#linting) para o seu código, que te ajuda a desenvolver projetos Gatsby mais inclusivos ao reduzir o tempo para encontrar erros de acessibilidade. Este plugin te encoraja a incluir o texto alternativo nas tags para imagens, validar o conjunto de atributos especiais [ARIA](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA), eliminar propriedades redundantes de função, entre outras coisas.
 
-Including this plugin and its [recommended rule set](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app#accessibility-checks) reduces the time required to implement accessibility by reminding you throughout development. The rules enabled in `eslint-plugin-jsx-a11y` by default can be [customized in `.eslintrc`](/docs/eslint/#configuring-eslint).
+Para saber mais sobre as regras suportadas, veja a documentação do [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y). Você pode personalizar essas regras no seu [`.eslintrc`](/docs/eslint/#configuring-eslint).
 
 ```json:title=.eslintrc
 {
   "extends": ["react-app", "plugin:jsx-a11y/recommended"],
   "plugins": ["jsx-a11y"],
   "rules": {
-    "jsx-a11y/rule-name": 2
+    "jsx-a11y/rule-name": "warning"
   }
 }
 ```
 
-For more on supported rules, check out the docs for [`eslint-plugin-jsx-a11y`](https://github.com/evcohen/eslint-plugin-jsx-a11y).
+Nota: Ao incluir um arquivo local `.eslintrc` este irá [sobrescrever](/docs/eslint/#configuring-eslint) todo o linting padrão do Gatsby e desabilitar a construção `eslint-loader`, o que significa que as suas regras aprimoradas não chegarão no console do seu navegador ou do seu terminal mas as regras serão exibidas se você tiver os plugins ESLint habilitados na sua IDE. Se você deseja alterar esse comportamento e garantir que o `eslint-loader` puxe as suas customizações, você precisa habilitar o loader por conta própria. Uma forma de fazer isso é utilizando o Community plugin [`gatsby-plugin-eslint`](https://www.gatsbyjs.org/packages/gatsby-plugin-eslint/). Além disso, se você ainda quiser aproveitar algum subconjunto do padrão da [Configuração do ESLint fornecida pelo Gatsby](https://github.com/gatsbyjs/gatsby/blob/master/packages/gatsby/src/utils/eslint-config.js), você vai precisar copiá-los para o seu arquivo `.eslintrc` local.
 
-## How to improve accessibility?
+Este é um começo para testar a acessibilidade: [Recomendações adicionais](#como-melhorar-a-acessibilidade) podem ser encontradas abaixo.
 
-Accessibility by default is a win for everyone. Here's a starting point for accessibility testing when making a Gatsby site or theme:
+## Como melhorar a acessibilidade?
 
-- [Use your keyboard](https://webaim.org/techniques/keyboard/) to tab through the pages. Can you reach and operate every interactive control (links, buttons, form inputs, etc.) and see a focus indicator on the screen?
-- Use [Lighthouse](https://developers.google.com/web/tools/lighthouse/), [axe](https://www.deque.com/axe/) or [Accessibility Insights](https://accessibilityinsights.io/) to find and fix common accessibility issues in development
-- Test for [adequate color contrast](https://dequeuniversity.com/tips/color-contrast) with the [accessibility color picker in Chrome Developer Tools](https://developers.google.com/web/updates/2018/01/devtools#contrast)
-- Create inclusive and [accessible forms](/docs/building-a-contact-form#creating-an-accessible-form)
-- Employ accessible [headings, landmarks, and semantic structure](https://webaim.org/techniques/semanticstructure/)
-- Include [image, video, and audio text alternatives](https://a11y-style-guide.com/style-guide/section-media.html)
-- Test for [screen magnification and zoom](https://axesslab.com/make-site-accessible-screen-magnifiers/)
-- Ensure accessibility of [interactive menus, modals, and custom widgets](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
-- Create safe [animations and motion](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/)
-- Write [Cypress accessibility tests](/docs/end-to-end-testing/#writing-tests) for your site or application
+Acessibilidade por padrão é uma vitória para todos. Aqui está um ponto de partida para o teste de acessibilidade ao criar um site ou tema Gatsby:
 
-## Accessibility resources
+- [Utilize o seu teclado](https://webaim.org/techniques/keyboard/) para percorrer as páginas. Você consegue alcançar e operar todos os controles alternativos (links, botões, formulários, etc.) e ver um indicador de foco na tela?
+- Utilize o [Lighthouse](https://developers.google.com/web/tools/lighthouse/), [axe](https://www.deque.com/axe/) ou [Accessibility Insights](https://accessibilityinsights.io/) para encontrar e corrigir erros comuns de acessibilidade no desenvolvimento
+- Teste para [o contraste de cores adequado](https://dequeuniversity.com/tips/color-contrast) com o [seletor de cores acessíveis disponível nas ferramentas de desenvolvimento do Chrome](https://developers.google.com/web/updates/2018/01/devtools#contrast)
+- Crie [formulários acessíveis](/docs/building-a-contact-form#creating-an-accessible-form) e inclusivos
+- Empregue [headings, landmarks, e estrutura semântica](https://webaim.org/techniques/semanticstructure/) acessíveis
+- Inclua [textos alternativos para imagem, video, e audio](https://a11y-style-guide.com/style-guide/section-media.html)
+- Teste para [ampliação e zoom da tela](https://axesslab.com/make-site-accessible-screen-magnifiers/)
+- Garanta a acessibilidade de [menus interativos, modais e widgets personalizados](https://developer.mozilla.org/en-US/docs/Web/Accessibility/An_overview_of_accessible_web_applications_and_widgets)
+- Crie [animações e movimentos](https://alistapart.com/article/designing-safer-web-animation-for-motion-sensitivity/) seguros
+- Escreva [testes de acessibilidade com Cypress](/docs/end-to-end-testing/#writing-tests) para o seu site ou aplicativo
 
-- [React accessibility](https://reactjs.org/docs/accessibility.html)
-- [Gatsby’s commitment to accessibility](/blog/2019-04-18-gatsby-commitment-to-accessibility/)
-- [How to do an accessibility review](https://developers.google.com/web/fundamentals/accessibility/how-to-review) from Google Web Fundamentals
-- [A11y Project's Quick Tests](https://a11yproject.com/#Quick-tests)
-- [The importance of manual accessibility testing](https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing/) from Smashing Magazine
-- [Writing Automated Tests for Accessibility](https://www.24a11y.com/2017/writing-automated-tests-accessibility/)
-- [Free web accessibility course](https://www.udacity.com/course/web-accessibility--ud891) by Google and Udacity
-- [WebAIM introduction](https://webaim.org/intro/) to web accessibility
-- [Deque University](https://dequeuniversity.com), with free online accessibility training for people with disabilities
-- [Web.dev accessibility docs](https://web.dev/accessible)
-- [All Gatsby accessibility blog posts](/blog/tags/accessibility/)
+## Recursos de acessibilidade
+
+- [Acessibilidade com React](https://reactjs.org/docs/accessibility.html)
+- [O compromisso do Gatsby com a acessibilidade](/blog/2019-04-18-gatsby-commitment-to-accessibility/)
+- [Como fazer uma análise de acessibilidade](https://developers.google.com/web/fundamentals/accessibility/how-to-review) do Google Web Fundamentals
+- ["Testes rápidos" projetos do A11y](https://a11yproject.com/#Quick-tests)
+- [A importância de um teste manual de acessibilidade](https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing/) da Smashing Magazine
+- [Escrevendo testes automatizados para acessibilidade](https://www.24a11y.com/2017/writing-automated-tests-accessibility/)
+- [Curso gratuito de acessibilidade web](https://www.udacity.com/course/web-accessibility--ud891) por Google e Udacity
+- [WebAIM introdução](https://webaim.org/intro/) para a acessibilidade web
+- [Deque University](https://dequeuniversity.com), com treinamento online gratuito para pessoas com deficiência
+- [Web.dev documentação sobre acessibilidade](https://web.dev/accessible)
+- [Todos os posts do Gatsby sobre acessibilidade](/blog/tags/accessibility/)

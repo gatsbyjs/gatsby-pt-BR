@@ -2,9 +2,9 @@
 title: Styled Components
 ---
 
-Neste guia, você aprenderá como configurar um site com a biblioteca CSS-in-JS [Styled Components](https://www.styled-components.com/).
+Neste guia, você aprenderá como configurar um site com a biblioteca [Styled Components](https://styled-components.com/).
 
-Styled Components permite você usar a sintaxe CSS real dentro de seus componentes. Styled Components é uma variante do "CSS-in-JS" — que resolve muitos dos problemas do CSS tradicional.
+Styled Components permite você usar a sintaxe CSS real dentro de seus componentes, ela é uma variante do "CSS-in-JS" — que resolve muitos dos problemas do CSS tradicional.
 
 Um dos problemas mais importantes que ele resolve é a colisão de nomes de seletores. Com o CSS tradicional, você deve tomar cuidado para não sobrescrever os seletores de CSS usados em outras partes de um site, porque todos os seletores de CSS vivem no mesmo espaço de nome global. Essa infeliz restrição pode levar a elaborar (e muitas vezes confundir) esquemas de nomeação de seletores.
 
@@ -97,22 +97,44 @@ const User = props => (
 export default () => (
   <Container>
     <h1>About Styled Components</h1>
-    <p>Styled Components is cool</p>
+    <p>Styled Components é top 🤙</p>
     <User
       username="Jane Doe"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Eu sou Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
     <User
       username="Bob Smith"
       avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+      excerpt="Eu sou Bob smith, um tipo de cara alinhado verticalmente. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
     />
   </Container>
 )
 ```
 
-### Ativando folhas de estilo do usuário com um nome de classe estável
+## Criando estilos globais
+
+Styled-components é usado principalmente para uma classe única do CSS que é isolada de outros componentes. Em alguns casos, você deseja sobrescrever o estilo global - por exemplo, as margens padrões do elemento `body`. Styled-components lhe ajuda com isso. Você pode usar o `createGlobalStyle` para realizar isso. É aconselhado usar o  `createGlobalStyle` dentro de um [componente de layout](/docs/layout-components/), que é compartilhado com várias páginas, em vez de ser usado em uma única página.
+
+O exemplo abaixo mostra como criar um estilo global `GlobalStyle` (que é um StyledComponent) para a cor roxa importando `createGlobalStyle` do `styled-components`.
+
+```jsx:title=src/components/layout.js
+import React from "react"
+import { createGlobalStyle } from "styled-components"
+
+const GlobalStyle = createGlobalStyle`
+  body {
+    color: ${props => (props.theme === "purple" ? "purple" : "white")};
+  }
+`
+export default ({ children }) => (
+  <React.Fragment>
+    <GlobalStyle theme="purple" />
+  </React.Fragment>
+)
+```
+
+## Habilitando folhas de estilo do usuário com um nome de classe estável
 
 Adicionar um nome de classe CSS (className) persistente aos seus componentes de estilo pode facilitar para os usuários finais do seu site para tirar proveito das [folhas de estilos do usuário](https://www.viget.com/articles/inline-styles-user-style-sheets-and-accessibility/) para acessibilidade.
 

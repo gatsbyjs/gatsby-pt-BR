@@ -68,6 +68,12 @@ Starters oficiais são mantidos pelo Gatsby.
 | [gatsby-starter-default](https://github.com/gatsbyjs/gatsby-starter-default)         | [Demo](https://gatsby-starter-default-demo.netlify.com/)     | Apropriado para a maioria dos casos de uso | Site padrão em Gatsby            |
 | [gatsby-starter-blog](https://github.com/gatsbyjs/gatsby-starter-blog)               | [Demo](https://gatsby-starter-blog-demo.netlify.com/)        | Criar um blog simples                      | Postagens e listagens de um blog |
 | [gatsby-starter-hello-world](https://github.com/gatsbyjs/gatsby-starter-hello-world) | [Demo](https://gatsby-starter-hello-world-demo.netlify.com/) | Aprender Gatsby                            | O essencial e básico do Gatsby   |
+| [gatsby-starter-blog-theme](https://github.com/gatsbyjs/gatsby-starter-blog-theme)           | [Docs](/docs/themes/getting-started/)                        | Posts do Blog e páginas           | Temas Gatsby                |
+| [gatsby-starter-theme-workspace](https://github.com/gatsbyjs/gatsby-starter-theme-workspace) | [Docs](/docs/themes/building-themes/)                        | Constribuindo Temas Gatsby         | Área de trabalho de tema minimo      |
+
+## Modificando starters
+
+Aprenda [como modificar um starter](/docs/modifying-a-starter/) na documentação do Gatsby. Você pode usar starters oficiais e da comunidade já prontos para o uso, ou talvez você queira customizar estilizações ou funcionalidades.
 
 ## Criando starters
 

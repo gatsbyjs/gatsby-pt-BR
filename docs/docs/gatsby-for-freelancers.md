@@ -1,12 +1,12 @@
 ---
-title: Gatsby for Freelancers
+title: Gatsby para Freelancers
+issue: https://github.com/gatsbyjs/gatsby/issues/21069
 ---
 
-As a freelancer, the most important thing is [helping clients understand](/docs/winning-over-clients) the benefits of Gatsby.
+Como um freelancer, a coisa mais importante é [ajudar os clientes a entender](/docs/winning-over-clients) os benefícios do Gatsby.
 
 --
 
-This is a stub. Help our community expand it.
+Isso é um esboço. Ajude nossa comunidade expandindo-o.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor, utilize o [Guia de Estilo Gatsby](/contributing/gatsby-style-guide/) para garantir que seu pull request seja aceito.

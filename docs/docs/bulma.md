@@ -22,7 +22,7 @@ plugins: [`gatsby-plugin-sass`],
 
 Agora é a hora de criar um arquivo _scss_ que contém nossa simples customização de estilo, além da importação do Bulma.
 
-(Para simplificar, insira o arquivo junto do _index.js_ no diretório de páginas)
+(Para simplificar, insira o arquivo junto do `index.js` no diretório de páginas)
 
 ```scss:title=mystyles.scss
 @charset "utf-8";
@@ -37,9 +37,9 @@ $title-color: #ff0000;
 
 O último passo é importar o estilo e usá-lo.
 
-Vamos substituir o conteúdo padrão do arquivo index.js.
+Vamos substituir o conteúdo padrão do arquivo `index.js`.
 
-```javascript:title=index.js
+```jsx:title=index.js
 import React from "react"
 import "./mystyles.scss"
 

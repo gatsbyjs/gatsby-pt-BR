@@ -12,7 +12,7 @@ Caso você não esteja familiarizado, veja como o pessoal do GitHub [define um p
 
 Gatsby usa o processo de PR para revisar e testar as alterações antes de serem adicionadas ao repositório do Gatsby no GitHub. Qualquer pessoa pode abrir um pull request. O mesmo processo é usado para todos os contribuidores, seja esta a sua primeira contribuição open source ou seja você um membro da equipe principal do Gatsby.
 
-Quando alguém desejar contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
+Quando alguém deseja contribuir com o Gatsby, essa pessoa abre uma solicitação para inserir (_pull_) seu código no repositório. Dependendo do tipo de alteração, os PRs são categorizados em:
 
 - [Documentação](#documentação-de-prs)
 - [Código](#alterações-de-código)
@@ -90,6 +90,25 @@ Existem páginas específicas sobre como contribuir para várias partes do ecoss
 ### Postagens do Blog
 
 Para o blog do Gatsby, é necessário que sua ideia de conteúdo seja aprovada pela equipe do Gatsby antes de ser enviada. Para obter mais informações, consulte a página de [contribuições de blog e site](/contributing/blog-and-website-contributions/), incluindo como propor uma ideia e configurar o blog para ser executado localmente.
+
+## Acompanhamento com críticas e sugestões
+
+Depois que um PR é enviado para o repositório do Gatsby no Github, o time principal do Gatsby e a comunidade podem sugerir modificações nas mudanças que seu PR introduz.
+
+As equipes de núcleo e de aprendizado do Gatsby revisam e aprovam todos os PRs que a comunidade envia para garantir que ele atenda às diretrizes de contribuição do repositório e para encontrar oportunidades de melhoria.
+
+Essas sugestões também podem ser chamadas de "_request changes_" pela interface do usuário no GitHub. Quando uma solicitação de alteração é adicionada ao seu PR, essa e as demais solicitações de alteração aparecerão na página do GitHub do seu PR. Nesta página, você pode usar a interface do usuário para:
+
+- Analisar as alterações sugeridas usando o botão "_View changes_"
+- [Commit](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request#applying-suggested-changes) as sugestões.
+- [Discuss suggestions](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/about-conversations-on-github) para fazer perguntas sobre as alterações sugeridas.
+- [Add suggestions to a batch](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/incorporating-feedback-in-your-pull-request)(adicione sugestões em lote) para que elas possam ser enviadas em um único commit.
+
+Para sugestões que não podem ser resolvidas usando a interface do GitHub, lembre-se de que você pode continuar adicionando _commits_ ao seu PR antes que ele seja _merged_ e esses _commits_ também farão parte desse PR.
+
+Depois que todas as suas perguntas forem resolvidas e as alterações solicitadas forem confirmadas, você poderá [mark the conversation as solved](https://help.github.com/pt/github/collaborating-with-issues-and-pull-requests/commenting-on-a-pull-request)(marcar a conversa como resolvida).
+
+Esse processo ajuda tanto o time do Gatsby como a comunidade á contribuir com melhorias para suas mudanças antes que elas sejam mescladas ao repositório do Gatsby no GitHub.
 
 ## Atualize seu fork com as alterações mais recentes do Gatsby
 

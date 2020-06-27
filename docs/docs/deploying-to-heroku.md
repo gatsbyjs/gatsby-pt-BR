@@ -1,17 +1,17 @@
 ---
-title: Deploying to Heroku
+title: Publicando para o Heroku
 ---
 
-You can use the [heroku buildpack static](https://github.com/heroku/heroku-buildpack-static) to handle the static files of your site.
+Você pode usar o [_build_ estático do heroku](https://github.com/heroku/heroku-buildpack-static) para lidar com os arquivos estáticos do seu website.
 
-Set the `heroku/node.js` and `heroku-buildpack-static` buildpacks on your application.
+Configure o `heroku/node.js` e o `heroku-buildpack-static` _buildpacks_ na sua aplicação.
 
 ```shell
-$ heroku buildpacks:set heroku/nodejs
-$ heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git
+heroku buildpacks:set heroku/nodejs
+heroku buildpacks:add https://github.com/heroku/heroku-buildpack-static.git
 ```
 
-You can optionally add the buildpacks to `app.json` if you want to take advantage of the [heroku platform api](https://devcenter.heroku.com/articles/setting-up-apps-using-the-heroku-platform-api)
+Opcionalmente, você pode adicionar os _buildpacks_ ao seu `app.json` se quiser tirar proveito da [API do heroku](https://devcenter.heroku.com/articles/setting-up-apps-using-the-heroku-platform-api).
 
 ```json:title=app.json
 {
@@ -26,7 +26,7 @@ You can optionally add the buildpacks to `app.json` if you want to take advantag
 }
 ```
 
-Heroku will automatically detect and run the `build` script from your `package.json` which should already look like this:
+Heroku automaticamente detectará e executará o _script_ de _`build`_ existente no seu `package.json`, que deve se parecer com isso:
 
 ```json:title=package.json
 {
@@ -36,9 +36,9 @@ Heroku will automatically detect and run the `build` script from your `package.j
 }
 ```
 
-Finally, add a `static.json` file in the root of your project to define the directory where your static assets will be. You can check all the options for this file in the [heroku-buildpack-static](https://github.com/heroku/heroku-buildpack-static#configuration) configuration.
+Por fim, adicione um arquivo `static.json` na raiz do seu projeto para definir o diretório em que os seus _assets_ ficarão. Você pode checar todas as opções de configuração deste arquivo no guia [heroku-buildpack-static](https://github.com/heroku/heroku-buildpack-static#configuration).
 
-The following configuration will give you a good start point in line with Gatsby's [suggested approach to caching](/docs/caching/).
+As seguintes configurações darão a você um bom ponto de partida de acordo com a [estratégia de _caching_ sugerida](/docs/caching/) pelo Gatsby.
 
 ```json:title=static.json
 {

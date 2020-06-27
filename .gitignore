@@ -1,2 +1,9 @@
 node_modules
 .DS_Store
+
+# We're using yarn, so no package-lock.json
+package-lock.json
+
+# Do not commit images
+images
+*.png

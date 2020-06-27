@@ -8,10 +8,10 @@ Você pode usá-lo para criar páginas dinamicamente, adicionar nós no GraphQL 
 Toda API Node do Gatsby passa um [conjunto de helpers da API Node](/docs/node-api-helpers/). 
 Isso permite você acessar vários métodos como o de reportar, ou executar ações como criar novas páginas.
 
-```jsx:title=gatsby-node.js
+```js:title=gatsby-node.js
 const path = require(`path`)
 // Log out information after a build is done
-exports.onPostBuild = ({reporter}) => {
+exports.onPostBuild = ({ reporter }) => {
   reporter.info(`Your Gatsby site has been built!`)
 }
 // Create blog pages dynamically
@@ -29,13 +29,13 @@ exports.createPages = async ({ graphql, actions }) => {
         }
       }
     }
-  `
+  `)
   result.data.allSamplePages.edges.forEach(edge => {
     createPage({
       path: `${edge.node.slug}`,
       component: blogPostTemplate,
       context: {
-        title: edge.node.title
+        title: edge.node.title,
       },
     })
   })

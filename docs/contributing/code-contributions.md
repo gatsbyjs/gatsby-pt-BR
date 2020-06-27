@@ -6,12 +6,15 @@ A beleza em contribuir com o _open source_ é que você pode dar _clone_ em seu 
 
 Esta página contém os seguintes tópicos:
 
-- [Configurando o repositório](#configurando-o-repositório)
-- [Criando seus próprios plugins e loaders](#criando-seus-próprios-plugins-e-loaders)
-- [Fazendo mudanças na biblioteca starter](#fazendo-mudanças-na-biblioteca-starter)
+- [Configurando o repositório](#configurando-o-reposit%c3%b3rio)
+- [Criando seus próprios _plugins_ e _loaders_](#criando-seus-pr%c3%b3prios-plugins-e-loaders)
+- [Fazendo mudanças na biblioteca _starter_](#fazendo-mudan%c3%a7as-na-biblioteca-starter)
 - [Contribuindo com sites exemplo](#contribuindo-com-sites-exemplo)
 - [Usando Docker para configurar um ambiente de teste](#usando-docker-para-configurar-um-ambiente-de-teste)
+  - [Docker, WordPress e Gatsby](#docker-wordpress-e-gatsby)
 - [Ferramentas de desenvolvimento](#ferramentas-de-desenvolvimento)
+  - [Depurando o processo de _build_](#depurando-o-processo-de-build)
+- [_Feedback_](#feedback)
 
 ## Configurando o repositório
 
@@ -42,11 +45,11 @@ Caso você queira desenvolver na biblioteca _starter_, será necessário fornece
 GITHUB_API_TOKEN=SEU_TOKEN_AQUI
 ```
 
-O arquivo `.env.development` é ignorado pelo git. Seu _token_ nunca deve ser "comitado".
+O arquivo `.env.development` é ignorado pelo git. Por razões de segurança, você nunca deve realizar um `commit` do seu _token_.
 
 ## Contribuindo com sites exemplo
 
-A política do Gatsby é de que o "uso" de sites exemplo (como os presentes na [pasta de exemplos do repositório](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
+A política do Gatsby é de que o uso de sites exemplo (como os presentes na [pasta de exemplos do repositório](https://github.com/gatsbyjs/gatsby/tree/master/examples)) devem estar em torno apenas da utilização de _plugins_ mantidos pela equipe principal, uma vez que seria difícil manter as coisas atualizadas de outra forma.
 
 Para contribuir com sites exemplo, é recomendado criar seu próprio repositório no Github e vinculá-lo a partir de seu _plugin_ de origem, etc.
 
@@ -60,12 +63,12 @@ Com todas essas possibilidades de integração com o Gatsby, talvez ajude subir 
 
 Para instalar o WordPress e usar junto com o Gatsby, recomendamos o uso do arquivo `docker-compose.yml`:  
 
-```
-version: '2'
+```yaml:title=docker-compose.yml
+version: "3.7"
 
 services:
   db:
-    image: mysql:5.6
+    image: mysql:5.7
     container_name: sessions_db
     ports:
       - "3306:3306"
@@ -92,22 +95,22 @@ services:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
-    - ./wp-content:/var/www/html/wp-content
-    - ./wp-app:/var/www/html
+      - ./wp-content:/var/www/html/wp-content
+      - ./wp-app:/var/www/html
 
   phpmyadmin:
-      image: phpmyadmin/phpmyadmin
-      container_name: sessions_phpmyadmin
-      environment:
-       - PMA_ARBITRARY=1
-       - PMA_HOST=sessions_db
-       - PMA_USER=wordpress
-       - PMA_PASSWORD=wordpress
-      restart: always
-      ports:
-       - 8080:80
-      volumes:
-       - /sessions
+    image: phpmyadmin/phpmyadmin
+    container_name: sessions_phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=sessions_db
+      - PMA_USER=wordpress
+      - PMA_PASSWORD=wordpress
+    restart: always
+    ports:
+      - 8080:80
+    volumes:
+      - /sessions
 ```
 
 Use esse arquivo acima enquanto estiver seguindo o tutorial de instalação do WordPress do Docker: https://docs.docker.com/compose/wordpress/
@@ -122,4 +125,4 @@ Confira a página [Depurando o processo de _build_](/docs/debugging-the-build-pr
 
 ## _Feedback_
 
-A equipe principal do Gabsty adoraria lhe ajudar em qualquer momento durante o seu processo de contribuição! Nós temos semanalmente um [encontro dos _Core_ Mantenedores](/contributing/community#core-maintainers-meeting) onde qualquer um tem a oportunidade de conpartilhar sua(s) criaçõe(s) e receber conselhos diretamente da equipe do Gabsty!
+A qualquer momento durante o processo de contribuição, o time do Gatsby adorará ajudá-lo! Para obter ajuda em um problema específico, você pode [abrir uma _issue_ no GitHub](/contributing/how-to-file-an-issue/). Ou entre no [servidor do Discord](https://gatsby.dev/discord) para a comunidade em geral discutir e lhe dar suporte.

@@ -45,7 +45,8 @@ build de produção do seu site, gerando arquivos estáticos na pasta `public`
 gatsby serve
 ```
 
-Uma vez iniciado, você pode ver o seu site em [`localhost:9000`](http://localhost:9000).
+Uma vez iniciado, você pode ver o seu site em [`http://localhost:9000`](http://localhost:9000).
+
 
 ### Executando uma auditoria do Lighthouse
 
@@ -365,14 +366,13 @@ A lista completa de todos os plugins oficiais mantidos pelo Gatsby.
 
 ## Isso é tudo, pessoal
 
-Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso
+Bem, não tudo; apenas para esse tutorial. Aqui tem alguns [Tutoriais Adicionais](/tutorial/additional-tutorials/) apresentando alguns outros casos de uso.
 
 Esse é só o começo. Continue indo!
 
 - Você criou alguma coisa legal? Compartilhe no Twitter, com a hashtag [#buildwithgatsby](https://twitter.com/search?q=%23buildwithgatsby), e [@nos mencione](https://twitter.com/gatsbyjs)!
 - Você escreveu um post legal sobre o que você aprendeu? Compartilhe conosco também!
-- Contribua!
-- Contribute! Dê uma olhada nas [issues abertas](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) No repoisitório do e [vire um contribuidor](/contributing/how-to-contribute/).
+- Contribua! Dê uma olhada nas [issues abertas](https://github.com/gatsbyjs/gatsby/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22) no repositório e [vire um contribuidor](/contributing/how-to-contribute/).
 
 Veja a documentação sobre ["como contribuir"](/contributing/how-to-contribute/) para ainda mais ideias.
 

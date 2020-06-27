@@ -1,24 +1,26 @@
 ---
-title: Winning Over Clients
+title: Conquistando Clientes
 issue: https://github.com/gatsbyjs/gatsby/issues/14040
 ---
 
-The top priority of most clients is that the website is shipped to their standard of quality, on time, and under budget.
+A principal prioridade da maioria dos clientes é que o _site_ seja enviado com seu padrão de qualidade, dentro do prazo e do orçamento.
 
-In addition, they usually want to be able to use familiar CMS-based workflows to create, edit, and publish content.
+Além disso, eles geralmente desejam usar fluxos de trabalho familiares baseados em CMS para criar, editar e publicar conteúdo.
 
-Some benefits that you can use to pitch Gatsby to clients include:
+Alguns benefícios que você pode oferecer ao recomendar o Gatsby para os clientes incluem:
 
-- Works with their CMS
-- Fast development speed ensures project will be on time
-- Ease of making development changes helps keep project under budget
-- Lower hosting cost helps keep project under budget
+- Trabalha com os seus CMS
+- A rápida velocidade de desenvolvimento garante que o projeto fique no prazo.
+- A facilidade de fazer mudanças no desenvolvimento ajuda a manter o projeto dentro do orçamento.
+- O Menor custo de hospedagem ajuda a manter o projeto dentro do orçamento.
+- Sites de desempenho rápido que reduzem o carregamento da página e o tempo de resposta.
+- Suporta a criação de aplicativos dinâmicos e altamente escaláveis.
+- Um Rico ecossistema de plugins que ajudam a lidar com códigos complexos.
 
-[This one-pager](/gatsby-one-pager.pdf) may also be useful for clients -- it explains Gatsby in their language.
+[Esse pager](/gatsby-one-pager.pdf) também pode ser útil para clientes -- ele explica o Gatsby no idioma deles.
 
 --
 
-This is a stub. Help our community expand it.
+Este é um esboço. Ajude nossa comunidade a expandi-lo.
 
-Please use the [Gatsby Style Guide](/contributing/gatsby-style-guide/) to ensure your
-pull request gets accepted.
+Por favor use o [guia de estilos Gatsby](/contributing/gatsby-style-guide/) para garantir que seu _pull request_ seja aceito.

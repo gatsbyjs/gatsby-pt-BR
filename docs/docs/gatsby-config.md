@@ -1,14 +1,14 @@
 ---
-title: Gatsby Config API
+title: API de configuração do Gatsby
 ---
 
-Site configuration options for a Gatsby site are placed in a file at the root of the project folder called `gatsby-config.js`.
+As opções de configurações para um site Gatsby são colocadas em um arquivo na raiz do projeto chamado `gatsby-config.js`.
 
-_Note: There are many sample configs which may be helpful to reference in the different [Gatsby Example Websites](https://github.com/gatsbyjs/gatsby/tree/master/examples)._
+_Anotações: Existem muitas amostras de configurações que podem ser úteis para referenciar em diferentes [Exemplos de Websites Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples)._
 
-## Configuration options
+## Opções de Configurações
 
-Options available to set within `gatsby-config.js` include:
+Opções disponíveis para configurar dentro do `gatsby-config.js` incluem:
 
 1.  [siteMetadata](#sitemetadata) (object)
 2.  [plugins](#plugins) (array)
@@ -20,25 +20,25 @@ Options available to set within `gatsby-config.js` include:
 
 ## siteMetadata
 
-When you want to reuse common pieces of data across the site (for example, your site title), you can store that data in `siteMetadata`:
+Quando você quer reutilizar alguns pedaços comuns através do site (por exemplo, o título do site), você pode armazenar estes dados em `siteMetadata`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   siteMetadata: {
     title: `Gatsby`,
     siteUrl: `https://www.gatsbyjs.org`,
-    description: `Blazing fast modern site generator for React`,
+    description: `Gerador de site moderno e veloz para React`,
   },
 }
 ```
 
-This way you can store it in one place, and pull it whenever you need it. If you ever need to update the info, you only have to change it here.
+Desta forma, você pode armazenar em um único local e puxar isto sempre que precisar. Se você sempre precisar atualizar as informações, você somente tem que mudar aqui.
 
-See a full description and sample usage in [Gatsby.js Tutorial Part Four](/tutorial/part-four/#data-in-gatsby).
+Veja a descrição completa e exemplo de uso em [Tutorial Gatsby.js Parte Quatro](/tutorial/part-four/#data-in-gatsby).
 
 ## Plugins
 
-Plugins are Node.js packages that implement Gatsby APIs. The config file accepts an array of plugins. Some plugins may need only to be listed by name, while others may take options (see the docs for individual plugins).
+Plugins são pacotes Node.js que implementam APIs do Gatsby. O arquivo de configurações aceita um array de plugins. Alguns plugins podem ser listados somente pelo nome, enquanto outros podem precisar de opções (veja a documentação para plugins individuais).
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -55,11 +55,11 @@ module.exports = {
 }
 ```
 
-See more about [Plugins](/docs/plugins/) for more on utilizing plugins, and to see available official and community plugins.
+Veja mais sobre [Plugins](/docs/plugins/) para saber mais como utilizá-los, além de conferir os plugins oficiais e os feitos pela comunidade.
 
 ## pathPrefix
 
-It's common for sites to be hosted somewhere other than the root of their domain. Say we have a Gatsby site at `example.com/blog/`. In this case, we would need a prefix (`/blog`) added to all paths on the site.
+É comum sites serem hospedados em algum outro local que não seja domínio raiz. Quando dizemos que temos um site Gatsby em `example.com/blog/`. Nesse caso, precisamos de um prefixo (`/blog`) adicionado para todos os caminhos no site.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -67,13 +67,13 @@ module.exports = {
 }
 ```
 
-See more about [Adding a Path Prefix](/docs/path-prefix/).
+Veja mais sobre [Adicionar um Prefixo de Caminho](/docs/path-prefix/).
 
 ## Polyfill
 
-Gatsby uses the ES6 Promise API. Because some browsers don't support this, Gatsby includes a Promise polyfill by default.
+Gatsby usa a API do ES6 Promise. Pelo fato de alguns navegadores não suportarem isso, o Gatsby inclui uma _Promise_ polyfill por padrão.
 
-If you'd like to provide your own Promise polyfill, you can set `polyfill` to false.
+Se você desejar fornecer sua própria _Promise_ polyfill, você pode configurar o `polyfill` como _false_.
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -81,32 +81,31 @@ module.exports = {
 }
 ```
 
-See more about [Browser Support](/docs/browser-support/#polyfills) in Gatsby.
+Veja mais sobre [Suporte de Navegadores](/docs/browser-support/#polyfills) em Gatsby.
 
-## Mapping node types
+## Mapeando tipos de nó
 
-Gatsby includes an advanced feature that lets you create "mappings" between node types.
+O Gatsby inclui um recurso avançado que permite criar "mappings" entre os tipos de nós.
 
-> Note: Gatsby v2.2 introduced a new way to create foreign-key relations between node types with [the `@link` GraphQL field extension](/docs/schema-customization/#foreign-key-fields).
+> Anotações: Gatsby v2.2 introduziu uma nova maneira de criar relações de chave estrangeira entre os tipos de nós com [o `@link` Extensão de campo GraphQL](/docs/schema-customization/#foreign-key-fields).
 
-For instance, imagine you have a multi-author markdown blog where you want to "link" from each blog post to the author information stored in a yaml file named `author.yaml`:
+Por exemplo, imagine que você tem um blog em markdown com vários autores no qual deseja "vincular" cada postagem do blog às informações do autor armazenadas em um arquivo yaml chamado `author.yaml`:
 
 ```markdown
 ---
-title: A blog post
+title: Uma publicação no blog
 author: Kyle Mathews
 ---
 
-A treatise on the efficacy of bezoar for treating agricultural pesticide poisoning.
+Um tratado sobre a eficácia do bezoar no tratamento de envenenamento por pesticidas agrícolas.
 ```
 
 ```yaml:title=author.yaml
 - id: Kyle Mathews
-  bio: Founder @ GatsbyJS. Likes tech, reading/writing, founding things. Blogs at bricolage.io.
+  bio: Fundador @ GatsbyJS. Gosta de tecnologia, leitura/escrita, fundando coisas. Blogs em bricolage.io.
   twitter: "@kylemathews"
 ```
-
-You can map between the `author` field in `frontmatter` to the id in the `author.yaml` objects by adding to your `gatsby-config.js`:
+Você pode mapear entre o campo do `author` em `frontmatter` para o id nos objetos `author.yaml` adicionando ao seu `gatsby-config.js`:
 
 ```javascript
 module.exports = {
@@ -117,9 +116,9 @@ module.exports = {
 }
 ```
 
-You may need to install the appropriate file transformer (in this case [YAML](/packages/gatsby-transformer-yaml/)) and set up [gatsby-source-filesystem](/packages/gatsby-source-filesystem/) properly for Gatsby to pick up the mapping files. This applies to other file types later mentioned in this segment as well.
+Pode ser necessário instalar o transformador de arquivo apropriado (neste caso [YAML](/packages/gatsby-transformer-yaml/)) e configurar o [gatsby-source-filesystem](/packages/gatsby-source-filesystem/) adequadamente para que o Gatsby pegue os arquivos de mapeamento. Isso se aplica a outros tipos de arquivos mencionados posteriormente neste segmento também.
 
-Gatsby then uses this mapping when creating the GraphQL schema to enable you to query data from both sources:
+Gatsby usa esse mapeamento ao criar um schema GraphQL para permitir a consulta de dados de ambas as fontes. 
 
 ```graphql
 query($slug: String!) {
@@ -131,7 +130,7 @@ query($slug: String!) {
     frontmatter {
       title
       author {
-        # This now links to the author object
+        # Este é um link para o objeto autor
         id
         bio
         twitter
@@ -141,8 +140,7 @@ query($slug: String!) {
 }
 ```
 
-Mapping can also be used to map an array of ids to any other collection of data. For example, if you have two JSON files
-`experience.json` and `tech.json` as follows:
+O mapeamento também pode ser usado para mapear um array de ids para qualquer outra coleção de dados. Por exemplo, se você tiver dois arquivos JSON `experience.json` e `tech.json` da seguinte maneira:
 
 ```json:title=experience.json
 [
@@ -183,7 +181,7 @@ Mapping can also be used to map an array of ids to any other collection of data.
 ]
 ```
 
-And then add the following rule to your `gatsby-config.js`:
+E você adiciona a seguinte regra ao seu `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -194,7 +192,7 @@ module.exports = {
 }
 ```
 
-You can query the `tech` object via the referred ids in `experience`:
+Você pode consultar o objeto `tech` por meio dos ids mencionados na `experience`:
 
 ```graphql
 query {
@@ -221,7 +219,7 @@ query {
 }
 ```
 
-Mapping also works between Markdown files. For example, instead of having all authors in a YAML file, you could have info about each author in a separate Markdown file:
+O mapeamento também funciona entre arquivos Markdown. Por exemplo, em vez de ter todos os autores em um arquivo YAML, você pode ter informações sobre cada autor em um arquivo Markdown separado:
 
 ```markdown
 ---
@@ -229,10 +227,10 @@ author_id: Kyle Mathews
 twitter: "@kylemathews"
 ---
 
-Founder @ GatsbyJS. Likes tech, reading/writing, founding things. Blogs at bricolage.io.
+Fundador @ GatsbyJS. Gosta de tecnologia, leitura/escrita, fundando coisas. Blogs em bricolage.io.
 ```
 
-And then add the following rule to your `gatsby-config.js`:
+E adicione a seguinte regra ao seu `gatsby-config.js`:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -243,23 +241,23 @@ module.exports = {
 }
 ```
 
-Similarly to YAML and JSON files, mapping between Markdown files can also be used to map an array of ids.
+De maneira semelhante aos arquivos YAML e JSON, o mapeamento entre arquivos Markdown também pode ser usado para mapear um array de ids.
 
 ## Proxy
 
-Setting the proxy config option will tell the develop server to proxy any unknown requests to your specified server. For example:
+Definir a opção de configuração do proxy informará o servidor de desenvolvimento para realizar proxy de qualquer solicitação desconhecida endereçada a um servidor especificado. Por exemplo:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
   proxy: {
     prefix: "/api",
-    url: "http://examplesite.com/api/",
-  },
+    url: "http://examplesite.com/api/"
+  }
 }
 ```
 
-See more about [Proxying API Requests in Develop](/docs/api-proxy/).
+Veja mais sobre [Proxying API Requests em desenvolvimento](/docs/api-proxy/).
 
-## Advanced proxying with `developMiddleware`
+## Proxy avançado com `developMiddleware`
 
-See more about [adding develop middleware](/docs/api-proxy/#advanced-proxying).
+Veja mais sobre [como adicionar middleware desenvolvido](/docs/api-proxy/#advanced-proxying).

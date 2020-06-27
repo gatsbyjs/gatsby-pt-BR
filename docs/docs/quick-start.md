@@ -19,6 +19,8 @@ Esse guia de início rápido é direcionado para desenvolvedores com conheciment
 npm install -g gatsby-cli
 ```
 
+> O comando acima instala o Gatsby CLI globalmente em sua máquina.
+
 ### Criando um novo site.
 
 ```shell
@@ -37,7 +39,7 @@ cd gatsby-site
 gatsby develop
 ```
 
-O Gatsby iniciará um ambiente de desenvolvimento com _hot-reloading_, que pode ser acessado por padrão em `localhost:8000`.
+O Gatsby iniciará um ambiente de desenvolvimento com _hot-reloading_, que pode ser acessado por padrão em `http://localhost:8000`.
 
 Tente editar as páginas JavaScript em `src/pages`. As alterações salvas serão atualizadas automaticamente no navegador.
 

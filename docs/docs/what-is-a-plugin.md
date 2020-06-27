@@ -7,7 +7,8 @@ Uma das melhores maneiras de adicionar funcionalidade ao Gatsby é através do n
 
 Das muitas possibilidades, com os plugins você pode:
 
-- adicionar dados ou conteúdo externos (por exemplo, seu CMS, arquivos estáticos, uma API REST) aos seus dados do Gatsby GraphQL
-- transformar dados de outros formatos (por exemplo, Markdown, YAML, CSV) em objetos JSON
-- adicionar serviços de terceiros (por exemplo, Google Analytics, Instagram) ao seu site
-- faça o que você poder imaginar!
+- Adicionar dados ou conteúdo externos (por exemplo, seu CMS, arquivos estáticos, uma API REST) aos seus dados do Gatsby GraphQL.
+- Transformar dados de outros formatos (por exemplo, Markdown, YAML, CSV) em objetos JSON.
+- Adicionar serviços de terceiros (por exemplo, Google Analytics, Instagram) ao seu site.
+- Adicionar empacotadores, funcionalidades pré-configuradas com [temas](/docs/themes/)
+- Fazer qualquer coisa que você possa imaginar!
