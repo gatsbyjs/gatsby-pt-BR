@@ -1,22 +1,22 @@
 ---
-title: Sourcing from Sanity
+title: Integrando a partir do Sanity
 ---
 
-## What is Sanity.io?
+## O que é Sanity.io?
 
-[Sanity](https:///www.sanity.io) is a hosted backend for structured content that comes with an open source editor built in React. It has powerful real-time APIs for both reading and writing data.
+[Sanity](https://www.sanity.io/) é um backend para conteúdo estruturado com um editor criado em React para edição do painel administrador. Sanity tem uma poderosa API em tempo real para escrita e leitura de dados.
 
-You can use Sanity as a headless CMS that lets your authors work in a user friendly environment, or as a pure data backend for your apps. We make it easier for you to reuse content across multiple websites, apps, print, voice assistants, and other channels.
+Você pode usar o Sanity como um *Headless CMS* onde os autores e editores podem criar e gerenciar conteúdo através de uma interface amigável ou simplesmente como uma banco de dados para seus projetos. Nós facilitamos a reutilização do conteúdo em múltiplos websites, apps, assistentes de voz e outras plataformas.
 
-## Getting started
+## Começando
 
-Begin with setting up a Gatsby project. If you want to start from scratch, the [Quick Start guide](/docs/quick-start) is a good place to begin. Come back to this guide when you're set up.
+Comece inicializando e configurando o seu projeto Gatsby. Se você quer começar do zero, o [Guia de início rápido](/docs/quick-start) é um excelente ponto de partida. Volte para este guia quando seu projeto estiver configurado.
 
-You can also check out [the company website example](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo) we have set up. It contains both a configured Sanity Studio and a Gatsby frontend, which you can get up and running within minutes. It can be an useful reference for how to build a website using structured content. Follow the instructions in its README.md to get up and running.
+Você também pode conferir este [exemplo de site institucional](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo) que nós criamos. Ele foi construído com um backend configurado com o Sanity Studio e o frontend com Gatsby, que você pode usar para dar início ao seu projeto em poucos minutos. Esta pode ser uma boa referência de como construir um site usando conteúdo estruturado. Siga as instruções neste [README.md](http://readme.md/) para dar início ao seu projeto.
 
-This guide will cover how configure and use the [`gatsby-source-sanity`](https://www.npmjs.com/package/gatsby-source-sanity) plugin.
+Este guia vai te ensinar como configurar e usar o plugin [`gatsby-source-sanity`](https://www.npmjs.com/package/gatsby-source-sanity).
 
-## Basic usage
+## Início Rápido
 
 ```shell
 npm install --save gatsby-source-sanity
@@ -36,38 +36,38 @@ module.exports = {
 }
 ```
 
-At this point you can choose to (and probably should) [set up a GraphQL API](https://www.sanity.io/help/graphql-beta) for your Sanity dataset, if you have not done so already. This will help the plugin in knowing which types and fields exists, so you can query for them even without them being present in any current documents.
+A partir daqui você pode (e provavelmente deveria) [configurar uma API GraphQL](https://www.sanity.io/help/graphql-beta) para o seu projeto Sanity caso você ainda não tenha feito isso. Isto ajudará o plugin a identificar quais tipos de dados e campos existem no seu projeto, assim você pode consultar os campos mesmo que eles ainda não estejam presentes no seu projeto Gatsby.
 
-Go through `http://localhost:8000/___graphql` after running `gatsby develop` to understand the created data. Create a new query and check available collections and fields by using the autocomplete (`CTRL + SPACE`).
+Acesse [http://localhost:8000/___graphql](http://localhost:8000/___graphql) logo após executar `gatsby develop` no seu terminal para visualizar e entender os dados criados. Crie uma nova consulta e confira as coleções e campos disponíveis usando o auto completar (`CTRL + ESPAÇO`).
 
-## Options
+## Opções
 
-| Options       | Type    | Default | Description                                                                                                                                    |
+| Opções       | Tipo    | Padrão | Descrição                                                                                                                                    |
 | ------------- | ------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
-| projectId     | string  |         | **[required]** Your Sanity project's ID                                                                                                        |
-| dataset       | string  |         | **[required]** The dataset to fetch from                                                                                                       |
-| token         | string  |         | Authentication token for fetching data from private datasets, or when using `overlayDrafts` [Learn more](https://www.sanity.io/docs/http-auth) |
-| overlayDrafts | boolean | `false` | Set to `true` in order for drafts to replace their published version. By default, drafts will be skipped.                                      |
-| watchMode     | boolean | `false` | Set to `true` to keep a listener open and update with the latest changes in realtime.                                                          |
+| projectId     | string  |         | **[obrigatório]** ID do seu projeto no Sanity                                                                                                        |
+| dataset       | string  |         | **[obrigatório]** O dataset a ser utilizado                                                                                                       |
+| token         | string  |         | Token de autenticação para obter dados de datasets privados, ou quando usando `overlayDrafts` [Saiba mais](https://www.sanity.io/docs/http-auth) |
+| overlayDrafts | boolean | `false` | Defina como true para que os rascunhos sejam utilizados no lugar das suas versões publicadas. Por padrão, os rascunhos serão ignorados.                                      |
+| watchMode     | boolean | `false` | Defina como true para que os rascunhos sejam utilizados no lugar das suas versões publicadas. Por padrão, os rascunhos serão ignorados.                                                          |
 
-## Missing fields
+## Campos inexistentes
 
-Getting errors such as these?
+Obtendo erros como este?
 
 > Cannot query field "allSanityBlogPost"
 > Unknown field `preamble` on type `BlogPost`
 
-By [deploying a GraphQL API](https://www.sanity.io/help/graphql-beta) for your dataset, we are able to introspect and figure out which schema types and fields are available and make them available to prevent this problem. Once the API is deployed it will be transparently be applied. If you have deployed your API and are still seeing similar issues, remember that you have to redeploy the API if your schema changes.
+Ao [implantar uma API GraphQL](https://www.sanity.io/help/graphql-beta) no seu projeto, o Sanity pode inspecionar entender quais tipos e campos estão disponíveis no seu esquema de dados e disponibiliza-los para evitar este problema. Uma vez que a sua API está implantada ela será aplicada de forma transparente no seu projeto. Se você já implantou sua API e ainda esta tendo problemas similares, lembre-se que caso o seu esquema de dados tenha mudado, você deve implantar sua API novamente.
 
-Some background for this problem:
+Um pouco mais sobre este problema:
 
-Gatsby cannot know about the types and fields without having documents of the given types that contain the fields you want to query. This is a [known problem](https://github.com/gatsbyjs/gatsby/issues/3344) with Gatsby - luckily there is ongoing work to solve this issue, which will lead to much clearer schemas and less boilerplate.
+O Gatsby não consegue saber quais os campos e tipos de dados sem ter documentos dos tipos de dados que você quer pesquisar. Este é um [problema comum](https://github.com/gatsbyjs/gatsby/issues/3344) com o Gatsby - felizmente existem diversos esforços para solucionar este problema, o que vai nos levar a esquema de dados mais simples e com menor repetição de código.
 
-## Using images
+## Usando Imagens
 
-Image fields will have the image URL available under the `field.asset.url` key, but you can also use [gatsby-image](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image) for a smooth experience. It's a React component that enables responsive images and advanced image loading techniques. It works great with this source plugin, without requiring any additional build steps.
+Campos de imagem terão a url final da imagem disponíveis através da chave `field.asset.url`, mas você também pode usar o plugin [gatsby-image](https://github.com/gatsbyjs/gatsby/tree/master/packages/gatsby-image) para uma melhor experiência. Gatsby-image é um componente React que permite o uso de imagens responsivas e de técnicas avançadas de carregamento de imagens. Funciona perfeitamente com este plugin sem necessitar de nenhuma configuração adicional.
 
-There are two types of responsive images supported; _fixed_ and _fluid_. To decide between the two, ask yourself: "do I know the exact size this image will be?" If yes, you'll want to use _fixed_. If no and its width and/or height need to vary depending on the size of the screen, then you'll want to use _fluid_.
+Existem dois tipos de imagens suportados *fixed* e *fluid*. Para decidir entre as duas, pergunte a você mesmo: "Eu sei exatamente qual será o tamanho desta imagem no meu projeto?". Caso sim, você provavelmente deverá usar o *fixed*. Do contrário, se a altura ou largura da imagem será diferente de acordo com o tamanho da tela, então você deve optar pelo *fluid*.
 
 ### Fluid
 
@@ -131,9 +131,9 @@ export const query = graphql`
 `
 ```
 
-### Available fragments
+### Fragmentos disponíveis
 
-These are the fragments available on image assets, which allows easy lookup of the fields required by gatsby-image in various modes:
+Estes são fragmentos disponíveis nas imagens, que facilitam o uso e identificação dos campos necessários para o funcionamento do gatsby-image em vários modos:
 
 - `GatsbySanityImageFixed`
 - `GatsbySanityImageFixed_noBase64`
@@ -144,25 +144,25 @@ These are the fragments available on image assets, which allows easy lookup of t
 - `GatsbySanityImageFluid_withWebp`
 - `GatsbySanityImageFluid_withWebp_noBase64`
 
-## Overlaying drafts
+## Sobrepondo rascunhos
 
-Sometimes you might be working on some new content that is not yet published, which you want to make sure looks alright within your Gatsby site. By setting the `overlayDrafts` setting to `true`, the draft versions will as the option says "overlay" the regular document. In terms of Gatsby nodes, it will _replace_ the published document with the draft.
+Eventualmente você pode querer trabalhar em um novo conteúdo que ainda não foi puplicado para ter certeza que ele funciona corretamente no seu projeto Gatsby. Configurando a opcão `overlayDrafts` para `true` os seus rascunhos irão sobrepor a versão publicada do seu documento. Para simplificar: o Gatsby irá _substituir_ a versão publicada pelo seu rascunho.
 
-Keep in mind that drafts do not have to conform to any validation rules, so your frontend will usually want to double-check all nested properties before attempting to use them.
+Lembre-se apenas que rascunhos não precisam necessariamente obedecer nenhuma regra de validação do Sanity, portanto é fundamental que o seu front-end garanta que todas as propriedades existam antes de tentar utiliza-las para evitar erros.
 
-## Watch mode
+## Modo de Monitoramento
 
-While developing, it can often be beneficial to get updates without having to manually restart the build process. By setting `watchMode` to true, this plugin will set up a listener which watches for changes. When it detects a change, the document in question is updated in real-time and will be reflected immediately.
+Durante o desenvolvimento, pode ser útil receber atualizações de conteúdo sem a necessidade de reiniciar o processo no terminal. Configurando o `watchMode` para `true`, este plugin irá monitorar qualquer altação de conteúdo no CMS. Quando uma alteração é detectada, o documento em questão é atualizado em tempo real e você poderá ver a alteração imediatamente.
 
-If you add an [environment token](#using-env-variables) and set `overlayDrafts` to true, each small change to the draft will immediately be applied.
+Caso você tenha adicionado um [token no seu ambiente](#using-env-variables) e configurou a opção `overlayDrafts` para `true`, qualquer alteração por menor que seja será imediatamente aplicada.
 
-## Generating pages
+## Criando Páginas
 
-Sanity does not have any concept of a "page", since it's built to be totally agnostic to how you want to present your content and in which medium, but since you're using Gatsby, you'll probably want some pages!
+Diferente de outros CMS o Sanity não tem um conceito de "páginas", já que ele foi criado para ser totalmente agnóstico em como e onde você quer apresentar seu conteúdo. Porém, já que você está usando Gatsby, você certamente quer criar algumas páginas!
 
-As with any Gatsby site, you'll want to create a `gatsby-node.js` in the root of your Gatsby site repository (if it doesn't already exist), and declare a `createPages` function. Within it, you'll use GraphQL to query for the data you need to build the pages.
+Como em qualquer site Gatsby, você deve criar um arquivo `gatsby-node.js` na raiz do repositório do seu site Gatsby (caso ele ainda não exista) e declarar a função `createPages`. Com isso, você usará GraphQL para consultar os dados necessários para a criação das páginas.
 
-For instance, if you have a `project` document type in Sanity that you want to generate pages for, you could do something along the lines of this:
+Por exemplo, caso você tenha um tipo de documento chamado `project` no Sanity que você gostaria de usar para criar páginas, você pode fazer algo similar a este exemplo:
 
 ```js:title=gatsby-node.js
 exports.createPages = async ({ graphql, actions }) => {
@@ -208,27 +208,27 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-The above query will fetch all projects that have a `slug.current` field set, and generate pages for them, available as `/project/<project-slug>`. It will use the template defined in `src/templates/project.js` as the basis for these pages.
+A consulta acima vai buscar por todos os projetos que possuem o campo `slug.current` definido, e gerar as páginas para cada um deles, disponível como `/project/ <slug-do-projeto>` usando o template definido em `src/ templates/project.js` como a base para estas páginas.
 
-Most [Gatsby starters](/starters/?v=2) have some example of building pages, which you should be able to modify to your needs.
+A maioria dos [Gatsby starters](/starters/?v=2) possuem algum exemplo de como gerar páginas, o que você pode consultar e modificar conforme a sua necessidade.
 
-Remember to use the GraphiQL interface to help write the queries you need - it's usually running at `http://localhost:8000/___graphql` while running `gatsby develop`.
+Lembre-se de usar a interface do GraphQL para ajuda-lo a escrever a consulta que você necessita. Normalmente ela está disponível em `http://localhost:8000/___graphql` quando você executa `gatsby develop`.
 
-## "Raw" fields
+## Campos "Raw”
 
-Arrays and object types at the root of documents will get an additional "raw JSON" representation in a field called `_raw<FieldName>`. For instance, a field named `body` will be mapped to `_rawBody`. It's important to note that this is only done for top-level nodes (documents).
+Arrays e objetos na raiz do documento receberão um campo "raw JSON" adicional, representado através do `_raw<NomeDoCampo>`. Por exemplo, um campo chamado de `body` será mapeado para `_rawBody`. É importante lembrar que isto só acontece para items no topo da estrutura de dados (documents).
 
-## Portable Text / Block Content
+## Texto Transportável / Bloco de Conteúdo
 
-Rich text in Sanity is usually represented as [Portable Text](https://www.portabletext.org/) (previously known as "Block Content").
+Textos com formatação no Sanity são normalmente representados como [Texto Transportável (Portable Text)](https://www.portabletext.org/) — anteriormente conhecido como "Bloco de Texto".
 
-These data structures can be deep and a chore to query (specifying all the possible fields). As [noted above](#raw-fields), there is a "raw" alternative available for these fields which is usually what you'll want to use.
+Estas estruturas de dados podem ter bastante profundidade e ser uma dor de cabeça para consultar (especificando cada um dos campos possíveis). Conforme [mencionado acima](#raw-fields), existe uma alternativa "raw" disponível para estes campos, o que é normalmente o que você deverá utilizar.
 
-You can install [block-content-to-react](https://www.npmjs.com/package/@sanity/block-content-to-react) from npm and use it in your Gatsby project to serialize Portable Text. It lets you use your own React components to override defaults and render custom content types. [Learn more about Portable Text in our documentation](https://www.sanity.io/docs/content-studio/what-you-need-to-know-about-block-text).
+Para isso você pode instalar o pacote [block-content-to-react](https://www.npmjs.com/package/@sanity/block-content-to-react) disponível no npm e usa-lo no seu projeto Gatsby para serializar o *Portable Text*. Isso permite que você use seus próprios componentes React para sobrepor os padrões existentes e renderizar tipos de conteúdo customizado. [Saiba mais sobre *Portable Text* na documentação](https://www.sanity.io/docs/content-studio/what-you-need-to-know-about-block-text).
 
-## Using .env variables
+## Usando variávels de ambiente (.env)
 
-If you don't want to attach your Sanity project's ID to the repo, you can easily store it in .env files by doing the following:
+Caso você não queira atribuir o ID do seu projeto no Sanity ao seu repositório, você facilmente consegue armazena-los em variáveis de ambiente com a extensão *.env*. Confira o exemplo:
 
 ```text:title=.env
 SANITY_PROJECT_ID = abc123
@@ -255,4 +255,4 @@ module.exports = {
 }
 ```
 
-This example is based off [Gatsby Docs' implementation](/docs/environment-variables/).
+Este exemplo é baseado na implementação encontrada na [nesta documentação](/docs/environment-variables/).
