@@ -6,7 +6,7 @@ _Última atualização: Abril 8, 2019_
 
 Nós queremos que todo usuário do Gatsby sinta-se bem-vindo e sinta a experiência de recompensa: isso inclui desenvolvedores e usuários com dificuldades especiais em sites, documentações e recursos do Gatsby.
 
-Essa página foi criada para coletar de forma simples informações sobre todo o ecossistema Gatsby em um único lugar, melhorando os canais de comunicação entre as pessoas com dificuldade para obter ajuda sobre o Gatsby.
+Essa página foi criada para coletar informações de acessibilidade sobre todo o ecossistema Gatsby em um único lugar, melhorando os canais de comunicação entre as pessoas com deficiências para obterem ajuda sobre o Gatsby.
 
 ## Produtos e serviços Gatsby
 
