@@ -208,7 +208,7 @@ exports.createPages = async ({ graphql, actions }) => {
 }
 ```
 
-A consulta acima vai buscar por todos os projetos que possuem o campo `slug.current` definido, e gerar as páginas para cada um deles, disponível como `/project/ <slug-do-projeto>` usando o template definido em `src/ templates/project.js` como a base para estas páginas.
+A consulta acima vai buscar por todos os projetos que possuem o campo `slug.current` definido, e gerar as páginas para cada um deles, disponível como `/project/ <slug-do-projeto>` usando o template definido em `src/templates/project.js` como a base para estas páginas.
 
 A maioria dos [Gatsby starters](/starters/?v=2) possuem algum exemplo de como gerar páginas, o que você pode consultar e modificar conforme a sua necessidade.
 
