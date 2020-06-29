@@ -216,7 +216,7 @@ Lembre-se de usar a interface do GraphQL para ajuda-lo a escrever a consulta que
 
 ## Campos "Raw”
 
-Arrays e objetos na raiz do documento receberão um campo "raw JSON" adicional, representado através do `_raw<NomeDoCampo>`. Por exemplo, um campo chamado de `body` será mapeado para `_rawBody`. É importante lembrar que isto só acontece para items no topo da estrutura de dados (documents).
+Arrays e objetos na raiz do documento receberão um campo "raw JSON" adicional, representado através do `_raw<NomeDoCampo>`. Por exemplo, um campo chamado de `body` será mapeado para `_rawBody`. É importante lembrar que isto só acontece para items no topo da estrutura de dados (documentos).
 
 ## Texto Transportável / Bloco de Conteúdo
 
