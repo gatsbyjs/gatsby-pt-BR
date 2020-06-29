@@ -1,5 +1,5 @@
 ---
-title: Declaração de acessibilidade
+title: Declaração de Acessibilidade
 ---
 
 _Última atualização: Abril 8, 2019_
