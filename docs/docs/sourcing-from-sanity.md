@@ -47,7 +47,7 @@ Acesse [http://localhost:8000/___graphql](http://localhost:8000/___graphql) logo
 | projectId     | string  |         | **[obrigatório]** ID do seu projeto no Sanity                                                                                                        |
 | dataset       | string  |         | **[obrigatório]** O dataset a ser utilizado                                                                                                       |
 | token         | string  |         | Token de autenticação para obter dados de datasets privados, ou quando usando `overlayDrafts` [Saiba mais](https://www.sanity.io/docs/http-auth) |
-| overlayDrafts | boolean | `false` | Defina como true para que os rascunhos sejam utilizados no lugar das suas versões publicadas. Por padrão, os rascunhos serão ignorados.                                      |
+| overlayDrafts | boolean | `false` | Defina como `true` para que os rascunhos sejam utilizados no lugar das suas versões publicadas. Por padrão, os rascunhos serão ignorados.                                      |
 | watchMode     | boolean | `false` | Defina como `true` para que os rascunhos sejam utilizados no lugar das suas versões publicadas. Por padrão, os rascunhos serão ignorados.                                                          |
 
 ## Campos inexistentes
