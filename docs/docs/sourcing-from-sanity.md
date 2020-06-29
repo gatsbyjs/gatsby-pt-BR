@@ -12,7 +12,7 @@ Você pode usar o Sanity como um *Headless CMS* onde os autores e editores podem
 
 Comece inicializando e configurando o seu projeto Gatsby. Se você quer começar do zero, o [Guia de início rápido](/docs/quick-start) é um excelente ponto de partida. Volte para este guia quando seu projeto estiver configurado.
 
-Você também pode conferir este [exemplo de site institucional](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo) que nós criamos. Ele foi construído com um backend configurado com o Sanity Studio e o frontend com Gatsby, que você pode usar para dar início ao seu projeto em poucos minutos. Esta pode ser uma boa referência de como construir um site usando conteúdo estruturado. Siga as instruções neste [README.md](http://readme.md/) para dar início ao seu projeto.
+Você também pode conferir este [exemplo de site institucional](https://github.com/sanity-io/example-company-website-gatsby-sanity-combo) que nós criamos. Ele foi construído com um backend configurado com o Sanity Studio e o frontend com Gatsby, que você pode usar para dar início ao seu projeto em poucos minutos. Esta pode ser uma boa referência de como construir um site usando conteúdo estruturado. Siga as instruções neste README.md para dar início ao seu projeto.
 
 Este guia vai te ensinar como configurar e usar o plugin [`gatsby-source-sanity`](https://www.npmjs.com/package/gatsby-source-sanity).
 
