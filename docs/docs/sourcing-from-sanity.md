@@ -57,7 +57,7 @@ Obtendo erros como este?
 > Cannot query field "allSanityBlogPost"
 > Unknown field `preamble` on type `BlogPost`
 
-Ao [implantar uma API GraphQL](https://www.sanity.io/help/graphql-beta) no seu projeto, o Sanity pode inspecionar entender quais tipos e campos estão disponíveis no seu esquema de dados e disponibiliza-los para evitar este problema. Uma vez que a sua API está implantada ela será aplicada de forma transparente no seu projeto. Se você já implantou sua API e ainda esta tendo problemas similares, lembre-se que caso o seu esquema de dados tenha mudado, você deve implantar sua API novamente.
+Ao [implantar uma API GraphQL](https://www.sanity.io/help/graphql-beta) no seu projeto, o Sanity pode inspecionar e entender quais tipos e campos estão disponíveis no seu esquema de dados e disponibiliza-los para evitar este problema. Uma vez que a sua API está implantada ela será aplicada de forma transparente no seu projeto. Se você já implantou sua API e ainda esta tendo problemas similares, lembre-se que caso o seu esquema de dados tenha mudado, você deve implantar sua API novamente.
 
 Um pouco mais sobre este problema:
 
