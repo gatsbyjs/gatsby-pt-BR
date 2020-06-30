@@ -54,7 +54,7 @@ A partir deste ponto o processamento de imagem do Gatsby automaticamente tomará
 
 ## Plugins do Remark
 
-Você pode usar os [plugins do Remark](https://github.com/remarkjs/remark/blob/master/doc/plugins.md) diretamente se desejar fazer transformações em seus documentos `MDX`. Isso permite fazer coisas desde adicionar suporte a emojis à import um padrão de título.
+Você pode usar os [plugins do Remark](https://github.com/remarkjs/remark/blob/master/doc/plugins.md) diretamente se desejar fazer transformações em seus documentos `MDX`. Isso permite fazer coisas desde adicionar suporte a emojis à impor um padrão de título.
 
 ```javascript:title=gatsby-config.js
 const capitalize = require(`remark-capitalize`)
