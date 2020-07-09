@@ -30,7 +30,7 @@ export default ({ children }) => (
 
 ## Como importar e adicionar componentes de layout nas páginas
 
-Se você quer aplicar algum layout a uma página você precisará incluir o componente `Layout` e colocar sua página dentro dele. O exemplo a seguir mostra como você pode aplicar seu layout a uma página inicial.
+Se você quer aplicar algum layout a uma página você precisará incluir o componente `Layout` e empacotar sua página com ele. O exemplo a seguir mostra como você pode aplicar seu layout a uma página inicial.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
