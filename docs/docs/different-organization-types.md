@@ -1,13 +1,13 @@
 ---
-title: Different Organization Types
+title: Diferentes Tipos de Organizações
 ---
 
-Using Gatsby more is a different kind of problem depending on the type of organization you work in.
+Advogar maior uso do Gatsby é um desafio diferente dependendo do tipo da organização em que você trabalha.
 
-As a freelancer, the most important thing is [helping clients understand](/docs/winning-over-clients) the benefits of Gatsby.
+Se você é um trabalhador autônomo, o mais importante é [ajudar seus clientes a entenderem](/docs/winning-over-clients) os benefícios de usar Gatsby.
 
-As an agency, you'll want to show others [how Gatsby helps your agency](/docs/gatsby-for-agencies) ship higher quality sites faster and under budget -- and see how Gatsby can contribute to the agency's growth strategy.
+Se trabalha em uma agência, você vai querer apresentar aos demais colegas [como o Gatsby ajuda sua agência](/docs/gatsby-for-agencies) a entregar sites de maior qualidade, mais rápido e dentro do orçamento -- veja também como Gatsby pode contribuir com a estratégia de crescimento da agência.
 
-If you're at a company, there are [different strategies for adopting Gatsby](/docs/gatsby-for-companies) depending on the type and size of company.
+Se trabalha em uma empresa, existem [diferentes estratégias para a adoção do Gatsby](/docs/gatsby-for-companies) dependendo do tipo e tamanho da empresa.
 
 <GuideList slug={props.slug} />
