@@ -1,22 +1,22 @@
 ---
-title: Layout Components
+title: Componentes de layout
 ---
 
-In this guide, you'll learn Gatsby's approach to layouts, how to create and use layout components, and how to prevent layout components from unmounting.
+Nesse guia você vai entender qual a abordagem do Gatsby em relação a layouts, como criar, usar componentes de layout e como evitar que esses componentes desmontem.
 
-## Gatsby's approach to layouts
+## Abordagem da Gatsby para layouts
 
-Gatsby does not, by default, automatically apply layouts to pages (there are, however, ways to do so which will be covered in a later section). Instead, Gatsby follows React's compositional model of importing and using components. This makes it possible to create multiple levels of layouts, e.g. a global header and footer, and then on some pages, a sidebar menu. It also makes it easy to pass data between layout and page components.
+Por padrão, o gatsby não aplica o layout nas páginas de forma automática(Existem formas de fazer isso, mas serão abordadas em uma seção futura). Ao invés disso, o Gastsby segue o modelo composicional do React na sua forma de importar e usar componentes. Isso faz com que seja possível criar multiplos níveis de layout, como por exemplo, um cabeçalho e rodapé globais e em algumas páginas um menu lateral. Isso faz com que a transição de dados entre o layout e os componentes da página seja mais fácil de ser concretizada.
 
-## What are layout components?
+## O que são componentes de layout?
 
-Layout components are for sections of your site that you want to share across multiple pages. For example, Gatsby sites will commonly have a layout component with a shared header and footer. Other common things to add to layouts are a sidebar and/or navigation menu. On this page for example, the header at the top is part of gatsbyjs.org’s layout component.
+Componentes de layout existem para permitir o compartilhamento de seções do seu site entre diversas páginas. Por exemplo, os sites da Gatsby normalmente tem um componente de layout de cabeçalho e footer que são compartilhados. Outra coisa comum de se adicionar aos layouts são as barras laterais e/ou menus de navegação. Nessa página por exemplo, o cabeçalho no topo é parte do componente de layout da gatsbyjs.org.
 
-## How to create layout components
+## Como criar componentes de layout
 
-It is recommended to create your layout components alongside the rest of your components (e.g. into `src/components/`).
+É recomendável criar componentes de layout junto com o resto dos seus componentes (Por exemplo, dentro do `src/components/`).
 
-Here is an example of a very basic layout component at `src/components/layout.js`:
+Aqui está um exemplo de um componente bem básico dentro do `src/components/layout.js`:
 
 ```jsx:title=src/components/layout.js
 import React from "react"
@@ -28,9 +28,9 @@ export default ({ children }) => (
 )
 ```
 
-## How to import and add layout components to pages
+## Como importar e adicionar componentes de layout nas páginas
 
-If you want to apply a layout to a page, you will need to include the `Layout` component and wrap your page in it. For example, here is how you would apply your layout to the front page:
+Se você quer aplicar algum layout a uma página você precisará incluir o componente `Layout` e colocar sua página dentro dele. O exemplo a seguir mostra como você pode aplicar seu layout a uma página inicial.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -43,21 +43,21 @@ export default () => (
 )
 ```
 
-Repeat for every page and template that needs this layout.
+Repita isso para todas as páginas e templates que precisarem desse layout.
 
-## How to prevent layout components from unmounting
+## Como previnir que os componentes de layout desmontem 
 
-As mentioned earlier, Gatsby does not, by default, automatically wrap pages in a layout component. The "top level" component is the page itself. As a result, when the "top level" component changes between pages, React will re-render all children. This means that shared components like navigations will unmount and remount. This will break CSS transitions or React state within those shared components.
+Como mencionado anteriormente, por padrão o Gastby não empacota as páginas que estão dentro de um componente de layout de forma automático. O componente "top level" é a própria página. Dessa forma, quando o componente "top level" muda de uma página pra outra o React vai re-renderizar todos os seus filhos. Isso significa que os componentes compartilhados, como navegação por exemplo, irão ser desmontados e remontados. Isso causará a quebra das transições do CSS ou do estado do React dentro daqueles componentes compartilhados.
 
-If you need to set a wrapper component around page components that won't get unmounted on page changes, use the **`wrapPageElement`** [browser API](/docs/browser-apis/#wrapPageElement) and the [SSR equivalent](/docs/ssr-apis/#wrapPageElement).
+Se você precisar criar um componente wrapper junto a componentes da página que não serão desmontados com as alterações dessa página, use a [API de navegação](/docs/browser-apis/#wrapPageElement) **`wrapPageElement`** e o [SSR equivalente](/docs/ssr-apis/#wrapPageElement).
 
-Alternatively, you can prevent your layout component from unmounting by using [gatsby-plugin-layout](/packages/gatsby-plugin-layout/), which implements the `wrapPageElement` APIs for you.
+Você também pode evitar que o componente layout seja desmontado usando o [gatsby-plugin-layout](/packages/gatsby-plugin-layout/), que implementa as APIs `wrapPageElement` por você. 
 
-## Other resources
+## Outros recursos
 
-- [Creating nested layout components in Gatsby](/tutorial/part-three/)
-- [Life after layouts in Gatsby V2](/blog/2018-06-08-life-after-layouts/)
-- [Migrating from v1 to v2](/docs/migrating-from-v1-to-v2/#remove-or-refactor-layout-components)
+- [Criando componentes de layout aninhado com o Gatsby](/tutorial/part-three/)
+- [A vida depois dos layouts no Gatsby V2](/blog/2018-06-08-life-after-layouts/)
+- [Migrando da v1 para a v2](/docs/migrating-from-v1-to-v2/#remove-or-refactor-layout-components)
 - [gatsby-plugin-layout](/packages/gatsby-plugin-layout/)
-- [wrapPageElement Browser API](/docs/browser-apis/#wrapPageElement)
-- [wrapPageElement SSR API](/docs/ssr-apis/#wrapPageElement)
+- [API de navegação do WrapPageElement](/docs/browser-apis/#wrapPageElement)
+- [API SSR do wrapPageElement](/docs/ssr-apis/#wrapPageElement)
