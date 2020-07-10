@@ -250,7 +250,7 @@ Além das configurações do `gatsby-plugin-sharp` em `gatsby-config.js`, existe
 - `cropFocus` (string, default: `[sharp.strategy.attention][6]`)
 - `pngCompressionSpeed` (int, default: 4)
 
-Abaixo temos um exemplo de utilizar a opção `duotone` com uma imagem fixa:
+Abaixo temos um exemplo de uso da opção `duotone` com uma imagem fixa:
 
 ```graphql
 fixed(
