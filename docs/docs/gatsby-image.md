@@ -391,6 +391,6 @@ Aqui temos alguns exemplos do uso:
     // faça algo quando encontrar erro
   }}
   Tag="imagem-personalizada"
-  loading="ansioso"
+  loading="eager"
 />
 ```
