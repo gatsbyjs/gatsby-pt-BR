@@ -288,7 +288,7 @@ Leia mais no `README` do plugin [`gatsby-plugin-sharp`](/packages/gatsby-plugin-
 
 ## Fragmentos de consulta do Image
 
-O GraphQL inclui um conceito chamado "fragmentos de consulta", que são partes de uma consulta que podem ser reutilizados. Para projetar facilmente com o `gatsby-image`, o plugin de processamento de imagens do Gatsby, que tem suporta o `gatsby-image`, e feito com fragmentos que você pode facilmente incluir em suas consultas.
+O GraphQL inclui um conceito chamado "fragmentos de consulta", que são partes de uma consulta que podem ser reutilizados. Para projetar facilmente com o `gatsby-image`, o plugin de processamento de imagens do Gatsby, que suporta o `gatsby-image`, e feito com fragmentos que você pode facilmente incluir em suas consultas.
 
 > Nota: utilizar fragmentos em suas consultas depende da fonte de dados que você configurou. Leia mais no `README` do plugin [gatsby-image](/packages/gatsby-image#fragments).
 
