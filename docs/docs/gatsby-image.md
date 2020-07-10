@@ -345,7 +345,7 @@ Adicionalmente, plugins com suporte ao `gatsby-image` atualmente incluem [gatsby
 
 ## props do Gatsby-image
 
-Apos ter feito a sua consulta, você pode passar opções adicionais para o componente gatsby-image.
+Após ter feito a sua consulta, você pode passar opções adicionais para o componente gatsby-image.
 
 | Nome                   | Tipo                | Descrição                                                                                                                   |
 | ---------------------- | ------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
