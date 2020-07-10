@@ -322,7 +322,7 @@ Caso você queira utilizar o [SVG traçado para reserva do espaço](https://usin
 
 #### Sobre `withWebP`
 
-Caso você queira utilizar automaticamente [imagens WebP](https://developers.google.com/speed/webp/) quando o navegador tiver suporte ao formato, utilize o fragmento 'withWebp'. Caso o navegador nao tenha suporte a Webp, o `gatsby-image` volta para o formato de imagem padrão.
+Caso você queira utilizar automaticamente [imagens WebP](https://developers.google.com/speed/webp/) quando o navegador tiver suporte ao formato, utilize o fragmento 'withWebp'. Caso o navegador não tenha suporte a Webp, o `gatsby-image` volta para o formato de imagem padrão.
 
 Aqui temos um exemplo da utilização de fragmentos não padrões do `gatsby-transformer-sharp`. Sempre escolha um que corresponda ao tipo de imagem desejada por você (_fixed_ ou _fluid_):
 
