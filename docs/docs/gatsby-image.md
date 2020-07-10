@@ -242,7 +242,7 @@ allImageSharp {
 
 ### Parâmetros de consulta compartilhados
 
-Alem das configuracoes do `gatsby-plugin-sharp` em `gatsby-config.js`, existem opcoes de consulta adicionais que aplicam para imagens _fluid_ ou _fixed_:
+Além das configurações do `gatsby-plugin-sharp` em `gatsby-config.js`, existem opções de consulta adicionais que aplicam para imagens _fluid_ ou _fixed_:
 
 - `grayscale` (bool, default: false)
 - `duotone` (bool|obj, default: false)
