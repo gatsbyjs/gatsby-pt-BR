@@ -21,7 +21,7 @@ Demonstração: [https://using-gatsby-image.gatsbyjs.org/](https://using-gatsby-
 
 ## Configurando o Gatsby Image
 
-Para comecar a trabalhar com o Gatsby Image, instale o pacote `gatsby-image` junto com os plugins necessários `gatsby-transformer-sharp` e `gatsby-plugin-sharp`. Faça referência ao pacote em seu arquivo `gatsby-config.js`. Você pode ainda adicionar opções extras para o [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) no seu arquivo de configuração.
+Para começar a trabalhar com o Gatsby Image, instale o pacote `gatsby-image` junto com os plugins necessários `gatsby-transformer-sharp` e `gatsby-plugin-sharp`. Faça referência ao pacote em seu arquivo `gatsby-config.js`. Você pode ainda adicionar opções extras para o [`gatsby-plugin-sharp`](/packages/gatsby-plugin-sharp/) no seu arquivo de configuração.
 
 Um meio comum de adicionar imagens, é instalar e usar o `gatsby-source-filesystem` para conectar os seus arquivos locais, mas outros plugins de fontes podem ser usados também, como os plugins `gatsby-source-contentful`, `gatsby-source-datocms` e `gatsby-source-sanity`.
 
