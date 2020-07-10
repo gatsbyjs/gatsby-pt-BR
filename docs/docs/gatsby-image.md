@@ -368,7 +368,7 @@ Após ter feito a sua consulta, você pode passar opções adicionais para o com
 | `Tag`                  | `string`            | Qual tag HTML utilizar para o elemento empacotador. O padrão utilizado é `div`.                                                               |
 | `objectFit`            | `string`            | Passado para o `object-fit-images` polyfill quando importando do `gatsby-image/withIEPolyfill`. Por padrão é utilizada a opção `cover`. |
 | `objectPosition`       | `string`            | Passado para o `object-fit-images` polyfill quando importando do `gatsby-image/withIEPolyfill`. Por padrão e passado o valor `50% 50%`.          |
-| `loading`              | `string`            | Configura o atributo de carregamento com atraso nativo do navegador. Uma das seguintes opcoes `lazy`, `eager` ou `auto`. Por padrão e passada a opção `lazy`.                        |
+| `loading`              | `string`            | Configura o atributo de carregamento com atraso nativo do navegador. Uma das seguintes opções `lazy`, `eager` ou `auto`. Por padrão e passada a opção `lazy`.                        |
 | `critical`             | `bool`              | Optar por não utilizar a opção de carregamento com atraso. Por padrão é utilizado o valor `false`. Obsoleto, utilize a opção `loading` no lugar.                                     |
 
 Aqui temos alguns exemplos do uso:
