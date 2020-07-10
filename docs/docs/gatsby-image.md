@@ -115,7 +115,7 @@ Na consulta, você pode especificar opções para imagens fixas.
 - `src` (string)
 - `srcSet` (string)
 
-Neste ponto, fragmentos como `GatsbyImageSharpFixed` são úteis, pois eles retornam todos os items acima em uma linha unica sem ter que escrever todos:
+Neste ponto, fragmentos como `GatsbyImageSharpFixed` são úteis, pois eles retornam todos os itens acima em uma linha unica sem ter que escrever todos:
 
 ```graphql
 file(relativePath: { eq: "images/default.jpg" }) {
