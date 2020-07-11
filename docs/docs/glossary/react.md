@@ -3,7 +3,7 @@ title: React
 disableTableOfContents: true
 ---
 
-Aprenda sobre React, incluindo o que é, porque você deveria utilizar e como isso se encaixa no ecossistema gatsby
+Aprenda sobre React, incluindo o que é, o porquê você deveria utilizar e como isso se encaixa no ecossistema gatsby
 
 ## O que é React?
 
@@ -17,10 +17,10 @@ Componentes podem ser puramente de apresentação. Por exemplo, você pode criar
 
 Componentes também podem ser combinados, ou seja, você pode utilizar vários componentes filhos para criar um componente pai ou uma `view`. É dessa forma que você vai desenvolver páginas e templates Gatsby.
 
-Componentes React respondem por mudanças no estado. Em React, o estado é um conjunto de propriedades e valores que determina como um componente é apresentado ou se comporta. O Estado pode mudar em resposta de uma ação do usuário, como por exemplo um clique do mouse ou uma tecla do teclado. Também pode mudar devido a uma requisição de internet. Quando um valor do estado do componente muda, o componente é a unica parte da interface que é alterada. Em outras palavras, React pode atualizar uma parte da página ou uma view inteira sem precisar de um recarregamento completo da página.
+Componentes React respondem por mudanças no estado. Em React, o estado é um conjunto de propriedades e valores que determina como um componente é apresentado ou se comporta. O Estado pode mudar em resposta de uma ação do usuário, como por exemplo um clique do mouse ou uma tecla do teclado. Também pode mudar devido a uma requisição de internet. Quando um valor do estado do componente muda, o componente é a única parte da interface que é alterada. Em outras palavras, React pode atualizar uma parte da página ou uma view inteira sem precisar de um recarregamento completo da página.
 
-Gatsby agrupa React, [webpack](/docs/glossary#webpack), [GraphQL](/docs/glossary#graphql), e outras ferramentas em um único framework para criar páginas web. Com Gatsby, você começa a cumprir seus requisitos de SEO, acessibilidade e desempenho. Em vez de instalar e configurar um ambiente de desenvolvimento do zero, você pode instalar Gatsby e começar a desenvolver.
+Gatsby agrupa React, [webpack](/docs/glossary#webpack), [GraphQL](/docs/glossary#graphql), e outras ferramentas em um único framework para criar páginas web. Com Gatsby, você já começa a cumprir seus requisitos de SEO, acessibilidade e desempenho. Em vez de instalar e configurar um ambiente de desenvolvimento do zero, você pode instalar Gatsby e já começar a desenvolver.
 
 ### Aprenda mais sobre React
 
-- Website oficial do [React](https://reactjs.org/)
+- Website oficial do [React](https://pt-br.reactjs.org)
