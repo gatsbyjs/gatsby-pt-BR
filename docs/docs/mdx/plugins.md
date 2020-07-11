@@ -4,7 +4,7 @@ title: MDX Plugins
 
 
 ## Plugins Remark do Gatsby
-Todos os [plugins gatby-remark](/packages/gatsby-remark-images/?=gatsby-remark) 
+Todos os [plugins gatsby-remark](/packages/gatsby-remark-images/?=gatsby-remark) 
 são compátiveis com o plugin `gatsby-plugin-mdx`. Um exemplo é o plugin 
 [`gatsby-remark-images`](https://next.gatsbyjs.org/packages/gatsby-remark-images/?=gatsby-remark).
 
