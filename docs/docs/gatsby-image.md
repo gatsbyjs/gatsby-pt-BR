@@ -64,7 +64,7 @@ Objetos de imagem do Gatsby são criados através de métodos do GraphQL. Dois t
 
 Cria imagens automaticamente para diferentes resoluções a uma dada largura e altura - o Gatsby cria imagens responsivas para densidades de pixel de 1x, 1.5x, e 2x utilizando o elemento `<picture>`.
 
-Tendo feito a consulta de uma imagem `fixed` para obter os seus dados, você pode passar os dados para o componente Img.
+Tendo feito a consulta de uma imagem `fixed` para obter os seus dados, você pode passar os dados para o componente `Img`.
 
 ```jsx
 import { useStaticQuery, graphql } from "gatsby"
