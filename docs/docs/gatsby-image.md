@@ -48,7 +48,7 @@ _Para instruções de instalação aprofundadas, acesse a documentação de [Usa
 
 ### O Gatsby image começa com uma consulta
 
-Para alimentar dados de arquivos no Gatsby Image, configure uma [consulta do GraphQL](/docs/graphql-reference/) e ou passe a mesma como uma prop ou a escreva diretamente no componente. Uma técnica é utilizar o hook [`useStaticQuery`](/docs/use-static-query/).
+Para alimentar dados de arquivos no Gatsby Image, configure uma [consulta do GraphQL](/docs/graphql-reference/) e passe a mesma como uma prop ou a escreva diretamente no componente. Uma técnica é utilizar o hook [`useStaticQuery`](/docs/use-static-query/).
 
 Consultas comuns do GraphQL para adicionar imagens incluem `file` através do plugin [gatsby-source-filesystem](/packages/gatsby-source-filesystem/),  e ambos `imageSharp` e `allImageSharp` do [gatsby-plugin-sharp](/packages/gatsby-plugin-sharp/), mas no final das contas as opções disponíveis para você vão depender das suas fontes de conteúdo.
 
