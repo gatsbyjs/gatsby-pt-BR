@@ -8,7 +8,7 @@ Muitos sites exigem que os usuários sejam autenticados para proteger dados priv
 
 Em muitos sites modernos, o [cliente](/docs/glossary#client-side) -- ou [frontend](/docs/glossary#frontend) -- é [desacoplado](/docs/glossary#decoupled) do [backend](/docs/glossary#backend). Esse padrão é como o Gatsby funciona para combinar dados de uma infinidade de fontes (backends) para facilitar a construção do front-end.
 
-Para fornecer funcionalidade de autenticação, outro serviço deve ser aproveitado e conectado ao Gatsby. Existem muitas tecnologias de _open source_ que podem fornecer essa funcionalidade. Algums exemplos são:
+Para fornecer funcionalidade de autenticação, outro serviço deve ser aproveitado e conectado ao Gatsby. Existem muitas tecnologias de _open source_ que podem fornecer essa funcionalidade. Alguns exemplos são:
 
 - Um aplicação Node.js usando Passport.js
 - Uma API Ruby on Rails usando Devise
@@ -38,7 +38,7 @@ _**Note**: esse é o mesmo padrão que outros sites criados com o React(como Cre
 
 Há algumas coisas a serem observadas ao implementar a autenticação em um site do Gatsby, por causa de como o Gatsby cria páginas de forma exclusiva e renderiza ativos estáticos com recursos dinâmicos.
 
-### Configurando Rotas Somente parar o Cliente
+### Configurando Rotas Somente para o Cliente
 
 Com o Gatsby, você pode criar áreas restritas no seu aplicativo usando [rotas do cliente](/docs/building-apps-with-gatsby/#client-only-routes).
 
