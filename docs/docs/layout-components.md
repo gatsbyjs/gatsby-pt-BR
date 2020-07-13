@@ -2,7 +2,7 @@
 title: Componentes de layout
 ---
 
-Nesse guia você vai entender qual a abordagem do Gatsby em relação a layouts, como criar, usar componentes de layout e como evitar que esses componentes desmontem.
+Neste guia você vai entender qual a abordagem do Gatsby em relação a layouts, como criar, usar componentes de layout e como evitar que esses componentes desmontem.
 
 ## Abordagem da Gatsby para layouts
 
