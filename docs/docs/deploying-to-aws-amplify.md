@@ -2,13 +2,13 @@
 title: Publicando no AWS Amplify
 ---
 
-Nesse guia você vai aprender como publicar e hospedar o seu site Gastby usando o [console AWS Amplify](https://console.amplify.aws).
+Neste guia você vai aprender como publicar e hospedar o seu site Gastby usando o [console AWS Amplify](https://console.amplify.aws).
 
-AWS Amplify é uma combinação de bibliotecas de cliente, ferramentas de CLI e um console para publicação contínua e hospedagem. O CLI do Amplify e a sua biblioteca permite que os desenvolvedores entrem em funcionamento com aplicativos em nuvem completos e recursos como autenticação, armazenamento, APIs GraphQL ou REST sem servidor, análises, funções Lambda e mais. O console Amplify provê hospedagem e publicação contínua para aplicativos web modernos (aplicativos de página única e geradores de sites estáticos). Publicação contínua permite aos desenvolvedores publicarem atualizações no seus aplicativos web a cada _commit_ de código em seu reposítorio Git. A hospedagem inclui recursos como CDNs disponíveis globalmente, fácil configuração de domínio customizado + HTTPS, implantação de _branch_ de recursos e proteção por senha.
+AWS Amplify é uma combinação de bibliotecas de cliente, ferramentas de CLI e um console para publicação contínua e hospedagem. O CLI do Amplify e a sua biblioteca permite que os desenvolvedores entrem em funcionamento com aplicativos em nuvem completos e recursos como autenticação, armazenamento, APIs GraphQL ou REST sem servidor, análises, funções Lambda e mais. O console Amplify provê hospedagem e publicação contínua para aplicativos web modernos (aplicativos de página única e geradores de sites estáticos). Publicação contínua permite aos desenvolvedores publicarem atualizações no seus aplicativos web a cada _commit_ de código em seu repositório Git. A hospedagem inclui recursos como CDNs disponíveis globalmente, fácil configuração de domínio customizado + HTTPS, implantação de _branch_ de recursos e proteção por senha.
 
 ## Pré requisitos
 
-1. [Increva-se para um conta AWS](https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation). Não há cobranças antecipadas ou quaisquer compromissos de prazo parar criar uma conta de AWS e a inscrição fornece acesso imediato ao nível gratuito da AWS.
+1. [Increva-se para um conta AWS](https://portal.aws.amazon.com/billing/signup?redirect_url=https%3A%2F%2Faws.amazon.com%2Fregistration-confirmation). Não há cobranças antecipadas ou quaisquer compromissos de prazo para criar uma conta de AWS e a inscrição fornece acesso imediato ao nível gratuito da AWS.
 
 1. Esse guia assume que você configurou um projeto com Gatsby. Se você precisa configurar um projeto, comece com o [Gatsby Auth starter com AWS Amplify](https://github.com/dabit3/gatsby-auth-starter-aws-amplify) e então volte aqui. O _starter_ implementa um fluxo de autenticação básico para inscrição e _login_ de usuários, bem como roteamento protegido do lado do cliente.
 
