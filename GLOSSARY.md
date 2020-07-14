@@ -38,7 +38,7 @@ Use essa seção para listar como algumas terminologias técnicas devem ser trad
 | server                 | servidor                                    | ✅         |
 | server-side            | lado servidor                            | ✅         |
 | siblings               | irmãos                                      | ✅         |
-| source plugin          | plugins nativos                             | ✅         |
+| source plugin          | plugins de origem                           | ✅         |
 | stateful component     | componente com estado                       | ✅         |
 | stateful logic         | lógica com estado                           | ✅         |
 | to assert              | afirmar                                     | ✅         |

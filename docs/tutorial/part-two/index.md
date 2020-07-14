@@ -3,17 +3,6 @@ title: Introdução aos estilos com Gatsby
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
-
-<!-- Idea: Create a glossary to refer to. A lot of these terms get jumbled -->
-
-<!--
-  - Global styles
-  - Component css
-  - CSS-in-JS
-  - CSS Modules
-
--->
-
 Bem-vindo a parte dois do tutorial Gatsby!
 
 ## O que é esse tutorial?
@@ -128,7 +117,7 @@ Se você abrir seu projeto no seu projeto no navegador, deverá ver um plano de 
 
 > Dica: Esta parte do tutorial se concentrou na maneira mais rápida e direta de começar a estilizar um site do Gatsby - importando arquivos CSS padrão diretamente, usando o `gatsby-browser.js`. Na maioria dos casos, a melhor maneira de adicionar estilos globais é com um componente de layout compartilhado. [Confira a documentação](/docs/global-css/) para saber mais sobre essa abordagem.
 
-## Usando css com escopo de componente
+## Usando CSS com escopo de componente
 
 Até agora, falamos sobre a abordagem mais tradicional do uso padrão de CSS. Agora, falaremos sobre vários métodos de modularização do CSS para lidar com o estilo de maneira orientada a componentes
 

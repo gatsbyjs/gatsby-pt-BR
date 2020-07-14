@@ -42,7 +42,7 @@ Abra o código em `src/pages/index.js`. O código nesse arquivo cria um componen
 
 ### ✋ Faça alterações na página inicial do “Hello World”
 
-1.  Mude o texto “Hello World!” para “Hello Gatsby!” e salve o seu arquivo. Se as suas páginas estão lado a lado, você pode ver que as alterações no seu código e conteúdo são refletidas quase instantaneamente no navegador depois de salvar o arquivo.
+1. Mude o texto “Hello World!” para “Hello Gatsby!” e salve o seu arquivo. Se as suas páginas estão lado a lado, você pode ver que as alterações no seu código e conteúdo são refletidas quase instantaneamente no navegador depois de salvar o arquivo.
 
 <video controls="controls" autoplay="true" loop="true">
   <source type="video/mp4" src="./02-demo-hot-reloading.mp4"></source>
@@ -51,7 +51,7 @@ Abra o código em `src/pages/index.js`. O código nesse arquivo cria um componen
 
 > 💡 O Gatsby utiliza **hot reloading** para acelerar o seu processo de desenvolvimento. Essencialmente, quando você está rodando um servidor de desenvolvimento do Gatsby, os arquivos do site estão sendo “observados” em background — toda vez que você salvar um arquivo, suas alterações vão ser refletidas imediatamente no navegador. Você não precisa recarregar a página ou reiniciar o servidor de desenvolvimento — suas alterações simplesmente aparecem.
 
-2.  Agora que você pode tornar suas alterações um pouco mais visíveis. Tente substituir o código em `src/pages/index.js` pelo código abaixo e salve novamente. Você verá alterações no texto — a cor do texto será roxa e o tamanho da fonte maior.
+2. Agora que você pode tornar suas alterações um pouco mais visíveis. Tente substituir o código em `src/pages/index.js` pelo código abaixo e salve novamente. Você verá alterações no texto — a cor do texto será roxa e o tamanho da fonte maior.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -63,7 +63,7 @@ export default () => (
 
 > 💡 Abordaremos mais sobre estilo no Gatsby na [**parte dois**](/tutorial/part-two/) do tutorial.
 
-3.  Remova o estilo do tamanho da fonte, altere o texto “Hello Gatsby!” para um cabeçalho nível um, e adicione um parágrafo abaixo do header.
+3. Remova o estilo do tamanho da fonte, altere o texto “Hello Gatsby!” para um cabeçalho nível um, e adicione um parágrafo abaixo do header.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -80,7 +80,7 @@ export default () => (
 
 ![Mais alterações com hot reloading](03-more-hot-reloading.png)
 
-4.  Adicione uma imagem. (Nesse caso, uma imagem aleatória do Unsplash).
+4. Adicione uma imagem. (Nesse caso, uma imagem aleatória do Unsplash).
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -139,7 +139,6 @@ Veja o exemplo da criação de um botão personalizado. No passado, você criari
 
 No mundo dos componentes, você cria um componente `PrimaryButton` com os estilos do seu botão e usaria ao longo do seu site como:
 
-<!-- prettier-ignore -->
 ```jsx
 <PrimaryButton>Click me</PrimaryButton>
 ```
@@ -285,7 +284,7 @@ Muitas vezes, você precisa navegar entre páginas — Vamos ver sobre navegaç�
 
 ### ✋ Utilizando o componente `<Link />`
 
-1.  Abra o componente da página index (`src/pages/index.js`), importe o component `<Link />` do Gatsby, adicione o  `<Link />` acima do header, e dê a ele uma propriedade `to` com o valor `"/contact/"` para o nome do caminho:
+1. Abra o componente da página index (`src/pages/index.js`), importe o component `<Link />` do Gatsby, adicione o  `<Link />` acima do header, e dê a ele uma propriedade `to` com o valor `"/contact/"` para o nome do caminho:
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -308,7 +307,7 @@ Ao clicar no novo link "Contato" na página inicial, você verá...
 
 ...a página de erro 404 de desenvolvimento do Gatsby. Por que? Pois você está tentando navegar para uma página que ainda não existe.
 
-2.  Agora você precisa criar um componente de página para a sua nova página de "Contato" em `src/pages/contact.js` e colocar um link de volta para a página inicial:
+2. Agora você precisa criar um componente de página para a sua nova página de "Contato" em `src/pages/contact.js` e colocar um link de volta para a página inicial:
 
 ```jsx:title=src/pages/contact.js
 import React from "react"
@@ -372,7 +371,7 @@ surge public/
 
 Quando o processo de deploy terminar, você verá no seu terminal algo como:
 
-![Captura de tela do processo de deploy de site Gatsby com Surge](surge-deployment.png)
+![Captura de tela do processo de deploy de site Gatsby com Surge](11-surge-deployment.png)
 
 Abra o endereço da web listado na linha inferior (`lowly-pain.surge.sh` neste
 caso) e você verá seu site recém-publicado! Ótimo trabalho!
@@ -384,7 +383,7 @@ Nessa seção você:
 - Aprendeu sobre os starters do Gatsby, e como utilizá-los para criar novos projetos
 - Aprendeu sobre a sintaxe JSX
 - Aprendeu sobre componentes
-- Aprendeu sobre componentes de página do Gatsby e subcomponentes 
+- Aprendeu sobre componentes de página do Gatsby e subcomponentes
 - Aprendeu sobre as “props” do React e sobre reutilizar componentes
 
 Agora, vamos em frente para [**adicionar estilos no nosso site**](/tutorial/part-two/)!

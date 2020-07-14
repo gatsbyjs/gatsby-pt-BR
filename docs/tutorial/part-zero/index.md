@@ -1,5 +1,5 @@
 ---
-title: Configure seu ambiente de desenvolvimento
+title: Configurando seu Ambiente de Desenvolvimento
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -107,7 +107,7 @@ _**Nota**: ao instalar o Gatsby e executá-lo pela primeira vez, você verá uma
 
 Para listar os comandos disponíveis, execute `gatsby --help`.
 
-![Confira os comandos do Gatsby no terminal](05-gatsby-help.png)
+![Confira os comandos do Gatsby no terminal](04-gatsby-help.png)
 
 > 💡 Caso você não consiga executar a CLI do Gatsby devido a problemas de permissão, consulte os [documentos do npm sobre como corrigir permissões](https://docs.npmjs.com/getting-started/fixing-npm-permissions), ou [este guia](https://github.com/sindresorhus/guides/blob/master/npm-global-without-sudo.md).
 
@@ -121,7 +121,7 @@ Agora você está pronto para usar a ferramenta CLI para criar seu primeiro site
 4. Execute `gatsby develop`.
 
 <video controls="controls" autoplay="true" loop="true">
-  <source type="video/mp4" src="./03-create-site.mp4" />
+  <source type="video/mp4" src="./02-create-site.mp4" />
   <p>Desculpe! Seu navegador não suporta este vídeo.</p>
 </video>
 
@@ -151,7 +151,7 @@ gatsby develop
 
 Abra uma nova guia no seu navegador e navegue até `http://localhost:8000/`
 
-![Verifique a página inicial](04-home-page.png)
+![Verifique a página inicial](03-home-page.png)
 
 Parabéns! Este é o começo de seu primeiro site Gatsby! 🎉
 
@@ -214,7 +214,7 @@ Para uma ótima introdução ao uso da linha de comando, consulte [**Tutorial da
 
 ### Saiba mais sobre o npm
 
-O npm é um gerenciador de pacotes JavaScript. Um pacote é um módulo de código que você pode optar por incluir em seus projetos. Se você acabou de baixar e instalar o Node.js, o npm foi instalado com ele!
+O **npm** é um gerenciador de pacotes JavaScript. Um pacote é um módulo de código que você pode optar por incluir em seus projetos. Se você acabou de baixar e instalar o Node.js, o npm foi instalado com ele!
 
 O npm possui três componentes distintos: o site npm, o _npm registry_ e a interface da linha de comandos (CLI) do npm.
 
@@ -222,7 +222,7 @@ O npm possui três componentes distintos: o site npm, o _npm registry_ e a inter
 - O _npm registry_ é um grande banco de dados com informações sobre pacotes JavaScript disponíveis no npm.
 - Depois de identificar o pacote desejado, você pode usar a CLI do npm para instalá-lo em seu projeto ou globalmente (como outras ferramentas da CLI). A CLI do npm é o que fala com o _registry_ - geralmente você interage apenas com o site npm ou a CLI do npm.
 
-> 💡 Confira a introdução do npm, “[**O que é npm?**](https://docs.npmjs.com/getting-started/what-is-npm)”.
+> 💡 Confira a introdução do npm em “[**O que é npm?**](https://docs.npmjs.com/getting-started/what-is-npm)”.
 
 ### Saiba mais sobre o Git
 

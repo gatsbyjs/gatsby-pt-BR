@@ -1,5 +1,5 @@
 ---
-title: Transformer plugins
+title: Plugins transformadores
 typora-copy-images-to: ./
 disableTableOfContents: true
 ---
@@ -8,7 +8,7 @@ disableTableOfContents: true
 
 ## O que está neste tutorial?
 
-O tutorial anterior mostrou como os plugins de origem trazem dados para _dentro_ do Gatsby. Neste tutorial, você irá aprender como os plugins de _transform_ transformam o conteúdo obtido pelos plugins de origem. A combinação de _plugins_ de origem e _plugins_ transformadores pode lidar com todo o fornecimento e transformação de dados que você pode precisar ao criar um site com Gatsby.
+O tutorial anterior mostrou como os plugins de origem trazem dados para _dentro_ do Gatsby. Neste tutorial, você irá aprender como os plugins de transformação transformam o conteúdo obtido pelos plugins de origem. A combinação de _plugins_ de origem e _plugins_ transformadores pode lidar com todo o fornecimento e transformação de dados que você pode precisar ao criar um site com Gatsby.
 
 ## Plugins transformadores
 
@@ -22,7 +22,7 @@ Adicione um arquivo _markdown_ no seu site em `src/pages/sweet-pandas-eating-swe
 
 ```markdown:title=src/pages/sweet-pandas-eating-sweets.md
 ---
-title: "Sweet Pandas Eating Sweets"
+title: "Doces Pandas comendo Doces"
 date: "2017-08-10"
 ---
 
@@ -102,7 +102,7 @@ export default ({ data }) => {
             border-bottom: 1px solid;
           `}
         >
-          Amazing Pandas Eating Things
+          Pandas Incríveis Comendo Coisas
         </h1>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
@@ -157,7 +157,7 @@ Mas sua única publicação parece estar um pouco solitária. Então, vamos adic
 
 ```markdown:title=src/pages/pandas-and-bananas.md
 ---
-title: "Pandas and Bananas"
+title: "Pandas e Bananas"
 date: "2017-08-21"
 ---
 
