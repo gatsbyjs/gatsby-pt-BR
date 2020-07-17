@@ -1,57 +1,54 @@
 ---
-title: Local HTTPS
+title: HTTPS Local
 ---
+Gatsby fornece um jeito fácil de utilizar um servidor HTTPS local durante o desenvolvimento, graças ao [devcert](https://github.com/davewasmer/devcert). Quando você habilita a opção `https`, uma chave privada e um arquivo de certificado serão criados para o seu projeto e usados pelo servidor de desenvolvimento.
 
-Gatsby provides an easy way to use a local HTTPS server during development, thanks to [devcert](https://github.com/davewasmer/devcert). When you enable the `https` option, a private key and certificate file will be created for your project and used by the development server.
+## Uso (HTTPS automático)
 
-## Usage (Automatic HTTPS)
-
-Start the development server using `npm run develop` as usual, and add either the `-S` or `--https` flag.
+Comece o servidor de desenvolvimento usando `npm run develop` como usualmente, e adicione as flags `-S` ou `--https`.
 
     $ npm run develop -- --https
 
-## Setup
+## Configuração
 
-When setting up a development SSL certificate for the first time, you may be asked to type in your password after starting the development environment:
+Quando você estiver configurando o certificado SSL pela primeira vez, você pode ser solicitado para digitar sua senha depois de iniciar o ambiente de desenvolvimento:
 
-    info setting up SSL certificate (may require sudo)
+    informações de configuração do certificado SSL (pode necessitar do sudo)
 
     Password:
 
-This is _only_ required the first time you are using Gatsby's HTTPS feature on your machine. After that, certificates will be created on the fly.
+Isso é necessário _somente_ na primeira vez em que você usa o recurso HTTPS do Gatsby em seu computador. Depois disso, os certificados serão criados em tempo real.
 
-After typing in your password, `devcert` will attempt to install some software necessary to tell Firefox (and Chrome, only on Linux) to trust your development certificates.
+Após digitar sua senha, o `devcert` tentará instalar algum software necessário para informar ao Firefox (e Chrome, somente no Linux) que confie nos seus certificados de desenvolvimento.
 
     Unable to automatically install SSL certificate - please follow the
     prompts at http://localhost:52175 in Firefox to trust the root certificate
     See https://github.com/davewasmer/devcert#how-it-works for more details
     -- Press <Enter> once you finish the Firefox prompts --
 
-If you wish to support Firefox (or Chrome on Linux), visit `http://localhost:52175` in Firefox and follow the point-and-click wizard. Otherwise, you may press enter without following the prompts. **Reminder: you'll only need to do this once per machine.**
+Se você deseja oferecer suporte ao Firefox (ou Chrome no Linux), visite `http://localhost:52175` no Firefox e siga as instruções do assistente. Aliás, você pode pressionar enter sem seguir as instruções. **Lembrete: você somente irá fazer isso uma vez por computador.**
 
-Now open the development server at `https://localhost:8000` and enjoy the HTTPS goodness ✨. Of course, you may change the port according to your setup.
+Agora abra o servidor de desenvolvimento em `https://localhost:8000` e aproveite o HTTPS  ✨. Claro, você pode alterar a porta de acordo com suas configurações.
 
-Find out more about [how devcert works](https://github.com/davewasmer/devcert#how-it-works).
+Saiba mais sobre [como o devcert funciona](https://github.com/davewasmer/devcert#how-it-works).
 
-## Custom Key and Certificate Files
+## Chaves e arquivos de certificados customizados
 
-You may find that you need a custom key and certificate file for https if you use multiple
-machines for development (or if your dev environment is containerized in Docker).
+Você pode precisar de uma chave personalizada e um arquivo de certificado para HTTPS se usar várias máquinas para desenvolvimento (ou se o seu ambiente de desenvolvimento estiver em container no Docker).
 
-If you need to use a custom https setup, you can pass the `--https`, `--key-file` and
-`--cert-file` flags to `npm run develop`.
+Se você precisar usar uma configuração HTTPS customizada, você pode passar as flags `--https`, `--key-file` e
+`--cert-file` no comando `npm run develop`.
 
-- `--cert-file` [relative path to ssl certificate file]
-- `--key-file` [relative path to ssl key file]
+- `--cert-file` [relativo ao caminho do arquivo de certificado SSL]
+- `--key-file` [relativo ao caminho do arquivo de chave SSL]
 
-See the example command:
+Veja o comando de exemplo:
 
 ```shell
 gatsby develop --https --key-file ../relative/path/to/key.key --cert-file ../relative/path/to/cert.crt
 ```
 
-in most cases, the `--https` passed by itself is easier and more convenient to get local https.
+na maioria dos casos, o `--https` passado por si só é mais fácil e mais conveniente para obter o HTTPS local.
 
 ---
-
-Keep in mind that the automatic certificates issued with the `--https` flag are explicitly issued to `localhost` and will only be accepted there. Using it together with the `--host` option will likely result in browser warnings.
+Tenha em mente que certificados automáticos marcados com a flag `--https` são emitidos unicamente para o `localhost` e serão aceitos somente lá. Usá-lo junto com a opção `--host` provavelmente resultará em avisos do navegador.
