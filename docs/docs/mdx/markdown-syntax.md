@@ -1,66 +1,65 @@
 ---
-title: Markdown Syntax
+title: Sintaxe Markdown
 ---
 
-Markdown is a very common way to write content in Gatsby posts and pages. This guide contains tips for Markdown syntax and formatting that might come in handy!
+A sintaxe Markdown é muito comum na hora de escrever conteúdo em posts e páginas no Gatsby. Este guia contém dicas de escrita e formatações úteis em Markdown.
 
-## Headings
+## Titulação
 
 ```markdown
-# heading 1
+# Título 1
 
-## heading 2
+## Título 2
 
-### heading 3
+### Título 3
 
-#### heading 4
+#### Título 4
 
-##### heading 5
+##### Título 5
 
-###### heading 6
+###### Título 6
 ```
 
-Here's how those tags render in HTML:
+As tags acima irão renderizar desta forma no HTML:
 
-# heading 1
+# Título 1
 
-## heading 2
+## Título 2
 
-### heading 3
+### Título 3
 
-#### heading 4
+#### Título 4
 
-##### heading 5
+##### Título 5
 
-###### heading 6
+###### Título 6
 
-- each heading gets converted to their HTML equivalent
-  - i.e. `# heading 1` is `<h1>heading 1</h1>`
-- Correct usage of each heading should follow the
-  [accessibility guidelines](https://www.w3.org/WAI/tutorials/page-structure/headings/) set by the World Wide Web Consortium (W3C)
-  _Note: in the [Gatsby docs](/contributing/docs-contributions#headings), h1s are already included from `title` entries in frontmatter metadata, and contributions in Markdown should begin with h2._
+- Cada título é convertido à sua tag HTML correspondente
+  - i.e. `# Título 1` é `<h1>Título 1</h1>`
+- O uso correto de cada título deve seguir os
+  [guias de acessibilidade](https://www.w3.org/WAI/tutorials/page-structure/headings/) criado pelo World Wide Web Consortium (W3C)
+  _Nota: nas [Documentações do Gatsby](/contributing/docs-contributions#headings), h1s já estão inclusos nas entradas de `título` nos metadados do frontmatter, e contribuições em Markdown devem começar com h2._
 
-## Emphasized text
+## Ênfase textual
 
-- Italic
-  - one asterisk or one underscore
-    - `*italic*` or `_italic_`
-    - _italic!_
-- Bold
-  - two asterisks or two underscores
-    - `**bold**` or `__bold__`
-    - **bold!**
-- Italic and Bold
+- Itálico
+  - um asterisco ou um underline
+    - `*itálico*` ou `_itálico_`
+    - _itálico!_
+- Negrito
+  - dois asteriscos ou dois underlines
+    - `**negrito**` ou `__negrito__`
+    - **negrito!**
+- Itálico e negrito
+  - três asteriscos ou três underlines
+    - `***itálico e negrito***` or `___itálico e negrito___`
+    - **_itálico e negrito!!_**
 
-  - three asterisks or three underscore
-    - `***italic and bold***` or `___italic and bold___`
-    - **_italic and bold!!_**
+## Listas
 
-## Lists
+### Não ordenadas
 
-### Unordered
-
-- can use `*`, `-`, or `+` for each list item
+- Pode-se utilizar `*`, `-`, ou `+` para cada item da lista
 
 <!-- prettier-ignore-start -->
 ```markdown
@@ -73,7 +72,7 @@ Here's how those tags render in HTML:
 ```
 <!-- prettier-ignore-end -->
 
-How unordered lists are rendered in HTML:
+Como listas não ordenadas são renderizadas no HTML:
 
 - Gatsby
   - docs
@@ -84,126 +83,127 @@ How unordered lists are rendered in HTML:
 - Gatsby
   - docs
 
-### Ordered
+### Ordenadas
 
-- number and period for each list item
-- using `1.` for each item can automatically increment depending on the content
+- número e período para cada item da lista
+- usando `1.` para cada item pode automaticamente ser incrementado dependendo do conteúdo
 
 ```markdown
-1. One
-1. Two
-1. Three
+1. Um
+1. Dois
+1. Três
 ```
 
-1. One
-1. Two
-1. Three
+1. Um
+1. Dois
+1. Três
 
-## Links and images
+## Links e imagens
 
 ### Link
 
-Links in Markdown use this format. URLs can be relative or remote:
+Os Links em Markdown utiliza este formato. URLs podem ser relativas ou remotas:
 
 ```markdown
-[Text](url)
+[Texto](url)
 ```
 
-Example of a link rendering in HTML:
+Exemplo de um Link renderizado no HTML:
 
-[Gatsby site](https://www.gatsbyjs.org/)
+[Site do Gatsby](https://www.gatsbyjs.org/)
 
-### Image with alt text
+### Imagem com texto alternativo
 
 ```markdown
-![alt text](path-to-image)
+![texto alternativo](caminho-da-imagem)
 ```
 
-### Image without alt text
+### Imagem sem texto alternativo
 
-This pattern is appropriate for [decorative or repetitive images](https://www.w3.org/WAI/tutorials/images/decision-tree/):
+Este padrão é apropriado para [imagens decorativas ou repetitivas](https://www.w3.org/WAI/tutorials/images/decision-tree/):
 
 ```markdown
-![](path-to-image)
+![](caminho-da-imagem)
 ```
 
-## Blockquote
+## Bloco de citação
 
-- Use `>` to declare a blockquote
-- Adding multiple `>` with create nested blockquotes
-- It is recommended to place `>` before each line
-- You can use other Markdown syntax inside blockquotes
+- Use `>` para declarar um bloco de citação
+- Adicione múltiplos `>` para criar blocos de citações aninhados
+- É recomendado colocar `>` antes de cada linha
+- Você pode usar outra sintaxe Markdown dentro de um bloco de citação
 
 ```markdown
-> blockquote
+> bloco de citação
 >
-> > nested blockquote
+> > bloco de citação aninhado
 >
-> > **I'm bold!**
+> > **Sou negrito!**
 >
-> more quotes
+> mais citações
 ```
 
-> Blockquote
+> bloco de citação
 >
-> > nested blockquote
+> > bloco de citação aninhado
 >
-> > **I'm bold!**
+> > **Sou negrito!**
 >
-> more quotes
+> mais citações
 
-## Code comments
+## Comentários de código
 
-### Inline
+### Em linha
 
-- Enclose the text in backticks \`code\`
-- Inline `code` looks like this sentence
+- Coloque o texto entre barras invertidas \`code\`
+- `código` em linha se parece com esta frase
 
-### Code blocks
+### Blocos de código
 
-- Indent a block by four spaces
+- Idente o bloco com quatro espaços
 
 ## MD vs MDX
 
-- MDX is a superset of Markdown. It allows you to write JSX inside markdown. This includes importing and rendering React components!
+- MDX é um superconjunto do Markdown. Ele permite você escrever JSX dentro de um arquivo markdown. Com isso é possível importar e renderizar componentes React!
 
-## Processing Markdown and MDX in Gatsby:
+## Processando Markdown e MDX no Gatsby:
 
-- In order to process and use Markdown or MDX in Gatsby, you can use the [gatsby-source-filesystem](/docs/sourcing-from-the-filesystem) plugin
-- You can check out the package [README](/packages/gatsby-source-filesystem) for more information on how it works!
+- Para processar e usar Markdown ou MDX no Gatsby, você pode usar o plugin [gatsby-source-filesystem](/docs/sourcing-from-the-filesystem)
+- Você pode obter maiores informações e como funciona o plugin no [README](/packages/gatsby-source-filesystem)
+
 
 ## Frontmatter
 
-- Metadata for your Markdown
-- Variables that can later be injected into your components
-- Must be:
-  - At the top of the file
-  - Valid YAML
-  - Between triple dashed lines
+- Metadados para seu Markdown
+- Variáveis que podem ser injetadas mais tarde nos seus componentes
+- Deve ser:
+  - No topo do arquivo
+  - YAML válido
+  - Entre linhas tracejadas triplas
   ```
   ---
-  title: My Frontmatter Title
-  example_boolean: true
+  titulo: Meu título do Frontmatter
+  exemplo_de_um_booleano: true
   ---
   ```
 
-## Frontmatter + MDX example
+## Exemplo de Frontmatter + MDX
 
 ```mdx
 ---
-description: A simple example of a description in frontmatter
+descricao: Um simples exemplo de descrição no Frontmatter
 ---
 
 import { Chart } from "../components/chart"
 
-# Here’s a chart
+# Aqui está um gráfico
 
-The chart is rendered inside our MDX document.
+O gráfico é renderizado no seu documento MDX.
 
-<Chart description={description} />
+<Chart descricao={descricao} />
 ```
 
-## Helpful resources
+## Links úteis
 
 - https://daringfireball.net/projects/markdown/syntax
 - https://www.markdownguide.org/basic-syntax
