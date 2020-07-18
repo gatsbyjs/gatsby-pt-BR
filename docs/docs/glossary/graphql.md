@@ -3,22 +3,22 @@ title: GraphQL
 disableTableOfContents: true
 ---
 
-## O que é GraphQL?
+## What is GraphQL?
 
-GraphQL é uma linguagem de consulta para requisitar informações de uma [API](/docs/glossary#api), e um protocolo para servidores que a suportam. GraphQL é um dos caminhos que você pode importar dados dentro de seus componentes no Gatsby.
+GraphQL is a query language for requesting information from an [API](/docs/glossary#api), and a protocol for servers that support it. GraphQL is one of the ways that you can import data into your Gatsby components.
 
-O Facebook criou o GraphQL em 2012 quando percebeu que precisava de uma API capaz de suportar aplicativos Web e móveis nativos. A empresa liberou o GraphQL com uma licença de código aberto em 2015.
+Facebook created GraphQL in 2012 when it realized that it needed an API capable of supporting both web-based and native mobile applications. Facebook released GraphQL with an open source license in 2015.
 
-As APIs mais tradicionais usam um endpoint separado para cada parte ou tipo de dados que você queira requisitar. Por exemplo, uma API de jornal pode conter:
+More traditional APIs use a separate endpoint for each piece or type of data you'd like to request. For example, a newspaper API might contain:
 
-- `/articles/<id>` endpoint que retorna uma nova notícia específica;
-- `/reporters/<id>` endpoint que retorna informações sobre um reporter em particular.
+- an `/articles/<id>` endpoint that returns a specific news story;
+- a `/reporters/<id>` endpoint that returns information about a particular reporter.
 
-Uma única página de artigo de notícias pode exigir duas requisições separadas: uma para requisitar os dados da matéria e outro para os detalhes de contato do repórter. Além do mais o endpoint `/reporters` pode retornar mais dados do que você deseja mostrar. Pode retornar sua biografia e redes sociais, quando o que você apenas deseja mostrar é seu o nome, email e foto.
+A single news article page might require two separate network requests: one to retrieve the story data, and another for the reporter's contact details. What's more, the `/reporters` endpoint may return more data than you want to display; it might return their biography and social media accounts, when their name, email, and photo are all that you need for the page.
 
-Uma API GraphQL, por outro lado, possui um único endpoint. Para requisitar dados, você envia um texto como requisição que utiliza a sintaxe específica do GraphQL. O GraphQL executa as funções necessárias para trazer os dados que você requisitou e retorna um simples JSON.
+A GraphQL API, on the other hand, has a single endpoint. To retrieve data, you send one request string that uses a GraphQL-specific syntax. GraphQL executes the functions necessary to retrieve the data that you've requested, and returns a single JSON response.
 
-A requisição de um artigo e seu repórter se parece com o exemplo a seguir.
+A request for an article and its reporter might look like the example that follows.
 
 ```graphql
 {
@@ -34,13 +34,13 @@ A requisição de um artigo e seu repórter se parece com o exemplo a seguir.
 }
 ```
 
-E nesse retorno contém apenas o que você requisitou.
+And its response contains only what you've requested.
 
 ```json
 {
   "data": {
     "article": {
-      "title": "Gatsby promove adoção do GraphQL",
+      "title": "Gatsby promotes GraphQL adoption",
       "body": "...",
       "reporter": {
         "name": "Jane Gatsby",
@@ -52,18 +52,18 @@ E nesse retorno contém apenas o que você requisitou.
 }
 ```
 
-Você não precisa usar o GraphQL junto ao Gatsby, portanto o GraphQL oferece algumas vantagens a mais do que outras formas de importação de dados.
+You do not have to use GraphQL with Gatsby, however GraphQL offers a few advantages over other methods of importing data.
 
-- Você pode requisitar apenas os dados que deseja ver.
-- Você pode adicionar novos tipos de dados e recursos sem precisar criar um novo endpoint.
-- Você pode armazenar conteúdo da forma que faz sentido em teu site, se estiver em um banco de dados, CMS de terceiros ou arquivos de texto em Markdown.
+- You can retrieve only the data that you need for a view.
+- You can add new data types and capabilities without needing to create a new endpoint.
+- You can store content in whatever way makes sense for your site, whether that's in a database, a third-party headless CMS, or Markdown-formatted text files.
 
-## Aprenda mais
+## Learn more
 
 - [GraphQL & Gatsby](/docs/graphql/)
 
-- [Por que Gatsby usa GraphQL](/docs/why-gatsby-uses-graphql/)
+- [Why Gatsby Uses GraphQL](/docs/why-gatsby-uses-graphql/)
 
-- [GraphQL](https://graphql.org) site oficial
+- [GraphQL](https://graphql.org) official site
 
 - [How to GraphQL](https://www.howtographql.com/)
