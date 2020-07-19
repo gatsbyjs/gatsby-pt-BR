@@ -1,30 +1,42 @@
 ---
-title: Working with Images in Markdown Posts and Pages
+title: Trabalhando com imagens em Markdown dentro de Posts e Páginas
 ---
 
-When building Gatsby sites composed primarily of Markdown pages or posts, insertion of images can enhance the content. You can add images in multiple ways.
+Quando estiver construindo sites compostos primeiramente de Paginas ou Posts com Markdown utilizando o Gatsby, a inserção de imagens reforça o conteúdo. Você pode adicionar imagens de diversas formas. 
 
-## Featured images with Frontmatter metadata
+<!-- !When building Gatsby sites composed primarily of Markdown pages or posts, insertion of images can enhance the content. You can add images in multiple ways. -->
 
-In sites like a blog, you may want to include a featured image that appears at the top of a page. One way to do this is to grab the image filename from a frontmatter field and then transform it with `gatsby-plugin-sharp` in a GraphQL query.
+## Imagens em destaque como metadados Frontmatter
 
-This solution assumes you already have programmatically generated pages from Markdown with renderers like `gatsby-transformer-remark` or `gatsby-plugin-mdx`. If not, take a read through up to [Part 7 of the Gatsby Tutorial](/tutorial/part-seven/). This will build upon the tutorial and as such, `gatsby-transformer-remark` will be used for this example.
+Em sites como blogs, você pode querer inserir uma imagem em destaque, para que ela apareça no topo da página. Uma forma de fazer isso é utilizar o nome do arquivo da imagem em um campo frontmatter e então transformá-lo por meio do `gatsby-plugin-sharp` em uma query GraphQL.
 
-> Note: This can be done similarly using [MDX](/docs/mdx/) as well. Instead of the `markdownRemark` nodes in GraphQL, `Mdx` can be swapped in and should work.
+<!-- !In sites like a blog, you may want to include a featured image that appears at the top of a page. One way to do this is to grab the image filename from a frontmatter field and then transform it with `gatsby-plugin-sharp` in a GraphQL query. -->
 
-To start out, download the plugins for Gatsby-image as mentioned in [Using gatsby-image](/docs/using-gatsby-image/).
+Essa solução presume que você já possua páginas de Markdown sendo geradas automáticamente por meio de renderizadores como `gatsby-transformer-remark` ou `gatsby-plugin-mdx`. Senão, leia [Parte 7 do Tutorial de Gatsby](/tutorial/part-seven/). Isso será desenvolvido durante o tutorial, nesse exemplo será utilizado o `gatsby-transformer-remark`.
+
+<!-- !This solution assumes you already have programmatically generated pages from Markdown with renderers like `gatsby-transformer-remark` or `gatsby-plugin-mdx`. If not, take a read through up to [Part 7 of the Gatsby Tutorial](/tutorial/part-seven/). This will build upon the tutorial and as such, `gatsby-transformer-remark` will be used for this example. -->
+
+> Nota: Isso pode ser feito de forma similar utilizando [MDX](/docs/mdx/). Ao invés de usar nodes `markdownRemark` no GraphQL, O `Mdx` pode ser trocado e deverá funcionar também.
+
+<!-- !> Note: This can be done similarly using [MDX](/docs/mdx/) as well. Instead of the `markdownRemark` nodes in GraphQL, `Mdx` can be swapped in and should work. -->
+
+Para iniciar, faça o download dos plugins do Gatsby-image, como mencionado em [Usando gatsby-image](/docs/using-gatsby-image/).
+
+<!-- ! To start out, download the plugins for Gatsby-image as mentioned in [Using gatsby-image](/docs/using-gatsby-image/). -->
 
 ```shell
 npm install --save gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
 ```
 
-You will also want to have `gatsby-source-filesystem` installed. Then, configure the various plugins in the `gatsby-config` file.
+Você também irá querer ter `gatsby-source-filesystem` instalado. Só então, configure os vários plugins no arquivo `gatsby-config`.
+<!-- ! You will also want to have `gatsby-source-filesystem` installed. Then, configure the various plugins in the `gatsby-config` file. -->
 
-### Configuring for images and posts in the same directory
+### Configurando para imagens e posts no mesmo diretório
 
+Se as imagens estiverem no mesmo diretório
 If your images are in the same directory as the Markdown files, sourcing and resolving the images can be done in one configuration. For example, if your Markdown pages and images are located together in a `/pages` directory, both content types will be automatically picked up by GraphQL as part of Gatsby's data layer.
 
-```js:title=gatsby-config.js
+```js:title=gatsby-config.jsD
 module.exports = {
   plugins: [
     `gatsby-plugin-sharp`,
