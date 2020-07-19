@@ -102,7 +102,7 @@ Como listas não ordenadas são renderizadas no HTML:
 
 ### Link
 
-Os Links em Markdown utiliza este formato. URLs podem ser relativas ou remotas:
+Os Links em Markdown utilizam este formato. URLs podem ser relativas ou remotas:
 
 ```markdown
 [Texto](url)
