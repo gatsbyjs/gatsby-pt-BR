@@ -59,7 +59,7 @@ Use a [`netlify-cli`](https://www.netlify.com/docs/cli/) para publicar sua aplic
 
 - Um [site Gatsby](/docs/docs/quick-start.md) com um componente `index.js`
 - O pacote [netlify-cli](https://www.npmjs.com/package/netlify-cli) instalado
-- A [CLI do Gatsby](/docs/gatsby-cli) instalada
+- A [CLI do Gatsby](/docs/docs/gatsby-cli.md) instalada
 
 ### Etapas
 
