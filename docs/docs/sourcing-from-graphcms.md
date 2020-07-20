@@ -1,68 +1,68 @@
 ---
-title: Sourcing from GraphCMS
+title: Consultando dados do GraphCMS
 ---
 
-## Headless the GraphCMS way
+## O jeito Headless do GraphCMS
 
-[GraphCMS](https://graphcms.com?ref="gatsby-headless-docs-top") is a headless CMS that is optimized for working with GraphQL. Content structures like posts, authors, products and more are broken down into content types called "models." These models can then be queried with the familiar GraphQL syntax.
+[GraphCMS](https://graphcms.com?ref="gatsby-headless-docs-top") é um _headless CMS_, otimizado para ser utilizado com o GraphQL. Estruturas como posts, autores, produtos, entre outras, são divididas em típos de conteúdos, chamados "_models_". Esses _models_, são consultados com a sintaxe já conhecida do GraphQL.
 
-One of the benefits of GraphCMS when working with Gatsby is that it supports GraphQL natively which allows you to test your content queries before even starting your Gatsby project.
+Um dos benefícios do GraphCMS quando utilizado com Gatsby, é que ele suporta o GraphQL nativamente, o que permite que as consultas sejam testadas antes mesmo de iniciar seu projeto Gatsby.
 
-## Getting started
+## Introdução
 
-In this guide you'll create a complete project capable of querying data from GraphCMS.
+Nesse guia você vai criar um projeto completo, capaz de consultar dados do GraphCMS.
 
-### Install the boilerplate
+### Instalando o boilerplate
 
-To begin, let's create a Gatsby starter site.
+Para começar, vamos criar um site Gatsby utilizando o template `gatsby-starter-default`.
 
 ```shell
 gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-default
 ```
 
-Navigate inside of the project with `cd gatsby-site`.
+Acesse o diretório do projeto com `cd gatsby-site`
 
-### Add the source plugin
+### Adicione o plugin do GraphQL
 
-Additionally, you need the the `gatsby-source-graphql` library. Because GraphCMS uses GraphQL natively, you will take advantage of Gatsby's ability to simply stitch two GraphQL APIs together, reducing the time required to transform content. There is no need to use a special gatsby-source-x-cms plugin, the GraphQL source plugin is all you need.
+Além disso, você precisa adicionar a biblioteca `gatsby-source-graphql` no projeto. Já que o GraphCMS utiliza GraphQL nativamente, você aproveitará a capacidade do Gatsby de simplesmente unificar duas APIs do GraphQL, reduzindo o tempo necessário para transformar o conteúdo. Não é necessário usar um plugin especial `gatsby-source-X-cms`, o plugin do GraphQL é tudo o que você precisa.
 
-You can install this component with:
+Você pode instalar esse plugin com o comando:
 
 ```shell
-  # Optionally with `npm install`
+  # Opcional: `yarn add`
   npm install --save gatsby-source-graphql
 ```
 
-### Configure the plugin
+### Configure o plugin
 
-The last step required before you can query your data is to configure the `gatsby-source-graphql` plugin. Open `gatsby-config.js` and add the following object to the plugins array. This example uses an open API from GraphCMS but you will most likely want to replace this with your own API and provide a fieldName that makes the most sense to your project. [Here's more information on working with GraphCMS APIs.](https://docs.graphcms.com/developers/api)
+A última etapa antes de poder consultar os dados, é configurar o plugin `gatsby-source-graphql`. Abra o arquivo `gatsby-config.js` e adicione o objeto abaixo no array `plugins`. Esse exemplo usa uma API aberta do GraphCMS, mas você pode substituir pela sua própria API e fornecer o valor de `fieldName` com o que fizer mais sentido para o seu projeto. [Clique aqui para mais informações sobre as APIs do GraphCMS.](https://docs.graphcms.com/developers/api)
 
 ```js
 {
     resolve: "gatsby-source-graphql",
         options: {
-        // The top level query type, can be anything you want!
+        // Nome arbitrário para o tipo do `schema`, pode ser o que você quiser.
         typeName: "GCMS",
-        // The field you'll query against, can also be anything you want.
+        // Campo que será utilizado para acessar o `schema`, também pode ser o que você quiser.
         fieldName: "gcms",
-        // Your API endpoint, available from the dashboard and settings window.
-        // You can use this endpoint that features US mountains for now.
+        // O endereço da sua API, exibido no dashboard e nas configurações.
+        // Por enquanto você pode usar essa API que contém as montanhas dos Estados Unidos.
         url: "https://api-euwest.graphcms.com/v1/cjm7tab4c04ro019omujh708u/master",
     },
 },
 ```
 
-If everything works correctly, you should now have your GraphCMS data added to the Gatsby source API!
+Se tudo estiver configurado corretamente, agora os seus dados do GraphCMS foram adicionados à API nativa do Gatsby.
 
-### Querying for content
+### Consultando os dados
 
-From the root of your project, run the development environment with `gatsby develop`. Once the server has started and is error free, you should be able to open the following URL in your browser:
+A partir da pasta raíz do seu projeto, execute o comando `gatsby develop` para iniciar o site em modo de desenvolvimento. Assim que o servidor iniciar, se nenhum erro for apresentado, você poderá acessar o seguinte endereço no seu navegador:
 
 `http://localhost:8000/___graphql`
 
-This will show you an interface where you can test your new content API.
+Uma interface será exibida, onde você poderá testar os dados da sua nova API.
 
-Try running this query:
+Tente executar essa consulta:
 
 ```graphql
 query {
@@ -78,7 +78,7 @@ query {
 }
 ```
 
-Again, if everything is working properly, you should see a successful response in the shape of:
+Novamente, se tudo estiver correto, o retorno será exibido no seguinte formato:
 
 ```json
 {
@@ -106,9 +106,9 @@ Again, if everything is working properly, you should see a successful response i
 }
 ```
 
-### Getting content on the page
+### Obtendo o conteúdo na página
 
-For the purpose of this tutorial I've removed all the layout, SEO, link or other components that comprise a page in the Gatsby starter. The components are still there and 99% of users will likely want to put them back in once they understand what's happening in the code. You are just looking at the nails for right now, but the hammers, saws and other tools are still in the toolbox. Open the index file located at `src/pages/index.js` and replace the content with this code:
+Para o propósito desse tutorial, todos os componentes que abrangem o template _starter_ do Gatsby foram removidos, como layout, SEO, link, entre outros. Esses componentes ainda existem, e 99% dos usuários irão optar por colocá-los novamente quando entenderem o que está acontecendo no código. Isso é apenas a ponta do iceberg, existem outras possibilidades a serem exploradas. Abra o arquivo `src/pages/index.js` e substitua o conteúdo por este trecho de código:
 
 ```jsx
 import React from "react"
@@ -126,11 +126,11 @@ const IndexPage = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div>
         <h1>USA Mountains</h1>
         <ul>
-          {data.gcms.mountains.map(mountain => {
+          {data.gcms.mountains.map((mountain) => {
             const { title, elevation } = mountain
             return (
               <li>
@@ -148,14 +148,14 @@ const IndexPage = () => (
 export default IndexPage
 ```
 
-With this code, you have:
+Com esse código, você:
 
-1. Added the `StaticQuery` component to a page that allows you to fetch content from the GraphQL API.
-2. Fetched some simplified data from the Mountain API, namely the title and elevation.
-3. Rendered the list in the StaticQuery's RenderProp called "render".
+1. Adicionou o componente `StaticQuery` em uma página, que permite consultar dados da API do GraphQL.
+2. Consultou alguns dados da API das montanhas, mais especificamente, _title_ e _elevation_.
+3. Renderizou a lista utilizando a _render prop_ do componente `StaticQuery`.
 
-## Summary
+## Sumário
 
-Hopefully you've seen how easy it is to start working with GraphCMS and Gatsby. With projects of all sizes gravitating towards the benefits of the JAM stack, the time has never been better to learn how to work with Gatsby. Adding a content API in the backend with GraphCMS provides a scalable CMS that you can start using within minutes and keep using for the life of your project.
+Espera-se que você tenha visto o quão fácil é começar um projeto com GraphCMS e Gatsby. Com projetos de todos os tamanhos sendo beneficiados pela _JAM stack_, agora é o melhor momento para aprender Gatsby. Utilizar a API do GraphCMS no backend fornece um CMS escalável que você pode começar a utilizar em poucos minutos e continuar usando durante toda a vida útil do seu projeto.
 
-[Check out GraphCMS today and build "fast websites", fast!](https://graphcms.com?ref="gatsby-headless-docs-bottom")
+[Confira o GraphCMS hoje e construa "sites rápidos", rápido!](https://graphcms.com?ref="gatsby-headless-docs-bottom")
