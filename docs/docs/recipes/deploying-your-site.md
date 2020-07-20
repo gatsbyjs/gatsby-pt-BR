@@ -22,7 +22,7 @@ Hora do show! Assim que estiver feliz com seu site, você estará pronto para pu
 gatsby build
 ```
 
-3. Para incluir um caminho diferente de `/` (como `/site-name/`) no seu site, defina um prefixo no arquivo `gatsby-config.js`, substituindo `seuprefixo` pelo desejado:
+3. Para utilizar um caminho diferente de `/` (como `/site-name/`) no seu site, defina um prefixo no arquivo `gatsby-config.js`, substituindo `seuprefixo` pelo desejado:
 
 ```js:title=gatsby-config.js
 module.exports = {
