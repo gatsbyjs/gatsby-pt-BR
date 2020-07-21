@@ -1,5 +1,5 @@
 ---
-title: Trabalhando com imagens em Markdown dentro de Posts e Páginas
+title: Trabalhando com imagens dentro de Postagens e Páginas Markdown
 ---
 
 Quando estiver construindo sites compostos primeiramente de Páginas ou Posts com Markdown utilizando o Gatsby, a inserção de imagens reforça o conteúdo. Você pode adicionar imagens de diversas formas. 
@@ -48,7 +48,7 @@ title: Meus Dogs Favoritos
 featuredImage: cachorro-fofinho.png
 ---
 
-O conteúdo será inserindo aqui!
+O conteudo será inserindo aqui!
 ```
 
 O próximo passo é incorporar os dados em um modelo usando uma query GraphQL, que será vista futuramente nesse guia.
@@ -87,12 +87,12 @@ title: About
 featuredImage: ../images/equipe-gatos.png
 ---
 
-O conteúdo será inserindo aqui!
+O conteudo será inserindo aqui!
 ```
 
 ### Consultando imagens para Frontmatter
 
-Agpra que você já definiu a origem do Markdown e os dados da imagem, você poderá consultar por imagens em destaque no GraphQL. Se o caminho apontado for uma imagem, ele será transformado em um node `File` no GraphQL e então você poderá obter os dados da imagem utilizando o campo `childImageSharp`.
+Agora que você já definiu a origem do Markdown e os dados da imagem, você poderá consultar por imagens em destaque no GraphQL. Se o caminho apontado for uma imagem, ele será transformado em um node `File` no GraphQL e então você poderá obter os dados da imagem utilizando o campo `childImageSharp`.
 
 Isso pode ser adicionado a uma query GraphQL em um arquivo modelo de Markdown. Neste exemplo, a [Query flúida](/docs/gatsby-image#images-that-stretch-across-a-fluid-container) é usada para deixar a imagem responsiva.
 
