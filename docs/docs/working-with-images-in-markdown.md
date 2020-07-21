@@ -185,7 +185,7 @@ Configure os plugins em seu arquivo `gatsby-config`. Como no exemplo anterior, a
 
 ### Usando o Plugin MDX
 
-O plugin `gatsby-plugin-mdx` será utilizado no exemplo abaixo. Insira o plugin `gatsby-remark-images` ao longo da opção do campo `gatsbyRemarkPlugins` no `gatsby-plugin-mdx`.
+O plugin `gatsby-plugin-mdx` será utilizado no exemplo abaixo. Insira o plugin `gatsby-remark-images` dentro do campo `gatsbyRemarkPlugins` que faz parte das opções do`gatsby-plugin-mdx`.
 
 > Nota: Esse exemplo de configuração assume que suas imagens e Markdowns estão originando do mesmo diretório. Confira a seção no [configurando para diretórios diferentes](#Configurando-para-imagens-e-posts-em-diretórios-diferentes) para ajuda adicional.
 
@@ -219,7 +219,7 @@ module.exports = {
 
 ### Utilizando o Plugin Transformer Remark
 
-Abaixo está um exemplo similar utilizando o plugin `gatsby-transformer-remark` ao invés do `gatsby-plugin-mdx`. Insira o plugin `gatsby-remark-images` dentro do campo `plugins` das opções do `gatsby-transformer-remark`.
+Abaixo está um exemplo similar utilizando o plugin `gatsby-transformer-remark` ao invés do `gatsby-plugin-mdx`. Insira o plugin `gatsby-remark-images` dentro do campo `plugins` que faz parte das opções do `gatsby-transformer-remark`.
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -248,7 +248,7 @@ module.exports = {
 }
 ```
 
-Com as configurações acima, você poderá utlizar a sintaxe padrão para imagens no Markdown. Elas serão processadas pelo Sharp e irão aparecem como se você tivesse as posto em um componente `gatsby-image`.
+Com as configurações acima, você poderá utlizar a sintaxe padrão para imagens no Markdown. Elas serão processadas pelo Sharp e irão aparecem como se você tivesse as inserido em um componente `gatsby-image`.
 
 ```markdown
 ![George o Gato](./george-cat.png)
