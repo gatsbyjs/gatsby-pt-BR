@@ -167,7 +167,7 @@ export default {
 }
 ```
 
-Sinta-se a vontade para incluir quantos valores achar necessário no seu tema.
+Sinta-se à vontade para incluir quantos valores achar necessário no seu tema.
 Leia mais sobre criação de temas na [documentação da Theme UI](https://theme-ui.com/theming)
 
 ## Adicionando estilos aos elementos
@@ -209,7 +209,7 @@ Ao usar Theme UI em um tema do Gatsby, é importante entender como o plugin `gat
 
 Se múltiplos temas estão instalados no mesmo site, o que estiver definido por último no array `plugins` do arquivo `gatsby-config.js` terá prioridade.
 
-Para extender uma configuração existente da Theme UI a partir de um tema, você precisará identificar como o tema base está passando os estilos. Se for através de um `preset`, como o pacote `gatsby-theme-blog` faz, os arquivos criados usando [_local shadowing_](#local-shadowing) serão mesclados automaticamente. Voce pode descobrir isso no código fonte do tema na `node_modules` ou no GitHub.
+Para estender uma configuração existente da Theme UI a partir de um tema, você precisará identificar como o tema base está passando os estilos. Se for através de um `preset`, como o pacote `gatsby-theme-blog` faz, os arquivos criados usando [_local shadowing_](#local-shadowing) serão mesclados automaticamente. Você pode descobrir isso no código fonte do tema na `node_modules` ou no GitHub.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
