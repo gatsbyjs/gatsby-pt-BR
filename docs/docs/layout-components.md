@@ -6,7 +6,7 @@ Neste guia você vai entender qual a abordagem do Gatsby em relação a layouts,
 
 ## Abordagem da Gatsby para layouts
 
-Por padrão, o gatsby não aplica o layout nas páginas de forma automática(Existem formas de fazer isso, mas serão abordadas em uma sessão futura). Ao invés disso, o Gastsby segue o modelo composicional do React na sua forma de importar e usar componentes. Isso faz com que seja possível criar múltiplos níveis de layout, como por exemplo, um cabeçalho e rodapé globais e em algumas páginas um menu lateral. Isso faz com que a transição de dados entre o layout e os componentes da página seja mais fácil de ser concretizada.
+Por padrão, Gatsby não aplica o layout nas páginas de forma automática (Existem formas de fazer isso, mas serão abordadas em uma sessão futura). Ao invés disso, Gastsby segue o modelo composicional do React na sua forma de importar e usar componentes. Isso faz com que seja possível criar múltiplos níveis de layout, como por exemplo, um cabeçalho e rodapé globais e em algumas páginas um menu lateral. Isso faz com que a transição de dados entre o layout e os componentes da página seja mais fácil de ser concretizada.
 
 ## O que são componentes de layout?
 
