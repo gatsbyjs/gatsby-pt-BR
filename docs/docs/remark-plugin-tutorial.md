@@ -1,5 +1,5 @@
 ---
-title: Tutorial de Plugins para o Remark
+title: Criando sub-plugins do Remark
 ---
 
 [`gatsby-transformer-remark`](/packages/gatsby-transformer-remark) permite que desenvolvedores transformem arquivos Markdown em HTML que pode ser consumido através da API GraphQL do Gatsby. Blogs e outros sites baseados em exibição de conteúdo podem se beneficiar drasticamente das funcionalidades oferecidas por este plugin. Com ele, autores de conteúdo para o site não precisam se preocupar sobre como o site é escrito ou estruturado, concentrando-se ao invés disso em escrever conteúdo e posts engajadores!
@@ -115,7 +115,7 @@ Primeiro, crie um plugin local adicionando um diretório `plugins` ao seu site e
 
 ```js:title=plugins/gatsby-remark-purple-headers/index.js
 module.exports = ({ markdownAST }, pluginOptions) => {
-  // Manipulate AST
+  // Manipulação do AST
 
   return markdownAST
 }
@@ -159,7 +159,7 @@ Caso queira adicionar mais opções, você poderá mudar para a sintaxe de objet
 {
   resolve: `gatsby-remark-purple-headers`,
   options: {
-    // Options here
+    // Opções aqui
   }
 }
 ```
@@ -193,9 +193,9 @@ Com essa técnica em mente, nós podemos atravessar a AST similarmente com o seu
 const visit = require("unist-util-visit")
 
 module.exports = ({ markdownAST }, pluginOptions) => {
-  // highlight-next-line
+  // destaque-próxima-linha
   visit(markdownAST, "heading", node => {
-    // Do stuff with heading nodes
+    // Faz alguma coisa com os nós do cabeçalho
   })
 
   return markdownAST
@@ -241,10 +241,10 @@ module.exports = ({ markdownAST }, pluginOptions) => {
   visit(markdownAST, "heading", node => {
     let { depth } = node
 
-    // Skip if not an h1
+    // Ignora caso não seja um h1
     if (depth !== 1) return
 
-    // Grab the innerText of the heading node
+    // Pega o innerText do nó do cabeçalho
     let text = toString(node)
 
     const html = `
