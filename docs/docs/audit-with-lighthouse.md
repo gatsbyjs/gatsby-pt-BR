@@ -10,42 +10,42 @@ O Lighthouse é incluido por padrão no Chrome DevTools. Executar as auditorias 
 
 Caso você não tenha ainda, você precisa criar pacote de produção do seu site Gatsby. O servidor de desenvolvimento do Gatsby é perfeito para agilizar o desenvolvimento, mas o site gerado, apesar de se assemelhar muito à versão de produção do site, não é otimizado.
 
-## Create a production build
+## Crie um pacote de produção
 
-1.  Stop the development server (if it's still running) and run:
+1.  Pare o servidor de desenvolvimento (caso ainda esteja em execução) e então execute:
 
 ```shell
 gatsby build
 ```
 
-> 💡 This does a production build of your site and outputs the built static files into the `public` directory.
+> 💡 Esse comando cria um pacote de produção do seu site e envia os arquivos estáticos criados para o diretório `public`.
 
-2.  View the production site locally. Run:
+2.  Sirva o pacote de produção localmente. Execute:
 
 ```shell
 gatsby serve
 ```
 
-Once this starts, you can now view your site at `http://localhost:9000`.
+Uma vez iniciado, você poderá visualizar seu site em `http://localhost:9000`.
 
-## Run a Lighthouse audit
+## Execute o Lighthouse
 
-Now run your first Lighthouse test.
+Agora execute sua primeira auditoria Lighthouse.
 
-1.  Open the site in Chrome (if you didn't already do so) and then open up the Chrome DevTools.
+1.  Se você ainda não abriu, abra o seu site e o Chrome DevTools (Cmd+Opt/Shift+I)
 
-2.  Click on the "Audits" tab where you'll see a screen that looks like:
+2.  Clique na aba "Lighthouse" e então você verá uma tela parecida com esta:
 
 ![Lighthouse audit start](./images/lighthouse-audit.png)
 
-3.  Click "Perform an audit..." (All available audit types should be selected by default). Then click "Run audit". (It'll then take a minute or so to run the audit). Once the audit is complete, you should see results that look like this:
+3.  Clique no botão "Generate report" para executar os testes (todas as auditorias disponíveis devem estar selecionados por padrão). Quando os testes estiverem concluídos, você verá resultados parecidos com estes:
 
 ![Lighthouse audit results](./images/lighthouse-audit-results.png)
 
-As you can see, Gatsby's performance is excellent out of the box but we're missing some things for PWA, Accessibility, Best Practices, and SEO that will improve your scores (and in the process make your site much more friendly to visitors and search engines). To improve your scores further, see the links under "Next steps" below.
+Como poderão comprovar, o Gatsby proporciona por padrão uma performance excelente. Entretanto ainda falta algumas melhorias de acessibilidade, SEO, PWA e boas práticas que irão melhorar suas pontuações e consequentemente fazer seu site mais amigável aos visitantes e aos motores de busca. Para melhorar ainda mais suas pontuações, consulte os links em "Próximas etapas" abaixo:
 
-Next steps:
+Próximas etapas:
 
-- [Add a manifest file](/docs/add-a-manifest-file/)
-- [Add offline support](/docs/add-offline-support-with-a-service-worker/)
-- [Add page metadata](/docs/add-page-metadata/)
+- [Adicionando o Arquivo de Manifesto](/docs/add-a-manifest-file/)
+- [Adicionando o modo off-line](/docs/add-offline-support-with-a-service-worker/)
+- [Adicionando metadados da página](/docs/add-page-metadata/)
