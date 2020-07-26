@@ -1,14 +1,14 @@
 ---
-title: Audit with Lighthouse
+title: Auditoria com o Lighthouse
 ---
 
-Quoting from the [Lighthouse website](https://developers.google.com/web/tools/lighthouse/):
+Citando o [site do Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> Lighthouse is an open-source, automated tool for improving the quality of web pages. You can run it against any web page, public or requiring authentication. It has audits for performance, accessibility, progressive web apps (PWAs), and more.
+> O Lighthouse é uma ferramenta automatizada de código aberto para aprimorar a qualidade de páginas da web. O lighthouse pode ser executado em qualquer página pública ou que exija autenticação. Ele tem auditorias de performance, acessibilidade, progressive web apps (PWAs) e mais.
 
-Lighthouse is included in Chrome DevTools. Running its audit -- and then addressing the errors it finds and implementing the improvements it suggests -- is a great way to prepare your site to go live. It helps give you confidence that your site is as fast and accessible as possible.
+O Lighthouse é incluido por padrão no Chrome DevTools. Executar as auditorias dele, abordar os erros encontrados e então implementar as melhorias sugeridas é uma maneira excelente de preparar seu site para ir ao ar. Ele te ajuda a garantir que seu site seja o mais rápido e acessível possível.
 
-If you haven't yet, you need to create a production build of your Gatsby site. The Gatsby development server is optimized for making development fast, but the site that it generates, while closely resembling a production version of the site, isn't as optimized.
+Caso você não tenha ainda, você precisa criar pacote de produção do seu site Gatsby. O servidor de desenvolvimento do Gatsby é perfeito para agilizar o desenvolvimento, mas o site gerado, apesar de se assemelhar muito à versão de produção do site, não é otimizado.
 
 ## Create a production build
 
