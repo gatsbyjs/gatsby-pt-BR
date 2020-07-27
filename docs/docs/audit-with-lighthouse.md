@@ -6,7 +6,7 @@ Citando o [site do Lighthouse](https://developers.google.com/web/tools/lighthous
 
 > O Lighthouse é uma ferramenta automatizada de código aberto para aprimorar a qualidade de páginas da web. O lighthouse pode ser executado em qualquer página pública ou que exija autenticação. Ele tem auditorias de performance, acessibilidade, progressive web apps (PWAs) e mais.
 
-O Lighthouse é incluido por padrão no Chrome DevTools. Executar as auditorias dele, abordar os erros encontrados e então implementar as melhorias sugeridas é uma maneira excelente de preparar seu site para ir ao ar. Ele te ajuda a garantir que seu site seja o mais rápido e acessível possível.
+O Lighthouse é incluído por padrão no Chrome DevTools. Executar as auditorias dele, abordar os erros encontrados e então implementar as melhorias sugeridas é uma maneira excelente de preparar seu site para ir ao ar. Ele te ajuda a garantir que seu site seja o mais rápido e acessível possível.
 
 Caso você não tenha ainda, você precisa criar pacote de produção do seu site Gatsby. O servidor de desenvolvimento do Gatsby é perfeito para agilizar o desenvolvimento, mas o site gerado, apesar de se assemelhar muito à versão de produção do site, não é otimizado.
 
@@ -32,13 +32,17 @@ Uma vez iniciado, você poderá visualizar seu site em `http://localhost:9000`.
 
 Agora execute sua primeira auditoria Lighthouse.
 
-1.  Se você ainda não abriu, abra o seu site e o Chrome DevTools (Cmd+Opt/Shift+I)
+1.  Vá para o URL que você deseja auditar (http://localhost:9000).
 
-2.  Clique na aba "Lighthouse" e então você verá uma tela parecida com esta:
+2.  Abra o [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools#open)
+
+3.  Clique na aba "Audits" e então você verá uma tela parecida com esta:
 
 ![Lighthouse audit start](./images/lighthouse-audit.png)
 
-3.  Clique no botão "Generate report" para executar os testes (todas as auditorias disponíveis devem estar selecionados por padrão). Quando os testes estiverem concluídos, você verá resultados parecidos com estes:
+4.  Clique no botão "Perform an audit". Então o DevTools irá mostrar uma lista de categorias de auditoria. Deixe todos eles ativados.
+
+5.  Clique no botão "Run audit" para executar os testes. Após 30 a 60 segundos, o Lighthouse te fornece um relatório da página parecido com este:
 
 ![Lighthouse audit results](./images/lighthouse-audit-results.png)
 
