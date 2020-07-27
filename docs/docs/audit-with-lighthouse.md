@@ -4,11 +4,11 @@ title: Auditoria com o Lighthouse
 
 Citando o [site do Lighthouse](https://developers.google.com/web/tools/lighthouse/):
 
-> O Lighthouse é uma ferramenta automatizada de código aberto para aprimorar a qualidade de páginas da web. O lighthouse pode ser executado em qualquer página pública ou que exija autenticação. Ele tem auditorias de performance, acessibilidade, progressive web apps (PWAs) e mais.
+> O Lighthouse é uma ferramenta automatizada de código aberto para aprimorar a qualidade de páginas da web. O lighthouse pode ser executado em qualquer página pública ou autenticada. Ele tem auditorias de performance, acessibilidade, progressive web apps (PWAs) e mais.
 
-O Lighthouse é incluído por padrão no Chrome DevTools. Executar as auditorias dele, abordar os erros encontrados e então implementar as melhorias sugeridas é uma maneira excelente de preparar seu site para ir ao ar. Ele te ajuda a garantir que seu site seja o mais rápido e acessível possível.
+O Lighthouse é incluído por padrão no Chrome DevTools. Executar as auditorias da ferramenta, analisar os erros encontrados e então implementar as melhorias sugeridas é uma maneira excelente de preparar seu site para ir ao ar. Essa estratégia irá te ajudar a garantir que seu site seja o mais rápido e acessível possível.
 
-Caso você não tenha ainda, você precisa criar pacote de produção do seu site Gatsby. O servidor de desenvolvimento do Gatsby é perfeito para agilizar o desenvolvimento, mas o site gerado, apesar de se assemelhar muito à versão de produção do site, não é otimizado.
+Você precisa servir a versão de produção do seu site em vez da versão de desenvolvimento, dado que apesar do pacote de produção se assemelhar muito ao de desenvolvimento, este último não é otimizado.
 
 ## Crie um pacote de produção
 
@@ -30,9 +30,7 @@ Uma vez iniciado, você poderá visualizar seu site em `http://localhost:9000`.
 
 ## Execute o Lighthouse
 
-Agora execute sua primeira auditoria Lighthouse.
-
-1.  Vá para o URL que você deseja auditar (http://localhost:9000).
+1.  No Chrome, Vá para o URL que você deseja auditar (http://localhost:9000).
 
 2.  Abra o [Chrome DevTools](https://developers.google.com/web/tools/chrome-devtools#open)
 
@@ -42,7 +40,7 @@ Agora execute sua primeira auditoria Lighthouse.
 
 4.  Clique no botão "Perform an audit". Então o DevTools irá mostrar uma lista de categorias de auditoria. Deixe todos eles ativados.
 
-5.  Clique no botão "Run audit" para executar os testes. Após 30 a 60 segundos, o Lighthouse te fornece um relatório da página parecido com este:
+5.  Clique no botão "Run audit" para executar os testes. Após 30 a 60 segundos, o Lighthouse irá te fornecer um relatório da página parecido com este:
 
 ![Lighthouse audit results](./images/lighthouse-audit-results.png)
 
@@ -50,6 +48,6 @@ Como poderão comprovar, o Gatsby proporciona por padrão uma performance excele
 
 Próximas etapas:
 
-- [Adicionando o Arquivo de Manifesto](/docs/add-a-manifest-file/)
+- [Adicionando o arquivo de manifesto](/docs/add-a-manifest-file/)
 - [Adicionando o modo off-line](/docs/add-offline-support-with-a-service-worker/)
 - [Adicionando metadados da página](/docs/add-page-metadata/)
