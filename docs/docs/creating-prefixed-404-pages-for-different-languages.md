@@ -1,10 +1,10 @@
 ---
-title: Creating Prefixed 404 Pages for Different Languages
+title: Criando páginas 404 prefixadas para idiomas diferentes
 ---
 
-Using the [`onCreatePage`](/docs/node-apis/#onCreatePage) API in your project's `gatsby-node.js` file, it's possible to create different 404 pages for different URL prefixes, such as `/en/`).
+Usando a API [`onCreatePage`](/docs/node-apis/#onCreatePage) no ficheiro `gatsby-node.js` do seu projeto, é possível criar páginas 404 diferentes para URLs com prefixos diferentes, por exemplo `/en/`.
 
-Here is an example that shows you how to create an English 404 page at `src/pages/en/404.js`, and a German 404 page at `/src/pages/de/404.js`:
+Veja um exemplo que mostra como criar uma página 404: em Inglês na URL `src/pages/en/404.js`, e em Alemão na URL `/src/pages/de/404.js`:
 
 ```jsx:title=src/pages/en/404.js
 import React from "react"
@@ -30,28 +30,30 @@ export default () => (
 )
 ```
 
-Now, open up your project's `gatsby-node.js` and add the following code:
+Agora abra o ficheiro `gatsby-node.js` do seu projecto e adicione o código abaixo:
 
 ```javascript:title=gatsby-node.js
 exports.onCreatePage = async ({ page, actions }) => {
   const { createPage, deletePage } = actions
 
-  // Check if the page is a localized 404
+  // Verificar se a página é uma 404 localizada
   if (page.path.match(/^\/[a-z]{2}\/404\/$/)) {
     const oldPage = { ...page }
 
-    // Get the language code from the path, and match all paths
-    // starting with this code (apart from other valid paths)
+    // Pegar o código de idioma deste caminho,
+    // e encontrar todos os outros caminhos
+    // que também iniciam com este código
+    // (excluindo outros caminhos válidos)
     const langCode = page.path.split(`/`)[1]
     page.matchPath = `/${langCode}/*`
 
-    // Recreate the modified page
+    // Recriar a página modificada
     deletePage(oldPage)
     createPage(page)
   }
 }
 ```
 
-Now, whenever Gatsby creates a page, it will check if the page is a localized 404 with a path in the format of `/XX/404/`. If this is the case, then it will get the language code, and match all paths starting with this code, apart from other valid paths. This means that whenever you visit a non-existent page on your site, whose path starts with `/en/` or `/de/` (e.g. `/en/this-does-not-exist`), your localized 404 page will be displayed instead.
+Agora, sempre que o Gatsby criar uma página, irá verificar se a página é uma 404 localizada com o caminho no formato `/XX/404/`. Se este for o caso, então irá pegar o código de idioma, e encontrar todos os outros caminhos que também iniciem com este código, excluindo outros caminhos válidos. Isto significa que sempre que você visitar uma página que não existe no seu site, mas o caminho da página inicia com `/en/` ou `/de/` (ex. `/en/isto-nao-existe`), a sua página 404 localizada será mostrada.
 
-For best results, you should configure your server to serve these 404 pages in the same manner - i.e. for `/en/<non existent path>`, your server should serve the page `/en/404/`. Otherwise, you'll briefly see the default 404 page until the Gatsby runtime loads. If you're using Netlify, you can use [`gatsby-plugin-netlify`](/packages/gatsby-plugin-netlify/) to do this automatically. Note that you should still create a default 404 page (usually at `src/pages/404.js`) to handle non-prefixed paths, e.g. `https://example.com/this-does-not-exist`.
+Para melhores resultados, configure o seu servidor para servir estas páginas 404 da mesma forma - por exemplo, para `/en/<caminho não existente>`, o seu servidor deverá servir a página `/en/404/`. Caso contrário, você verá a página 404 padrão por algum tempo antes do runtime do Gatsby carregar. Se você estiver utilizando o Netlify, pode utilizar o [`gatsby-plugin-netlify`](/packages/gatsby-plugin-netlify/) para fazer isto de forma automática. Note que você precisa criar uma página 404 padrão (geralmente em `src/pages/404.js`) para responder à caminhos sem prefixo, por exemplo `https://exemplo.com/isto-nao-existe`.
