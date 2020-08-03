@@ -36,7 +36,7 @@ yarn add js-search axios
 
 **Nota**:
 
-Para este exemplo em particular [axios](https://github.com/axios/axios) será usado para lidar com todas as promise-based HTTP solicitadas.
+Para este exemplo em particular [axios](https://github.com/axios/axios) será usado para lidar com todas as solicitações HTTP baseadas em promise.
 
 ## Seleção de estratégia
 
