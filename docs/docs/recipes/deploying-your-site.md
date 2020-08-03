@@ -82,25 +82,25 @@ Use a [`netlify-cli`](https://www.netlify.com/docs/cli/) para publicar sua aplic
 - [Hospedagem no Netlify](/docs/hosting-on-netlify)
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
 
-## Publicando na plataforma ZEIT Now
+## Publicando na plataforma Vercel
 
 Use a [CLI do Now](https://zeit.co/download) para publicar sua aplicação sem sair do terminal.
 
 ### Pré-requisitos
 
-- Uma conta no [ZEIT Now](https://zeit.co/signup)
+- Uma conta no [Vercel](https://vercel.com/onboarding)
 - Um [site Gatsby](/docs/docs/quick-start.md) com um componente `index.js`
-- O pacote da [CLI do Now ](https://zeit.co/download) instalado
+- O pacote da [CLI do Vercel](https://vercel.com/download) instalado
 - A [CLI do Gatsby](/docs/docs/gatsby-cli.md) instalada
 
 ### Etapas
 
-1. Autentique-se na CLI do Now com o comando `now login`
+1. Autentique-se na CLI do Now com o comando `vercel login`
 
 2. No terminal, mude o diretório atual para a raíz da sua aplicação Gatsby.js, caso ainda não tenha feito.
 
-3. Execute o comando `now` para publicar a aplicação.
+3. Execute o comando `vercel` para publicar a aplicação.
 
 ### Recursos adicionais
 
-- [Publicando na plataforma ZEIT Now](/docs/docs/deploying-to-zeit-now.md)
+- [Publicando na plataforma Vercel (antigo ZEIT Now)](/docs/docs/deploying-to-zeit-now.md)
