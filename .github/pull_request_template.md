@@ -1,11 +1,13 @@
 #### Qual o objetivo dessa pull request?
 <!-- Adicione um 'x' na opção que melhor se encaixe na pr >-->
 
-* [ ] Adição de uma nova tradução
+* [X] Adição de uma nova tradução
 * [ ] Correção em uma tradução existente
 
 #### Qual arquivo foi traduzido/corrigido?
 <!-- Se possível, coloque o link do arquivo no repositório principal > -->
+##### [graphql-api.md](/docs/docs/graphql-api.md)
 
 #### Algum comentário em relação a tradução?
 <!-- Alguma dúvida ou sugestão > -->
+Fiquei com dúvida se deveria traduzir o termo `build time`.
