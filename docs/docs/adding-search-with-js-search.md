@@ -14,7 +14,7 @@ O código e a documentação completa desta biblioteca estão [disponiveis no Gi
 
 ## Configuração
 
-Você começará criando um novo site do Gatsby com base no iniciador oficial _ola mundo_. Abra um terminal e execute o seguinte comando:
+Você começará criando um novo site do Gatsby com base no starter oficial _hello world_. Abra um terminal e execute o seguinte comando:
 
 ```shell
 gatsby new js-search-example https://github.com/gatsbyjs/gatsby-starter-default
