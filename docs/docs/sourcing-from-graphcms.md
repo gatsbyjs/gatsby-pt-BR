@@ -4,13 +4,13 @@ title: Consultando dados do GraphCMS
 
 ## O jeito Headless do GraphCMS
 
-[GraphCMS](https://graphcms.com?ref="gatsby-headless-docs-top") é um _headless CMS_, otimizado para ser utilizado com o GraphQL. Estruturas como posts, autores, produtos, entre outras, são divididas em típos de conteúdos, chamados "_models_". Esses _models_, são consultados com a sintaxe já conhecida do GraphQL.
+[GraphCMS](https://graphcms.com?ref="gatsby-headless-docs-top") é um _headless CMS_, otimizado para ser utilizado com o GraphQL. Estruturas como posts, autores, produtos, entre outras, são divididas em tipos de conteúdos, chamados "_models_". Esses _models_, são consultados com a sintaxe já conhecida do GraphQL.
 
 Um dos benefícios do GraphCMS quando utilizado com Gatsby, é que ele suporta o GraphQL nativamente, o que permite que as consultas sejam testadas antes mesmo de iniciar seu projeto Gatsby.
 
 ## Introdução
 
-Nesse guia você vai criar um projeto completo, capaz de consultar dados do GraphCMS.
+Neste guia você vai criar um projeto completo, capaz de consultar dados do GraphCMS.
 
 ### Instalando o boilerplate
 
@@ -108,7 +108,7 @@ Novamente, se tudo estiver correto, o retorno será exibido no seguinte formato:
 
 ### Obtendo o conteúdo na página
 
-Para o propósito desse tutorial, todos os componentes que abrangem o template _starter_ do Gatsby foram removidos, como layout, SEO, link, entre outros. Esses componentes ainda existem, e 99% dos usuários irão optar por colocá-los novamente quando entenderem o que está acontecendo no código. Isso é apenas a ponta do iceberg, existem outras possibilidades a serem exploradas. Abra o arquivo `src/pages/index.js` e substitua o conteúdo por este trecho de código:
+Para o propósito deste tutorial, todos os componentes que abrangem o template _starter_ do Gatsby foram removidos, como layout, SEO, link, entre outros. Esses componentes ainda existem, e 99% dos usuários irão optar por colocá-los novamente quando entenderem o que está acontecendo no código. Isso é apenas a ponta do iceberg, existem outras possibilidades a serem exploradas. Abra o arquivo `src/pages/index.js` e substitua o conteúdo por este trecho de código:
 
 ```jsx
 import React from "react"
