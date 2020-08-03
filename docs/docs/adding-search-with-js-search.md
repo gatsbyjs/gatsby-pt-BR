@@ -10,7 +10,7 @@ Antes de seguir as etapas necessárias para adicionar a pesquisa de clientes ao 
 
 [JS Search](https://github.com/bvaughn/js-search) é uma biblioteca criada por Brian Vaughn, membro da equipe principal do Facebook. Ela fornece uma maneira eficiente de procurar dados no cliente com JavaScript e JSON objects. Ele também possui diversas opções de personalização; confira os documentos para obter mais detalhes.
 
-O código e a documentação completa desta biblioteca estão [disponiveis no GitHub](https://github.com/bvaughn/js-search). Este guia é baseado no guia oficial `js-search` exemplo, mas foi adaptado para trabalhar com seu site do Gatsby.
+O código e a documentação completa desta biblioteca estão [disponiveis no GitHub](https://github.com/bvaughn/js-search). Este guia é baseado no exemplo oficial `js-search`, mas foi adaptado para trabalhar com seu site do Gatsby.
 
 ## Configuração
 
