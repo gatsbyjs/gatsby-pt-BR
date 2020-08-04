@@ -42,7 +42,7 @@ Para obter informações sobre componentes de página e componentes que não sã
 
 ### `pageQuery`
 
-`pageQuery` é um componente interno que recupera informações da camada de dados nas páginas do Gatsby. Você somente pode ter uma consulta de página por página. Este componente pode ter argumentos do GraphQL para variáveis ​​em suas consultas.
+`pageQuery` é um componente interno que recupera informações da camada de dados nas páginas do Gatsby. Você pode ter somente uma consulta de página por página. Este componente pode ter argumentos do GraphQL para variáveis ​​em suas consultas.
 
 Uma [página é criada no Gatsby](/docs/page-creation/) por qualquer componente React que esteja na pasta `src/pages`, ou chamando a ação `createPage`, usando um componente nas opções `createPage` -- isto significa que um `pageQuery` não funcionará em componente algum, somente nos componentes que atendem a esse critério.
 
