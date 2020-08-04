@@ -187,7 +187,6 @@ return (
 
 ## Estrutura de Consulta
 
-Queries are written in the same shape you want data returned in. How you source data will determine the names of fields that you can query on, based on the nodes they add to the GraphQL schema.
 
 Consultas são escritas da mesma forma que você quer que os dados sejam retornados. Os dados de origem determinarão os nomes dos campos nos quais você pode consultar, com base nos nós que eles adicionam ao esquema do GraphQL.
 
