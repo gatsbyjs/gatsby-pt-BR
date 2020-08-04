@@ -6,7 +6,7 @@ tableOfContentsDepth: 2
 import { GraphqlApiQuery } from "../../www/src/components/api-reference/doc-static-queries"
 import APIReference from "../../www/src/components/api-reference"
 
-Uma grande vantagem de usar o Gatsby é uma camada de dados embutida que combina todas as fontes de dados que você configura. Os dados são coletados em [tempo de build](/docs/glossary#build) da aplicação e são montados automaticamente em um [schema](/docs/glossary#schema).
+Uma grande vantagem de usar o Gatsby é uma camada de dados embutida que combina todas as fontes de dados que você configura. Os dados são coletados em [tempo de build](/docs/glossary#build) da aplicação e são montados automaticamente em um [schema](/docs/glossary#schema) que define como os dados podem ser consultados no seu site. 
 
 Este documento é uma referência para as características GraphQL inclusas no Gatsby, incorporando métodos para consulta e obtenção de dados, e personalização do GraphQL conforme a necessidade de seu site.
 
