@@ -188,7 +188,7 @@ return (
 ## Estrutura de Consulta
 
 
-Consultas são escritas da mesma forma que você quer que os dados sejam retornados. Os dados de origem determinarão os nomes dos campos nos quais você pode consultar, com base nos nós que eles adicionam ao esquema do GraphQL.
+Consultas são escritas no mesmo formato que você quer que os dados sejam retornados. Os dados de origem determinarão os nomes dos campos nos quais você pode consultar, com base nos nós que eles adicionam ao esquema do GraphQL.
 
 Para compreender mais sobre as partes de uma consulta, considere ler o [guia conceitual](/docs/graphql-concepts/#understanding-the-parts-of-a-query).
 
