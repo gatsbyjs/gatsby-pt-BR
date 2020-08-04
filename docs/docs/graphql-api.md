@@ -162,7 +162,7 @@ const data = useStaticQuery(graphql`
 `)
 ```
 
-#### Returnos
+#### Retornos
 
 O hook `useStaticQuery` retorna os dados em um objeto:
 
