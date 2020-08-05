@@ -1,38 +1,38 @@
 ---
-title: "Recipes: Working with Starters"
+title: "Recipes: Trabalhando com inicializadores"
 tableOfContentsDepth: 1
 ---
 
-[Starters](/docs/starters/) are boilerplate Gatsby sites maintained officially, or by the community.
+[Inicializadores](/docs/starters/) são boilerplates para sites em Gatsby mantido oficialmente ou pela comunidade.
 
-## Using a starter
+## Usando um iniciador
 
-### Prerequisites
+### Pré-requisitos
 
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Ter o [Gatsby CLI](/docs/gatsby-cli) instalado
 
-### Directions
+### Instruções
 
-1. Find the starter you'd like to use. (_The [Starter Library](/starters/?v=2) is a good place to look!_)
+1. Busque pelo inicializador que gostaria de utilizar. (_A [Biblioteca de Inicializadores](/starters/?v=2) é uma ótima opção para começar!_)
 
-2. Generate a new site based on the starter. In the terminal, run:
+2. Gere um novo site baseado no inicializador escolhido. Execute o comando abaixo no terminal:
 
 ```shell
-gatsby new {your-project-name} {link-to-starter}
+gatsby new {nome-do-seu-projeto} {link-do-inicializador}
 ```
 
-> _Don't run the above command as-is -- remember to replace {your-project-name} and {link-to-starter}!_
+> _Não execute o comando acima como está -- Lembre de trocar o {nome-do-seu-projeto} e o {link-do-inicializador}!_
 
-3. Run your new site:
+3. Execute seu novo site:
 
 ```shell
-cd {your-project-name}
+cd {nome-do-seu-projeto}
 gatsby develop
 ```
 
-### Additional resources
+### Recursos adicionais
 
-- Follow a [more detailed guide](/docs/starters/) on using Gatsby starters.
-- Learn how to use the [Gatsby CLI](/docs/gatsby-cli) tool to use starters in [tutorial part one](/tutorial/part-one/#using-gatsby-starters)
-- Browse the [Starter Library](/starters/?v=2)
-- Check out Gatsby's [official default starter](https://github.com/gatsbyjs/gatsby-starter-default)
+- Siga o [guia com maiores detalhes](/docs/starters/) sobre o uso de inicializadores em Gatsby.
+- Aprenda como utilizar a ferramenta [Gatsby CLI](/docs/gatsby-cli) para usar os inicializadores [tutorial parte um](/tutorial/part-one/#using-gatsby-starters)
+- Navegue pela [Biblioteca de Inicializadores](/starters/?v=2)
+- Confira o [inicializador oficial](https://github.com/gatsbyjs/gatsby-starter-default) do Gatsby!
