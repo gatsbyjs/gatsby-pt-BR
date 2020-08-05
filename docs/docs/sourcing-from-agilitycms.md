@@ -2,73 +2,73 @@
 title: Sourcing from Agility CMS
 ---
 
-This guide takes you through the steps involved in setting up a Gatsby site that fetches content from [Agility CMS](https://agilitycms.com/).
+Esse guia vai explicar em detalhes os passos para configurar um site do Gatsby que busca conteúdo do [Agility CMS](https://agilitycms.com/).
 
-## What is Agility CMS? What makes it different?
+## O que é Agility CMS? O que o faz diferente?
 
-[Agility CMS](https://agilitycms.com/) is a headless Content Management System (CMS) that lets you define your custom content types and relationships. This is called Content Architecture, and you can reuse this content for your websites and apps.
+[Agility CMS](https://agilitycms.com/) é um Sistema de Gerenciamento de Conteúdo (Content Management System, CMS) headless, que permite que você defina seus tipos de conteúdo personalizados e relacionamentos. Isso é chamado de Arquitetura de Conteúdo, e você pode reusar esse conteúdo para os seus websites e apps.
 
-In addition, Agility CMS provides a page routing API, which allows you to offload control of the sitemap to the content editors.
+Além disso, o Agility CMS provê uma API de roteamento de página, que permite transferir o controle do sitemap para os editores de conteúdo.
 
-All content is available through the Agility CMS Fetch or Preview API.
+Todo o conteúdo está disponível na busca do Agility CMS ou Preview API.
 
-## Getting started
+## Começando
 
-### Create a free Agility account
+### Crie uma conta gratuita Agility
 
-Create an Agility CMS account with the Free Plan (this plan is free forever). [Sign up to Agility CMS](https://account.agilitycms.com/sign-up?product=agility-free).
+Crie uma conta Agility CMS com o Plano Gratuito (esse plano é gratuito para sempre). [Cadastre-se no Agility CMS](https://account.agilitycms.com/sign-up?product=agility-free).
 
-Once your account is created, you'll need to grab your GUID and API Keys.
+Quando sua conta for criada, você precisará pegar seu GUID e as API Keys.
 
-### Get the code
+### Execute o código
 
-Make sure you have the Gatsby CLI installed:
+Certifique-se de que você tem o Gatsby CLI instalado:
 
 ```shell
 npm install -g gatsby-cli
 ```
 
-Clone the [Agility CMS Gatsby Starter](https://github.com/agility/agility-gatsby-starter) repo from GitHub that has all the code you need to get started:
+Clone o repositório do GitHub, [Agility CMS Gatsby Starter](https://github.com/agility/agility-gatsby-starter), que tem todo o código que você precisa para começar:
 
 ```shell
 git clone https://github.com/agility/agility-gatsby-starter.git
 ```
 
-Install the dependencies:
+Instale as dependências:
 
 ```shell
 npm install
 ```
 
-Once you've the infrastructure set up, run the site in development mode:
+Depois de configurar a infraestrutura, execute o site no modo de desenvolvimento:
 
 ```shell
 gatsby develop
 ```
 
-The site is just a starter, but it has a bunch of interesting features that you can use to build from. The next step is to hook this code up to your new Agility CMS instance that you just created.
+O site é apenas um starter, mas ele possui várias funcionalidades interessantes que você pode usar para construir. O próximo passo é conectar esse código à sua nova instância Agility CMS que você acabou de criar.
 
-## Hook it up to your Agility CMS instance
+## Conecte sua instância Agility CMS
 
-Edit the `gatsby-config.js` file and replace the `guid` and `apiKey` with yours.
+Edite o arquivo `gatsby-config.js` e substitua o `guid` e `apiKey` pelos seus.
 
-You can find your API keys on the Getting Started page in the Agility CMS Content Manager.
+Você pode encontrar suas API Keys na página Começando no Agility CMS Content Manager.
 
 ![Agility CMS - Dashboard - API Keys](./images/agilitycms-api-keys.png)
 
-If you use the `preview` key, you won't have to publish to see the changes you've made show up. If you use the `fetch` key, make sure you've published any content you wish to see changed.
+Se você usar a key `preview`, você não vai precisar publicar para ver as alterações feitas. Se você usar a key `fetch`, certifique-se de que você publicou qualquer conteúdo que deseja ver alterado.
 
-## How it works
+## Como funciona
 
-The Gatsby Source Plugin downloads all the Pages on the Agility CMS Sitemap, as well as any Shared Content that's referenced on the `sharedContent` property in the `gatsby-config.js` file.
+O plugin Gatsby Source baixa todas as páginas do Agility CMS Sitemap, assim como qualquer conteúdo compartilhado que é referenciado na propriedade `sharedContent` no arquivo `gatsby-config.js`.
 
-All of those pages and content are then made available in GraphQL to the React Components you will write to render those pages.
+Todas essas páginas e conteúdos são disponibilizados em GraphQL para os componentes React que você irá escrever para renderizar essas páginas.
 
-Check out the component called "Jumbotron". This is an example of how to display a styled heading and sub-heading with content that comes from Agility CMS. Here is the Module that provides this content being edited in the Agility CMS Content Manager:
+Confira o componente chamado "Jumbotron". Esse é um exemplo de como exibir um cabeçalho e subtítulo estilizados com o conteúdo que vem do Agility CMS. Aqui está o módulo que fornece esse conteúdo sendo editado no Agility CMS Content Manager:
 
 ![Agility CMS - Example Module - Jumbotron](./images/agilitycms-jumbotron.png)
 
-And here is the code used to render it. Notice that the `title` and `subTitle` fields are available as properties of the `item.fields` object.
+E aqui está o código usado para renderizar. Perceba que os campos `title` e `subTitle` estão disponíveis como propriedades do objeto `item.fields`.
 
 ```jsx:title=src/modules/Jumbotron.js
 import React, { Component } from "react"
@@ -88,4 +88,4 @@ export default class Jumbotron extends Component {
 }
 ```
 
-When you add new modules and content definitions to Agility CMS, the components used to render those modules will automatically receive the strongly typed data delivered to those modules as props.
+Quando você adiciona novos módulos e definições de conteúdo ao Agility CMS, os componentes usados para renderizar esses módulos automaticamente irão receber os dados fortemente tipados fornecidos a esses módulos como props.
