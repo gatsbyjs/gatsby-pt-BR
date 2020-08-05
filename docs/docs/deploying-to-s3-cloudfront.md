@@ -1,48 +1,49 @@
 ---
-title: Deploying to S3/Cloudfront
+title: Publicando no S3/Cloudfront
 ---
 
-This guide walks through how to host and publish your next Gatsby site to AWS using [S3](https://aws.amazon.com/s3/).
-Optionally - but very recommended - you can add CloudFront, a global CDN to make your site _even faster_.
+Esse guia lhe mostrará como hospedar e publicar o seu próximo site Gastby na AWS(Amazon Web Service) usando [S3](https://aws.amazon.com/s3/).
+Algo opcional, mas muito recomendado, é que você pode adicionar a CloudFront, uma CDN global que torna o seu site _ainda mais rápido_.
 
-## Getting Started: AWS CLI
+## Começando: AWS CLI
 
-Create an [IAM account](https://console.aws.amazon.com/iam/home?#) with administration permissions and create an access id and secret for it.
-You'll need these in the next step.
+Crie uma [Conta IAM](https://console.aws.amazon.com/iam/home?#) usando permissões administrativas e crie um id de acesso e uma senha para ele.
+Você precisará deles para o próximo passos.
 
-Install the AWS CLI and configure it (ensure Python is installed before running these commands):
+Instale o AWS CLI e o configure (Tenha certeza que o Python está instalado na sua máquina antes de rodar esses próximos comandos):
 
 ```shell
 pip install awscli
 aws configure
 ```
 
-The AWS CLI will now prompt you for the key and secret, so add them.
+O AWS CLI pedirá uma chave de acesso e uma senha, você só precisa adicionar as que você criou anteriormente.
 
-## Setting up: S3
+## Configurando: S3
 
-Now that your Gatsby site is up and running and AWS access is sorted out, you'll need to add hosting and make the site live on AWS.
+Agora que seu site Gatsby já está no ar e rodando e o seu acesso à AWS já foi resolvido, você precisará adicionar uma hospedagem e colocar seu site no ar na AWS.
 
-First, install the Gatsby S3 plugin:
+Primeiramente, install o plugin S3 do Gatsby:
 
 ```shell
 npm i gatsby-plugin-s3
 ```
 
-Add it to your `gatsby-config.js`: (don't forget to change the bucket name)
+Adicione o plugin ao seu `gatsby-config.js`, através do seguinte código: 
+
+> Obs: Não esqueça de mudar o nome do bucket (A propriedade bucketName). 
 
 ```javascript:title=gatsby-config.js
 plugins: [
   {
     resolve: `gatsby-plugin-s3`,
     options: {
-      bucketName: "my-website-bucket",
+      bucketName: "bucket-do-meu-website",
     },
   },
 ]
 ```
-
-And finally, add the deployment script to your `package.json`:
+E finalmente, adicione o script de publicação ao seu `package.json`:
 
 ```json:title=package.json
 "scripts": {
@@ -51,12 +52,13 @@ And finally, add the deployment script to your `package.json`:
 }
 ```
 
-That's it!
-Run `npm run build && npm run deploy` to do a build and have it immediately deployed to S3!
+E é só isso!
+Rode o comando `npm run build && npm run deploy` para fazer o build e tê-lo imediatamente publicado no S3!
 
-## Deploying with `.env` variables
+## Publicando com variáveis do `.env`
 
-Some deployments require passing environment variables. To deploy with environment variables, update the deployment script to your `package.json`:
+Algumas publicações precisam que sejam utilizadas variáveis de ambiente. Para fazer a publicação por meio de variáveis 
+de ambiente, atualize o script de publicação no seu `package.json`:
 
 ```json:title=package.json
 "scripts" : {
@@ -65,29 +67,29 @@ Some deployments require passing environment variables. To deploy with environme
 }
 ```
 
-This command requires `dotenv` first, runs build next, and finally deploys to s3. `dotenv`, a dependency of Gatsby that doesn't need to be installed directly, loads environment variables and makes them available globally.
+Esse comando requer que seja feitos três passos: O `dotenv` primeiro, a execução do build e finalmente a publicação no S3. O `dotenv`, uma dependência do Gastsby que não precisa ser instalada diretamente, carrega as variáveis de ambiente e as torna disponíveis globalmente.
 
-If you have multiple AWS profiles in your machine, you can deploy by declaring your `AWS_PROFILE` before the deploy script:
+Caso você tenha vários perfis do AWS na sua máquina, é possível fazer a publicação declarando o seu `AWS_PROFILE` (o perfil na AWS) antes do script de publicação:
 
 ```shell
-AWS_PROFILE=yourprofilename npm run deploy
+AWS_PROFILE=seuNomeDeUsuario npm run deploy
 ```
 
-## Setting up: CloudFront
+## Configurando: ClouFront
 
-CloudFront is a global CDN and can be used to make your blazing fast Gatsby site load _even faster_, particularly for first-time visitors. Additionally, CloudFront provides the easiest way to give your S3 bucket a custom domain name and HTTPS support.
+O CloudFront é uma CDN global e pode ser usado para tornar o seu site Gatsby super rápido carregar _ainda mais rápido_, especialmente para visitantes de primeira viagem. Além disso, O CloudFront provê uma forma super fácil de fornecer ao seu bucket do S3 um nome de domínio customizado e também suporte HTTPS.
+ 
+Existem algumas coisas que você precisa levar em consideração ao usar o gatsby-plugin-s3 para fazer a publicação de um site que usa CloudFront. 
 
-There are a couple of things that you need to consider when using gatsby-plugin-s3 to deploy a site which uses CloudFront.
+Existem duas maneira de você conectar o CloudFront a uma origem de um S3. A maneira mais óbvia, que é a que o Console da AWS sugere, é digitar o nome do bucket no campo de Nome de Domínio da Origem. Isso configura uma origem de um S3 e permite que você configure o CloudFront para que ele use o IAM para acessar o seu bucket. Infelizmente, isso também torna impossível que sejam feitos redirecionamento por parte do servidor (301/302), isso significa que os indexes dos diretórios (Ter _index.html_ aparecendo quando alguém tenta acessar o diretório) só funcionarão em diretórios raiz. Talvez você não note esses problemas de primeira, por que o JavaScript da parte do cliente Gatsby compensa pelo lado do cliente e plugins como `gatsby-plugin-meta-redirect` compensam pela parte do servidor. Só por que você não consegue ver esses problemas não significa que eles não vão afetar mecanismos de busca negativamente.
 
-There are two ways that you can connect CloudFront to an S3 origin. The most obvious way, which the AWS Console will suggest, is to type the bucket name in the Origin Domain Name field. This sets up an S3 origin, and allows you to configure CloudFront to use IAM to access your bucket. Unfortunately, it also makes it impossible to perform serverside (301/302) redirects, and it also means that directory indexes (having index.html be served when someone tries to access a directory) will only work in the root directory. You might not initially notice these issues, because Gatsby's clientside JavaScript compensates for the latter and plugins such as `gatsby-plugin-meta-redirect` can compensate for the former. But just because you can't see these issues, doesn't mean they won't affect search engines.
+Para que todas as características do seu site funcionem corretamente, você deve usar o ponto de acesso para sites de hospedagem estática do bucket do S3 como ponto de partida do CloudFront. Isso significa que infelizmente o seu bucket terá que ser configurado para que ele seja public-read, já que quando o CLoudFront estiver usando um ponto de acesso para sites de hospedagem estática S3 como ponto de partida, ele fica incapaz de fazer a autenticação via IAM.
 
-In order for all the features of your site to work correctly, you must instead use your S3 bucket's Static Website Hosting Endpoint as the CloudFront origin. This does (sadly) mean that your bucket will have to be configured for public-read, because when CloudFront is using an S3 Static Website Hosting Endpoint address as the Origin, it's incapable of authenticating via IAM.
+### Configurando o gatsby-plugin-s3
 
-### gatsby-plugin-s3 configuration
+No arquivo de configuração do gatsby-plugin-s3 existem dois parâmetros opcionais que você normalmente pode deixar em branco, o `protocol` e o `hostname`. Todavia, quando você estiver usando o CloudFront, esses parâmetros são **vitais** para assegurar que o redirecionamento aconteça de forma correta. Caso você omita esse parâmetros, o redirecionamento acontecerá relativa ao seu ponto de acesso para sites de hospedagem estática do S3. Isso significa que se os usuários visitarem o seu site através da URL do CloudFront e clicarem em redirecionar, eles irão ser redirecionados para o seu ponto de acesso para sites de hospedagem estática do S3. Isso irá desabilitar o HTTPS e (mais importante) irá mostrar uma URl feia e não profissional na barra de endereço do usuário.
 
-In the gatsby-plugin-s3 configuration file, there are a couple of optional parameters that you can usually leave blank, `protocol` and `hostname`. But when you're using CloudFront, these parameters are vital for ensuring redirects work correctly. If you omit these parameters, redirects will be performed relative to your S3 Static Website Hosting Endpoint. This means if a user visits your site via the CloudFront URL and hits a redirect, they will be redirected to your S3 Static Website Hosting Endpoint instead. This will disable HTTPS and (more importantly) will display an ugly and unprofessional URL in the user's address bar.
-
-By specifying the `protocol` and `hostname` parameters, you can cause redirects to be applied relative to a domain of your choosing.
+Ao especificar os parâmetros `protocol` e o `hostname` você pode fazer com que os redirecionamentos sejam aplicados relativos a um domínio de sua escolha. 
 
 ```javascript:title=gatsby-config.js
 {
@@ -100,13 +102,13 @@ By specifying the `protocol` and `hostname` parameters, you can cause redirects 
 }
 ```
 
-If you use your site's URL elsewhere in gatsby-config.js, you can define the URL once at the top of the config:
+Se você usar a URL do seu site em outro lugar no gatsby-config.js você pode definir uma variável que recebe a URL no topo desse arquivo de configuração:
 
 ```javascript:title=gatsby-config.js
 const siteAddress = new URL("https://www.example.com")
 ```
 
-And then in the Gatsby config you can reference it like so:
+e então nas configurações Gatsby você pode referenciar essa variável da seguinte forma:
 
 ```javascript:title=gatsby-config.js
 {
@@ -119,12 +121,12 @@ And then in the Gatsby config you can reference it like so:
 }
 ```
 
-If you need the full address elsewhere in your config, you can access it via `siteAddress.href`.
+Caso você precise do endereço completo em outro lugar da sua configuração é possível acessa-lo usando `siteAddress.href`.
 
-## References:
+## Referências
 
-- [Gatsby on AWS, the right way](https://blog.joshwalsh.me/aws-gatsby/)
-- [Using CloudFront with gatsby-plugin-s3](https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/with-cloudfront.md)
-- [Publishing Your Next Gatsby Site to AWS With AWS Amplify](/blog/2018-08-24-gatsby-aws-hosting/)
-- [Escalade Sports: From $5000 to \$5/month in Hosting With Gatsby](/blog/2018-06-14-escalade-sports-from-5000-to-5-in-hosting/)
-- [Deploy your Gatsby.js Site to AWS S3](https://benenewton.com/deploy-your-gatsby-js-site-to-aws-s-3)
+- [Gatsby na AWS, a forma correta](https://blog.joshwalsh.me/aws-gatsby/)
+- [Usando CloudFront com gatsby-plugin-s3](https://github.com/jariz/gatsby-plugin-s3/blob/master/recipes/with-cloudfront.md)
+- [Publicando o seu próximo site Gatsby na AWS com o AWS amplify](/blog/2018-08-24-gatsby-aws-hosting/)
+- [Escalade Sports: De $5000 para \$5/mês hospedando com Gatsby](/blog/2018-06-14-escalade-sports-from-5000-to-5-in-hosting/)
+- [Publicando o seu site Gatsby.js no AWS S3](https://benenewton.com/deploy-your-gatsby-js-site-to-aws-s-3)
