@@ -23,7 +23,7 @@ O AWS CLI pedirá uma chave de acesso e uma senha, você só precisa adicionar a
 
 Agora que seu site Gatsby já está no ar e rodando e o seu acesso à AWS já foi resolvido, você precisará adicionar uma hospedagem e colocar seu site no ar na AWS.
 
-Primeiramente, install o plugin S3 do Gatsby:
+Primeiramente, instale o plugin S3 do Gatsby:
 
 ```shell
 npm i gatsby-plugin-s3
@@ -75,15 +75,15 @@ Caso você tenha vários perfis do AWS na sua máquina, é possível fazer a pub
 AWS_PROFILE=seuNomeDeUsuario npm run deploy
 ```
 
-## Configurando: ClouFront
+## Configurando: CloudFront
 
 O CloudFront é uma CDN global e pode ser usado para tornar o seu site Gatsby super rápido carregar _ainda mais rápido_, especialmente para visitantes de primeira viagem. Além disso, O CloudFront provê uma forma super fácil de fornecer ao seu bucket do S3 um nome de domínio customizado e também suporte HTTPS.
  
 Existem algumas coisas que você precisa levar em consideração ao usar o gatsby-plugin-s3 para fazer a publicação de um site que usa CloudFront. 
 
-Existem duas maneira de você conectar o CloudFront a uma origem de um S3. A maneira mais óbvia, que é a que o Console da AWS sugere, é digitar o nome do bucket no campo de Nome de Domínio da Origem. Isso configura uma origem de um S3 e permite que você configure o CloudFront para que ele use o IAM para acessar o seu bucket. Infelizmente, isso também torna impossível que sejam feitos redirecionamento por parte do servidor (301/302), isso significa que os indexes dos diretórios (Ter _index.html_ aparecendo quando alguém tenta acessar o diretório) só funcionarão em diretórios raiz. Talvez você não note esses problemas de primeira, por que o JavaScript da parte do cliente Gatsby compensa pelo lado do cliente e plugins como `gatsby-plugin-meta-redirect` compensam pela parte do servidor. Só por que você não consegue ver esses problemas não significa que eles não vão afetar mecanismos de busca negativamente.
+Existem duas maneira de você conectar o CloudFront a uma origem de um S3. A maneira mais óbvia, que é a que o Console da AWS sugere, é digitar o nome do bucket no campo de Nome de Domínio da Origem. Isso configura uma origem de um S3 e permite que você configure o CloudFront para que ele use o IAM para acessar o seu bucket. Infelizmente, isso também torna impossível que sejam feitos redirecionamento por parte do servidor (301/302), isso significa que os índices dos diretórios (Ter _index.html_ aparecendo quando alguém tenta acessar o diretório) só funcionarão em diretórios raiz. Talvez você não note esses problemas de primeira, por que o JavaScript da parte do cliente Gatsby compensa pelo lado do cliente e plugins como `gatsby-plugin-meta-redirect` compensam pela parte do servidor. Só por que você não consegue ver esses problemas não significa que eles não vão afetar mecanismos de busca negativamente.
 
-Para que todas as características do seu site funcionem corretamente, você deve usar o ponto de acesso para sites de hospedagem estática do bucket do S3 como ponto de partida do CloudFront. Isso significa que infelizmente o seu bucket terá que ser configurado para que ele seja public-read, já que quando o CLoudFront estiver usando um ponto de acesso para sites de hospedagem estática S3 como ponto de partida, ele fica incapaz de fazer a autenticação via IAM.
+Para que todas as características do seu site funcionem corretamente, você deve usar o ponto de acesso para sites de hospedagem estática do bucket do S3 como ponto de partida do CloudFront. Isso significa que infelizmente o seu bucket terá que ser configurado para que ele seja _public-read_, já que quando o CloudFront estiver usando um ponto de acesso para sites de hospedagem estática S3 como ponto de partida, ele fica incapaz de fazer a autenticação via IAM.
 
 ### Configurando o gatsby-plugin-s3
 
@@ -121,7 +121,7 @@ e então nas configurações Gatsby você pode referenciar essa variável da seg
 }
 ```
 
-Caso você precise do endereço completo em outro lugar da sua configuração é possível acessa-lo usando `siteAddress.href`.
+Caso você precise do endereço completo em outro lugar da sua configuração é possível acessá-lo usando `siteAddress.href`.
 
 ## Referências
 
