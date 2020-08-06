@@ -21,7 +21,7 @@ Como um termo geral, a abordagem do PWA é caracterizada por empenhar-se em sati
 Como um termo específico, para serem classificadas como PWA os sites podem ser testados conforme os seguintes [três critérios de base](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/):
 
 1.  Deve ser executado sob protocolo HTTPS.
-2.  Deve incluir o Manifesto do Aplicativo Web.
+2.  Deve incluir o Web App Manifest.
 3.  Deve implementar um service worker.
 
 As PWAs são apps derivadas da web (contrariamente às aplicações nativas, que são empacotadas e implatadas através de lojas de aplicativos). Como o Alex Russell, que juntamente com o Francês Berriman [cunhou o termo PWA](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/), disse:
