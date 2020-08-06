@@ -10,7 +10,7 @@ Como um termo geral, a abordagem do PWA é caracterizada por empenha-se em satis
 
 1.  Responsividade
 2.  Conectividade Independente
-3.  App-like-interactions
+3.  Interações App-like
 4.  Moderno
 5.  Segurança
 6.  Detectável
