@@ -66,7 +66,7 @@ export const pageQuery = graphql`
 
 **Nota**: A consulta exportada em um `const` não precisa ser chamada de` pageQuery`. Na verdade, o Gatsby procura uma string `graphql` exportada do arquivo.
 
-#### Returnos
+#### Retornos
 
 Quando inclusa em um arquivo de componente da página, uma consulta de página retorna um objeto de dados que é passado automaticamente para o componente como uma propriedades.
 
@@ -119,7 +119,7 @@ O componente `StaticQuery` necessita de duas propriedades em JSX:
 />
 ```
 
-#### Returnos
+#### Retornos
 
 O componente StaticQuery returna `data` em uma proriedade `render`:
 
