@@ -6,7 +6,7 @@ title: Progressive Web Apps (PWAs)
 
 Aplicação da Web Progressiva do inglês "Progressive web app" (PWA) é um termo geral para a nova filosofia de criação de sites e um termo específico com um conjunto estabelecido de três requisitos explícitos, testáveis e padronizados.
 
-Como um termo geral, a abordagem do PWA é caracterizada por empenha-se em satisfazer o [seguinte conjunto de atributos](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/):
+Como um termo geral, a abordagem do PWA é caracterizada por empenhar-se em satisfazer o [seguinte conjunto de atributos](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/):
 
 1.  Responsividade
 2.  Conectividade Independente
