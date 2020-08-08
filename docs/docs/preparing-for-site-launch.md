@@ -1,12 +1,12 @@
 ---
-title: Preparing Your Site for Launch
+title: Preparando seu site para o lançamento
 overview: true
 ---
 
-So your Gatsby site is done, and you're ready to share it with the world, **congratulations**! 🎉
+Pois então, seu site Gatsby está pronto e você está entusiasmado para compartilhá-lo com o mundo. **Meus parabéns**! 🎉
 
-Before you hit that deploy button though, there are a few things you can do to make sure your site is configured properly to be searchable, shareable, and properly navigable.
+Antes de você iniciar a publicação do site concluído, existem algumas coisas que você pode fazer para assegurar que ele esteja devidamente configurado para ser pesquisável, compartilhável e adequadamente navegável.  
 
-In this section you learn how to add a 404 page for when your users land somewhere unexpected, add search and categorization to your content, and a few other nifty things to ensure your site is crawl-able and index-able to all those fancy bots out there. 🤖
+Nesta seção, você aprenderá como adicionar uma página 404 para quando seus usuários chegarem a algum lugar inesperado, adicionar pesquisa e categorização ao seu conteúdo e algumas outras coisas interessantes para garantir que seu site possa ser rastreado e indexado por todos os bots sofisticados por aí. 🤖
 
 <GuideList slug={props.slug} />
