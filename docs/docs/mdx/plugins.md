@@ -2,26 +2,21 @@
 title: MDX Plugins
 ---
 
-## Gatsby remark plugins
 
-`gatsby-plugin-mdx` is compatible with all of the [gatsby-remark
-plugins](/packages/gatsby-remark-images/?=gatsby-remark),
-including
+## Plugins Remark do Gatsby
+Todos os [plugins gatsby-remark](/packages/gatsby-remark-images/?=gatsby-remark) 
+são compátiveis com o plugin `gatsby-plugin-mdx`. Um exemplo é o plugin 
 [`gatsby-remark-images`](https://next.gatsbyjs.org/packages/gatsby-remark-images/?=gatsby-remark).
 
-To enable `gatsby-remark-images`, you first need to install the relevant
-image plugins:
-
+Para habilitar o `gatsby-remark-images` você deve instalar os plugins de imagem relevantes:
 ```shell
 yarn add gatsby-plugin-sharp gatsby-remark-images
 ```
+(Se você não tem instalado o plugin `gatsby-source-filesystem`, instale-o.)
 
-If you don't have `gatsby-source-filesystem` installed, also install that.
 
-Then configure the plugins. `gatsby-source-filesystem` needs to be
-pointed at wherever you have your images on disk, `gatsby-remark-images`
-needs to be both a sub-plugin of `gatsby-plugin-mdx`and a string entry in
-the plugins array, and `gatsby-plugin-sharp` can be included on its own.
+É importante agora configurar os plugins instalados. O plugin `gatsby-source-filesystem` deve apontar para onde suas imagens se encontram (em disco), já `gatsby-remark-images` deve ser mencionado no array de plugins  bem como um sub-plugin de `gatsby-plugin-mdx`  e `gatsby-plugin-sharp` pode ser incluído normalmente.
+
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -51,20 +46,15 @@ module.exports = {
   ],
 }
 ```
-
-Then, any image in your MDX file will be automatically handled
-by Gatsby image processing.
+A partir deste ponto o processamento de imagem do Gatsby automaticamente tomará conta de qualquer imagem em seus arquivos `MDX`
 
 ```markdown
 ![my image](./my-awesome-image.png)
 ```
 
-## Remark plugins
+## Plugins do Remark
 
-You can use [remark plugins](https://github.com/remarkjs/remark/blob/master/doc/plugins.md)
-directly if there are transformations you'd like to make on your
-MDX documents. This can do anything from adding emoji support to
-enforcing a particular title capitalization format.
+Você pode usar os [plugins do Remark](https://github.com/remarkjs/remark/blob/master/doc/plugins.md) diretamente se desejar fazer transformações em seus documentos `MDX`. Isso permite fazer coisas desde adicionar suporte a emojis à impor um padrão de título.
 
 ```javascript:title=gatsby-config.js
 const capitalize = require(`remark-capitalize`)
