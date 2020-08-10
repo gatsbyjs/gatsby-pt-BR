@@ -24,7 +24,7 @@ Para obter os dados com um plugin existente você precisa instalar todos os paco
 Além disso, você deve adicionar o plugin no array de plugins no `gatsby-config` com todas as configurações adicionais.
 Se você deseja obter dados do sistema de arquivos para usar com o GraphQL, como arquivos de Markdown, imagens e outros, consulte os [documentos para obtenção de dados do sistema de arquivos](/docs/sourcing-from-the-filesystem/) e [receitas](/docs/recipes/sourcing-data).
 
-Para instruções sobre a instalação de plugins usando o npm, olhe a documentalção sobre [a utilização de plugins no seu site](/docs/using-a-plugin-in-your-site/).
+Para instruções sobre a instalação de plugins usando o npm, olhe a documentação sobre [a utilização de plugins no seu site](/docs/using-a-plugin-in-your-site/).
 
 Você também pode [criar plugins personalizados](/docs/creating-plugins/) para ajustar-se aos seus próprios casos de uso e extrair dados da maneira que desejar.
 
