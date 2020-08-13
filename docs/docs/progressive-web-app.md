@@ -14,7 +14,7 @@ Como um termo geral, a abordagem do PWA é caracterizada por empenhar-se em sati
 4.  Sempre atualizado
 5.  Seguro
 6.  Descobrível
-7.  Re-engajável
+7.  Reengajável
 8.  Instalável
 9.  Linkável
 
