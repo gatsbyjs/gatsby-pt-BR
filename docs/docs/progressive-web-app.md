@@ -46,7 +46,7 @@ O [Web App Manifest](https://www.w3.org/TR/appmanifest/) é um ficheiro JSON que
 
 Inclui informações do aplicativo web tais como `name`, `icons`, `start_url`, `background-color` e [mais](https://developers.google.com/web/fundamentals/web-app-manifest/).
 
-Gatsby fornece uma interface de plug-in para adicionar suporte ao envio de um manifest com seu site -- [gatsby-plugin-manifest](/packages/gatsby-plugin-manifest).
+Gatsby fornece uma interface de plug-in para adicionar suporte ao envio de um _manifest_ com seu site -- [gatsby-plugin-manifest](/packages/gatsby-plugin-manifest).
 
 ### Deve implementar um service worker
 
