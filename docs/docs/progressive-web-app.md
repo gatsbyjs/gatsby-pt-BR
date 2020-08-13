@@ -16,7 +16,7 @@ Como um termo geral, a abordagem do PWA é caracterizada por empenhar-se em sati
 6.  Descobrível
 7.  Reengajável
 8.  Instalável
-9.  Linkável
+9.  "Linkável"
 
 Como um termo específico, para serem classificadas como PWA os sites podem ser testados conforme os seguintes [três critérios de base](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/):
 
