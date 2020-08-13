@@ -56,4 +56,4 @@ Um [service worker](https://developers.google.com/web/fundamentals/primers/servi
 
 Gatsby fornece uma interface de plugin para criar e carregar um service worker em seu site -- [**gatsby-plugin-offline**](/packages/gatsby-plugin-offline).
 
-Recomenadamos o uso do plugin juntamente com o [plugin manifest](/packages/gatsby-plugin-manifest). (Não se esqueça de listar o plugin `offline` depois do plugin `manifest` para que o arquivo de manifest seja incluso no service worker).
+Recomendamos o uso do plugin juntamente com o [plugin manifest](/packages/gatsby-plugin-manifest). (Não se esqueça de listar o plugin `offline` depois do plugin `manifest` para que o arquivo de manifest seja incluído no _service worker_).
