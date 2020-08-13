@@ -22,7 +22,7 @@ Como um termo específico, para serem classificadas como PWA os sites podem ser 
 
 1.  Deve ser executado sob protocolo HTTPS.
 2.  Deve incluir o Web App Manifest.
-3.  Deve implementar um service worker.
+3.  Deve implementar um _service worker_.
 
 As PWAs são apps derivadas da web (contrariamente às aplicações nativas, que são empacotadas e implantadas através de lojas de aplicativos). Como o Alex Russell, que juntamente com o Francês Berriman [cunhou o termo PWA](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/), disse:
 
@@ -50,10 +50,10 @@ Gatsby fornece uma interface de plug-in para adicionar suporte ao envio de um _m
 
 ### Deve implementar um service worker
 
-Um [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) fornece suporte para uma experiência offline para o seu site, e torna o seu site mais resistente a más conexões de rede.
+Um [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) fornece suporte para uma experiência _offline_ para o seu site, e torna o seu site mais resistente a más conexões de rede.
 
 É um script executado separadamente em segundo plano, suportando recursos como notificações push e sincronização em segundo plano.
 
-Gatsby fornece uma interface de plugin para criar e carregar um service worker em seu site -- [**gatsby-plugin-offline**](/packages/gatsby-plugin-offline).
+Gatsby fornece uma interface de plugin para criar e carregar um _service worker_ em seu site -- [**gatsby-plugin-offline**](/packages/gatsby-plugin-offline).
 
-Recomendamos o uso do plugin juntamente com o [plugin manifest](/packages/gatsby-plugin-manifest). (Não se esqueça de listar o plugin `offline` depois do plugin `manifest` para que o arquivo de manifest seja incluído no _service worker_).
+Recomendamos o uso do plugin juntamente com o [plugin manifest](/packages/gatsby-plugin-manifest). (Não se esqueça de listar o plugin `offline` depois do plugin `manifest` para que o arquivo de _manifest_ seja incluído no _service worker_).
