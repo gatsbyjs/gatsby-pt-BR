@@ -167,7 +167,7 @@ export const query = graphql`
 `
 ```
 
-Sua imagem em destaque deverá aparecer diretamente no topo da postagen gerada. Tada!
+Sua imagem em destaque deverá aparecer diretamente no topo da postagem gerada. Tada!
 
 ## Imagens Inline com `gatsby-remark-images`
 
