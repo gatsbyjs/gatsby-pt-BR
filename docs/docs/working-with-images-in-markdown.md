@@ -2,7 +2,7 @@
 title: Trabalhando com imagens dentro de Postagens e Páginas Markdown
 ---
 
-Quando estiver construindo sites compostos primeiramente de Páginas ou Posts com Markdown utilizando o Gatsby, a inserção de imagens reforça o conteúdo. Você pode adicionar imagens de diversas formas. 
+Quando estiver construindo sites com o Gatsby que são compostos primariamente de páginas ou posts com Markdown, a inserção de imagens pode melhorar o conteúdo. Você pode adicionar imagens de diversas formas. 
 
 ## Imagens em destaque como metadados Frontmatter
 
