@@ -55,7 +55,7 @@ O próximo passo é incorporar os dados em um modelo usando uma query GraphQL, q
 
 ### Configurando para imagens e posts em diretórios diferentes
 
-Existem também ocasiões nas quais você possa querer que suas imagens estejam em um diretório diferente de seus posts ou páginas em Markdown, tal como em um diretório externo `/images`. Você pode definir isso ao especificar duas orignens distintas, uma para as páginas e outra para as imagens:
+Em algumas ocasiões você as imagens e seus posts ou páginas Markdown vão estar em diretórios diferentes, como em um diretório externo `/images`. Você pode definir isso ao especificar duas origens distintas, uma para as páginas e outra para as imagens:
 
 ```js:title=gatsby-config.js
 module.exports = {
