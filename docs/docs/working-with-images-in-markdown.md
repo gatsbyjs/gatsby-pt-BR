@@ -94,7 +94,7 @@ O conteúdo será inserido aqui!
 
 Agora que você já definiu a origem do Markdown e os dados da imagem, você poderá consultar por imagens em destaque no GraphQL. Se o caminho apontado for uma imagem, ele será transformado em um node `File` no GraphQL e então você poderá obter os dados da imagem utilizando o campo `childImageSharp`.
 
-Isso pode ser adicionado a uma query GraphQL em um arquivo modelo de Markdown. Neste exemplo, a [Query flúida](/docs/gatsby-image#images-that-stretch-across-a-fluid-container) é usada para deixar a imagem responsiva.
+Isso pode ser adicionado a uma query GraphQL em um arquivo modelo de Markdown. Neste exemplo, a [Query fluida](/docs/gatsby-image#images-that-stretch-across-a-fluid-container) é usada para deixar a imagem responsiva.
 
 ```jsx:title=src/templates/blog-post.js
 export const query = graphql`
