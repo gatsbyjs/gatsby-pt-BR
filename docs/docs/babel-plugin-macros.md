@@ -33,7 +33,7 @@ Você pode então utilizar a variável importada da forma em que sua documentaç
 
 ```javascript
 import preval from "preval.macro"
-const x = preval`module.exports = 1` // linha em destaque
+const x = preval`module.exports = 1` // highlight-line
 ```
 
 Quando compilado, esse código será transformado em:
