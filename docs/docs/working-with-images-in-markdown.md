@@ -6,7 +6,7 @@ Quando estiver construindo sites compostos primeiramente de Páginas ou Posts co
 
 ## Imagens em destaque como metadados Frontmatter
 
-Em sites como blogs, você pode querer inserir uma imagem em destaque, para que ela apareça no topo da página. Uma forma de fazer isso é utilizar o nome do arquivo da imagem em um campo frontmatter e então transformá-lo por meio do `gatsby-plugin-sharp` em uma query GraphQL.
+Em sites como blogs, talvez você queira inserir uma imagem em destaque para que ela apareça no topo da página, por exemplo. Uma forma de fazer isso é utilizar o nome do arquivo da imagem em um campo frontmatter e então transformá-lo por meio do `gatsby-plugin-sharp` em uma query GraphQL.
 
 Essa solução presume que você já possua páginas de Markdown sendo geradas automáticamente por meio de renderizadores como `gatsby-transformer-remark` ou `gatsby-plugin-mdx`. Senão, leia [Parte 7 do Tutorial de Gatsby](/tutorial/part-seven/). Isso será desenvolvido durante o tutorial, nesse exemplo será utilizado o `gatsby-transformer-remark`.
 
