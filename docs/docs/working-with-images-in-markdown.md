@@ -87,7 +87,7 @@ title: About
 featuredImage: ../images/equipe-gatos.png
 ---
 
-O conteudo será inserindo aqui!
+O conteúdo será inserido aqui!
 ```
 
 ### Consultando imagens para Frontmatter
