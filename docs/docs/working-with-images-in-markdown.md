@@ -48,7 +48,7 @@ title: Meus Dogs Favoritos
 featuredImage: cachorro-fofinho.png
 ---
 
-O conteudo será inserindo aqui!
+O conteúdo será inserido aqui!
 ```
 
 O próximo passo é incorporar os dados em um modelo usando uma query GraphQL, que será vista futuramente nesse guia.
