@@ -18,7 +18,7 @@ Para iniciar, faça o download dos plugins do Gatsby-image, como mencionado em [
 npm install --save gatsby-image gatsby-transformer-sharp gatsby-plugin-sharp
 ```
 
-Você também irá querer ter `gatsby-source-filesystem` instalado. Só então, configure os vários plugins no arquivo `gatsby-config`.
+Talvez você também queira ter instalado o  `gatsby-source-filesystem`. Então, faça a configuração dos vários plugins no arquivo `gatsby-config`.
 
 ### Configurando para imagens e posts no mesmo diretório
 
