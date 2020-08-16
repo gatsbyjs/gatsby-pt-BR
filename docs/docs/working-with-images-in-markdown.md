@@ -22,7 +22,7 @@ Você também irá querer ter `gatsby-source-filesystem` instalado. Só então, 
 
 ### Configurando para imagens e posts no mesmo diretório
 
-Se as imagens e arquivos Markdown estiverem no mesmo diretório, a obtenção e solução das imagens poderá ser feita com o uso de apenas uma configuração. Por exemplo, se seus arquivos Markdown e imagens estão localizados em um diretório `/pages`, ambos os conteúdos serão automáticamente selecionados pelo GraphQL como parte da camada de dados do Gatsby.
+Se as imagens e arquivos Markdown estiverem no mesmo diretório, a utilização das imagens pode ser feita com apenas uma configuração. Por exemplo, se seus arquivos Markdown e imagens estão em um mesmo diretório `/pages`, ambos os conteúdos serão automaticamente selecionados pelo GraphQL como parte da camada de dados do Gatsby.
  
 ```js:title=gatsby-config.js
 module.exports = {
