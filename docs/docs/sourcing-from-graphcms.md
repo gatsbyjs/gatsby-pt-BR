@@ -20,7 +20,7 @@ Para começar, vamos criar um site Gatsby utilizando o template `gatsby-starter-
 gatsby new gatsby-site https://github.com/gatsbyjs/gatsby-starter-default
 ```
 
-Acesse o diretório do projeto com `cd gatsby-site`
+Acesse o diretório do projeto com `cd gatsby-site`.
 
 ### Adicione o plugin do GraphQL
 
