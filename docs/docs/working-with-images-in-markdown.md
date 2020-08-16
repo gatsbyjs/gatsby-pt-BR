@@ -171,7 +171,7 @@ Sua imagem em destaque deverá aparecer diretamente no topo da postagen gerada. 
 
 ## Imagens Inline com `gatsby-remark-images`
 
-Você também pode incluir imagens diretamente no corpo do Markdown. O plugin [gatsby-remark-images](/packages/gatsby-remark-images) será util nesse caso.
+Você também pode incluir imagens diretamente no corpo do Markdown. O plugin [gatsby-remark-images](/packages/gatsby-remark-images) será útil nesse caso.
 
 Inicie instalando `gatsby-remark-images` e `gatsby-plugin-sharp`.
 
