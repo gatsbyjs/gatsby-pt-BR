@@ -179,7 +179,7 @@ Inicie instalando `gatsby-remark-images` e `gatsby-plugin-sharp`.
 npm install --save gatsby-remark-images gatsby-plugin-sharp
 ```
 
-Você também irá querer ter `gatsby-source-filesystem` instalado e que ele esteja apontando para o diretório onde suas imagens estarão localizadas.
+Tenha certeza que o `gatsby-source-filesystem` está instalado e que ele esteja apontando para o diretório onde suas imagens estarão localizadas.
 
 Configure os plugins em seu arquivo `gatsby-config`. Como no exemplo anterior, ambos `Remark` ou `MDX` podem ser usados.
 
