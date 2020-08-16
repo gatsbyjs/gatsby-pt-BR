@@ -24,7 +24,7 @@ Como um termo específico, para serem classificadas como PWA os sites podem ser 
 2.  Deve incluir o Web App Manifest.
 3.  Deve implementar um _service worker_.
 
-As PWAs são apps derivadas da web (contrariamente às aplicações nativas, que são empacotadas e implantadas através de lojas de aplicativos). Como o Alex Russell, que juntamente com o Francês Berriman [cunhou o termo PWA](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/), disse:
+Os PWAs são apps derivadas da web (contrariamente às aplicações nativas, que são empacotadas e implantadas através de lojas de aplicativos). Como o Alex Russell, que juntamente com o Francês Berriman [cunhou o termo PWA](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/), disse:
 
 > são apenas sites que tomaram todas as vitaminas certas.
 
