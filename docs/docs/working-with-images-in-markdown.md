@@ -248,7 +248,7 @@ module.exports = {
 }
 ```
 
-Com as configurações acima, você poderá utlizar a sintaxe padrão para imagens no Markdown. Elas serão processadas pelo Sharp e irão aparecem como se você tivesse as inserido em um componente `gatsby-image`.
+Com as configurações acima, você poderá utilizar a sintaxe padrão para imagens no Markdown. Elas serão processadas pelo `Sharp` e irão aparecem como se você tivesse às inserido em um componente `gatsby-image`.
 
 ```markdown
 ![George o Gato](./george-cat.png)
