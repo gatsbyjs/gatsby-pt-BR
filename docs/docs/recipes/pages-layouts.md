@@ -26,10 +26,10 @@ Dentro de um projeto Gatsby, você verá algum ou todos os diretórios e arquivo
 
 Alguns arquivos importantes e suas definições:
 
-- `gatsby-config.js` — configure opções para um site Gatsby, com metadados do projeto, como título, descrição, plugin e etc.
-- `gatsby-node.js` — implemente as APIs em Node.js do Gatsby para, customizar e extender configurações padrão que, afetam o processo de compilação
-- `gatsby-browser.js` — personalize e, extenda as configurações padrão que afetam o navegador, utilizando as APIs do Gatsby para navegadores.
-- `gatsby-ssr.js` — utilize as APIs de SSR (_server-side rendering_) do Gatsby para, customizar configurações padrão que, afetam a renderização no lado do servidor
+- `gatsby-config.js` — configura opções para um site Gatsby, com metadados do projeto, como título, descrição, plugin e etc.
+- `gatsby-node.js` — implementa as APIs em Node.js do Gatsby para, customizar e extender configurações padrão que, afetam o processo de compilação
+- `gatsby-browser.js` — personaliza e, extende as configurações padrão que afetam o navegador, utilizando as APIs do Gatsby para navegadores.
+- `gatsby-ssr.js` — utiliza as APIs de SSR (_server-side rendering_) do Gatsby para customizar configurações padrão que afetam a renderização no lado do servidor
 
 ### Recursos adicionais
 
@@ -247,4 +247,4 @@ export default function DogTemplate({ pageContext: { dog } }) {
 
 - Sessão do tutorial em [Crie páginas programaticamente a partir de dados](/docs/tutorial/part-seven/index.md)
 - Guia de referência em [usando Gatsby sem GraphQL](/docs/docs/using-gatsby-without-graphql.md)
-- [Repositório exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) para este tutorial
+- [Repositório exemplo](https://github.com/gatsbyjs/gatsby/tree/master/examples/recipe-createPage) para esta receita
