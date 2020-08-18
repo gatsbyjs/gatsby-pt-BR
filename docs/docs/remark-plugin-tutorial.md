@@ -109,7 +109,7 @@ Adicionalmente, o [AST Explorer](https://astexplorer.net/#/gist/d9029a2e8827265f
 
 ## Configurando um plugin
 
-Você irá criar um plugin que fará com que todos os cabeçalhos de alto-nível no Markdown tenham a cor roxa.
+Você irá criar um plugin que fará com que todos os cabeçalhos de alto nível no Markdown tenham a cor roxa.
 
 Primeiro, crie um plugin local adicionando um diretório `plugins` ao seu site e gerando um arquivo `package.json` para ele. Crie também um arquivo `index.js`. Nesse arquivo, exportaremos uma função que irá ser invocada pelo `gatsby-transformer-remark`:
 
