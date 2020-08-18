@@ -168,7 +168,7 @@ Caso queira adicionar mais opções, você poderá mudar para a sintaxe de objet
 
 Quando estiver modificando nós, você irá querer navegar pela árvore e então implementar novas funcionalidades em nós específicos.
 
-Um node-module que pode lhe ajudar é o [unist-util-visit](https://github.com/syntax-tree/unist-util-visit), um navegador para nós `unist`. Para referência, Unist (Unified Syntax Tree) é um padrão adotado por árvores de sintaxe Markdown e interpretadores que inclui interpretadores já bem conhecidos no mundo do Gatsby como Remark e MDX.
+Um node module que pode lhe ajudar é o [unist-util-visit](https://github.com/syntax-tree/unist-util-visit), um navegador para nós `unist`. Para referência, Unist (Unified Syntax Tree) é um padrão adotado por árvores de sintaxe Markdown e interpretadores que inclui interpretadores já bem conhecidos no mundo do Gatsby como Remark e MDX.
 
 Como exemplificado no arquivo README do `unist-util-visit`, isso permite que uma interface visite nós particulares baseados em uma tipagem particular:
 
