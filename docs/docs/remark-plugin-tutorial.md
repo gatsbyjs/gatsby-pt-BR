@@ -187,7 +187,7 @@ function visitor(node) {
 
 Aqui, ele encontrará todos os nós de texto e irá logar todos com um `console.log`. O segundo argumento pode ser substituído com qualquer tipagem descrita na [especificação Markdown AST (mdast)](https://github.com/syntax-tree/mdast#nodes) do Unist, incluindo tipagens como `paragraph`, `blockquote`, `link`, `image` ou, em nosso caso, `heading`.
 
-Com essa técnica em mente, nós podemos atravessar a AST similarmente com o seu plugin e adicionar uma funcionalidade adicional desta forma:
+Com essa técnica em mente, você pode atravessar a AST similarmente com o seu plugin e adicionar uma funcionalidade adicional desta forma:
 
 ```js:title=plugins/gatsby-remark-purple-headers/index.js
 const visit = require("unist-util-visit")
