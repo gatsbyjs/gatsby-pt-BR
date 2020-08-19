@@ -8,7 +8,7 @@ Muitos sites exigem que os usuários sejam autenticados para proteger dados priv
 
 Em muitos sites modernos, o [cliente](/docs/glossary#client-side) -- ou [frontend](/docs/glossary#frontend) -- é [desacoplado](/docs/glossary#decoupled) do [backend](/docs/glossary#backend). Esse padrão é como o Gatsby funciona para combinar dados de uma infinidade de fontes (backends) para facilitar a construção do front-end.
 
-Para fornecer funcionalidade de autenticação, outro serviço deve ser aproveitado e conectado ao Gatsby. Existem muitas tecnologias de _open source_ que podem fornecer essa funcionalidade. Alguns exemplos são:
+Para fornecer funcionalidade de autenticação, outro serviço deve ser aproveitado e conectado ao Gatsby. Existem muitas tecnologias _open source_ que podem fornecer essa funcionalidade. Alguns exemplos são:
 
 - Um aplicação Node.js usando Passport.js
 - Uma API Ruby on Rails usando Devise
@@ -24,7 +24,7 @@ Essas ferramentas seguem um processo para verificar um usuário no cliente em re
 
 ![Diagrama do Gatsby utilizando um serviço de autenticação para buscar dados de uma API](./images/basic-auth.png)
 
-1. Inicialmente, uma requisição é feita de um Gatsby site (o cliente) para um serviço de autenticação para realizar uma ação como registrar um novo usuário ou _login_.
+1. Inicialmente, uma requisição é feita de um site Gatsby (o cliente) para um serviço de autenticação para realizar uma ação como registrar um novo usuário ou _login_.
 
 2. Se as credenciais (como o _username_ e _password_) fornecidos pelo cliente corresponderem a um usuário no serviço de autenticação, o serviço retornará um _token_ (por exemplo, um JSON Web Token, abreviado como JWT), então o usuário tem a chave que ele pode usar para provar quem ele diz ser. Os dados do usuário retornados podem ser guardados na aplicação Gatsby passando eles para os componentes usando um componente de Provider por meio da React Context API e [`wrapRootElement` API](/docs/browser-apis/#wrapRootElement) do Gatsby.
 
@@ -36,7 +36,7 @@ _**Note**: esse é o mesmo padrão que outros sites criados com o React(como Cre
 
 ## Implementando autenticação em um site Gatsby
 
-Há algumas coisas a serem observadas ao implementar a autenticação em um site do Gatsby, por causa de como o Gatsby cria páginas de forma exclusiva e renderiza ativos estáticos com recursos dinâmicos.
+Há algumas coisas a serem observadas ao implementar autenticação em um site do Gatsby, por causa de como o Gatsby cria páginas de forma exclusiva e renderiza assets estáticos com recursos dinâmicos.
 
 ### Configurando Rotas Somente para o Cliente
 
