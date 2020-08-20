@@ -252,4 +252,4 @@ Com as configurações acima, você poderá utilizar a sintaxe padrão para imag
 
 ```markdown
 ![George o Gato](./george-cat.png)
-```
+``` 
