@@ -51,7 +51,7 @@ featuredImage: cachorro-fofinho.png
 O conteúdo será inserido aqui!
 ```
 
-O próximo passo é incorporar os dados em um modelo usando uma query GraphQL, que será vista futuramente nesse guia.
+O próximo passo é incorporar os dados em um modelo usando uma query GraphQL, que será vista futuramente neste guia.
 
 ### Configurando para imagens e posts em diretórios diferentes
 
