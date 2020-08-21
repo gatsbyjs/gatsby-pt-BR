@@ -2,7 +2,7 @@
 title: Progressive Web Apps (PWAs)
 ---
 
-## O que é uma Progressive Web App?
+## O que é um Progressive Web App?
 
 Aplicação da Web Progressiva do inglês "Progressive web app" (PWA) é um termo geral para a nova filosofia de criação de sites e um termo específico com um conjunto estabelecido de três requisitos explícitos, testáveis e padronizados.
 
