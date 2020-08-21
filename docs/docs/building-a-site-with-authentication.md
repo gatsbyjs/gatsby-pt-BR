@@ -1,50 +1,50 @@
 ---
-title: Building a Site with Authentication
+title: Construindo um site com autenticação
 ---
 
-Many sites require users to be authenticated in order to protect private data.
+Muitos sites exigem que os usuários sejam autenticados para proteger dados privados.
 
-## Understanding authentication between client and server
+## Compreendendo a autenticação entre cliente e servidor
 
-In many modern websites, the [client](/docs/glossary#client-side) -- or [frontend](/docs/glossary#frontend) -- is [decoupled](/docs/glossary#decoupled) from the [backend](/docs/glossary#backend). This pattern is how Gatsby functions to combine data from a myriad of backend sources to facilitate building the frontend.
+Em muitos sites modernos, o [cliente](/docs/glossary#client-side) -- ou [frontend](/docs/glossary#frontend) -- é [desacoplado](/docs/glossary#decoupled) do [backend](/docs/glossary#backend). Esse padrão é como o Gatsby funciona para combinar dados de uma infinidade de fontes (backends) para facilitar a construção do front-end.
 
-In order to provide authentication functionality, another service has to be leveraged and connected to Gatsby. There are many open source technologies than can provide this functionality. Examples include:
+Para fornecer funcionalidade de autenticação, outro serviço deve ser aproveitado e conectado ao Gatsby. Existem muitas tecnologias _open source_ que podem fornecer essa funcionalidade. Alguns exemplos são:
 
-- A Node.js app using Passport.js
-- A Ruby on Rails API using Devise
+- Um aplicação Node.js usando Passport.js
+- Uma API Ruby on Rails usando Devise
 
-Another option are third party technologies like:
+Outra opção são tecnologias de terceiros como:
 
 - Firebase
 - Auth0
 - AWS Amplify
 - Netlify Identity
 
-These tools follow a process in order to verify a user on the client against an authentication service. The service returns a token that the client can use to access protected data. This diagram visualizes the process:
+Essas ferramentas seguem um processo para verificar um usuário no cliente em relação a um serviço de autenticação. O serviço retorna um _token_ que o cliente pode usar para acessar dados protegidos. Este diagrama visualiza o processo:
 
-![Diagram of Gatsby using an authentication service to get data from an API](./images/basic-auth.png)
+![Diagrama do Gatsby utilizando um serviço de autenticação para buscar dados de uma API](./images/basic-auth.png)
 
-1. First, a request is made from a Gatsby site (the client) to an authentication service to perform an action like register a new user or login.
+1. Inicialmente, uma requisição é feita de um site Gatsby (o cliente) para um serviço de autenticação para realizar uma ação como registrar um novo usuário ou _login_.
 
-2. If the credentials (like a username and password) provided from the client match a user in the authentication service, it returns a token (like a JSON Web Token, abbreviated as JWT) so the user has a key they can use to prove they are who they say they are. The user data returned can be stored in the Gatsby app by passing it to components using a Provider component with the React Context API and [`wrapRootElement` API](/docs/browser-apis/#wrapRootElement) from Gatsby.
+2. Se as credenciais (como o _username_ e _password_) fornecidos pelo cliente corresponderem a um usuário no serviço de autenticação, o serviço retornará um _token_ (por exemplo, um JSON Web Token, abreviado como JWT), então o usuário tem a chave que ele pode usar para provar quem ele diz ser. Os dados do usuário retornados podem ser guardados na aplicação Gatsby passando eles para os componentes usando um componente de Provider por meio da React Context API e [`wrapRootElement` API](/docs/browser-apis/#wrapRootElement) do Gatsby.
 
-3. With the key, the client can make a request to an external data source like an API (the server) where protected data is stored. The key is unique to a specific user and allows the client to access their specific data.
+3. Com a chave o cliente pode fazer requisições para uma fonte externa de dados como uma API (o servidor) onde os dados protegidos são armazenados. A chave é exclusiva para um usuário específico e permite que o cliente acesse seus dados específicos.
 
-4. The server returns data back to the client that it can use to pass information into components.
+4. O servidor retorna os dados de volta ao cliente que podem ser usados para passar informações aos componentes.
 
-_**Note**: this is the same pattern that other sites built with React (like Create React App) would need to follow._
+_**Note**: esse é o mesmo padrão que outros sites criados com o React(como Create React App) precisam seguir._
 
-## Implementing authentication in a Gatsby site
+## Implementando autenticação em um site Gatsby
 
-There are a few things to be aware of when implementing authentication in a Gatsby site, because of how Gatsby uniquely builds pages and renders static assets with dynamic capabilities.
+Há algumas coisas a serem observadas ao implementar autenticação em um site do Gatsby, por causa de como o Gatsby cria páginas de forma exclusiva e renderiza assets estáticos com recursos dinâmicos.
 
-### Setting up client-only routes
+### Configurando Rotas Somente para o Cliente
 
-With Gatsby, you are able to create restricted areas in your app using [client-only routes](/docs/building-apps-with-gatsby/#client-only-routes).
+Com o Gatsby, você pode criar áreas restritas no seu aplicativo usando [rotas do cliente](/docs/building-apps-with-gatsby/#client-only-routes).
 
-Gatsby is a little [different from a traditional React app](/docs/adding-app-and-website-functionality/#differences-between-gatsby-and-other-react-apps) in how its routes and pages are created. Because static HTML files generated by Gatsby sit on a file server, you cannot programmatically control access to those files (for example: a user could guess or type in a URL and navigate straight to the page). As the [section from the Adding App and Website functionality](/docs/adding-app-and-website-functionality/#client-only-routes) overview page demonstrates, client-only routes can be created to route a user between pages using a React-based router, as opposed to navigating between different static HTML files on a server.
+Gatsby é um pouco [diferente de um aplicativo tradicional do React](/docs/adding-app-and-website-functionality/#differences-between-gatsby-and-other-react-apps) em como suas rotas e páginas são criadas. Como os arquivos HTML estáticos gerados pelo Gatsby ficam em um servidor de arquivos, você não pode controlar programaticamente o acesso a esses arquivos (por exemplo: um usuário pode adivinhar ou digitar um URL e navegar diretamente para a página). Como a seção [adicionando funcionalidade de aplicativo e site](/docs/adding-app-and-website-functionality/#client-only-routes) página de visão geral demonstra, é possível criar rotas apenas para clientes para rotear um usuário entre páginas usando um roteador baseado no React, em vez de navegar entre diferentes arquivos HTML estáticos em um servidor.
 
-Taking advantage of this client-side routing allows you to protect or customize your routes. Using the [`@reach/router` library](https://reach.tech/router/), which comes installed with Gatsby, you can set up a router on a page and control which component loads when a certain route is called, and check for the existence of a variable like authentication state before serving the content.
+Aproveitar esse roteamento do lado do cliente permite proteger ou personalizar suas rotas. Usando a [`@reach/router` library](https://reach.tech/router/), que vem instalada com o Gatsby, você pode configurar um roteador em uma página e controlar qual componente é carregado quando uma determinada rota é chamada e verifique a existência de uma variável como o estado de autenticação antes de veicular o conteúdo.
 
 <!-- prettier-ignore -->
 ```jsx
@@ -53,13 +53,13 @@ Taking advantage of this client-side routing allows you to protect or customize 
 </Router>
 ```
 
-More specific code examples for this pattern are outlined in the [Client-only Routes & User Authentication guide](/docs/client-only-routes-and-user-authentication/#implementing-client-only-routes).
+Exemplos de código mais específicos para esse padrão estão descritos em [Rotas somente para clientes e guia de autenticação do usuário](/docs/client-only-routes-and-user-authentication/#implementing-client-only-routes).
 
-### Protecting code from accessing browser globals during build
+### Protegendo o código contra o acesso global ao navegador durante a compilação
 
-Global objects that are accessible in the browser like `localStorage` aren't available while a Gatsby site is building, because the build runs in a Node.js environment.
+Objetos globais acessíveis no navegador como `localStorage` não estão disponíveis enquanto um site do Gatsby está em construção, porque a compilação é executada em um ambiente Node.js.
 
-However, some third party services might try and access `localStorage` or the `window` object with internal methods. To keep those snippets from breaking the build, those invocations should be wrapped in checks or `useEffect` hooks to verify that the code is running in the browser and is skipped during the build process:
+No entanto, alguns serviços de terceiros podem tentar acessar o `localStorage` ou o objeto`window` com métodos internos. Para impedir que esses trechos quebrem a compilação, essas invocações devem ser agrupadas em condições ou hooks, `useEffect`, para verificar se o código está em execução no navegador e é ignorado durante o processo de compilação:
 
 ```javascript
 import app from "firebase/app"
@@ -71,15 +71,15 @@ if (typeof window !== 'undefined') { // highlight-line
 } // highlight-line
 ```
 
-More information on build related errors is available in the guide on [debugging HTML builds](/docs/debugging-html-builds/).
+Mais informações sobre erros relacionados à compilação estão disponíveis no guia em [debugging artefatos HTML](/docs/debugging-html-builds/).
 
-## Real-world example: Gatsby store
+## Exemplo do mundo real: loja do Gatsby
 
-The [Gatsby store](https://github.com/gatsbyjs/store.gatsbyjs.org) is a live application built with Gatsby that implements authentication using Auth0.
+A [loja do Gatsby](https://github.com/gatsbyjs/store.gatsbyjs.org) é um aplicativo ao vivo criado com o Gatsby que implementa a autenticação usando o Auth0.
 
-[Util functions](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js) in the Gatsby Store repo make use of Auth0's APIs to authenticate users with GitHub, and wrap Auth0's APIs to check that [some of the Auth0 code runs only in the browser](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js#L3).
+[Funções utilitárias](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js) no repositório da Gatsby Store, usam as APIs do Auth0 para autenticar usuários com o GitHub e englobam as APIs do Auth0 para garantir que [alguns dos códigos Auth0 são executados apenas no navegador](https://github.com/gatsbyjs/store.gatsbyjs.org/blob/master/src/utils/auth.js#L3).
 
-In order to protect authenticated content with a private route, a `<Router />` is implemented in the `<PrivateRoute />` component that checks whether a user is authenticated or reroutes them to `/login`.
+Para proteger o conteúdo autenticado com uma rota privada, um `<Router />` é implementado no componente `<PrivateRoute />` que verifica se um usuário está autenticado ou o redireciona para `/ login`.
 
 ```jsx
 // import ...
@@ -102,16 +102,16 @@ const PrivateRoute = ({ component: Component, ...rest }) => {
 }
 ```
 
-This private route pattern is also covered in the [tutorial on making a site with authentication](/tutorial/authentication-tutorial/#controlling-private-routes).
+Esse padrão de rota particular também é abordado no [tutorial sobre como criar um site com autenticação](/tutorial/authentication-tutorial/#controller-private-routes).
 
-## Further reading
+## Leitura adicional
 
-If you want more information about authenticated areas with Gatsby, this (non-exhaustive list) may help:
+Se você quiser obter mais informações sobre áreas autenticadas com Gatsby, isso (lista não exaustiva) pode ajudar:
 
-- [Making a site with user authentication](/tutorial/authentication-tutorial), an advanced Gatsby tutorial
-- [Gatsby repo "simple auth" example](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
-- [Live version of the "simple auth" example](https://simple-auth.netlify.com/)
-- [A Gatsby email _application_](https://github.com/DSchau/gatsby-mail), using React Context API to handle authentication
-- [Add Authentication to your Gatsby apps with Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (livestream with Jason Lengstorf)
-- [Add Authentication to your Gatsby apps with Okta](https://www.youtube.com/watch?v=7b1iKuFWVSw&t=9s)
-- [Other authentication-related posts on the Gatsby blog](/blog/tags/authentication/)
+- [Criando um site com autenticação de usuário](/tutorial/authentication-tutorial), um tutorial avançado do Gatsby
+- [Exemplo de "autenticação simples" do repositório Gatsby](https://github.com/gatsbyjs/gatsby/tree/master/examples/simple-auth)
+- [Versão ao vivo do exemplo "autenticação simples"](https://simple-auth.netlify.com/)
+- [Uma aplicação de email Gatsby](https://github.com/DSchau/gatsby-mail), usando a API do React Context para lidar com a autenticação
+- [Adicione autenticação aos seus aplicativos Gatsby com Auth0](/blog/2019-03-21-add-auth0-to-gatsby-livestream/) (livestream com Jason Lengstorf)
+- [Adicione autenticação aos seus aplicativos Gatsby com Okta](https://www.youtube.com/watch?v=7b1iKuFWVSw&t=9s)
+- [Outras postagens relacionadas à autenticação no blog Gatsby](/blog/tags/authentication/)
