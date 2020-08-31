@@ -2,58 +2,58 @@
 title: Progressive Web Apps (PWAs)
 ---
 
-## What is a Progressive Web App?
+## O que é um Progressive Web App?
 
-"Progressive web app" (PWA) is both a general term for a new philosophy toward building websites and a specific term with an established set of three explicit, testable, baseline requirements.
+Aplicação da Web Progressiva do inglês "Progressive web app" (PWA) é um termo geral para a nova filosofia de criação de sites e um termo específico com um conjunto estabelecido de três requisitos explícitos, testáveis e padronizados.
 
-As a general term, the PWA approach is characterized by striving to satisfy the [following set of attributes](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/):
+Como um termo geral, a abordagem do PWA é caracterizada por empenhar-se em satisfazer o [seguinte conjunto de atributos](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/):
 
-1.  Responsive
-2.  Connectivity independent
-3.  App-like-interactions
-4.  Fresh
-5.  Safe
-6.  Discoverable
-7.  Re-engageable
-8.  Installable
-9.  Linkable
+1.  Responsivo
+2.  Independente de Conectividade
+3.  Semelhante a apps nativas
+4.  Sempre atualizado
+5.  Seguro
+6.  Descobrível
+7.  Reengajável
+8.  Instalável
+9.  "Linkável"
 
-As a specific term, websites can be tested against the following [three baseline criteria](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/) to qualify as a PWA:
+Como um termo específico, para serem classificadas como PWA os sites podem ser testados conforme os seguintes [três critérios de base](https://infrequently.org/2016/09/what-exactly-makes-something-a-progressive-web-app/):
 
-1.  It must run under HTTPS.
-2.  It must include a Web App Manifest.
-3.  It must implement a service worker.
+1.  Deve ser executado sob protocolo HTTPS.
+2.  Deve incluir o Web App Manifest.
+3.  Deve implementar um _service worker_.
 
-PWAs are apps delivered through the web (as opposed to native apps, which are packaged and deployed through stores). As Alex Russell, who together with Frances Berriman [coined the term PWA](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/), said:
+Os PWAs são apps derivadas da web (contrariamente às aplicações nativas, que são empacotadas e implantadas através de lojas de aplicativos). Como o Alex Russell, que juntamente com o Francês Berriman [cunhou o termo PWA](https://infrequently.org/2015/06/progressive-apps-escaping-tabs-without-losing-our-soul/), disse:
 
-> they're just websites that took all the right vitamins.
+> são apenas sites que tomaram todas as vitaminas certas.
 
-## How is a Gatsby site a Progressive Web App?
+## Como um site da Gatsby é uma Progressive Web App?
 
-Gatsby is designed to provide top-notch performance out of the box. It handles code splitting, code minification, and optimizations like pre-loading in the background, image processing, etc., so that the site you build is highly performant, without any kind of manual tuning. These performance features are a big part of supporting the progressive web app approach.
+O Gatsby foi projetado para fornecer desempenho de primeira qualidade imediatamente. Ele lida com divisão de código, minimização de código e otimizações como pré-carregamento em segundo plano, processamento de imagem, etc., para que o site que você constrói tenha alto desempenho, sem qualquer tipo de ajuste manual. Esses recursos de desempenho são uma grande parte do suporte à abordagem Progressive Web App.
 
-Then there are the three baseline criteria for a site to qualify as a PWA.
+Então existem três critérios base para um site ser classificado como PWA.
 
-### It must run under HTTPS
+### Deve ser executado sob protocolo HTTPS
 
-Running your site under HTTPS is a highly recommended security practice, no matter the content of your site. Specifically concerning progressive web apps, running under HTTPS is a criterion for many new browser features that are required for Progressive Web Apps to work.
+Executar sob protocolo HTTPS é uma prática de segurança extremamente recomendada, não importa o conteúdo do site. Especificamente sobre aplicativos da web progressivos, a execução em HTTPS é um critério para muitos novos recursos do navegador necessário para o funcionamento das Progressive Web Apps.
 
-This one's all you!
+Este depende de você!
 
-### It must include a Web App Manifest
+### Deve incluir o Web App Manifest
 
-A [Web App manifest](https://www.w3.org/TR/appmanifest/) is a JSON file that provides the browser with information about your web app, and makes it possible for users to save to their home screen.
+O [Web App Manifest](https://www.w3.org/TR/appmanifest/) é um ficheiro JSON que fornece ao navegador informações sobre o seu aplicativo Web e possibilita que os usuários salvem na tela inicial.
 
-It includes information like the Web App's `name`, `icons`, `start_url`, `background-color` and [more](https://developers.google.com/web/fundamentals/web-app-manifest/).
+Inclui informações do aplicativo web tais como `name`, `icons`, `start_url`, `background-color` e [mais](https://developers.google.com/web/fundamentals/web-app-manifest/).
 
-Gatsby provides a plugin interface to add support for shipping a manifest with your site -- [gatsby-plugin-manifest](/packages/gatsby-plugin-manifest).
+Gatsby fornece uma interface de plug-in para adicionar suporte ao envio de um _manifest_ com seu site -- [gatsby-plugin-manifest](/packages/gatsby-plugin-manifest).
 
-### It must implement a service worker
+### Deve implementar um service worker
 
-A [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) provides support for an offline experience for your site, and makes your site more resilient to bad network connections.
+Um [service worker](https://developers.google.com/web/fundamentals/primers/service-workers/) fornece suporte para uma experiência _offline_ para o seu site, e torna o seu site mais resistente a más conexões de rede.
 
-It's a script that runs separately in the background, supporting features like push notifications and background sync.
+É um script executado separadamente em segundo plano, suportando recursos como notificações push e sincronização em segundo plano.
 
-Gatsby also provides a plugin interface to create and load a service worker into your site -- [**gatsby-plugin-offline**](/packages/gatsby-plugin-offline).
+Gatsby fornece uma interface de plugin para criar e carregar um _service worker_ em seu site -- [**gatsby-plugin-offline**](/packages/gatsby-plugin-offline).
 
-We recommend using this plugin together with the [manifest plugin](/packages/gatsby-plugin-manifest). (Don't forget to list the `offline` plugin after the `manifest` plugin so that the manifest file can be included in the service worker).
+Recomendamos o uso do plugin juntamente com o [plugin manifest](/packages/gatsby-plugin-manifest). (Não se esqueça de listar o plugin `offline` depois do plugin `manifest` para que o arquivo de _manifest_ seja incluído no _service worker_).
