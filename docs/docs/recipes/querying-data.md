@@ -1,23 +1,23 @@
 ---
-title: "Recipes: Querying Data"
+title: "Receitas: Requisitando dados"
 tableOfContentsDepth: 1
 ---
 
-Gatsby lets you access your data across all sources using a single GraphQL interface.
+O Gatsby permite que você acesse seus dados em todas as origens usando uma única interface em GraphQL.
 
-## Querying data with a Page Query
+## Requisitando dados com uma requisição de página
 
-You can use the `graphql` tag to query data in the pages of your Gatsby site. This gives you access to anything included in Gatsby's data layer, such as site metadata, source plugins, images, and more.
+Você pode usar a tag `graphql` para requisitar dados nas páginas do seu site. Isso lhe dá acesso a tudo que esta incluso na camada de dados do Gatsby, tais quais os metadados do site, [plugins de origem](/tutorial/part-five), imagens e mais.
 
-### Directions
+### Instruções
 
-1. Import `graphql` from `gatsby`.
+1. Importe `graphql` de `gatsby`.
 
-2. Export a constant named `query` and set its value to be a `graphql` template with the query between two backticks.
+2. Exporte uma constante chamada `query` e defina seu valor tal qual um template `graphql` com a requisição entre duas crases.
 
-3. Pass in `data` as a prop to the component.
+3. Passe uma prop para o componente chamada `data`.
 
-4. The `data` variable holds the queried data and can be referenced in JSX to output HTML.
+4. A variável `data` contém os dados requisitados e pode ser referenciada em JSX para gerar HTML.
 
 ```jsx:title=src/pages/index.js
 import React from "react"
@@ -28,7 +28,7 @@ import Layout from "../components/layout"
 
 // highlight-start
 export const query = graphql`
-  query HomePageQuery {
+  query PaginaInicialQuery {
     site {
       siteMetadata {
         title
@@ -39,38 +39,38 @@ export const query = graphql`
 // highlight-end
 
 // highlight-next-line
-const IndexPage = ({ data }) => (
+const PaginaIndex = ({ data }) => (
   <Layout>
     // highlight-next-line
     <h1>{data.site.siteMetadata.title}</h1>
   </Layout>
 )
 
-export default IndexPage
+export default PaginaIndex
 ```
 
-### Additional resources
+### Recursos adicionais
 
-- [GraphQL and Gatsby](/docs/graphql/): understanding the expected shape of your data
-- [More on querying data in pages with GraphQL](/docs/page-query/)
-- [MDN on Tagged Template Literals](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals) like the ones used in GraphQL
+- [GraphQL e Gatsby](/docs/graphql/): compreendendo a estrutura esperada dos seus dados
+- [Mais sobre como requisitar dados em páginas com GraphQL](/docs/page-query/)
+- [Documentação de Tagged Template Literals no MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals), que nem os usados em GraphQL
 
-## Querying data with the StaticQuery Component
+## Requisitando dados com o componente StaticQuery
 
-`StaticQuery` is a component for retrieving data from Gatsby's data layer in [non-page components](/docs/static-query/), such as a header, navigation, or any other child component.
+`StaticQuery` é um componente para buscar dados da camada de dados de Gatsby em [componentes que não representam páginas](/docs/static-query/), tal qual um cabeçalho, navegação ou qualquer outro componente filho.
 
-### Directions
+### Instruções
 
-1. The `StaticQuery` Component requires two render props: `query` and `render`.
+1. O componente `StaticQuery` pede duas propriedades de renderização: `query` e `render`.
 
-```jsx:title=src/components/NonPageComponent.js
+```jsx:title=src/components/ComponenteFilho.js
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 
-const NonPageComponent = () => (
+const ComponenteFilho = () => (
   <StaticQuery
     query={graphql` // highlight-line
-      query NonPageQuery {
+      query ComponenteFilhoReq {
         site {
           siteMetadata {
             title
@@ -82,45 +82,45 @@ const NonPageComponent = () => (
       data // highlight-line
     ) => (
       <h1>
-        Querying title from NonPageComponent with StaticQuery:
+        requisição do o título de ComponenteFilho com StaticQuery:
         {data.site.siteMetadata.title}
       </h1>
     )}
   />
 )
 
-export default NonPageComponent
+export default ComponenteFilho
 ```
 
-2. You can now use this component as you would [any other component](/docs/building-with-components#non-page-components) by importing it into a larger page of JSX components and HTML markup.
+2. Agora você pode usar esse componente como faria com [qualquer outro](/docs/building-with-components#non-page-components), importando-o para uma página composta por outros componentes JSX e marcação HTML.
 
-## Querying data with the useStaticQuery hook
+## Requisitado dados com o hook useStaticQuery
 
-Since Gatsby v2.1.0, you can use the `useStaticQuery` hook to query data with a JavaScript function instead of a component. The syntax removes the need for a `<StaticQuery>` component to wrap everything, which some people find simpler to write.
+Desde a v2.1.0 do Gatsby, você pode usar o hook `useStaticQuery` para requisitar dados com uma função JavaScript ao invés de usar um componente exclusivo para os dados. A sintaxe do hook elimina a necessidade de um componente `<StaticQuery>` para encapsular tudo, simplificando a forma de escrever para algumas pessoas.
 
-The `useStaticQuery` hook takes a GraphQL query and returns the requested data. It can be stored in a variable and used later in your JSX templates.
+O hook `useStaticQuery` pega uma requisição GraphQL e retorna os dados solicitados. Ele pode ser armazenado em uma variável e usado posteriormente em seus templates JSX.
 
-### Prerequisites
+### Pré-requisitos
 
-- You'll need React and ReactDOM 16.8.0 or later (keeping Gatsby updated handles this)
-- Recommended reading: the [Rules of React Hooks](https://reactjs.org/docs/hooks-rules.html)
+- Você precisará do React e do ReactDOM 16.8.0 ou posterior (manter o Gatsby atualizado garate disso)
+- Leitura recomendada: as [Regras dos Hooks em React](https://reactjs.org/docs/hooks-rules.html)
 
-### Directions
+### Instruções
 
-1. Import `useStaticQuery` and `graphql` from `gatsby` in order to use the hook query the data.
+1. Importe `useStaticQuery` e `graphql` de `gatsby` para usar a requisição de hook para pegar os dados.
 
-2. In the start of a stateless functional component, assign a variable to the value of `useStaticQuery` with your `graphql` query passed as an argument.
+2. No início de um componente funcional sem estado, atribua uma variável ao valor de `useStaticQuery` com a requisição `graphql` passada como um argumento.
 
-3. In the JSX code returned from your component, you can reference that variable to handle the returned data.
+3. No código JSX retornado de seu componente, você pode referenciar essa variável para lidar com os dados retornados.
 
-```jsx:title=src/components/NonPageComponent.js
+```jsx:title=src/components/ComponenteFilho.js
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby" //highlight-line
 
-const NonPageComponent = () => {
+const ComponenteFilho = () => {
   // highlight-start
   const data = useStaticQuery(graphql`
-    query NonPageQuery {
+    query ComponenteFilhoReq {
       site {
         siteMetadata {
           title
@@ -131,37 +131,37 @@ const NonPageComponent = () => {
   // highlight-end
   return (
     <h1>
-      Querying title from NonPageComponent: {data.site.siteMetadata.title}{" "}
+      Requisição do título de ComponenteFilho: {data.site.siteMetadata.title}{" "}
       //highlight-line
     </h1>
   )
 }
 
-export default NonPageComponent
+export default ComponenteFilho
 ```
 
-### Additional resources
+### Recursos adicionais
 
-- [More on Static Query for querying data in components](/docs/static-query/)
-- [The difference between a static query and a page query](/docs/static-query/#how-staticquery-differs-from-page-query)
-- [More on the useStaticQuery hook](/docs/use-static-query/)
-- [Visualize your data with GraphiQL](/docs/introducing-graphiql/)
+- [Mais sobre Static Query para requisitar dados em componentes](/docs/static-query/)
+- [A diferença entre uma requisição estática e uma requisição de página](/docs/static-query/#how-staticquery-differs-from-page-query)
+- [Mais sobre o hook useStaticQuery](/docs/use-static-query/)
+- [Visualize seus dados com GraphiQL](/docs/introducing-graphiql/)
 
-## Limiting with GraphQL
+## Limitando com GraphQL
 
-When querying for data with GraphQL, you can limit the number of results returned with a specific number. This is helpful if you only need a few pieces of data or need to [paginate data](/docs/adding-pagination/).
+Ao requisitar dados com GraphQL, você pode limitar o número de resultados retornados com um valor específico. Isso é útil caso você precise só de alguns dados ou se precisar [paginar os dados](/docs/add-pagination/).
 
-To limit data, you'll need a Gatsby site with some nodes in the GraphQL data layer. All sites have some nodes like `allSitePage` and `sitePage` created automatically: more can be added by installing source plugins like `gatsby-source-filesystem` in `gatsby-config.js`.
+Para limitar os dados, você precisará de um site com alguns nós na camada de dados GraphQL. Todos os sites têm alguns nós como `allSitePage` e `sitePage` criados automaticamente: mais podem ser adicionados instalando plugins de origem como `gatsby-source-filesystem` em `gatsby-config.js`.
 
-### Prerequisites
+### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start/)
+- Um [site Gatsby](/docs/quick-start/)
 
-### Directions
+### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open a tab in your browser at: `http://localhost:8000/___graphql`.
-3. Add a query in the editor with the following fields on `allSitePage` to start off:
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra uma guia em seu navegador em: `http://localhost:8000/___graphql`.
+3. Adicione uma requisição no editor com os seguintes campos em `allSitePage` para começar:
 
 ```graphql
 {
@@ -176,7 +176,7 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
 }
 ```
 
-4. Add a `limit` argument to the `allSitePage` field and give it an integer value `3`.
+4. Adicione um argumento `limit` ao campo `allSitePage` e dê a ele um valor inteiro `3`.
 
 ```graphql
 {
@@ -191,37 +191,37 @@ To limit data, you'll need a Gatsby site with some nodes in the GraphQL data lay
 }
 ```
 
-5. Click the play button in the GraphiQL page and the data in the `edges` field will be limited to the number specified.
+5. Clique no botão reproduzir no GraphiQL e os dados no campo `edges` serão limitados ao número especificado.
 
-### Additional resources
+### Recursos adicionais
 
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- [Gatsby GraphQL reference for limiting](/docs/graphql-reference/#limit)
-- Live example:
+- Saiba mais sobre [nós na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- [Referência Gatsby GraphQL para limite de dados](/docs/graphql-reference/#limit)
+- Exemplo ao vivo:
 
 <iframe
-  title="Limiting returned data"
+  title="Limitando dados retornados"
   src="https://711808k40x.sse.codesandbox.io/___graphql?query=%7B%0A%20%20allSitePage(limit%3A%203)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20path%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&explorerIsOpen=false"
   width="600"
   height="300"
 />
 
-## Sorting with GraphQL
+## Ordenação com GraphQL
 
-The ordering of your results can be specified with the GraphQL `sort` argument. You can specify which fields to sort by and the order to sort in.
+A ordem de seus resultados pode ser especificada através do argumento `sort` no GraphQL. Você pode especificar quais campos classificar e a ordem de classificação.
 
-For this recipe, you'll need a Gatsby site with a collection of nodes to sort in the GraphQL data layer. All sites have some nodes like `allSitePage` created automatically: more can be added by installing source plugins.
+Para esta receita, você precisará de um site Gatsby com uma coleção de nós para classificar na camada de dados GraphQL. Todos os sites têm alguns nós como `allSitePage` criados automaticamente: mais podem ser adicionados instalando plugins de origem.
 
-### Prerequisites
+### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- Queryable fields prefixed with `all`, e.g. `allSitePage`
+- Um [site Gatsby](/docs/quick-start)
+- Campos requisitáveis prefixados com `all`, por exemplo `allSitePage`
 
-### Directions
+### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor with the following fields on `allSitePage` to start off:
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL em uma guia do navegador em: `http://localhost:8000/___graphql`
+3. Adicione uma requisição no editor com os seguintes campos em `allSitePage` para começar:
 
 ```graphql
 {
@@ -236,7 +236,7 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
 }
 ```
 
-4. Add a `sort` argument to the `allSitePage` field and give it an object with the `fields` and `order` attributes. The value for `fields` can be a field or an array of fields to sort by (this example uses the `path` field), the `order` can be either `ASC` or `DESC` for ascending and descending respectively.
+4. Adicione um argumento `sort` ao campo`allSitePage` e dê a ele um objeto com os atributos `fields` e `order`. O valor para `fields` pode ser um campo ou uma matriz de campos para classificar (este exemplo usa o campo`path`), a `ordem` pode ser`ASC` ou `DESC` para ascendente e descendente respectivamente.
 
 ```graphql
 {
@@ -252,37 +252,37 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to sort in
 
 ```
 
-5. Click the play button in the GraphiQL page and the data returned will be sorted ascending by the `path` field.
+5. Clique no botão play na página GraphiQL e os dados retornados serão classificados em ordem crescente pelo campo `path`.
 
-### Additional resources
+### Recursos adicionais
 
-- [Gatsby GraphQL reference for sorting](/docs/graphql-reference/#sort)
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- Live example:
+- [Referência Gatsby GraphQL para ordenação](/docs/graphql-reference/#sort)
+- Saiba mais sobre [nós na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- Exemplo ao vivo:
 
 <iframe
-  title="Sorting data"
+   title = "Ordenando dados"
   src="https://711808k40x.sse.codesandbox.io/___graphql?query=%7B%0A%20%20allSitePage(sort%3A%20%7Bfields%3A%20path%2C%20order%3A%20ASC%7D)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20id%0A%20%20%20%20%20%20%20%20path%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&explorerIsOpen=false"
   width="600"
   height="300"
 />
 
-## Filtering with GraphQL
+## Filtrando com GraphQL
 
-Queried results can be filtered down with operators like `eq` (equals), `ne` (not equals), `in`, and `regex` on specified fields.
+Os resultados requisitados podem ser filtrados com operadores como `eq` (igual), `ne` (não igual), `in` e `regex` em campos especificados.
 
-For this recipe, you'll need a Gatsby site with a collection of nodes to filter in the GraphQL data layer. All sites have some nodes like `allSitePage` created automatically: more can be added by installing source and transformer plugins like `gatsby-source-filesystem` and `gatsby-transformer-remark` in `gatsby-config.js` to produce `allMarkdownRemark`.
+Para esta receita, você precisará de um site Gatsby com uma coleção de nós para filtrar na camada de dados GraphQL. Todos os sites têm alguns nós como `allSitePage` criados automaticamente: mais podem ser adicionados instalando plugins de fonte e transformador como `gatsby-source-filesystem` e `gatsby-transformer-mark` em `gatsby-config.js` para produzir `allMarkdownRemark`.
 
-### Prerequisites
+### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- Queryable fields prefixed with `all`, e.g. `allSitePage` or `allMarkdownRemark`
+- Um [site Gatsby](/docs/quick-start)
+- Campos consultáveis prefixados com `all`, por exemplo `allSitePage` ou `allMarkdownRemark`
 
-### Directions
+### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor using a field prefixed by 'all', like `allMarkdownRemark` (meaning that it will return a list of nodes)
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL em uma guia do navegador em: `http://localhost:8000/___graphql`
+3. Adicione uma requisição no editor usando um campo prefixado por 'all', como `allMarkdownRemark` (o que significa que retornará uma lista de nós)
 
 ```graphql
 {
@@ -299,7 +299,7 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
 }
 ```
 
-4. Add a `filter` argument to the `allMarkdownRemark` field and give it an object with the fields you'd like to filter by. In this example, Markdown content is filtered by the `categories` attribute in frontmatter metadata. The next value is the operator: in this case `eq`, or equals, with a value of 'magical creatures'.
+4. Adicione um argumento `filter` (filtro) ao campo `allMarkdownRemark` e dê a ele um objeto com os campos que você deseja filtrar. Neste exemplo, o conteúdo Markdown é filtrado pelo atributo `categories` nos metadados do frontmatter. O próximo valor é o operador: neste caso, `eq` (igual) com um valor de 'criaturas mágicas'.
 
 ```graphql
 {
@@ -316,33 +316,33 @@ For this recipe, you'll need a Gatsby site with a collection of nodes to filter 
 }
 ```
 
-5. Click the play button in the GraphiQL page. The data that matches the filter parameters should be returned, in this case only sourced Markdown files tagged with a category of 'magical creatures'.
+5. Clique no botão de reprodução na página GraphiQL. Os dados que correspondem aos parâmetros do filtro devem ser retornados, neste caso, apenas arquivos Markdown de origem marcados com uma categoria de 'criaturas mágicas'.
 
-### Additional resources
+### Recursos adicionais
 
-- [Gatsby GraphQL reference for filtering](/docs/graphql-reference/#filter)
-- [Complete list of possible operators](/docs/graphql-reference/#complete-list-of-possible-operators)
-- Learn about [nodes in Gatsby's GraphQL data API](/docs/node-interface/)
-- Live example:
+- [Referência Gatsby GraphQL para filtragem](/docs/graphql-reference/#filter)
+- [Lista completa de operadores possíveis](/docs/graphql-reference/#complete-list-of-possible-operators)
+- Saiba mais sobre [nós na API de dados GraphQL de Gatsby](/docs/node-interface/)
+- Exemplo ao vivo:
 
 <iframe
-  title="Filtering data"
+  title="Filtrando dados"
   src="https://711808k40x.sse.codesandbox.io/___graphql?query=%7B%0A%20%20allMarkdownRemark(filter%3A%20%7Bfrontmatter%3A%20%7Bcategories%3A%20%7Beq%3A%20%22magical%20creatures%22%7D%7D%7D)%20%7B%0A%20%20%20%20edges%20%7B%0A%20%20%20%20%20%20node%20%7B%0A%20%20%20%20%20%20%20%20frontmatter%20%7B%0A%20%20%20%20%20%20%20%20%20%20title%0A%20%20%20%20%20%20%20%20%20%20categories%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&explorerIsOpen=false"
   width="600"
   height="300"
 />
 
-## GraphQL Query Aliases
+## Alias de Requisição GraphQL
 
-You can rename any field in a GraphQL query with an alias.
+Você pode renomear qualquer campo em uma requisição GraphQL com um alias.
 
-If you would like to run two queries on the same datasource, you can use an alias to avoid a naming collision with two queries of the same name.
+Se você deseja executar duas requisiçãos na mesma fonte de dados, pode usar um alias para evitar uma colisão de nomes com duas requisiçãos com o mesmo nome.
 
-### Directions
+### Instruções
 
-1. Run `gatsby develop` to start the development server.
-2. Open the GraphiQL explorer in a browser tab at: `http://localhost:8000/___graphql`
-3. Add a query in the editor using two fields of the same name like `allFile`
+1. Execute `gatsby develop` para iniciar o servidor de desenvolvimento.
+2. Abra o GraphiQL explorer em uma guia do navegador em: `http://localhost:8000/___graphql`
+3. Adicione uma requisição no editor usando dois campos com o mesmo nome como `allFile`.
 
 ```graphql
 {
@@ -357,7 +357,7 @@ If you would like to run two queries on the same datasource, you can use an alia
 }
 ```
 
-4. Add the name you would like to use for any field before the name of the field in your GraphQL schema, separated by a colon. (E.g. `[alias-name]: [original-name]`)
+4. Adicione o nome que deseja usar para qualquer campo antes do nome do campo em seu esquema GraphQL, separado por dois pontos. (Por exemplo, `[alias-name]: [original-name]`)
 
 ```graphql
 {
@@ -372,29 +372,29 @@ If you would like to run two queries on the same datasource, you can use an alia
 }
 ```
 
-5. Click the play button in the GraphiQL page and 2 objects with alias names you provided should be output.
+5. Clique no botão play na página GraphiQL e 2 objetos com nomes de alias que você forneceu devem ser produzidos.
 
-### Additional resources
+### Recursos adicionais
 
-- [Gatsby GraphQL reference for aliasing](/docs/graphql-reference/#aliasing)
-- Live example:
+- [Referência sobre alias em Gatsby GraphQL](/docs/graphql-reference/#aliasing)
+- Exemplo ao vivo:
 
 <iframe
-  title="Using aliases"
+  title="Usando alias"
   src="https://711808k40x.sse.codesandbox.io/___graphql?query=%7B%0A%20%20fileCount%3A%20allFile%20%7B%20%0A%20%20%20%20totalCount%0A%20%20%7D%0A%20%20filePageInfo%3A%20allFile%20%7B%0A%20%20%20%20pageInfo%20%7B%0A%20%20%20%20%20%20currentPage%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D%0A&explorerIsOpen=false"
   width="600"
   height="300"
 />
 
-## GraphQL Query Fragments
+## Fragmentos de requisição GraphQL
 
-GraphQL fragments are shareable chunks of a query that can be reused.
+Fragmentos GraphQL são pedaços compartilháveis de uma requisição que podem ser reutilizados.
 
-You might want to use them to share multiple fields between queries or to colocate a component with the data it uses.
+Você pode querer usá-los para compartilhar vários campos entre as requisiçãos ou para colocar um componente com os dados que ele usa.
 
-### Directions
+### Instruções
 
-1. Declare a `graphql` template string with a Fragment in it. The fragment should be made up of the keyword `fragment`, a name, the GraphQL type it is associated with (in this case of type `Site`, as demonstrated by `on Site`), and the fields that make up the fragment:
+1. Declare uma string de template `graphql` com um fragmento nela. O fragmento deve ser composto pela palavra-chave `fragment`, um nome, o tipo GraphQL ao qual está associado (neste caso do tipo`Site`, como demonstrado por `no Site`), e os campos que compõem o fragmento:
 
 ```jsx
 export const query = graphql`
@@ -407,7 +407,7 @@ export const query = graphql`
 `
 ```
 
-2. Now, include the fragment in a query for a field of the type specified by the fragment. This includes those fields without having to declare them all independently:
+2. Agora, inclua o fragmento em uma requisição para um campo do tipo especificado pelo fragmento. Isso inclui esses campos sem a necessidade de declará-los um a um:
 
 ```diff
 export const pageQuery = graphql`
@@ -421,40 +421,40 @@ export const pageQuery = graphql`
 `
 ```
 
-**Note**: Fragments don't need to be imported in Gatsby. Exporting a query with a Fragment makes that Fragment available in _all_ queries in your project.
+** Nota **: Os fragmentos não precisam ser importados no Gatsby. Exportar uma requisição com um fragmento torna esse fragmento disponível em _todas_ as requisiçãos em seu projeto.
 
-Fragments can be nested inside other fragments, and multiple fragments can be used in the same query.
+Os fragmentos podem ser aninhados dentro de outros fragmentos e vários fragmentos podem ser usados ​​na mesma requisição.
 
-### Additional resources
+### Recursos adicionais
 
-- [Simple example repo using fragments](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-fragments)
-- [Gatsby GraphQL reference for fragments](/docs/graphql-reference/#fragments)
-- [Gatsby image fragments](/docs/gatsby-image/#image-query-fragments)
-- [Example repo with co-located data](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
+- [Exemplo simples de repositório usando fragmentos](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-fragments)
+- [Referência Gatsby GraphQL para fragmentos](/docs/graphql-reference/#fragments)
+- [Fragmentos de imagem de Gatsby](/docs/gatsby-image/#image-query-fragments)
+- [Exemplo de repo com dados com localização compartilhada](https://github.com/gatsbyjs/gatsby/tree/master/examples/gatsbygram)
 
-## Querying data client-side with `fetch`
+## Requisição dos dados no cliente com `fetch`
 
-Data doesn't only have to be queried at build time and remain solely static. You can query data at runtime the same way you can fetch data in a regular React app.
+Os dados não precisam apenas ser requisitados no momento da construção e permanecerem exclusivamente estáticos. Você pode requisitar dados em tempo de execução da mesma forma que pode buscar dados em um aplicativo React normal.
 
-### Prerequisites
+### Pré-requisitos
 
-- [A Gatsby Site](/docs/quick-start/)
-- A page component, such as `index.js`
+- [Um site Gatsby](/docs/quick-start/)
+- Um componente de página, como `index.js`
 
-### Directions
+### Instruções
 
-1. In a file with a React component defined, like a page in `src/pages` or a layout component, import React hooks for `useState` and `useEffect`.
+1. Em um arquivo com um componente React definido, como uma página em `src/pages` ou um componente de layout, importe os hooks React para `useState` e `useEffect`.
 
 ```jsx:title=src/pages/index.js
 import React, { useState, useEffect } from "react"
 ```
 
-2. Inside the component, wrap a function to fetch data in a `useEffect` hook so it will asynchronously retrieve data when the component mounts in the browser client. Then, `await` the result with the `fetch` API, and call the set function from the `useState` hook (in this case `setStarsCount`) to save the state variable (`starsCount`) to the data returned from `fetch`.
+2. Dentro do componente, envolva uma função de busca de dados em um hook `useEffect` para que recupere os dados de forma assíncrona quando o componente for montado no cliente do navegador. Então, espere o resultado usando a API `fetch`, e chame a função set do hook `useState` (neste caso`setStarsCount`) para salvar a variável de estado (`starsCount`) com os dados retornados em `fetch`.
 
 ```jsx:title=src/pages/index.js
 import React, { useState, useEffect } from "react"
 
-const IndexPage = () => {
+const PaginaIndex = () => {
   // highlight-start
   const [starsCount, setStarsCount] = useState(0)
   useEffect(() => {
@@ -476,10 +476,10 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default PaginaIndex
 ```
 
-### Additional resources
+### Recursos adicionais
 
-- Guide on [client-data fetching](/docs/data-fetching/)
-- Live [example site](https://gatsby-data-fetching.netlify.com/) using this example
+- Guia sobre [busca de dados no cliente](/docs/data-fetching/)
+- [Site de exemplo](https://gatsby-data-fetching.netlify.com/)
