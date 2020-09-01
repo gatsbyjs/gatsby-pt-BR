@@ -3,24 +3,24 @@ title: React
 disableTableOfContents: true
 ---
 
-Learn about React, including what it is, why you might use it, and how it fits into the Gatsby ecosystem.
+Aprenda sobre React, incluindo o que é, o porquê você deveria utilizar e como isso se encaixa no ecossistema gatsby
 
-## What is React?
+## O que é React?
 
-React is a code library for building web-based user interfaces. It's written using [JavaScript](/docs/glossary#javascript), one of the programming languages used to create web pages.
+React é uma biblioteca para criar interfaces de usuário web. É escrita utilizando [JavaScript](/docs/glossary#javascript), uma das linguagens de programação utilizadas para criar páginas web.
 
-Facebook first released React in 2013. The company still maintains the project, along with a community of contributors. It's free to use and open source under the terms of the [MIT License](https://github.com/facebook/react/blob/master/LICENSE).
+Facebook introduziu o React em 2013. A empresa ainda mantém o projeto, junto com uma comunidade de contribuidores. É gratuito para o uso e possui código aberto sob os termos da [licença do MIT](https://github.com/facebook/react/blob/master/LICENSE).
 
-Where publishing tools such as WordPress and Jekyll rely on a system of template files to create a UI, React uses [components](/docs/glossary#component). Components are contained chunks of JavaScript, CSS, and HTML or SVG that can be reused, shared, and combined to create a web site or application.
+Enquanto ferramentas de publicação como WordPress e Jekyll dependem de um sistema com arquivos de template para criar uma interface de usuário, React utiliza [componentes](/docs/glossary#component). Componentes são partes independentes de JavaScript, CSS e HTML ou SVG que podem ser reutilizados, compartilhados e combinados para criar uma página web ou aplicação.
 
-Components may be purely presentational. For example, you might create a `Logo` component that's just an SVG image. Or a component may encapsulate functionality. An `InputBox` component might include an input control, a label, and some simple validation.
+Componentes podem ser puramente de apresentação. Por exemplo, você pode criar um componente `Logo` que é apenas uma imagem SVG. Ou um componente pode encapsular funcionalidades. Um componente `InputBox` pode incluir controle de entrada, um rótulo e uma validação simples.
 
-Components are also _composable_, which is a fancy way of saying that you can use multiple child components to create a parent component or view. This is how you will build Gatsby pages and templates.
+Componentes também podem ser combinados, ou seja, você pode utilizar vários componentes filhos para criar um componente pai ou uma `view`. É dessa forma que você vai desenvolver páginas e templates Gatsby.
 
-React components respond to changes in _state_. In React, _state_ is a set of properties and values that determine how a component looks or behaves. State can change in response to user activity, such as a click or key press. State can also change as the result of a completed network request. When a value in a component's state changes, the component is the only part of the UI that changes. In other words, React can update part of a page or an entire view without requiring a full page reload.
+Componentes React respondem por mudanças no estado. Em React, o estado é um conjunto de propriedades e valores que determina como um componente é apresentado ou se comporta. O Estado pode mudar em resposta de uma ação do usuário, como por exemplo um clique do mouse ou uma tecla do teclado. Também pode mudar devido a uma requisição de internet. Quando um valor do estado do componente muda, o componente é a única parte da interface que é alterada. Em outras palavras, React pode atualizar uma parte da página ou uma view inteira sem precisar de um recarregamento completo da página.
 
-Gatsby bundles React, [webpack](/docs/glossary#webpack), [GraphQL](/docs/glossary#graphql), and other tools into a single framework for building web sites. With Gatsby, you get a head start on meeting your SEO, accessibility, and performance requirements. Rather than installing and configuring a development environment from scratch, you can install Gatsby and start building.
+Gatsby agrupa React, [webpack](/docs/glossary#webpack), [GraphQL](/docs/glossary#graphql), e outras ferramentas em um único framework para criar páginas web. Com Gatsby, você já começa a cumprir seus requisitos de SEO, acessibilidade e desempenho. Em vez de instalar e configurar um ambiente de desenvolvimento do zero, você pode instalar Gatsby e já começar a desenvolver.
 
-### Learn more about React
+### Aprenda mais sobre React
 
-- [React](https://reactjs.org/) Official web site
+- Website oficial do [React](https://pt-br.reactjs.org)

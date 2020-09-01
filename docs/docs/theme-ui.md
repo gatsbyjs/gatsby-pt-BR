@@ -2,23 +2,23 @@
 title: Theme UI
 ---
 
-[Theme UI][] is a library for styling React apps with user-configurable design constraints.
-It allows you to style any component in your application with typographic, color, and layout values defined in a shared theme object.
-Theme UI is currently used in Gatsby's official themes,
-but it can be used in any Gatsby site or React application.
-It includes the [Emotion][] CSS-in-JS library along with additional utilities for styling [MDX][] and using configurations and themes from [Typography.js][].
+[Theme UI][] é uma biblioteca para estilizar aplicações React com restrições de design configuradas pelo usuário.
+Ela permite estilizar qualquer componente na aplicação, com tipografia, cor e valores de layout definidos no objeto compartilhado do tema.
+A Theme UI está implementada atualmente nos temas oficiais do Gatsby,
+mas pode ser usada em qualquer site Gatsby ou aplicação React.
+Ela inclui a biblioteca de CSS-in-JS, [Emotion][], junto de utilidades adicionais para estilizar [MDX][], e usar configurações e temas da biblioteca [Typography.js][].
 
-## Using Theme UI in Gatsby
+## Usando Theme UI no Gatsby
 
-Theme UI includes the `gatsby-plugin-theme-ui` package to better integrate with your Gatsby project.
+A Theme UI inclui o pacote `gatsby-plugin-theme-ui` para uma melhor integração com seu projeto Gatsby.
 
-Install the following packages to add Theme UI.
+Comece instalando os seguintes pacotes:
 
 ```shell
 npm install theme-ui gatsby-plugin-theme-ui
 ```
 
-After installing the dependencies, add the following to your `gatsby-config.js`.
+Após instalar essas dependências, adicione o seguinte trecho ao seu arquivo `gatsby-config.js`
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -26,11 +26,62 @@ module.exports = {
 }
 ```
 
-Theme UI uses a `theme` configuration object to provide color, typography, layout, and other shared stylistic values through [React context][].
-This allows components within your site to add styles based on a predefined set of values.
+A Theme UI usa um objeto `theme` para prover cores, tipografia, layout e outros valores utilizados na estilização da sua aplicação, através da [context API do React][].
+Dessa forma, seus componentes podem ser estilizados com base em valores predefinidos.
 
-The Theme UI plugin uses the [component shadowing API][] to add the theme object context to your site.
-Create a `src/gatsby-plugin-theme-ui` directory in your project, and add an `index.js` file to export a theme object.
+Existem duas formas de adicionar um tema no seu site: configurando através do plugin `gatsby-plugin-theme-ui`, ou usando _local shadowing_.
+
+### Configurando o plugin `gatsby-plugin-theme-ui`
+
+O `gatsby-plugin-theme-ui` possui algumas configurações opcionais. Uma delas é o `preset`, que é o objeto base para o tema que você quer usar no seu site.
+
+O `preset` pode ser um objeto JSON ou o nome de um pacote que o plugin vai importar para você.
+
+Se optar por usar um pacote, certifique-se de que ele está instalado no projeto.
+
+```shell
+npm install @theme-ui/preset-funk
+```
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+      options: {
+        preset: "@theme-ui/preset-funk",
+      },
+    },
+  ],
+}
+```
+
+Você também pode importar o pacote manualmente. Isso é necessário caso você utilize um pacote local que não está disponível publicamente.
+
+```shell
+npm install @theme-ui/preset-funk
+```
+
+```js:title=gatsby-config.js
+module.exports = {
+  plugins: [
+    {
+      resolve: `gatsby-plugin-theme-ui`,
+      options: {
+        preset: require("meu-preset-local"),
+      },
+    },
+  ],
+}
+```
+
+O `preset` funciona como o seu tema base, e qualquer estilo local será automaticamente mesclado nele. Estilos locais são considerados mais específicos, e irão sobrescrever os estilos do `preset` quando necessário.
+
+### Local shadowing
+
+A Theme UI usa a [API de component shadowing][] para adicionar o contexto do objeto do tema no seu site. _Shadowing_, é a possibilidade de criar um arquivo no mesmo diretório do tema que você está usando, sobrescrevendo os valores desse tema.
+
+Nesse caso, o diretório citado acima é o `src/gatsby-plugin-theme-ui`. Crie-o seu projeto e adicione um arquivo `index.js` para exportar o objeto do tema.
 
 ```shell
 mkdir src/gatsby-plugin-theme-ui
@@ -40,9 +91,9 @@ mkdir src/gatsby-plugin-theme-ui
 export default {}
 ```
 
-## Creating a theme object
+## Criando o objeto do tema
 
-Add a `colors` object to the file created above to store the color palette for your site.
+Crie o diretório `src/gatsby-plugin-theme-ui` no seu projeto e, adicione o arquivo `index.js` para exportar o objeto do tema. Adicione o objeto `colors` para armazenar a paleta de cores do seu site.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
@@ -55,7 +106,7 @@ export default {
 }
 ```
 
-Next add some base typographic values.
+Em seguida adicione a base para a tipografia.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
@@ -85,7 +136,7 @@ export default {
 }
 ```
 
-Next add values for use in margin and padding.
+Por fim, adicione valores para serem usados em espaçamentos.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
@@ -116,60 +167,68 @@ export default {
 }
 ```
 
-Feel free to include as many additional values as you'd like in your theme.
-Read more about theming in the [Theme UI documentation](https://theme-ui.com/theming).
+Sinta-se à vontade para incluir quantos valores achar necessário no seu tema.
+Leia mais sobre criação de temas na [documentação da Theme UI](https://theme-ui.com/theming)
 
-## Adding styles to elements
+## Adicionando estilos aos elementos
 
-Theme UI uses a custom function to add support for the Theme UI `sx` prop in JSX.
-This custom function is enabled by including a comment on the top of the file:
+A Theme UI usa uma diretiva para adicionar suporte à propriedade `sx` no JSX.
+Essa função é habilitada ao incluir o seguinte comentário no topo do arquivo:
 
 ```js
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 ```
 
-The [`sx` prop][] is used to style elements by referencing values from the theme object.
-
-[`sx` prop]: https://theme-ui.com/sx-prop
+A [propriedade `sx`][] é usada para estilizar elementos referenciando os valores do objeto do tema.
 
 ```jsx:title=src/components/header.js
 /** @jsx jsx */
 import { jsx } from "theme-ui"
 
-export default props => (
-  <header
-    sx={{
-      // this uses the value from `theme.space[4]`
-      padding: 4,
-      // these use values from `theme.colors`
-      color: "background",
-      backgroundColor: "primary",
-    }}
-  >
-    {props.children}
-  </header>
-)
+export default function Header(props) {
+  return (
+    <header
+      sx={{
+        // Esse valor vem do `theme.space[4]`
+        padding: 4,
+        // Esses valores vem do `theme.colors`
+        color: "background",
+        backgroundColor: "primary",
+      }}
+    >
+      {props.children}
+    </header>
+  )
+}
 ```
 
-## Using Theme UI in a Gatsby theme
+## Usando Theme UI em um tema Gatsby
 
-When using Theme UI in a Gatsby theme, it's important to understand how the `gatsby-plugin-theme-ui` package handles theme objects from multiple Gatsby themes and sites.
-If a Gatsby theme that uses `gatsby-plugin-theme-ui` is installed in a site,
-shadowing the `src/gatsby-plugin-theme-ui/index.js` file will completely override the default styles.
-This is intended to give full control to the person using the theme.
-If multiple themes are installed in the same site, the one defined last in your `gatsby-config.js` file's `plugins` array will take precedence.
+Ao usar Theme UI em um tema do Gatsby, é importante entender como o plugin `gatsby-plugin-theme-ui` gerencia os objetos do tema, de múltiplos temas e sites do Gatsby.
 
-To extend an existing Theme UI configuration from a theme, it can be imported and merged with any other values you would like to customize.
-The following is an example of extending the configuration from `gatsby-theme-blog`.
+Se múltiplos temas estão instalados no mesmo site, o que estiver definido por último no array `plugins` do arquivo `gatsby-config.js` terá prioridade.
+
+Para estender uma configuração existente da Theme UI a partir de um tema, você precisará identificar como o tema base está passando os estilos. Se for através de um `preset`, como o pacote `gatsby-theme-blog` faz, os arquivos criados usando [_local shadowing_](#local-shadowing) serão mesclados automaticamente. Você pode descobrir isso no código fonte do tema na `node_modules` ou no GitHub.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
-import baseTheme from "gatsby-theme-blog/src/gatsby-plugin-theme-ui"
-import merge from "lodash.merge"
+export default {
+  colors: {
+    text: "#222",
+    primary: "tomato",
+  },
+}
+```
 
-// lodash.merge will deeply merge custom values with the
-// blog theme's defaults
-export default merge({}, baseTheme, {
+Se o tema por si só, foi feito com [_local shadowing_](#local-shadowing), sem um _preset_, você precisará efetuar o _merge_ desses estilos com os seus. Veja um exemplo usando a API `merge` da Theme UI:
+
+```js:title=src/gatsby-plugin-theme-ui/index.js
+import baseTheme from "gatsby-theme-unknown/src/gatsby-plugin-theme-ui"
+import { merge } from "theme-ui"
+
+// merge will deeply merge custom values with the
+// unknown theme's defaults
+export default merge(baseTheme, {
   colors: {
     text: "#222",
     primary: "tomato",
@@ -177,12 +236,12 @@ export default merge({}, baseTheme, {
 })
 ```
 
-## Styling MDX content
+## Estilizando conteúdo MDX
 
-Theme UI includes a way to style elements in MDX documents without the need to add global CSS to your site.
-This is useful for authoring Gatsby themes that can be installed alongside other themes.
+A Theme UI permite estilizar elementos nos documentos MDX, sem adicionar estilos CSS globais no seu site.
+Isso é útil para criar temas do Gatsby, que podem ser instalados em conjunto com outros temas.
 
-In your Theme UI configuration, add a `styles` object to target elements rendered from MDX.
+Na sua configuração da Theme UI, adicione o objeto `styles` para estilizar elementos renderizados do MDX.
 
 ```js:title=src/gatsby-plugin-theme-ui/index.js
 export default {
@@ -209,13 +268,14 @@ export default {
 }
 ```
 
-With the example above, any `<h1>` or `<a>` elements rendered from an MDX file will include these base styles.
+Com o exemplo acima, quaisquer elementos `<h1>` ou `<a>` renderizados de um arquivo MDX, irão possuir esses estilos base.
 
-To learn more about using Theme UI in your project, see the official [Theme UI][theme ui] website.
+Para aprender mais sobre usar Theme UI no seu projeto, veja o site oficial da [Theme UI][]
 
 [theme ui]: https://theme-ui.com
-[emotion]: /docs/emotion
-[mdx]: /docs/mdx
-[typography.js]: /docs/typography-js
-[react context]: https://reactjs.org/docs/context.html
-[component shadowing api]: /docs/themes/api-reference#component-shadowing
+[emotion]: /docs/docs/emotion.md
+[mdx]: /docs/docs/mdx.md
+[typography.js]: /docs/docs/typography-js.md
+[context api do react]: https://reactjs.org/docs/context.html
+[api de component shadowing]: /docs/docs/theme-api.md/#shadowing
+[propriedade `sx`]: https://theme-ui.com/sx-prop

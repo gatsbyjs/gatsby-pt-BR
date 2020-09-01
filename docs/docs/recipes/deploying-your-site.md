@@ -1,106 +1,106 @@
 ---
-title: "Recipes: Deploying Your Site"
+title: "Receitas: Publicando Seu Site"
 tableOfContentsDepth: 1
 ---
 
-Showtime. Once you are happy with your site, you are ready to go live with it!
+Hora do show! Assim que estiver feliz com seu site, você estará pronto para publicá-lo!
 
-## Preparing for deployment
+## Preparativos para a publicação
 
-### Prerequisites
+### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start)
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Um [site Gatsby](/docs/docs/quick-start.md)
+- A [CLI do Gatsby](/docs/docs/gatsby-cli.md) instalada
 
-### Directions
+### Etapas
 
-1. Stop your development server if it is running (`Ctrl + C` on your command line in most cases)
+1. Pare a execução do seu servidor de desenvolvimento, caso ainda não tenha feito. (Na maioria dos casos é o atalho `Ctrl + C` no terminal)
 
-2. For the standard site path at the root directory (`/`), run `gatsby build` using the Gatsby CLI on the command line. The built files will now be in the `public` folder.
+2. A partir do diretório raíz do seu site (`/`), execute o comando `gatsby build` usando a CLI do Gatsby no terminal. Os arquivos serão gerados no diretório `public`.
 
 ```shell
 gatsby build
 ```
 
-3. To include a site path other than `/` (such as `/site-name/`), set a path prefix by adding the following to your `gatsby-config.js` and replacing `yourpathprefix` with your desired path prefix:
+3. Para utilizar um caminho diferente de `/` (como `/site-name/`) no seu site, defina um prefixo no arquivo `gatsby-config.js`, substituindo `seuprefixo` pelo desejado:
 
 ```js:title=gatsby-config.js
 module.exports = {
-  pathPrefix: `/yourpathprefix`,
+  pathPrefix: `/seuprefixo`,
 }
 ```
 
-There are a few reasons to do this -- for instance, hosting a blog built with Gatsby on a domain with another site not built on Gatsby. The main site would direct to `example.com`, and the Gatsby site with a path prefix could live at `example.com/blog`.
+Existem algumas razões para fazer isso -- por exemplo, hospedar um blog feito com Gatsby em um domínio com outro site, não criado com Gatsby. O site principal possui o endereço `example.com`, e o site com Gatsby utilizando um prefixo, possui o endereço `example.com/blog`
 
-4. With a path prefix set in `gatsby-config.js`, run `gatsby build` with the `--prefix-paths` flag to automatically add the prefix to the beginning of all Gatsby site URLs and `<Link>` tags.
+4. Com um prefixo definido no arquivo `gatsby-config.js`, execute o comando `gatsby build` com o parâmetro `--prefix-paths` para adicionar o prefixo automaticamente a todas as URLs e componentes `<Link>`
 
 ```shell
 gatsby build --prefix-paths
 ```
 
-5. Make sure that your site looks the same when running `gatsby build` as with `gatsby develop`. By running `gatsby serve` when you build your site, you can test out (and debug if necessary) the finished product before deploying it live.
+5. Certifique-se de que seu site funciona da mesma forma ao executar o comando `gatsby build`, como `gatsby develop`. Ao executar o comando `gatsby serve`, após efetuar a compilação do seu site, você poderá testar (e debugar, se necessário) o produto finalizado, antes de publicá-lo em produção.
 
 ```shell
 gatsby build && gatsby serve
 ```
 
-### Additional resources
+### Recursos adicionais
 
-- Walk through building and deploying an example site in [tutorial part one](/tutorial/part-one/#deploying-a-gatsby-site)
-- Learn about [performance optimization](/docs/performance/)
-- Read about [other deployment related topics](/docs/preparing-for-deployment/)
-- Check out the [deployment docs](/docs/deploying-and-hosting/) for specific hosting platforms and how to deploy to them
+- Veja a [parte um do tutorial](/docs/tutorial/part-one/index.md#fazendo-deploy-do-seu-site-gatsby) para desenvolver e publicar um site exemplo.
+- Aprenda sobre [otimização de performance](/docs/docs/performance.md)
+- Leia sobre [outros tópicos relacionados a publicação](/docs/docs/preparing-for-deployment.md)
+- Confira a [documentação sobre publicação](/docs/docs/deploying-and-hosting.md), para aprender sobre o processo de publicação em plataformas específicas.
 
-## Deploying to Netlify
+## Publicando no Netlify
 
-Use [`netlify-cli`](https://www.netlify.com/docs/cli/) to deploy your Gatsby application without leaving the command-line interface.
+Use a [`netlify-cli`](https://www.netlify.com/docs/cli/) para publicar sua aplicação Gatsby sem sair do terminal.
 
-### Prerequisites
+### Pré-requisitos
 
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- The [netlify-cli](https://www.npmjs.com/package/netlify-cli) package installed
-- The [Gatsby CLI](/docs/gatsby-cli) installed
+- Um [site Gatsby](/docs/docs/quick-start.md) com um componente `index.js`
+- O pacote [netlify-cli](https://www.npmjs.com/package/netlify-cli) instalado
+- A [CLI do Gatsby](/docs/docs/gatsby-cli.md) instalada
 
-### Directions
+### Etapas
 
-1. Build your gatsby application using `gatsby build`
+1. Compile a sua aplicação gatsby utilizando o comando `gatsby build`
 
-2. Login into Netlify using `netlify login`
+2. Autentique-se no Netlify com o comando `netlify login`
 
-3. Run the command `netlify init`. Select the "Create & configure a new site" option.
+3. Execute o comando `netlify init`. Selecione a opção "_Create & configure a new site_"
 
-4. Choose a custom website name if you want or press enter to receive a random one.
+4. Digite o nome do seu website ou pressione a tecla "Enter" para receber um nome randômico.
 
-5. Choose your [Team](https://www.netlify.com/docs/teams/).
+5. Escolha o seu [Team](https://www.netlify.com/docs/teams/).
 
-6. Change the deploy path to `public/`
+6. Altere o caminho da publicação para `public/`
 
-7. Make sure that everything looks fine before deploying to production using `netlify deploy -d . --prod`
+7. Certifique-se de que está tudo OK antes de publicar em produção com o comando `netlify deploy -d . --prod`
 
-### Additional resources
+### Recursos adicionais
 
-- [Hosting on Netlify](/docs/hosting-on-netlify)
+- [Hospedagem no Netlify](/docs/hosting-on-netlify)
 - [gatsby-plugin-netlify](/packages/gatsby-plugin-netlify)
 
-## Deploying to ZEIT Now
+## Publicando na plataforma Vercel
 
-Use [Now CLI](https://zeit.co/download) to deploy your Gatsby application without leaving the command-line interface.
+Use a [CLI do Now](https://zeit.co/download) para publicar sua aplicação sem sair do terminal.
 
-### Prerequisites
+### Pré-requisitos
 
-- A [ZEIT Now](https://zeit.co/signup) account
-- A [Gatsby site](/docs/quick-start) with a single component `index.js`
-- [Now CLI](https://zeit.co/download) package installed
-- [Gatsby CLI](/docs/gatsby-cli) installed
+- Uma conta no [Vercel](https://vercel.com/onboarding)
+- Um [site Gatsby](/docs/docs/quick-start.md) com um componente `index.js`
+- O pacote da [CLI do Vercel](https://vercel.com/download) instalado
+- A [CLI do Gatsby](/docs/docs/gatsby-cli.md) instalada
 
-### Directions
+### Etapas
 
-1. Login into Now CLI using `now login`
+1. Autentique-se na CLI do Now com o comando `vercel login`
 
-2. Change to the directory of your Gatsby.js application in the Terminal if you aren't already there
+2. No terminal, mude o diretório atual para a raíz da sua aplicação Gatsby.js, caso ainda não tenha feito.
 
-3. Run `now` to deploy it
+3. Execute o comando `vercel` para publicar a aplicação.
 
-### Additional resources
+### Recursos adicionais
 
-- [Deploying to ZEIT Now](/docs/deploying-to-zeit-now/)
+- [Publicando na plataforma Vercel (antigo ZEIT Now)](/docs/docs/deploying-to-zeit-now.md)
