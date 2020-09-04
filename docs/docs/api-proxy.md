@@ -1,16 +1,16 @@
 ---
-title: Proxying API Requests in Development
+title: Solicitações de proxy de API em desenvolvimento
 ---
 
-## Resources
+## Recursos
 
-If you’re not familiar with Gatsby’s lifecycle, see the overview [Gatsby Lifecycle APIs](/docs/gatsby-lifecycle-apis/).
+Se você não é familiar com o ciclo de vida do Gatsby, veja a visão geral [Ciclos de vida de APIs Gatsby](/docs/gatsby-lifecycle-apis/).
 
-## Proxying API requests in development
+## Solicitações de proxy de API em desenvolvimento
 
-People often serve the frontend React app from the same host and port as their backend implementation.
+As pessoas costumam disponibilizar o _frontend_ da sua aplicação React na mesma hospedagem e porta de sua implementação _backend_.
 
-To tell the development server to proxy any unknown requests to your API server in development, add a `proxy` field to your `gatsby-config.js`, for example:
+Para dizer ao servidor de desenvolvimento para fazer o proxy de qualquer requisição desconhecida para o servidor de desenvolvimento da sua API, adicione um campo `proxy` no arquivo `gatsby-config.js`, por exemplo:
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -21,7 +21,7 @@ module.exports = {
 }
 ```
 
-or:
+ou:
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -38,13 +38,13 @@ module.exports = {
 }
 ```
 
-This way, when you `fetch('/api/todos')` in development, the development server will recognize that it’s not a static asset, and will proxy your request to `http://dev-mysite.com/api/todos` as a fallback.
+Dessa forma, quando você fizer `fetch('/api/todos')` em desenvolvimento, o servidor de desenvolvimento irá reconhecer que não é um ativo estático, e vai realizar o _proxy_ da sua requisição para `http://dev-mysite.com/api/todos` como um substituto.
 
-Keep in mind that `proxy` only has effect in development (with `gatsby develop`), and it is up to you to ensure that URLs like `/api/todos` point to the right place in production.
+Tenha em mente que o `proxy` tem efeito apenas em desenvolvimento (com `gatsby develop`), e cabe a você garantir que URLs como `/api/todos` apontem para o local correto quando em produção
 
-## Advanced proxying
+## Proxying avançado
 
-Sometimes you need more granular/flexible access to the development server. Gatsby exposes the [Express.js](https://expressjs.com/) development server to your site's `gatsby-config.js` where you can add Express middleware as needed.
+Algumas vezes você precisa de mais acesso granular/flexível ao servidor de desenvolvimento. Gatsby expõe o servidor de desenvolvimento [Express.js](https://expressjs.com/) ao seu site `gatsby-config.js` onde você pode adicionar o _middleware_ do Express sempre que precisar.
 
 ```javascript:title=gatsby-config.js
 var proxy = require("http-proxy-middleware")
@@ -64,11 +64,11 @@ module.exports = {
 }
 ```
 
-Keep in mind that middleware only has effect in development (with `gatsby develop`).
+Lembre-se de que o _middleware_ tem efeito apenas em desenvolvimento (com `gatsby develop`).
 
-### Self-signed certificates
+### Certificados autoassinados
 
-If you proxy to local APIs with self-signed certificates, set the option `secure` to `false`.
+Se você fizer o proxy para APIs locais com certificados autoassinados, marque a opção `secure` para `false`.
 
 ```javascript:title=gatsby-config.js
 var proxy = require("http-proxy-middleware")
@@ -78,7 +78,7 @@ module.exports = {
       "/.netlify/functions/",
       proxy({
         target: "http://localhost:9000",
-        secure: false, // Do not reject self-signed certificates.
+        secure: false, // Nao  rejeite certificados autoassinados
         pathRewrite: {
           "/.netlify/functions/": "",
         },
