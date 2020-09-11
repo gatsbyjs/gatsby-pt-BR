@@ -2,11 +2,11 @@
 title: Trabalhando com o Netlify CMS
 ---
 
-Nesse guia, você irá configurar um site para que use o [NetlifyCMS](https://github.com/netlify/netlify-cms) como gerenciador de conteúdo.
+Nesse guia, você irá configurar um site para que use o [Netlify CMS](https://github.com/netlify/netlify-cms) como gerenciador de conteúdo.
 
 O Netlify CMS é um single page app, open-source, escrito em React, que é responsável por permitir que você edite o conteúdo e dados dos seus arquivos de um repositório Git. Armazenar conteúdo puro diretamente no repositório do site estático é a abordagem ideal, permitindo que o conteúdo e o código sejam versionados juntos, mas isso requer que editores não técnicos interajam com serviços como o Github. O Netlify CMS foi criado especificamente para eliminar esse impedimento, ao prover uma sólida interface que funciona bem tanto para usuários técnicos quanto para usuários não técnicos, ele interage com o repositório do seu site estático por meio de uma API, para que quaisquer alterações resultem em um novo commit.
 
-O foco primário do Netlify CMS é para que ele funcione bem com geradores de site modernos, como o Gatsby. A instalação normalmente requer somente um arquivo index.html e uma configuração YAML, porém você irá aproveitar o plugin do Gatsby do Netlify CMS para automáticamente instalar e aos poucos construir o CMS com um site estático.
+O foco primário do Netlify CMS é para que ele funcione bem com geradores de site modernos, como o Gatsby. A instalação normalmente requer somente um arquivo index.html e uma configuração YAML, porém você irá encarregar-se que o plugin do Gatsby do Netlify CMS seja responsável por instalar e aos poucos construir o CMS com um site estático.
 
 _Nota: esse guia usa o Gatsby Hello World starter para prover um entendimento básico de como o Netlify CMS funciona com seu site Gatsby. Se você estiver travado, compare seu código com o [projeto exemplo](https://github.com/erquhart/gatsby-netlify-cms-example). Caso queira iniciar com um template completo, confira [gatsby-starter-netlify-cms][1]._
 
@@ -32,7 +32,7 @@ module.exports = {
 }
 ```
 
-Finalmente, você precisará adicionar a o arquivo de configuração do CMS. O plugin que você acabou de instalar ficará responsavél por criar o app do Netlify CMS e emití-lo para "/admin/index.html", por isso você precisará que o arquivo de configuração esteja no mesmo diretório. O Gatsby irá copiar tudo que estiver na pasta static para o ambiente de produção, então será necessário gravar o arquivo de configuração do Netlify CMS como `static/admin/config.yml`. Vamos criar uma configuração teste agora - adicione isso ao seu novo `config.yml`:
+Finalmente, você precisará adicionar a o arquivo de configuração do CMS. O plugin que você acabou de instalar ficará responsável por criar o app do Netlify CMS e emití-lo para "/admin/index.html", por isso você precisará que o arquivo de configuração esteja no mesmo diretório. O Gatsby irá copiar tudo que estiver na pasta static para o ambiente de produção, então será necessário gravar o arquivo de configuração do Netlify CMS como `static/admin/config.yml`. Vamos criar uma configuração teste agora - adicione isso ao seu novo `config.yml`:
 
 ```yaml:title=static/admin/config.yml
 backend:
