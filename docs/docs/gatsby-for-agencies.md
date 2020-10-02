@@ -1,9 +1,9 @@
 ---
-title: Using Gatsby Inside Agencies
+title: Usando Gatsby dentro de agências
 ---
 
-There are several aspects of Gatsby that create interesting potential playbooks for agencies using Gatsby, as well as unique benefits to agencies using Gatsby.
+Existem vários aspectos do Gatsby que criam guias interessantes focados para agências que utilizam Gatsby, assim como benefícios exclusivos para agências que usam Gatsby.
 
 <GuideList slug={props.slug} />
 
-The Gatsby blog has a [section on agencies](/blog/tags/agencies/) with additional stories and tips.
+No blog do Gatsby, há uma [seção sobre agências](/blog/tags/agencies/) com histórias e dicas adicionais.
