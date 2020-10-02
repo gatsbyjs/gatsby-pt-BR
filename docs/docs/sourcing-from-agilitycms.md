@@ -1,5 +1,5 @@
 ---
-title: Sourcing from Agility CMS
+título: Integrando do Agility CMS
 ---
 
 Esse guia vai explicar em detalhes os passos para configurar um site do Gatsby que busca conteúdo do [Agility CMS](https://agilitycms.com/).
@@ -10,7 +10,7 @@ Esse guia vai explicar em detalhes os passos para configurar um site do Gatsby q
 
 Além disso, o Agility CMS provê uma API de roteamento de página, que permite transferir o controle do sitemap para os editores de conteúdo.
 
-Todo o conteúdo está disponível na busca do Agility CMS ou Preview API.
+Todo o conteúdo está disponível nas APIs Agility CMS Fetch ou Preview.
 
 ## Começando
 
