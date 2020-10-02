@@ -12,10 +12,22 @@ O GraphQL Playground é uma maneira de você interagir com os dados que as suas 
 
 ## Acessando o playground
 
-Para acessar essa funcionalidade experimental utilizando o GraphQL Playground com Gatsby, adicione `GATSBY_GRAPHQL_IDE` no script `develop`  em seu `package.json`, desta forma:
+Para acessar essa funcionalidade experimental utilizando o GraphQL Playground com Gatsby, adicione `GATSBY_GRAPHQL_IDE` no script `develop` em seu `package.json`, desta forma:
 
 ```json
 "develop": "GATSBY_GRAPHQL_IDE=playground gatsby develop",
+```
+
+Se você estiver no **Windows**, use:
+
+```
+"develop": "cross-env GATSBY_GRAPHQL_IDE=playground gatsby develop",
+```
+
+Se você não instalou o **cross-env**, pode fazer isso com:
+
+```
+npm install --save-dev cross-env
 ```
 
 Use `npm run develop` ao invés de `gatsby develop` e acesse-o quando o servidor de desenvolvimento estiver rodando em `https://localhost:8000/___graphql`
