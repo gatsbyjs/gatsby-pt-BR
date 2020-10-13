@@ -43,7 +43,7 @@ Todavia - Caso pretenda fazer o deploy de sua aplicação as-is, esses assets n�
 
 ### Usando o `onPostBuild`
 
-Utilizando API Hook [`onPostBuild`](/docs/node-apis/#onPostBuild). Isso pode ser usado para fazer o deploy do seu contéudo ao CDN, da seguinte forma:
+Utilizando API Hook [`onPostBuild`](/docs/node-apis/#onPostBuild). Isso pode ser usado para fazer o deploy do seu conteúdo ao CDN, da seguinte forma:
 
 ```js:title=gatsby-node.js
 const assetsDirectory = `public`
