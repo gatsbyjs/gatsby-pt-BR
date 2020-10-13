@@ -1,16 +1,17 @@
 ---
-title: Adding an Asset Prefix
+title: Adicionando um Asset Prefix
 ---
 
-Gatsby produces static content that can be hosted _anywhere_ at scale in a cost-effective manner. This static content is comprised of HTML files, JavaScript, CSS, images, and more that power your great Gatsby application.
+O Gatsby produz conteúdo estático que pode ser hospedado _em qualquer lugar_ em larga escala e com baixo custo. Esse conteúdo estático é composto de arquivos HTML, Javascript, CSS, imagens 
+e mais do que compõe sua grande aplicação Gatsby.
 
-In some circumstances you may want to deploy _assets_ (non-HTML resources such as JavaScript, CSS, etc.) to a separate domain. Typically this is when you're required to use a dedicated CDN for assets or need to follow company-specific hosting policies.
+Em alguns casos você pode querer fazer a publicação dos _assets_ (Arquivos não HTML como Javascript, CSS, etc.) para um domínio diferente. Geralmente esse é o momento quando você precisa usar um CDN dedicado para os assets ou necessita seguir as políticas específicas da companhia de hospedagem. 
 
-This `assetPrefix` functionality is available starting in gatsby@2.4.0, so that you can seamlessly use Gatsby with assets hosted from a separate domain. To use this functionality, ensure that your version of `gatsby` specified in `package.json` is at least `2.4.0`.
+A funcionalidade `assetPrefix` está disponível a partir do gatsby@2.4.0, para que você possa perfeitamente usar os Gatsby assets hospedados com domínios diferentes. Para usar tal funcionalidade, certifique-se que sua versão do `gatsby` presente no seu arquivo `package.json` esteja ao menos na versão `2.4.0`.
 
-## Usage
+## Uso
 
-### Adding to `gatsby-config.js`
+### Adicionando ao arquivo`gatsby-config.js`
 
 ```js:title=gatsby-config.js
 module.exports = {
@@ -18,46 +19,46 @@ module.exports = {
 }
 ```
 
-One more step - when you build out this application, you need to add a flag so that Gatsby picks up this option.
+Mais um passo - Ao fazer o build da aplicação, deve-se adicionar a seguinte flag para que o Gatsby reconheça essa opção corretamente. 
 
-### The `--prefix-paths` flag
+### Flag `--prefix-paths` 
 
-When building with an `assetPrefix`, you require a `--prefix-paths` flag. If this flag is not specified, the build will ignore this option, and build out content as if it was hosted on the same domain. To ensure you build out successfully, use the following command:
+Ao fazer o build com um `assetPrefix`, necessita-se da flag `--prefix-paths`. Caso essa flag não seja especificada, a opção será ignorada durante o build da aplicação e o conteúdo será gerado como se estivesse hospedado em um mesmo domínio. Para garantir que sua build seja gerada corretamente, use o seguinte comando: 
 
 ```shell
 gatsby build --prefix-paths
 ```
 
-That's it! You have an application that is ready to have its assets deployed from a CDN and its core files (e.g. HTML files) can be hosted on a separate domain.
+É isso! Você já possui uma aplicação preparada para deploy com seus assets a partir de um CDN e seus arquivos principais (ex: Arquivos HTML) podem ser hospedados em um diferente domínio.
 
-## Building / Deploying
+## Build / Deploy
 
-Once your application is built out, all assets will be automatically prefixed by this asset prefix. For example, if you have a JavaScript file `app-common-1234.js`, the script tag will look something like:
+Assim que fizer o build da sua aplicação, todos os assets terão automaticamente esse asset prefix definido. Por exemplo, se você possuir um arquivo Javascript `app-common-1234.js`, a tag desse script será mostrada em algo como: 
 
 ```html
 <script src="https://cdn.example.com/app-common-1234.js"></script>
 ```
 
-However - if you were to deploy your application as-is, those assets would not be available! You can do this in a few ways, but the general approach will be to deploy the contents of the `public` folder to _both_ your core domain, and the CDN/asset prefix location.
+Todavia - Caso pretenda fazer o deploy de sua aplicação as-is, esses assets não estariam disponíveis! Você pode resolver isso de algumas formas, mas o caminho comum seria fazer o deploy dos conteúdos da pasta `public` para _ambos_ seus domínio principal e no local de seu CDN/asset prefix.
 
-### Using `onPostBuild`
+### Usando o `onPostBuild`
 
-You expose an [`onPostBuild`](/docs/node-apis/#onPostBuild) API hook. This can be used to deploy your content to the CDN, like so:
+Utilizando API Hook [`onPostBuild`](/docs/node-apis/#onPostBuild). Isso pode ser usado para fazer o deploy do seu conteúdo ao CDN, da seguinte forma:
 
 ```js:title=gatsby-node.js
 const assetsDirectory = `public`
 
 exports.onPostBuild = async function onPostBuild() {
-  // do something with public
-  // e.g. upload to S3
+  // fazer algo no público
+  // ex:. upload para o S3
 }
 ```
 
-### Using `package.json` scripts
+### Usando scripts `package.json` 
 
-Additionally, you can use an npm script, which will let you use some command line interfaces/executables to perform some action, in this case, deploying your assets directory!
+Além disso, você pode usar um script npm, o que permitirá que você utilize algumas linhas de comandos de interfaces e executáveis para realizar algumas ações, nesse caso, fazendo o deploy do seu diretório de assets!
 
-In this example, the `aws-cli` and `s3` is used to sync the `public` folder (containing all the assets) to the `s3` bucket.
+No exemplo abaixo, o `aws-cli` e `s3` estão sendo usados para sincronizar a pasta `public` (contendo todos os assets) para o `s3` bucket.
 
 ```json:title=package.json
 {
@@ -68,21 +69,21 @@ In this example, the `aws-cli` and `s3` is used to sync the `public` folder (con
 }
 ```
 
-Now whenever the `build` script is invoked, e.g. `npm run build`, the `postbuild` script will be invoked _after_ the build completes, therefore making your assets available on a _separate_ domain after you have finished building out your application with prefixed assets.
+Agora sempre que o script `build` for chamado, ex: `npm run build`, o script `postbuild` será chamado logo _após_ o build finalizado, dessa forma fazendo com que seus assets fiquem disponíveis em um domínio _diferente_ após a finalização do build da aplicação com seu assets prefix.
 
-## Additional Considerations
+## Considerações Extras
 
-### Usage with `pathPrefix`
+### Uso com `pathPrefix`
 
-The [`pathPrefix`](/docs/path-prefix/) feature can be thought of as semi-related to this feature. That feature allows _all_ your website content to be prefixed with some constant prefix, for example you may want your blog to be hosted from `/blog` rather than the project root.
+A funcionalidade [`pathPrefix`](/docs/path-prefix/) pode ser vista de forma levemente relacionada com a funcionalidade aqui apresentada. Essa funcionalidade permite que _todo_ o conteúdo do seu site seja prefixado com algumas constantes prefix, por exemplo, você pode querer que seu blog seja hospedado a partir de `/blog` ao invés do diretório raiz do projeto.
 
-This feature works seamlessly with `pathPrefix`. Build out your application with the `--prefix-paths` flag and you'll be well on your way to hosting an application with its assets hosted on a CDN, and its core functionality available behind a path prefix.
+Essa funcionalidade trabalha perfeitamente com a `pathPrefix`. Construa sua aplicação com a flag `--prefix-paths` e você estará no caminho para hospedar sua aplicação com seus assets hospedados num CND, e suas funcionalidades principais disponíveis através de um caminho prefixo.
 
-### Usage with `gatsby-plugin-offline`
+### Uso com `gatsby-plugin-offline`
 
-When using a custom asset prefix with `gatsby-plugin-offline`, your assets can still be cached offline. However, to ensure the plugin works correctly, there are a few things you need to do.
+Ao usar um asset prefix customizado com o `gatsby-plugin-offline`, seus assets podem continuar acessíveis offline. Todavia, para garantir que o plugin funcione corretamente, necessita-se realizar alguns passos.
 
-1. Your asset server needs to have the `Access-Control-Allow-Origin` header set either to `*` or your site's origin.
-2. Certain essential resources need to be available on your content server (i.e. the one used to serve pages). This includes `sw.js`, as well as resources to precache: the Webpack bundle, the app bundle, the manifest (and any icons referenced), and the resources for the offline plugin app shell.
+1. Seu servidor com os assets deve ter o cabeçalho `Access-Control-Allow-Origin` em `*` ou na raiz de seu site.
+2. Alguns recursos essenciais devem estar acessíveis no seu servidor de conteúdo (ex: utilizado para gerar as páginas). Isso inclui `sw.js`, assim como os recursos de pré-cache: o bundle do webpack, bundle do app, o manifest (e qualquer ícone referenciado), e os recursos para o shell do app para o plugin offline.
 
-   You can find most of these by looking for the `self.__precacheManifest` variable in your generated `sw.js`. Remember to also include `sw.js` itself, and any icons referenced in your `manifest.webmanifest` if you have one. To check your service worker is functioning as expected, look in Application → Service Workers in your browser dev tools, and check for any failed resources in the Console/Network tabs.
+   Você pode encontrar a maior parte buscando pela variável `self.__precacheManifest` gerada em `sw.js`. Lembre-se de também incluir o próprio `sw.js`, e qualquer ícone referenciado em seu `manifest.webmanifest` caso tenha um. Para verificar se o seu service worker está funcionando como o esperado, verifique em Application → Service Workers na aba dev tools em seus browser, checando qualquer recurso que tenha falhado na sua aba Console/Network.
