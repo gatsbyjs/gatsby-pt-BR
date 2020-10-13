@@ -7,7 +7,7 @@ e mais do que compõe sua grande aplicação Gatsby.
 
 Em alguns casos você pode querer fazer a publicação dos _assets_ (Arquivos não HTML como Javascript, CSS, etc.) para um domínio diferente. Geralmente esse é o momento quando você precisa usar um CDN dedicado para os assets ou necessita seguir as políticas específicas da companhia de hospedagem. 
 
-A funcionalidade `assetPrefix` esta disponível a partir do gatsby@2.4.0, para que você possa perfeitamente usar os Gatsby assets hospedados com domínios diferentes. Para usar tal funcionalidade, certifique-se que sua versão do `gatsby` presente no seu arquivo `package.json` esteja ao menos na versão `2.4.0`.
+A funcionalidade `assetPrefix` está disponível a partir do gatsby@2.4.0, para que você possa perfeitamente usar os Gatsby assets hospedados com domínios diferentes. Para usar tal funcionalidade, certifique-se que sua versão do `gatsby` presente no seu arquivo `package.json` esteja ao menos na versão `2.4.0`.
 
 ## Uso
 
@@ -87,5 +87,4 @@ Ao usar um asset prefix customizado com o `gatsby-plugin-offline`, seus assets p
 2. Alguns recursos essenciais devem estar acessíveis no seu servidor de conteúdo (ex: utilizado para gerar as páginas). Isso inclui `sw.js`, assim como os recursos de pré-cache: o bundle do webpack, bundle do app, o manifest (e qualquer ícone referenciado), e os recursos para o shell do app para o plugin offline.
 
    Você pode encontrar a maior parte buscando pela variável `self.__precacheManifest` gerada em `sw.js`. Lembre-se de também incluir o própio `sw.js`, e qualquer ícone referenciado em seu `manifest.webmanifest` caso tenha um. Para verificar se o seu service worker está funcionando como o esperado, verifique em Application → Service Workers na aba dev tools em seus browser, checando qualquer recurso que tenha falhado na sua aba Console/Network.
-
 
