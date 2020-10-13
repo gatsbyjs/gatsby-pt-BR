@@ -23,7 +23,7 @@ Mais um passo - Ao fazer o build da aplicação, deve-se adicionar a seguinte fl
 
 ### Flag `--prefix-paths` 
 
-Ao fazer o build com um `assetPrefix`, necessita-se da flag `--prefix-paths`. Caso essa flag não seja específicada, a opção será ignorada durante o build da aplicação e o conteúdo será geradao como se estivesse hospedado em um mesmo domínio. Para garantir que sua build seja gerada corretamente, use o seguinte comando: 
+Ao fazer o build com um `assetPrefix`, necessita-se da flag `--prefix-paths`. Caso essa flag não seja especificada, a opção será ignorada durante o build da aplicação e o conteúdo será gerado como se estivesse hospedado em um mesmo domínio. Para garantir que sua build seja gerada corretamente, use o seguinte comando: 
 
 ```shell
 gatsby build --prefix-paths
@@ -87,4 +87,3 @@ Ao usar um asset prefix customizado com o `gatsby-plugin-offline`, seus assets p
 2. Alguns recursos essenciais devem estar acessíveis no seu servidor de conteúdo (ex: utilizado para gerar as páginas). Isso inclui `sw.js`, assim como os recursos de pré-cache: o bundle do webpack, bundle do app, o manifest (e qualquer ícone referenciado), e os recursos para o shell do app para o plugin offline.
 
    Você pode encontrar a maior parte buscando pela variável `self.__precacheManifest` gerada em `sw.js`. Lembre-se de também incluir o própio `sw.js`, e qualquer ícone referenciado em seu `manifest.webmanifest` caso tenha um. Para verificar se o seu service worker está funcionando como o esperado, verifique em Application → Service Workers na aba dev tools em seus browser, checando qualquer recurso que tenha falhado na sua aba Console/Network.
-
