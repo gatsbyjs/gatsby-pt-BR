@@ -29,7 +29,7 @@ Ao fazer o build com um `assetPrefix`, necessita-se da flag `--prefix-paths`. Ca
 gatsby build --prefix-paths
 ```
 
-É isso! Você já possui uma aplicação preparada para deploy com seus assets a partir de um CDN e seus arquivos principais (ex: Arquivos HTML) podem ser hospeados em um diferente domínio.
+É isso! Você já possui uma aplicação preparada para deploy com seus assets a partir de um CDN e seus arquivos principais (ex: Arquivos HTML) podem ser hospedados em um diferente domínio.
 
 ## Build / Deploy
 
