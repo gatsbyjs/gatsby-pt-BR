@@ -75,7 +75,7 @@ Agora sempre que o script `build` for chamado, ex: `npm run build`, o script `po
 
 ### Uso com `pathPrefix`
 
-A funcionalidade [`pathPrefix`](/docs/path-prefix/) pode ser vista de forma levemente relacionada com a funcionalidade aqui apresentada. Essa funcionalidade permite que _todo_ o conteúdo do seu site sera prefixado com algumas constantes prefix, por exemplo, você pode querer que seu blog seja hospeado a partir de `/blog` ao invés do diretório raiz do projeto.
+A funcionalidade [`pathPrefix`](/docs/path-prefix/) pode ser vista de forma levemente relacionada com a funcionalidade aqui apresentada. Essa funcionalidade permite que _todo_ o conteúdo do seu site seja prefixado com algumas constantes prefix, por exemplo, você pode querer que seu blog seja hospedado a partir de `/blog` ao invés do diretório raiz do projeto.
 
 Essa funcionalidade trabalha perfeitamente com a `pathPrefix`. Construa sua aplicação com a flag `--prefix-paths` e você estará no caminho para hospedar sua aplicação com seus assets hospedados num CND, e suas funcionalidades principais disponíveis através de um caminho prefixo.
 
