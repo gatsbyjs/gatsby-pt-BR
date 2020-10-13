@@ -41,7 +41,7 @@ Assim que fizer o build da sua aplicação, todos os assets terão automaticamen
 
 Todavia - Caso pretenda fazer o deploy de sua aplicação as-is, esses assets não estariam disponíveis! Você pode resolver isso de algumas formas, mas o caminho comum seria fazer o deploy dos conteúdos da pasta `public` para _ambos_ seus domínio principal e no local de seu CDN/asset prefix.
 
-### Usando o`onPostBuild`
+### Usando o `onPostBuild`
 
 Utilizando API Hook [`onPostBuild`](/docs/node-apis/#onPostBuild). Isso pode ser usado para fazer o deploy do seu contéudo ao CDN, da seguinte forma:
 
