@@ -1,74 +1,74 @@
 ---
-title: How APIs/Plugins Are Run
+title: Como APIs/Plugins rodam
 ---
 
-> This documentation isn't up to date with the latest version of Gatsby.
+> Esta documentação não está atualizada com a versão mais recente de Gatsby.
 >
-> - mention how multiple configurations are merged
-> - the node creation flow in the diagram is no longer correct
-> - `CREATE_NODE` and `onCreateNode` are handled differently than described
+> - mencionar como várias configurações são mescladas
+> - o fluxo de criação de nodes no diagrama não está mais correto
+> - `CREATE_NODE` e ʻonCreateNode` são tratados de forma diferente do descrito
 >
 > You can help by making a PR to [update this documentation](https://github.com/gatsbyjs/gatsby/issues/14228).
 
-For most sites, plugins take up the majority of the build time. So what's really happening when APIs are called?
+Para a maior parte dos sites, plugins tomam boa parte do tempo de construção. Então o que realmente  acontece quando APIs são chamadas?
 
-_Note: this section only explains how `gatsby-node` plugins are run. Not browser or ssr plugins_
+_Nota: essa seção somente explica como `gatsby-node` plugins  funcionam. Não plugins de navegador ou de ssr_
 
-## Early in the build
+## No Inicio da construção
 
-Early in the bootstrap phase, you [load all the configured plugins](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/bootstrap/load-plugins/index.js#L40) (and internal plugins) for the site. These are saved into redux under the `flattenedPlugins` namespace. Each plugin in redux contains the following fields:
+No começo da fase  bootstrap , você [load all the configured plugins](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/bootstrap/load-plugins/index.js#L40) (e plugins internos) para  o site. Esses são salvos dentro do redux sob o `flattenedPlugins` namespace. Cada plugin no redux possui os seguintes campos:
 
-- **resolve**: absolute path to the plugin's directory
-- **id**: String concatenation of 'Plugin ' and the name of the plugin. E.g. `Plugin query-runner`
-- **name**: The name of the plugin. E.g. `query-runner`
-- **version**: The version as per the package.json. Or if it is a site plugin, one is generated from the file's hash
-- **pluginOptions**: Plugin options as specified in [gatsby-config.js](/docs/gatsby-config/)
-- **nodeAPIs**: A list of node APIs that this plugin implements. E.g. `[ 'sourceNodes', ...]`
-- **browserAPIs**: List of browser APIs that this plugin implements
-- **ssrAPIs**: List of SSR APIs that this plugin implements
+- **resolve**: path absoluto para o diretório de plugins
+- **id**: String concatenada do 'Plugin ' e o nome do  plugin. Ex. `Plugin query-runner`
+- **name**: nome do plugin. Ex. `query-runner`
+- **version**: a versão de acordo com o package.json. Ou se é um plugin do site, uma é  gerada a partir da hash do arquivo.
+- **pluginOptions**: opções do plugin como especificado em [gatsby-config.js](/docs/gatsby-config/)
+- **nodeAPIs**: Lista de node APIs que esse plugin implementa. Ex. `[ 'sourceNodes', ...]`
+- **browserAPIs**: Lista de APIs de navegadores que esse plugin implementa
+- **ssrAPIs**: Lista de  APIs SSR que esse plugin implementa.
 
-In addition, you also create a lookup from api to the plugins that implement it and save this to redux as `api-to-plugins`. This is implemented in [load-plugins/validate.js](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/bootstrap/load-plugins/validate.js#L106)
+Adicionalmente, você também cria um  lookup da api para os plugins que  a implementam e  salva isso para o  redux como `api-to-plugins`. Essa é a implementação em [load-plugins/validate.js](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/bootstrap/load-plugins/validate.js#L106)
 
 ## apiRunInstance
 
-Some API calls can take a while to finish. So every time an API is run, you create an object called [apiRunInstance](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L179) to track it. It contains the following notable fields:
+Algumas  requisições de API podem demorar. Então, cada vez que uma API é rodada, você cria um objeto chamado [apiRunInstance](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L179) para rastrea-la. Ele contem os seguintes campos notáveis:
 
-- **id**: Unique identifier generated based on type of API
-- **api**: The API you're running. E.g. `onCreateNode`
-- **args**: Any arguments passed to `api-runner-node`. E.g. a node object
+- **id**: identificador único gerado baseado no tipo da API
+- **api**: A API que vocÊ está rodando. Ex. `onCreateNode`
+- **args**: Quaisquer argumentos passados para `api-runner-node`. Ex. um  objeto node
 - **pluginSource**: optional name of the plugin that initiated the original call
-- **resolve**: promise resolve callback to be called when the API has finished running
-- **startTime**: time that the API run was started
-- **span**: opentracing span for tracing builds
-- **traceId**: optional args.traceId provided if API will result in further API calls ([see below](#using-traceid-to-await-downstream-api-calls))
+- **resolve**: promise resolve callback para ser chamado quando a  API acabou de rodar
+- **startTime**: horário em que a API começou a rodar 
+- **span**: opentracing span para rastrear construções
+- **traceId**: args.traceId opcional se providos a  API resultarão em chamadas API mais longas ([see below](#using-traceid-to-await-downstream-api-calls))
 
-Immediately place this object into an `apisRunningById` Map, where you track its execution.
+Mova este objeto para dentro de um `apisRunningById` Map imediatamente, onde você rastreia sua execução.
 
-## Running each plugin
+## Rodando cada plugin
 
-Next, filter all `flattenedPlugins` down to those that implement the API you're trying to run. For each plugin, you require its `gatsby-node.js` and call its exported API function. E.g. if API was `sourceNodes`, it would result in a call to `gatsbyNode['sourceNodes'](...apiCallargs)`.
+Depois, filtra-se todos os `flattenedPlugins` abaixo daqueles que implementam a  API você está tentando rodar. Para cada plugin, você requisita seu `gatsby-node.js` e chama  sua função API exportada. Ex. se a API era `sourceNodes`, deve resultar em uma chamada para `gatsbyNode['sourceNodes'](...apiCallargs)`.
 
-## Injected arguments
+## Argumentos Injetados
 
-API implementations are passed a variety of useful [actions](/docs/actions/) and other interesting functions/objects. These arguments are [created](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L94) each time a plugin is run for an API, which allows us to rebind actions with default information.
+Implementações de API  possuem uma variedade de úteis [actions](/docs/actions/) e outras funções/objetos interessantes. Esses argumentos são [created](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L94) cada vez que um plugin é rodado para uma  API, o que  nos permite realizar rebind  de actions com  informações padronizadas.
 
-All actions take 3 arguments:
+Todas as actions pedem 3 argumentos:
 
-1.  The core information required by the action. E.g. for [createNode](/docs/actions/#createNode), you must pass a node
-2.  The plugin that is calling this action. E.g. `createNode` uses this to assign the owner of the new node
-3.  An object with misc action options:
+1.  A informação principal requisitada pela action. Ex. para [createNode](/docs/actions/#createNode), você deve passar um node
+2.  O plugin que esta chamando a action. Ex. `createNode` usa isso para designar o dono do novo node
+3.  Um objeto com opções de misc action:
     - **traceId**: [See below](#using-traceid-to-await-downstream-api-calls)
     - **parentSpan**: opentracing span (see [tracing docs](/docs/performance-tracing/))
 
-Passing the plugin and action options on every single action call would be extremely painful for plugin/site authors. Since you know the plugin, traceId and parentSpan when you're running your API, you can rebind injected actions so these arguments are already provided. This is done in the [doubleBind](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L14) step.
+Passar o plugin e as opções de  action em cada chamada de action pode ser extremamente caro para os autores do plugin/site. Desde que você conheça o plugin, traceId e parentSpan quando você está rodando sua API, você pode fazer o  rebind de injected actions para que esses argumentos já sejam fornecidos. Isso é feito neste [doubleBind](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L14) passo.
 
-## Waiting for all plugins to run
+## Esperando todos os plugins rodarem
 
-Each plugin is run inside a [map-series](https://www.npmjs.com/package/map-series) promise, which allows them to be executed concurrently. Once all plugins have finished running, you remove them from [apisRunningById](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L246) and fire a `API_RUNNING_QUEUE_EMPTY` event. This in turn, results in any dirty pages being recreated, as well as their queries. Finally, the results are returned.
+Cada plugin roda dentro de uma [map-series](https://www.npmjs.com/package/map-series) promise, o que permite a eles serem executados concorrentemente. Uma vez que os plugins acabaram de rodar, você os remove de [apisRunningById](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L246) e dispara um evento `API_RUNNING_QUEUE_EMPTY`. Isso, por sua vez, resulta na recriação de quaisquer páginas sujas, bem como em suas queries. Finalmente, os resultados são retornados.
 
-## Using traceID to await downstream API calls
+## Usando traceID para aguardar chamadas de API downstream
 
-The majority of API calls result in one or more implementing plugins being called. You then wait for them all to complete, and return. But some plugins (e.g. [sourceNodes](/docs/node-apis/#sourceNodes)) result in calls to actions that themselves call APIs. You need some way of tracing whether an API call originated from another API call, so that you can wait on all child calls to complete. The mechanism for this is the `traceId`.
+A maioria das chamadas de API resulta na chamada de um ou mais plugins de implementação. Você então espera que todos eles sejam concluídos e voltem. Mas alguns plugins (por exemplo, [sourceNodes] (/docs/node-apis/#sourceNodes)) resultam em chamadas para ações que chamam APIs. Você precisa de alguma forma de rastrear se uma chamada de API foi originada de outra chamada de API, para que possa aguardar a conclusão de todas as chamadas filhas. O mecanismo para isso é o `traceId`.
 
 ```dot
 digraph {
@@ -100,7 +100,7 @@ digraph {
 }
 ```
 
-1.  The traceID is passed as an argument to the original API runner. E.g
+1.O traceID é passado como um argumento para o executor da API original. Por exemplo
 
     ```javascript
     apiRunner(`sourceNodes`, {
@@ -110,9 +110,9 @@ digraph {
     })
     ```
 
-1.  You keep track of the number of API calls with this traceId in the [apisRunningByTraceId](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L139) Map. On this first invocation, it will be set to `1`.
-1.  Using the action rebinding mentioned [above](#injected-arguments), the traceId is passed through to all action calls via the `actionOptions` object.
-1.  After reducing the Action, a global event is [emitted](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/redux/index.js#L93) which includes the action information
-1.  For the `CREATE_NODE` and `CREATE_PAGE` events, you need to call the `onCreateNode` and `onCreatePage` APIs respectively. The [plugin-runner](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/redux/plugin-runner.js) takes care of this. It also passes on the traceId from the Action back into the API call.
-1.  You're back in `api-runner-node.js` and can tie this new API call back to its original. So you increment the value of [apisRunningByTraceId](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L218) for this traceId.
-1.  Now, whenever an API finishes running (when all its implementing plugins have finished), you decrement `apisRunningByTraceId[traceId]`. If the original API call included the `waitForCascadingActions` option, then you wait until `apisRunningByTraceId[traceId]` == 0 before resolving.
+1.  Você controla o número de chamadas de API com este traceId no  [apisRunningByTraceId](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L139) Map.Nesta primeira chamada, ele será definido como `1`.
+1.  Usando a action de rebinding mencionada [above](#injected-arguments),  o traceId é passado para todas as chamadas de ação por meio do objeto ʻactionOptions`.
+1. Depois de reduzir a Action, um evento global é [emitted](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/redux/index.js#L93) que inclui as informações da ação.
+1. Para os eventos `CREATE_NODE` e` CREATE_PAGE`, você precisa chamar as APIs ʻonCreateNode` e ʻonCreatePage` respectivamente. O  [plugin-runner](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/redux/plugin-runner.js) cuida disso. Ele também passa o traceId da ação de volta para a chamada da API.
+1.  Você está de volta ao ʻapi-runner-node.js` e pode amarrar esta nova chamada de API de volta ao seu original. Portanto, você incrementa o valor de [apisRunningByTraceId](https://github.com/gatsbyjs/gatsby/blob/8029c6647ab38792bb0a7c135ab4b98ae70a2627/packages/gatsby/src/utils/api-runner-node.js#L218) para esse traceId.
+1.  Agora, sempre que uma API termina de ser executada (quando todos os seus plugins de implementação terminam), você decrementa ʻapisRunningByTraceId [traceId] `. Se a chamada API original incluiu a opção `waitForCascadingActions`, então você deve esperar até ʻapisRunningByTraceId [traceId]` == 0 antes de resolver.
