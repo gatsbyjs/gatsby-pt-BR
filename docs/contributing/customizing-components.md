@@ -1,4 +1,4 @@
-# Customizando Componentes
+# Customizando Componentes Markdown
 
 Usando o MDX, você pode substituir cada elemento HTML que o Markdown processa por uma implementação customizada. Isso permite que você utilize um conjunto de componentes do sistema de design ao renderizar.
 
@@ -23,7 +23,7 @@ export default function Layout({ children }) {
   )
 }
 ```
-
+**Note**: you can also provide your own custom components to the `MDXProvider` that make them globally available while writing MDX. You can find more details about this pattern in the [Importing and Using Components in MDX guide](/docs/mdx/importing-and-using-components/#make-components-available-globally-as-shortcodes).
 Os seguintes componentes podem ser customizados com o MDXProvider:
 
 |Tag|Name|Syntax|
@@ -53,8 +53,8 @@ Os seguintes componentes podem ser customizados com o MDXProvider:
 | a | [Link](https://github.com/syntax-tree/mdast#link) | <https://mdxjs.com> or [MDX](https://mdxjs.com) |
 | img| [Imagem](https://github.com/syntax-tree/mdast#image) | ![alt](https://mdx-logo.now.sh) |
 
-### Como isso funciona?
-Componentes passados para o MDXProvider são usados para renderizar o elemento HTML que o Markdown cria. Isso usa [React's Context API](https://reactjs.org/docs/context.html)
+## Como isso funciona?
+Componentes passados para o MDXProvider são usados para renderizar o elemento HTML que o Markdown cria. Isso usa [React's Context API](https://pt-br.reactjs.org/docs/context.html)
 
-### Relacionado
+## Relacionado
 - [MDX components](https://mdxjs.com/getting-started)
