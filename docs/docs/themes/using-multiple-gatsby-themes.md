@@ -1,16 +1,20 @@
 ---
-title: Using Multiple Gatsby Themes
+title: Usando Múltiplos Temas Gatsby
 ---
 
-Gatsby themes are intended to be composable. This means you can install multiple themes alongside each other.
+Os temas Gatsby podem ser combinados. Isso significa que você pode instalar múltiplos temas juntos.
 
-For example, `gatsby-starter-theme` composes two Gatsby themes: `gatsby-theme-blog` and `gatsby-theme-notes`
+O `gatsby-starter-theme` é composto por dois temas Gatsby: `gatsby-theme-blog` e `gatsby-theme-notes`
 
 ```shell
 gatsby new my-notes-blog https://github.com/gatsbyjs/gatsby-starter-theme
 ```
 
-You can include multiple theme packages in your `gatsby-config.js`. `gatsby-starter-theme` includes both theme packages: `gatsby-theme-blog` and `gatsby-theme-notes`.
+
+O tema starter inclui ambos pacotes de temas (`gatsby-theme-blog` e `gatsby-theme-notes`) no arquivo `gatsby-config.js` do tema starter.
+
+Vocẽ pode incluir múltiplos pacote de temas em seu `gatsby-config.js`. `gatsby-starter-theme` inclui ambos os pacotes de temas: `gatsby-theme-blog` e `gatsby-theme-notes`.
+
 
 ```javascript:title=gatsby-config.js
 module.exports = {
@@ -22,8 +26,8 @@ module.exports = {
         basePath: `/notes`,
       },
     },
-    // with gatsby-plugin-theme-ui, the last theme in the config
-    // will override the theme-ui context from other themes
+    // com o gatsby-plugin-theme-ui, o último tema na configuração
+    // irá sobrescrever o contexto de theme-ui dos outros temas
     { resolve: `gatsby-theme-blog` },
   ],
   siteMetadata: {
@@ -32,14 +36,14 @@ module.exports = {
 }
 ```
 
-In the default setup, a blog will be served from the root path (`/`), and the notes content will be served from `/notes`.
+Na configuração padrão, um blog será rodado no caminho raiz (`/`), e o conteúdo das notas estarão no caminho `/notes`.
 
-Run `gatsby develop` to start a development server and view your the site:
+Rode `gatsby develop` para iniciar um servidor de desenvolvimento e visualizar o seu site:
 
-![The homepage of the site created by gatsby-theme-starter](../images/gatsby-theme-starter-home.png)
+![A página inicial criada pelo gatsby-theme-starter](../images/gatsby-theme-starter-home.png)
 
-![The `notes` route of a site created by gatsby-theme starter](../images/gatsby-theme-starter-notes.png)
+![A rota de `notas` criada pelo gatsby-theme-starter](../images/gatsby-theme-starter-notes.png)
 
 ## Tutorial
 
-For a step-by-step tutorial, see the ["Using Multiple Themes Together" tutorial](/tutorial/using-multiple-themes-together).
+Para um tutorial passo-a-passo, veja [Tutorial "Usando Múltiplos Temas Juntos"](/tutorial/using-multiple-themes-together).
